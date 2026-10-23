@@ -1,0 +1,5907 @@
+{
+ "schema_version": "1.0",
+ "generated_at": "2026-10-23",
+ "game_build": {
+  "client_version": 2000930,
+  "patch_version": "1.41.9.0",
+  "files_commit": "https://github.com/SteamDatabase/GameTracking-CS2/tree/f68ba6aa24",
+  "demo_builds_compatibility": {
+   "14190 (1.41.9.0, Thunderpick)": "build de referência",
+   "14188 (1.41.8.8, ESL Pro League; commit 7193ca82cb)": "igual, exceto aug.reload_attack_lock_s 3.766667 (hoje 3.2)",
+   "14181 (1.41.8.1, StarLadder; commit d8e2c7a4f9)": "igual, exceto aug.reload_attack_lock_s 3.766667 e sem a m14 (arma nova no 1.41.9.0)"
+  }
+ },
+ "sources": {
+  "oficial": "weapons.vdata, gamemode_competitive.cfg e items_game.txt da build 2000930 + cvars do servidor do torneio gravadas nas demos",
+  "medido": "28 demos de partidas profissionais, 599 rounds"
+ },
+ "units": {
+  "distance": "unidades Source (1 = 0,0254 m)",
+  "speed": "unidades/s",
+  "time": "segundos",
+  "money": "US$ do jogo",
+  "angles": "graus"
+ },
+ "match_config": {
+  "ammo_grenade_limit_flashbang": {
+   "value": 2,
+   "source": "torneio (cvar na demo)"
+  },
+  "ammo_grenade_limit_total": {
+   "value": 4,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_player_bomb_defused": {
+   "value": 300,
+   "source": "padrão competitivo"
+  },
+  "cash_player_bomb_planted": {
+   "value": 300,
+   "source": "padrão competitivo"
+  },
+  "cash_player_damage_hostage": {
+   "value": -30,
+   "source": "padrão competitivo"
+  },
+  "cash_player_interact_with_hostage": {
+   "value": 300,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_player_killed_enemy_default": {
+   "value": 300,
+   "source": "padrão competitivo"
+  },
+  "cash_player_killed_enemy_factor": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "cash_player_killed_hostage": {
+   "value": -1000,
+   "source": "padrão competitivo"
+  },
+  "cash_player_killed_teammate": {
+   "value": -300,
+   "source": "padrão competitivo"
+  },
+  "cash_player_rescued_hostage": {
+   "value": 1000,
+   "source": "padrão competitivo"
+  },
+  "cash_team_bonus_shorthanded": {
+   "value": 1000,
+   "source": "padrão competitivo"
+  },
+  "cash_team_elimination_bomb_map": {
+   "value": 3250,
+   "source": "padrão competitivo"
+  },
+  "cash_team_elimination_hostage_map_ct": {
+   "value": 3000,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_elimination_hostage_map_t": {
+   "value": 3000,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_hostage_alive": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "cash_team_hostage_interaction": {
+   "value": 600,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_loser_bonus": {
+   "value": 1400,
+   "source": "padrão competitivo"
+  },
+  "cash_team_loser_bonus_consecutive_rounds": {
+   "value": 500,
+   "source": "padrão competitivo"
+  },
+  "cash_team_planted_bomb_but_defused": {
+   "value": 600,
+   "source": "padrão competitivo"
+  },
+  "cash_team_rescued_hostage": {
+   "value": 600,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_terrorist_win_bomb": {
+   "value": 3500,
+   "source": "padrão competitivo"
+  },
+  "cash_team_win_by_defusing_bomb": {
+   "value": 3500,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_win_by_hostage_rescue": {
+   "value": 2900,
+   "source": "torneio (cvar na demo)"
+  },
+  "cash_team_win_by_time_running_out_bomb": {
+   "value": 3250,
+   "source": "padrão competitivo"
+  },
+  "cash_team_win_by_time_running_out_hostage": {
+   "value": 3250,
+   "source": "padrão competitivo"
+  },
+  "ff_damage_reduction_bullets": {
+   "value": 0.33,
+   "source": "torneio (cvar na demo)"
+  },
+  "ff_damage_reduction_grenade": {
+   "value": 0.85,
+   "source": "torneio (cvar na demo)"
+  },
+  "ff_damage_reduction_grenade_self": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "ff_damage_reduction_other": {
+   "value": 0.4,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_afterroundmoney": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_autokick": {
+   "value": false,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_buy_anywhere": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_buy_during_immunity": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_buytime": {
+   "value": 20,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_ct_default_melee": {
+   "value": "weapon_knife",
+   "source": "padrão competitivo"
+  },
+  "mp_ct_default_primary": {
+   "value": "",
+   "source": "padrão competitivo"
+  },
+  "mp_ct_default_secondary": {
+   "value": "weapon_hkp2000",
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_death_drop_defuser": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_death_drop_grenade": {
+   "value": 2,
+   "source": "padrão competitivo"
+  },
+  "mp_death_drop_gun": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_default_team_winner_no_objective": {
+   "value": -1,
+   "source": "padrão competitivo"
+  },
+  "mp_defuser_allocation": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_display_kill_assists": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_endmatch_votenextmap": {
+   "value": false,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_force_pick_time": {
+   "value": 60,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 15
+  },
+  "mp_forcecamera": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_free_armor": {
+   "value": 0,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_freezetime": {
+   "value": 20,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 15
+  },
+  "mp_friendlyfire": {
+   "value": true,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 1
+  },
+  "mp_give_player_c4": {
+   "value": true,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_halftime": {
+   "value": true,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 1
+  },
+  "mp_halftime_duration": {
+   "value": 90,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_halftime_pausematch": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_limitteams": {
+   "value": 0,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_match_can_clinch": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_match_end_restart": {
+   "value": true,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_match_restart_delay": {
+   "value": 250,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_maxmoney": {
+   "value": 16000,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_maxrounds": {
+   "value": 24,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_overtime_enable": {
+   "value": true,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_overtime_startmoney": {
+   "value": 12500,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_playercashawards": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_promoted_item_enabled": {
+   "value": false,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 0
+  },
+  "mp_randomspawn": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_randomspawn_los": {
+   "value": false,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 0
+  },
+  "mp_respawn_immunitytime": {
+   "value": -1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_respawn_on_death_ct": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_respawn_on_death_t": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_round_restart_delay": {
+   "value": 5,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_roundtime": {
+   "value": 1.92,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_roundtime_defuse": {
+   "value": 1.92,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_roundtime_hostage": {
+   "value": 1.92,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_solid_teammates": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_spectators_max": {
+   "value": 10,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_starting_losses": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_startmoney": {
+   "value": 800,
+   "source": "padrão competitivo"
+  },
+  "mp_t_default_melee": {
+   "value": "weapon_knife",
+   "source": "padrão competitivo"
+  },
+  "mp_t_default_primary": {
+   "value": "",
+   "source": "padrão competitivo"
+  },
+  "mp_t_default_secondary": {
+   "value": "weapon_glock",
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_team_intro_time": {
+   "value": 0,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_team_timeout_max": {
+   "value": 3,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_team_timeout_ot_add_each": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_team_timeout_ot_add_once": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_team_timeout_time": {
+   "value": 30,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_teamcashawards": {
+   "value": 1,
+   "source": "padrão competitivo"
+  },
+  "mp_technical_timeout_duration_s": {
+   "value": 120,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_technical_timeout_per_team": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_timelimit": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_warmup_pausetimer": {
+   "value": 1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_warmuptime": {
+   "value": 60,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 120
+  },
+  "mp_warmuptime_all_players_connected": {
+   "value": 15,
+   "source": "padrão competitivo"
+  },
+  "mp_weapons_allow_map_placed": {
+   "value": true,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 1
+  },
+  "mp_weapons_allow_typecount": {
+   "value": -1,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_weapons_allow_zeus": {
+   "value": 5,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_weapons_glow_on_ground": {
+   "value": 0,
+   "source": "padrão competitivo"
+  },
+  "mp_win_panel_display_time": {
+   "value": 999,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 3
+  },
+  "spec_freeze_time": {
+   "value": 2,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 2.0
+  }
+ },
+ "equipment_prices": {
+  "item_kevlar": 650,
+  "item_assaultsuit": 1000,
+  "item_heavyassaultsuit": 6000,
+  "item_defuser": 400
+ },
+ "economy": {
+  "rules": {
+   "start_money": 800,
+   "max_money": 16000,
+   "overtime_start_money": 12500,
+   "win": {
+    "elimination": 3250,
+    "bomb_exploded_T": 3500,
+    "bomb_defused_CT": 3500,
+    "time_ran_out_CT": 3250
+   },
+   "loss_bonus": {
+    "base": 1400,
+    "per_consecutive_loss": 500,
+    "starting_losses": 1,
+    "max": 3400,
+    "formula": "contador começa em starting_losses a cada metade; derrota: contador+1 (máx 5) e bônus = base + per_consecutive_loss*(contador-1); vitória: contador-2 (mín 0)",
+    "win_decrements_counter_by": {
+     "value": 2,
+     "source": "medido (ver measured.loss_counter_rule_fit)"
+    }
+   },
+   "planted_but_lost_T_team": 600,
+   "ct_bonus_per_t_death": {
+    "value": 50,
+    "source": "medido",
+    "note": "cada CT recebe +50 por T morto por CT no round (inclui depois do fim do round), vencendo ou perdendo; não ocorre no último round da partida"
+   },
+   "t_survivors_on_time_loss": {
+    "value": 0,
+    "note": "Ts vivos quando o tempo acaba não recebem bônus de derrota"
+   },
+   "money_reset": "início de cada metade: start_money; início de cada metade da prorrogação: overtime_start_money",
+   "player": {
+    "plant": 300,
+    "defuse": 300,
+    "kill_default": 300,
+    "kill_by_weapon": "ver weapons.<arma>.kill_award",
+    "teamkill": -300
+   }
+  },
+  "measured": {
+   "win_reward_per_player": {
+    "CT_bomb_defused": {
+     "median": 3750.0,
+     "p10": 3750.0,
+     "p90": 4050.0,
+     "min": -2850.0,
+     "max": 12200.0,
+     "n": 332
+    },
+    "CT_t_killed": {
+     "median": 3500.0,
+     "p10": 3250.0,
+     "p90": 3500.0,
+     "min": -14100.0,
+     "max": 12500.0,
+     "n": 852
+    },
+    "CT_time_ran_out": {
+     "median": 3400.0,
+     "p10": 3350.0,
+     "p90": 3450.0,
+     "min": 3250.0,
+     "max": 3500.0,
+     "n": 215
+    },
+    "T_bomb_exploded": {
+     "median": 3500.0,
+     "p10": 3500.0,
+     "p90": 3500.0,
+     "min": -800.0,
+     "max": 11800.0,
+     "n": 683
+    },
+    "T_ct_killed": {
+     "median": 3250.0,
+     "p10": 3250.0,
+     "p90": 3250.0,
+     "min": -4350.0,
+     "max": 9950.0,
+     "n": 544
+    }
+   },
+   "loss_counter_rule_fit": {
+    "desconta_1": {
+     "perdedor": {
+      "acerto": 0.741,
+      "n": 537
+     },
+     "vencedor": {
+      "acerto": 0.996,
+      "n": 537
+     }
+    },
+    "desconta_2": {
+     "perdedor": {
+      "acerto": 0.929,
+      "n": 537
+     },
+     "vencedor": {
+      "acerto": 0.996,
+      "n": 537
+     }
+    },
+    "zera": {
+     "perdedor": {
+      "acerto": 0.821,
+      "n": 537
+     },
+     "vencedor": {
+      "acerto": 0.996,
+      "n": 537
+     }
+    }
+   }
+  }
+ },
+ "damage_model": {
+  "formula": [
+   "dano = damage * range_modifier ^ (distancia_unidades / 500) * multiplicador_parte_do_corpo",
+   "cabeça (e pescoço) usam weapons.<arma>.headshot_multiplier",
+   "colete protege peito, estômago e braços; cabeça só com capacete; pernas nunca",
+   "se protegido e colete > 0: vida = dano * armor_penetration; colete -= (dano - vida) * 0.5",
+   "se o colete não basta: colete zera e vida = dano - colete_antes * 2",
+   "valores são truncados para inteiro; fogo amigo multiplica por ff_damage_reduction_*"
+  ],
+  "penetration_note": "Tiros que atravessam parede, objeto ou jogador perdem dano conforme weapons.<arma>.penetration_power e o material; as demos não marcam esses tiros. Danos abaixo do previsto em 'validation' (quase todos com menos de 60% do previsto) e o hitgroup 'generic' são esses casos.",
+  "hitgroup_multipliers": {
+   "head": {
+    "value": 4.0,
+    "note": "multiplicador da arma (headshot_multiplier)",
+    "measured": {
+     "best_fit": 4.0,
+     "exact_match_rate": 0.512,
+     "n": 43
+    }
+   },
+   "neck": {
+    "value": 4.0,
+    "note": "multiplicador da arma (headshot_multiplier)",
+    "measured": {
+     "best_fit": 1.0,
+     "exact_match_rate": 0.5,
+     "n": 2
+    }
+   },
+   "chest": {
+    "value": 1.0,
+    "measured": {
+     "best_fit": 1.0,
+     "exact_match_rate": 0.839,
+     "n": 540
+    }
+   },
+   "stomach": {
+    "value": 1.25,
+    "measured": {
+     "best_fit": 1.25,
+     "exact_match_rate": 0.809,
+     "n": 131
+    }
+   },
+   "left_arm": {
+    "value": 1.0,
+    "measured": {
+     "best_fit": 1.0,
+     "exact_match_rate": 0.643,
+     "n": 14
+    }
+   },
+   "right_arm": {
+    "value": 1.0,
+    "measured": {
+     "best_fit": 1.0,
+     "exact_match_rate": 0.815,
+     "n": 81
+    }
+   },
+   "left_leg": {
+    "value": 0.75,
+    "measured": {
+     "best_fit": 0.75,
+     "exact_match_rate": 0.833,
+     "n": 30
+    }
+   },
+   "right_leg": {
+    "value": 0.75,
+    "measured": {
+     "best_fit": 0.75,
+     "exact_match_rate": 0.8,
+     "n": 20
+    }
+   }
+  },
+  "validation": {
+   "vida": {
+    "sem_colete": {
+     "n": 861,
+     "exato": 0.81,
+     "ate_1hp": 0.833,
+     "menor_que_previsto": 0.167,
+     "maior_que_previsto": 0.0
+    },
+    "com_colete": {
+     "n": 7441,
+     "exato": 0.842,
+     "ate_1hp": 0.859,
+     "menor_que_previsto": 0.141,
+     "maior_que_previsto": 0.0
+    }
+   },
+   "por_parte_do_corpo": {
+    "chest": {
+     "n": 4720,
+     "ate_1hp": 0.877,
+     "maior_que_previsto": 0.0
+    },
+    "head": {
+     "n": 587,
+     "ate_1hp": 0.751,
+     "maior_que_previsto": 0.0
+    },
+    "left_arm": {
+     "n": 301,
+     "ate_1hp": 0.864,
+     "maior_que_previsto": 0.0
+    },
+    "left_leg": {
+     "n": 221,
+     "ate_1hp": 0.787,
+     "maior_que_previsto": 0.0
+    },
+    "neck": {
+     "n": 53,
+     "ate_1hp": 0.0,
+     "maior_que_previsto": 0.0
+    },
+    "right_arm": {
+     "n": 801,
+     "ate_1hp": 0.883,
+     "maior_que_previsto": 0.0
+    },
+    "right_leg": {
+     "n": 266,
+     "ate_1hp": 0.82,
+     "maior_que_previsto": 0.0
+    },
+    "stomach": {
+     "n": 1353,
+     "ate_1hp": 0.863,
+     "maior_que_previsto": 0.0
+    }
+   },
+   "por_arma": {
+    "ak47": {
+     "n": 2699,
+     "ate_1hp": 0.82,
+     "maior_que_previsto": 0.0
+    },
+    "awp": {
+     "n": 39,
+     "ate_1hp": 0.154,
+     "maior_que_previsto": 0.0
+    },
+    "deagle": {
+     "n": 94,
+     "ate_1hp": 0.787,
+     "maior_que_previsto": 0.0
+    },
+    "elite": {
+     "n": 87,
+     "ate_1hp": 0.874,
+     "maior_que_previsto": 0.0
+    },
+    "famas": {
+     "n": 129,
+     "ate_1hp": 0.891,
+     "maior_que_previsto": 0.0
+    },
+    "fiveseven": {
+     "n": 136,
+     "ate_1hp": 0.949,
+     "maior_que_previsto": 0.0
+    },
+    "galilar": {
+     "n": 613,
+     "ate_1hp": 0.829,
+     "maior_que_previsto": 0.0
+    },
+    "glock": {
+     "n": 475,
+     "ate_1hp": 0.916,
+     "maior_que_previsto": 0.0
+    },
+    "m4a1": {
+     "n": 917,
+     "ate_1hp": 0.851,
+     "maior_que_previsto": 0.0
+    },
+    "m4a1_silencer": {
+     "n": 1684,
+     "ate_1hp": 0.856,
+     "maior_que_previsto": 0.0
+    },
+    "mac10": {
+     "n": 227,
+     "ate_1hp": 0.96,
+     "maior_que_previsto": 0.0
+    },
+    "mp7": {
+     "n": 35,
+     "ate_1hp": 1.0,
+     "maior_que_previsto": 0.0
+    },
+    "mp9": {
+     "n": 511,
+     "ate_1hp": 0.953,
+     "maior_que_previsto": 0.0
+    },
+    "p250": {
+     "n": 66,
+     "ate_1hp": 0.97,
+     "maior_que_previsto": 0.0
+    },
+    "ssg08": {
+     "n": 31,
+     "ate_1hp": 0.774,
+     "maior_que_previsto": 0.0
+    },
+    "tec9": {
+     "n": 193,
+     "ate_1hp": 0.912,
+     "maior_que_previsto": 0.0
+    },
+    "usp_silencer": {
+     "n": 346,
+     "ate_1hp": 0.902,
+     "maior_que_previsto": 0.0
+    }
+   },
+   "generic_hitgroup_share": 0.238,
+   "dano_no_colete_ate_1": 0.904
+  }
+ },
+ "movement": {
+  "max_speed_by_weapon": "weapons.<arma>.max_speed (normal; alt = com mira)",
+  "knife_speed": 250.0,
+  "measured": {
+   "walk": {
+    "speed_ratio_p50": 0.52,
+    "speed_ratio_p75": 0.52,
+    "speed_ratio_p90": 0.52,
+    "speed_ratio_p95": 0.52,
+    "speed_ratio_p99": 0.52,
+    "n_moving": 355411
+   },
+   "crouch": {
+    "speed_ratio_p50": 0.358,
+    "speed_ratio_p75": 0.463,
+    "speed_ratio_p90": 0.545,
+    "speed_ratio_p95": 0.627,
+    "speed_ratio_p99": 0.811,
+    "n_moving": 31582
+   }
+  },
+  "note": "andar (shift) = 0,52 × velocidade máxima da arma (exato em todas as amostras). Agachado: usar ~0,34–0,36 (mediana medida); percentis altos são a desaceleração logo após agachar correndo"
+ },
+ "bomb": {
+  "timer_s": {
+   "value": 41.0,
+   "measured": {
+    "median": 41.0,
+    "p10": 41.0,
+    "p90": 41.0,
+    "min": 41.0,
+    "max": 41.0,
+    "n": 144
+   }
+  },
+  "plant_duration_s": {
+   "measured": {
+    "median": 3.125,
+    "p10": 3.125,
+    "p90": 3.125,
+    "min": 3.125,
+    "max": 3.125,
+    "n": 322
+   }
+  },
+  "defuse_duration_s": {
+   "with_kit": {
+    "median": 5.0,
+    "p10": 5.0,
+    "p90": 5.0,
+    "min": 5.0,
+    "max": 5.0,
+    "n": 41
+   },
+   "without_kit": {
+    "median": 10.0,
+    "p10": 10.0,
+    "p90": 10.0,
+    "min": 10.0,
+    "max": 10.0,
+    "n": 26
+   }
+  }
+ },
+ "utility": {
+  "limits": {
+   "total": 4,
+   "flashbang": 2
+  },
+  "smoke_duration_s": {
+   "median": 22.062,
+   "p10": 22.062,
+   "p90": 22.062,
+   "min": 22.062,
+   "max": 58.094,
+   "n": 3823
+  },
+  "molotov_burn_duration_s": {
+   "median": 5.5,
+   "p10": 5.5,
+   "p90": 7.016,
+   "min": 0.031,
+   "max": 7.031,
+   "n": 3150
+  },
+  "time_to_detonate_s": {
+   "he": {
+    "median": 1.625,
+    "p10": 1.625,
+    "p90": 1.625,
+    "min": 1.625,
+    "max": 1.625,
+    "n": 2247
+   },
+   "flash": {
+    "median": 1.625,
+    "p10": 1.625,
+    "p90": 1.625,
+    "min": 1.625,
+    "max": 1.625,
+    "n": 3794
+   },
+   "smoke": {
+    "median": 3.047,
+    "p10": 1.484,
+    "p90": 6.844,
+    "min": 0.094,
+    "max": 10.188,
+    "n": 4031
+   },
+   "note": "HE e flash têm pavio fixo; smoke detona quando para de se mover; molotov/incendiária detonam ao tocar o chão"
+  },
+  "flash_blind_duration_s": {
+   "median": 1.244,
+   "p10": 0.399,
+   "p90": 4.287,
+   "min": 0.054,
+   "max": 5.274,
+   "n": 6422
+  },
+  "he_damage": {
+   "health": {
+    "median": 9.0,
+    "p10": 1.0,
+    "p90": 45.0,
+    "min": 0.0,
+    "max": 94.0,
+    "n": 1361
+   },
+   "armor": {
+    "median": 4.0,
+    "p10": 0.0,
+    "p90": 28.0,
+    "min": 0.0,
+    "max": 39.0,
+    "n": 1361
+   }
+  },
+  "molotov_damage_per_event": {
+   "median": 4.0,
+   "p10": 1.0,
+   "p90": 8.0,
+   "min": 0.0,
+   "max": 8.0,
+   "n": 2269
+  }
+ },
+ "round_timing": {
+  "freeze_time_s": {
+   "official": 20,
+   "measured": {
+    "median": 20.0,
+    "p10": 20.0,
+    "p90": 57.922,
+    "min": 20.0,
+    "max": 494.562,
+    "n": 571
+   }
+  },
+  "round_time_s": {
+   "official": 115.2,
+   "measured_time_ran_out": {
+    "median": 115.0,
+    "p10": 115.0,
+    "p90": 115.0,
+    "min": 115.0,
+    "max": 115.0,
+    "n": 44
+   }
+  },
+  "restart_delay_s": {
+   "official": 5,
+   "measured": {
+    "median": 5.0,
+    "p10": 5.0,
+    "p90": 5.0,
+    "min": 0.0,
+    "max": 83.5,
+    "n": 599
+   }
+  },
+  "duration_by_end_reason_s": {
+   "ct_killed": {
+    "median": 83.391,
+    "p10": 45.266,
+    "p90": 122.703,
+    "min": 21.984,
+    "max": 145.766,
+    "n": 136
+   },
+   "bomb_exploded": {
+    "median": 117.445,
+    "p10": 78.656,
+    "p90": 146.234,
+    "min": 63.078,
+    "max": 155.859,
+    "n": 138
+   },
+   "bomb_defused": {
+    "median": 107.094,
+    "p10": 70.213,
+    "p90": 136.059,
+    "min": 55.516,
+    "max": 146.484,
+    "n": 67
+   },
+   "t_killed": {
+    "median": 70.906,
+    "p10": 40.022,
+    "p90": 105.111,
+    "min": 18.578,
+    "max": 112.5,
+    "n": 214
+   },
+   "time_ran_out": {
+    "median": 115.0,
+    "p10": 115.0,
+    "p90": 115.0,
+    "min": 115.0,
+    "max": 115.0,
+    "n": 44
+   }
+  }
+ },
+ "weapons": {
+  "ak47": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 2700,
+   "kill_award": 300,
+   "damage": 36,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.775,
+   "armor_ratio_raw": 1.55,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.1,
+    "alt": 0.1
+   },
+   "rpm": 600,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 215.0,
+    "alt": 215.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.00641,
+     "alt": 0.00641
+    },
+    "crouch": {
+     "normal": 0.00481,
+     "alt": 0.00481
+    },
+    "move": {
+     "normal": 0.17506,
+     "alt": 0.17506
+    },
+    "jump": {
+     "normal": 0.14076,
+     "alt": 0.14076
+    },
+    "land": {
+     "normal": 0.000242,
+     "alt": 0.000242
+    },
+    "ladder": {
+     "normal": 0.14,
+     "alt": 0.14
+    },
+    "fire": {
+     "normal": 0.0078,
+     "alt": 0.0078
+    }
+   },
+   "inaccuracy_jump_initial": 0.10094,
+   "recovery_time_s": {
+    "stand": 0.368,
+    "crouch": 0.305257,
+    "stand_final": 0.506,
+    "crouch_final": 0.419728,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 30.0,
+     "alt": 30.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 223
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.466667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.1001,
+     "n": 19929,
+     "official": 0.1
+    },
+    "run_speed_p99": {
+     "value": 215.0,
+     "n": 221072,
+     "official": 215.0
+    }
+   }
+  },
+  "aug": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 3300,
+   "kill_award": 300,
+   "damage": 28,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.9,
+   "armor_ratio_raw": 1.8,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.1,
+    "alt": 0.1
+   },
+   "rpm": 600,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 220.0,
+    "alt": 150.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0005,
+    "alt": 0.0003
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.00368
+    },
+    "crouch": {
+     "normal": 0.00368,
+     "alt": 0.00311
+    },
+    "move": {
+     "normal": 0.13545,
+     "alt": 0.10545
+    },
+    "jump": {
+     "normal": 0.10599,
+     "alt": 0.10599
+    },
+    "land": {
+     "normal": 0.000208,
+     "alt": 0.000208
+    },
+    "ladder": {
+     "normal": 0.11004,
+     "alt": 0.10004
+    },
+    "fire": {
+     "normal": 0.00729,
+     "alt": 0.00729
+    }
+   },
+   "inaccuracy_jump_initial": 0.10156,
+   "recovery_time_s": {
+    "stand": 0.429727,
+    "crouch": 0.30552,
+    "stand_final": 0.429727,
+    "crouch_final": 0.30552,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 60.0,
+     "alt": 60.0
+    },
+    "magnitude": {
+     "normal": 24.0,
+     "alt": 16.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 24204
+   },
+   "deploy_time_s": 1.16667,
+   "reload_attack_lock_s": 3.2,
+   "zoom": {
+    "levels": 1,
+    "fov1": 45,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.1,
+     "n": 10,
+     "official": 0.1
+    }
+   }
+  },
+  "awp": {
+   "type": "WEAPONTYPE_SNIPER_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 4750,
+   "kill_award": 100,
+   "damage": 115,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.975,
+   "armor_ratio_raw": 1.95,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.99,
+   "penetration_power": 2.5,
+   "cycle_time_s": {
+    "normal": 1.455,
+    "alt": 1.455
+   },
+   "rpm": 41,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 5,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 200.0,
+    "alt": 100.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0002,
+    "alt": 0.0002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0808,
+     "alt": 0.002
+    },
+    "crouch": {
+     "normal": 0.0606,
+     "alt": 0.0015
+    },
+    "move": {
+     "normal": 0.17648,
+     "alt": 0.17648
+    },
+    "jump": {
+     "normal": 0.13383,
+     "alt": 0.13383
+    },
+    "land": {
+     "normal": 0.000307,
+     "alt": 0.0001
+    },
+    "ladder": {
+     "normal": 0.1365,
+     "alt": 0.1365
+    },
+    "fire": {
+     "normal": 0.05385,
+     "alt": 0.05385
+    }
+   },
+   "inaccuracy_jump_initial": 0.17286,
+   "recovery_time_s": {
+    "stand": 0.34539,
+    "crouch": 0.24671,
+    "stand_final": 0.34539,
+    "crouch_final": 0.24671,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 78.0,
+     "alt": 25.0
+    },
+    "magnitude_variance": {
+     "normal": 15.0,
+     "alt": 2.0
+    },
+    "seed": 4100
+   },
+   "deploy_time_s": 1.266667,
+   "reload_attack_lock_s": 3.666667,
+   "zoom": {
+    "levels": 2,
+    "fov1": 40,
+    "fov2": 10,
+    "unzoom_after_shot": true
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.35,
+    "flinch_velocity_modifier_small": 0.4
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 200.0,
+     "n": 24763,
+     "official": 200.0
+    }
+   }
+  },
+  "bizon": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1300,
+   "kill_award": 600,
+   "damage": 27,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.63,
+   "armor_ratio_raw": 1.26,
+   "headshot_multiplier": 4.0,
+   "range_units": 3600.0,
+   "range_modifier": 0.8,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.08,
+    "alt": 0.08
+   },
+   "rpm": 750,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 64,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.001,
+    "alt": 0.001
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.014,
+     "alt": 0.014
+    },
+    "crouch": {
+     "normal": 0.0105,
+     "alt": 0.0105
+    },
+    "move": {
+     "normal": 0.02757,
+     "alt": 0.02757
+    },
+    "jump": {
+     "normal": 0.03347,
+     "alt": 0.03347
+    },
+    "land": {
+     "normal": 8e-05,
+     "alt": 8e-05
+    },
+    "ladder": {
+     "normal": 0.16965,
+     "alt": 0.16965
+    },
+    "fire": {
+     "normal": 0.00288,
+     "alt": 0.00288
+    }
+   },
+   "inaccuracy_jump_initial": 0.0459,
+   "recovery_time_s": {
+    "stand": 0.331572,
+    "crouch": 0.236837,
+    "stand_final": 0.331572,
+    "crouch_final": 0.236837,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 18.0,
+     "alt": 18.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 36387
+   },
+   "deploy_time_s": 1.1,
+   "reload_attack_lock_s": 2.433333,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   }
+  },
+  "c4": {
+   "type": "WEAPONTYPE_C4",
+   "gear_slot": "GEAR_SLOT_C4",
+   "price": 0,
+   "kill_award": 300,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 250.0,
+    "alt": 250.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 39693
+   },
+   "deploy_time_s": 1.233333,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   }
+  },
+  "cz75a": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 500,
+   "kill_award": 300,
+   "damage": 31,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.7765,
+   "armor_ratio_raw": 1.553,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.85,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.1,
+    "alt": 0.1
+   },
+   "rpm": 600,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 12,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.003,
+    "alt": 0.003
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01043,
+     "alt": 0.01043
+    },
+    "crouch": {
+     "normal": 0.0076,
+     "alt": 0.0076
+    },
+    "move": {
+     "normal": 0.01341,
+     "alt": 0.01341
+    },
+    "jump": {
+     "normal": 0.09296,
+     "alt": 0.09296
+    },
+    "land": {
+     "normal": 0.00019,
+     "alt": 0.00019
+    },
+    "ladder": {
+     "normal": 0.138,
+     "alt": 0.138
+    },
+    "fire": {
+     "normal": 0.035,
+     "alt": 0.025
+    }
+   },
+   "inaccuracy_jump_initial": 0.09662,
+   "recovery_time_s": {
+    "stand": 0.2425,
+    "crouch": 0.2275,
+    "stand_final": 0.345388,
+    "crouch_final": 0.287823,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 120.0,
+     "alt": 180.0
+    },
+    "magnitude": {
+     "normal": 31.0,
+     "alt": 27.0
+    },
+    "magnitude_variance": {
+     "normal": 6.0,
+     "alt": 12.0
+    },
+    "seed": 9788
+   },
+   "deploy_time_s": 1.83333,
+   "reload_attack_lock_s": 2.733333,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 315,
+     "official": 240.0
+    }
+   }
+  },
+  "deagle": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 700,
+   "kill_award": 300,
+   "damage": 53,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.932,
+   "armor_ratio_raw": 1.864,
+   "headshot_multiplier": 3.9,
+   "range_units": 4096.0,
+   "range_modifier": 0.85,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.225,
+    "alt": 0.225
+   },
+   "rpm": 267,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 7,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 230.0,
+    "alt": 230.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0042,
+     "alt": 0.0042
+    },
+    "crouch": {
+     "normal": 0.00218,
+     "alt": 0.00218
+    },
+    "move": {
+     "normal": 0.0481,
+     "alt": 0.0481
+    },
+    "jump": {
+     "normal": 0.04055,
+     "alt": 0.37155
+    },
+    "land": {
+     "normal": 4.3e-05,
+     "alt": 0.00073
+    },
+    "ladder": {
+     "normal": 0.152,
+     "alt": 0.152
+    },
+    "fire": {
+     "normal": 0.07223,
+     "alt": 0.07223
+    }
+   },
+   "inaccuracy_jump_initial": 0.54882,
+   "recovery_time_s": {
+    "stand": 0.8112,
+    "crouch": 0.449927,
+    "stand_final": 0.8112,
+    "crouch_final": 0.449927,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 60.0,
+     "alt": 60.0
+    },
+    "magnitude": {
+     "normal": 48.200001,
+     "alt": 48.200001
+    },
+    "magnitude_variance": {
+     "normal": 18.0,
+     "alt": 18.0
+    },
+    "seed": 1454
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.2,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 230.0,
+     "n": 17170,
+     "official": 230.0
+    }
+   }
+  },
+  "decoy": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 50,
+   "kill_award": 300,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 129,
+     "official": 245.0
+    }
+   }
+  },
+  "elite": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 300,
+   "kill_award": 300,
+   "damage": 38,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.575,
+   "armor_ratio_raw": 1.15,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.79,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.12,
+    "alt": 0.12
+   },
+   "rpm": 500,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.007,
+     "alt": 0.01
+    },
+    "crouch": {
+     "normal": 0.00525,
+     "alt": 0.0075
+    },
+    "move": {
+     "normal": 0.01785,
+     "alt": 0.01785
+    },
+    "jump": {
+     "normal": 0.15842,
+     "alt": 0.15842
+    },
+    "land": {
+     "normal": 0.000255,
+     "alt": 0.000255
+    },
+    "ladder": {
+     "normal": 0.102,
+     "alt": 0.102
+    },
+    "fire": {
+     "normal": 0.01116,
+     "alt": 0.01196
+    }
+   },
+   "inaccuracy_jump_initial": 0.09586,
+   "recovery_time_s": {
+    "stand": 0.524989,
+    "crouch": 0.437491,
+    "stand_final": 0.524989,
+    "crouch_final": 0.437491,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 27.0,
+     "alt": 27.0
+    },
+    "magnitude_variance": {
+     "normal": 4.0,
+     "alt": 4.0
+    },
+    "seed": 24563
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.766667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 6064,
+     "official": 240.0
+    }
+   }
+  },
+  "famas": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1950,
+   "kill_award": 300,
+   "damage": 30,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.7,
+   "armor_ratio_raw": 1.4,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.96,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.09,
+    "alt": 0.09
+   },
+   "rpm": 667,
+   "full_auto": true,
+   "burst_mode": true,
+   "clip_size": 25,
+   "reserve_clips": 4,
+   "max_speed": {
+    "normal": 220.0,
+    "alt": 220.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.00759,
+     "alt": 0.00369
+    },
+    "crouch": {
+     "normal": 0.0055,
+     "alt": 0.00325
+    },
+    "move": {
+     "normal": 0.09934,
+     "alt": 0.09934
+    },
+    "jump": {
+     "normal": 0.11039,
+     "alt": 0.11039
+    },
+    "land": {
+     "normal": 0.000205,
+     "alt": 0.000205
+    },
+    "ladder": {
+     "normal": 0.118716,
+     "alt": 0.118716
+    },
+    "fire": {
+     "normal": 0.00605,
+     "alt": 0.00335
+    }
+   },
+   "inaccuracy_jump_initial": 0.09477,
+   "recovery_time_s": {
+    "stand": 0.25,
+    "crouch": 0.12,
+    "stand_final": 0.5,
+    "crouch_final": 0.48,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 60.0,
+     "alt": 50.0
+    },
+    "magnitude": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 39623
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.3,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.09,
+     "n": 776,
+     "official": 0.09
+    },
+    "run_speed_p99": {
+     "value": 220.0,
+     "n": 8154,
+     "official": 220.0
+    }
+   }
+  },
+  "fiveseven": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 500,
+   "kill_award": 300,
+   "damage": 32,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.9115,
+   "armor_ratio_raw": 1.823,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.81,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 20,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0091,
+     "alt": 0.0091
+    },
+    "crouch": {
+     "normal": 0.00683,
+     "alt": 0.00683
+    },
+    "move": {
+     "normal": 0.04,
+     "alt": 0.01341
+    },
+    "jump": {
+     "normal": 0.0897,
+     "alt": 0.0897
+    },
+    "land": {
+     "normal": 0.00019,
+     "alt": 0.00019
+    },
+    "ladder": {
+     "normal": 0.138,
+     "alt": 0.138
+    },
+    "fire": {
+     "normal": 0.025,
+     "alt": 0.03245
+    }
+   },
+   "inaccuracy_jump_initial": 0.09988,
+   "recovery_time_s": {
+    "stand": 0.2,
+    "crouch": 0.2,
+    "stand_final": 0.5,
+    "crouch_final": 0.5,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 5.0,
+     "alt": 5.0
+    },
+    "magnitude": {
+     "normal": 25.0,
+     "alt": 25.0
+    },
+    "magnitude_variance": {
+     "normal": 4.0,
+     "alt": 4.0
+    },
+    "seed": 33244
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.266667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 17462,
+     "official": 240.0
+    }
+   }
+  },
+  "flashbang": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 200,
+   "kill_award": 300,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 40479,
+     "official": 245.0
+    }
+   }
+  },
+  "g3sg1": {
+   "type": "WEAPONTYPE_SNIPER_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 5000,
+   "kill_award": 300,
+   "damage": 80,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.825,
+   "armor_ratio_raw": 1.65,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.5,
+   "cycle_time_s": {
+    "normal": 0.25,
+    "alt": 0.25
+   },
+   "rpm": 240,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 20,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 215.0,
+    "alt": 120.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0003,
+    "alt": 0.0003
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0258,
+     "alt": 0.002
+    },
+    "crouch": {
+     "normal": 0.01935,
+     "alt": 0.0015
+    },
+    "move": {
+     "normal": 0.15048,
+     "alt": 0.15048
+    },
+    "jump": {
+     "normal": 0.15377,
+     "alt": 0.15377
+    },
+    "land": {
+     "normal": 0.000262,
+     "alt": 0.000262
+    },
+    "ladder": {
+     "normal": 0.11639,
+     "alt": 0.11639
+    },
+    "fire": {
+     "normal": 0.01861,
+     "alt": 0.01861
+    }
+   },
+   "inaccuracy_jump_initial": 0.10769,
+   "recovery_time_s": {
+    "stand": 0.544331,
+    "crouch": 0.388808,
+    "stand_final": 0.544331,
+    "crouch_final": 0.388808,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 30.0,
+     "alt": 30.0
+    },
+    "magnitude": {
+     "normal": 30.0,
+     "alt": 30.0
+    },
+    "magnitude_variance": {
+     "normal": 4.0,
+     "alt": 4.0
+    },
+    "seed": 29908
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 4.666667,
+   "zoom": {
+    "levels": 2,
+    "fov1": 40,
+    "fov2": 15,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   }
+  },
+  "galilar": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1800,
+   "kill_award": 300,
+   "damage": 30,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.775,
+   "armor_ratio_raw": 1.55,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.09,
+    "alt": 0.09
+   },
+   "rpm": 667,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 35,
+   "reserve_clips": 4,
+   "max_speed": {
+    "normal": 215.0,
+    "alt": 215.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.00877,
+     "alt": 0.00778
+    },
+    "crouch": {
+     "normal": 0.00658,
+     "alt": 0.00484
+    },
+    "move": {
+     "normal": 0.12356,
+     "alt": 0.10652
+    },
+    "jump": {
+     "normal": 0.14978,
+     "alt": 0.14978
+    },
+    "land": {
+     "normal": 0.000256,
+     "alt": 0.000256
+    },
+    "ladder": {
+     "normal": 0.11358,
+     "alt": 0.11358
+    },
+    "fire": {
+     "normal": 0.007,
+     "alt": 0.00585
+    }
+   },
+   "inaccuracy_jump_initial": 0.10539,
+   "recovery_time_s": {
+    "stand": 0.3,
+    "crouch": 0.15,
+    "stand_final": 0.5,
+    "crouch_final": 0.47,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 21.0,
+     "alt": 21.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 51191
+   },
+   "deploy_time_s": 1.1,
+   "reload_attack_lock_s": 3.033333,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0902,
+     "n": 4574,
+     "official": 0.09
+    },
+    "run_speed_p99": {
+     "value": 215.0,
+     "n": 52604,
+     "official": 215.0
+    }
+   }
+  },
+  "glock": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 200,
+   "kill_award": 300,
+   "damage": 30,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.47,
+   "armor_ratio_raw": 0.94,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.85,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": true,
+   "clip_size": 20,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.015
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0056,
+     "alt": 0.0056
+    },
+    "crouch": {
+     "normal": 0.0042,
+     "alt": 0.003
+    },
+    "move": {
+     "normal": 0.01,
+     "alt": 0.01295
+    },
+    "jump": {
+     "normal": 0.08787,
+     "alt": 0.08787
+    },
+    "land": {
+     "normal": 0.000185,
+     "alt": 0.000185
+    },
+    "ladder": {
+     "normal": 0.137,
+     "alt": 0.11925
+    },
+    "fire": {
+     "normal": 0.056,
+     "alt": 0.045
+    }
+   },
+   "inaccuracy_jump_initial": 0.09662,
+   "recovery_time_s": {
+    "stand": 0.2,
+    "crouch": 0.2,
+    "stand_final": 0.33,
+    "crouch_final": 0.33,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 18.0,
+     "alt": 30.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 5.0
+    },
+    "seed": 4484
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.266667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 37777,
+     "official": 240.0
+    }
+   }
+  },
+  "healthshot": {
+   "type": "WEAPONTYPE_STACKABLEITEM",
+   "price": 0,
+   "kill_award": 300,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 250.0,
+    "alt": 250.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   }
+  },
+  "hegrenade": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 300,
+   "kill_award": 300,
+   "damage": 99,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.6,
+   "armor_ratio_raw": 1.2,
+   "headshot_multiplier": 4.0,
+   "range_units": 350.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 52132
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.3,
+    "flinch_velocity_modifier_small": 0.1
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 21050,
+     "official": 245.0
+    }
+   }
+  },
+  "hkp2000": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 200,
+   "kill_award": 300,
+   "damage": 35,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.505,
+   "armor_ratio_raw": 1.01,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.91,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.17,
+    "alt": 0.17
+   },
+   "rpm": 353,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 13,
+   "reserve_clips": 4,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.0015
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.0049
+    },
+    "crouch": {
+     "normal": 0.00368,
+     "alt": 0.00368
+    },
+    "move": {
+     "normal": 0.013,
+     "alt": 0.01387
+    },
+    "jump": {
+     "normal": 0.09448,
+     "alt": 0.09448
+    },
+    "land": {
+     "normal": 0.000191,
+     "alt": 0.000198
+    },
+    "ladder": {
+     "normal": 0.13832,
+     "alt": 0.1199
+    },
+    "fire": {
+     "normal": 0.05,
+     "alt": 0.01315
+    }
+   },
+   "inaccuracy_jump_initial": 0.0966,
+   "recovery_time_s": {
+    "stand": 0.349532,
+    "crouch": 0.291277,
+    "stand_final": 0.349532,
+    "crouch_final": 0.291277,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 26.0,
+     "alt": 26.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 5426
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.266667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 1767,
+     "official": 240.0
+    }
+   }
+  },
+  "incgrenade": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 500,
+   "kill_award": 300,
+   "damage": 40,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.7375,
+   "armor_ratio_raw": 1.475,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.7,
+    "flinch_velocity_modifier_small": 0.8
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 15726,
+     "official": 245.0
+    }
+   }
+  },
+  "knife": {
+   "type": "WEAPONTYPE_KNIFE",
+   "gear_slot": "GEAR_SLOT_KNIFE",
+   "price": 0,
+   "kill_award": 1500,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.85,
+   "armor_ratio_raw": 1.7,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 250.0,
+    "alt": 250.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 26701
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.3,
+    "flinch_velocity_modifier_small": 0.3
+   }
+  },
+  "m14": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 4100,
+   "kill_award": 100,
+   "damage": 115,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.975,
+   "armor_ratio_raw": 1.95,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.945,
+   "penetration_power": 2.5,
+   "cycle_time_s": {
+    "normal": 1.85,
+    "alt": 1.85
+   },
+   "rpm": 32,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 5,
+   "reserve_ammo": 5,
+   "max_speed": {
+    "normal": 200.0,
+    "alt": 130.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0708,
+     "alt": 0.0045
+    },
+    "crouch": {
+     "normal": 0.0506,
+     "alt": 0.0025
+    },
+    "move": {
+     "normal": 0.17648,
+     "alt": 0.15
+    },
+    "jump": {
+     "normal": 0.13383,
+     "alt": 0.13383
+    },
+    "land": {
+     "normal": 0.000307,
+     "alt": 0.0001
+    },
+    "ladder": {
+     "normal": 0.1365,
+     "alt": 0.1365
+    },
+    "fire": {
+     "normal": 0.05385,
+     "alt": 0.05385
+    }
+   },
+   "inaccuracy_jump_initial": 0.17286,
+   "recovery_time_s": {
+    "stand": 0.34539,
+    "crouch": 0.24671,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 78.0,
+     "alt": 25.0
+    },
+    "magnitude_variance": {
+     "normal": 15.0,
+     "alt": 2.0
+    },
+    "seed": 4100
+   },
+   "deploy_time_s": 1.85,
+   "reload_attack_lock_s": 0.466667,
+   "zoom": {
+    "levels": 1,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": true
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.35,
+    "flinch_velocity_modifier_small": 0.4
+   }
+  },
+  "m249": {
+   "type": "WEAPONTYPE_MACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 5200,
+   "kill_award": 300,
+   "damage": 32,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.8,
+   "armor_ratio_raw": 1.6,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.97,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.08,
+    "alt": 0.08
+   },
+   "rpm": 750,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 100,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 195.0,
+    "alt": 195.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0077,
+     "alt": 0.0077
+    },
+    "crouch": {
+     "normal": 0.00534,
+     "alt": 0.00534
+    },
+    "move": {
+     "normal": 0.15625,
+     "alt": 0.15625
+    },
+    "jump": {
+     "normal": 0.27947,
+     "alt": 0.27947
+    },
+    "land": {
+     "normal": 0.000398,
+     "alt": 0.000398
+    },
+    "ladder": {
+     "normal": 0.13281,
+     "alt": 0.13281
+    },
+    "fire": {
+     "normal": 0.00356,
+     "alt": 0.00356
+    }
+   },
+   "inaccuracy_jump_initial": 0.11827,
+   "recovery_time_s": {
+    "stand": 0.828931,
+    "crouch": 0.592093,
+    "stand_final": 0.828931,
+    "crouch_final": 0.592093,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 50.0,
+     "alt": 50.0
+    },
+    "magnitude": {
+     "normal": 25.0,
+     "alt": 25.0
+    },
+    "magnitude_variance": {
+     "normal": 2.0,
+     "alt": 2.0
+    },
+    "seed": 50310
+   },
+   "deploy_time_s": 1.1,
+   "reload_attack_lock_s": 5.7,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   }
+  },
+  "m4a1": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 2900,
+   "kill_award": 300,
+   "damage": 33,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.7,
+   "armor_ratio_raw": 1.4,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.97,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.09,
+    "alt": 0.09
+   },
+   "rpm": 667,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 4,
+   "max_speed": {
+    "normal": 225.0,
+    "alt": 225.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.00045
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.0049
+    },
+    "crouch": {
+     "normal": 0.0041,
+     "alt": 0.00368
+    },
+    "move": {
+     "normal": 0.13788,
+     "alt": 0.122
+    },
+    "jump": {
+     "normal": 0.09727,
+     "alt": 0.09727
+    },
+    "land": {
+     "normal": 0.000192,
+     "alt": 0.000197
+    },
+    "ladder": {
+     "normal": 0.110994,
+     "alt": 0.113672
+    },
+    "fire": {
+     "normal": 0.007,
+     "alt": 0.00634
+    }
+   },
+   "inaccuracy_jump_initial": 0.09441,
+   "recovery_time_s": {
+    "stand": 0.338941,
+    "crouch": 0.2421,
+    "stand_final": 0.466044,
+    "crouch_final": 0.332888,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 23.0,
+     "alt": 23.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 38965
+   },
+   "deploy_time_s": 1.133333,
+   "reload_attack_lock_s": 3.066667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.09,
+     "n": 5873,
+     "official": 0.09
+    },
+    "run_speed_p99": {
+     "value": 225.0,
+     "n": 51286,
+     "official": 225.0
+    }
+   }
+  },
+  "m4a1_silencer": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 2900,
+   "kill_award": 300,
+   "damage": 38,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.7,
+   "armor_ratio_raw": 1.4,
+   "headshot_multiplier": 3.475,
+   "range_units": 8192.0,
+   "range_modifier": 0.94,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.1,
+    "alt": 0.1
+   },
+   "rpm": 600,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 20,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 225.0,
+    "alt": 225.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0005
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.0049
+    },
+    "crouch": {
+     "normal": 0.0041,
+     "alt": 0.0041
+    },
+    "move": {
+     "normal": 0.09288,
+     "alt": 0.122
+    },
+    "jump": {
+     "normal": 0.0997,
+     "alt": 0.0997
+    },
+    "land": {
+     "normal": 0.000197,
+     "alt": 0.000197
+    },
+    "ladder": {
+     "normal": 0.110994,
+     "alt": 0.113672
+    },
+    "fire": {
+     "normal": 0.012,
+     "alt": 0.007
+    }
+   },
+   "inaccuracy_jump_initial": 0.09677,
+   "recovery_time_s": {
+    "stand": 0.338941,
+    "crouch": 0.2421,
+    "stand_final": 0.466044,
+    "crouch_final": 0.332888,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 65.0,
+     "alt": 65.0
+    },
+    "magnitude": {
+     "normal": 25.0,
+     "alt": 21.0
+    },
+    "magnitude_variance": {
+     "normal": 3.0,
+     "alt": 0.0
+    },
+    "seed": 38965
+   },
+   "deploy_time_s": 1.133333,
+   "reload_attack_lock_s": 3.066667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_DETACHABLE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.4
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.1003,
+     "n": 10574,
+     "official": 0.1
+    },
+    "run_speed_p99": {
+     "value": 225.0,
+     "n": 95635,
+     "official": 225.0
+    }
+   }
+  },
+  "mac10": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1050,
+   "kill_award": 600,
+   "damage": 29,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.575,
+   "armor_ratio_raw": 1.15,
+   "headshot_multiplier": 4.0,
+   "range_units": 3600.0,
+   "range_modifier": 0.8,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.075,
+    "alt": 0.075
+   },
+   "rpm": 800,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0133,
+     "alt": 0.0133
+    },
+    "crouch": {
+     "normal": 0.00998,
+     "alt": 0.00998
+    },
+    "move": {
+     "normal": 0.01399,
+     "alt": 0.01399
+    },
+    "jump": {
+     "normal": 0.0333,
+     "alt": 0.0333
+    },
+    "land": {
+     "normal": 6.9e-05,
+     "alt": 6.9e-05
+    },
+    "ladder": {
+     "normal": 0.03426,
+     "alt": 0.03426
+    },
+    "fire": {
+     "normal": 0.00476,
+     "alt": 0.00476
+    }
+   },
+   "inaccuracy_jump_initial": 0.03499,
+   "recovery_time_s": {
+    "stand": 0.399729,
+    "crouch": 0.285521,
+    "stand_final": 0.399729,
+    "crouch_final": 0.285521,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 18.0,
+     "alt": 18.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 34079
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.566667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0752,
+     "n": 1259,
+     "official": 0.075
+    },
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 8524,
+     "official": 240.0
+    }
+   }
+  },
+  "mag7": {
+   "type": "WEAPONTYPE_SHOTGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1300,
+   "kill_award": 900,
+   "damage": 30,
+   "bullets_per_shot": 8,
+   "armor_penetration": 0.75,
+   "armor_ratio_raw": 1.5,
+   "headshot_multiplier": 4.0,
+   "range_units": 1400.0,
+   "range_modifier": 0.45,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.85,
+    "alt": 0.85
+   },
+   "rpm": 71,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 5,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 225.0,
+    "alt": 225.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.04,
+    "alt": 0.04
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.007,
+     "alt": 0.007
+    },
+    "crouch": {
+     "normal": 0.00525,
+     "alt": 0.00525
+    },
+    "move": {
+     "normal": 0.01599,
+     "alt": 0.01599
+    },
+    "jump": {
+     "normal": 0.05009,
+     "alt": 0.05009
+    },
+    "land": {
+     "normal": 0.000103,
+     "alt": 0.000103
+    },
+    "ladder": {
+     "normal": 0.13426,
+     "alt": 0.13426
+    },
+    "fire": {
+     "normal": 0.01119,
+     "alt": 0.01119
+    }
+   },
+   "inaccuracy_jump_initial": 0.05264,
+   "recovery_time_s": {
+    "stand": 0.399729,
+    "crouch": 0.285521,
+    "stand_final": 0.399729,
+    "crouch_final": 0.285521,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 165.0,
+     "alt": 165.0
+    },
+    "magnitude_variance": {
+     "normal": 25.0,
+     "alt": 25.0
+    },
+    "seed": 12518
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.5,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.45
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 225.0,
+     "n": 1109,
+     "official": 225.0
+    }
+   }
+  },
+  "molotov": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 400,
+   "kill_award": 300,
+   "damage": 40,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.9,
+   "armor_ratio_raw": 1.8,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 13320,
+     "official": 245.0
+    }
+   }
+  },
+  "mp5sd": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1400,
+   "kill_award": 600,
+   "damage": 28,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.625,
+   "armor_ratio_raw": 1.25,
+   "headshot_multiplier": 4.0,
+   "range_units": 3600.0,
+   "range_modifier": 0.87,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.08,
+    "alt": 0.08
+   },
+   "rpm": 750,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 235.0,
+    "alt": 220.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01,
+     "alt": 0.01
+    },
+    "crouch": {
+     "normal": 0.0085,
+     "alt": 0.0085
+    },
+    "move": {
+     "normal": 0.03,
+     "alt": 0.01986
+    },
+    "jump": {
+     "normal": 0.0596,
+     "alt": 0.0596
+    },
+    "land": {
+     "normal": 0.000115,
+     "alt": 0.000115
+    },
+    "ladder": {
+     "normal": 0.05756,
+     "alt": 0.05756
+    },
+    "fire": {
+     "normal": 0.00218,
+     "alt": 0.00218
+    }
+   },
+   "inaccuracy_jump_initial": 0.05541,
+   "recovery_time_s": {
+    "stand": 0.437491,
+    "crouch": 0.312494,
+    "stand_final": 0.437491,
+    "crouch_final": 0.312494,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 16.0,
+     "alt": 16.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 61649
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.966667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_INTEGRATED",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   }
+  },
+  "mp7": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1400,
+   "kill_award": 600,
+   "damage": 30,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.625,
+   "armor_ratio_raw": 1.25,
+   "headshot_multiplier": 4.0,
+   "range_units": 3600.0,
+   "range_modifier": 0.87,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.08,
+    "alt": 0.08
+   },
+   "rpm": 750,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 220.0,
+    "alt": 220.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01,
+     "alt": 0.01
+    },
+    "crouch": {
+     "normal": 0.0085,
+     "alt": 0.0085
+    },
+    "move": {
+     "normal": 0.01986,
+     "alt": 0.01986
+    },
+    "jump": {
+     "normal": 0.0596,
+     "alt": 0.0596
+    },
+    "land": {
+     "normal": 0.000115,
+     "alt": 0.000115
+    },
+    "ladder": {
+     "normal": 0.05756,
+     "alt": 0.05756
+    },
+    "fire": {
+     "normal": 0.00218,
+     "alt": 0.00218
+    }
+   },
+   "inaccuracy_jump_initial": 0.05541,
+   "recovery_time_s": {
+    "stand": 0.437491,
+    "crouch": 0.312494,
+    "stand_final": 0.437491,
+    "crouch_final": 0.312494,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 16.0,
+     "alt": 16.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 61649
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.166667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0799,
+     "n": 257,
+     "official": 0.08
+    },
+    "run_speed_p99": {
+     "value": 220.0,
+     "n": 2791,
+     "official": 220.0
+    }
+   }
+  },
+  "mp9": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1250,
+   "kill_award": 600,
+   "damage": 26,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.6,
+   "armor_ratio_raw": 1.2,
+   "headshot_multiplier": 4.0,
+   "range_units": 3600.0,
+   "range_modifier": 0.87,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.07,
+    "alt": 0.07
+   },
+   "rpm": 857,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0006
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.009,
+     "alt": 0.009
+    },
+    "crouch": {
+     "normal": 0.008,
+     "alt": 0.008
+    },
+    "move": {
+     "normal": 0.02904,
+     "alt": 0.02904
+    },
+    "jump": {
+     "normal": 0.05,
+     "alt": 0.05
+    },
+    "land": {
+     "normal": 5.6e-05,
+     "alt": 5.6e-05
+    },
+    "ladder": {
+     "normal": 0.148913,
+     "alt": 0.148913
+    },
+    "fire": {
+     "normal": 0.0037,
+     "alt": 0.0037
+    }
+   },
+   "inaccuracy_jump_initial": 0.03728,
+   "recovery_time_s": {
+    "stand": 0.25789,
+    "crouch": 0.184207,
+    "stand_final": 0.25789,
+    "crouch_final": 0.184207,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 21.0,
+     "alt": 21.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 50729
+   },
+   "deploy_time_s": 1.2,
+   "reload_attack_lock_s": 2.133333,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0699,
+     "n": 2732,
+     "official": 0.07
+    },
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 21011,
+     "official": 240.0
+    }
+   }
+  },
+  "negev": {
+   "type": "WEAPONTYPE_MACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1700,
+   "kill_award": 300,
+   "damage": 35,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.71,
+   "armor_ratio_raw": 1.42,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.97,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.075,
+    "alt": 0.075
+   },
+   "rpm": 800,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 150,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 150.0,
+    "alt": 150.0
+   },
+   "attack_movespeed_factor": 0.5,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01017,
+     "alt": 0.01017
+    },
+    "crouch": {
+     "normal": 0.00763,
+     "alt": 0.00763
+    },
+    "move": {
+     "normal": 0.15914,
+     "alt": 0.15914
+    },
+    "jump": {
+     "normal": 0.29223,
+     "alt": 0.29223
+    },
+    "land": {
+     "normal": 0.000409,
+     "alt": 0.000409
+    },
+    "ladder": {
+     "normal": 0.13643,
+     "alt": 0.13643
+    },
+    "fire": {
+     "normal": 0.03,
+     "alt": 0.00337
+    }
+   },
+   "inaccuracy_jump_initial": 0.11629,
+   "recovery_time_s": {
+    "stand": 0.3,
+    "crouch": 0.25,
+    "stand_final": 0.1,
+    "crouch_final": 0.08,
+    "transition_start_bullet": 9,
+    "transition_end_bullet": 12
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude_variance": {
+     "normal": 2.0,
+     "alt": 2.0
+    },
+    "seed": 57966
+   },
+   "deploy_time_s": 1.1,
+   "reload_attack_lock_s": 5.7,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   }
+  },
+  "nova": {
+   "type": "WEAPONTYPE_SHOTGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1050,
+   "kill_award": 900,
+   "damage": 26,
+   "bullets_per_shot": 9,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 3000.0,
+   "range_modifier": 0.7,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.88,
+    "alt": 0.88
+   },
+   "rpm": 68,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 8,
+   "reserve_ammo": 32,
+   "max_speed": {
+    "normal": 220.0,
+    "alt": 220.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.04,
+    "alt": 0.04
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.007,
+     "alt": 0.007
+    },
+    "crouch": {
+     "normal": 0.00525,
+     "alt": 0.00525
+    },
+    "move": {
+     "normal": 0.03675,
+     "alt": 0.03675
+    },
+    "jump": {
+     "normal": 0.12631,
+     "alt": 0.12631
+    },
+    "land": {
+     "normal": 0.000236,
+     "alt": 0.000236
+    },
+    "ladder": {
+     "normal": 0.07875,
+     "alt": 0.07875
+    },
+    "fire": {
+     "normal": 0.00972,
+     "alt": 0.00972
+    }
+   },
+   "inaccuracy_jump_initial": 0.1097,
+   "recovery_time_s": {
+    "stand": 0.460517,
+    "crouch": 0.328941,
+    "stand_final": 0.460517,
+    "crouch_final": 0.328941,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 143.0,
+     "alt": 143.0
+    },
+    "magnitude_variance": {
+     "normal": 22.0,
+     "alt": 22.0
+    },
+    "seed": 7763
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 0.466667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.45
+   }
+  },
+  "p250": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 300,
+   "kill_award": 300,
+   "damage": 38,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.64,
+   "armor_ratio_raw": 1.28,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.9,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 13,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.002
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0091,
+     "alt": 0.0091
+    },
+    "crouch": {
+     "normal": 0.00683,
+     "alt": 0.00683
+    },
+    "move": {
+     "normal": 0.02,
+     "alt": 0.01341
+    },
+    "jump": {
+     "normal": 0.09296,
+     "alt": 0.09296
+    },
+    "land": {
+     "normal": 0.00019,
+     "alt": 0.00019
+    },
+    "ladder": {
+     "normal": 0.138,
+     "alt": 0.138
+    },
+    "fire": {
+     "normal": 0.05245,
+     "alt": 0.05245
+    }
+   },
+   "inaccuracy_jump_initial": 0.09662,
+   "recovery_time_s": {
+    "stand": 0.345388,
+    "crouch": 0.287823,
+    "stand_final": 0.345388,
+    "crouch_final": 0.287823,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 10.0,
+     "alt": 10.0
+    },
+    "magnitude": {
+     "normal": 26.0,
+     "alt": 26.0
+    },
+    "magnitude_variance": {
+     "normal": 3.0,
+     "alt": 3.0
+    },
+    "seed": 9788
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.266667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 6365,
+     "official": 240.0
+    }
+   }
+  },
+  "p90": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 2350,
+   "kill_award": 300,
+   "damage": 26,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.69,
+   "armor_ratio_raw": 1.38,
+   "headshot_multiplier": 4.0,
+   "range_units": 3700.0,
+   "range_modifier": 0.86,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.07,
+    "alt": 0.07
+   },
+   "rpm": 857,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 50,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 230.0,
+    "alt": 230.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.001,
+    "alt": 0.001
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01365,
+     "alt": 0.01365
+    },
+    "crouch": {
+     "normal": 0.01024,
+     "alt": 0.01024
+    },
+    "move": {
+     "normal": 0.031,
+     "alt": 0.031
+    },
+    "jump": {
+     "normal": 0.09008,
+     "alt": 0.09008
+    },
+    "land": {
+     "normal": 8.2e-05,
+     "alt": 8.2e-05
+    },
+    "ladder": {
+     "normal": 0.13217,
+     "alt": 0.13217
+    },
+    "fire": {
+     "normal": 0.00285,
+     "alt": 0.00285
+    }
+   },
+   "inaccuracy_jump_initial": 0.1046,
+   "recovery_time_s": {
+    "stand": 0.372098,
+    "crouch": 0.265784,
+    "stand_final": 0.372098,
+    "crouch_final": 0.265784,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 70.0,
+     "alt": 70.0
+    },
+    "magnitude": {
+     "normal": 16.0,
+     "alt": 16.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 6213
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.366667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   }
+  },
+  "revolver": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 600,
+   "kill_award": 300,
+   "damage": 86,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.932,
+   "armor_ratio_raw": 1.864,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.94,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.5,
+    "alt": 0.4
+   },
+   "rpm": 120,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 8,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 180.0,
+    "alt": 220.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.00052,
+    "alt": 0.068
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.002,
+     "alt": 0.012
+    },
+    "crouch": {
+     "normal": 0.001,
+     "alt": 0.005
+    },
+    "move": {
+     "normal": 0.0065,
+     "alt": 0.036
+    },
+    "jump": {
+     "normal": 0.05323,
+     "alt": 0.05323
+    },
+    "land": {
+     "normal": 0.00013,
+     "alt": 0.00015
+    },
+    "ladder": {
+     "normal": 0.012,
+     "alt": 0.035
+    },
+    "fire": {
+     "normal": 0.05,
+     "alt": 0.055
+    }
+   },
+   "inaccuracy_jump_initial": 0.01865,
+   "recovery_time_s": {
+    "stand": 0.9,
+    "crouch": 0.7,
+    "stand_final": 0.8112,
+    "crouch_final": 0.449927,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 3.0
+    },
+    "angle_variance": {
+     "normal": 40.0,
+     "alt": 50.0
+    },
+    "magnitude": {
+     "normal": 20.0,
+     "alt": 45.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 6.0
+    },
+    "seed": 12345
+   },
+   "deploy_time_s": 1.166667,
+   "reload_attack_lock_s": 2.266667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.4
+   }
+  },
+  "sawedoff": {
+   "type": "WEAPONTYPE_SHOTGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1100,
+   "kill_award": 900,
+   "damage": 32,
+   "bullets_per_shot": 8,
+   "armor_penetration": 0.75,
+   "armor_ratio_raw": 1.5,
+   "headshot_multiplier": 4.0,
+   "range_units": 1400.0,
+   "range_modifier": 0.45,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.85,
+    "alt": 0.85
+   },
+   "rpm": 71,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 7,
+   "reserve_ammo": 32,
+   "max_speed": {
+    "normal": 210.0,
+    "alt": 210.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.062,
+    "alt": 0.062
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.007,
+     "alt": 0.007
+    },
+    "crouch": {
+     "normal": 0.00525,
+     "alt": 0.00525
+    },
+    "move": {
+     "normal": 0.0168,
+     "alt": 0.0168
+    },
+    "jump": {
+     "normal": 0.0577,
+     "alt": 0.0577
+    },
+    "land": {
+     "normal": 0.000108,
+     "alt": 0.000108
+    },
+    "ladder": {
+     "normal": 0.036,
+     "alt": 0.036
+    },
+    "fire": {
+     "normal": 0.00972,
+     "alt": 0.00972
+    }
+   },
+   "inaccuracy_jump_initial": 0.05012,
+   "recovery_time_s": {
+    "stand": 0.460517,
+    "crouch": 0.328941,
+    "stand_final": 0.460517,
+    "crouch_final": 0.328941,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 143.0,
+     "alt": 143.0
+    },
+    "magnitude_variance": {
+     "normal": 22.0,
+     "alt": 22.0
+    },
+    "seed": 1089
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 0.466667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.45
+   }
+  },
+  "scar20": {
+   "type": "WEAPONTYPE_SNIPER_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 5000,
+   "kill_award": 300,
+   "damage": 80,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.825,
+   "armor_ratio_raw": 1.65,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.5,
+   "cycle_time_s": {
+    "normal": 0.25,
+    "alt": 0.25
+   },
+   "rpm": 240,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 20,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 215.0,
+    "alt": 120.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0003,
+    "alt": 0.0003
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0258,
+     "alt": 0.002
+    },
+    "crouch": {
+     "normal": 0.01935,
+     "alt": 0.0015
+    },
+    "move": {
+     "normal": 0.15048,
+     "alt": 0.15048
+    },
+    "jump": {
+     "normal": 0.15377,
+     "alt": 0.15377
+    },
+    "land": {
+     "normal": 0.000262,
+     "alt": 0.000262
+    },
+    "ladder": {
+     "normal": 0.11639,
+     "alt": 0.11639
+    },
+    "fire": {
+     "normal": 0.01861,
+     "alt": 0.01861
+    }
+   },
+   "inaccuracy_jump_initial": 0.10769,
+   "recovery_time_s": {
+    "stand": 0.544331,
+    "crouch": 0.388808,
+    "stand_final": 0.544331,
+    "crouch_final": 0.388808,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 30.0,
+     "alt": 30.0
+    },
+    "magnitude": {
+     "normal": 31.0,
+     "alt": 31.0
+    },
+    "magnitude_variance": {
+     "normal": 4.0,
+     "alt": 4.0
+    },
+    "seed": 19364
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.066667,
+   "zoom": {
+    "levels": 2,
+    "fov1": 40,
+    "fov2": 15,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.35,
+    "flinch_velocity_modifier_small": 0.4
+   }
+  },
+  "sg556": {
+   "type": "WEAPONTYPE_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 3000,
+   "kill_award": 300,
+   "damage": 30,
+   "bullets_per_shot": 1,
+   "armor_penetration": 1.0,
+   "armor_ratio_raw": 2.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.0,
+   "cycle_time_s": {
+    "normal": 0.11,
+    "alt": 0.11
+   },
+   "rpm": 545,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 30,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 210.0,
+    "alt": 150.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0006,
+    "alt": 0.0003
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.00581,
+     "alt": 0.00381
+    },
+    "crouch": {
+     "normal": 0.00381,
+     "alt": 0.00305
+    },
+    "move": {
+     "normal": 0.13601,
+     "alt": 0.13601
+    },
+    "jump": {
+     "normal": 0.109,
+     "alt": 0.109
+    },
+    "land": {
+     "normal": 0.000188,
+     "alt": 0.000188
+    },
+    "ladder": {
+     "normal": 0.08366,
+     "alt": 0.138758
+    },
+    "fire": {
+     "normal": 0.00795,
+     "alt": 0.0092
+    }
+   },
+   "inaccuracy_jump_initial": 0.07879,
+   "recovery_time_s": {
+    "stand": 0.452886,
+    "crouch": 0.379204,
+    "stand_final": 0.452886,
+    "crouch_final": 0.379204,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 60.0,
+     "alt": 60.0
+    },
+    "magnitude": {
+     "normal": 28.0,
+     "alt": 19.0
+    },
+    "magnitude_variance": {
+     "normal": 2.0,
+     "alt": 2.0
+    },
+    "seed": 43500
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.766667,
+   "zoom": {
+    "levels": 1,
+    "fov1": 45,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.55
+   }
+  },
+  "smokegrenade": {
+   "type": "WEAPONTYPE_GRENADE",
+   "gear_slot": "GEAR_SLOT_GRENADES",
+   "price": 300,
+   "kill_award": 300,
+   "damage": 50,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.5,
+   "armor_ratio_raw": 1.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.99,
+   "penetration_power": 0.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 0,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 245.0,
+    "alt": 245.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "crouch": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "move": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "jump": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "land": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "ladder": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "fire": {
+     "normal": 0.0,
+     "alt": 0.0
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 1.0,
+    "crouch": 1.0,
+    "stand_final": -1.0,
+    "crouch_final": -1.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": null
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 1.0,
+    "flinch_velocity_modifier_small": 1.0
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 245.0,
+     "n": 41811,
+     "official": 245.0
+    }
+   }
+  },
+  "ssg08": {
+   "type": "WEAPONTYPE_SNIPER_RIFLE",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1700,
+   "kill_award": 300,
+   "damage": 88,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.85,
+   "armor_ratio_raw": 1.7,
+   "headshot_multiplier": 4.0,
+   "range_units": 8192.0,
+   "range_modifier": 0.98,
+   "penetration_power": 2.5,
+   "cycle_time_s": {
+    "normal": 1.25,
+    "alt": 1.25
+   },
+   "rpm": 48,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 10,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 230.0,
+    "alt": 230.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.00028,
+    "alt": 0.00023
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0317,
+     "alt": 0.003
+    },
+    "crouch": {
+     "normal": 0.02378,
+     "alt": 0.0028
+    },
+    "move": {
+     "normal": 0.12345,
+     "alt": 0.12345
+    },
+    "jump": {
+     "normal": 0.00572,
+     "alt": 0.00572
+    },
+    "land": {
+     "normal": 0.000215,
+     "alt": 0.000215
+    },
+    "ladder": {
+     "normal": 0.09549,
+     "alt": 0.09549
+    },
+    "fire": {
+     "normal": 0.02292,
+     "alt": 0.02292
+    }
+   },
+   "inaccuracy_jump_initial": 0.20872,
+   "recovery_time_s": {
+    "stand": 0.142096,
+    "crouch": 0.055783,
+    "stand_final": 0.142096,
+    "crouch_final": 0.055783,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 33.0,
+     "alt": 25.0
+    },
+    "magnitude_variance": {
+     "normal": 15.0,
+     "alt": 2.0
+    },
+    "seed": 1278
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.7,
+   "zoom": {
+    "levels": 2,
+    "fov1": 40,
+    "fov2": 15,
+    "unzoom_after_shot": true
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.35,
+    "flinch_velocity_modifier_small": 0.4
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 230.0,
+     "n": 2339,
+     "official": 230.0
+    }
+   }
+  },
+  "taser": {
+   "type": "WEAPONTYPE_TASER",
+   "gear_slot": "GEAR_SLOT_KNIFE",
+   "price": 200,
+   "kill_award": 100,
+   "damage": 500,
+   "bullets_per_shot": 1,
+   "armor_penetration": 1.0,
+   "armor_ratio_raw": 2.0,
+   "headshot_multiplier": 4.0,
+   "range_units": 120.0,
+   "range_modifier": 0.99,
+   "penetration_power": 0.0,
+   "cycle_time_s": {
+    "normal": 0.15,
+    "alt": 0.3
+   },
+   "rpm": 400,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 1,
+   "reserve_ammo": 0,
+   "max_speed": {
+    "normal": 230.0,
+    "alt": 230.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0,
+    "alt": 0.0
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.06,
+     "alt": 0.06
+    },
+    "crouch": {
+     "normal": 0.05,
+     "alt": 0.05
+    },
+    "move": {
+     "normal": 0.013,
+     "alt": 0.013
+    },
+    "jump": {
+     "normal": 0.01,
+     "alt": 0.01
+    },
+    "land": {
+     "normal": 0.0001,
+     "alt": 0.0001
+    },
+    "ladder": {
+     "normal": 0.01,
+     "alt": 0.01
+    },
+    "fire": {
+     "normal": 0.05,
+     "alt": 0.05
+    }
+   },
+   "inaccuracy_jump_initial": 0.0,
+   "recovery_time_s": {
+    "stand": 0.0,
+    "crouch": 0.0,
+    "stand_final": 0.0,
+    "crouch_final": 0.0,
+    "transition_start_bullet": 0,
+    "transition_end_bullet": 0
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 687
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 5.0,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   }
+  },
+  "tec9": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 500,
+   "kill_award": 300,
+   "damage": 33,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.906,
+   "armor_ratio_raw": 1.812,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.79,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.12,
+    "alt": 0.12
+   },
+   "rpm": 500,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 18,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.002,
+    "alt": 0.0018
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.00903
+    },
+    "crouch": {
+     "normal": 0.00368,
+     "alt": 0.00727
+    },
+    "move": {
+     "normal": 0.00381,
+     "alt": 0.00381
+    },
+    "jump": {
+     "normal": 0.07978,
+     "alt": 0.07978
+    },
+    "land": {
+     "normal": 0.000211,
+     "alt": 0.000211
+    },
+    "ladder": {
+     "normal": 0.1206,
+     "alt": 0.1206
+    },
+    "fire": {
+     "normal": 0.045,
+     "alt": 0.03688
+    }
+   },
+   "inaccuracy_jump_initial": 0.07117,
+   "recovery_time_s": {
+    "stand": 0.391,
+    "crouch": 0.315,
+    "stand_final": 0.391,
+    "crouch_final": 0.315,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 60.0,
+     "alt": 60.0
+    },
+    "magnitude": {
+     "normal": 23.0,
+     "alt": 23.0
+    },
+    "magnitude_variance": {
+     "normal": 3.0,
+     "alt": 3.0
+    },
+    "seed": 789
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.566667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 18937,
+     "official": 240.0
+    }
+   }
+  },
+  "ump45": {
+   "type": "WEAPONTYPE_SUBMACHINEGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 1200,
+   "kill_award": 600,
+   "damage": 35,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.65,
+   "armor_ratio_raw": 1.3,
+   "headshot_multiplier": 4.0,
+   "range_units": 3700.0,
+   "range_modifier": 0.75,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.09,
+    "alt": 0.09
+   },
+   "rpm": 667,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 25,
+   "reserve_clips": 3,
+   "max_speed": {
+    "normal": 230.0,
+    "alt": 230.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.001,
+    "alt": 0.001
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.01343,
+     "alt": 0.01343
+    },
+    "crouch": {
+     "normal": 0.01007,
+     "alt": 0.01007
+    },
+    "move": {
+     "normal": 0.02876,
+     "alt": 0.02876
+    },
+    "jump": {
+     "normal": 0.03725,
+     "alt": 0.03725
+    },
+    "land": {
+     "normal": 8.5e-05,
+     "alt": 8.5e-05
+    },
+    "ladder": {
+     "normal": 0.04235,
+     "alt": 0.04235
+    },
+    "fire": {
+     "normal": 0.00342,
+     "alt": 0.00342
+    }
+   },
+   "inaccuracy_jump_initial": 0.04721,
+   "recovery_time_s": {
+    "stand": 0.349993,
+    "crouch": 0.249995,
+    "stand_final": 0.349993,
+    "crouch_final": 0.249995,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 40.0,
+     "alt": 40.0
+    },
+    "magnitude": {
+     "normal": 23.0,
+     "alt": 23.0
+    },
+    "magnitude_variance": {
+     "normal": 1.0,
+     "alt": 1.0
+    },
+    "seed": 59299
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 3.466667,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.0,
+    "flinch_velocity_modifier_small": 0.0
+   }
+  },
+  "usp_silencer": {
+   "type": "WEAPONTYPE_PISTOL",
+   "gear_slot": "GEAR_SLOT_PISTOL",
+   "price": 200,
+   "kill_award": 300,
+   "damage": 35,
+   "bullets_per_shot": 1,
+   "armor_penetration": 0.505,
+   "armor_ratio_raw": 1.01,
+   "headshot_multiplier": 4.0,
+   "range_units": 4096.0,
+   "range_modifier": 0.91,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.17,
+    "alt": 0.17
+   },
+   "rpm": 353,
+   "full_auto": false,
+   "burst_mode": false,
+   "clip_size": 12,
+   "reserve_clips": 2,
+   "max_speed": {
+    "normal": 240.0,
+    "alt": 240.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.0025,
+    "alt": 0.0015
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.0049,
+     "alt": 0.0049
+    },
+    "crouch": {
+     "normal": 0.00368,
+     "alt": 0.00368
+    },
+    "move": {
+     "normal": 0.01387,
+     "alt": 0.01387
+    },
+    "jump": {
+     "normal": 0.09448,
+     "alt": 0.09448
+    },
+    "land": {
+     "normal": 0.000191,
+     "alt": 0.000198
+    },
+    "ladder": {
+     "normal": 0.13832,
+     "alt": 0.1199
+    },
+    "fire": {
+     "normal": 0.071,
+     "alt": 0.052
+    }
+   },
+   "inaccuracy_jump_initial": 0.0966,
+   "recovery_time_s": {
+    "stand": 0.349532,
+    "crouch": 0.291277,
+    "stand_final": 0.349532,
+    "crouch_final": 0.291277,
+    "transition_start_bullet": 3,
+    "transition_end_bullet": 10
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "magnitude": {
+     "normal": 29.0,
+     "alt": 23.0
+    },
+    "magnitude_variance": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "seed": 5426
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 2.2,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_DETACHABLE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.5,
+    "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 240.0,
+     "n": 30372,
+     "official": 240.0
+    }
+   }
+  },
+  "xm1014": {
+   "type": "WEAPONTYPE_SHOTGUN",
+   "gear_slot": "GEAR_SLOT_RIFLE",
+   "price": 2000,
+   "kill_award": 600,
+   "damage": 20,
+   "bullets_per_shot": 6,
+   "armor_penetration": 0.8,
+   "armor_ratio_raw": 1.6,
+   "headshot_multiplier": 4.0,
+   "range_units": 3000.0,
+   "range_modifier": 0.7,
+   "penetration_power": 1.0,
+   "cycle_time_s": {
+    "normal": 0.35,
+    "alt": 0.35
+   },
+   "rpm": 171,
+   "full_auto": true,
+   "burst_mode": false,
+   "clip_size": 7,
+   "reserve_ammo": 32,
+   "max_speed": {
+    "normal": 215.0,
+    "alt": 215.0
+   },
+   "attack_movespeed_factor": 1.0,
+   "spread": {
+    "normal": 0.038,
+    "alt": 0.038
+   },
+   "inaccuracy": {
+    "stand": {
+     "normal": 0.007,
+     "alt": 0.007
+    },
+    "crouch": {
+     "normal": 0.00525,
+     "alt": 0.00525
+    },
+    "move": {
+     "normal": 0.03603,
+     "alt": 0.03603
+    },
+    "jump": {
+     "normal": 0.13083,
+     "alt": 0.13083
+    },
+    "land": {
+     "normal": 0.000232,
+     "alt": 0.000232
+    },
+    "ladder": {
+     "normal": 0.07721,
+     "alt": 0.07721
+    },
+    "fire": {
+     "normal": 0.00883,
+     "alt": 0.00883
+    }
+   },
+   "inaccuracy_jump_initial": 0.10038,
+   "recovery_time_s": {
+    "stand": 0.506569,
+    "crouch": 0.361835,
+    "stand_final": 0.506569,
+    "crouch_final": 0.361835,
+    "transition_start_bullet": 2,
+    "transition_end_bullet": 5
+   },
+   "recoil": {
+    "angle": {
+     "normal": 0.0,
+     "alt": 0.0
+    },
+    "angle_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "magnitude": {
+     "normal": 80.0,
+     "alt": 80.0
+    },
+    "magnitude_variance": {
+     "normal": 20.0,
+     "alt": 20.0
+    },
+    "seed": 24862
+   },
+   "deploy_time_s": 1.0,
+   "reload_attack_lock_s": 0.6,
+   "zoom": {
+    "levels": 0,
+    "fov1": 90,
+    "fov2": 90,
+    "unzoom_after_shot": false
+   },
+   "silencer": "WEAPONSILENCER_NONE",
+   "tagging": {
+    "flinch_velocity_modifier_large": 0.4,
+    "flinch_velocity_modifier_small": 0.45
+   }
+  }
+ },
+ "weapon_display_names": {
+  "AK-47": "ak47",
+  "AUG": "aug",
+  "AWP": "awp",
+  "Butterfly Knife": "knife_butterfly",
+  "CZ75-Auto": "cz75a",
+  "Decoy Grenade": "decoy",
+  "Desert Eagle": "deagle",
+  "Dual Berettas": "elite",
+  "FAMAS": "famas",
+  "Falchion Knife": "knife_falchion",
+  "Five-SeveN": "fiveseven",
+  "Flashbang": "flashbang",
+  "Flip Knife": "knife_flip",
+  "Galil AR": "galilar",
+  "Glock-18": "glock",
+  "High Explosive Grenade": "hegrenade",
+  "Huntsman Knife": "knife_tactical",
+  "Incendiary Grenade": "incgrenade",
+  "Karambit": "knife_karambit",
+  "M4A1-S": "m4a1_silencer",
+  "M4A4": "m4a1",
+  "M9 Bayonet": "knife_m9_bayonet",
+  "MAC-10": "mac10",
+  "MAG-7": "mag7",
+  "MP7": "mp7",
+  "MP9": "mp9",
+  "Molotov": "molotov",
+  "P2000": "hkp2000",
+  "P250": "p250",
+  "SSG 08": "ssg08",
+  "Skeleton Knife": "knife_skeleton",
+  "Smoke Grenade": "smokegrenade",
+  "Talon Knife": "knife_widowmaker",
+  "Tec-9": "tec9",
+  "USP-S": "usp_silencer"
+ }
+}

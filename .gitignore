@@ -1,0 +1,22 @@
+# O repositório guarda só o que o jogo consome (profiles/ e game_rules/)
+# e os scripts que geram esses arquivos. Entradas e dados intermediários
+# ficam só na máquina e são regeráveis.
+
+# Entradas da geração de dados
+demos/
+archives/
+reference/
+
+# Dados intermediários extraídos das demos
+data/
+
+# Pacotes para envio (repetem o JSON e o .md das pastas)
+*.zip
+
+# Ambiente Python e caches
+.venv/
+__pycache__/
+*.pyc
+
+# Sistema
+.DS_Store
