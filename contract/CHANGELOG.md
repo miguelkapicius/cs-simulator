@@ -2,6 +2,22 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.2.0: camada tática (2026-10-23)
+
+Só acrescenta; tudo o que as versões anteriores entregaram continua válido.
+
+- `tactics.json` (novo): por mapa, regiões com zona (A/B/Mid/Spawn), grafo de movimento, ocupação por tempo, **previsão de posição**
+  (onde o jogador estará em 5 s e 10 s; +53% a +58% sobre a ocupação em partidas inéditas), pós-plant, rotação do CT, primeiro contato
+  e utilitários.
+- `tactics_playbook.json` (novo): as rotas dos cinco jogadores de cada lado nos 599 rounds reais, para reproduzir rounds inteiros.
+- Evento `positions` no log da simulação (opcional, recomendado): a região de cada jogador vivo a 2 Hz ou mais.
+- Métricas de calibração `tactic.*` (zona por tempo, primeiro contato, movimento e permanência); as metas passaram de 207 para 306 métricas.
+  Em partidas reais inéditas elas dão 0 FAIL e 0,7% de WARN.
+- Referência `reference/tactics.py` e `test_vectors/tactics_vectors.json` (≈ 1.300 casos).
+- **Resultado negativo registrado:** agrupar rounds em "planos" (k-means) não previu o bombsite do plant com os 40 s iniciais de partidas
+  inéditas e não melhorou a previsão de posição, então não há planos no contrato (ver `docs/tactics.md`).
+- `real_to_simlog` passou a incluir `positions` (2 Hz) nos logs das demos.
+
 ## 1.1.0: dinâmica das armas (2026-10-23)
 
 Só acrescenta; nada que a 1.0.0 entregou mudou de formato ou de significado.

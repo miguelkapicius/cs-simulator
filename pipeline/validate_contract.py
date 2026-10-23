@@ -11,6 +11,7 @@ from referencing import Registry, Resource
 
 from calibration.validate_log import validate_file
 from contract.reference import team_model as ref
+from contract.reference import tactics as tac
 from contract.reference import weapon_dynamics as wd
 from pipeline.common import ARTIFACTS_DIR, CONTRACT_DIR, CONTRACT_VERSION, EXAMPLES_DIR, SCHEMAS_DIR, VECTORS_DIR
 
@@ -20,6 +21,8 @@ ARTIFACT_SCHEMAS = {
     "team_model.json": "team_model.schema.json",
     "calibration_targets.json": "calibration_targets.schema.json",
     "weapon_dynamics.json": "weapon_dynamics.schema.json",
+    "tactics.json": "tactics.schema.json",
+    "tactics_playbook.json": "tactics_playbook.schema.json",
 }
 MAX_ERRORS = 8
 
@@ -94,6 +97,41 @@ def check_weapon_vectors():
     return problems
 
 
+def check_tactics_vectors():
+    vec_path = VECTORS_DIR / "tactics_vectors.json"
+    paths = (vec_path, ARTIFACTS_DIR / "tactics.json", ARTIFACTS_DIR / "tactics_playbook.json")
+    if not all(p.exists() for p in paths):
+        return ["tactics_vectors.json, tactics.json ou tactics_playbook.json ausente"]
+    vec, model, playbook = (json.loads(p.read_text()) for p in paths)
+    by_id = {mp: {r["id"]: r for r in m["rounds"]} for mp, m in playbook["maps"].items()}
+    tol, problems = vec["tolerance"], []
+
+    def same(a, b):
+        if isinstance(a, dict) and isinstance(b, dict):
+            return a.keys() == b.keys() and all(same(a[k], b[k]) for k in a)
+        if isinstance(a, (list, tuple)) and isinstance(b, (list, tuple)):
+            return len(a) == len(b) and all(same(x, y) for x, y in zip(a, b))
+        if isinstance(a, (int, float)) and isinstance(b, (int, float)) and not isinstance(a, bool):
+            return abs(a - b) <= tol
+        return a == b
+
+    fns = {
+        "zone": lambda i: tac.zone(model, i["map"], i["place"]),
+        "next_places": lambda i: tac.next_places(model, i["map"], i["place"]),
+        "occupancy": lambda i: tac.occupancy(model, i["map"], i["side"], i["t"]),
+        "forecast": lambda i: tac.forecast(model, i["map"], i["side"], i["place"], i["horizon_s"]),
+        "rotation": lambda i: tac.rotation(model, i["map"], i["contact_zone"], i["own_zone"]),
+        "round_weights": lambda i: (lambda w: {"n": len(w), "weight": w[0][1], "first_ids": [x[0] for x in w[:3]]})(tac.round_weights(playbook, i["map"], i["t_buy"])),
+        "place_at": lambda i: tac.place_at(by_id[i["map"]][i["round_id"]], i["side"], i["player_index"], i["t"]),
+    }
+    for name, fn in fns.items():
+        for k, case in enumerate(vec[name]):
+            got = fn(case["input"])
+            if not same(got, case["expected"]):
+                problems.append(f"{name}[{k}]: esperado {case['expected']}, obtido {got}")
+    return problems
+
+
 def check_example():
     path = EXAMPLES_DIR / "sim_log_example.jsonl"
     if not path.exists():
@@ -108,6 +146,7 @@ def main():
         Draft202012Validator.check_schema(json.loads(f.read_text()))
     sections = {"artefatos x schemas": check_artifacts(reg), "vetores do modelo de time x referência": check_vectors(),
                 "vetores de recuo x referência": check_weapon_vectors(),
+                "vetores da camada tática x referência": check_tactics_vectors(),
                 "log de exemplo": check_example()}
     bad = 0
     print(f"Contrato {CONTRACT_VERSION} ({CONTRACT_DIR.name}/)")

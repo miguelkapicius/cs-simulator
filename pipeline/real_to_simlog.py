@@ -14,13 +14,14 @@ import pandas as pd
 from demoparser2 import DemoParser
 
 from pipeline.build_player_profiles import extract_shots, find_sighting_onsets
-from pipeline.common import (CONTRACT_VERSION, DATA_DIR, DEMOS_DIR, DISPLAY_TO_ID, GRENADE_DISPLAY, TICKRATE,
+from pipeline.common import (CONTRACT_VERSION, DATA_DIR, DEMOS_DIR, DISPLAY_TO_ID, GRENADE_DISPLAY, TICKRATE, UNIT_TO_M,
                              WEAPON_CLASS)
 from pipeline.extract_demos import assign_round
 
 # Ordem dos tipos de evento dentro do mesmo tick
-TYPE_ORDER = {"round_start": 0, "freeze_end": 1, "bomb": 2, "grenade": 3, "sighting": 4, "shot": 5, "damage": 6,
-              "kill": 7, "round_end": 8}
+TYPE_ORDER = {"round_start": 0, "freeze_end": 1, "bomb": 2, "grenade": 3, "positions": 4, "sighting": 5, "shot": 6, "damage": 7,
+              "kill": 8, "round_end": 9}
+POSITIONS_EVERY = 4      # as demos têm 8 amostras/s; grava 1 a cada 4 (2 Hz)
 
 
 def clean(v):
@@ -73,6 +74,10 @@ def convert(demo_path):
     bomb = pd.read_parquet(d / "bomb.parquet")
     grenades = pd.read_parquet(d / "grenades.parquet")
     economy = pd.read_parquet(d / "economy.parquet")
+    ticks = pd.read_parquet(d / "ticks.parquet", columns=["round", "tick", "round_time", "after_round_end", "steamid", "is_alive", "X", "Y", "Z", "last_place_name"])
+    ticks = ticks[ticks["is_alive"] & ~ticks["after_round_end"] & (ticks["round_time"] >= 0)]
+    ticks = ticks[ticks["last_place_name"].notna() & (ticks["last_place_name"] != "")]   # o contrato exige nome de região
+    ticks = ticks[(ticks["round_time"] * 8).round().astype(int) % POSITIONS_EVERY == 0]
 
     parser = DemoParser(str(demo_path))
     shots = extract_shots(parser, rounds, damages)
@@ -132,6 +137,10 @@ def convert(demo_path):
         for _, o in onsets[onsets["round"] == n].iterrows():
             add(n, o["tick"], "sighting", {"observer": str(o["observer"]), "target": str(o["target"]),
                                            "distance_m": clean(o["distance_m"]), "aim_error_deg": clean(o["aim_err_deg"])})
+
+        for tick, g in ticks[ticks["round"] == n].groupby("tick"):
+            add(n, tick, "positions", {"players": [{"player": str(q.steamid), "place": q.last_place_name, "x": round(float(q.X) * UNIT_TO_M, 2),
+                                                    "y": round(float(q.Y) * UNIT_TO_M, 2), "z": round(float(q.Z) * UNIT_TO_M, 2)} for q in g.itertuples()]})
 
         rk = kills[(kills["round"] == n) & (kills["tick"] <= r["end_tick"])]
         alive = {s: 5 - int((rk["user_side"] == s).sum()) for s in ("CT", "T")}

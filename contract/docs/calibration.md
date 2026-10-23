@@ -25,7 +25,7 @@ O comando sai com código 1 se houver algum `FAIL` (`--fail-on WARN` também rec
 Quantas partidas simular: o ruído do relatório diminui com a raiz do número de partidas.
 **Com 1 a 3 partidas** quase nada é conclusivo; **com 20 ou mais** a calibração é apertada.
 
-## O que é medido (207 métricas)
+## O que é medido (306 métricas)
 
 | Grupo | Exemplos | Eventos necessários |
 |---|---|---|
@@ -33,6 +33,7 @@ Quantas partidas simular: o ruído do relatório diminui com a raiz do número d
 | `econ.*` | vitória do CT por combinação de compras (full x eco...) | `freeze_end` |
 | `combat.*` | precisão por arma e distância, erro de mira da 1ª bala, tiros parado/agachado, tamanho da rajada, headshots, distância dos kills, ADR | `shot`, `damage`, `kill` |
 | `duel.*` | tempo de reação, vitória no duelo, mira no instante em que o inimigo aparece | `sighting` + `shot` + `kill` |
+| `tactic.*` | onde cada lado está aos 20, 40 e 60 s (por zona do mapa), quando acontece o primeiro contato, trocas de região por jogador e tempo de permanência em cada região | `positions`, `damage` |
 | `buy.*` | tipo de compra, colete, capacete, kit, AWPs e granadas por jogador | `freeze_end` |
 
 Métricas com sufixo `@de_mirage` são do mapa. Elas só aparecem se a simulação tiver rounds suficientes no mapa.
@@ -62,9 +63,9 @@ para outra** (`between` em cada meta) e encolhe com o número de partidas simula
 Metas sem partidas reais suficientes para estimar isso (`between` ausente) usam o erro-padrão de amostras independentes e nunca passam de `WARN`.
 
 ### Quão confiável é o comparador
-Medido com partidas reais que ele não conhecia (12 divisões aleatórias, 19 partidas para calibrar e 9 para testar):
-**0 FAIL e 1,5% de WARN**, o ruído esperado. Já uma simulação adulterada de propósito (rifles errando 30% mais, rounds
-terminando por tempo) é apontada com `FAIL` nas métricas certas.
+Medido com partidas reais que ele não conhecia (8 divisões aleatórias, 19 partidas para calibrar e 9 para testar):
+**0 FAIL e 1,4% de WARN**, o ruído esperado (nas métricas táticas, 0,7%). Já uma simulação adulterada de propósito (rifles errando 30% mais, rounds
+terminando por tempo, jogadores parados no spawn) é apontada com `FAIL` nas métricas certas.
 
 ## Como usar o relatório para ajustar a mecânica
 
@@ -73,7 +74,9 @@ terminando por tempo) é apontada com `FAIL` nas métricas certas.
    está alto demais; se só cai em distâncias longas, ajuste a dispersão da arma.
 3. `duel.reaction_time_s` alto: o atraso do bot antes de atirar. `duel.crosshair_placement_deg` alto: a mira não está pré-posicionada.
 4. `round.end_reason.time_ran_out` alto: os bots estão passivos demais.
-5. Repita: simule, grave, compare. Guarde cada relatório (`--out reports/rodada-NN`) para ver a evolução.
+5. `tactic.*`: `place_changes_per_player` e `dwell_s` baixos/altos demais indicam bots parados ou que trocam de região o tempo todo;
+   `zone_share.*.Spawn` alto aos 40 s, bots que não saem do spawn; `first_contact_s` mostra se o ritmo do round (quando começa a luta) está certo.
+6. Repita: simule, grave, compare. Guarde cada relatório (`--out reports/rodada-NN`) para ver a evolução.
 
 ## Recalibrar com novos dados
 

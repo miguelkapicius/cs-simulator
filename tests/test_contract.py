@@ -14,6 +14,7 @@ from calibration.compare import DEFAULT_THRESHOLDS, compare, equivalent_matches
 from calibration.metrics import compute_metrics
 from calibration.simlog import load_tables
 from calibration.validate_log import validate_file
+from contract.reference import tactics as tac
 from contract.reference import team_model as ref
 from contract.reference import weapon_dynamics as wd
 from pipeline import validate_contract
@@ -42,6 +43,10 @@ def test_vectors_match_reference():
 
 def test_weapon_vectors_match_reference():
     assert validate_contract.check_weapon_vectors() == []
+
+
+def test_tactics_vectors_match_reference():
+    assert validate_contract.check_tactics_vectors() == []
 
 
 def test_example_log_is_valid():
@@ -248,3 +253,78 @@ def test_bullet_direction_applies_scale(dyn):
     p_pitch, p_yaw = wd.punch(dyn, "ak47", 8)
     assert pitch == pytest.approx(10.0 + dyn["recoil"]["scale"]["value"] * p_pitch)
     assert yaw == pytest.approx(20.0 + dyn["recoil"]["scale"]["value"] * p_yaw)
+
+
+# ---------- camada tática ----------
+
+@pytest.fixture(scope="module")
+def tactics():
+    return json.loads((ARTIFACTS_DIR / "tactics.json").read_text())
+
+
+@pytest.fixture(scope="module")
+def playbook():
+    return json.loads((ARTIFACTS_DIR / "tactics_playbook.json").read_text())
+
+
+def test_forecast_and_occupancy_are_distributions(tactics):
+    for m in tactics["maps"].values():
+        for side in ("CT", "T"):
+            for table in m["forecast"][side].values():
+                for entry in table.values():
+                    assert sum(entry["p"].values()) == pytest.approx(1.0, abs=5e-3)
+            for bucket in m["occupancy"][side]["buckets"]:
+                assert sum(bucket["p"].values()) == pytest.approx(1.0, abs=5e-3)
+
+
+def test_zones_follow_the_sites(tactics):
+    for m in tactics["maps"].values():
+        places = m["places"]
+        if "BombsiteA" in places:
+            assert places["BombsiteA"]["zone"] == "A" and places["BombsiteB"]["zone"] == "B"
+        for name, info in places.items():
+            if info["kind"] == "spawn":
+                assert info["zone"] == "Spawn"
+
+
+def test_forecast_beats_plain_occupancy_on_unseen_matches(tactics):
+    evaluated = [m["evaluation"] for m in tactics["maps"].values() if m["evaluation"]]
+    assert len(evaluated) >= 5
+    for ev in evaluated:
+        assert ev["5s"]["improvement_pct"] > 30 and ev["10s"]["improvement_pct"] > 20
+
+
+def test_playbook_is_consistent(tactics, playbook):
+    ids = [r["id"] for m in playbook["maps"].values() for r in m["rounds"]]
+    assert len(ids) == len(set(ids))
+    for mp, m in playbook["maps"].items():
+        assert len(m["rounds"]) == tactics["maps"][mp]["n_rounds"]
+        for rnd in m["rounds"]:
+            for side in ("CT", "T"):
+                assert 1 <= len(rnd[side]) <= 5
+                for player in rnd[side]:
+                    for place, t_in, t_out in player["steps"]:
+                        assert 0 <= place < len(m["places"]) and t_out > t_in >= 0
+
+
+def test_place_at_respects_death(playbook):
+    rnd = next(r for r in playbook["maps"]["de_mirage"]["rounds"] if any(p["died_at"] for p in r["T"]))
+    i = next(i for i, p in enumerate(rnd["T"]) if p["died_at"])
+    died = rnd["T"][i]["died_at"]
+    assert tac.place_at(rnd, "T", i, died + 1.0) is None
+    assert tac.place_at(rnd, "T", i, 0.0) is not None
+
+
+def test_round_weights_prefer_same_buy_type(playbook):
+    w = tac.round_weights(playbook, "de_mirage", "full")
+    assert sum(x[1] for x in w) == pytest.approx(1.0)
+    same = {r["id"] for r in playbook["maps"]["de_mirage"]["rounds"] if r["t_buy"] == "full"}
+    assert {x[0] for x in w} == same
+
+
+def test_tactic_metrics_on_example():
+    t = load_tables([EXAMPLE])
+    assert len(t["positions"]) > 0 and set(t["positions"]["side"]) <= {"CT", "T"}
+    m = compute_metrics(t)
+    assert "tactic.place_changes_per_player" in m and "tactic.dwell_s" in m
+    assert any(k.startswith("tactic.zone_share.T.20s.") for k in m)

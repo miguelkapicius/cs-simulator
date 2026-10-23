@@ -14,7 +14,7 @@ Dois sentidos, e só dois:
 
 | Sentido | O quê | Onde está definido |
 |---|---|---|
-| Algoritmo ➜ Unity | `player_profiles.json`, `game_rules.json`, `weapon_dynamics.json`, `team_model.json` | `artifacts/`, `schemas/`, `docs/` |
+| Algoritmo ➜ Unity | `player_profiles.json`, `game_rules.json`, `weapon_dynamics.json`, `team_model.json`, `tactics.json`, `tactics_playbook.json` | `artifacts/`, `schemas/`, `docs/` |
 | Unity ➜ Algoritmo | `sim_log.jsonl` (o que aconteceu na simulação) | `schemas/sim_log.schema.json`, `docs/sim_log.md` |
 
 A ideia central: **os dados reais são a especificação**. A mecânica 3D é ajustada até que o log dela dê as mesmas estatísticas das
@@ -28,8 +28,9 @@ partidas reais. O comparador diz o quanto falta.
 | `artifacts/player_profiles.json` | **como cada jogador joga**: reação, mira, precisão, duelos, estilo, posições |
 | `artifacts/game_rules.json` | **como o CS2 funciona**: armas, dano, colete, economia, tempos, bomba, granadas |
 | `artifacts/weapon_dynamics.json` | **como a arma se comporta ao atirar**: padrão e escala do recuo, reinício da rajada, penalidade de precisão, penetração |
+| `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, e as rotas de 599 rounds reais |
 | `artifacts/team_model.json` | **decisões do time**: chance de vencer o round, tipo de compra, plano de ataque |
-| `artifacts/calibration_targets.json` | **o que a simulação precisa reproduzir** (207 métricas do jogo real) |
+| `artifacts/calibration_targets.json` | **o que a simulação precisa reproduzir** (306 métricas do jogo real) |
 | `schemas/` | JSON Schema de cada artefato e do log; define o formato exato |
 | `docs/` | explicação de cada artefato, do log e da calibração |
 | `test_vectors/*.json` | entradas e saídas esperadas do modelo de time e do recuo, para testar o C# |
@@ -44,17 +45,19 @@ partidas reais. O comparador diz o quanto falta.
    ([`docs/game_rules.md`](docs/game_rules.md)). É o que torna o jogo "CS" e não precisa de ajuste fino.
 3. **Aplicar o recuo** de `weapon_dynamics.json`: padrão por bala, escala 2,0 e reinício da rajada, provado com `test_vectors/`
    ([`docs/weapon_dynamics.md`](docs/weapon_dynamics.md)).
-4. **Usar `player_profiles.json`** para os bots: tempo de reação, onde a mira está antes de ver o inimigo, erro do primeiro tiro,
+4. **Marcar o mapa 3D com as regiões** de `tactics.json` e usar o movimento ([`docs/tactics.md`](docs/tactics.md)): `forecast` para o bot decidir
+   para onde ir, e o playbook para reproduzir rounds reais. Exige a geometria do mapa.
+5. **Usar `player_profiles.json`** para os bots: tempo de reação, onde a mira está antes de ver o inimigo, erro do primeiro tiro,
    quanto o jogador atira parado ([`docs/player_profiles.md`](docs/player_profiles.md)).
-5. **Implementar o modelo de time** em C# e provar com `test_vectors/` que dá os mesmos números da referência
+6. **Implementar o modelo de time** em C# e provar com `test_vectors/` que dá os mesmos números da referência
    ([`docs/team_model.md`](docs/team_model.md)).
-6. **Gravar o `sim_log.jsonl`** ([`docs/sim_log.md`](docs/sim_log.md)). Comece pelos eventos de round, economia e kills; depois tiros, danos e avistamentos.
-7. **Validar e comparar** ([`docs/calibration.md`](docs/calibration.md)):
+7. **Gravar o `sim_log.jsonl`** ([`docs/sim_log.md`](docs/sim_log.md)). Comece pelos eventos de round, economia e kills; depois tiros, danos e avistamentos.
+8. **Validar e comparar** ([`docs/calibration.md`](docs/calibration.md)):
    ```bash
    python -m calibration.validate_log sim/*.jsonl
    python -m calibration.compare sim/ --out reports/rodada-01
    ```
-8. **Ajustar a mecânica** pelo relatório e repetir. Pronto quando não restar `FAIL` com 20 ou mais partidas simuladas.
+9. **Ajustar a mecânica** pelo relatório e repetir. Pronto quando não restar `FAIL` com 20 ou mais partidas simuladas.
 
 ## Regras de convivência
 

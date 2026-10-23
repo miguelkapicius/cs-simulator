@@ -13,7 +13,7 @@ jogo real com o mesmo código.
 
 1. **Um arquivo por partida**, um evento por linha, em UTF-8. Todo evento tem `type`.
 2. **Ordem:** os eventos saem em ordem de `tick`. Dentro do mesmo tick, a ordem é
-   `round_start`, `freeze_end`, `bomb`, `grenade`, `sighting`, `shot`, `damage`, `kill`, `round_end`.
+   `round_start`, `freeze_end`, `bomb`, `grenade`, `positions`, `sighting`, `shot`, `damage`, `kill`, `round_end`.
 3. **`tick`** é o tempo da simulação, em ticks, e `match_start.tickrate` diz quantos ticks valem 1 segundo
    (o CS2 usa 64). O tempo dentro do round é `(tick - freeze_end.tick) / tickrate`.
 4. **Estrutura da partida:** `match_start`, depois, para cada round, `round_start`, `freeze_end`, os eventos do round e
@@ -94,6 +94,13 @@ Detonação: `kind` (`smoke`, `flash`, `he`, `molotov`) e `thrower`.
 **duelo** e **posicionamento de mira**. Nas demos, "ver" é a linha de visão aproximada do próprio jogo; na Unity use
 o seu teste de visibilidade (raycast) com o campo de visão do jogador.
 
+### `positions` (recomendado)
+Onde cada jogador **vivo** está, a **2 Hz ou mais** (recomendado: um evento a cada 0,5 s). Cada item traz `player` e `place`, o **nome da região**
+(callout) em que o bot está, como em `tactics.json` (`BombsiteA`, `Apartments`, `TopofMid`...). `x`, `y`, `z` são opcionais.
+Habilita as métricas táticas (onde cada lado está ao longo do round, movimento e permanência). Para a Unity saber a região de cada bot
+é preciso marcar o mapa 3D com volumes que tenham esses nomes; ver [`tactics.md`](tactics.md). O comparador reamostra para 2 Hz,
+usando o evento mais próximo de cada múltiplo de 0,5 s (tolerância de 0,25 s).
+
 ### `round_end`
 `winner_side`, `reason` (`t_killed`, `ct_killed`, `bomb_exploded`, `bomb_defused`, `time_ran_out`),
 `score` (placar depois do round) e `alive` (`{"CT":n,"T":n}` vivos no instante do fim).
@@ -115,5 +122,5 @@ o seu teste de visibilidade (raycast) com o campo de visão do jogador.
 
 Se quiser começar pequeno, estes eventos já dão a maior parte da calibração:
 `match_start`, `round_start`, `freeze_end`, `kill`, `bomb`, `round_end`, `match_end` (rounds e economia),
-e depois `shot` (precisão e mira), `damage` (onde os tiros acertam) e `sighting` (reação e duelo).
+e depois `shot` (precisão e mira), `damage` (onde os tiros acertam), `sighting` (reação e duelo) e `positions` (movimento e posicionamento).
 Cada família de métricas aparece como "sem dados" no relatório até o evento correspondente existir.

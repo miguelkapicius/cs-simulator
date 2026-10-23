@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.0.0",
+ "contract_version": "1.2.0",
  "generated_at": "2026-10-23",
  "source": {
   "matches": 28,
@@ -2832,6 +2832,849 @@
    "n": 88,
    "value": 0.56818,
    "desc": "Fração de rounds vencidos pelo CT."
+  },
+  "tactic.dwell_s": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 1.0,
+    "p10": 1.0,
+    "p25": 2.0,
+    "p50": 4.0,
+    "p75": 9.0,
+    "p90": 20.0,
+    "p95": 30.5
+   },
+   "mean": 8.06862,
+   "n": 54037,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.0241,
+     "p25": 0.05386,
+     "p50": 0.08678,
+     "p75": 0.04826,
+     "p90": 0.02665
+    }
+   },
+   "coverage": {
+    "p10": 0.0765,
+    "p25": 0.22237,
+    "p50": 0.49148,
+    "p75": 0.75487,
+    "p90": 0.90003
+   },
+   "desc": "Tempo contínuo que um jogador fica numa mesma região (amostras a 2 Hz)."
+  },
+  "tactic.first_contact_s": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 6.55781,
+    "p10": 7.1875,
+    "p25": 9.75,
+    "p50": 14.4375,
+    "p75": 25.77344,
+    "p90": 41.8375,
+    "p95": 52.71875
+   },
+   "mean": 20.59518,
+   "n": 599,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.13972,
+     "p25": 0.14771,
+     "p50": 0.09327,
+     "p75": 0.07354,
+     "p90": 0.06413
+    }
+   },
+   "coverage": {
+    "p10": 0.10017,
+    "p25": 0.25042,
+    "p50": 0.5,
+    "p75": 0.74958,
+    "p90": 0.89983
+   },
+   "desc": "Tempo do primeiro dano entre lados opostos no round."
+  },
+  "tactic.place_changes_per_player": {
+   "kind": "mean",
+   "mean": 8.0212,
+   "std": 4.75853,
+   "n": 5990,
+   "between": {
+    "matches": 28,
+    "sd": 1.51064
+   },
+   "desc": "Trocas de região por jogador por round (amostras a 2 Hz)."
+  },
+  "tactic.zone_share.CT.20s.A": {
+   "kind": "mean",
+   "mean": 0.41158,
+   "std": 0.18925,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.0763
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.3235,
+   "std": 0.19114,
+   "n": 78,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.34953,
+   "std": 0.17585,
+   "n": 107,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.44344,
+   "std": 0.17539,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.51429,
+   "std": 0.1568,
+   "n": 98,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.43115,
+   "std": 0.16756,
+   "n": 145,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.42965,
+   "std": 0.20268,
+   "n": 86,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B": {
+   "kind": "mean",
+   "mean": 0.38409,
+   "std": 0.17219,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.06779
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.50385,
+   "std": 0.18373,
+   "n": 78,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.36511,
+   "std": 0.15268,
+   "n": 107,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.4082,
+   "std": 0.16903,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.42857,
+   "std": 0.16118,
+   "n": 98,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.33,
+   "std": 0.14677,
+   "n": 145,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.31686,
+   "std": 0.17331,
+   "n": 86,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.Mid": {
+   "kind": "mean",
+   "mean": 0.14899,
+   "std": 0.17725,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.1075
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.Spawn": {
+   "kind": "mean",
+   "mean": 0.05534,
+   "std": 0.11198,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.05429
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A": {
+   "kind": "mean",
+   "mean": 0.38805,
+   "std": 0.22309,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.08555
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.31096,
+   "std": 0.22325,
+   "n": 76,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.37761,
+   "std": 0.22063,
+   "n": 102,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.40517,
+   "std": 0.22795,
+   "n": 58,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.52049,
+   "std": 0.19624,
+   "n": 96,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.35438,
+   "std": 0.2135,
+   "n": 137,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.40167,
+   "std": 0.20875,
+   "n": 80,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B": {
+   "kind": "mean",
+   "mean": 0.37376,
+   "std": 0.23068,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.06857
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.47741,
+   "std": 0.29053,
+   "n": 76,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.33987,
+   "std": 0.22194,
+   "n": 102,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.40948,
+   "std": 0.20025,
+   "n": 58,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.39427,
+   "std": 0.2112,
+   "n": 96,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.31715,
+   "std": 0.22321,
+   "n": 137,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.34437,
+   "std": 0.19951,
+   "n": 80,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.Mid": {
+   "kind": "mean",
+   "mean": 0.14666,
+   "std": 0.19671,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.10377
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.Spawn": {
+   "kind": "mean",
+   "mean": 0.09153,
+   "std": 0.17699,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.09164
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A": {
+   "kind": "mean",
+   "mean": 0.40376,
+   "std": 0.29143,
+   "n": 496,
+   "between": {
+    "matches": 28,
+    "sd": 0.0946
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.32258,
+   "std": 0.28424,
+   "n": 62,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.40294,
+   "std": 0.31351,
+   "n": 85,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.44767,
+   "std": 0.28021,
+   "n": 50,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.52181,
+   "std": 0.26263,
+   "n": 94,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.33705,
+   "std": 0.27182,
+   "n": 121,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.43667,
+   "std": 0.29567,
+   "n": 70,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B": {
+   "kind": "mean",
+   "mean": 0.36613,
+   "std": 0.27805,
+   "n": 496,
+   "between": {
+    "matches": 28,
+    "sd": 0.08039
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.46398,
+   "std": 0.35629,
+   "n": 62,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.31882,
+   "std": 0.26327,
+   "n": 85,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.38633,
+   "std": 0.21857,
+   "n": 50,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.36933,
+   "std": 0.23133,
+   "n": 94,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.3376,
+   "std": 0.28539,
+   "n": 121,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.35762,
+   "std": 0.28984,
+   "n": 70,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.Mid": {
+   "kind": "mean",
+   "mean": 0.11942,
+   "std": 0.2069,
+   "n": 496,
+   "between": {
+    "matches": 28,
+    "sd": 0.10531
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.Spawn": {
+   "kind": "mean",
+   "mean": 0.11069,
+   "std": 0.20968,
+   "n": 496,
+   "between": {
+    "matches": 28,
+    "sd": 0.10844
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A": {
+   "kind": "mean",
+   "mean": 0.36432,
+   "std": 0.33182,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.15354
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.54402,
+   "std": 0.34125,
+   "n": 78,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.46963,
+   "std": 0.35274,
+   "n": 107,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.47131,
+   "std": 0.27714,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.12891,
+   "std": 0.16014,
+   "n": 98,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.37115,
+   "std": 0.32552,
+   "n": 145,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.33547,
+   "std": 0.315,
+   "n": 86,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B": {
+   "kind": "mean",
+   "mean": 0.31004,
+   "std": 0.33178,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.10488
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.41581,
+   "std": 0.34977,
+   "n": 78,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.34377,
+   "std": 0.34605,
+   "n": 107,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.37787,
+   "std": 0.28536,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.23435,
+   "std": 0.25946,
+   "n": 98,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.25575,
+   "std": 0.33896,
+   "n": 145,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.21744,
+   "std": 0.30609,
+   "n": 86,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.Mid": {
+   "kind": "mean",
+   "mean": 0.30973,
+   "std": 0.31998,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.2003
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.Spawn": {
+   "kind": "mean",
+   "mean": 0.01591,
+   "std": 0.06563,
+   "n": 596,
+   "between": {
+    "matches": 28,
+    "sd": 0.01849
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A": {
+   "kind": "mean",
+   "mean": 0.38658,
+   "std": 0.36557,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.12285
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.5193,
+   "std": 0.40045,
+   "n": 76,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.48791,
+   "std": 0.3783,
+   "n": 102,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.39684,
+   "std": 0.33253,
+   "n": 58,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.2842,
+   "std": 0.29764,
+   "n": 96,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.4129,
+   "std": 0.35694,
+   "n": 137,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.28917,
+   "std": 0.36347,
+   "n": 80,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B": {
+   "kind": "mean",
+   "mean": 0.34476,
+   "std": 0.36924,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.11048
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.41404,
+   "std": 0.40867,
+   "n": 76,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.2933,
+   "std": 0.33598,
+   "n": 102,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.38649,
+   "std": 0.35592,
+   "n": 58,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.30573,
+   "std": 0.3361,
+   "n": 96,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.29769,
+   "std": 0.36656,
+   "n": 137,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.34083,
+   "std": 0.3702,
+   "n": 80,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.Mid": {
+   "kind": "mean",
+   "mean": 0.24115,
+   "std": 0.29189,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.12826
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.Spawn": {
+   "kind": "mean",
+   "mean": 0.0275,
+   "std": 0.10372,
+   "n": 569,
+   "between": {
+    "matches": 28,
+    "sd": 0.03824
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A": {
+   "kind": "mean",
+   "mean": 0.40429,
+   "std": 0.39067,
+   "n": 493,
+   "between": {
+    "matches": 28,
+    "sd": 0.12635
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_ancient": {
+   "kind": "mean",
+   "mean": 0.48852,
+   "std": 0.4043,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_cache": {
+   "kind": "mean",
+   "mean": 0.51196,
+   "std": 0.4138,
+   "n": 85,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_dust2": {
+   "kind": "mean",
+   "mean": 0.41233,
+   "std": 0.36231,
+   "n": 50,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_inferno": {
+   "kind": "mean",
+   "mean": 0.34965,
+   "std": 0.3588,
+   "n": 94,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_mirage": {
+   "kind": "mean",
+   "mean": 0.415,
+   "std": 0.38047,
+   "n": 120,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_nuke": {
+   "kind": "mean",
+   "mean": 0.31763,
+   "std": 0.39767,
+   "n": 69,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B": {
+   "kind": "mean",
+   "mean": 0.37989,
+   "std": 0.40038,
+   "n": 493,
+   "between": {
+    "matches": 28,
+    "sd": 0.12676
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_ancient": {
+   "kind": "mean",
+   "mean": 0.4388,
+   "std": 0.41502,
+   "n": 61,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_cache": {
+   "kind": "mean",
+   "mean": 0.2698,
+   "std": 0.37145,
+   "n": 85,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_dust2": {
+   "kind": "mean",
+   "mean": 0.38233,
+   "std": 0.40408,
+   "n": 50,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_inferno": {
+   "kind": "mean",
+   "mean": 0.37943,
+   "std": 0.38379,
+   "n": 94,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_mirage": {
+   "kind": "mean",
+   "mean": 0.34792,
+   "std": 0.40073,
+   "n": 120,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_nuke": {
+   "kind": "mean",
+   "mean": 0.43889,
+   "std": 0.40722,
+   "n": 69,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.Mid": {
+   "kind": "mean",
+   "mean": 0.17928,
+   "std": 0.25455,
+   "n": 493,
+   "between": {
+    "matches": 28,
+    "sd": 0.08925
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.Spawn": {
+   "kind": "mean",
+   "mean": 0.03654,
+   "std": 0.13591,
+   "n": 493,
+   "between": {
+    "matches": 28,
+    "sd": 0.04897
+   },
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   }
  }
 }

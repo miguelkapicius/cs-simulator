@@ -12,7 +12,8 @@ import pandas as pd
 from pipeline.combat import resolve_sightings
 from pipeline.common import weapon_class
 
-TABLES = ["rounds", "players", "shots", "damages", "kills", "bombs", "grenades", "sightings"]
+TABLES = ["rounds", "players", "shots", "damages", "kills", "bombs", "grenades", "sightings", "positions"]
+POSITION_HZ = 2   # o comparador reamostra as posições para esta taxa
 
 
 def read_events(path):
@@ -115,8 +116,20 @@ def load_match(path):
         sight["side"] = side_of(sight, "observer")
         sight = resolve_sightings(sight, shots, kills)
 
+    # Posições: uma linha por jogador vivo, reamostradas para POSITION_HZ (o evento mais próximo de cada instante)
+    prow = [{"round": e["round"], "tick": e["tick"], "player": q["player"], "place": q["place"], "x": q.get("x"), "y": q.get("y"), "z": q.get("z")}
+            for e in by_type.get("positions", []) for q in e["players"]]
+    pos = stamp(pd.DataFrame(prow, columns=["round", "tick", "player", "place", "x", "y", "z"]))
+    if len(pos):
+        pos = pos[~pos["after_round_end"]].copy()
+        pos["k"] = (pos["round_time"] * POSITION_HZ).round().astype(int)
+        pos["off"] = (pos["round_time"] - pos["k"] / POSITION_HZ).abs()
+        pos = pos[pos["off"] <= 0.5 / POSITION_HZ + 1e-9].sort_values("off").drop_duplicates(["round", "player", "k"]).drop(columns="off")
+        pos["side"] = side_of(pos, "player")
+        pos = pos.sort_values(["round", "player", "k"]).reset_index(drop=True)
+
     tables = {"rounds": rounds, "players": players, "shots": shots, "damages": damages, "kills": kills,
-              "bombs": bombs, "grenades": grenades, "sightings": sight}
+              "bombs": bombs, "grenades": grenades, "sightings": sight, "positions": pos}
     map_name = ms["map"]
     for name, df in tables.items():
         df["match"] = match_id

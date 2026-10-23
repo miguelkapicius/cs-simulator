@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/tactics_playbook.schema.json",
+  "title": "tactics_playbook.json",
+  "description": "Rotas dos cinco jogadores de cada lado em rounds reais, uma região por passo, para a simulação sortear um round e reproduzi-lo (ver contract/docs/tactics.md).",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "maps"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": { "type": "object" },
+    "maps": {
+      "type": "object", "minProperties": 5,
+      "additionalProperties": {
+        "type": "object", "required": ["places", "step_format", "rounds"],
+        "properties": {
+          "places": { "type": "array", "items": { "type": "string" }, "minItems": 5 },
+          "rounds": {
+            "type": "array", "minItems": 10,
+            "items": {
+              "type": "object", "required": ["id", "t_buy", "ct_buy", "winner_side", "reason", "duration_s", "plant", "T", "CT"],
+              "properties": {
+                "t_buy": { "enum": ["pistol", "eco", "force", "full"] }, "ct_buy": { "enum": ["pistol", "eco", "force", "full"] },
+                "winner_side": { "enum": ["CT", "T"] },
+                "plant": { "oneOf": [{ "type": "null" }, { "type": "object", "required": ["site", "t"], "properties": { "site": { "enum": ["A", "B"] } } }] },
+                "T": { "$ref": "#/$defs/team" }, "CT": { "$ref": "#/$defs/team" }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "team": {
+      "type": "array", "maxItems": 5,
+      "items": {
+        "type": "object", "required": ["died_at", "steps"],
+        "properties": {
+          "died_at": { "type": ["number", "null"] },
+          "steps": { "type": "array", "items": { "type": "array", "prefixItems": [{ "type": "integer", "minimum": 0 }, { "type": "number" }, { "type": "number" }], "minItems": 3, "maxItems": 3 } }
+        }
+      }
+    }
+  }
+}

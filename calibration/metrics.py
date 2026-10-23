@@ -8,11 +8,13 @@ têm o sufixo `@de_mirage`. Três tipos de métrica:
   mean       {"mean","std","n"}             médias de contagens por round
   quantiles  {"q": {"p5".."p95"},"mean","n"} distribuições contínuas (tempos, distâncias, ângulos)
 """
+import json
+
 import numpy as np
 import pandas as pd
 
 from pipeline.combat import is_combat_shot
-from pipeline.common import BUY_TYPES, PISTOL_ROUNDS, buy_type
+from pipeline.common import ARTIFACTS_DIR, BUY_TYPES, PISTOL_ROUNDS, buy_type
 
 QUANTILES = [5, 10, 25, 50, 75, 90, 95]
 REASONS = ["t_killed", "ct_killed", "bomb_exploded", "bomb_defused", "time_ran_out"]
@@ -23,6 +25,9 @@ BANDS = [(0, 10, "0-10m"), (10, 20, "10-20m"), (20, 30, "20-30m"), (30, 1e9, "30
 STILL_SPEED = 40.0
 MIN_MAP_ROUNDS = 30     # só gera métricas por mapa com pelo menos este número de rounds
 KEY = ["match", "round"]
+POSITION_HZ = 2              # igual a calibration.simlog.POSITION_HZ
+TACTIC_TIMES = (20, 40, 60)  # instantes do round (s) em que se mede a ocupação por zona
+ZONES = ("A", "B", "Mid", "Spawn")
 
 
 # ---------- construtores de métrica ----------
@@ -222,9 +227,65 @@ def buy_metrics(t):
     return m
 
 
+# ---------- tática ----------
+
+def load_zones():
+    """{mapa: {região: zona}} do tactics.json; vazio se o arquivo não existir (as métricas de zona são então puladas)."""
+    path = ARTIFACTS_DIR / "tactics.json"
+    if not path.exists():
+        return {}
+    doc = json.loads(path.read_text())
+    return {mp: {pl: info["zone"] for pl, info in m["places"].items()} for mp, m in doc["maps"].items()}
+
+
+def zone_share_metrics(pos, zones_wanted, suffix=""):
+    m = {}
+    for side in ("CT", "T"):
+        ps = pos[pos["side"] == side]
+        for tp in TACTIC_TIMES:
+            g = ps[ps["k"] == tp * POSITION_HZ]
+            if g.empty:
+                continue
+            share = g.groupby(KEY)["zone"].value_counts(normalize=True).unstack(fill_value=0)
+            for z in zones_wanted:
+                _add(m, f"tactic.zone_share.{side}.{tp}s.{z}{suffix}", mean(share[z] if z in share else pd.Series(0.0, index=share.index)))
+    return m
+
+
+def tactic_metrics(t, zones):
+    m = {}
+    dmg = t["damages"]
+    contact = dmg[~dmg["after_round_end"] & dmg["attacker_steamid"].notna() & (dmg["attacker_side"] != dmg["user_side"])]
+    _add(m, "tactic.first_contact_s", quant(contact.groupby(KEY)["round_time"].min()))
+
+    pos = t.get("positions")
+    if pos is None or pos.empty or not zones:
+        return m
+    pos = pos.copy()
+    pos["zone"] = [zones.get(mp, {}).get(pl, "Mid") for mp, pl in zip(pos["map"], pos["place"])]
+    m.update(zone_share_metrics(pos, ZONES))
+    rounds_by_map = pos.groupby("map")[KEY].apply(lambda d: len(d.drop_duplicates()))
+    for mp in sorted(rounds_by_map.index):
+        if rounds_by_map[mp] >= MIN_MAP_ROUNDS:
+            m.update(zone_share_metrics(pos[pos["map"] == mp], ("A", "B"), f"@{mp}"))
+
+    # Movimento: trocas de região por jogador e tempo de permanência (amostras consecutivas a POSITION_HZ)
+    pos = pos.sort_values(KEY + ["player", "k"])
+    g = pos.groupby(KEY + ["player"])
+    consecutive = g["k"].diff() == 1
+    changed = (pos["place"] != g["place"].shift()) & consecutive
+    _add(m, "tactic.place_changes_per_player", mean(changed.groupby([pos["match"], pos["round"], pos["player"]]).sum()))
+    new_run = ~consecutive | (pos["place"] != g["place"].shift())
+    run_id = new_run.groupby([pos["match"], pos["round"], pos["player"]]).cumsum()
+    dwell = pos.groupby(KEY + ["player", run_id]).size() / POSITION_HZ
+    _add(m, "tactic.dwell_s", quant(dwell))
+    return m
+
+
 # ---------- ponto de entrada ----------
 
-def compute_metrics(t):
+def compute_metrics(t, zones=None):
+    zones = load_zones() if zones is None else zones
     r = round_frame(t)
     m = round_metrics(r)
     for mp in sorted(r["map"].unique()):
@@ -234,6 +295,7 @@ def compute_metrics(t):
     m.update(combat_metrics(t))
     m.update(duel_metrics(t))
     m.update(buy_metrics(t))
+    m.update(tactic_metrics(t, zones))
     return m
 
 
@@ -268,6 +330,10 @@ DESCRIPTIONS = {
     "duel.shoots_after_sighting": "Fração dos avistamentos em que o jogador atira em até 2 s.",
     "duel.reaction_time_s": "Tempo entre ver o inimigo e o primeiro tiro mirado nele.",
     "duel.crosshair_placement_deg": "Erro de mira (graus) no instante em que o inimigo aparece.",
+    "tactic.zone_share": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round.",
+    "tactic.first_contact_s": "Tempo do primeiro dano entre lados opostos no round.",
+    "tactic.place_changes_per_player": "Trocas de região por jogador por round (amostras a 2 Hz).",
+    "tactic.dwell_s": "Tempo contínuo que um jogador fica numa mesma região (amostras a 2 Hz).",
     "buy.type": "Fração dos rounds de cada lado por tipo de compra.",
     "buy.armor_rate": "Fração dos jogadores com colete (rounds sem pistola).",
     "buy.helmet_rate": "Fração dos jogadores com capacete (rounds sem pistola).",

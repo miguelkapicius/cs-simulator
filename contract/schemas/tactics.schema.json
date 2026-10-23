@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/tactics.schema.json",
+  "title": "tactics.json",
+  "description": "Camada tática no nível de regiões (callouts): grafo, ocupação, previsão de posição, pós-plant, rotação, contato e utilitários, por mapa (ver contract/docs/tactics.md). Semântica exata em contract/reference/tactics.py.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "conventions", "findings", "maps"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": { "type": "object", "required": ["matches", "rounds", "sample_hz", "rounds_by_map"] },
+    "conventions": { "type": "array", "items": { "type": "string" } },
+    "findings": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "maps": { "type": "object", "minProperties": 5, "additionalProperties": { "$ref": "#/$defs/map" } }
+  },
+  "$defs": {
+    "probs": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 } },
+    "quantiles": { "type": ["object", "null"] },
+    "place": {
+      "type": "object", "required": ["kind", "n", "centroid_m", "spread_m", "bbox_m", "side_share", "zone"],
+      "properties": {
+        "kind": { "enum": ["spawn", "site", "area"] }, "n": { "type": "integer", "minimum": 1 },
+        "centroid_m": { "type": "array", "items": { "type": "number" }, "minItems": 3, "maxItems": 3 },
+        "zone": { "enum": ["A", "B", "Mid", "Spawn"] },
+        "pa": { "type": ["number", "null"], "minimum": 0, "maximum": 1 }
+      }
+    },
+    "map": {
+      "type": "object",
+      "required": ["n_rounds", "places", "graph", "occupancy", "forecast", "post_plant", "rotation", "engagements", "utility", "evaluation"],
+      "properties": {
+        "n_rounds": { "type": "integer", "minimum": 1 },
+        "places": { "type": "object", "minProperties": 5, "additionalProperties": { "$ref": "#/$defs/place" } },
+        "graph": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object", "required": ["dwell_s", "edges"],
+            "properties": { "edges": { "type": "array", "items": { "type": "object", "required": ["to", "n", "p"],
+                                                                      "properties": { "p": { "type": "number", "minimum": 0, "maximum": 1 } } } } }
+          }
+        },
+        "occupancy": {
+          "type": "object", "required": ["CT", "T"],
+          "additionalProperties": { "type": "object", "required": ["bucket_s", "buckets"],
+                                     "properties": { "buckets": { "type": "array", "minItems": 10,
+                                                                    "items": { "type": "object", "required": ["t", "p"], "properties": { "p": { "$ref": "#/$defs/probs" } } } } } }
+        },
+        "forecast": {
+          "type": "object", "required": ["CT", "T"],
+          "additionalProperties": {
+            "type": "object", "required": ["5s", "10s"],
+            "additionalProperties": { "type": "object", "additionalProperties": { "type": "object", "required": ["n", "p"], "properties": { "p": { "$ref": "#/$defs/probs" } } } }
+          }
+        },
+        "post_plant": { "type": "object" },
+        "rotation": { "type": "object" },
+        "engagements": { "type": "object", "required": ["first_contact", "pairs"] },
+        "utility": { "type": "object", "required": ["CT", "T"] },
+        "evaluation": { "type": ["object", "null"] }
+      }
+    }
+  }
+}

@@ -31,7 +31,7 @@ def validate_file(path):
     defs = schema["$defs"]
     validators = {name: Draft202012Validator({"$schema": schema["$schema"], "$defs": defs, **defs[name]})
                   for name in ("match_start", "round_start", "freeze_end", "shot", "damage", "kill", "bomb",
-                               "grenade", "sighting", "round_end", "match_end")}
+                               "grenade", "sighting", "positions", "round_end", "match_end")}
     weapons = _known_weapons()
     errors, warnings = [], []
 
@@ -112,6 +112,10 @@ def validate_file(path):
                 state = "ended"
                 continue
             # Depois do round_end são esperados exit frags e dano pós-round (o carregador os marca como after_round_end)
+            if t == "positions":
+                for q in e["players"]:
+                    if q["player"] not in players:
+                        err(f"linha {n} [positions]: jogador {q['player']} não está em match_start.players")
             if state == "started" and t in ("shot", "damage", "kill", "sighting"):
                 warnings.append(f"linha {n} [{t}]: evento durante o freeze time do round {current_round}")
 
