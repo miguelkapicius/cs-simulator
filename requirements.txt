@@ -1,0 +1,8 @@
+demoparser2==0.42.0
+pandas==2.3.3
+numpy==2.0.2
+pyarrow==21.0.0
+scikit-learn==1.6.1
+jsonschema==4.25.1
+pytest==8.4.2
+pyflakes

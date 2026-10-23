@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/common.schema.json",
+  "title": "Definições compartilhadas pelos artefatos do contrato",
+  "$defs": {
+    "contract_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+    "date": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+    "side": { "enum": ["CT", "T"] },
+    "nullable_number": { "type": ["number", "null"] },
+    "rate": {
+      "type": "object",
+      "description": "Taxa medida. Use 'shrunk' (suavizada em direção à média geral) quando existir; 'n' é o tamanho da amostra.",
+      "required": ["n"],
+      "properties": {
+        "value": { "type": ["number", "null"] },
+        "n": { "type": "integer", "minimum": 0 },
+        "shrunk": { "type": ["number", "null"] }
+      }
+    },
+    "distribution": {
+      "type": "object",
+      "description": "Distribuição por percentis para sortear valores. source='baseline' = média geral (o jogador tinha poucas amostras).",
+      "required": ["p50", "n"],
+      "properties": {
+        "p10": { "type": "number" }, "p25": { "type": "number" }, "p50": { "type": "number" },
+        "p75": { "type": "number" }, "p90": { "type": "number" }, "mean": { "type": "number" },
+        "n": { "type": "integer", "minimum": 0 },
+        "source": { "enum": ["player", "baseline"] }, "player_n": { "type": "integer", "minimum": 0 }
+      }
+    }
+  }
+}

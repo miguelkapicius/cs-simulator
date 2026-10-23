@@ -1,4 +1,4 @@
-"""Gera game_rules/game_rules.json: regras e constantes do CS2 para a simulação.
+"""Gera contract/artifacts/game_rules.json: regras e constantes do CS2 para a simulação.
 
 Duas fontes, sempre identificadas no JSON:
   - oficial:  arquivos do jogo na build das demos (reference/cs2_build_2000930/, de
@@ -7,25 +7,22 @@ Duas fontes, sempre identificadas no JSON:
               cobrir o que não está nos arquivos (multiplicadores de dano, fórmula do
               colete, velocidades de andar/agachar, tempos de plant/defuse, economia)
 
-Uso: .venv/bin/python build_game_rules.py
+Uso: .venv/bin/python -m pipeline.build_game_rules
 """
 import json
 import re
 from datetime import date
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from demoparser2 import DemoParser
 
-from extract_demos import DEMOS_DIR, OUT_DIR as DATA_DIR, SIDE, parse_event
+from pipeline.common import (ARTIFACTS_DIR as OUT, CONTRACT_VERSION, DATA_DIR, DEMOS_DIR, REFERENCE_DIR,
+                             SIDE, TICKRATE, WEAPON_CLASS)
+from pipeline.extract_demos import parse_event
 
-ROOT = Path(__file__).parent
-REF_DIR = ROOT / "reference" / "cs2_build_2000930"
-OUT = ROOT / "game_rules"
+REF_DIR = REFERENCE_DIR / "cs2_build_2000930"
 SCHEMA_VERSION = "1.0"
-TICKRATE = 64
-UNIT_TO_M = 0.0254
 GAME_BUILD = {
     "client_version": 2000930, "patch_version": "1.41.9.0",
     "files_commit": "https://github.com/SteamDatabase/GameTracking-CS2/tree/f68ba6aa24",
@@ -208,8 +205,9 @@ def demo_cvars(parser, match_start):
 # ---------- medições ----------
 
 HITGROUPS = ["head", "neck", "chest", "stomach", "left_arm", "right_arm", "left_leg", "right_leg"]
+# Medido nas demos: o pescoço NÃO é cabeça (×1,0, protegido pelo colete; 92% de acerto exato em 52 acertos)
 DEFAULT_HG_MULT = {"chest": 1.0, "stomach": 1.25, "left_arm": 1.0, "right_arm": 1.0,
-                   "left_leg": 0.75, "right_leg": 0.75}
+                   "left_leg": 0.75, "right_leg": 0.75, "neck": 1.0}
 
 
 def predict_damage(base, range_mod, dist_units, hg_mult, armor_pen, armor_before, armored_hit):
@@ -226,10 +224,15 @@ def predict_damage(base, range_mod, dist_units, hg_mult, armor_pen, armor_before
 
 
 def measure_damage(parser, rounds, weapons, display_names):
-    ev = parse_event(parser, "player_hurt", player=["X", "Y", "Z", "has_helmet", "active_weapon_name"])
+    ev = parse_event(parser, "player_hurt", player=["X", "Y", "Z", "has_helmet", "active_weapon_name", "team_name"])
+    # Fogo amigo é multiplicado por ff_damage_reduction_bullets (0,33): não segue a fórmula e fica de fora
+    ev = ev[ev["attacker_team_name"] != ev["user_team_name"]]
     # O evento chama variantes pelo mesmo nome (M4A1-S e M4A4 viram "m4a1"); a arma na mão do atirador desambigua
+    # Só o 'm4a1' é ambíguo. Trocar a arma de TODO evento pela que está na mão atribuiria dano de molotov e HE
+    # (hitgroup 'generic') à arma de fogo que o jogador segura depois de arremessar.
     held = ev["attacker_active_weapon_name"].map(display_names)
-    ev["weapon"] = held.where(held.notna() & held.isin(weapons.keys()), ev["weapon"])
+    ambiguous = (ev["weapon"] == "m4a1") & held.notna() & held.isin(weapons.keys())
+    ev["weapon"] = held.where(ambiguous, ev["weapon"])
     ev = ev[ev["weapon"].isin(weapons.keys()) & ev["attacker_X"].notna()].copy()
     ev["dist_units"] = np.sqrt((ev["attacker_X"] - ev["user_X"]) ** 2 + (ev["attacker_Y"] - ev["user_Y"]) ** 2
                                + (ev["attacker_Z"] - ev["user_Z"]) ** 2)
@@ -254,21 +257,21 @@ def damage_model(hurt, weapons):
     unarmored = h[h["armor_before"] == 0]
     candidates = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0, 3.0, 4.0]
     for hg, g in unarmored.groupby("hitgroup"):
-        scale = g["hsmult"] if hg in ("head", "neck") else 1.0
-        rates = {c: float(((g["raw"] * c * (scale / (4.0 if hg in ("head", "neck") else 1.0))).astype(int)
+        scale = g["hsmult"] if hg == "head" else 1.0
+        rates = {c: float(((g["raw"] * c * (scale / (4.0 if hg == "head" else 1.0))).astype(int)
                            == g["dmg_health"]).mean()) for c in candidates}
         best = max(rates, key=rates.get)
         mult[hg] = {"best_fit": best, "exact_match_rate": round(rates[best], 3), "n": int(len(g))}
 
     def hg_mult(row):
-        if row["hitgroup"] in ("head", "neck"):
+        if row["hitgroup"] == "head":
             return row["hsmult"]
         return DEFAULT_HG_MULT.get(row["hitgroup"], 1.0)
 
     def armored_hit(row):
         if row["hitgroup"] in ("left_leg", "right_leg"):
             return False
-        if row["hitgroup"] in ("head", "neck"):
+        if row["hitgroup"] == "head":
             return row["helmet"]
         return True
 
@@ -522,7 +525,7 @@ def economy_rule_fit(econ, rounds_by_demo, kills_by_demo, cfg):
 
 
 def main():
-    OUT.mkdir(exist_ok=True)
+    OUT.mkdir(parents=True, exist_ok=True)
     weapons = load_weapons()
     guns = {k: v for k, v in weapons.items() if v.get("damage") and v.get("type") not in
             ("WEAPONTYPE_GRENADE", "WEAPONTYPE_KNIFE", "WEAPONTYPE_C4", "WEAPONTYPE_TASER", "WEAPONTYPE_EQUIPMENT")}
@@ -607,6 +610,7 @@ def main():
 
     out = {
         "schema_version": SCHEMA_VERSION,
+        "contract_version": CONTRACT_VERSION,
         "generated_at": date.today().isoformat(),
         "game_build": GAME_BUILD,
         "sources": {
@@ -649,17 +653,19 @@ def main():
         "damage_model": {
             "formula": [
                 "dano = damage * range_modifier ^ (distancia_unidades / 500) * multiplicador_parte_do_corpo",
-                "cabeça (e pescoço) usam weapons.<arma>.headshot_multiplier",
-                "colete protege peito, estômago e braços; cabeça só com capacete; pernas nunca",
+                "cabeça usa weapons.<arma>.headshot_multiplier (4.0 em quase todas); pescoço é ×1.0",
+                "colete protege peito, estômago, braços e pescoço; cabeça só com capacete; pernas nunca",
                 "se protegido e colete > 0: vida = dano * armor_penetration; colete -= (dano - vida) * 0.5",
                 "se o colete não basta: colete zera e vida = dano - colete_antes * 2",
                 "valores são truncados para inteiro; fogo amigo multiplica por ff_damage_reduction_*",
             ],
             "penetration_note": "Tiros que atravessam parede, objeto ou jogador perdem dano conforme weapons.<arma>.penetration_power "
-                                "e o material; as demos não marcam esses tiros. Danos abaixo do previsto em 'validation' "
-                                "(quase todos com menos de 60% do previsto) e o hitgroup 'generic' são esses casos.",
-            "hitgroup_multipliers": {hg: {"value": (4.0 if hg in ("head", "neck") else DEFAULT_HG_MULT.get(hg)),
-                                          **({"note": "multiplicador da arma (headshot_multiplier)"} if hg in ("head", "neck") else {}),
+                                "e o material; as demos não marcam esses tiros no evento de dano. Os danos abaixo do previsto em "
+                                "'validation' são em sua maioria esses casos (medidos em weapon_dynamics.json). O hitgroup 'generic' "
+                                "NÃO é tiro de arma: é só dano de fogo (molotov) e de granada (HE).",
+            "hitgroup_multipliers": {hg: {"value": (4.0 if hg == "head" else DEFAULT_HG_MULT.get(hg)),
+                                          **({"note": "multiplicador da arma (headshot_multiplier)"} if hg == "head" else {}),
+                                          **({"note": "o pescoço NÃO é cabeça: ×1,0 e protegido pelo colete (não pelo capacete)"} if hg == "neck" else {}),
                                           "measured": hg_mult.get(hg)} for hg in HITGROUPS},
             "validation": damage_fit,
         },
@@ -695,6 +701,7 @@ def main():
         },
         "weapons": dict(sorted(weapons.items())),
         "weapon_display_names": dict(sorted(names.items())),
+        "weapon_classes": dict(sorted(WEAPON_CLASS.items())),
     }
     path = OUT / "game_rules.json"
     path.write_text(json.dumps(out, ensure_ascii=False, indent=1, default=lambda o: o.item() if hasattr(o, "item") else str(o)))

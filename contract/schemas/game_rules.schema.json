@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/game_rules.schema.json",
+  "title": "game_rules.json",
+  "description": "Regras do CS2 (armas, dano, economia, tempos, bomba, utilitários), oficiais e validadas nas demos (ver contract/docs/game_rules.md).",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "game_build", "sources", "units", "match_config",
+               "equipment_prices", "economy", "damage_model", "movement", "bomb", "utility", "round_timing", "weapons",
+               "weapon_display_names", "weapon_classes"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "game_build": { "type": "object", "required": ["client_version", "patch_version", "files_commit"] },
+    "sources": { "type": "object", "required": ["oficial", "medido"] },
+    "units": { "type": "object" },
+    "match_config": {
+      "type": "object", "description": "cvars de partida: nome -> {value, source}.",
+      "additionalProperties": { "type": "object", "required": ["value", "source"] }
+    },
+    "equipment_prices": {
+      "type": "object", "required": ["item_kevlar", "item_assaultsuit", "item_defuser"],
+      "additionalProperties": { "type": "integer" }
+    },
+    "economy": {
+      "type": "object", "required": ["rules", "measured"],
+      "properties": {
+        "rules": {
+          "type": "object",
+          "required": ["start_money", "max_money", "overtime_start_money", "win", "loss_bonus", "planted_but_lost_T_team", "ct_bonus_per_t_death", "player"],
+          "properties": {
+            "start_money": { "type": "integer" }, "max_money": { "type": "integer" }, "overtime_start_money": { "type": "integer" },
+            "win": { "type": "object", "required": ["elimination", "bomb_exploded_T", "bomb_defused_CT", "time_ran_out_CT"] },
+            "loss_bonus": { "type": "object", "required": ["base", "per_consecutive_loss", "starting_losses", "max", "win_decrements_counter_by"] },
+            "player": { "type": "object", "required": ["plant", "defuse", "kill_default", "teamkill"] }
+          }
+        },
+        "measured": { "type": "object" }
+      }
+    },
+    "damage_model": {
+      "type": "object", "required": ["formula", "hitgroup_multipliers", "validation"],
+      "properties": {
+        "formula": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+        "hitgroup_multipliers": { "type": "object", "required": ["head", "chest", "stomach", "left_leg", "right_leg"] },
+        "validation": { "type": "object", "required": ["vida"] }
+      }
+    },
+    "movement": { "type": "object", "required": ["knife_speed", "measured"] },
+    "bomb": {
+      "type": "object", "required": ["timer_s", "plant_duration_s", "defuse_duration_s"],
+      "properties": {
+        "timer_s": { "type": "object", "required": ["value"], "properties": { "value": { "type": "number" } } },
+        "plant_duration_s": { "type": "object", "required": ["measured"] },
+        "defuse_duration_s": { "type": "object", "required": ["with_kit", "without_kit"] }
+      }
+    },
+    "utility": { "type": "object", "required": ["limits", "smoke_duration_s", "molotov_burn_duration_s", "flash_blind_duration_s"] },
+    "round_timing": { "type": "object", "required": ["freeze_time_s", "round_time_s", "restart_delay_s"] },
+    "weapons": {
+      "type": "object", "minProperties": 30,
+      "description": "id da arma (ak47, m4a1 = M4A4, m4a1_silencer = M4A1-S...) -> parâmetros oficiais.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["type", "price", "kill_award", "damage", "bullets_per_shot", "armor_penetration", "headshot_multiplier",
+                     "range_modifier", "penetration_power", "cycle_time_s", "full_auto", "clip_size", "max_speed", "spread",
+                     "inaccuracy", "recovery_time_s", "recoil"],
+        "properties": {
+          "price": { "type": "integer", "minimum": 0 }, "damage": { "type": "number" },
+          "armor_penetration": { "type": "number", "minimum": 0, "maximum": 1 },
+          "headshot_multiplier": { "type": "number" }, "range_modifier": { "type": "number" },
+          "cycle_time_s": { "type": "object", "required": ["normal", "alt"] },
+          "max_speed": { "type": "object", "required": ["normal", "alt"] }
+        }
+      }
+    },
+    "weapon_display_names": { "type": "object", "additionalProperties": { "type": "string" } },
+    "weapon_classes": {
+      "type": "object", "description": "id da arma de fogo -> classe usada em perfis e métricas.",
+      "additionalProperties": { "enum": ["rifle", "awp", "sniper_other", "pistol", "smg", "heavy"] }
+    }
+  }
+}

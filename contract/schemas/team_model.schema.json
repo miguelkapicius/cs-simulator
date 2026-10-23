@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/team_model.schema.json",
+  "title": "team_model.json",
+  "description": "Camada de time: chance de vencer o round, tipo de compra e plano de ataque (ver contract/docs/team_model.md). A semântica exata é a de contract/reference/team_model.py.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "definitions", "win_probability", "buy", "round_plan"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": { "type": "object", "required": ["matches", "rounds", "maps"] },
+    "definitions": {
+      "type": "object", "required": ["pistol_rounds", "buy_types", "buy_type_rule", "round_time_s", "bomb_timer_s"],
+      "properties": {
+        "pistol_rounds": { "type": "array", "items": { "type": "integer" } },
+        "buy_types": { "type": "array", "items": { "enum": ["pistol", "eco", "force", "full"] } },
+        "round_time_s": { "type": "number" }, "bomb_timer_s": { "type": "number" }
+      }
+    },
+    "win_probability": {
+      "type": "object",
+      "required": ["model", "clock", "equip_offset", "hard_rules", "features", "formula", "intercept", "coefficients",
+                   "map_intercepts", "unknown_map_intercept", "evaluation"],
+      "properties": {
+        "model": { "const": "logistic" },
+        "clock": { "type": "object", "required": ["round_s", "bomb_s"] },
+        "equip_offset": { "type": "number" },
+        "features": {
+          "type": "array", "minItems": 8, "maxItems": 8,
+          "items": { "type": "object", "required": ["name", "definition"] }
+        },
+        "intercept": { "type": "number" },
+        "coefficients": {
+          "type": "object",
+          "required": ["alive_diff", "alive_ct", "alive_t", "planted", "planted_x_alive_diff", "clock_unplanted", "clock_planted", "equip_log_ratio"],
+          "additionalProperties": { "type": "number" }
+        },
+        "map_intercepts": { "type": "object", "additionalProperties": { "type": "number" } },
+        "unknown_map_intercept": { "type": "number" },
+        "evaluation": { "type": "object", "required": ["method", "model", "baseline_vivos_e_plant", "constant_50", "calibration"] }
+      }
+    },
+    "buy": {
+      "type": "object",
+      "required": ["resource_edges", "resource_labels", "type_distribution", "type_distribution_n", "loadouts"],
+      "properties": {
+        "resource_edges": { "type": "array", "items": { "type": "number" }, "minItems": 1 },
+        "resource_labels": { "type": "array", "items": { "type": "string" }, "minItems": 2 },
+        "type_distribution": {
+          "type": "object", "propertyNames": { "enum": ["CT", "T"] },
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object", "required": ["eco", "force", "full"],
+              "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+            }
+          }
+        },
+        "loadouts": { "type": "object", "propertyNames": { "enum": ["CT", "T"] } }
+      }
+    },
+    "round_plan": {
+      "type": "object", "required": ["overall", "by_map"],
+      "properties": {
+        "overall": { "$ref": "#/$defs/plan" },
+        "by_map": { "type": "object", "additionalProperties": { "$ref": "#/$defs/plan" } }
+      }
+    }
+  },
+  "$defs": {
+    "plan": {
+      "type": "object", "required": ["n_rounds", "plant_rate", "plant_rate_by_t_buy", "site_a_share", "plant_time_s"],
+      "properties": {
+        "n_rounds": { "type": "integer" },
+        "plant_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+        "plant_rate_by_t_buy": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 } },
+        "site_a_share": { "type": "number", "minimum": 0, "maximum": 1 },
+        "plant_time_s": { "type": "object", "required": ["p10", "p25", "p50", "p75", "p90"] }
+      }
+    }
+  }
+}

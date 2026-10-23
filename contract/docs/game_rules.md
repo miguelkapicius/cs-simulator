@@ -15,7 +15,8 @@ jogador joga**. A mecânica da simulação deve reproduzir estas regras.
   - **oficial:** arquivos do jogo e configuração do torneio gravada nas demos;
   - **medido:** observado em 28 demos (599 rounds, 3 torneios). Valida o oficial e cobre regras que não estão nos arquivos.
 - **Unidades:** distância em unidades Source (1 = 0,0254 m), velocidade em unidades/s, tempo em s, dinheiro em US$ do jogo.
-- **Versão do formato:** `schema_version` = `"1.0"`.
+- **Versão:** `contract_version` (ver [`conventions.md`](conventions.md)) e `schema_version` = `"1.0"`.
+- **Schema:** [`schemas/game_rules.schema.json`](../schemas/game_rules.schema.json). Gerado por `pipeline/build_game_rules.py` (`make rules`).
 
 **Carregar na Unity:** use o Newtonsoft JSON (`com.unity.nuget.newtonsoft-json`). O `JsonUtility` não lê
 dicionários, e `weapons`, `match_config` e várias seções são dicionários.
@@ -63,14 +64,14 @@ os nomes exibidos no jogo ("AK-47", "M4A1-S") para esses ids.
 (int, int) Damage(Weapon w, float distUnits, Hitgroup hg, int armor, bool helmet) {
     float dmg = w.damage * Mathf.Pow(w.range_modifier, distUnits / 500f);
     dmg *= hg switch {
-        Head or Neck => w.headshot_multiplier,   // 4.0 em quase todas as armas
-        Stomach      => 1.25f,
+        Head    => w.headshot_multiplier,         // 4.0 em quase todas as armas
+        Stomach => 1.25f,
         LeftLeg or RightLeg => 0.75f,
-        _            => 1.0f };                   // peito e braços
+        _       => 1.0f };                        // peito, braços e PESCOÇO (o pescoço não é cabeça)
     bool protegido = hg switch {
         LeftLeg or RightLeg => false,
-        Head or Neck        => helmet,
-        _                   => true };
+        Head                => helmet,            // só a cabeça depende do capacete
+        _                   => true };            // peito, estômago, braços e pescoço: colete
     if (protegido && armor > 0) {
         float vida = dmg * w.armor_penetration;
         float colete = (dmg - vida) * 0.5f;
@@ -82,10 +83,12 @@ os nomes exibidos no jogo ("AK-47", "M4A1-S") para esses ids.
 // Fogo amigo: multiplicar por match_config.ff_damage_reduction_bullets (0,33) ou _grenade (0,85).
 ```
 
-**Validação nas demos (8.302 danos):** sem colete, a fórmula reproduz exatamente 81% dos danos; com colete, 84%. **Nenhum**
-dano real ficou acima do previsto. Os que ficam abaixo (14–17%) perderam quase metade ou mais do dano, o padrão de tiros que
-atravessaram parede, objeto ou outro jogador. As demos não marcam esses tiros. Acertos registrados como `generic` (24%)
-também são desse tipo.
+**Validação nas demos (8.196 acertos de arma de fogo, sem fogo amigo):** sem colete, a fórmula reproduz exatamente 82% dos danos;
+com colete, 86%. **Nenhum** dano real ficou acima do previsto. Por parte do corpo, 87% a 90% no peito, estômago e braços, 92% no
+pescoço, 81% a 84% nas pernas e 77% na cabeça. Os 12% a 15% que ficam abaixo do previsto perderam em geral metade ou mais do dano, o
+padrão de tiros que atravessaram parede, objeto ou jogador. As demos não marcam esses tiros no evento de dano; a estimativa de quanto
+dano se perde está em [`weapon_dynamics.md`](weapon_dynamics.md). O hitgroup `generic` **não** é tiro de arma: é só dano de
+fogo (molotov) e de granada (HE).
 
 ## economy: algoritmo (validado)
 

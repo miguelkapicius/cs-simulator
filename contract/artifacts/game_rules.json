@@ -1,5 +1,6 @@
 {
  "schema_version": "1.0",
+ "contract_version": "1.1.0",
  "generated_at": "2026-10-23",
  "game_build": {
   "client_version": 2000930,
@@ -519,7 +520,7 @@
    "loss_counter_rule_fit": {
     "desconta_1": {
      "perdedor": {
-      "acerto": 0.741,
+      "acerto": 0.743,
       "n": 537
      },
      "vencedor": {
@@ -529,7 +530,7 @@
     },
     "desconta_2": {
      "perdedor": {
-      "acerto": 0.929,
+      "acerto": 0.931,
       "n": 537
      },
      "vencedor": {
@@ -539,7 +540,7 @@
     },
     "zera": {
      "perdedor": {
-      "acerto": 0.821,
+      "acerto": 0.823,
       "n": 537
      },
      "vencedor": {
@@ -553,29 +554,29 @@
  "damage_model": {
   "formula": [
    "dano = damage * range_modifier ^ (distancia_unidades / 500) * multiplicador_parte_do_corpo",
-   "cabeça (e pescoço) usam weapons.<arma>.headshot_multiplier",
-   "colete protege peito, estômago e braços; cabeça só com capacete; pernas nunca",
+   "cabeça usa weapons.<arma>.headshot_multiplier (4.0 em quase todas); pescoço é ×1.0",
+   "colete protege peito, estômago, braços e pescoço; cabeça só com capacete; pernas nunca",
    "se protegido e colete > 0: vida = dano * armor_penetration; colete -= (dano - vida) * 0.5",
    "se o colete não basta: colete zera e vida = dano - colete_antes * 2",
    "valores são truncados para inteiro; fogo amigo multiplica por ff_damage_reduction_*"
   ],
-  "penetration_note": "Tiros que atravessam parede, objeto ou jogador perdem dano conforme weapons.<arma>.penetration_power e o material; as demos não marcam esses tiros. Danos abaixo do previsto em 'validation' (quase todos com menos de 60% do previsto) e o hitgroup 'generic' são esses casos.",
+  "penetration_note": "Tiros que atravessam parede, objeto ou jogador perdem dano conforme weapons.<arma>.penetration_power e o material; as demos não marcam esses tiros no evento de dano. Os danos abaixo do previsto em 'validation' são em sua maioria esses casos (medidos em weapon_dynamics.json). O hitgroup 'generic' NÃO é tiro de arma: é só dano de fogo (molotov) e de granada (HE).",
   "hitgroup_multipliers": {
    "head": {
     "value": 4.0,
     "note": "multiplicador da arma (headshot_multiplier)",
     "measured": {
      "best_fit": 4.0,
-     "exact_match_rate": 0.512,
-     "n": 43
+     "exact_match_rate": 0.55,
+     "n": 40
     }
    },
    "neck": {
-    "value": 4.0,
-    "note": "multiplicador da arma (headshot_multiplier)",
+    "value": 1.0,
+    "note": "o pescoço NÃO é cabeça: ×1,0 e protegido pelo colete (não pelo capacete)",
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.5,
+     "exact_match_rate": 1.0,
      "n": 2
     }
    },
@@ -583,16 +584,16 @@
     "value": 1.0,
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.839,
-     "n": 540
+     "exact_match_rate": 0.845,
+     "n": 536
     }
    },
    "stomach": {
     "value": 1.25,
     "measured": {
      "best_fit": 1.25,
-     "exact_match_rate": 0.809,
-     "n": 131
+     "exact_match_rate": 0.828,
+     "n": 128
     }
    },
    "left_arm": {
@@ -607,8 +608,8 @@
     "value": 1.0,
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.815,
-     "n": 81
+     "exact_match_rate": 0.825,
+     "n": 80
     }
    },
    "left_leg": {
@@ -623,74 +624,74 @@
     "value": 0.75,
     "measured": {
      "best_fit": 0.75,
-     "exact_match_rate": 0.8,
-     "n": 20
+     "exact_match_rate": 0.842,
+     "n": 19
     }
    }
   },
   "validation": {
    "vida": {
     "sem_colete": {
-     "n": 861,
-     "exato": 0.81,
-     "ate_1hp": 0.833,
-     "menor_que_previsto": 0.167,
+     "n": 849,
+     "exato": 0.823,
+     "ate_1hp": 0.847,
+     "menor_que_previsto": 0.153,
      "maior_que_previsto": 0.0
     },
     "com_colete": {
-     "n": 7441,
-     "exato": 0.842,
-     "ate_1hp": 0.859,
-     "menor_que_previsto": 0.141,
+     "n": 7347,
+     "exato": 0.859,
+     "ate_1hp": 0.876,
+     "menor_que_previsto": 0.124,
      "maior_que_previsto": 0.0
     }
    },
    "por_parte_do_corpo": {
     "chest": {
-     "n": 4720,
-     "ate_1hp": 0.877,
+     "n": 4671,
+     "ate_1hp": 0.887,
      "maior_que_previsto": 0.0
     },
     "head": {
-     "n": 587,
-     "ate_1hp": 0.751,
+     "n": 573,
+     "ate_1hp": 0.77,
      "maior_que_previsto": 0.0
     },
     "left_arm": {
-     "n": 301,
-     "ate_1hp": 0.864,
+     "n": 298,
+     "ate_1hp": 0.872,
      "maior_que_previsto": 0.0
     },
     "left_leg": {
-     "n": 221,
-     "ate_1hp": 0.787,
+     "n": 214,
+     "ate_1hp": 0.813,
      "maior_que_previsto": 0.0
     },
     "neck": {
-     "n": 53,
-     "ate_1hp": 0.0,
+     "n": 52,
+     "ate_1hp": 0.923,
      "maior_que_previsto": 0.0
     },
     "right_arm": {
-     "n": 801,
-     "ate_1hp": 0.883,
+     "n": 790,
+     "ate_1hp": 0.895,
      "maior_que_previsto": 0.0
     },
     "right_leg": {
-     "n": 266,
-     "ate_1hp": 0.82,
+     "n": 259,
+     "ate_1hp": 0.842,
      "maior_que_previsto": 0.0
     },
     "stomach": {
-     "n": 1353,
-     "ate_1hp": 0.863,
+     "n": 1339,
+     "ate_1hp": 0.872,
      "maior_que_previsto": 0.0
     }
    },
    "por_arma": {
     "ak47": {
-     "n": 2699,
-     "ate_1hp": 0.82,
+     "n": 2655,
+     "ate_1hp": 0.838,
      "maior_que_previsto": 0.0
     },
     "awp": {
@@ -699,43 +700,48 @@
      "maior_que_previsto": 0.0
     },
     "deagle": {
-     "n": 94,
-     "ate_1hp": 0.787,
+     "n": 91,
+     "ate_1hp": 0.835,
      "maior_que_previsto": 0.0
     },
     "elite": {
-     "n": 87,
-     "ate_1hp": 0.874,
+     "n": 85,
+     "ate_1hp": 0.906,
      "maior_que_previsto": 0.0
     },
     "famas": {
      "n": 129,
-     "ate_1hp": 0.891,
+     "ate_1hp": 0.899,
      "maior_que_previsto": 0.0
     },
     "fiveseven": {
-     "n": 136,
-     "ate_1hp": 0.949,
+     "n": 135,
+     "ate_1hp": 0.978,
      "maior_que_previsto": 0.0
     },
     "galilar": {
-     "n": 613,
-     "ate_1hp": 0.829,
+     "n": 596,
+     "ate_1hp": 0.857,
      "maior_que_previsto": 0.0
     },
     "glock": {
-     "n": 475,
-     "ate_1hp": 0.916,
+     "n": 468,
+     "ate_1hp": 0.938,
+     "maior_que_previsto": 0.0
+    },
+    "hkp2000": {
+     "n": 355,
+     "ate_1hp": 0.915,
      "maior_que_previsto": 0.0
     },
     "m4a1": {
-     "n": 917,
-     "ate_1hp": 0.851,
+     "n": 910,
+     "ate_1hp": 0.86,
      "maior_que_previsto": 0.0
     },
     "m4a1_silencer": {
-     "n": 1684,
-     "ate_1hp": 0.856,
+     "n": 1665,
+     "ate_1hp": 0.871,
      "maior_que_previsto": 0.0
     },
     "mac10": {
@@ -749,33 +755,28 @@
      "maior_que_previsto": 0.0
     },
     "mp9": {
-     "n": 511,
-     "ate_1hp": 0.953,
+     "n": 510,
+     "ate_1hp": 0.963,
      "maior_que_previsto": 0.0
     },
     "p250": {
      "n": 66,
-     "ate_1hp": 0.97,
+     "ate_1hp": 0.985,
      "maior_que_previsto": 0.0
     },
     "ssg08": {
      "n": 31,
-     "ate_1hp": 0.774,
+     "ate_1hp": 0.806,
      "maior_que_previsto": 0.0
     },
     "tec9": {
-     "n": 193,
-     "ate_1hp": 0.912,
-     "maior_que_previsto": 0.0
-    },
-    "usp_silencer": {
-     "n": 346,
-     "ate_1hp": 0.902,
+     "n": 192,
+     "ate_1hp": 0.922,
      "maior_que_previsto": 0.0
     }
    },
-   "generic_hitgroup_share": 0.238,
-   "dano_no_colete_ate_1": 0.904
+   "generic_hitgroup_share": 0.0,
+   "dano_no_colete_ate_1": 0.92
   }
  },
  "movement": {
@@ -5903,5 +5904,42 @@
   "Talon Knife": "knife_widowmaker",
   "Tec-9": "tec9",
   "USP-S": "usp_silencer"
+ },
+ "weapon_classes": {
+  "ak47": "rifle",
+  "aug": "rifle",
+  "awp": "awp",
+  "bizon": "smg",
+  "cz75a": "pistol",
+  "deagle": "pistol",
+  "elite": "pistol",
+  "famas": "rifle",
+  "fiveseven": "pistol",
+  "g3sg1": "sniper_other",
+  "galilar": "rifle",
+  "glock": "pistol",
+  "hkp2000": "pistol",
+  "m249": "heavy",
+  "m4a1": "rifle",
+  "m4a1_silencer": "rifle",
+  "m4a4": "rifle",
+  "mac10": "smg",
+  "mag7": "heavy",
+  "mp5sd": "smg",
+  "mp7": "smg",
+  "mp9": "smg",
+  "negev": "heavy",
+  "nova": "heavy",
+  "p250": "pistol",
+  "p90": "smg",
+  "revolver": "pistol",
+  "sawedoff": "heavy",
+  "scar20": "sniper_other",
+  "sg556": "rifle",
+  "ssg08": "sniper_other",
+  "tec9": "pistol",
+  "ump45": "smg",
+  "usp_silencer": "pistol",
+  "xm1014": "heavy"
  }
 }

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/weapon_dynamics.schema.json",
+  "title": "weapon_dynamics.json",
+  "description": "Comportamento das armas ao atirar, medido nas demos: padrão e escala do recuo, reinício da rajada, penalidade de precisão e penetração (ver contract/docs/weapon_dynamics.md). Semântica exata em contract/reference/weapon_dynamics.py.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "recoil", "penetration"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": { "type": "object", "required": ["matches", "shots"] },
+    "recoil": {
+      "type": "object", "required": ["conventions", "scale", "reset_rule", "patterns", "reset"],
+      "properties": {
+        "conventions": { "type": "array", "items": { "type": "string" }, "minItems": 3 },
+        "scale": {
+          "type": "object", "required": ["value", "fitted", "ci95", "n_hits"],
+          "properties": { "value": { "type": "number" }, "fitted": { "type": "number" },
+                          "ci95": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+                          "n_hits": { "type": "integer", "minimum": 100 } }
+        },
+        "reset_rule": { "type": "object", "required": ["pause_over_cycle_max"], "properties": { "pause_over_cycle_max": { "type": "number" } } },
+        "patterns": {
+          "type": "object", "minProperties": 3,
+          "description": "id da arma -> padrão do punch bala a bala.",
+          "additionalProperties": {
+            "type": "object", "required": ["cycle_time_s", "max_measured_bullet", "bullets"],
+            "properties": {
+              "cycle_time_s": { "type": "number", "exclusiveMinimum": 0 },
+              "max_measured_bullet": { "type": "integer", "minimum": 3 },
+              "bullets": {
+                "type": "array", "minItems": 3,
+                "items": {
+                  "type": "object", "required": ["bullet", "n", "pitch", "yaw", "pitch_sd", "yaw_sd", "penalty"],
+                  "properties": { "bullet": { "type": "integer", "minimum": 1 }, "n": { "type": "integer", "minimum": 1 },
+                                  "pitch": { "type": "number" }, "yaw": { "type": "number" },
+                                  "pitch_sd": { "type": "number" }, "yaw_sd": { "type": "number" }, "penalty": { "type": "number" } }
+                }
+              }
+            }
+          }
+        },
+        "reset": {
+          "type": "object", "description": "classe de arma automática -> reinício da rajada e decaimento do índice de recuo.",
+          "additionalProperties": { "type": "object", "required": ["restart_by_pause", "recoil_index_decay"] }
+        }
+      }
+    },
+    "penetration": {
+      "type": "object", "required": ["attenuated_hit_share", "damage_fraction_when_attenuated", "kills_through_surfaces", "note"],
+      "properties": { "note": { "type": "string" } }
+    }
+  }
+}

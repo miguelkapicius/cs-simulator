@@ -12,7 +12,7 @@ Saída por demo:
 
 Tabelas em Parquet (tipos preservados, steamids como texto); metadados pequenos em JSON.
 
-Uso: .venv/bin/python extract_demos.py [demo.dem ...]
+Uso: .venv/bin/python -m pipeline.extract_demos [demo.dem ...]
 """
 import json
 import sys
@@ -22,14 +22,10 @@ import numpy as np
 import pandas as pd
 from demoparser2 import DemoParser
 
-ROOT = Path(__file__).parent
-DEMOS_DIR = ROOT / "demos"
-OUT_DIR = ROOT / "data"
+from pipeline.common import DATA_DIR as OUT_DIR, DEMOS_DIR, SIDE
 
 # Amostragem do ticks.parquet: a cada 8 ticks (8 amostras/s em 64 tick)
 TICK_SAMPLE_EVERY = 8
-
-SIDE = {"CT": "CT", "TERRORIST": "T", "T": "T"}
 
 # O mesmo time aparece com nomes diferentes conforme o torneio
 TEAM_ALIASES = {
@@ -269,7 +265,8 @@ def extract(demo_path):
             r["first_kill"] = None
         r["kills"] = {"CT": int((rk["attacker_side"] == "CT").sum()), "T": int((rk["attacker_side"] == "T").sum())}
         rb = bomb[(bomb["round"] == rn)] if not bomb.empty else bomb
-        planted = rb[rb["event"] == "planted"] if not rb.empty else rb
+        # Plants depois do fim do round (Ts já venceram por eliminação) não contam
+        planted = rb[(rb["event"] == "planted") & ~rb["after_round_end"]] if not rb.empty else rb
         r["bomb_planted"] = not planted.empty
         if not planted.empty:
             p = planted.iloc[0]

@@ -1,14 +1,13 @@
-# O repositório guarda só o que o jogo consome (profiles/ e game_rules/)
-# e os scripts que geram esses arquivos. Entradas e dados intermediários
-# ficam só na máquina e são regeráveis.
+# O repositório guarda o contrato com a Unity (contract/), os scripts que o geram e os testes.
+# Entradas e dados intermediários ficam só na máquina e são regeráveis. Os padrões com / inicial valem só na raiz.
 
 # Entradas da geração de dados
-demos/
-archives/
-reference/
+/demos/
+/archives/
+/reference/
 
 # Dados intermediários extraídos das demos
-data/
+/data/
 
 # Pacotes para envio (repetem o JSON e o .md das pastas)
 *.zip
@@ -20,3 +19,7 @@ __pycache__/
 
 # Sistema
 .DS_Store
+
+# Pacotes gerados por `make package`
+dist/
+.pytest_cache/

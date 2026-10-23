@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/calibration_targets.schema.json",
+  "title": "calibration_targets.json",
+  "description": "O que a simulação precisa reproduzir do jogo real (ver contract/docs/calibration.md).",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "thresholds", "metrics"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": { "type": "object", "required": ["matches", "rounds", "maps"] },
+    "thresholds": { "type": "object", "required": ["min_n", "z_warn", "z_fail", "prop_tol", "rel_tol", "cov_tol"] },
+    "metrics": {
+      "type": "object", "minProperties": 50,
+      "additionalProperties": {
+        "oneOf": [
+          { "type": "object", "required": ["kind", "k", "n", "value", "desc"], "properties": { "kind": { "const": "prop" } } },
+          { "type": "object", "required": ["kind", "mean", "std", "n", "desc"], "properties": { "kind": { "const": "mean" } } },
+          { "type": "object", "required": ["kind", "q", "mean", "n", "coverage", "desc"], "properties": { "kind": { "const": "quantiles" },
+              "q": { "type": "object", "required": ["p5", "p10", "p25", "p50", "p75", "p90", "p95"] } } }
+        ]
+      }
+    }
+  }
+}

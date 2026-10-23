@@ -1,6 +1,6 @@
 # Dados extraídos das demos (data/)
 
-Gerado por `extract_demos.py` (demoparser2) a partir de `demos/*.dem`. Os `.rar` originais ficam em `archives/`.
+Gerado por `pipeline/extract_demos.py` (demoparser2) a partir de `demos/*.dem`. Os `.rar` originais ficam em `archives/`.
 `data/index.json` lista todas as demos com série, mapa, placar e número de rounds.
 
 ## Organização
@@ -11,7 +11,7 @@ Gerado por `extract_demos.py` (demoparser2) a partir de `demos/*.dem`. Os `.rar`
   - `match.json` e `rounds.json`: metadados pequenos e aninhados, em JSON;
   - `kills`, `damages`, `grenades`, `bomb`, `economy` e `ticks`: tabelas em **Parquet**.
 - Ler as tabelas: `pd.read_parquet("data/<demo>/kills.parquet")`. Os steamids são texto e os valores nulos são nulos de verdade.
-- Nomes de times unificados (`TEAM_ALIASES` em `extract_demos.py`): "BetBoom Team" → "BetBoom", "Aurora Gaming" → "Aurora",
+- Nomes de times unificados (`TEAM_ALIASES` em `pipeline/extract_demos.py`): "BetBoom Team" → "BetBoom", "Aurora Gaming" → "Aurora",
   "9z Globant" → "9z", "Team Vitality" → "Vitality".
 
 ## Convenções
@@ -44,4 +44,9 @@ Gerado por `extract_demos.py` (demoparser2) a partir de `demos/*.dem`. Os `.rar`
 - **ticks.parquet**: amostra a cada 8 ticks (8/s) da parte jogável de cada round, com posição, mira, vida, colete, arma ativa,
   callout, scope, defuse e flash.
 
-Para reextrair: `.venv/bin/python extract_demos.py` (todas as demos, cerca de 6 s por demo).
+Para reextrair: `make extract` (todas as demos, cerca de 6 s por demo).
+
+## simlog.jsonl
+
+Cada pasta também tem `simlog.jsonl`: a partida no formato de log da simulação (ver `contract/docs/sim_log.md`), gerado por
+`make simlogs` (`pipeline/real_to_simlog.py`). É a entrada do comparador, do modelo de time e das metas de calibração.

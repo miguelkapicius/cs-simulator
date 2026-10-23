@@ -1,32 +1,26 @@
-"""Gera perfis individuais de jogadores para a simulação (profiles/player_profiles.json).
+"""Gera perfis individuais de jogadores para a simulação (contract/artifacts/player_profiles.json).
 
 Usa as demos (tiros, visão e mira em alta resolução) e os dados já extraídos em data/
 (rounds, kills, danos, granadas, ticks). Rode extract_demos.py antes.
 
-Uso: .venv/bin/python build_player_profiles.py
+Uso: .venv/bin/python -m pipeline.build_player_profiles
 """
 import json
 from datetime import date
-from pathlib import Path
 
 import numpy as np
 import pandas as pd
 from demoparser2 import DemoParser
 
-from extract_demos import DEMOS_DIR, OUT_DIR as DATA_DIR, SIDE, assign_round, parse_event
+from pipeline.common import (ARTIFACTS_DIR, CONTRACT_VERSION, DATA_DIR, DEMOS_DIR, SIDE, TICKRATE,
+                             UNIT_TO_M, weapon_class)
+from pipeline.combat import AIMED_SHOT_DEG, DUEL_WINDOW_S, REACTION_WINDOW_S, SPOT_MIN_GAP_S, resolve_sightings
+from pipeline.extract_demos import assign_round, parse_event
 
-ROOT = Path(__file__).parent
-PROFILES_DIR = ROOT / "profiles"
 SCHEMA_VERSION = "1.0"
 
-UNIT_TO_M = 0.0254          # 1 unidade Source ≈ 1 polegada
-TICKRATE = 64
 EYE_STAND, EYE_CROUCH = 64.0, 46.0   # altura dos olhos/cabeça acima da origem (unidades)
 SPOT_SAMPLE = 2             # resolução da visão: a cada 2 ticks (~31 ms)
-SPOT_MIN_GAP_S = 0.5        # o inimigo precisa ter ficado fora de vista por 0,5 s para contar como novo avistamento
-REACTION_WINDOW_S = 2.0     # tiro em até 2 s após avistar conta como reação
-AIMED_SHOT_DEG = 10.0       # tiro "no alvo" se a mira está a menos de 10° do inimigo mais próximo
-DUEL_WINDOW_S = 3.0         # duelo resolvido se alguém morre em até 3 s após o avistamento
 TRADE_WINDOW_S = 5.0
 STILL_SPEED = 40.0          # unidades/s; abaixo disso o tiro é considerado parado (counter-strafe)
 MIN_DIST_SAMPLES = 30       # abaixo disso a distribuição do jogador cai para a média geral
@@ -35,25 +29,9 @@ PERCENTILES = [10, 25, 50, 75, 90]
 DIST_BANDS_M = [(0, 10), (10, 20), (20, 30), (30, 999)]
 SPRAY_BUCKETS = [(1, 1), (2, 3), (4, 6), (7, 99)]
 
-WEAPON_CLASS = {
-    **dict.fromkeys(["ak47", "m4a1", "m4a1_silencer", "m4a4", "famas", "galilar", "aug", "sg556"], "rifle"),
-    "awp": "awp",
-    **dict.fromkeys(["ssg08", "scar20", "g3sg1"], "sniper_other"),
-    **dict.fromkeys(["glock", "usp_silencer", "hkp2000", "p250", "fiveseven", "tec9", "cz75a",
-                     "deagle", "revolver", "elite"], "pistol"),
-    **dict.fromkeys(["mac10", "mp9", "mp7", "mp5sd", "ump45", "p90", "bizon"], "smg"),
-    **dict.fromkeys(["nova", "xm1014", "mag7", "sawedoff", "m249", "negev"], "heavy"),
-}
 AUTOMATIC = {"rifle", "smg", "heavy"}
 HITGROUPS = ["head", "chest", "stomach", "left_arm", "right_arm", "left_leg", "right_leg", "neck", "generic"]
 UTILITY = ["smoke", "flash", "he", "molotov"]
-
-
-def weapon_class(name):
-    if not isinstance(name, str):
-        return None
-    name = name.removeprefix("weapon_")
-    return WEAPON_CLASS.get(name)
 
 
 # ---------- geometria ----------
@@ -175,8 +153,9 @@ def extract_shots(parser, rounds, damages):
                       "s_shots_fired": "spray_index"})
 
 
-def extract_sightings(parser, rounds, shots, kills):
-    """Avistamentos: observador passa a ver um inimigo depois de ≥0,5 s sem vê-lo."""
+def find_sighting_onsets(parser, rounds):
+    """Avistamentos: observador passa a ver um inimigo depois de ≥0,5 s sem vê-lo (só existe nas demos;
+    a simulação registra esses eventos diretamente, ver contract/docs/sim_log.md)."""
     sample = []
     for r in rounds:
         sample.extend(range(r["freeze_end_tick"], r["end_tick"] + 1, SPOT_SAMPLE))
@@ -200,33 +179,11 @@ def extract_sightings(parser, rounds, shots, kills):
     sp = onsets.merge(s, left_on=["tick", "observer"], right_on=["tick", "s_steamid"]).merge(
         t, left_on=["tick", "target"], right_on=["tick", "t_steamid"])
     sp = sp[sp["s_side"] != sp["t_side"]]
-    sp = pair_geometry(sp)
+    return pair_geometry(sp)
 
-    # Ignora avistamentos com o observador já atirando (luta em andamento)
-    sh = shots[["tick", "shooter", "target", "aim_err_deg", "hit"]].sort_values("tick")
-    recent = pd.merge_asof(sp.sort_values("tick"), sh[["tick", "shooter"]].rename(columns={"tick": "last_shot"}),
-                           left_on="tick", right_on="last_shot", left_by="observer", right_by="shooter",
-                           direction="backward")
-    sp = recent[recent["last_shot"].isna() | (recent["tick"] - recent["last_shot"] > SPOT_MIN_GAP_S * TICKRATE)].drop(columns=["shooter", "last_shot"])
 
-    # Reação: primeiro tiro do observador mirando nesse alvo em até 2 s
-    aimed = sh[sh["aim_err_deg"] < AIMED_SHOT_DEG].rename(columns={"tick": "shot_tick", "target": "shot_target"})
-    m = sp[["tick", "observer", "target"]].merge(aimed, left_on=["observer", "target"], right_on=["shooter", "shot_target"])
-    m = m[(m["shot_tick"] >= m["tick"]) & (m["shot_tick"] <= m["tick"] + REACTION_WINDOW_S * TICKRATE)]
-    first = m.sort_values("shot_tick").drop_duplicates(["tick", "observer", "target"])
-    first["reaction_s"] = (first["shot_tick"] - first["tick"]) / TICKRATE
-    sp = sp.merge(first[["tick", "observer", "target", "reaction_s"]], on=["tick", "observer", "target"], how="left")
-
-    # Resultado do duelo: quem matou quem em até 3 s
-    k = kills[~kills["after_round_end"] & kills["attacker_steamid"].notna()][["tick", "attacker_steamid", "user_steamid"]]
-    win = sp[["tick", "observer", "target"]].merge(k, left_on=["observer", "target"], right_on=["attacker_steamid", "user_steamid"], suffixes=("", "_k"))
-    lose = sp[["tick", "observer", "target"]].merge(k, left_on=["target", "observer"], right_on=["attacker_steamid", "user_steamid"], suffixes=("", "_k"))
-    window = DUEL_WINDOW_S * TICKRATE
-    win = win[(win["tick_k"] >= win["tick"]) & (win["tick_k"] <= win["tick"] + window)].assign(outcome="win")
-    lose = lose[(lose["tick_k"] >= lose["tick"]) & (lose["tick_k"] <= lose["tick"] + window)].assign(outcome="loss")
-    res = pd.concat([win, lose]).sort_values("tick_k").drop_duplicates(["tick", "observer", "target"])
-    sp = sp.merge(res[["tick", "observer", "target", "outcome"]], on=["tick", "observer", "target"], how="left")
-    sp["outcome"] = sp["outcome"].fillna("none")
+def extract_sightings(parser, rounds, shots, kills):
+    sp = resolve_sightings(find_sighting_onsets(parser, rounds), shots, kills)
     return sp[["tick", "observer", "target", "s_side", "distance_m", "aim_err_deg", "aim_err_h_deg",
                "aim_err_v_deg", "reaction_s", "outcome", "s_active_weapon_name", "t_active_weapon_name"]].rename(
         columns={"s_side": "side", "s_active_weapon_name": "obs_weapon", "t_active_weapon_name": "target_weapon"})
@@ -464,7 +421,7 @@ def infer_role(perf, usage, base_perf):
 
 
 def main():
-    PROFILES_DIR.mkdir(exist_ok=True)
+    ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
     all_shots, all_sight, all_rounds, all_hg, all_kills = [], [], [], [], []
     pos, players, maps = {}, {}, []
 
@@ -515,6 +472,7 @@ def main():
 
     out = {
         "schema_version": SCHEMA_VERSION,
+        "contract_version": CONTRACT_VERSION,
         "generated_at": date.today().isoformat(),
         "source": {"matches": maps, "total_rounds": sum(m["rounds"] for m in maps),
                    "parser": "demoparser2", "tickrate": TICKRATE},
@@ -529,7 +487,7 @@ def main():
         "baseline": {"mechanics": base_mech, "performance": base_perf},
         "players": profiles,
     }
-    path = PROFILES_DIR / "player_profiles.json"
+    path = ARTIFACTS_DIR / "player_profiles.json"
     path.write_text(json.dumps(out, ensure_ascii=False, indent=1, default=lambda o: o.item() if hasattr(o, "item") else str(o)))
     print(f"\n{path} ({path.stat().st_size // 1024} KB): {len(profiles)} jogadores")
     for pr in profiles:

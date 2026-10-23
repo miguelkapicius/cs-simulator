@@ -1,0 +1,212 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/sim_log.schema.json",
+  "title": "Evento do log da simulação (uma linha do arquivo .jsonl)",
+  "description": "A Unity grava um evento por linha. Cada evento tem 'type'. Os campos marcados como obrigatórios aqui são o mínimo para o arquivo ser aceito; os opcionais habilitam métricas de calibração adicionais (ver contract/docs/sim_log.md).",
+  "oneOf": [
+    { "$ref": "#/$defs/match_start" },
+    { "$ref": "#/$defs/round_start" },
+    { "$ref": "#/$defs/freeze_end" },
+    { "$ref": "#/$defs/shot" },
+    { "$ref": "#/$defs/damage" },
+    { "$ref": "#/$defs/kill" },
+    { "$ref": "#/$defs/bomb" },
+    { "$ref": "#/$defs/grenade" },
+    { "$ref": "#/$defs/sighting" },
+    { "$ref": "#/$defs/round_end" },
+    { "$ref": "#/$defs/match_end" }
+  ],
+  "$defs": {
+    "player": { "type": "string", "minLength": 1, "description": "Id estável do jogador. Para bots que usam um perfil, o steamid do perfil." },
+    "side": { "enum": ["CT", "T"] },
+    "tick": { "type": "integer", "minimum": 0 },
+    "round": { "type": "integer", "minimum": 1 },
+    "weapon": { "type": "string", "minLength": 1, "description": "Id da arma como em game_rules.json (ak47, m4a1_silencer, awp...), 'inferno' para fogo, 'hegrenade', 'planted_c4' ou 'world'." },
+    "score": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 0 }, "minProperties": 2, "maxProperties": 2, "description": "Placar por nome de time." },
+    "hitgroup": { "enum": ["head", "neck", "chest", "stomach", "left_arm", "right_arm", "left_leg", "right_leg", "generic"] },
+    "grenades": {
+      "type": "object",
+      "properties": {
+        "smoke": { "type": "integer", "minimum": 0 }, "flash": { "type": "integer", "minimum": 0 },
+        "he": { "type": "integer", "minimum": 0 }, "molotov": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+
+    "match_start": {
+      "type": "object",
+      "required": ["type", "contract_version", "source", "map", "tickrate", "players"],
+      "properties": {
+        "type": { "const": "match_start" },
+        "contract_version": { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "source": { "enum": ["sim", "real"], "description": "'sim' = Unity; 'real' = convertido de uma demo." },
+        "map": { "type": "string", "examples": ["de_mirage"] },
+        "tickrate": { "type": "integer", "minimum": 1, "description": "Ticks por segundo usados em todos os campos 'tick'." },
+        "seed": { "type": "integer" },
+        "sim_build": { "type": "string" },
+        "players": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object", "required": ["player", "name", "team"],
+            "properties": { "player": { "$ref": "#/$defs/player" }, "name": { "type": "string" }, "team": { "type": "string" } }
+          }
+        }
+      }
+    },
+
+    "round_start": {
+      "type": "object",
+      "required": ["type", "round", "tick", "ct_team", "t_team", "score"],
+      "properties": {
+        "type": { "const": "round_start" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "ct_team": { "type": "string" }, "t_team": { "type": "string" },
+        "score": { "$ref": "#/$defs/score", "description": "Placar antes do round." }
+      }
+    },
+
+    "freeze_end": {
+      "type": "object",
+      "required": ["type", "round", "tick", "players"],
+      "description": "Estado de todos os jogadores no fim do freeze time, depois da fase de compra.",
+      "properties": {
+        "type": { "const": "freeze_end" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "players": {
+          "type": "array", "minItems": 2,
+          "items": {
+            "type": "object",
+            "required": ["player", "side", "money_before", "equip_before", "money", "equip_value", "armor", "helmet", "defuser"],
+            "properties": {
+              "player": { "$ref": "#/$defs/player" }, "side": { "$ref": "#/$defs/side" },
+              "money_before": { "type": "integer", "description": "Dinheiro no início da fase de compra." },
+              "equip_before": { "type": "integer", "minimum": 0, "description": "Valor do equipamento que o jogador já carrega ao início da fase de compra (armas mantidas do round anterior)." },
+              "money": { "type": "integer", "description": "Dinheiro no fim do freeze time (depois de comprar)." },
+              "equip_value": { "type": "integer", "minimum": 0, "description": "Valor total do equipamento (preço de tudo que o jogador carrega)." },
+              "armor": { "type": "integer", "minimum": 0, "maximum": 100 },
+              "helmet": { "type": "boolean" }, "defuser": { "type": "boolean" },
+              "primary": { "type": ["string", "null"], "description": "Arma principal, ou null." },
+              "secondary": { "type": ["string", "null"] },
+              "grenades": { "$ref": "#/$defs/grenades" }
+            }
+          }
+        }
+      }
+    },
+
+    "shot": {
+      "type": "object",
+      "required": ["type", "round", "tick", "shooter", "weapon", "hit"],
+      "description": "Um evento por tiro de arma de fogo (uma bala; escopeta = um evento por disparo).",
+      "properties": {
+        "type": { "const": "shot" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "shooter": { "$ref": "#/$defs/player" }, "weapon": { "$ref": "#/$defs/weapon" },
+        "hit": { "type": "boolean", "description": "O tiro acertou algum inimigo." },
+        "target": { "type": ["string", "null"], "description": "Inimigo acertado; se errou, o inimigo vivo mais próximo da mira (aim_error_deg). null se não há inimigo vivo." },
+        "distance_m": { "type": ["number", "null"], "minimum": 0, "description": "Distância em metros até 'target'." },
+        "aim_error_deg": { "type": ["number", "null"], "minimum": 0, "maximum": 180, "description": "Ângulo entre a mira e a cabeça de 'target'." },
+        "speed": { "type": "number", "minimum": 0, "description": "Velocidade horizontal do atirador (unidades Source/s)." },
+        "ducking": { "type": "boolean" }, "airborne": { "type": "boolean" },
+        "spray_index": { "type": "integer", "minimum": 1, "description": "Posição da bala na sequência (1 = primeira bala depois de soltar o gatilho)." }
+      }
+    },
+
+    "damage": {
+      "type": "object",
+      "required": ["type", "round", "tick", "victim", "weapon", "hitgroup", "dmg_health", "dmg_armor"],
+      "properties": {
+        "type": { "const": "damage" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "attacker": { "type": ["string", "null"], "description": "null para dano do mundo." },
+        "victim": { "$ref": "#/$defs/player" }, "weapon": { "$ref": "#/$defs/weapon" },
+        "hitgroup": { "$ref": "#/$defs/hitgroup" },
+        "dmg_health": { "type": "integer", "minimum": 0, "description": "Dano aplicado na vida (já limitado à vida restante)." },
+        "dmg_armor": { "type": "integer", "minimum": 0 },
+        "health_after": { "type": "integer", "minimum": 0 }, "armor_after": { "type": "integer", "minimum": 0 },
+        "distance_m": { "type": ["number", "null"] }
+      }
+    },
+
+    "kill": {
+      "type": "object",
+      "required": ["type", "round", "tick", "victim", "weapon"],
+      "properties": {
+        "type": { "const": "kill" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "attacker": { "type": ["string", "null"], "description": "null para morte pelo mundo ou pela C4." },
+        "victim": { "$ref": "#/$defs/player" },
+        "assister": { "type": ["string", "null"] },
+        "weapon": { "$ref": "#/$defs/weapon" },
+        "headshot": { "type": "boolean" },
+        "penetrated": { "type": "integer", "minimum": 0, "description": "Quantas superfícies o tiro atravessou." },
+        "thrusmoke": { "type": "boolean" }, "noscope": { "type": "boolean" }, "attackerblind": { "type": "boolean" },
+        "assistedflash": { "type": "boolean" },
+        "distance_m": { "type": ["number", "null"] }
+      }
+    },
+
+    "bomb": {
+      "type": "object",
+      "required": ["type", "round", "tick", "event"],
+      "properties": {
+        "type": { "const": "bomb" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "event": { "enum": ["pickup", "dropped", "planted", "defused", "exploded"] },
+        "player": { "type": ["string", "null"] },
+        "site": { "enum": ["A", "B", null] }
+      }
+    },
+
+    "grenade": {
+      "type": "object",
+      "required": ["type", "round", "tick", "kind", "thrower"],
+      "description": "Detonação de uma granada.",
+      "properties": {
+        "type": { "const": "grenade" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "kind": { "enum": ["smoke", "flash", "he", "molotov"] },
+        "thrower": { "$ref": "#/$defs/player" }
+      }
+    },
+
+    "sighting": {
+      "type": "object",
+      "required": ["type", "round", "tick", "observer", "target"],
+      "description": "Opcional, habilita as métricas de reação e duelo. Registre quando 'observer' passa a ver 'target' (inimigo vivo) depois de pelo menos 0,5 s sem vê-lo.",
+      "properties": {
+        "type": { "const": "sighting" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "observer": { "$ref": "#/$defs/player" }, "target": { "$ref": "#/$defs/player" },
+        "distance_m": { "type": "number", "minimum": 0 },
+        "aim_error_deg": { "type": "number", "minimum": 0, "maximum": 180, "description": "Ângulo entre a mira do observador e a cabeça do alvo nesse instante." }
+      }
+    },
+
+    "round_end": {
+      "type": "object",
+      "required": ["type", "round", "tick", "winner_side", "reason", "score", "alive"],
+      "properties": {
+        "type": { "const": "round_end" },
+        "round": { "$ref": "#/$defs/round" }, "tick": { "$ref": "#/$defs/tick" },
+        "winner_side": { "$ref": "#/$defs/side" },
+        "reason": { "enum": ["t_killed", "ct_killed", "bomb_exploded", "bomb_defused", "time_ran_out"] },
+        "score": { "$ref": "#/$defs/score", "description": "Placar depois do round." },
+        "alive": {
+          "type": "object", "required": ["CT", "T"],
+          "properties": { "CT": { "type": "integer", "minimum": 0, "maximum": 5 }, "T": { "type": "integer", "minimum": 0, "maximum": 5 } },
+          "description": "Jogadores vivos de cada lado no instante do fim do round."
+        }
+      }
+    },
+
+    "match_end": {
+      "type": "object",
+      "required": ["type", "winner", "score"],
+      "properties": {
+        "type": { "const": "match_end" },
+        "winner": { "type": "string" }, "score": { "$ref": "#/$defs/score" }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Só o necessário para validar logs e comparar com o jogo real (sem o demoparser2)
+pandas>=2.0
+numpy>=1.24
+pyarrow>=14
+jsonschema>=4.18

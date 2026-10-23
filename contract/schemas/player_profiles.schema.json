@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/player_profiles.schema.json",
+  "title": "player_profiles.json",
+  "description": "Perfil mecânico, de desempenho e de estilo de cada jogador (ver contract/docs/player_profiles.md).",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "source", "units", "method", "baseline", "players"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "source": {
+      "type": "object", "required": ["matches", "total_rounds", "tickrate"],
+      "properties": { "matches": { "type": "array", "minItems": 1 }, "total_rounds": { "type": "integer", "minimum": 1 }, "tickrate": { "type": "integer" } }
+    },
+    "units": { "type": "object" },
+    "method": { "type": "object" },
+    "baseline": {
+      "type": "object", "required": ["mechanics", "performance"],
+      "properties": { "mechanics": { "$ref": "#/$defs/mechanics" }, "performance": { "$ref": "#/$defs/performance" } }
+    },
+    "players": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["steamid", "name", "team", "role_tags", "mechanics", "performance", "weapons", "positions"],
+        "properties": {
+          "steamid": { "type": "string", "pattern": "^\\d{17}$" },
+          "name": { "type": "string" }, "team": { "type": "string" },
+          "role_tags": { "type": "array", "items": { "enum": ["awper", "entry", "support", "lurker", "rifler"] }, "minItems": 1 },
+          "mechanics": { "$ref": "#/$defs/mechanics" },
+          "performance": { "$ref": "#/$defs/performance" },
+          "weapons": {
+            "type": "object", "required": ["shot_share_by_class", "kill_share_by_class", "top_weapons_by_shots"],
+            "additionalProperties": { "type": "object", "additionalProperties": { "type": "number" } }
+          },
+          "positions": {
+            "type": "object", "description": "mapa -> lado -> {time_share, position_at_20s} (callouts do CS2).",
+            "additionalProperties": { "type": "object", "propertyNames": { "enum": ["CT", "T"] },
+              "additionalProperties": { "type": "object", "required": ["time_share", "position_at_20s"] } }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rate": { "$ref": "common.schema.json#/$defs/rate" },
+    "dist": { "$ref": "common.schema.json#/$defs/distribution" },
+    "mechanics": {
+      "type": "object",
+      "required": ["accuracy", "hitgroups", "aim_error_first_bullet_deg", "movement", "burst_length", "reaction_time_s",
+                   "crosshair_placement", "shoots_after_sighting_rate", "duels"],
+      "properties": {
+        "accuracy": {
+          "type": "object", "description": "classe de arma -> acerto geral, por distância e por posição no spray.",
+          "additionalProperties": {
+            "type": "object", "required": ["overall"],
+            "properties": {
+              "overall": { "$ref": "#/$defs/rate" },
+              "by_distance": { "type": "object", "additionalProperties": { "$ref": "#/$defs/rate" } },
+              "by_spray_bullet": { "type": "object", "additionalProperties": { "$ref": "#/$defs/rate" } }
+            }
+          }
+        },
+        "hitgroups": { "type": "object", "additionalProperties": { "type": "object", "required": ["n"] } },
+        "aim_error_first_bullet_deg": { "$ref": "#/$defs/dist" },
+        "movement": {
+          "type": "object", "required": ["still_shot_rate", "speed_at_shot", "crouch_shot_rate", "airborne_shot_rate"],
+          "properties": { "still_shot_rate": { "$ref": "#/$defs/rate" }, "speed_at_shot": { "$ref": "#/$defs/dist" },
+                          "crouch_shot_rate": { "$ref": "#/$defs/rate" }, "airborne_shot_rate": { "$ref": "#/$defs/rate" } }
+        },
+        "burst_length": { "$ref": "#/$defs/dist" },
+        "reaction_time_s": { "$ref": "#/$defs/dist" },
+        "crosshair_placement": {
+          "type": "object", "required": ["total_deg", "horizontal_deg", "vertical_deg"],
+          "properties": { "total_deg": { "$ref": "#/$defs/dist" }, "horizontal_deg": { "$ref": "#/$defs/dist" }, "vertical_deg": { "$ref": "#/$defs/dist" } }
+        },
+        "shoots_after_sighting_rate": { "$ref": "#/$defs/rate" },
+        "duels": {
+          "type": "object", "required": ["win_rate"],
+          "properties": { "win_rate": { "$ref": "#/$defs/rate" }, "by_distance": { "type": "object", "additionalProperties": { "$ref": "#/$defs/rate" } } }
+        }
+      }
+    },
+    "performance": {
+      "type": "object",
+      "required": ["rounds", "kpr", "dpr", "apr", "adr", "kd", "kast", "headshot_kill_rate", "survival_rate", "opening", "utility", "by_side"],
+      "properties": {
+        "rounds": { "type": "integer", "minimum": 1 },
+        "kpr": { "type": "number" }, "dpr": { "type": "number" }, "apr": { "type": "number" }, "adr": { "type": "number" },
+        "kd": { "type": "number" }, "kast": { "type": "number", "minimum": 0, "maximum": 1 },
+        "headshot_kill_rate": { "$ref": "#/$defs/rate" }, "survival_rate": { "type": "number" },
+        "opening": { "type": "object", "required": ["attempt_rate", "win_rate"] },
+        "utility": { "type": "object" },
+        "by_side": { "type": "object", "propertyNames": { "enum": ["CT", "T"] } }
+      }
+    }
+  }
+}

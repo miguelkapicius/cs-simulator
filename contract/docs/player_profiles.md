@@ -11,8 +11,9 @@ Os resultados (quem vence o duelo, o round) devem surgir da simulação, e não 
   - FURIA: 599 rounds, com cerca de 220 duelos e 270 reações por jogador.
   - BetBoom: 212 rounds. Aurora: 109. MOUZ: 80. Legacy: 62. PARIVISION: 61. Vitality: 39. 9z: 36.
   - Times com poucos mapas ficam com várias distribuições em `source: "baseline"`.
-- **Gerado por:** `build_player_profiles.py` (Python, demoparser2). Basta rodar de novo quando houver mais demos.
-- **Versão do formato:** `schema_version` = `"1.0"`. Confira esse campo ao carregar o arquivo.
+- **Gerado por:** `pipeline/build_player_profiles.py` (Python, demoparser2). Basta rodar de novo quando houver mais demos (`make profiles`).
+- **Versão:** `contract_version` (ver [`conventions.md`](conventions.md)) e `schema_version` = `"1.0"`. Confira os dois ao carregar o arquivo.
+- **Schema:** [`schemas/player_profiles.schema.json`](../schemas/player_profiles.schema.json)
 
 ## Como carregar na Unity
 
@@ -28,7 +29,7 @@ var profiles = JsonConvert.DeserializeObject<PlayerProfilesFile>(File.ReadAllTex
 
 ```
 {
-  schema_version, generated_at,
+  schema_version, contract_version, generated_at,
   source:   { matches[], total_rounds, parser, tickrate },
   units:    { distance: metros, angles: graus, time: segundos, speed: unidades Source/s },
   method:   { parâmetros usados nas medições },
@@ -130,7 +131,7 @@ indica quais parâmetros ajustar.
 
 - As demos usam unidades Source (1 unidade = 0,0254 m), com o eixo Z para cima. A Unity usa metros e o eixo Y para cima.
 - Altura dos olhos usada nas medições: 64 unidades em pé (1,63 m) e 46 agachado (1,17 m).
-- Os dados de posição completos estão em `data/<demo>/ticks.parquet` (8 amostras/s) e podem ser convertidos depois.
+- Os dados de posição completos estão em `data/<demo>/ticks.parquet` (8 amostras/s, só no computador de quem gera os dados) e podem ser convertidos depois.
 
 ## Limitações e como os números foram medidos
 
