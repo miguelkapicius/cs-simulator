@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.3.0",
+ "contract_version": "1.4.0",
  "generated_at": "2026-10-23",
  "source": {
   "matches": 28,
@@ -753,6 +753,277 @@
     "p90": 0.89988
    },
    "desc": "Erro de mira (graus) no instante em que o inimigo aparece."
+  },
+  "duel.delayed_reaction_s.all": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 0.10938,
+    "p10": 0.125,
+    "p25": 0.15625,
+    "p50": 0.21875,
+    "p75": 0.34375,
+    "p90": 0.61875,
+    "p95": 0.89531
+   },
+   "mean": 0.31647,
+   "n": 2015,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.0361,
+     "p25": 0.0574,
+     "p50": 0.06291,
+     "p75": 0.05693,
+     "p90": 0.03463
+    }
+   },
+   "coverage": {
+    "p10": 0.11687,
+    "p25": 0.26129,
+    "p50": 0.5072,
+    "p75": 0.75509,
+    "p90": 0.89975
+   },
+   "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
+  },
+  "duel.delayed_reaction_s.mid_2_8": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 0.10938,
+    "p10": 0.125,
+    "p25": 0.15625,
+    "p50": 0.20312,
+    "p75": 0.31641,
+    "p90": 0.625,
+    "p95": 1.0
+   },
+   "mean": 0.31874,
+   "n": 796,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.05594,
+     "p25": 0.07061,
+     "p50": 0.09783,
+     "p75": 0.11457,
+     "p90": 0.05672
+    }
+   },
+   "coverage": {
+    "p10": 0.13128,
+    "p25": 0.27827,
+    "p50": 0.47613,
+    "p75": 0.75,
+    "p90": 0.89824
+   },
+   "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
+  },
+  "duel.delayed_reaction_s.tight_lt2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 0.10938,
+    "p10": 0.125,
+    "p25": 0.14062,
+    "p50": 0.1875,
+    "p75": 0.28125,
+    "p90": 0.46875,
+    "p95": 0.65625
+   },
+   "mean": 0.26673,
+   "n": 721,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.06133,
+     "p25": 0.08647,
+     "p50": 0.11542,
+     "p75": 0.08746,
+     "p90": 0.06676
+    }
+   },
+   "coverage": {
+    "p10": 0.14147,
+    "p25": 0.23024,
+    "p50": 0.48405,
+    "p75": 0.75798,
+    "p90": 0.90291
+   },
+   "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
+  },
+  "duel.delayed_reaction_s.wide_gt8": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 0.125,
+    "p10": 0.14062,
+    "p25": 0.1875,
+    "p50": 0.28125,
+    "p75": 0.46484,
+    "p90": 0.73906,
+    "p95": 1.02031
+   },
+   "mean": 0.38485,
+   "n": 498,
+   "between": {
+    "matches": 28,
+    "sd_cov": {
+     "p10": 0.06302,
+     "p25": 0.08202,
+     "p50": 0.10129,
+     "p75": 0.08727,
+     "p90": 0.06889
+    }
+   },
+   "coverage": {
+    "p10": 0.10141,
+    "p25": 0.24297,
+    "p50": 0.48594,
+    "p75": 0.749,
+    "p90": 0.8996
+   },
+   "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
+  },
+  "duel.engage.all.delayed": {
+   "kind": "prop",
+   "k": 2015,
+   "n": 5762,
+   "value": 0.3497,
+   "between": {
+    "matches": 28,
+    "sd": 0.02839
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.all.instant": {
+   "kind": "prop",
+   "k": 2886,
+   "n": 5762,
+   "value": 0.50087,
+   "between": {
+    "matches": 28,
+    "sd": 0.04015
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.all.none": {
+   "kind": "prop",
+   "k": 861,
+   "n": 5762,
+   "value": 0.14943,
+   "between": {
+    "matches": 28,
+    "sd": 0.03215
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.mid_2_8.delayed": {
+   "kind": "prop",
+   "k": 796,
+   "n": 2165,
+   "value": 0.36767,
+   "between": {
+    "matches": 28,
+    "sd": 0.04756
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.mid_2_8.instant": {
+   "kind": "prop",
+   "k": 1033,
+   "n": 2165,
+   "value": 0.47714,
+   "between": {
+    "matches": 28,
+    "sd": 0.07838
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.mid_2_8.none": {
+   "kind": "prop",
+   "k": 336,
+   "n": 2165,
+   "value": 0.1552,
+   "between": {
+    "matches": 28,
+    "sd": 0.05224
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.tight_lt2.delayed": {
+   "kind": "prop",
+   "k": 721,
+   "n": 2630,
+   "value": 0.27414,
+   "between": {
+    "matches": 28,
+    "sd": 0.04001
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.tight_lt2.instant": {
+   "kind": "prop",
+   "k": 1708,
+   "n": 2630,
+   "value": 0.64943,
+   "between": {
+    "matches": 28,
+    "sd": 0.05293
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.tight_lt2.none": {
+   "kind": "prop",
+   "k": 201,
+   "n": 2630,
+   "value": 0.07643,
+   "between": {
+    "matches": 28,
+    "sd": 0.02813
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.wide_gt8.delayed": {
+   "kind": "prop",
+   "k": 498,
+   "n": 967,
+   "value": 0.51499,
+   "between": {
+    "matches": 28,
+    "sd": 0.09359
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.wide_gt8.instant": {
+   "kind": "prop",
+   "k": 145,
+   "n": 967,
+   "value": 0.14995,
+   "between": {
+    "matches": 28,
+    "sd": 0.08269
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.engage.wide_gt8.none": {
+   "kind": "prop",
+   "k": 324,
+   "n": 967,
+   "value": 0.33506,
+   "between": {
+    "matches": 28,
+    "sd": 0.09164
+   },
+   "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
+  },
+  "duel.fired_before_visible": {
+   "kind": "prop",
+   "k": 1777,
+   "n": 5762,
+   "value": 0.3084,
+   "between": {
+    "matches": 28,
+    "sd": 0.04835
+   },
+   "desc": "Fração dos avistamentos em que o jogador já tinha atirado no alvo antes de ele ficar visível."
   },
   "duel.reaction_time_s": {
    "kind": "quantiles",

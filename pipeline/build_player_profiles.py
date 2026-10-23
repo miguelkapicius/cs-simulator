@@ -11,10 +11,12 @@ from datetime import date
 import numpy as np
 import pandas as pd
 from demoparser2 import DemoParser
+from scipy.stats import theilslopes
 
 from pipeline.common import (ARTIFACTS_DIR, CONTRACT_VERSION, DATA_DIR, DEMOS_DIR, SIDE, TICKRATE,
                              UNIT_TO_M, weapon_class)
-from pipeline.combat import AIMED_SHOT_DEG, DUEL_WINDOW_S, REACTION_WINDOW_S, SPOT_MIN_GAP_S, resolve_sightings
+from pipeline.combat import (AIMED_SHOT_DEG, DUEL_WINDOW_S, ENGAGE_WINDOW_S, ERROR_BINS, INSTANT_LEAD_S, INSTANT_MAX_S, REACTION_WINDOW_S,
+                             SPOT_MIN_GAP_S, engagement_timing, error_bin, resolve_sightings)
 from pipeline.extract_demos import assign_round, parse_event
 
 SCHEMA_VERSION = "1.0"
@@ -182,8 +184,8 @@ def find_sighting_onsets(parser, rounds):
     return pair_geometry(sp)
 
 
-def extract_sightings(parser, rounds, shots, kills):
-    sp = resolve_sightings(find_sighting_onsets(parser, rounds), shots, kills)
+def extract_sightings(onsets, shots, kills):
+    sp = resolve_sightings(onsets, shots, kills)
     return sp[["tick", "observer", "target", "s_side", "distance_m", "aim_err_deg", "aim_err_h_deg",
                "aim_err_v_deg", "reaction_s", "outcome", "s_active_weapon_name", "t_active_weapon_name"]].rename(
         columns={"s_side": "side", "s_active_weapon_name": "obs_weapon", "t_active_weapon_name": "target_weapon"})
@@ -300,7 +302,32 @@ def spray_bucket(i):
     return None
 
 
-def mechanics(shots, sightings, hitgroups, base=None):
+def engagement_block(eng, base):
+    """Como o jogador responde quando um inimigo passa a ser visível (instantâneo, atrasado, sem tiro), conforme o erro da mira."""
+    b = (base or {}).get("engagement", {})
+    tmp = eng.assign(bin=error_bin(eng["aim_err_deg"]))
+    by = {}
+    for name, _, _ in ERROR_BINS:
+        g = tmp[tmp["bin"] == name]
+        bb = b.get("by_aim_error", {}).get(name, {})
+        by[name] = {"n": int(len(g)), **{k: rate((g["outcome"] == k).sum(), len(g), bb.get(k, {}).get("value")) for k in ("instant", "delayed", "none")}}
+    out = {
+        "instant_window_s": [-INSTANT_LEAD_S, INSTANT_MAX_S], "max_wait_s": ENGAGE_WINDOW_S,
+        "by_aim_error": by,
+        "fired_before_visible": rate((eng["dt"] < 0).sum(), len(eng), b.get("fired_before_visible", {}).get("value")),
+        "delayed_reaction_s": dist_with_fallback(eng.loc[eng["outcome"] == "delayed", "dt"], b.get("delayed_reaction_s")),
+    }
+    if base is None:                                           # só na média geral: quanto o ângulo a percorrer atrasa o tiro
+        d = tmp[tmp["outcome"] == "delayed"]
+        out["delayed_reaction_by_aim_error_s"] = {name: pct(d.loc[d["bin"] == name, "dt"]) for name, _, _ in ERROR_BINS}
+        x, y = d["aim_err_deg"].clip(upper=30).to_numpy(), d["dt"].to_numpy()
+        slope, icpt = theilslopes(y, x)[:2]
+        out["flick_model"] = {"formula": "delayed_reaction_s = base_s + per_deg_s * min(aim_error_deg, 30)", "base_s": round(float(icpt), 4),
+                              "per_deg_s": round(float(slope), 5), "n": int(len(d))}
+    return out
+
+
+def mechanics(shots, sightings, hitgroups, base=None, engagements=None):
     """Parâmetros mecânicos de um conjunto de tiros/avistamentos (um jogador ou todos)."""
     b = base or {}
     # Tiros em combate: mira a menos de 10° de um inimigo, ou que acertaram alguém
@@ -360,6 +387,8 @@ def mechanics(shots, sightings, hitgroups, base=None):
         bv = b.get("duels", {}).get("by_distance", {}).get(bd, {}).get("value")
         duels.setdefault("by_distance", {})[bd] = rate((g["outcome"] == "win").sum(), len(g), bv)
     out["duels"] = duels
+    if engagements is not None and len(engagements):
+        out["engagement"] = engagement_block(engagements, base)
     return out
 
 
@@ -422,7 +451,7 @@ def infer_role(perf, usage, base_perf):
 
 def main():
     ARTIFACTS_DIR.mkdir(parents=True, exist_ok=True)
-    all_shots, all_sight, all_rounds, all_hg, all_kills = [], [], [], [], []
+    all_shots, all_sight, all_rounds, all_hg, all_kills, all_eng = [], [], [], [], [], []
     pos, players, maps = {}, {}, []
 
     for demo in sorted(DEMOS_DIR.glob("*.dem")):
@@ -430,14 +459,16 @@ def main():
         match, rounds, kills, damages, grenades, ticks = load_demo_data(stem)
         parser = DemoParser(str(demo))
         shots = extract_shots(parser, rounds, damages)
-        sight = extract_sightings(parser, rounds, shots, kills)
+        onsets = find_sighting_onsets(parser, rounds)
+        sight = extract_sightings(onsets, shots, kills)
+        eng = engagement_timing(onsets, shots)
         rs = round_stats(match, rounds, kills, damages, grenades, ticks)
         hg = damages[~damages["after_round_end"] & (damages["user_side"] != damages["attacker_side"])].copy()
         hg["wclass"] = hg["weapon"].map(weapon_class)
         hg = hg[hg["wclass"].notna()][["attacker_steamid", "wclass", "hitgroup"]]
         for df in (shots, sight, rs, hg):
             df["map"] = match["map"]
-        all_shots.append(shots); all_sight.append(sight); all_rounds.append(rs); all_hg.append(hg)
+        all_shots.append(shots); all_sight.append(sight); all_eng.append(eng); all_rounds.append(rs); all_hg.append(hg)
         all_kills.append(kills[~kills["after_round_end"] & (kills["attacker_side"] != kills["user_side"])])
         for sid, sides in positions(ticks, match)[match["map"]].items():
             pos.setdefault(sid, {})[match["map"]] = sides
@@ -452,7 +483,8 @@ def main():
     hg = pd.concat(all_hg, ignore_index=True)
     kills = pd.concat(all_kills, ignore_index=True)
 
-    base_mech = mechanics(shots, sight, hg)
+    eng = pd.concat(all_eng, ignore_index=True)
+    base_mech = mechanics(shots, sight, hg, engagements=eng)
     base_perf = performance(rs)
 
     profiles = []
@@ -464,7 +496,7 @@ def main():
         profiles.append({
             "steamid": sid, "name": p["name"], "team": p["team"],
             "role_tags": infer_role(perf, usage, base_perf),
-            "mechanics": mechanics(ps, pp, ph, base_mech),
+            "mechanics": mechanics(ps, pp, ph, base_mech, engagements=eng[eng["observer"] == sid]),
             "performance": perf,
             "weapons": usage,
             "positions": pos.get(sid, {}),

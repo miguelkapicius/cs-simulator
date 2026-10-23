@@ -18,7 +18,7 @@ from contract.reference import tactics as tac
 from contract.reference import team_model as ref
 from contract.reference import weapon_dynamics as wd
 from pipeline import validate_contract
-from pipeline.combat import resolve_sightings
+from pipeline.combat import engagement_timing, resolve_sightings
 from pipeline.common import ARTIFACTS_DIR, BUY_ECO_MAX, BUY_FORCE_MAX, DATA_DIR, EXAMPLES_DIR, buy_type
 
 EXAMPLE = EXAMPLES_DIR / "sim_log_example.jsonl"
@@ -359,3 +359,31 @@ def test_site_decision_models_are_validated(tactics):
 def test_site_metrics_exist_in_targets():
     targets = json.loads((ARTIFACTS_DIR / "calibration_targets.json").read_text())["metrics"]
     assert "tactic.site_switch_rate" in targets and "tactic.commit_A_share" in targets
+
+
+# ---------- engajamento: instantâneo x atrasado ----------
+
+def test_engagement_timing_separates_instant_delayed_and_none():
+    sp = pd.DataFrame({"tick": [100, 1000, 2000], "observer": ["A", "A", "A"], "target": ["B", "C", "D"], "aim_err_deg": [0.5, 12.0, 3.0]})
+    shots = pd.DataFrame({"tick": [96, 1019, 2400], "shooter": ["A", "A", "A"], "target": ["B", "C", "D"],
+                          "aim_err_deg": [1.0, 2.0, 1.0], "hit": [False, True, False]})
+    out = engagement_timing(sp, shots).set_index("target")
+    assert out.loc["B", "outcome"] == "instant" and out.loc["B", "dt"] == pytest.approx(-4 / 64)     # já atirava antes de aparecer
+    assert out.loc["C", "outcome"] == "delayed" and out.loc["C", "dt"] == pytest.approx(19 / 64)     # reação de verdade
+    assert out.loc["D", "outcome"] == "none"                                                          # tiro só 6 s depois: fora da janela
+
+
+def test_profiles_have_engagement_blocks():
+    prof = json.loads((ARTIFACTS_DIR / "player_profiles.json").read_text())
+    base = prof["baseline"]["mechanics"]["engagement"]
+    inst = [base["by_aim_error"][k]["instant"]["value"] for k in ("tight_lt2", "mid_2_8", "wide_gt8")]
+    assert inst[0] > inst[1] > inst[2]                      # quanto mais perto a mira, mais atiram instantaneamente
+    assert base["flick_model"]["per_deg_s"] > 0
+    assert all("engagement" in p["mechanics"] for p in prof["players"])
+
+
+def test_engagement_metrics_on_example():
+    m = compute_metrics(load_tables([EXAMPLE]))
+    assert "duel.engage.all.instant" in m and "duel.fired_before_visible" in m
+    total = sum(m[f"duel.engage.all.{k}"]["k"] for k in ("instant", "delayed", "none"))
+    assert total == m["duel.engage.all.instant"]["n"]

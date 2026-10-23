@@ -2,6 +2,17 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.4.0: reação x prefire nos perfis (2026-10-23)
+
+Só acrescenta; `reaction_time_s` e todo o resto continuam como estavam.
+
+- `player_profiles.json`: novo bloco `mechanics.engagement` (opcional no schema, presente em todos os jogadores e na média geral). Separa, quando um inimigo
+  passa a ser visível, os desfechos **instantâneo** (tiro de 0,5 s antes a 0,1 s depois: o jogador já estava no ângulo), **atrasado** (reação de verdade) e
+  **sem tiro**, por faixa do erro da mira nesse instante, mais `fired_before_visible`, `delayed_reaction_s` (mediana 0,22 s) e, na média geral, `flick_model`.
+- **Aviso sobre o campo antigo:** `reaction_time_s` mistura tiros instantâneos com reações; seu p10 (~0,03 s) é impossível como reação. Use `engagement`.
+- Métricas de calibração `duel.engage.*`, `duel.delayed_reaction_s.*` e `duel.fired_before_visible` (de 308 para 325 métricas).
+- `pipeline/combat.py`: `engagement_timing`; `docs/player_profiles.md` ganhou a seção "engagement" com um trecho em C#.
+
 ## 1.3.0: decisão de bombsite (2026-10-23)
 
 Só acrescenta; nada que as versões anteriores entregaram mudou de formato.

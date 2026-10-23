@@ -59,7 +59,8 @@ var profiles = JsonConvert.DeserializeObject<PlayerProfilesFile>(File.ReadAllTex
 
 | Campo | O que mede | Uso sugerido no bot |
 |---|---|---|
-| `reaction_time_s` | Tempo entre o inimigo aparecer (entrar na visão do bot) e o primeiro tiro na direção dele | Atraso antes de começar a atirar quando um inimigo fica visível. Sorteie um valor a cada avistamento. |
+| `reaction_time_s` | **Legado.** Tempo entre o inimigo aparecer e o primeiro tiro na direção dele, **misturando** tiros instantâneos (o jogador já estava no ângulo) com reações de verdade. Por isso o p10 é de ~0,03 s, fisicamente impossível como reação | Use `engagement` abaixo. Este campo foi mantido por compatibilidade. |
+| **`engagement`** | O que o jogador faz quando um inimigo passa a ser visível, em três desfechos (**instantâneo**, **atrasado**, **sem tiro**), conforme o erro da mira nesse instante | Veja a seção **engagement** abaixo |
 | `crosshair_placement.total_deg` / `horizontal_deg` / `vertical_deg` | Distância angular entre a mira e a cabeça do inimigo **no instante em que ele aparece**. Vertical positivo = mira abaixo da cabeça | Onde a mira do bot está "pré-posicionada" ao segurar um ângulo. Antes de reagir, aplique esse desvio em relação à cabeça do alvo. |
 | `aim_error_first_bullet_deg` | Erro angular entre a mira e a cabeça do alvo no primeiro tiro de cada sequência | Dispersão humana da mira no primeiro tiro, somada ao spread da própria arma. |
 | `accuracy.<classe>.overall` / `by_distance` / `by_spray_bullet` | Fração de tiros em combate que causaram dano, por classe de arma, por faixa de distância e pela posição da bala no spray | **Use para validar e calibrar.** Ajuste `aim_error` e recuo até a simulação reproduzir essas taxas. |
@@ -73,6 +74,38 @@ var profiles = JsonConvert.DeserializeObject<PlayerProfilesFile>(File.ReadAllTex
 
 Classes de arma: `rifle` (AK, M4, Galil, FAMAS, AUG, SG), `awp`, `sniper_other` (Scout, autos), `pistol`, `smg`, `heavy` (escopetas, metralhadoras).
 Faixas de distância: `0-10m`, `10-20m`, `20-30m`, `30m+`. Posição da bala no spray: `1`, `2-3`, `4-6`, `7+`.
+
+## engagement: instantâneo x reação
+
+Quando um inimigo passa a ser visível, o que o jogador faz depende de **quão perto a mira já estava dele**:
+
+| Erro da mira ao aparecer | Atira instantaneamente | Atira depois (reação) | Não atira em 2 s |
+|---|---|---|---|
+| menos de 2° (`tight_lt2`) | **65%** | 27% | 8% |
+| de 2° a 8° (`mid_2_8`) | 48% | 37% | 16% |
+| mais de 8° (`wide_gt8`) | **15%** | 52% | 34% |
+
+(média geral; cada jogador tem a sua, suavizada em direção à média quando tem poucas amostras)
+
+- **Instantâneo** = o primeiro tiro mirado no alvo sai entre **0,5 s antes e 0,1 s depois** de ele ficar visível. É rápido demais para ser reação: o jogador já
+  estava segurando o ângulo ou atirando nele (pré-fire). Em 31% dos avistamentos o tiro sai **antes** de o inimigo ficar visível (`fired_before_visible`).
+- **Atrasado** = reação de verdade, com o tempo de girar a mira. `delayed_reaction_s` tem a distribuição (mediana de 0,22 s; p10 de 0,125 s e p90 de 0,62 s).
+  `baseline.engagement.flick_model` dá o atraso médio em função do ângulo: `0,20 s + 0,0046 s por grau` (até 30°).
+- **Sem tiro** = o jogador não atirou naquele inimigo em 2 s.
+
+```csharp
+// quando um inimigo passa a ser visível para o bot (depois de >= 0,5 s sem vê-lo):
+var bin = errorDeg < 2 ? e.ByAimError["tight_lt2"] : errorDeg < 8 ? e.ByAimError["mid_2_8"] : e.ByAimError["wide_gt8"];
+double u = rng.NextDouble();
+if (u < bin.Instant.Shrunk)                    FireNow();                                                   // já estava no ângulo
+else if (u < bin.Instant.Shrunk + bin.Delayed.Shrunk)
+                                               FireAfter(SampleFromPercentiles(e.DelayedReactionS, rng));  // reação + girar a mira
+else                                           HoldFire();                                                  // deixa passar
+```
+
+Duas observações: (1) o erro da mira ao aparecer vem de `crosshair_placement` e da posição real da mira do bot na simulação, não é sorteado aqui;
+(2) a decomposição só se aplica a um inimigo que acabou de ficar visível. Um bot que já está em luta segue a mecânica normal de tiro.
+Os tiros "instantâneos" contam como acertos e erros normais: a precisão depende do erro de mira, não do desfecho.
 
 ## performance: o que a simulação deve reproduzir
 

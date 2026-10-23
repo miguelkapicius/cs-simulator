@@ -76,10 +76,27 @@
           "properties": { "total_deg": { "$ref": "#/$defs/dist" }, "horizontal_deg": { "$ref": "#/$defs/dist" }, "vertical_deg": { "$ref": "#/$defs/dist" } }
         },
         "shoots_after_sighting_rate": { "$ref": "#/$defs/rate" },
+        "engagement": { "$ref": "#/$defs/engagement" },
         "duels": {
           "type": "object", "required": ["win_rate"],
           "properties": { "win_rate": { "$ref": "#/$defs/rate" }, "by_distance": { "type": "object", "additionalProperties": { "$ref": "#/$defs/rate" } } }
         }
+      }
+    },
+    "engagement": {
+      "type": "object",
+      "description": "Quando um inimigo passa a ser visível: instantâneo, atrasado ou sem tiro, conforme o erro da mira nesse instante (ver contract/docs/player_profiles.md).",
+      "required": ["instant_window_s", "max_wait_s", "by_aim_error", "fired_before_visible", "delayed_reaction_s"],
+      "properties": {
+        "instant_window_s": { "type": "array", "items": { "type": "number" }, "minItems": 2, "maxItems": 2 },
+        "max_wait_s": { "type": "number" },
+        "by_aim_error": {
+          "type": "object", "required": ["tight_lt2", "mid_2_8", "wide_gt8"],
+          "additionalProperties": { "type": "object", "required": ["n", "instant", "delayed", "none"],
+                                     "properties": { "instant": { "$ref": "#/$defs/rate" }, "delayed": { "$ref": "#/$defs/rate" }, "none": { "$ref": "#/$defs/rate" } } }
+        },
+        "fired_before_visible": { "$ref": "#/$defs/rate" },
+        "delayed_reaction_s": { "$ref": "#/$defs/dist" }
       }
     },
     "performance": {

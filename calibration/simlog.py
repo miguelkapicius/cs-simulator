@@ -9,10 +9,10 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-from pipeline.combat import resolve_sightings
+from pipeline.combat import engagement_timing, resolve_sightings
 from pipeline.common import weapon_class
 
-TABLES = ["rounds", "players", "shots", "damages", "kills", "bombs", "grenades", "sightings", "positions"]
+TABLES = ["rounds", "players", "shots", "damages", "kills", "bombs", "grenades", "sightings", "positions", "engagements"]
 POSITION_HZ = 2   # o comparador reamostra as posições para esta taxa
 
 
@@ -110,10 +110,12 @@ def load_match(path):
 
     # Avistamentos: resolve reação e resultado do duelo (mesma regra dos perfis)
     sight = stamp(_frame(by_type.get("sighting", []), ["round", "tick", "observer", "target", "distance_m", "aim_error_deg"]))
+    engagements = pd.DataFrame(columns=["tick", "observer", "target", "aim_err_deg", "dt", "outcome"])
     if len(sight):
         sight = sight[~sight["after_round_end"]].copy()
         sight["aim_err_deg"] = sight["aim_error_deg"]
         sight["side"] = side_of(sight, "observer")
+        engagements = engagement_timing(sight, shots)        # todos os avistamentos: instantâneo, atrasado ou sem tiro
         sight = resolve_sightings(sight, shots, kills)
 
     # Posições: uma linha por jogador vivo, reamostradas para POSITION_HZ (o evento mais próximo de cada instante)
@@ -129,7 +131,8 @@ def load_match(path):
         pos = pos.sort_values(["round", "player", "k"]).reset_index(drop=True)
 
     tables = {"rounds": rounds, "players": players, "shots": shots, "damages": damages, "kills": kills,
-              "bombs": bombs, "grenades": grenades, "sightings": sight, "positions": pos}
+              "bombs": bombs, "grenades": grenades, "sightings": sight, "positions": pos,
+              "engagements": engagements}
     map_name = ms["map"]
     for name, df in tables.items():
         df["match"] = match_id

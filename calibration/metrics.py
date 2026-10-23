@@ -13,7 +13,7 @@ import json
 import numpy as np
 import pandas as pd
 
-from pipeline.combat import is_combat_shot
+from pipeline.combat import ERROR_BINS, error_bin, is_combat_shot
 from pipeline.common import ARTIFACTS_DIR, BUY_TYPES, PISTOL_ROUNDS, buy_type
 
 QUANTILES = [5, 10, 25, 50, 75, 90, 95]
@@ -199,6 +199,21 @@ def duel_metrics(t):
     return m
 
 
+def engagement_metrics(t):
+    """Como os jogadores respondem quando um inimigo passa a ser visível, conforme o erro da mira nesse instante."""
+    e = t.get("engagements")
+    if e is None or e.empty or "outcome" not in e:
+        return {}
+    e = e.assign(bin=error_bin(e["aim_err_deg"]))
+    m = {}
+    for label, g in [("all", e)] + [(name, e[e["bin"] == name]) for name, _, _ in ERROR_BINS]:
+        for k in ("instant", "delayed", "none"):
+            m[f"duel.engage.{label}.{k}"] = prop((g["outcome"] == k).sum(), len(g))
+        _add(m, f"duel.delayed_reaction_s.{label}", quant(g.loc[g["outcome"] == "delayed", "dt"]))
+    m["duel.fired_before_visible"] = prop((e["dt"] < 0).sum(), len(e))
+    return m
+
+
 # ---------- compras ----------
 
 def buy_metrics(t):
@@ -306,6 +321,7 @@ def compute_metrics(t, zones=None):
             m.update(round_metrics(sub, mp))
     m.update(combat_metrics(t))
     m.update(duel_metrics(t))
+    m.update(engagement_metrics(t))
     m.update(buy_metrics(t))
     m.update(tactic_metrics(t, zones, r))
     return m
@@ -338,6 +354,9 @@ DESCRIPTIONS = {
     "combat.kill_distance_m": "Distância dos kills, em metros.",
     "combat.head_hit_share": "Fração dos acertos (com parte do corpo definida) que pegam a cabeça.",
     "combat.adr": "Dano médio por round por jogador (cada vítima conta no máximo 100).",
+    "duel.engage": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante.",
+    "duel.delayed_reaction_s": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira).",
+    "duel.fired_before_visible": "Fração dos avistamentos em que o jogador já tinha atirado no alvo antes de ele ficar visível.",
     "duel.win_rate": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence.",
     "duel.shoots_after_sighting": "Fração dos avistamentos em que o jogador atira em até 2 s.",
     "duel.reaction_time_s": "Tempo entre ver o inimigo e o primeiro tiro mirado nele.",

@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.0.0",
+ "contract_version": "1.4.0",
  "generated_at": "2026-10-23",
  "source": {
   "matches": [
@@ -647,6 +647,109 @@
       "n": 292
      }
     }
+   },
+   "engagement": {
+    "instant_window_s": [
+     -0.5,
+     0.1
+    ],
+    "max_wait_s": 2.0,
+    "by_aim_error": {
+     "tight_lt2": {
+      "n": 2630,
+      "instant": {
+       "value": 0.6494,
+       "n": 2630
+      },
+      "delayed": {
+       "value": 0.2741,
+       "n": 2630
+      },
+      "none": {
+       "value": 0.0764,
+       "n": 2630
+      }
+     },
+     "mid_2_8": {
+      "n": 2165,
+      "instant": {
+       "value": 0.4771,
+       "n": 2165
+      },
+      "delayed": {
+       "value": 0.3677,
+       "n": 2165
+      },
+      "none": {
+       "value": 0.1552,
+       "n": 2165
+      }
+     },
+     "wide_gt8": {
+      "n": 967,
+      "instant": {
+       "value": 0.1499,
+       "n": 967
+      },
+      "delayed": {
+       "value": 0.515,
+       "n": 967
+      },
+      "none": {
+       "value": 0.3351,
+       "n": 967
+      }
+     }
+    },
+    "fired_before_visible": {
+     "value": 0.3084,
+     "n": 5762
+    },
+    "delayed_reaction_s": {
+     "p10": 0.125,
+     "p25": 0.156,
+     "p50": 0.219,
+     "p75": 0.344,
+     "p90": 0.619,
+     "mean": 0.316,
+     "n": 2015,
+     "source": "player"
+    },
+    "delayed_reaction_by_aim_error_s": {
+     "tight_lt2": {
+      "p10": 0.125,
+      "p25": 0.141,
+      "p50": 0.188,
+      "p75": 0.281,
+      "p90": 0.469,
+      "mean": 0.267,
+      "n": 721
+     },
+     "mid_2_8": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.203,
+      "p75": 0.316,
+      "p90": 0.625,
+      "mean": 0.319,
+      "n": 796
+     },
+     "wide_gt8": {
+      "p10": 0.141,
+      "p25": 0.188,
+      "p50": 0.281,
+      "p75": 0.465,
+      "p90": 0.739,
+      "mean": 0.385,
+      "n": 498
+     }
+    },
+    "flick_model": {
+     "formula": "delayed_reaction_s = base_s + per_deg_s * min(aim_error_deg, 30)",
+     "base_s": 0.2045,
+     "per_deg_s": 0.0046,
+     "n": 2015
+    }
    }
   },
   "performance": {
@@ -1013,6 +1116,85 @@
        "n": 1,
        "shrunk": 0.5939
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 15,
+       "instant": {
+        "value": 0.6667,
+        "n": 15,
+        "shrunk": 0.6568
+       },
+       "delayed": {
+        "value": 0.2,
+        "n": 15,
+        "shrunk": 0.2423
+       },
+       "none": {
+        "value": 0.1333,
+        "n": 15,
+        "shrunk": 0.1008
+       }
+      },
+      "mid_2_8": {
+       "n": 12,
+       "instant": {
+        "value": 0.5833,
+        "n": 12,
+        "shrunk": 0.5169
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 12,
+        "shrunk": 0.3548
+       },
+       "none": {
+        "value": 0.0833,
+        "n": 12,
+        "shrunk": 0.1283
+       }
+      },
+      "wide_gt8": {
+       "n": 7,
+       "instant": {
+        "value": 0.1429,
+        "n": 7,
+        "shrunk": 0.1481
+       },
+       "delayed": {
+        "value": 0.5714,
+        "n": 7,
+        "shrunk": 0.5296
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 7,
+        "shrunk": 0.3223
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.4118,
+      "n": 34,
+      "shrunk": 0.3735
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 11
      }
     }
    },
@@ -1461,6 +1643,85 @@
        "shrunk": 0.5989
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 13,
+       "instant": {
+        "value": 0.6923,
+        "n": 13,
+        "shrunk": 0.6663
+       },
+       "delayed": {
+        "value": 0.3077,
+        "n": 13,
+        "shrunk": 0.2873
+       },
+       "none": {
+        "value": 0.0,
+        "n": 13,
+        "shrunk": 0.0463
+       }
+      },
+      "mid_2_8": {
+       "n": 10,
+       "instant": {
+        "value": 0.4,
+        "n": 10,
+        "shrunk": 0.4514
+       },
+       "delayed": {
+        "value": 0.6,
+        "n": 10,
+        "shrunk": 0.4451
+       },
+       "none": {
+        "value": 0.0,
+        "n": 10,
+        "shrunk": 0.1035
+       }
+      },
+      "wide_gt8": {
+       "n": 5,
+       "instant": {
+        "value": 0.2,
+        "n": 5,
+        "shrunk": 0.1599
+       },
+       "delayed": {
+        "value": 0.2,
+        "n": 5,
+        "shrunk": 0.452
+       },
+       "none": {
+        "value": 0.6,
+        "n": 5,
+        "shrunk": 0.3881
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3571,
+      "n": 28,
+      "shrunk": 0.3368
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 11
+     }
     }
    },
    "performance": {
@@ -1887,6 +2148,85 @@
        "n": 2,
        "shrunk": 0.5716
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 10,
+       "instant": {
+        "value": 0.6,
+        "n": 10,
+        "shrunk": 0.6329
+       },
+       "delayed": {
+        "value": 0.3,
+        "n": 10,
+        "shrunk": 0.2827
+       },
+       "none": {
+        "value": 0.1,
+        "n": 10,
+        "shrunk": 0.0843
+       }
+      },
+      "mid_2_8": {
+       "n": 15,
+       "instant": {
+        "value": 0.4,
+        "n": 15,
+        "shrunk": 0.4441
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 15,
+        "shrunk": 0.353
+       },
+       "none": {
+        "value": 0.2667,
+        "n": 15,
+        "shrunk": 0.203
+       }
+      },
+      "wide_gt8": {
+       "n": 5,
+       "instant": {
+        "value": 0.0,
+        "n": 5,
+        "shrunk": 0.1199
+       },
+       "delayed": {
+        "value": 0.4,
+        "n": 5,
+        "shrunk": 0.492
+       },
+       "none": {
+        "value": 0.6,
+        "n": 5,
+        "shrunk": 0.3881
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2,
+      "n": 30,
+      "shrunk": 0.2434
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 10
      }
     }
    },
@@ -2325,6 +2665,85 @@
        "n": 9,
        "shrunk": 0.514
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 6,
+       "instant": {
+        "value": 0.6667,
+        "n": 6,
+        "shrunk": 0.6534
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 6,
+        "shrunk": 0.2878
+       },
+       "none": {
+        "value": 0.0,
+        "n": 6,
+        "shrunk": 0.0588
+       }
+      },
+      "mid_2_8": {
+       "n": 20,
+       "instant": {
+        "value": 0.4,
+        "n": 20,
+        "shrunk": 0.4386
+       },
+       "delayed": {
+        "value": 0.3,
+        "n": 20,
+        "shrunk": 0.3339
+       },
+       "none": {
+        "value": 0.3,
+        "n": 20,
+        "shrunk": 0.2276
+       }
+      },
+      "wide_gt8": {
+       "n": 7,
+       "instant": {
+        "value": 0.0,
+        "n": 7,
+        "shrunk": 0.111
+       },
+       "delayed": {
+        "value": 0.7143,
+        "n": 7,
+        "shrunk": 0.5667
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 7,
+        "shrunk": 0.3223
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2727,
+      "n": 33,
+      "shrunk": 0.2862
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 13
      }
     }
    },
@@ -2805,6 +3224,85 @@
        "shrunk": 0.5033
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 18,
+       "instant": {
+        "value": 0.3333,
+        "n": 18,
+        "shrunk": 0.4997
+       },
+       "delayed": {
+        "value": 0.3889,
+        "n": 18,
+        "shrunk": 0.3285
+       },
+       "none": {
+        "value": 0.2778,
+        "n": 18,
+        "shrunk": 0.1718
+       }
+      },
+      "mid_2_8": {
+       "n": 10,
+       "instant": {
+        "value": 0.3,
+        "n": 10,
+        "shrunk": 0.4181
+       },
+       "delayed": {
+        "value": 0.4,
+        "n": 10,
+        "shrunk": 0.3785
+       },
+       "none": {
+        "value": 0.3,
+        "n": 10,
+        "shrunk": 0.2035
+       }
+      },
+      "wide_gt8": {
+       "n": 5,
+       "instant": {
+        "value": 0.2,
+        "n": 5,
+        "shrunk": 0.1599
+       },
+       "delayed": {
+        "value": 0.6,
+        "n": 5,
+        "shrunk": 0.532
+       },
+       "none": {
+        "value": 0.2,
+        "n": 5,
+        "shrunk": 0.3081
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.1818,
+      "n": 33,
+      "shrunk": 0.2296
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 14
+     }
     }
    },
    "performance": {
@@ -3245,6 +3743,85 @@
        "n": 5,
        "shrunk": 0.543
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 49,
+       "instant": {
+        "value": 0.8163,
+        "n": 49,
+        "shrunk": 0.7679
+       },
+       "delayed": {
+        "value": 0.1633,
+        "n": 49,
+        "shrunk": 0.1954
+       },
+       "none": {
+        "value": 0.0204,
+        "n": 49,
+        "shrunk": 0.0366
+       }
+      },
+      "mid_2_8": {
+       "n": 37,
+       "instant": {
+        "value": 0.6216,
+        "n": 37,
+        "shrunk": 0.5709
+       },
+       "delayed": {
+        "value": 0.2973,
+        "n": 37,
+        "shrunk": 0.322
+       },
+       "none": {
+        "value": 0.0811,
+        "n": 37,
+        "shrunk": 0.1071
+       }
+      },
+      "wide_gt8": {
+       "n": 15,
+       "instant": {
+        "value": 0.2,
+        "n": 15,
+        "shrunk": 0.1714
+       },
+       "delayed": {
+        "value": 0.4667,
+        "n": 15,
+        "shrunk": 0.4943
+       },
+       "none": {
+        "value": 0.3333,
+        "n": 15,
+        "shrunk": 0.3343
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.4455,
+      "n": 101,
+      "shrunk": 0.4229
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 26
      }
     }
    },
@@ -3766,6 +4343,84 @@
        "n": 3,
        "shrunk": 0.5903
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 27,
+       "instant": {
+        "value": 0.7037,
+        "n": 27,
+        "shrunk": 0.6806
+       },
+       "delayed": {
+        "value": 0.2593,
+        "n": 27,
+        "shrunk": 0.2656
+       },
+       "none": {
+        "value": 0.037,
+        "n": 27,
+        "shrunk": 0.0538
+       }
+      },
+      "mid_2_8": {
+       "n": 40,
+       "instant": {
+        "value": 0.475,
+        "n": 40,
+        "shrunk": 0.4757
+       },
+       "delayed": {
+        "value": 0.425,
+        "n": 40,
+        "shrunk": 0.4059
+       },
+       "none": {
+        "value": 0.1,
+        "n": 40,
+        "shrunk": 0.1184
+       }
+      },
+      "wide_gt8": {
+       "n": 19,
+       "instant": {
+        "value": 0.1579,
+        "n": 19,
+        "shrunk": 0.1538
+       },
+       "delayed": {
+        "value": 0.5789,
+        "n": 19,
+        "shrunk": 0.5462
+       },
+       "none": {
+        "value": 0.2632,
+        "n": 19,
+        "shrunk": 0.3001
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3605,
+      "n": 86,
+      "shrunk": 0.3506
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.375,
+      "p90": 0.619,
+      "mean": 0.31,
+      "n": 35,
+      "source": "player"
      }
     }
    },
@@ -4317,6 +4972,84 @@
        "n": 1,
        "shrunk": 0.5512
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 55,
+       "instant": {
+        "value": 0.6364,
+        "n": 55,
+        "shrunk": 0.6398
+       },
+       "delayed": {
+        "value": 0.3273,
+        "n": 55,
+        "shrunk": 0.3131
+       },
+       "none": {
+        "value": 0.0364,
+        "n": 55,
+        "shrunk": 0.047
+       }
+      },
+      "mid_2_8": {
+       "n": 41,
+       "instant": {
+        "value": 0.5366,
+        "n": 41,
+        "shrunk": 0.5171
+       },
+       "delayed": {
+        "value": 0.3659,
+        "n": 41,
+        "shrunk": 0.3665
+       },
+       "none": {
+        "value": 0.0976,
+        "n": 41,
+        "shrunk": 0.1165
+       }
+      },
+      "wide_gt8": {
+       "n": 19,
+       "instant": {
+        "value": 0.2105,
+        "n": 19,
+        "shrunk": 0.1794
+       },
+       "delayed": {
+        "value": 0.4737,
+        "n": 19,
+        "shrunk": 0.4949
+       },
+       "none": {
+        "value": 0.3158,
+        "n": 19,
+        "shrunk": 0.3257
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3826,
+      "n": 115,
+      "shrunk": 0.3716
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.16,
+      "p50": 0.211,
+      "p75": 0.273,
+      "p90": 0.545,
+      "mean": 0.267,
+      "n": 42,
+      "source": "player"
      }
     }
    },
@@ -4920,6 +5653,84 @@
        "shrunk": 0.6406
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 52,
+       "instant": {
+        "value": 0.4423,
+        "n": 52,
+        "shrunk": 0.4998
+       },
+       "delayed": {
+        "value": 0.3846,
+        "n": 52,
+        "shrunk": 0.3539
+       },
+       "none": {
+        "value": 0.1731,
+        "n": 52,
+        "shrunk": 0.1462
+       }
+      },
+      "mid_2_8": {
+       "n": 37,
+       "instant": {
+        "value": 0.4595,
+        "n": 37,
+        "shrunk": 0.4656
+       },
+       "delayed": {
+        "value": 0.3784,
+        "n": 37,
+        "shrunk": 0.3746
+       },
+       "none": {
+        "value": 0.1622,
+        "n": 37,
+        "shrunk": 0.1597
+       }
+      },
+      "wide_gt8": {
+       "n": 9,
+       "instant": {
+        "value": 0.2222,
+        "n": 9,
+        "shrunk": 0.1723
+       },
+       "delayed": {
+        "value": 0.4444,
+        "n": 9,
+        "shrunk": 0.4931
+       },
+       "none": {
+        "value": 0.3333,
+        "n": 9,
+        "shrunk": 0.3346
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2143,
+      "n": 98,
+      "shrunk": 0.2302
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.203,
+      "p75": 0.328,
+      "p90": 0.628,
+      "mean": 0.315,
+      "n": 38,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -5413,6 +6224,84 @@
        "n": 3,
        "shrunk": 0.5903
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 38,
+       "instant": {
+        "value": 0.7105,
+        "n": 38,
+        "shrunk": 0.6894
+       },
+       "delayed": {
+        "value": 0.2368,
+        "n": 38,
+        "shrunk": 0.2497
+       },
+       "none": {
+        "value": 0.0526,
+        "n": 38,
+        "shrunk": 0.0608
+       }
+      },
+      "mid_2_8": {
+       "n": 37,
+       "instant": {
+        "value": 0.4324,
+        "n": 37,
+        "shrunk": 0.4481
+       },
+       "delayed": {
+        "value": 0.3784,
+        "n": 37,
+        "shrunk": 0.3746
+       },
+       "none": {
+        "value": 0.1892,
+        "n": 37,
+        "shrunk": 0.1773
+       }
+      },
+      "wide_gt8": {
+       "n": 19,
+       "instant": {
+        "value": 0.1579,
+        "n": 19,
+        "shrunk": 0.1538
+       },
+       "delayed": {
+        "value": 0.5789,
+        "n": 19,
+        "shrunk": 0.5462
+       },
+       "none": {
+        "value": 0.2632,
+        "n": 19,
+        "shrunk": 0.3001
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2872,
+      "n": 94,
+      "shrunk": 0.2909
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.172,
+      "p50": 0.203,
+      "p75": 0.406,
+      "p90": 0.662,
+      "mean": 0.331,
+      "n": 34,
+      "source": "player"
      }
     }
    },
@@ -5955,6 +6844,84 @@
        "shrunk": 0.5222
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 80,
+       "instant": {
+        "value": 0.5125,
+        "n": 80,
+        "shrunk": 0.5399
+       },
+       "delayed": {
+        "value": 0.3625,
+        "n": 80,
+        "shrunk": 0.3448
+       },
+       "none": {
+        "value": 0.125,
+        "n": 80,
+        "shrunk": 0.1153
+       }
+      },
+      "mid_2_8": {
+       "n": 87,
+       "instant": {
+        "value": 0.4023,
+        "n": 87,
+        "shrunk": 0.4163
+       },
+       "delayed": {
+        "value": 0.3448,
+        "n": 87,
+        "shrunk": 0.3491
+       },
+       "none": {
+        "value": 0.2529,
+        "n": 87,
+        "shrunk": 0.2346
+       }
+      },
+      "wide_gt8": {
+       "n": 39,
+       "instant": {
+        "value": 0.0513,
+        "n": 39,
+        "shrunk": 0.0847
+       },
+       "delayed": {
+        "value": 0.5385,
+        "n": 39,
+        "shrunk": 0.5305
+       },
+       "none": {
+        "value": 0.4103,
+        "n": 39,
+        "shrunk": 0.3848
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2476,
+      "n": 206,
+      "shrunk": 0.253
+     },
+     "delayed_reaction_s": {
+      "p10": 0.109,
+      "p25": 0.156,
+      "p50": 0.234,
+      "p75": 0.328,
+      "p90": 0.614,
+      "mean": 0.319,
+      "n": 80,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -6496,6 +7463,84 @@
        "n": 14,
        "shrunk": 0.5758
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 102,
+       "instant": {
+        "value": 0.549,
+        "n": 102,
+        "shrunk": 0.5655
+       },
+       "delayed": {
+        "value": 0.3431,
+        "n": 102,
+        "shrunk": 0.3318
+       },
+       "none": {
+        "value": 0.1078,
+        "n": 102,
+        "shrunk": 0.1027
+       }
+      },
+      "mid_2_8": {
+       "n": 69,
+       "instant": {
+        "value": 0.3623,
+        "n": 69,
+        "shrunk": 0.3881
+       },
+       "delayed": {
+        "value": 0.4058,
+        "n": 69,
+        "shrunk": 0.3972
+       },
+       "none": {
+        "value": 0.2319,
+        "n": 69,
+        "shrunk": 0.2147
+       }
+      },
+      "wide_gt8": {
+       "n": 41,
+       "instant": {
+        "value": 0.0732,
+        "n": 41,
+        "shrunk": 0.0983
+       },
+       "delayed": {
+        "value": 0.5122,
+        "n": 41,
+        "shrunk": 0.5131
+       },
+       "none": {
+        "value": 0.4146,
+        "n": 41,
+        "shrunk": 0.3886
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2311,
+      "n": 212,
+      "shrunk": 0.2378
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.234,
+      "p75": 0.363,
+      "p90": 0.627,
+      "mean": 0.314,
+      "n": 84,
+      "source": "player"
      }
     }
    },
@@ -7070,6 +8115,84 @@
        "shrunk": 0.6192
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 86,
+       "instant": {
+        "value": 0.6279,
+        "n": 86,
+        "shrunk": 0.632
+       },
+       "delayed": {
+        "value": 0.314,
+        "n": 86,
+        "shrunk": 0.3064
+       },
+       "none": {
+        "value": 0.0581,
+        "n": 86,
+        "shrunk": 0.0616
+       }
+      },
+      "mid_2_8": {
+       "n": 83,
+       "instant": {
+        "value": 0.4458,
+        "n": 83,
+        "shrunk": 0.4519
+       },
+       "delayed": {
+        "value": 0.4578,
+        "n": 83,
+        "shrunk": 0.4403
+       },
+       "none": {
+        "value": 0.0964,
+        "n": 83,
+        "shrunk": 0.1078
+       }
+      },
+      "wide_gt8": {
+       "n": 39,
+       "instant": {
+        "value": 0.2308,
+        "n": 39,
+        "shrunk": 0.2034
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 39,
+        "shrunk": 0.3949
+       },
+       "none": {
+        "value": 0.4359,
+        "n": 39,
+        "shrunk": 0.4017
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2548,
+      "n": 208,
+      "shrunk": 0.2595
+     },
+     "delayed_reaction_s": {
+      "p10": 0.141,
+      "p25": 0.188,
+      "p50": 0.234,
+      "p75": 0.371,
+      "p90": 0.53,
+      "mean": 0.315,
+      "n": 78,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -7603,6 +8726,84 @@
        "n": 9,
        "shrunk": 0.5716
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 95,
+       "instant": {
+        "value": 0.6632,
+        "n": 95,
+        "shrunk": 0.6608
+       },
+       "delayed": {
+        "value": 0.2316,
+        "n": 95,
+        "shrunk": 0.239
+       },
+       "none": {
+        "value": 0.1053,
+        "n": 95,
+        "shrunk": 0.1002
+       }
+      },
+      "mid_2_8": {
+       "n": 86,
+       "instant": {
+        "value": 0.5233,
+        "n": 86,
+        "shrunk": 0.5145
+       },
+       "delayed": {
+        "value": 0.3721,
+        "n": 86,
+        "shrunk": 0.3713
+       },
+       "none": {
+        "value": 0.1047,
+        "n": 86,
+        "shrunk": 0.1142
+       }
+      },
+      "wide_gt8": {
+       "n": 31,
+       "instant": {
+        "value": 0.129,
+        "n": 31,
+        "shrunk": 0.1372
+       },
+       "delayed": {
+        "value": 0.3871,
+        "n": 31,
+        "shrunk": 0.4373
+       },
+       "none": {
+        "value": 0.4839,
+        "n": 31,
+        "shrunk": 0.4255
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3208,
+      "n": 212,
+      "shrunk": 0.3197
+     },
+     "delayed_reaction_s": {
+      "p10": 0.109,
+      "p25": 0.141,
+      "p50": 0.188,
+      "p75": 0.309,
+      "p90": 0.516,
+      "mean": 0.283,
+      "n": 66,
+      "source": "player"
      }
     }
    },
@@ -8205,6 +9406,84 @@
        "shrunk": 0.5326
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 97,
+       "instant": {
+        "value": 0.4433,
+        "n": 97,
+        "shrunk": 0.4785
+       },
+       "delayed": {
+        "value": 0.4021,
+        "n": 97,
+        "shrunk": 0.3802
+       },
+       "none": {
+        "value": 0.1546,
+        "n": 97,
+        "shrunk": 0.1413
+       }
+      },
+      "mid_2_8": {
+       "n": 58,
+       "instant": {
+        "value": 0.4138,
+        "n": 58,
+        "shrunk": 0.43
+       },
+       "delayed": {
+        "value": 0.3621,
+        "n": 58,
+        "shrunk": 0.3635
+       },
+       "none": {
+        "value": 0.2241,
+        "n": 58,
+        "shrunk": 0.2065
+       }
+      },
+      "wide_gt8": {
+       "n": 31,
+       "instant": {
+        "value": 0.0968,
+        "n": 31,
+        "shrunk": 0.1176
+       },
+       "delayed": {
+        "value": 0.5806,
+        "n": 31,
+        "shrunk": 0.5549
+       },
+       "none": {
+        "value": 0.3226,
+        "n": 31,
+        "shrunk": 0.3275
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.1882,
+      "n": 186,
+      "shrunk": 0.1998
+     },
+     "delayed_reaction_s": {
+      "p10": 0.152,
+      "p25": 0.188,
+      "p50": 0.258,
+      "p75": 0.406,
+      "p90": 0.727,
+      "mean": 0.374,
+      "n": 78,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -8805,6 +10084,84 @@
        "n": 24,
        "shrunk": 0.5358
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 249,
+       "instant": {
+        "value": 0.7149,
+        "n": 249,
+        "shrunk": 0.71
+       },
+       "delayed": {
+        "value": 0.2369,
+        "n": 249,
+        "shrunk": 0.2397
+       },
+       "none": {
+        "value": 0.0482,
+        "n": 249,
+        "shrunk": 0.0503
+       }
+      },
+      "mid_2_8": {
+       "n": 195,
+       "instant": {
+        "value": 0.441,
+        "n": 195,
+        "shrunk": 0.4444
+       },
+       "delayed": {
+        "value": 0.3897,
+        "n": 195,
+        "shrunk": 0.3877
+       },
+       "none": {
+        "value": 0.1692,
+        "n": 195,
+        "shrunk": 0.1679
+       }
+      },
+      "wide_gt8": {
+       "n": 96,
+       "instant": {
+        "value": 0.1667,
+        "n": 96,
+        "shrunk": 0.1638
+       },
+       "delayed": {
+        "value": 0.5417,
+        "n": 96,
+        "shrunk": 0.5371
+       },
+       "none": {
+        "value": 0.2917,
+        "n": 96,
+        "shrunk": 0.2992
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3222,
+      "n": 540,
+      "shrunk": 0.3217
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.148,
+      "p50": 0.203,
+      "p75": 0.359,
+      "p90": 0.725,
+      "mean": 0.348,
+      "n": 187,
+      "source": "player"
      }
     }
    },
@@ -9464,6 +10821,84 @@
        "n": 27,
        "shrunk": 0.608
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 272,
+       "instant": {
+        "value": 0.6985,
+        "n": 272,
+        "shrunk": 0.6952
+       },
+       "delayed": {
+        "value": 0.2463,
+        "n": 272,
+        "shrunk": 0.2482
+       },
+       "none": {
+        "value": 0.0551,
+        "n": 272,
+        "shrunk": 0.0566
+       }
+      },
+      "mid_2_8": {
+       "n": 179,
+       "instant": {
+        "value": 0.5363,
+        "n": 179,
+        "shrunk": 0.5304
+       },
+       "delayed": {
+        "value": 0.3017,
+        "n": 179,
+        "shrunk": 0.3083
+       },
+       "none": {
+        "value": 0.162,
+        "n": 179,
+        "shrunk": 0.1613
+       }
+      },
+      "wide_gt8": {
+       "n": 105,
+       "instant": {
+        "value": 0.1048,
+        "n": 105,
+        "shrunk": 0.112
+       },
+       "delayed": {
+        "value": 0.6095,
+        "n": 105,
+        "shrunk": 0.5944
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 105,
+        "shrunk": 0.2936
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3579,
+      "n": 556,
+      "shrunk": 0.3562
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.203,
+      "p75": 0.359,
+      "p90": 0.653,
+      "mean": 0.331,
+      "n": 185,
+      "source": "player"
      }
     }
    },
@@ -10137,6 +11572,84 @@
        "shrunk": 0.6315
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 305,
+       "instant": {
+        "value": 0.6197,
+        "n": 305,
+        "shrunk": 0.6215
+       },
+       "delayed": {
+        "value": 0.2984,
+        "n": 305,
+        "shrunk": 0.2969
+       },
+       "none": {
+        "value": 0.082,
+        "n": 305,
+        "shrunk": 0.0816
+       }
+      },
+      "mid_2_8": {
+       "n": 227,
+       "instant": {
+        "value": 0.3656,
+        "n": 227,
+        "shrunk": 0.3747
+       },
+       "delayed": {
+        "value": 0.4273,
+        "n": 227,
+        "shrunk": 0.4225
+       },
+       "none": {
+        "value": 0.207,
+        "n": 227,
+        "shrunk": 0.2029
+       }
+      },
+      "wide_gt8": {
+       "n": 87,
+       "instant": {
+        "value": 0.1839,
+        "n": 87,
+        "shrunk": 0.1776
+       },
+       "delayed": {
+        "value": 0.4483,
+        "n": 87,
+        "shrunk": 0.4607
+       },
+       "none": {
+        "value": 0.3678,
+        "n": 87,
+        "shrunk": 0.3617
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2714,
+      "n": 619,
+      "shrunk": 0.2726
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.391,
+      "p90": 0.763,
+      "mean": 0.349,
+      "n": 227,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -10761,6 +12274,84 @@
        "shrunk": 0.5867
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 261,
+       "instant": {
+        "value": 0.6628,
+        "n": 261,
+        "shrunk": 0.6619
+       },
+       "delayed": {
+        "value": 0.2797,
+        "n": 261,
+        "shrunk": 0.2793
+       },
+       "none": {
+        "value": 0.0575,
+        "n": 261,
+        "shrunk": 0.0588
+       }
+      },
+      "mid_2_8": {
+       "n": 249,
+       "instant": {
+        "value": 0.4779,
+        "n": 249,
+        "shrunk": 0.4779
+       },
+       "delayed": {
+        "value": 0.3896,
+        "n": 249,
+        "shrunk": 0.3879
+       },
+       "none": {
+        "value": 0.1325,
+        "n": 249,
+        "shrunk": 0.1342
+       }
+      },
+      "wide_gt8": {
+       "n": 118,
+       "instant": {
+        "value": 0.1271,
+        "n": 118,
+        "shrunk": 0.1304
+       },
+       "delayed": {
+        "value": 0.5593,
+        "n": 118,
+        "shrunk": 0.5529
+       },
+       "none": {
+        "value": 0.3136,
+        "n": 118,
+        "shrunk": 0.3167
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3041,
+      "n": 628,
+      "shrunk": 0.3043
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.141,
+      "p50": 0.203,
+      "p75": 0.312,
+      "p90": 0.477,
+      "mean": 0.284,
+      "n": 236,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -11377,6 +12968,84 @@
        "shrunk": 0.609
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 238,
+       "instant": {
+        "value": 0.7731,
+        "n": 238,
+        "shrunk": 0.7635
+       },
+       "delayed": {
+        "value": 0.1765,
+        "n": 238,
+        "shrunk": 0.184
+       },
+       "none": {
+        "value": 0.0504,
+        "n": 238,
+        "shrunk": 0.0524
+       }
+      },
+      "mid_2_8": {
+       "n": 232,
+       "instant": {
+        "value": 0.6164,
+        "n": 232,
+        "shrunk": 0.6053
+       },
+       "delayed": {
+        "value": 0.2888,
+        "n": 232,
+        "shrunk": 0.2951
+       },
+       "none": {
+        "value": 0.0948,
+        "n": 232,
+        "shrunk": 0.0996
+       }
+      },
+      "wide_gt8": {
+       "n": 79,
+       "instant": {
+        "value": 0.1646,
+        "n": 79,
+        "shrunk": 0.1616
+       },
+       "delayed": {
+        "value": 0.5823,
+        "n": 79,
+        "shrunk": 0.5687
+       },
+       "none": {
+        "value": 0.2532,
+        "n": 79,
+        "shrunk": 0.2697
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.4098,
+      "n": 549,
+      "shrunk": 0.4063
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.297,
+      "p90": 0.541,
+      "mean": 0.29,
+      "n": 155,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -11991,6 +13660,85 @@
        "shrunk": 0.603
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 28,
+       "instant": {
+        "value": 0.75,
+        "n": 28,
+        "shrunk": 0.7081
+       },
+       "delayed": {
+        "value": 0.1786,
+        "n": 28,
+        "shrunk": 0.2184
+       },
+       "none": {
+        "value": 0.0714,
+        "n": 28,
+        "shrunk": 0.0735
+       }
+      },
+      "mid_2_8": {
+       "n": 28,
+       "instant": {
+        "value": 0.5,
+        "n": 28,
+        "shrunk": 0.4905
+       },
+       "delayed": {
+        "value": 0.3214,
+        "n": 28,
+        "shrunk": 0.3407
+       },
+       "none": {
+        "value": 0.1786,
+        "n": 28,
+        "shrunk": 0.1688
+       }
+      },
+      "wide_gt8": {
+       "n": 14,
+       "instant": {
+        "value": 0.2857,
+        "n": 14,
+        "shrunk": 0.2058
+       },
+       "delayed": {
+        "value": 0.4286,
+        "n": 14,
+        "shrunk": 0.4794
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 14,
+        "shrunk": 0.3148
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3286,
+      "n": 70,
+      "shrunk": 0.3241
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 20
+     }
     }
    },
    "performance": {
@@ -12511,6 +14259,85 @@
        "shrunk": 0.5989
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 30,
+       "instant": {
+        "value": 0.7,
+        "n": 30,
+        "shrunk": 0.6798
+       },
+       "delayed": {
+        "value": 0.2333,
+        "n": 30,
+        "shrunk": 0.2496
+       },
+       "none": {
+        "value": 0.0667,
+        "n": 30,
+        "shrunk": 0.0706
+       }
+      },
+      "mid_2_8": {
+       "n": 21,
+       "instant": {
+        "value": 0.619,
+        "n": 21,
+        "shrunk": 0.5498
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 21,
+        "shrunk": 0.3501
+       },
+       "none": {
+        "value": 0.0476,
+        "n": 21,
+        "shrunk": 0.1001
+       }
+      },
+      "wide_gt8": {
+       "n": 8,
+       "instant": {
+        "value": 0.125,
+        "n": 8,
+        "shrunk": 0.1428
+       },
+       "delayed": {
+        "value": 0.5,
+        "n": 8,
+        "shrunk": 0.5107
+       },
+       "none": {
+        "value": 0.375,
+        "n": 8,
+        "shrunk": 0.3465
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3559,
+      "n": 59,
+      "shrunk": 0.3439
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 18
+     }
     }
    },
    "performance": {
@@ -12981,6 +14808,85 @@
        "n": 5,
        "shrunk": 0.503
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 22,
+       "instant": {
+        "value": 0.7273,
+        "n": 22,
+        "shrunk": 0.6902
+       },
+       "delayed": {
+        "value": 0.1364,
+        "n": 22,
+        "shrunk": 0.202
+       },
+       "none": {
+        "value": 0.1364,
+        "n": 22,
+        "shrunk": 0.1078
+       }
+      },
+      "mid_2_8": {
+       "n": 19,
+       "instant": {
+        "value": 0.4737,
+        "n": 19,
+        "shrunk": 0.4754
+       },
+       "delayed": {
+        "value": 0.4737,
+        "n": 19,
+        "shrunk": 0.4193
+       },
+       "none": {
+        "value": 0.0526,
+        "n": 19,
+        "shrunk": 0.1052
+       }
+      },
+      "wide_gt8": {
+       "n": 6,
+       "instant": {
+        "value": 0.3333,
+        "n": 6,
+        "shrunk": 0.1922
+       },
+       "delayed": {
+        "value": 0.5,
+        "n": 6,
+        "shrunk": 0.5115
+       },
+       "none": {
+        "value": 0.1667,
+        "n": 6,
+        "shrunk": 0.2962
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2766,
+      "n": 47,
+      "shrunk": 0.2861
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 15
      }
     }
    },
@@ -13458,6 +15364,85 @@
        "n": 1,
        "shrunk": 0.5512
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 31,
+       "instant": {
+        "value": 0.6774,
+        "n": 31,
+        "shrunk": 0.6664
+       },
+       "delayed": {
+        "value": 0.129,
+        "n": 31,
+        "shrunk": 0.1859
+       },
+       "none": {
+        "value": 0.1935,
+        "n": 31,
+        "shrunk": 0.1476
+       }
+      },
+      "mid_2_8": {
+       "n": 12,
+       "instant": {
+        "value": 0.3333,
+        "n": 12,
+        "shrunk": 0.4232
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 12,
+        "shrunk": 0.3548
+       },
+       "none": {
+        "value": 0.3333,
+        "n": 12,
+        "shrunk": 0.222
+       }
+      },
+      "wide_gt8": {
+       "n": 7,
+       "instant": {
+        "value": 0.2857,
+        "n": 7,
+        "shrunk": 0.1851
+       },
+       "delayed": {
+        "value": 0.5714,
+        "n": 7,
+        "shrunk": 0.5296
+       },
+       "none": {
+        "value": 0.1429,
+        "n": 7,
+        "shrunk": 0.2853
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.34,
+      "n": 50,
+      "shrunk": 0.331
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 12
      }
     }
    },
@@ -13965,6 +15950,85 @@
        "shrunk": 0.5991
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 30,
+       "instant": {
+        "value": 0.4,
+        "n": 30,
+        "shrunk": 0.4998
+       },
+       "delayed": {
+        "value": 0.4333,
+        "n": 30,
+        "shrunk": 0.3696
+       },
+       "none": {
+        "value": 0.1667,
+        "n": 30,
+        "shrunk": 0.1306
+       }
+      },
+      "mid_2_8": {
+       "n": 17,
+       "instant": {
+        "value": 0.2353,
+        "n": 17,
+        "shrunk": 0.366
+       },
+       "delayed": {
+        "value": 0.6471,
+        "n": 17,
+        "shrunk": 0.4961
+       },
+       "none": {
+        "value": 0.1176,
+        "n": 17,
+        "shrunk": 0.1379
+       }
+      },
+      "wide_gt8": {
+       "n": 6,
+       "instant": {
+        "value": 0.0,
+        "n": 6,
+        "shrunk": 0.1153
+       },
+       "delayed": {
+        "value": 0.1667,
+        "n": 6,
+        "shrunk": 0.4346
+       },
+       "none": {
+        "value": 0.8333,
+        "n": 6,
+        "shrunk": 0.4501
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.1698,
+      "n": 53,
+      "shrunk": 0.2078
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 25
+     }
     }
    },
    "performance": {
@@ -14436,6 +16500,84 @@
        "n": 3,
        "shrunk": 0.5468
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 47,
+       "instant": {
+        "value": 0.5745,
+        "n": 47,
+        "shrunk": 0.5968
+       },
+       "delayed": {
+        "value": 0.383,
+        "n": 47,
+        "shrunk": 0.3505
+       },
+       "none": {
+        "value": 0.0426,
+        "n": 47,
+        "shrunk": 0.0527
+       }
+      },
+      "mid_2_8": {
+       "n": 32,
+       "instant": {
+        "value": 0.7812,
+        "n": 32,
+        "shrunk": 0.6643
+       },
+       "delayed": {
+        "value": 0.1562,
+        "n": 32,
+        "shrunk": 0.2376
+       },
+       "none": {
+        "value": 0.0625,
+        "n": 32,
+        "shrunk": 0.0982
+       }
+      },
+      "wide_gt8": {
+       "n": 18,
+       "instant": {
+        "value": 0.0556,
+        "n": 18,
+        "shrunk": 0.1052
+       },
+       "delayed": {
+        "value": 0.4444,
+        "n": 18,
+        "shrunk": 0.4816
+       },
+       "none": {
+        "value": 0.5,
+        "n": 18,
+        "shrunk": 0.4132
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3402,
+      "n": 97,
+      "shrunk": 0.3348
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.148,
+      "p50": 0.219,
+      "p75": 0.484,
+      "p90": 0.562,
+      "mean": 0.351,
+      "n": 31,
+      "source": "player"
      }
     }
    },
@@ -14930,6 +17072,85 @@
        "n": 7,
        "shrunk": 0.6139
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 49,
+       "instant": {
+        "value": 0.7347,
+        "n": 49,
+        "shrunk": 0.71
+       },
+       "delayed": {
+        "value": 0.2449,
+        "n": 49,
+        "shrunk": 0.2534
+       },
+       "none": {
+        "value": 0.0204,
+        "n": 49,
+        "shrunk": 0.0366
+       }
+      },
+      "mid_2_8": {
+       "n": 24,
+       "instant": {
+        "value": 0.5,
+        "n": 24,
+        "shrunk": 0.4896
+       },
+       "delayed": {
+        "value": 0.4583,
+        "n": 24,
+        "shrunk": 0.4171
+       },
+       "none": {
+        "value": 0.0417,
+        "n": 24,
+        "shrunk": 0.0933
+       }
+      },
+      "wide_gt8": {
+       "n": 10,
+       "instant": {
+        "value": 0.3,
+        "n": 10,
+        "shrunk": 0.1999
+       },
+       "delayed": {
+        "value": 0.5,
+        "n": 10,
+        "shrunk": 0.51
+       },
+       "none": {
+        "value": 0.2,
+        "n": 10,
+        "shrunk": 0.2901
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3735,
+      "n": 83,
+      "shrunk": 0.3609
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 28
      }
     }
    },
@@ -15479,6 +17700,85 @@
        "shrunk": 0.6991
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 46,
+       "instant": {
+        "value": 0.6304,
+        "n": 46,
+        "shrunk": 0.6362
+       },
+       "delayed": {
+        "value": 0.3043,
+        "n": 46,
+        "shrunk": 0.2952
+       },
+       "none": {
+        "value": 0.0652,
+        "n": 46,
+        "shrunk": 0.0686
+       }
+      },
+      "mid_2_8": {
+       "n": 25,
+       "instant": {
+        "value": 0.56,
+        "n": 25,
+        "shrunk": 0.5232
+       },
+       "delayed": {
+        "value": 0.16,
+        "n": 25,
+        "shrunk": 0.2523
+       },
+       "none": {
+        "value": 0.28,
+        "n": 25,
+        "shrunk": 0.2245
+       }
+      },
+      "wide_gt8": {
+       "n": 6,
+       "instant": {
+        "value": 0.5,
+        "n": 6,
+        "shrunk": 0.2307
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 6,
+        "shrunk": 0.4731
+       },
+       "none": {
+        "value": 0.1667,
+        "n": 6,
+        "shrunk": 0.2962
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3247,
+      "n": 77,
+      "shrunk": 0.3213
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 20
+     }
     }
    },
    "performance": {
@@ -16003,6 +18303,85 @@
        "shrunk": 0.5512
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 40,
+       "instant": {
+        "value": 0.7,
+        "n": 40,
+        "shrunk": 0.6831
+       },
+       "delayed": {
+        "value": 0.2,
+        "n": 40,
+        "shrunk": 0.2247
+       },
+       "none": {
+        "value": 0.1,
+        "n": 40,
+        "shrunk": 0.0921
+       }
+      },
+      "mid_2_8": {
+       "n": 31,
+       "instant": {
+        "value": 0.5484,
+        "n": 31,
+        "shrunk": 0.5204
+       },
+       "delayed": {
+        "value": 0.3226,
+        "n": 31,
+        "shrunk": 0.3403
+       },
+       "none": {
+        "value": 0.129,
+        "n": 31,
+        "shrunk": 0.1393
+       }
+      },
+      "wide_gt8": {
+       "n": 14,
+       "instant": {
+        "value": 0.1429,
+        "n": 14,
+        "shrunk": 0.147
+       },
+       "delayed": {
+        "value": 0.5714,
+        "n": 14,
+        "shrunk": 0.5382
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 14,
+        "shrunk": 0.3148
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2941,
+      "n": 85,
+      "shrunk": 0.2968
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 26
+     }
     }
    },
    "performance": {
@@ -16508,6 +18887,84 @@
        "shrunk": 0.5903
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 41,
+       "instant": {
+        "value": 0.6098,
+        "n": 41,
+        "shrunk": 0.6228
+       },
+       "delayed": {
+        "value": 0.3659,
+        "n": 41,
+        "shrunk": 0.3358
+       },
+       "none": {
+        "value": 0.0244,
+        "n": 41,
+        "shrunk": 0.0414
+       }
+      },
+      "mid_2_8": {
+       "n": 33,
+       "instant": {
+        "value": 0.4242,
+        "n": 33,
+        "shrunk": 0.4442
+       },
+       "delayed": {
+        "value": 0.4242,
+        "n": 33,
+        "shrunk": 0.4029
+       },
+       "none": {
+        "value": 0.1515,
+        "n": 33,
+        "shrunk": 0.1529
+       }
+      },
+      "wide_gt8": {
+       "n": 8,
+       "instant": {
+        "value": 0.125,
+        "n": 8,
+        "shrunk": 0.1428
+       },
+       "delayed": {
+        "value": 0.375,
+        "n": 8,
+        "shrunk": 0.475
+       },
+       "none": {
+        "value": 0.5,
+        "n": 8,
+        "shrunk": 0.3822
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2561,
+      "n": 82,
+      "shrunk": 0.2664
+     },
+     "delayed_reaction_s": {
+      "p10": 0.127,
+      "p25": 0.172,
+      "p50": 0.219,
+      "p75": 0.336,
+      "p90": 0.606,
+      "mean": 0.345,
+      "n": 32,
+      "source": "player"
+     }
     }
    },
    "performance": {
@@ -16991,6 +19448,85 @@
        "n": 2,
        "shrunk": 0.5262
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 25,
+       "instant": {
+        "value": 0.44,
+        "n": 25,
+        "shrunk": 0.5331
+       },
+       "delayed": {
+        "value": 0.4,
+        "n": 25,
+        "shrunk": 0.344
+       },
+       "none": {
+        "value": 0.16,
+        "n": 25,
+        "shrunk": 0.1228
+       }
+      },
+      "mid_2_8": {
+       "n": 13,
+       "instant": {
+        "value": 0.5385,
+        "n": 13,
+        "shrunk": 0.5013
+       },
+       "delayed": {
+        "value": 0.3846,
+        "n": 13,
+        "shrunk": 0.3744
+       },
+       "none": {
+        "value": 0.0769,
+        "n": 13,
+        "shrunk": 0.1244
+       }
+      },
+      "wide_gt8": {
+       "n": 14,
+       "instant": {
+        "value": 0.1429,
+        "n": 14,
+        "shrunk": 0.147
+       },
+       "delayed": {
+        "value": 0.4286,
+        "n": 14,
+        "shrunk": 0.4794
+       },
+       "none": {
+        "value": 0.4286,
+        "n": 14,
+        "shrunk": 0.3736
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.1923,
+      "n": 52,
+      "shrunk": 0.2246
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 21
      }
     }
    },
@@ -17486,6 +20022,85 @@
        "n": 2,
        "shrunk": 0.5716
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 19,
+       "instant": {
+        "value": 0.6842,
+        "n": 19,
+        "shrunk": 0.6664
+       },
+       "delayed": {
+        "value": 0.2632,
+        "n": 19,
+        "shrunk": 0.2688
+       },
+       "none": {
+        "value": 0.0526,
+        "n": 19,
+        "shrunk": 0.0648
+       }
+      },
+      "mid_2_8": {
+       "n": 25,
+       "instant": {
+        "value": 0.52,
+        "n": 25,
+        "shrunk": 0.5009
+       },
+       "delayed": {
+        "value": 0.36,
+        "n": 25,
+        "shrunk": 0.3634
+       },
+       "none": {
+        "value": 0.12,
+        "n": 25,
+        "shrunk": 0.1356
+       }
+      },
+      "wide_gt8": {
+       "n": 15,
+       "instant": {
+        "value": 0.2,
+        "n": 15,
+        "shrunk": 0.1714
+       },
+       "delayed": {
+        "value": 0.4,
+        "n": 15,
+        "shrunk": 0.4657
+       },
+       "none": {
+        "value": 0.4,
+        "n": 15,
+        "shrunk": 0.3629
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2373,
+      "n": 59,
+      "shrunk": 0.2553
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 20
      }
     }
    },
@@ -17984,6 +20599,85 @@
        "shrunk": 0.6171
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 20,
+       "instant": {
+        "value": 0.65,
+        "n": 20,
+        "shrunk": 0.6497
+       },
+       "delayed": {
+        "value": 0.15,
+        "n": 20,
+        "shrunk": 0.212
+       },
+       "none": {
+        "value": 0.2,
+        "n": 20,
+        "shrunk": 0.1382
+       }
+      },
+      "mid_2_8": {
+       "n": 21,
+       "instant": {
+        "value": 0.2857,
+        "n": 21,
+        "shrunk": 0.3791
+       },
+       "delayed": {
+        "value": 0.4286,
+        "n": 21,
+        "shrunk": 0.3989
+       },
+       "none": {
+        "value": 0.2857,
+        "n": 21,
+        "shrunk": 0.222
+       }
+      },
+      "wide_gt8": {
+       "n": 6,
+       "instant": {
+        "value": 0.1667,
+        "n": 6,
+        "shrunk": 0.1538
+       },
+       "delayed": {
+        "value": 0.6667,
+        "n": 6,
+        "shrunk": 0.55
+       },
+       "none": {
+        "value": 0.1667,
+        "n": 6,
+        "shrunk": 0.2962
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2553,
+      "n": 47,
+      "shrunk": 0.2712
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 16
+     }
     }
    },
    "performance": {
@@ -18472,6 +21166,85 @@
        "n": 7,
        "shrunk": 0.5769
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 30,
+       "instant": {
+        "value": 0.5,
+        "n": 30,
+        "shrunk": 0.5598
+       },
+       "delayed": {
+        "value": 0.3667,
+        "n": 30,
+        "shrunk": 0.3296
+       },
+       "none": {
+        "value": 0.1333,
+        "n": 30,
+        "shrunk": 0.1106
+       }
+      },
+      "mid_2_8": {
+       "n": 24,
+       "instant": {
+        "value": 0.5,
+        "n": 24,
+        "shrunk": 0.4896
+       },
+       "delayed": {
+        "value": 0.375,
+        "n": 24,
+        "shrunk": 0.3717
+       },
+       "none": {
+        "value": 0.125,
+        "n": 24,
+        "shrunk": 0.1387
+       }
+      },
+      "wide_gt8": {
+       "n": 20,
+       "instant": {
+        "value": 0.25,
+        "n": 20,
+        "shrunk": 0.2
+       },
+       "delayed": {
+        "value": 0.45,
+        "n": 20,
+        "shrunk": 0.4825
+       },
+       "none": {
+        "value": 0.3,
+        "n": 20,
+        "shrunk": 0.3175
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2162,
+      "n": 74,
+      "shrunk": 0.2358
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 29
      }
     }
    },
@@ -18965,6 +21738,85 @@
        "shrunk": 0.5512
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 19,
+       "instant": {
+        "value": 0.6842,
+        "n": 19,
+        "shrunk": 0.6664
+       },
+       "delayed": {
+        "value": 0.2105,
+        "n": 19,
+        "shrunk": 0.2431
+       },
+       "none": {
+        "value": 0.1053,
+        "n": 19,
+        "shrunk": 0.0905
+       }
+      },
+      "mid_2_8": {
+       "n": 25,
+       "instant": {
+        "value": 0.36,
+        "n": 25,
+        "shrunk": 0.412
+       },
+       "delayed": {
+        "value": 0.36,
+        "n": 25,
+        "shrunk": 0.3634
+       },
+       "none": {
+        "value": 0.28,
+        "n": 25,
+        "shrunk": 0.2245
+       }
+      },
+      "wide_gt8": {
+       "n": 7,
+       "instant": {
+        "value": 0.2857,
+        "n": 7,
+        "shrunk": 0.1851
+       },
+       "delayed": {
+        "value": 0.2857,
+        "n": 7,
+        "shrunk": 0.4556
+       },
+       "none": {
+        "value": 0.4286,
+        "n": 7,
+        "shrunk": 0.3593
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2941,
+      "n": 51,
+      "shrunk": 0.2981
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 15
+     }
     }
    },
    "performance": {
@@ -19381,6 +22233,85 @@
        "n": 2,
        "shrunk": 0.5262
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 17,
+       "instant": {
+        "value": 0.6471,
+        "n": 17,
+        "shrunk": 0.6483
+       },
+       "delayed": {
+        "value": 0.3529,
+        "n": 17,
+        "shrunk": 0.3103
+       },
+       "none": {
+        "value": 0.0,
+        "n": 17,
+        "shrunk": 0.0413
+       }
+      },
+      "mid_2_8": {
+       "n": 19,
+       "instant": {
+        "value": 0.4737,
+        "n": 19,
+        "shrunk": 0.4754
+       },
+       "delayed": {
+        "value": 0.3684,
+        "n": 19,
+        "shrunk": 0.3681
+       },
+       "none": {
+        "value": 0.1579,
+        "n": 19,
+        "shrunk": 0.1565
+       }
+      },
+      "wide_gt8": {
+       "n": 9,
+       "instant": {
+        "value": 0.1111,
+        "n": 9,
+        "shrunk": 0.1379
+       },
+       "delayed": {
+        "value": 0.4444,
+        "n": 9,
+        "shrunk": 0.4931
+       },
+       "none": {
+        "value": 0.4444,
+        "n": 9,
+        "shrunk": 0.369
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3333,
+      "n": 45,
+      "shrunk": 0.3257
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 17
      }
     }
    },
@@ -19805,6 +22736,85 @@
        "n": 3,
        "shrunk": 0.5468
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 19,
+       "instant": {
+        "value": 0.5789,
+        "n": 19,
+        "shrunk": 0.6151
+       },
+       "delayed": {
+        "value": 0.3158,
+        "n": 19,
+        "shrunk": 0.2944
+       },
+       "none": {
+        "value": 0.1053,
+        "n": 19,
+        "shrunk": 0.0905
+       }
+      },
+      "mid_2_8": {
+       "n": 16,
+       "instant": {
+        "value": 0.5,
+        "n": 16,
+        "shrunk": 0.4873
+       },
+       "delayed": {
+        "value": 0.375,
+        "n": 16,
+        "shrunk": 0.3709
+       },
+       "none": {
+        "value": 0.125,
+        "n": 16,
+        "shrunk": 0.1418
+       }
+      },
+      "wide_gt8": {
+       "n": 4,
+       "instant": {
+        "value": 0.25,
+        "n": 4,
+        "shrunk": 0.1666
+       },
+       "delayed": {
+        "value": 0.75,
+        "n": 4,
+        "shrunk": 0.5542
+       },
+       "none": {
+        "value": 0.0,
+        "n": 4,
+        "shrunk": 0.2792
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2821,
+      "n": 39,
+      "shrunk": 0.291
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 15
      }
     }
    },
@@ -20242,6 +23252,85 @@
        "shrunk": 0.524
       }
      }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 15,
+       "instant": {
+        "value": 0.6667,
+        "n": 15,
+        "shrunk": 0.6568
+       },
+       "delayed": {
+        "value": 0.3333,
+        "n": 15,
+        "shrunk": 0.2995
+       },
+       "none": {
+        "value": 0.0,
+        "n": 15,
+        "shrunk": 0.0437
+       }
+      },
+      "mid_2_8": {
+       "n": 15,
+       "instant": {
+        "value": 0.4,
+        "n": 15,
+        "shrunk": 0.4441
+       },
+       "delayed": {
+        "value": 0.4667,
+        "n": 15,
+        "shrunk": 0.4101
+       },
+       "none": {
+        "value": 0.1333,
+        "n": 15,
+        "shrunk": 0.1458
+       }
+      },
+      "wide_gt8": {
+       "n": 1,
+       "instant": {
+        "value": 0.0,
+        "n": 1,
+        "shrunk": 0.1428
+       },
+       "delayed": {
+        "value": 0.0,
+        "n": 1,
+        "shrunk": 0.4905
+       },
+       "none": {
+        "value": 1.0,
+        "n": 1,
+        "shrunk": 0.3668
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.2903,
+      "n": 31,
+      "shrunk": 0.2974
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 12
+     }
     }
    },
    "performance": {
@@ -20621,6 +23710,85 @@
        "n": 1,
        "shrunk": 0.5989
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 12,
+       "instant": {
+        "value": 0.9167,
+        "n": 12,
+        "shrunk": 0.7496
+       },
+       "delayed": {
+        "value": 0.0833,
+        "n": 12,
+        "shrunk": 0.2026
+       },
+       "none": {
+        "value": 0.0,
+        "n": 12,
+        "shrunk": 0.0478
+       }
+      },
+      "mid_2_8": {
+       "n": 21,
+       "instant": {
+        "value": 0.4762,
+        "n": 21,
+        "shrunk": 0.4766
+       },
+       "delayed": {
+        "value": 0.4286,
+        "n": 21,
+        "shrunk": 0.3989
+       },
+       "none": {
+        "value": 0.0952,
+        "n": 21,
+        "shrunk": 0.1245
+       }
+      },
+      "wide_gt8": {
+       "n": 8,
+       "instant": {
+        "value": 0.0,
+        "n": 8,
+        "shrunk": 0.1071
+       },
+       "delayed": {
+        "value": 0.75,
+        "n": 8,
+        "shrunk": 0.5821
+       },
+       "none": {
+        "value": 0.25,
+        "n": 8,
+        "shrunk": 0.3108
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3659,
+      "n": 41,
+      "shrunk": 0.347
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 16
      }
     }
    },
@@ -21080,6 +24248,85 @@
        "n": 5,
        "shrunk": 0.583
       }
+     }
+    },
+    "engagement": {
+     "instant_window_s": [
+      -0.5,
+      0.1
+     ],
+     "max_wait_s": 2.0,
+     "by_aim_error": {
+      "tight_lt2": {
+       "n": 22,
+       "instant": {
+        "value": 0.6364,
+        "n": 22,
+        "shrunk": 0.6426
+       },
+       "delayed": {
+        "value": 0.2727,
+        "n": 22,
+        "shrunk": 0.2734
+       },
+       "none": {
+        "value": 0.0909,
+        "n": 22,
+        "shrunk": 0.084
+       }
+      },
+      "mid_2_8": {
+       "n": 20,
+       "instant": {
+        "value": 0.45,
+        "n": 20,
+        "shrunk": 0.4636
+       },
+       "delayed": {
+        "value": 0.3,
+        "n": 20,
+        "shrunk": 0.3339
+       },
+       "none": {
+        "value": 0.25,
+        "n": 20,
+        "shrunk": 0.2026
+       }
+      },
+      "wide_gt8": {
+       "n": 10,
+       "instant": {
+        "value": 0.1,
+        "n": 10,
+        "shrunk": 0.1333
+       },
+       "delayed": {
+        "value": 0.5,
+        "n": 10,
+        "shrunk": 0.51
+       },
+       "none": {
+        "value": 0.4,
+        "n": 10,
+        "shrunk": 0.3567
+       }
+      }
+     },
+     "fired_before_visible": {
+      "value": 0.3077,
+      "n": 52,
+      "shrunk": 0.3079
+     },
+     "delayed_reaction_s": {
+      "p10": 0.125,
+      "p25": 0.156,
+      "p50": 0.219,
+      "p75": 0.344,
+      "p90": 0.619,
+      "mean": 0.316,
+      "n": 2015,
+      "source": "baseline",
+      "player_n": 17
      }
     }
    },

@@ -25,14 +25,14 @@ O comando sai com código 1 se houver algum `FAIL` (`--fail-on WARN` também rec
 Quantas partidas simular: o ruído do relatório diminui com a raiz do número de partidas.
 **Com 1 a 3 partidas** quase nada é conclusivo; **com 20 ou mais** a calibração é apertada.
 
-## O que é medido (308 métricas)
+## O que é medido (325 métricas)
 
 | Grupo | Exemplos | Eventos necessários |
 |---|---|---|
 | `round.*` | vitória do CT, motivo do fim do round, duração, taxa e horário do plant, bombsite, defuse, kills por round, primeiro kill e quem vence depois dele | `round_*`, `freeze_end`, `kill`, `bomb` |
 | `econ.*` | vitória do CT por combinação de compras (full x eco...) | `freeze_end` |
 | `combat.*` | precisão por arma e distância, erro de mira da 1ª bala, tiros parado/agachado, tamanho da rajada, headshots, distância dos kills, ADR | `shot`, `damage`, `kill` |
-| `duel.*` | tempo de reação, vitória no duelo, mira no instante em que o inimigo aparece | `sighting` + `shot` + `kill` |
+| `duel.*` | tempo de reação, vitória no duelo, mira no instante em que o inimigo aparece, e quantas vezes o jogador atira instantaneamente, depois ou não atira ao ver um inimigo (por erro da mira) | `sighting` + `shot` + `kill` |
 | `tactic.*` | onde cada lado está aos 20, 40 e 60 s (por zona do mapa), quando acontece o primeiro contato, trocas de região por jogador, tempo de permanência em cada região, e o quanto o time troca de bombsite depois de se comprometer | `positions`, `damage` |
 | `buy.*` | tipo de compra, colete, capacete, kit, AWPs e granadas por jogador | `freeze_end` |
 
