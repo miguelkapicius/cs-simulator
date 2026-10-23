@@ -2,6 +2,20 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.3.0: decisão de bombsite (2026-10-23)
+
+Só acrescenta; nada que as versões anteriores entregaram mudou de formato.
+
+- `tactics.json` ganhou `site_decision`:
+  - `site_probability`: probabilidade de plant em cada bombsite a partir de quantos Ts e CTs há em cada zona (AUC 0,79 a 0,86 em partidas inéditas);
+  - `site_switch`: chance de o T abandonar o bombsite em que estava comprometido aos 30 s (58% em desvantagem de 2 ou mais, 4% com vantagem de 3 ou mais);
+  - `pre_contact_check`: o T acaba no lado com menos defensores mesmo nos rounds sem nenhuma luta antes (coef. −0,47; IC 95% −0,88 a −0,15 aos 20 s);
+  - `team_effects`: a equipe quase não muda a preferência de bombsite (p = 0,78) nem, de forma clara, a defesa do CT (p = 0,08).
+- Referência `plant_site_probability` e `site_switch_probability` em `reference/tactics.py` e ~440 novos vetores de teste.
+- Métricas de calibração `tactic.site_switch_rate` e `tactic.commit_A_share`.
+- **Correção de texto da 1.2.0:** a nota dizia que os 40 s iniciais de um round "não preveem o bombsite do plant". O que não funcionou foi o
+  agrupamento k-means; a contagem de Ts e CTs por zona prevê bem. `findings` e `docs/tactics.md` foram corrigidos.
+
 ## 1.2.0: camada tática (2026-10-23)
 
 Só acrescenta; tudo o que as versões anteriores entregaram continua válido.

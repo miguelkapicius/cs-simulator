@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.2.0",
+ "contract_version": "1.3.0",
  "generated_at": "2026-10-23",
  "source": {
   "matches": 28,
@@ -2833,6 +2833,17 @@
    "value": 0.56818,
    "desc": "Fração de rounds vencidos pelo CT."
   },
+  "tactic.commit_A_share": {
+   "kind": "prop",
+   "k": 161,
+   "n": 274,
+   "value": 0.58759,
+   "between": {
+    "matches": 28,
+    "sd": 0.18677
+   },
+   "desc": "Entre os mesmos rounds, fração em que o time estava comprometido com a zona A aos 30 s."
+  },
   "tactic.dwell_s": {
    "kind": "quantiles",
    "q": {
@@ -2907,6 +2918,17 @@
     "sd": 1.51064
    },
    "desc": "Trocas de região por jogador por round (amostras a 2 Hz)."
+  },
+  "tactic.site_switch_rate": {
+   "kind": "prop",
+   "k": 54,
+   "n": 274,
+   "value": 0.19708,
+   "between": {
+    "matches": 28,
+    "sd": 0.16044
+   },
+   "desc": "Entre os rounds com plant depois de 30 s, fração em que o time plantou no bombsite oposto à zona onde havia mais Ts aos 30 s."
   },
   "tactic.zone_share.CT.20s.A": {
    "kind": "mean",

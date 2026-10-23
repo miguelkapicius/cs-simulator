@@ -5,7 +5,7 @@ Não usa a geometria 3D: só o nome da região em que cada jogador está, a 8 am
 
 - Schemas: [`tactics.schema.json`](../schemas/tactics.schema.json) e [`tactics_playbook.schema.json`](../schemas/tactics_playbook.schema.json)
 - Referência executável: [`reference/tactics.py`](../reference/tactics.py)
-- **Vetores de teste:** [`test_vectors/tactics_vectors.json`](../test_vectors/tactics_vectors.json) (≈ 1.300 casos)
+- **Vetores de teste:** [`test_vectors/tactics_vectors.json`](../test_vectors/tactics_vectors.json) (≈ 1.700 casos)
 
 ## O que a Unity precisa fazer primeiro
 
@@ -26,6 +26,7 @@ A Unity precisa saber **em qual região cada bot está**. Isso exige marcar o ma
 | `engagements` | onde acontecem o primeiro contato e os kills (pares atacante/vítima) | onde os duelos acontecem |
 | `utility` | onde e quando cada lado joga cada granada | uso de utilitários |
 | `evaluation` | validação do `forecast` em partidas inéditas | confiança |
+| **`site_decision`** (nível raiz) | **probabilidade de plant em cada bombsite** e **chance de o T trocar de bombsite** conforme Ts e CTs por zona | decisão do T e leitura do CT |
 
 **Zona** de uma região: `A` ou `B` se, depois de passar por ela, o jogador visita aquele bombsite em ao menos 65% das vezes
 (fluxo dos atacantes; do CT onde o T quase não passa); `Mid` no meio-termo. É o que dá sentido a "rotação para o A" sem a geometria.
@@ -68,18 +69,77 @@ Para horizontes até 7,5 s usa-se a tabela de 5 s; acima disso, a de 10 s (ver `
 
 Anubis tem uma partida só (21 rounds) e não foi avaliado; suas tabelas existem, mas são frouxas.
 
+## Decisão do bombsite (`site_decision`)
+
+Onde o T planta não é sorteio: ele depende de **quantos Ts e quantos CTs há em cada zona (A e B)**. Dois modelos, validados em partidas
+que não viram (validação cruzada agrupada por partida):
+
+**1. Probabilidade de plant por bombsite** (`site_probability`). Um modelo por instante (15, 25, 35, 45 e 55 s); a Unity usa o mais próximo.
+
+| Instante | Rounds | AUC | Melhora da log-verossimilhança sobre a taxa-base do mapa |
+|---|---|---|---|
+| 15 s | 314 | 0,79 | +24% |
+| 25 s | 312 | 0,82 | +29% |
+| 35 s | 294 | 0,86 | +34% |
+| 45 s | 255 | 0,83 | +30% |
+| 55 s | 217 | 0,86 | +34% |
+
+```csharp
+// t_a, t_b: Ts vivos nas zonas A e B; ct_a, ct_b: CTs vivos nas zonas A e B
+double pA = Sigmoid(m.Intercept + m.MapIntercepts[map] + m.Coef["t_diff"] * (t_a - t_b) + m.Coef["ct_diff"] * (ct_a - ct_b));
+```
+
+O que pesa é onde os **Ts** já estão (comprometimento: a zona com mais Ts quase sempre é onde plantam), mas os **CTs** também contam:
+cada CT a mais no A em relação ao B reduz as chances de plant no A.
+
+**2. O T procura o lado mais fraco?** Essa é a hipótese de que o time "encontra o desequilíbrio e avança por ele". Os dados a sustentam:
+
+- **Antes de qualquer luta.** Se o T planta onde há menos defensores só porque mata CTs ali, o efeito sumiria nos rounds em que ainda não houve nenhuma
+  luta. Olhando só esses rounds, a disposição dos CTs é a original, e o efeito **continua** (aos 20 s: coeficiente −0,47, IC 95% de −0,88 a
+  −0,15; cada CT a mais no A em relação ao B multiplica por cerca de 0,63 as chances de plant no A; 121 rounds). Ou seja, o T acaba no
+  lado que tinha menos defensores desde o início (`pre_contact_check`).
+- **Troca de bombsite** (`site_switch`). Entre os times "comprometidos" aos 30 s com uma zona (a que tem mais Ts), 20% acabam plantando no outro
+  bombsite, e a chance depende de quão bem o ataque está indo:
+
+  | Vantagem numérica na zona do ataque (Ts − CTs) | Trocam de bombsite | Rounds |
+  |---|---|---|
+  | desvantagem de 2 ou mais | **58%** | 12 |
+  | −1 | 37% | 19 |
+  | 0 | 24% | 45 |
+  | +1 | 23% | 57 |
+  | +2 | 18% | 72 |
+  | vantagem de 3 ou mais | **4%** | 69 |
+
+  Mesmo fixando quantos Ts atacam ali, mais CTs defendendo aumentam a troca (coeficiente +0,45, IC 95% de +0,10 a +0,96), assim como ter parte do time
+  já no outro lado (+0,80). O ganho do modelo é moderado: AUC 0,71 e +9% de log-verossimilhança sobre a taxa de troca do mapa. A troca varia por
+  mapa (Nuke 43%, Dust2 12%).
+
+```csharp
+double pSwitch = Sigmoid(s.Intercept + s.MapIntercepts[map] + s.Coef["t_here"] * tHere + s.Coef["ct_here"] * ctHere
+                        + s.Coef["t_other"] * tOther + s.Coef["ct_other"] * ctOther);   // aos ~30 s, antes do plant
+```
+
+**Cuidados**
+- Os modelos usam o **estado verdadeiro** (quem está em qual zona). No jogo, o time só sabe o que viu. Na simulação, passe só o que o time
+  conhece (por exemplo, CTs avistados ou mortos).
+- Há ~300 plants. Os coeficientes têm intervalos largos, e a tabela de troca tem poucos rounds nas pontas (12 rounds de desvantagem grande).
+- **Equipes.** A identidade da equipe quase não muda a preferência de bombsite do T (p = 0,78) e não muda de forma clara a defesa do CT (p = 0,08).
+  Só 9 de 30 pares (mapa, equipe de CT) têm 20 ou mais rounds, então perfis por equipe ainda não se sustentam. Com mais demos o teste (`pipeline/site_decision.py`) pode
+  ser repetido.
+
 ## O que foi testado e NÃO funcionou (por isso não está no contrato)
 
-Tentamos agrupar os rounds em **planos de ataque** e **setups de CT** (k-means sobre onde o time está a cada 20 s). Parecia bom: os grupos
-eram interpretáveis ("execute rápido no B por Apartments", "split pelo TRamp"). Mas, medido em partidas inéditas:
+Tentamos agrupar os rounds em **planos de ataque** e **setups de CT** (k-means sobre onde o time está a cada 20 s). Parecia bom: os grupos eram interpretáveis
+("execute rápido no B por Apartments", "split pelo TRamp"). Mas, medido em partidas inéditas:
 
-- **Os 40 s iniciais de um round não preveem o bombsite do plant.** Em 5 dos 6 mapas o acerto foi igual ou pior que apostar sempre na
-  classe mais comum (por exemplo, Nuke 41% contra 52% e Dust2 31% contra 51%). Só na Cache ficou acima (57% contra 50%), com amostra pequena.
+- **O agrupamento não previu o bombsite do plant.** Em 5 dos 6 mapas o acerto foi igual ou pior que apostar sempre na classe mais comum
+  (por exemplo, Nuke 41% contra 52% e Dust2 31% contra 51%). Só na Cache ficou acima (57% contra 50%), com amostra pequena.
 - **Conhecer o plano não melhorou a previsão de posição** (de −10% a +3%), nem definindo o plano pelo desfecho (bombsite e rapidez do plant).
 - Com 60 a 145 rounds por mapa, condicionar a posição a qualquer rótulo estratégico dilui os dados.
 
-Ou seja, os "planos" eram uma divisão arbitrária de um contínuo de comportamentos. Por isso a coordenação do time vem do **playbook**
-(rounds reais inteiros), que não depende de classificar nada.
+Atenção: isso **não** quer dizer que o começo do round é imprevisível. O que falhou foi o agrupamento. Uma medida direta, quantos Ts e CTs há
+em cada zona, prevê bem o bombsite (seção acima). Por isso a coordenação do time vem do **playbook** (rounds reais inteiros) e da
+**decisão do bombsite**, e não de "planos" classificados.
 
 ## Limites desta versão
 

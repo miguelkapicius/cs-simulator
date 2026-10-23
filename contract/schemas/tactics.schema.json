@@ -4,7 +4,7 @@
   "title": "tactics.json",
   "description": "Camada tática no nível de regiões (callouts): grafo, ocupação, previsão de posição, pós-plant, rotação, contato e utilitários, por mapa (ver contract/docs/tactics.md). Semântica exata em contract/reference/tactics.py.",
   "type": "object",
-  "required": ["schema_version", "contract_version", "generated_at", "source", "conventions", "findings", "maps"],
+  "required": ["schema_version", "contract_version", "generated_at", "source", "conventions", "findings", "site_decision", "maps"],
   "properties": {
     "schema_version": { "const": "1.0" },
     "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
@@ -12,9 +12,32 @@
     "source": { "type": "object", "required": ["matches", "rounds", "sample_hz", "rounds_by_map"] },
     "conventions": { "type": "array", "items": { "type": "string" } },
     "findings": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+    "site_decision": {
+      "type": "object", "required": ["site_probability", "site_switch", "pre_contact_check", "team_effects"],
+      "properties": {
+        "site_probability": {
+          "type": "object", "required": ["features", "definition", "formula", "usage", "models"],
+          "properties": { "models": { "type": "array", "minItems": 3, "items": { "$ref": "#/$defs/logit" } } }
+        },
+        "site_switch": {
+          "allOf": [{ "$ref": "#/$defs/logit" }],
+          "required": ["t", "n_rounds", "switch_rate", "features", "definition", "formula", "coefficient_ci95", "by_local_advantage", "evaluation"]
+        },
+        "pre_contact_check": { "type": "array", "minItems": 2 },
+        "team_effects": { "type": "object" }
+      }
+    },
     "maps": { "type": "object", "minProperties": 5, "additionalProperties": { "$ref": "#/$defs/map" } }
   },
   "$defs": {
+    "logit": {
+      "type": "object", "required": ["intercept", "coefficients", "map_intercepts", "evaluation"],
+      "properties": {
+        "intercept": { "type": "number" }, "coefficients": { "type": "object", "additionalProperties": { "type": "number" } },
+        "map_intercepts": { "type": "object", "additionalProperties": { "type": "number" } },
+        "evaluation": { "type": "object", "required": ["auc", "log_loss", "baseline_log_loss", "improvement_pct"] }
+      }
+    },
     "probs": { "type": "object", "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 } },
     "quantiles": { "type": ["object", "null"] },
     "place": {

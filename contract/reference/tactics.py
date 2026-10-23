@@ -10,7 +10,10 @@ A versão em C# deve devolver os mesmos números para as mesmas entradas
   rotation(model, map, contact_zone, own_zone)  -> como um CT reage ao primeiro contato
   round_weights(playbook, map, t_buy)           -> peso de cada round do playbook para sortear [(id, peso)]
   place_at(round, side, player_index, t)        -> região (índice) do jogador do round gravado em t, ou None se já morreu
+  plant_site_probability(model, map, t, t_a, t_b, ct_a, ct_b) -> {"A": p, "B": 1-p}: onde o T vai plantar
+  site_switch_probability(model, map, t_here, ct_here, t_other, ct_other) -> chance do T abandonar o bombsite em que está comprometido
 """
+import math
 
 
 def _map(model, map_):
@@ -60,3 +63,33 @@ def place_at(round_, side, player_index, t):
         if t_in <= t < t_out:
             return place
     return None
+
+
+def _sigmoid(x):
+    if x >= 0:
+        return 1.0 / (1.0 + math.exp(-x))
+    e = math.exp(x)
+    return e / (1.0 + e)
+
+
+def plant_site_probability(model, map_, t, t_a, t_b, ct_a, ct_b):
+    """Probabilidade do plant em cada bombsite, antes de a bomba ser plantada.
+
+    t_a, t_b: Ts vivos nas zonas A e B; ct_a, ct_b: CTs vivos nas zonas A e B, no instante t (s desde o fim do freeze time).
+    Usa o modelo cujo instante está mais perto de t (empate: o anterior). Mapa desconhecido usa intercepto 0.
+    """
+    models = model["site_decision"]["site_probability"]["models"]
+    m = min(models, key=lambda x: (abs(x["t"] - t), x["t"]))
+    x = (m["intercept"] + m["map_intercepts"].get(map_, 0.0)
+         + m["coefficients"]["t_diff"] * (t_a - t_b) + m["coefficients"]["ct_diff"] * (ct_a - ct_b))
+    p = _sigmoid(x)
+    return {"A": p, "B": 1.0 - p}
+
+
+def site_switch_probability(model, map_, t_here, ct_here, t_other, ct_other):
+    """Chance de o time abandonar o bombsite em que estava comprometido aos 30 s (here = a zona do compromisso, other = a outra)."""
+    m = model["site_decision"]["site_switch"]
+    c = m["coefficients"]
+    x = (m["intercept"] + m["map_intercepts"].get(map_, 0.0) + c["t_here"] * t_here + c["ct_here"] * ct_here
+         + c["t_other"] * t_other + c["ct_other"] * ct_other)
+    return _sigmoid(x)

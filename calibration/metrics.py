@@ -252,7 +252,7 @@ def zone_share_metrics(pos, zones_wanted, suffix=""):
     return m
 
 
-def tactic_metrics(t, zones):
+def tactic_metrics(t, zones, r=None):
     m = {}
     dmg = t["damages"]
     contact = dmg[~dmg["after_round_end"] & dmg["attacker_steamid"].notna() & (dmg["attacker_side"] != dmg["user_side"])]
@@ -268,6 +268,18 @@ def tactic_metrics(t, zones):
     for mp in sorted(rounds_by_map.index):
         if rounds_by_map[mp] >= MIN_MAP_ROUNDS:
             m.update(zone_share_metrics(pos[pos["map"] == mp], ("A", "B"), f"@{mp}"))
+
+    # Compromisso e troca de bombsite: o time está "comprometido" com a zona (A ou B) onde há mais Ts aos 30 s
+    if r is not None:
+        c30 = pos[(pos["side"] == "T") & (pos["k"] == 30 * POSITION_HZ)].groupby(KEY + ["zone"]).size().unstack(fill_value=0)
+        for z in ("A", "B"):
+            if z not in c30:
+                c30[z] = 0
+        c30["commit"] = np.where(c30.A > c30.B, "A", np.where(c30.B > c30.A, "B", ""))
+        j = c30[c30.commit != ""].join(r.set_index(KEY)[["planted", "plant_site", "plant_time_s"]], how="inner")
+        j = j[j.planted & j.plant_site.isin(["A", "B"]) & (j.plant_time_s > 30)]
+        m["tactic.site_switch_rate"] = prop((j.commit != j.plant_site).sum(), len(j))
+        m["tactic.commit_A_share"] = prop((j.commit == "A").sum(), len(j))
 
     # Movimento: trocas de região por jogador e tempo de permanência (amostras consecutivas a POSITION_HZ)
     pos = pos.sort_values(KEY + ["player", "k"])
@@ -295,7 +307,7 @@ def compute_metrics(t, zones=None):
     m.update(combat_metrics(t))
     m.update(duel_metrics(t))
     m.update(buy_metrics(t))
-    m.update(tactic_metrics(t, zones))
+    m.update(tactic_metrics(t, zones, r))
     return m
 
 
@@ -331,6 +343,8 @@ DESCRIPTIONS = {
     "duel.reaction_time_s": "Tempo entre ver o inimigo e o primeiro tiro mirado nele.",
     "duel.crosshair_placement_deg": "Erro de mira (graus) no instante em que o inimigo aparece.",
     "tactic.zone_share": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round.",
+    "tactic.site_switch_rate": "Entre os rounds com plant depois de 30 s, fração em que o time plantou no bombsite oposto à zona onde havia mais Ts aos 30 s.",
+    "tactic.commit_A_share": "Entre os mesmos rounds, fração em que o time estava comprometido com a zona A aos 30 s.",
     "tactic.first_contact_s": "Tempo do primeiro dano entre lados opostos no round.",
     "tactic.place_changes_per_player": "Trocas de região por jogador por round (amostras a 2 Hz).",
     "tactic.dwell_s": "Tempo contínuo que um jogador fica numa mesma região (amostras a 2 Hz).",

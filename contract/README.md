@@ -28,9 +28,9 @@ partidas reais. O comparador diz o quanto falta.
 | `artifacts/player_profiles.json` | **como cada jogador joga**: reação, mira, precisão, duelos, estilo, posições |
 | `artifacts/game_rules.json` | **como o CS2 funciona**: armas, dano, colete, economia, tempos, bomba, granadas |
 | `artifacts/weapon_dynamics.json` | **como a arma se comporta ao atirar**: padrão e escala do recuo, reinício da rajada, penalidade de precisão, penetração |
-| `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, e as rotas de 599 rounds reais |
+| `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, **probabilidade de plant por bombsite**, e as rotas de 599 rounds reais |
 | `artifacts/team_model.json` | **decisões do time**: chance de vencer o round, tipo de compra, plano de ataque |
-| `artifacts/calibration_targets.json` | **o que a simulação precisa reproduzir** (306 métricas do jogo real) |
+| `artifacts/calibration_targets.json` | **o que a simulação precisa reproduzir** (308 métricas do jogo real) |
 | `schemas/` | JSON Schema de cada artefato e do log; define o formato exato |
 | `docs/` | explicação de cada artefato, do log e da calibração |
 | `test_vectors/*.json` | entradas e saídas esperadas do modelo de time e do recuo, para testar o C# |

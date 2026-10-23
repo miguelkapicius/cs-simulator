@@ -30,6 +30,7 @@ from scipy.spatial import cKDTree
 from calibration.metrics import KEY
 from contract.reference import tactics as ref
 from pipeline.common import ARTIFACTS_DIR, BUY_TYPES, CONTRACT_VERSION, DATA_DIR, UNIT_TO_M, VECTORS_DIR
+from pipeline import site_decision as sdec
 from pipeline.tactics_data import SAMPLE_HZ, load_positions, load_rounds, runs
 
 BUCKET_S = 5
@@ -359,7 +360,17 @@ def build_playbook(Pm, Rm, runs_m, names):
 
 def make_vectors(model, playbook):
     """Entradas e saídas esperadas de contract/reference/tactics.py, para a versão em C#."""
-    out = {"zone": [], "next_places": [], "occupancy": [], "forecast": [], "rotation": [], "round_weights": [], "place_at": []}
+    out = {"zone": [], "next_places": [], "occupancy": [], "forecast": [], "rotation": [], "round_weights": [], "place_at": [],
+           "plant_site": [], "site_switch": []}
+    sd_maps = sorted(model["site_decision"]["site_switch"]["map_intercepts"]) + ["de_desconhecido"]
+    for mp in sd_maps:
+        for t in (5.0, 15.0, 20.0, 30.0, 40.0, 55.0, 80.0):
+            for ta, tb, ca, cb in ((0, 0, 2, 2), (3, 1, 2, 2), (1, 3, 2, 2), (2, 2, 3, 1), (2, 2, 1, 3), (5, 0, 0, 0), (4, 1, 2, 1)):
+                out["plant_site"].append({"input": {"map": mp, "t": t, "t_a": ta, "t_b": tb, "ct_a": ca, "ct_b": cb},
+                                          "expected": ref.plant_site_probability(model, mp, t, ta, tb, ca, cb)})
+        for th, ch, to, co in ((4, 0, 1, 2), (4, 3, 1, 1), (2, 3, 2, 1), (1, 2, 4, 0), (5, 1, 0, 2), (3, 2, 2, 2)):
+            out["site_switch"].append({"input": {"map": mp, "t_here": th, "ct_here": ch, "t_other": to, "ct_other": co},
+                                       "expected": ref.site_switch_probability(model, mp, th, ch, to, co)})
     for mp, m in model["maps"].items():
         names = sorted(m["places"])
         for place in names[:: max(len(names) // 5, 1)][:6] + ["RegiaoQueNaoExiste"]:
@@ -425,6 +436,21 @@ def main():
         print(f"{mp}: {len(places)} regiões, {len(playbook[mp]['rounds'])} rounds no playbook | previsão 5s {ev['5s']['improvement_pct']:+.0f}%, 10s {ev['10s']['improvement_pct']:+.0f}% sobre a ocupação"
               if ev else f"{mp}: {len(places)} regiões (poucas partidas para avaliar)")
 
+    # Decisão de bombsite do T (probabilidade de plant por bombsite e troca de lado)
+    zone_of = {mp: {pl_: i["zone"] for pl_, i in m["places"].items()} for mp, m in maps.items()}
+    P["zone"] = [zone_of[mp][pl_] for mp, pl_ in zip(P["map"], P.place)]
+    P["k"] = (P.t * SAMPLE_HZ).round().astype(int)
+    dm_all = dmg[(~dmg.after_round_end) & dmg.attacker_steamid.notna() & (dmg.attacker_side != dmg.user_side)]
+    first_contact = dm_all.groupby(KEY).round_time.min().rename("first_contact")
+    site_decision = {
+        "site_probability": sdec.fit_site_probability(P, R),
+        "site_switch": sdec.fit_switch(P, R),
+        "pre_contact_check": sdec.pre_contact_check(P, R, first_contact),
+        "team_effects": sdec.team_effects(P, R),
+    }
+    print("decisão de bombsite:", [(m["t"], m["evaluation"]["auc"]) for m in site_decision["site_probability"]["models"]],
+          "| troca AUC", site_decision["site_switch"]["evaluation"]["auc"])
+
     base = {"schema_version": "1.0", "contract_version": CONTRACT_VERSION, "generated_at": date.today().isoformat()}
     source = {"matches": int(P.match.nunique()), "rounds": int(len(R)), "sample_hz": SAMPLE_HZ,
               "rounds_by_map": {mp: m["n_rounds"] for mp, m in maps.items()}}
@@ -438,10 +464,15 @@ def main():
             "forecast[lado]['5s'][região].p é a distribuição da região do jogador 5 s depois, dado que está nessa região agora (e continua vivo).",
         ],
         "findings": [
-            "Agrupar os rounds em 'planos' (k-means) não previu o bombsite do plant com os 40 s iniciais de partidas inéditas (em 5 de 6 mapas o acerto foi igual ou pior que apostar na classe mais comum) e não melhorou a previsão de posição (de -10% a +3%); por isso não há planos no contrato.",
+            "Agrupar os rounds em 'planos' (k-means sobre janelas de 20 s) não previu o bombsite do plant em partidas inéditas (em 5 de 6 mapas o acerto foi igual ou pior que apostar na classe mais comum) e não melhorou a previsão de posição (de -10% a +3%); por isso não há planos no contrato.",
+            "Uma medida simples funciona bem: quantos Ts e CTs há em cada zona (A/B) aos 15-55 s prevê o bombsite do plant com AUC de 0,79 a 0,86 em partidas inéditas (site_decision.site_probability).",
+            "O T tende a acabar no lado com menos defensores: cada CT a mais no A em relação ao B reduz a chance de plant no A (coef. -0,47; IC95% -0,88 a -0,15 aos 20 s), e isso persiste nos rounds em que ainda não houve nenhuma luta, então não é só o T matando CTs onde ataca (site_decision.pre_contact_check).",
+            "O T abandona o bombsite em que está comprometido com mais frequência quando está em desvantagem numérica ali: 58% se a desvantagem é de 2 ou mais, 4% se a vantagem é de 3 ou mais (site_decision.site_switch).",
+            "A equipe quase não muda a preferência de bombsite do T (p = 0,78) nem muda de forma clara a defesa do CT (p = 0,08); só 9 de 30 pares (mapa, equipe de CT) têm 20 ou mais rounds, então perfis por equipe ainda não se sustentam.",
             "A região atual prevê a região futura bem melhor que a ocupação por tempo (+53% a +58% em 5 s, +35% a +41% em 10 s, em partidas inéditas).",
             "Para o comportamento coordenado do time, use o playbook (tactics_playbook.json): rounds reais com as rotas dos cinco jogadores.",
         ],
+        "site_decision": site_decision,
         "maps": maps,
     }
     (ARTIFACTS_DIR / "tactics_playbook.json").write_text(json.dumps({**base, "source": source, "maps": playbook}, ensure_ascii=False, separators=(",", ":")))

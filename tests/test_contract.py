@@ -328,3 +328,34 @@ def test_tactic_metrics_on_example():
     m = compute_metrics(t)
     assert "tactic.place_changes_per_player" in m and "tactic.dwell_s" in m
     assert any(k.startswith("tactic.zone_share.T.20s.") for k in m)
+
+
+# ---------- decisão de bombsite ----------
+
+def test_plant_site_probability_follows_attackers_and_defenders(tactics):
+    base = tac.plant_site_probability(tactics, "de_mirage", 35.0, 2, 2, 2, 2)
+    assert base["A"] + base["B"] == pytest.approx(1.0)
+    assert tac.plant_site_probability(tactics, "de_mirage", 35.0, 4, 0, 2, 2)["A"] > base["A"]       # mais Ts no A
+    assert tac.plant_site_probability(tactics, "de_mirage", 35.0, 2, 2, 4, 0)["A"] < base["A"]       # mais CTs no A
+    assert tac.plant_site_probability(tactics, "de_mirage", 34.0, 3, 1, 1, 3) == tac.plant_site_probability(tactics, "de_mirage", 35.0, 3, 1, 1, 3)
+    assert 0 < tac.plant_site_probability(tactics, "de_mapa_novo", 35.0, 3, 1, 1, 3)["A"] < 1
+
+
+def test_site_switch_probability_is_monotonic(tactics):
+    f = lambda **kw: tac.site_switch_probability(tactics, "de_mirage", **{"t_here": 3, "ct_here": 2, "t_other": 1, "ct_other": 1, **kw})
+    assert f(ct_here=0) < f(ct_here=3)          # mais defensores onde atacam: troca mais
+    assert f(t_here=5) < f(t_here=1)            # ataque mais forte: troca menos
+    assert f(t_other=0) < f(t_other=3)          # parte do time já no outro lado: troca mais
+
+
+def test_site_decision_models_are_validated(tactics):
+    sd = tactics["site_decision"]
+    assert all(m["evaluation"]["auc"] > 0.7 and m["evaluation"]["improvement_pct"] > 15 for m in sd["site_probability"]["models"])
+    assert sd["site_switch"]["evaluation"]["auc"] > 0.65
+    quiet = [c for c in sd["pre_contact_check"] if c["t"] in (20, 25) and "sem nenhuma luta" in c["rounds"]]
+    assert quiet and all(c["ct_diff"]["ci95"][1] < 0 for c in quiet)      # o efeito dos CTs persiste antes de qualquer luta
+
+
+def test_site_metrics_exist_in_targets():
+    targets = json.loads((ARTIFACTS_DIR / "calibration_targets.json").read_text())["metrics"]
+    assert "tactic.site_switch_rate" in targets and "tactic.commit_A_share" in targets

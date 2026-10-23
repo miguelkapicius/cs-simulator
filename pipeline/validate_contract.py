@@ -123,6 +123,8 @@ def check_tactics_vectors():
         "rotation": lambda i: tac.rotation(model, i["map"], i["contact_zone"], i["own_zone"]),
         "round_weights": lambda i: (lambda w: {"n": len(w), "weight": w[0][1], "first_ids": [x[0] for x in w[:3]]})(tac.round_weights(playbook, i["map"], i["t_buy"])),
         "place_at": lambda i: tac.place_at(by_id[i["map"]][i["round_id"]], i["side"], i["player_index"], i["t"]),
+        "plant_site": lambda i: tac.plant_site_probability(model, i["map"], i["t"], i["t_a"], i["t_b"], i["ct_a"], i["ct_b"]),
+        "site_switch": lambda i: tac.site_switch_probability(model, i["map"], i["t_here"], i["ct_here"], i["t_other"], i["ct_other"]),
     }
     for name, fn in fns.items():
         for k, case in enumerate(vec[name]):
