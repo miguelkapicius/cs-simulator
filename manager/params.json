@@ -1,0 +1,12 @@
+{
+  "season_weeks": 48,
+  "cash_reserve_weeks": 8,
+  "salary_bands": {
+    "1": {"star": [50000, 100000], "regular": [15000, 50000]},
+    "2": {"all": [1000, 5000]},
+    "3": {"all": [1000, 5000]}
+  },
+  "weights": {"money": 0.35, "team": 0.25, "prestige": 0.15, "role": 0.15, "reputation": 0.10},
+  "hype_half_life_weeks": 12,
+  "buyout": {"interest_step": 0.15}
+}
