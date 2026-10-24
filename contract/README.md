@@ -14,7 +14,7 @@ Dois sentidos, e só dois:
 
 | Sentido | O quê | Onde está definido |
 |---|---|---|
-| Algoritmo ➜ Unity | `player_profiles.json`, `game_rules.json`, `weapon_dynamics.json`, `team_model.json`, `tactics.json`, `tactics_playbook.json` | `artifacts/`, `schemas/`, `docs/` |
+| Algoritmo ➜ Unity | `player_profiles.json`, `game_rules.json`, `weapon_dynamics.json`, `team_model.json`, `tactics.json`, `tactics_playbook.json`, `elite_players.json` | `artifacts/`, `schemas/`, `docs/` |
 | Unity ➜ Algoritmo | `sim_log.jsonl` (o que aconteceu na simulação) | `schemas/sim_log.schema.json`, `docs/sim_log.md` |
 
 A ideia central: **os dados reais são a especificação**. A mecânica 3D é ajustada até que o log dela dê as mesmas estatísticas das
@@ -27,6 +27,7 @@ partidas reais. O comparador diz o quanto falta.
 | `VERSION`, `CHANGELOG.md` | versão do contrato e o que mudou |
 | `artifacts/player_profiles.json` | **como cada jogador joga**: reação, mira, precisão, duelos, estilo, posições |
 | `artifacts/game_rules.json` | **como o CS2 funciona**: armas, dano, colete, economia, tempos, bomba, granadas |
+| `artifacts/elite_players.json` | **os jogadores para mostrar no produto**: o mesmo comportamento de `player_profiles.json`, com codinome, país e idade ficcionais e **sem nome, steamid nem time reais** ([`docs/elite_players.md`](docs/elite_players.md)) |
 | `artifacts/weapon_dynamics.json` | **como a arma se comporta ao atirar**: padrão e escala do recuo, reinício da rajada, penalidade de precisão, penetração |
 | `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, **probabilidade de plant por bombsite**, e as rotas de 599 rounds reais |
 | `artifacts/team_model.json` | **decisões do time**: chance de vencer o round, tipo de compra, plano de ataque |

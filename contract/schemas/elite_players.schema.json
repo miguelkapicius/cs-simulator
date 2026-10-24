@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/elite_players.schema.json",
+  "title": "elite_players.json",
+  "description": "Os jogadores de comportamento real com identidade ficcional (ver contract/docs/elite_players.md). Não tem nome, steamid nem time reais; o `profile` repete o comportamento medido de player_profiles.json.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "seed", "players"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "seed": { "type": "integer" },
+    "players": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["pid", "codename", "country", "role", "age", "tier", "skill", "hidden", "hype", "form", "profile"],
+        "additionalProperties": false,
+        "properties": {
+          "pid": { "type": "string", "pattern": "^e\\d{2,}$" },
+          "codename": { "type": "string", "minLength": 3 },
+          "country": { "type": "string", "pattern": "^[A-Z]{2}$" },
+          "role": { "enum": ["awper", "rifler"] },
+          "age": { "type": "integer", "minimum": 16, "maximum": 45 },
+          "tier": { "type": "integer", "minimum": 1, "maximum": 3 },
+          "skill": { "type": "number", "minimum": 0, "maximum": 100 },
+          "hidden": {
+            "type": "object", "minProperties": 5,
+            "additionalProperties": { "type": "number", "minimum": 0, "maximum": 100 }
+          },
+          "hype": { "type": "number", "minimum": 0, "maximum": 100 },
+          "form": { "type": "number" },
+          "profile": {
+            "type": "object",
+            "required": ["role_tags", "mechanics", "performance", "weapons", "positions"],
+            "additionalProperties": false,
+            "properties": {
+              "role_tags": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+              "mechanics": { "type": "object" },
+              "performance": { "type": "object" },
+              "weapons": { "type": "object" },
+              "positions": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

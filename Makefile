@@ -1,11 +1,11 @@
 PY := .venv/bin/python
 VERSION := $(shell cat contract/VERSION)
 
-.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards validate test lint refresh package help manager-sim
+.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards elite validate test lint refresh package help manager-sim
 
 help:
 	@echo "make setup     cria o ambiente Python (.venv)"
-	@echo "make refresh   regera TUDO a partir das demos (extract, simlogs, profiles, rules, dynamics, tactics, targets, team, shards, validate)"
+	@echo "make refresh   regera TUDO a partir das demos (extract, simlogs, profiles, rules, dynamics, tactics, targets, team, shards, elite, validate)"
 	@echo "make validate  confere os artefatos contra os schemas e os vetores de teste"
 	@echo "make test      testes automatizados      make lint   verificação estática"
 	@echo "make manager-sim  simula 3 temporadas da economia do manager e resume o resultado"
@@ -41,6 +41,9 @@ team:
 shards:
 	$(PY) -W ignore -m pipeline.build_shards
 
+elite:
+	$(PY) -m pipeline.build_elite_players
+
 validate:
 	$(PY) -m pipeline.validate_contract
 
@@ -53,7 +56,7 @@ lint:
 manager-sim:
 	$(PY) -m manager.sim --seed 1 --seasons 3
 
-refresh: extract simlogs profiles rules dynamics tactics targets team shards validate
+refresh: extract simlogs profiles rules dynamics tactics targets team shards elite validate
 
 package: validate
 	@mkdir -p dist

@@ -4,6 +4,7 @@ import pytest
 from manager.game import (advance_to_next_decision, advance_week, load_game, make_offer, new_game,
                           release_player, save_game)
 from manager.models import Offer
+from tests.test_manager_identity import n_real_profiles
 
 
 def tier_sizes(w):
@@ -25,8 +26,8 @@ def test_new_game_world_shape():
     human = w.clubs[w.human_cid]
     assert human.tier == 3 and human.is_human and human.name == "Aurora"
     assert all(len(c.roster) == 7 for c in w.clubs.values())
-    assert sum(1 for p in w.players.values() if p.profile_ref is not None) == 40
-    assert 40 <= sum(1 for p in w.players.values() if p.club_id is None) <= 80
+    assert sum(1 for p in w.players.values() if p.profile_ref is not None) == n_real_profiles()
+    assert sum(1 for p in w.players.values() if p.club_id is None) >= 60  # 60 gerados; elites que não cabem nos clubes também ficam livres
 
 
 def test_new_game_is_deterministic_and_difficulty_changes_the_budget():

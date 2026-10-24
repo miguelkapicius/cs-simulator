@@ -2,6 +2,17 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.6.0: jogadores de elite sem identidade real (2026-10-24)
+
+Só acrescenta; `player_profiles.json` e todo o resto continuam iguais.
+
+- `elite_players.json` (novo): um jogador por perfil real, com **codinome, país e idade ficcionais** e o comportamento medido intacto
+  (`profile.mechanics`, `performance`, `weapons`, `positions`, `role_tags`). Também traz os atributos que o modo manager usa
+  (`skill`, `hidden`, `hype`, `form`, `tier`). Não tem `name`, `steamid`, `team` nem o bloco `source` (que cita times e demos).
+- Gerado com semente fixa (`pipeline/build_elite_players.py`, `make elite`), então é reproduzível.
+- `make validate` confere o schema e varre o arquivo atrás de qualquer nome, steamid ou time reais (inclusive em texto solto).
+- **Aviso:** `player_profiles.json` e as fatias de `sharded/players/` ainda carregam `name` e `steamid` reais. Para mostrar jogadores num produto, use `elite_players.json`.
+
 ## 1.5.0: arquivos independentes por jogador, time e mapa (2026-10-24)
 
 Só acrescenta; os arquivos únicos de `artifacts/` continuam iguais.

@@ -12,9 +12,13 @@ def real_identifiers():
     return {p["name"] for p in d["players"]} | {p["steamid"] for p in d["players"]}
 
 
-def test_elite_has_40_players_and_no_real_identifier():
+def n_real_profiles():
+    return len(json.load(open(ARTIFACTS_DIR / "player_profiles.json", encoding="utf-8"))["players"])
+
+
+def test_elite_has_one_player_per_profile_and_no_real_identifier():
     players = elite_players(seed=1)
-    assert len(players) == 40
+    assert len(players) == n_real_profiles() >= 40
     dump = json.dumps([p.to_dict() for p in players])
     for ident in real_identifiers():
         assert '"%s"' % ident not in dump
@@ -37,5 +41,5 @@ def test_elite_skill_is_between_70_and_98():
 
 def test_elite_keeps_role_and_links_back_to_the_profile():
     players = elite_players(1)
-    assert {p.profile_ref for p in players} == {str(i) for i in range(40)}
+    assert {p.profile_ref for p in players} == {str(i) for i in range(n_real_profiles())}
     assert any(p.role == "awper" for p in players)

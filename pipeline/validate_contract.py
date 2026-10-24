@@ -4,6 +4,7 @@ Uso: .venv/bin/python -m pipeline.validate_contract
 Sai com código 1 se algo estiver fora do contrato.
 """
 import json
+import re
 import sys
 
 from jsonschema import Draft202012Validator
@@ -24,6 +25,7 @@ ARTIFACT_SCHEMAS = {
     "weapon_dynamics.json": "weapon_dynamics.schema.json",
     "tactics.json": "tactics.schema.json",
     "tactics_playbook.json": "tactics_playbook.schema.json",
+    "elite_players.json": "elite_players.schema.json",
 }
 MAX_ERRORS = 8
 
@@ -205,6 +207,25 @@ def check_shards(reg):
     return problems
 
 
+def check_elite_identity(doc=None):
+    """elite_players.json não pode carregar nome, steamid nem time reais, nem em texto solto."""
+    if doc is None:
+        path = ARTIFACTS_DIR / "elite_players.json"
+        if not path.exists():
+            return ["elite_players.json ausente (rode make elite)"]
+        doc = json.loads(path.read_text())
+    real = json.loads((ARTIFACTS_DIR / "player_profiles.json").read_text())["players"]
+    dump = json.dumps(doc, ensure_ascii=False)
+    problems = []
+    idents = {x for p in real for x in (p["name"], p["steamid"], p["team"])}
+    for ident in sorted(idents):
+        if f'"{ident}"' in dump or any(c["codename"].lower() == ident.lower() for c in doc["players"]):
+            problems.append(f"elite_players.json contém a identidade real {ident!r}")
+    if re.search(r"\d{17}", dump):
+        problems.append("elite_players.json contém um número de 17 dígitos (parece steamid)")
+    return problems
+
+
 def check_example():
     path = EXAMPLES_DIR / "sim_log_example.jsonl"
     if not path.exists():
@@ -221,6 +242,7 @@ def main():
                 "vetores de recuo x referência": check_weapon_vectors(),
                 "vetores da camada tática x referência": check_tactics_vectors(),
                 "fatias independentes (manifesto, hashes, remontagem)": check_shards(reg),
+                "elite_players sem identidade real": check_elite_identity(),
                 "log de exemplo": check_example()}
     bad = 0
     print(f"Contrato {CONTRACT_VERSION} ({CONTRACT_DIR.name}/)")
