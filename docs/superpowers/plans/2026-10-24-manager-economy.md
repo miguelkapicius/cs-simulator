@@ -34,7 +34,7 @@ Entradas e condições que a spec implica e nenhuma tarefa exercitaria sozinha, 
 
 ---
 
-### Tarefa 1: Modelos e parâmetros
+### Task 1: Modelos e parâmetros
 
 **Files:**
 - Create: `manager/__init__.py`, `manager/models.py`, `manager/params.py`, `manager/params.json`
@@ -78,7 +78,7 @@ def test_params_have_the_spec_bands():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `git add manager tests/test_manager_models.py && git commit -m "Manager: modelos e parâmetros da economia"`
 
-### Tarefa 2: Identidade ficcional e jogadores de elite
+### Task 2: Identidade ficcional e jogadores de elite
 
 **Files:**
 - Create: `manager/identity.py`, `manager/elite.py`
@@ -123,7 +123,7 @@ def test_elite_skill_is_between_70_and_98():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `git commit -am "Manager: identidade ficcional e jogadores de elite"` (depois de `git add`).
 
-### Tarefa 3: Gerador de jogadores por tier
+### Task 3: Gerador de jogadores por tier
 
 **Files:**
 - Create: `manager/generate.py`
@@ -162,7 +162,7 @@ def test_codenames_unique_in_a_sample():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: gerador de jogadores por tier`.
 
-### Tarefa 4: Valoração, finanças e viabilidade de contratação
+### Task 4: Valoração, finanças e viabilidade de contratação
 
 **Files:**
 - Create: `manager/valuation.py`, `manager/finance.py`
@@ -221,7 +221,7 @@ def test_can_afford_rejects_offers_that_break_the_reserve():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: valoração e finanças do clube`.
 
-### Tarefa 5: Decisão do jogador
+### Task 5: Decisão do jogador
 
 **Files:**
 - Create: `manager/decision.py`
@@ -267,7 +267,7 @@ def test_choose_offer_returns_none_below_threshold():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: decisão do jogador entre ofertas`.
 
-### Tarefa 6: Mercado com clubes do computador
+### Task 6: Mercado com clubes do computador
 
 **Files:**
 - Create: `manager/market.py`, `manager/world.py`
@@ -323,7 +323,7 @@ def test_market_is_deterministic():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: mercado com clubes do computador`.
 
-### Tarefa 7: Scouting e informação imperfeita
+### Task 7: Scouting e informação imperfeita
 
 **Files:**
 - Create: `manager/scouting.py`
@@ -363,7 +363,7 @@ def test_cost_rises_with_level():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: scouting com informação imperfeita`.
 
-### Tarefa 8: Calendário, jogo e salvamento
+### Task 8: Calendário, jogo e salvamento
 
 **Files:**
 - Create: `manager/game.py`, `manager/calendar.py`
@@ -421,7 +421,7 @@ def test_full_season_keeps_every_club_at_7_people():
 - [ ] **Step 4: Rodar e ver passar.**
 - [ ] **Step 5: Commit:** `Manager: calendário, jogo e salvamento`.
 
-### Tarefa 9: Vazamento de identidade, simulação de fumaça e documentação
+### Task 9: Vazamento de identidade, simulação de fumaça e documentação
 
 **Files:**
 - Create: `manager/sim.py`, `docs/manager-economy.md`
