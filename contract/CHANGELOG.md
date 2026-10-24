@@ -2,6 +2,19 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.7.0: perfis sintetizados para jogadores sem demo (2026-10-24)
+
+Só acrescenta; nenhum artefato existente mudou de formato.
+
+- `reference/profile_synthesis.py` (novo): `synthesize_profile(template, knobs)` parte do perfil medido de um jogador real da mesma função e devolve um perfil
+  **no mesmo formato de `player_profiles.json`**, para a Unity ter um só caminho de código. Com os knobs em zero, o perfil sai igual ao template.
+  - `gap` (pontos de `skill` abaixo do template) piora precisão, erro de mira, reação, tiro instantâneo e parar antes de atirar, e reduz `kpr`, `adr` e `kast`.
+  - `aggression`, `utility` e `spread` dão o estilo: primeiro contato e tentativas de duelo, granadas e trocas de morte, e regularidade.
+  - `knobs_for(skill, hidden, role, template_skill)` converte `temperament`, `communication` e `consistency` (60 = neutro) nos knobs; `style_for(role)` escolhe a função do template.
+- `test_vectors/profile_synthesis_vectors.json` (60 casos): knobs aplicados aos templates de `elite_players.json`, com 19 campos conferidos (`make validate`).
+- `docs/profile_synthesis.md`: como usar, e o que é medido e o que é hipótese.
+- **Aviso:** os dados só têm jogadores de nível profissional. As inclinações do `gap` são hipóteses a calibrar contra o `kpr` e o `adr` da simulação.
+
 ## 1.6.0: jogadores de elite sem identidade real (2026-10-24)
 
 Só acrescenta; `player_profiles.json` e todo o resto continuam iguais.

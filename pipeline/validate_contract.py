@@ -13,6 +13,7 @@ from referencing import Registry, Resource
 from calibration.validate_log import validate_file
 from contract.reference import team_model as ref
 from contract.reference import manifest as man
+from contract.reference import profile_synthesis as synth
 from contract.reference import tactics as tac
 from contract.reference import weapon_dynamics as wd
 from pipeline.common import ARTIFACTS_DIR, CONTRACT_DIR, CONTRACT_VERSION, EXAMPLES_DIR, SCHEMAS_DIR, VECTORS_DIR
@@ -207,6 +208,28 @@ def check_shards(reg):
     return problems
 
 
+def check_synthesis_vectors():
+    """Os vetores de síntese de perfil têm de bater com a referência, aplicada aos templates de elite_players.json."""
+    vec_path, elite_path = VECTORS_DIR / "profile_synthesis_vectors.json", ARTIFACTS_DIR / "elite_players.json"
+    if not vec_path.exists() or not elite_path.exists():
+        return ["profile_synthesis_vectors.json ou elite_players.json ausente"]
+    templates = {t["pid"]: t for t in json.loads(elite_path.read_text())["players"]}
+    vec, problems = json.loads(vec_path.read_text()), []
+    for i, case in enumerate(vec["cases"]):
+        template = templates.get(case["input"]["template"])
+        if template is None:
+            problems.append(f"profile_synthesis[{i}]: template {case['input']['template']} não existe em elite_players.json")
+            continue
+        out = synth.synthesize_profile(template["profile"], case["input"]["knobs"])
+        for path, expected in case["expected"].items():
+            got = out
+            for key in path.split("."):
+                got = got[key]
+            if abs(got - expected) > vec["tolerance"]:
+                problems.append(f"profile_synthesis[{i}] {path}: esperado {expected}, obtido {got}")
+    return problems
+
+
 def check_elite_identity(doc=None):
     """elite_players.json não pode carregar nome, steamid nem time reais, nem em texto solto."""
     if doc is None:
@@ -243,6 +266,7 @@ def main():
                 "vetores da camada tática x referência": check_tactics_vectors(),
                 "fatias independentes (manifesto, hashes, remontagem)": check_shards(reg),
                 "elite_players sem identidade real": check_elite_identity(),
+                "vetores da síntese de perfil x referência": check_synthesis_vectors(),
                 "log de exemplo": check_example()}
     bad = 0
     print(f"Contrato {CONTRACT_VERSION} ({CONTRACT_DIR.name}/)")

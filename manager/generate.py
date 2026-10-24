@@ -2,6 +2,7 @@
 import random
 from typing import Optional, Set
 
+from manager.behavior import assign_behavior
 from manager.identity import make_codename, make_country
 from manager.models import HIDDEN_KEYS, Player
 from manager.params import load_params
@@ -27,6 +28,7 @@ def generate_player(rng: random.Random, tier: int, taken: Set[str], role: Option
     else:
         age = rng.randint(18, 34)
         hidden["ceiling"] = min(84.0, hidden["ceiling"])
+    hidden = {k: round(v, 2) for k, v in hidden.items()}
     codename = make_codename(rng, taken)  # único no mundo, então serve de base para o pid
     return Player(
         pid="g_" + codename.lower(),
@@ -36,10 +38,11 @@ def generate_player(rng: random.Random, tier: int, taken: Set[str], role: Option
         age=age,
         tier=tier,
         skill=round(skill, 2),
-        hidden={k: round(v, 2) for k, v in hidden.items()},
+        hidden=hidden,
         hype=round(skill * 0.3, 2),
         form=0.0,
         club_id=None,
         contract=None,
         profile_ref=None,
+        behavior=assign_behavior(rng, role, round(skill, 2), hidden),
     )

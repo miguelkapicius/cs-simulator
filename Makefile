@@ -43,6 +43,7 @@ shards:
 
 elite:
 	$(PY) -m pipeline.build_elite_players
+	$(PY) -m pipeline.build_synthesis_vectors
 
 validate:
 	$(PY) -m pipeline.validate_contract

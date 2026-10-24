@@ -1,0 +1,1928 @@
+{
+ "contract_version": "1.6.0",
+ "generated_at": "2026-10-24",
+ "tolerance": 1e-05,
+ "note": "Cada caso aplica `knobs` ao `profile` do jogador `template` de elite_players.json e confere os campos de `expected`.",
+ "cases": [
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.835,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 10.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.256872,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.86676,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.5253,
+    "mechanics.crosshair_placement.total_deg.p50": 3.0031,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2409,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.439736,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.370475,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.189789,
+    "mechanics.movement.still_shot_rate.shrunk": 0.56494,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.4248,
+    "performance.dpr": 0.73564,
+    "performance.kd": 0.577358,
+    "performance.adr": 54.004,
+    "performance.kast": 0.53376,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 30.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.186816,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.43628,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.9059,
+    "mechanics.crosshair_placement.total_deg.p50": 3.9193,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2847,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.319808,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.454424,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.225768,
+    "mechanics.movement.still_shot_rate.shrunk": 0.49282,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.3304,
+    "performance.dpr": 0.81892,
+    "performance.kd": 0.40339,
+    "performance.adr": 44.612,
+    "performance.kast": 0.48928,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 60.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.102165,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.29056,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.9768,
+    "mechanics.crosshair_placement.total_deg.p50": 5.2936,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.3504,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.14991,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.573353,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.276737,
+    "mechanics.movement.still_shot_rate.shrunk": 0.38464,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.1888,
+    "performance.dpr": 0.94384,
+    "performance.kd": 0.2,
+    "performance.adr": 30.524,
+    "performance.kast": 0.42256,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": -15.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.335685,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.15486,
+    "mechanics.aim_error_first_bullet_deg.p90": 2.79955,
+    "mechanics.crosshair_placement.total_deg.p50": 1.85785,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.18615,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.54967,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.293521,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.156809,
+    "mechanics.movement.still_shot_rate.shrunk": 0.65509,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.5428,
+    "performance.dpr": 0.63154,
+    "performance.kd": 0.859341,
+    "performance.adr": 65.744,
+    "performance.kast": 0.58936,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.835,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7935,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 28.03125,
+    "performance.opening.attempt_rate.shrunk": 0.26715,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": -1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.835,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.6335,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 46.71875,
+    "performance.opening.attempt_rate.shrunk": 0.08905,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.835,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.7,
+    "performance.trade_kills_per_round": 0.2338
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": -1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.835,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.3,
+    "performance.trade_kills_per_round": 0.1002
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.62355,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": -1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2919,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.582,
+    "mechanics.aim_error_first_bullet_deg.p90": 3.04645,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.4997,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.3285,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1718,
+    "mechanics.movement.still_shot_rate.shrunk": 0.601,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7135,
+    "performance.kpr": 0.472,
+    "performance.dpr": 0.694,
+    "performance.kd": 0.68,
+    "performance.adr": 58.7,
+    "performance.kast": 0.556,
+    "performance.first_contact_s.p50": 37.375,
+    "performance.opening.attempt_rate.shrunk": 0.1781,
+    "performance.utility.flash_per_round": 0.5,
+    "performance.trade_kills_per_round": 0.167
+   }
+  },
+  {
+   "input": {
+    "template": "e04",
+    "knobs": {
+     "gap": 25.0,
+     "aggression": 0.5,
+     "utility": -0.5,
+     "spread": 0.5
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.20433,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.2939,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.132449,
+    "mechanics.crosshair_placement.total_deg.p50": 3.69025,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.27375,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.34979,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.433437,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.216773,
+    "mechanics.movement.still_shot_rate.shrunk": 0.51085,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7535,
+    "performance.kpr": 0.354,
+    "performance.dpr": 0.7981,
+    "performance.kd": 0.443478,
+    "performance.adr": 46.96,
+    "performance.kast": 0.5004,
+    "performance.first_contact_s.p50": 32.703125,
+    "performance.opening.attempt_rate.shrunk": 0.222625,
+    "performance.utility.flash_per_round": 0.4,
+    "performance.trade_kills_per_round": 0.1336
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.642,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 10.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.210848,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.84316,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.65756,
+    "mechanics.crosshair_placement.total_deg.p50": 3.0031,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2409,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.556952,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.335864,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.107084,
+    "mechanics.movement.still_shot_rate.shrunk": 0.41031,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.2997,
+    "performance.dpr": 0.91266,
+    "performance.kd": 0.328585,
+    "performance.adr": 44.344,
+    "performance.kast": 0.48,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 30.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.153344,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.40548,
+    "mechanics.aim_error_first_bullet_deg.p90": 8.68868,
+    "mechanics.crosshair_placement.total_deg.p50": 3.9193,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2847,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.405056,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.442191,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.152653,
+    "mechanics.movement.still_shot_rate.shrunk": 0.35793,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.2331,
+    "performance.dpr": 1.01598,
+    "performance.kd": 0.229576,
+    "performance.adr": 36.632,
+    "performance.kast": 0.44,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 60.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.08386,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.24896,
+    "mechanics.aim_error_first_bullet_deg.p90": 11.73536,
+    "mechanics.crosshair_placement.total_deg.p50": 5.2936,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.3504,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.18987,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.592821,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.217209,
+    "mechanics.movement.still_shot_rate.shrunk": 0.27936,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.1332,
+    "performance.dpr": 1.17096,
+    "performance.kd": 0.113824,
+    "performance.adr": 25.064,
+    "performance.kast": 0.38,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": -15.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.27554,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.14026,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.11866,
+    "mechanics.crosshair_placement.total_deg.p50": 1.85785,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.18615,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.69619,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.238397,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.065313,
+    "mechanics.movement.still_shot_rate.shrunk": 0.475785,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.38295,
+    "performance.dpr": 0.78351,
+    "performance.kd": 0.489066,
+    "performance.adr": 53.984,
+    "performance.kast": 0.53,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.642,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7968,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 19.41825,
+    "performance.opening.attempt_rate.shrunk": 0.34755,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": -1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.642,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.6368,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 32.36375,
+    "performance.opening.attempt_rate.shrunk": 0.11585,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.642,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.5054,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": -1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.642,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.2166,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.07,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": -1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2396,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.562,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.214,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6329,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2827,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0843,
+    "mechanics.movement.still_shot_rate.shrunk": 0.4365,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7168,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.861,
+    "performance.kd": 0.387,
+    "performance.adr": 48.2,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 25.891,
+    "performance.opening.attempt_rate.shrunk": 0.2317,
+    "performance.utility.flash_per_round": 0.361,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e02",
+    "knobs": {
+     "gap": 25.0,
+     "aggression": 0.5,
+     "utility": -0.5,
+     "spread": 0.5
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.16772,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.2649,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.2162,
+    "mechanics.crosshair_placement.total_deg.p50": 3.69025,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.27375,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.44303,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.415609,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.141261,
+    "mechanics.movement.still_shot_rate.shrunk": 0.371025,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7568,
+    "performance.kpr": 0.24975,
+    "performance.dpr": 0.99015,
+    "performance.kd": 0.252391,
+    "performance.adr": 38.56,
+    "performance.kast": 0.45,
+    "performance.first_contact_s.p50": 22.654625,
+    "performance.opening.attempt_rate.shrunk": 0.289625,
+    "performance.utility.flash_per_round": 0.2888,
+    "performance.trade_kills_per_round": 0.0
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.159,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 10.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.22396,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.12282,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.26762,
+    "mechanics.crosshair_placement.total_deg.p50": 3.0031,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2409,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.586344,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.343269,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.070287,
+    "mechanics.movement.still_shot_rate.shrunk": 0.540406,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.3996,
+    "performance.dpr": 0.795,
+    "performance.kd": 0.503491,
+    "performance.adr": 55.936,
+    "performance.kast": 0.48,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 30.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.16288,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.77046,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.48486,
+    "mechanics.crosshair_placement.total_deg.p50": 3.9193,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2847,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.426432,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.455208,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.11826,
+    "mechanics.movement.still_shot_rate.shrunk": 0.471418,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.3108,
+    "performance.dpr": 0.885,
+    "performance.kd": 0.35178,
+    "performance.adr": 46.208,
+    "performance.kast": 0.44,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 60.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.089075,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.74192,
+    "mechanics.aim_error_first_bullet_deg.p90": 12.81072,
+    "mechanics.crosshair_placement.total_deg.p50": 5.2936,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.3504,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.19989,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.613787,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.186223,
+    "mechanics.movement.still_shot_rate.shrunk": 0.367936,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.1776,
+    "performance.dpr": 1.02,
+    "performance.kd": 0.174412,
+    "performance.adr": 31.616,
+    "performance.kast": 0.38,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": -15.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.292675,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.31327,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.49607,
+    "mechanics.crosshair_placement.total_deg.p50": 1.85785,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.18615,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.73293,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.240659,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.026311,
+    "mechanics.movement.still_shot_rate.shrunk": 0.626641,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.5106,
+    "performance.dpr": 0.6825,
+    "performance.kd": 0.749396,
+    "performance.adr": 68.096,
+    "performance.kast": 0.53,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.159,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.9035,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 33.66825,
+    "performance.opening.attempt_rate.shrunk": 0.294,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": -1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.159,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7435,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 56.11375,
+    "performance.opening.attempt_rate.shrunk": 0.098,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.159,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.4284,
+    "performance.trade_kills_per_round": 0.1162
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": -1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 6.159,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.1836,
+    "performance.trade_kills_per_round": 0.0498
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.685,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": -1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2545,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.799,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.633,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6663,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2873,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0463,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5749,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.444,
+    "performance.dpr": 0.75,
+    "performance.kd": 0.593,
+    "performance.adr": 60.8,
+    "performance.kast": 0.5,
+    "performance.first_contact_s.p50": 44.891,
+    "performance.opening.attempt_rate.shrunk": 0.196,
+    "performance.utility.flash_per_round": 0.306,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e01",
+    "knobs": {
+     "gap": 25.0,
+     "aggression": 0.5,
+     "utility": -0.5,
+     "spread": 0.5
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.17815,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.60855,
+    "mechanics.aim_error_first_bullet_deg.p90": 10.0369,
+    "mechanics.crosshair_placement.total_deg.p50": 3.69025,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.27375,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.46641,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.427223,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.106267,
+    "mechanics.movement.still_shot_rate.shrunk": 0.488665,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8635,
+    "performance.kpr": 0.333,
+    "performance.dpr": 0.8625,
+    "performance.kd": 0.386739,
+    "performance.adr": 48.64,
+    "performance.kast": 0.45,
+    "performance.first_contact_s.p50": 39.279625,
+    "performance.opening.attempt_rate.shrunk": 0.245,
+    "performance.utility.flash_per_round": 0.2448,
+    "performance.trade_kills_per_round": 0.0664
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.974,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 10.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.261008,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.11456,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.04932,
+    "mechanics.crosshair_placement.total_deg.p50": 4.16186,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2409,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.598928,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.32277,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.078302,
+    "mechanics.movement.still_shot_rate.shrunk": 0.54943,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.4626,
+    "performance.dpr": 0.73882,
+    "performance.kd": 0.625755,
+    "performance.adr": 65.412,
+    "performance.kast": 0.62496,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 30.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.189824,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.75968,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.19996,
+    "mechanics.crosshair_placement.total_deg.p50": 5.43158,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2847,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.435584,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.437111,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.127305,
+    "mechanics.movement.still_shot_rate.shrunk": 0.47929,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.3598,
+    "performance.dpr": 0.82246,
+    "performance.kd": 0.437203,
+    "performance.adr": 54.036,
+    "performance.kast": 0.57288,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 60.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.10381,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.72736,
+    "mechanics.aim_error_first_bullet_deg.p90": 12.42592,
+    "mechanics.crosshair_placement.total_deg.p50": 7.33616,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.3504,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.20418,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.599094,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.196726,
+    "mechanics.movement.still_shot_rate.shrunk": 0.37408,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.2056,
+    "performance.dpr": 0.94792,
+    "performance.kd": 0.216765,
+    "performance.adr": 36.972,
+    "performance.kast": 0.49476,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": -15.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.34109,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.30816,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.36102,
+    "mechanics.crosshair_placement.total_deg.p50": 2.57471,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.18615,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.74866,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.217958,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.033382,
+    "mechanics.movement.still_shot_rate.shrunk": 0.637105,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.5911,
+    "performance.dpr": 0.63427,
+    "performance.kd": 0.931374,
+    "performance.adr": 79.632,
+    "performance.kast": 0.69006,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.974,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8926,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 36.234,
+    "performance.opening.attempt_rate.shrunk": 0.3021,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": -1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.974,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7326,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 60.39,
+    "performance.opening.attempt_rate.shrunk": 0.1007,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.974,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 1.1564,
+    "performance.trade_kills_per_round": 0.1666
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": -1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.974,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.4956,
+    "performance.trade_kills_per_round": 0.0714
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.4377,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": -1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2966,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.792,
+    "mechanics.aim_error_first_bullet_deg.p90": 4.5103,
+    "mechanics.crosshair_placement.total_deg.p50": 3.527,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6806,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2656,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.0538,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5845,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8126,
+    "performance.kpr": 0.514,
+    "performance.dpr": 0.697,
+    "performance.kd": 0.737,
+    "performance.adr": 71.1,
+    "performance.kast": 0.651,
+    "performance.first_contact_s.p50": 48.312,
+    "performance.opening.attempt_rate.shrunk": 0.2014,
+    "performance.utility.flash_per_round": 0.826,
+    "performance.trade_kills_per_round": 0.119
+   }
+  },
+  {
+   "input": {
+    "template": "e06",
+    "knobs": {
+     "gap": 25.0,
+     "aggression": 0.5,
+     "utility": -0.5,
+     "spread": 0.5
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.20762,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.5984,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.723483,
+    "mechanics.crosshair_placement.total_deg.p50": 5.11415,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.27375,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.47642,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.408526,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.115054,
+    "mechanics.movement.still_shot_rate.shrunk": 0.496825,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8526,
+    "performance.kpr": 0.3855,
+    "performance.dpr": 0.80155,
+    "performance.kd": 0.480652,
+    "performance.adr": 56.88,
+    "performance.kast": 0.5859,
+    "performance.first_contact_s.p50": 42.273,
+    "performance.opening.attempt_rate.shrunk": 0.25175,
+    "performance.utility.flash_per_round": 0.6608,
+    "performance.trade_kills_per_round": 0.0952
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.871,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 10.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.251152,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.83672,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.28778,
+    "mechanics.crosshair_placement.total_deg.p50": 3.0031,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2409,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.577984,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.297471,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.124445,
+    "mechanics.movement.still_shot_rate.shrunk": 0.511548,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.5247,
+    "performance.dpr": 0.67734,
+    "performance.kd": 0.775189,
+    "performance.adr": 79.028,
+    "performance.kast": 0.66624,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 30.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.182656,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.70216,
+    "mechanics.aim_error_first_bullet_deg.p90": 12.12134,
+    "mechanics.crosshair_placement.total_deg.p50": 3.9193,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.2847,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.420352,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.407814,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.171734,
+    "mechanics.movement.still_shot_rate.shrunk": 0.446244,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.4081,
+    "performance.dpr": 0.75402,
+    "performance.kd": 0.54161,
+    "performance.adr": 65.284,
+    "performance.kast": 0.61072,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 60.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.09989,
+    "mechanics.aim_error_first_bullet_deg.p50": 5.00032,
+    "mechanics.aim_error_first_bullet_deg.p90": 16.37168,
+    "mechanics.crosshair_placement.total_deg.p50": 5.2936,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.3504,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.19704,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.564132,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.238728,
+    "mechanics.movement.still_shot_rate.shrunk": 0.348288,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.2332,
+    "performance.dpr": 0.86904,
+    "performance.kd": 0.268529,
+    "performance.adr": 44.668,
+    "performance.kast": 0.52744,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": -15.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.32821,
+    "mechanics.aim_error_first_bullet_deg.p50": 1.75492,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.74583,
+    "mechanics.crosshair_placement.total_deg.p50": 1.85785,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.18615,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.72248,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.196324,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.081096,
+    "mechanics.movement.still_shot_rate.shrunk": 0.593178,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.67045,
+    "performance.dpr": 0.58149,
+    "performance.kd": 1.153791,
+    "performance.adr": 96.208,
+    "performance.kast": 0.73564,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.871,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.9035,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 21.486,
+    "performance.opening.attempt_rate.shrunk": 0.32085,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": -1.0,
+     "utility": 0.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.871,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.7435,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 35.81,
+    "performance.opening.attempt_rate.shrunk": 0.10695,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.871,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.6216,
+    "performance.trade_kills_per_round": 0.1162
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": -1.0,
+     "spread": 0.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 7.871,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.2664,
+    "performance.trade_kills_per_round": 0.0498
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": 1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 9.78445,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 0.0,
+     "aggression": 0.0,
+     "utility": 0.0,
+     "spread": -1.0
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.2854,
+    "mechanics.aim_error_first_bullet_deg.p50": 2.404,
+    "mechanics.aim_error_first_bullet_deg.p90": 5.95755,
+    "mechanics.crosshair_placement.total_deg.p50": 2.545,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.219,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.6568,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.2423,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.1008,
+    "mechanics.movement.still_shot_rate.shrunk": 0.5442,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8235,
+    "performance.kpr": 0.583,
+    "performance.dpr": 0.639,
+    "performance.kd": 0.913,
+    "performance.adr": 85.9,
+    "performance.kast": 0.694,
+    "performance.first_contact_s.p50": 28.648,
+    "performance.opening.attempt_rate.shrunk": 0.2139,
+    "performance.utility.flash_per_round": 0.444,
+    "performance.trade_kills_per_round": 0.083
+   }
+  },
+  {
+   "input": {
+    "template": "e00",
+    "knobs": {
+     "gap": 25.0,
+     "aggression": 0.5,
+     "utility": -0.5,
+     "spread": 0.5
+    }
+   },
+   "expected": {
+    "mechanics.accuracy.rifle.overall.shrunk": 0.19978,
+    "mechanics.aim_error_first_bullet_deg.p50": 3.4858,
+    "mechanics.aim_error_first_bullet_deg.p90": 12.800201,
+    "mechanics.crosshair_placement.total_deg.p50": 3.69025,
+    "mechanics.engagement.delayed_reaction_s.p50": 0.27375,
+    "mechanics.engagement.by_aim_error.tight_lt2.instant.shrunk": 0.45976,
+    "mechanics.engagement.by_aim_error.tight_lt2.delayed.shrunk": 0.380228,
+    "mechanics.engagement.by_aim_error.tight_lt2.none.shrunk": 0.159912,
+    "mechanics.movement.still_shot_rate.shrunk": 0.46257,
+    "mechanics.shoots_after_sighting_rate.shrunk": 0.8635,
+    "performance.kpr": 0.43725,
+    "performance.dpr": 0.73485,
+    "performance.kd": 0.595435,
+    "performance.adr": 68.72,
+    "performance.kast": 0.6246,
+    "performance.first_contact_s.p50": 25.067,
+    "performance.opening.attempt_rate.shrunk": 0.267375,
+    "performance.utility.flash_per_round": 0.3552,
+    "performance.trade_kills_per_round": 0.0664
+   }
+  }
+ ]
+}

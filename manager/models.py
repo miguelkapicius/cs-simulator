@@ -35,6 +35,7 @@ class Player:
     club_id: Optional[str]
     contract: Optional[Contract]
     profile_ref: Optional[str]
+    behavior: Optional[Dict] = None  # estilo e knobs de quem não tem perfil real (ver manager/behavior.py)
 
     def to_dict(self) -> Dict:
         d = asdict(self)
