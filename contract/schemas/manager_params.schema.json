@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/manager_params.schema.json",
+  "title": "manager_params.json",
+  "description": "Todos os números ajustáveis da economia do modo manager: salários, buyout, hype, receita, decisão do jogador, scouting, mercado e calendário (ver contract/docs/manager_economy.md). As fórmulas estão em contract/reference/manager_economy.py.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "params"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "params": {
+      "type": "object",
+      "required": ["season_weeks", "cash_reserve_weeks", "salary_bands", "salary_skill_range", "salary_blend", "weights",
+                   "money_star_discount", "accept_threshold", "role_cap", "hype_half_life_weeks", "hype_match", "buyout",
+                   "tier_sizes", "sponsor_week", "rank_factor", "sticker_pool", "generator", "scouting", "market", "game"],
+      "properties": {
+        "season_weeks": { "type": "integer", "minimum": 1 },
+        "cash_reserve_weeks": { "type": "integer", "minimum": 0 },
+        "salary_bands": {
+          "type": "object", "required": ["1", "2", "3"],
+          "properties": {
+            "1": { "type": "object", "required": ["star", "regular"],
+                   "properties": { "star": { "$ref": "#/$defs/money_range" }, "regular": { "$ref": "#/$defs/money_range" } } },
+            "2": { "type": "object", "required": ["all"], "properties": { "all": { "$ref": "#/$defs/money_range" } } },
+            "3": { "type": "object", "required": ["all"], "properties": { "all": { "$ref": "#/$defs/money_range" } } }
+          }
+        },
+        "salary_skill_range": {
+          "type": "object", "required": ["star", "regular", "low"],
+          "additionalProperties": { "$ref": "#/$defs/skill_range" }
+        },
+        "salary_blend": { "type": "object", "required": ["skill", "hype"],
+                          "properties": { "skill": { "type": "number", "minimum": 0 }, "hype": { "type": "number", "minimum": 0 } } },
+        "weights": {
+          "type": "object", "required": ["money", "team", "prestige", "role", "reputation"],
+          "additionalProperties": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "money_star_discount": { "type": "number", "minimum": 0 },
+        "accept_threshold": { "type": "number", "minimum": 0, "maximum": 1 },
+        "role_cap": { "type": "object", "additionalProperties": { "type": "integer", "minimum": 1 } },
+        "hype_half_life_weeks": { "type": "number", "exclusiveMinimum": 0 },
+        "hype_match": {
+          "type": "object", "required": ["per_rating_point", "win", "loss", "major_multiplier", "form_blend", "form_scale"],
+          "additionalProperties": { "type": "number" }
+        },
+        "buyout": {
+          "type": "object", "required": ["interest_step", "max_seasons", "hype_divisor"],
+          "properties": { "interest_step": { "type": "number", "minimum": 0 }, "max_seasons": { "type": "number", "exclusiveMinimum": 0 },
+                          "hype_divisor": { "type": "number", "exclusiveMinimum": 0 } }
+        },
+        "tier_sizes": { "$ref": "#/$defs/by_tier" },
+        "sponsor_week": { "$ref": "#/$defs/by_tier" },
+        "rank_factor": { "type": "array", "items": { "type": "number", "exclusiveMinimum": 0 }, "minItems": 2, "maxItems": 2 },
+        "sticker_pool": { "$ref": "#/$defs/by_tier" },
+        "generator": { "type": "object", "required": ["skill_mean", "skill_std", "hidden_mean", "tail_prob", "role_weights"],
+                       "properties": { "skill_mean": { "$ref": "#/$defs/by_tier" } } },
+        "scouting": {
+          "type": "object", "required": ["noise", "cost", "reveals"],
+          "properties": {
+            "noise": { "type": "object", "required": ["0", "1", "2", "3"], "additionalProperties": { "type": "number", "minimum": 0 } },
+            "cost": { "type": "object", "required": ["1", "2", "3"],
+                      "additionalProperties": { "type": "object", "required": ["money", "weeks"] } },
+            "reveals": { "type": "object", "additionalProperties": { "type": "array", "items": { "type": "string" } } }
+          }
+        },
+        "market": { "type": "object" },
+        "game": { "type": "object" }
+      }
+    }
+  },
+  "$defs": {
+    "money_range": { "type": "array", "items": { "type": "integer", "minimum": 0 }, "minItems": 2, "maxItems": 2 },
+    "skill_range": { "type": "array", "items": { "type": "number", "minimum": 0, "maximum": 100 }, "minItems": 2, "maxItems": 2 },
+    "by_tier": { "type": "object", "required": ["1", "2", "3"], "additionalProperties": { "type": "number", "minimum": 0 } }
+  }
+}

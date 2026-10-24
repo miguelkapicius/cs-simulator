@@ -27,6 +27,7 @@ ARTIFACT_SCHEMAS = {
     "tactics.json": "tactics.schema.json",
     "tactics_playbook.json": "tactics_playbook.schema.json",
     "elite_players.json": "elite_players.schema.json",
+    "manager_params.json": "manager_params.schema.json",
 }
 MAX_ERRORS = 8
 
@@ -208,6 +209,30 @@ def check_shards(reg):
     return problems
 
 
+def check_manager_params(doc=None):
+    """Regras que o schema não expressa: pesos da decisão somam 1 e as faixas de salário não se sobrepõem para cima."""
+    if doc is None:
+        path = ARTIFACTS_DIR / "manager_params.json"
+        if not path.exists():
+            return ["manager_params.json ausente"]
+        doc = json.loads(path.read_text())
+    prm, problems = doc["params"], []
+    total = sum(prm["weights"].values())
+    if abs(total - 1.0) > 1e-6:
+        problems.append(f"manager_params: weights somam {total:.6f}, deveriam somar 1")
+    bands = prm["salary_bands"]
+    for tier, key in (("1", "star"), ("1", "regular"), ("2", "all"), ("3", "all")):
+        lo, hi = bands[tier][key]
+        if lo > hi:
+            problems.append(f"manager_params: salary_bands {tier}.{key} tem mínimo {lo} maior que o máximo {hi}")
+    low_top = max(bands["2"]["all"][1], bands["3"]["all"][1])
+    if low_top > bands["1"]["regular"][0]:
+        problems.append(f"manager_params: salary_bands dos Tiers 2 e 3 (até {low_top}) passam do começo da faixa regular do Tier 1")
+    if bands["1"]["regular"][1] > bands["1"]["star"][0]:
+        problems.append("manager_params: salary_bands 1.regular passa do começo da faixa 1.star")
+    return problems
+
+
 def check_synthesis_vectors():
     """Os vetores de síntese de perfil têm de bater com a referência, aplicada aos templates de elite_players.json."""
     vec_path, elite_path = VECTORS_DIR / "profile_synthesis_vectors.json", ARTIFACTS_DIR / "elite_players.json"
@@ -266,6 +291,7 @@ def main():
                 "vetores da camada tática x referência": check_tactics_vectors(),
                 "fatias independentes (manifesto, hashes, remontagem)": check_shards(reg),
                 "elite_players sem identidade real": check_elite_identity(),
+                "manager_params (pesos e faixas de salário)": check_manager_params(),
                 "vetores da síntese de perfil x referência": check_synthesis_vectors(),
                 "log de exemplo": check_example()}
     bad = 0
