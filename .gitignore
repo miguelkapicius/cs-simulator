@@ -23,3 +23,6 @@ __pycache__/
 # Pacotes gerados por `make package`
 dist/
 .pytest_cache/
+
+# Ledger e artefatos de execução de planos
+/.superpowers/
