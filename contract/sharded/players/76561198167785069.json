@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "steamid": "76561198167785069",
  "name": "S1ren",
@@ -16,28 +16,28 @@
     "overall": {
      "value": 0.2958,
      "n": 240,
-     "shrunk": 0.2916
+     "shrunk": 0.2923
     },
     "by_distance": {
      "0-10m": {
       "value": 0.4038,
       "n": 52,
-      "shrunk": 0.4064
+      "shrunk": 0.3997
      },
      "10-20m": {
       "value": 0.3293,
       "n": 82,
-      "shrunk": 0.3189
+      "shrunk": 0.3218
      },
      "20-30m": {
       "value": 0.2338,
       "n": 77,
-      "shrunk": 0.2261
+      "shrunk": 0.2304
      },
      "30m+": {
       "value": 0.1724,
       "n": 29,
-      "shrunk": 0.1478
+      "shrunk": 0.1549
      }
     }
    },
@@ -51,44 +51,44 @@
      "0-10m": {
       "value": 0.4268,
       "n": 164,
-      "shrunk": 0.4299
+      "shrunk": 0.4321
      },
      "10-20m": {
       "value": 0.3473,
       "n": 383,
-      "shrunk": 0.3477
+      "shrunk": 0.3483
      },
      "20-30m": {
       "value": 0.17,
       "n": 400,
-      "shrunk": 0.1737
+      "shrunk": 0.1742
      },
      "30m+": {
       "value": 0.0481,
       "n": 478,
-      "shrunk": 0.0505
+      "shrunk": 0.0503
      }
     },
     "by_spray_bullet": {
      "1": {
       "value": 0.219,
       "n": 315,
-      "shrunk": 0.219
+      "shrunk": 0.2192
      },
      "2-3": {
       "value": 0.2246,
       "n": 472,
-      "shrunk": 0.2273
+      "shrunk": 0.2275
      },
      "4-6": {
       "value": 0.22,
       "n": 409,
-      "shrunk": 0.2227
+      "shrunk": 0.223
      },
      "7+": {
       "value": 0.1336,
       "n": 217,
-      "shrunk": 0.1395
+      "shrunk": 0.1394
      }
     }
    },
@@ -96,35 +96,35 @@
     "overall": {
      "value": 0.4,
      "n": 20,
-     "shrunk": 0.3588
+     "shrunk": 0.3594
     },
     "by_distance": {
      "10-20m": {
       "value": 0.4,
       "n": 20,
-      "shrunk": 0.3852
+      "shrunk": 0.3766
      }
     },
     "by_spray_bullet": {
      "1": {
       "value": 1.0,
       "n": 2,
-      "shrunk": 0.3364
+      "shrunk": 0.3409
      },
      "2-3": {
       "value": 0.5,
       "n": 4,
-      "shrunk": 0.3679
+      "shrunk": 0.3589
      },
      "4-6": {
       "value": 0.5,
       "n": 6,
-      "shrunk": 0.3727
+      "shrunk": 0.3832
      },
      "7+": {
       "value": 0.125,
       "n": 8,
-      "shrunk": 0.2571
+      "shrunk": 0.2614
      }
     }
    },
@@ -132,13 +132,13 @@
     "overall": {
      "value": 0.0,
      "n": 1,
-     "shrunk": 0.302
+     "shrunk": 0.2892
     },
     "by_distance": {
      "10-20m": {
       "value": 0.0,
       "n": 1,
-      "shrunk": 0.254
+      "shrunk": 0.3551
      }
     }
    }
@@ -202,7 +202,7 @@
    "crouch_shot_rate": {
     "value": 0.2438,
     "n": 1686,
-    "shrunk": 0.2429
+    "shrunk": 0.2432
    },
    "airborne_shot_rate": {
     "value": 0.0065,
@@ -264,34 +264,34 @@
   "shoots_after_sighting_rate": {
    "value": 0.7619,
    "n": 126,
-   "shrunk": 0.7659
+   "shrunk": 0.7658
   },
   "duels": {
    "win_rate": {
     "value": 0.4227,
     "n": 97,
-    "shrunk": 0.4457
+    "shrunk": 0.4458
    },
    "by_distance": {
     "0-10m": {
      "value": 0.5,
      "n": 16,
-     "shrunk": 0.5271
+     "shrunk": 0.5289
     },
     "10-20m": {
      "value": 0.3721,
      "n": 43,
-     "shrunk": 0.4271
+     "shrunk": 0.4268
     },
     "20-30m": {
      "value": 0.4138,
      "n": 29,
-     "shrunk": 0.479
+     "shrunk": 0.4794
     },
     "30m+": {
      "value": 0.5556,
      "n": 9,
-     "shrunk": 0.5716
+     "shrunk": 0.5691
     }
    }
   },
@@ -307,17 +307,17 @@
      "instant": {
       "value": 0.6632,
       "n": 95,
-      "shrunk": 0.6608
+      "shrunk": 0.6568
      },
      "delayed": {
       "value": 0.2316,
       "n": 95,
-      "shrunk": 0.239
+      "shrunk": 0.2415
      },
      "none": {
       "value": 0.1053,
       "n": 95,
-      "shrunk": 0.1002
+      "shrunk": 0.1017
      }
     },
     "mid_2_8": {
@@ -325,17 +325,17 @@
      "instant": {
       "value": 0.5233,
       "n": 86,
-      "shrunk": 0.5145
+      "shrunk": 0.5133
      },
      "delayed": {
       "value": 0.3721,
       "n": 86,
-      "shrunk": 0.3713
+      "shrunk": 0.3727
      },
      "none": {
       "value": 0.1047,
       "n": 86,
-      "shrunk": 0.1142
+      "shrunk": 0.114
      }
     },
     "wide_gt8": {
@@ -343,24 +343,24 @@
      "instant": {
       "value": 0.129,
       "n": 31,
-      "shrunk": 0.1372
+      "shrunk": 0.1421
      },
      "delayed": {
       "value": 0.3871,
       "n": 31,
-      "shrunk": 0.4373
+      "shrunk": 0.4363
      },
      "none": {
       "value": 0.4839,
       "n": 31,
-      "shrunk": 0.4255
+      "shrunk": 0.4216
      }
     }
    },
    "fired_before_visible": {
     "value": 0.3208,
     "n": 212,
-    "shrunk": 0.3197
+    "shrunk": 0.3194
    },
    "delayed_reaction_s": {
     "p10": 0.109,
@@ -385,19 +385,19 @@
   "headshot_kill_rate": {
    "value": 0.5591,
    "n": 127,
-   "shrunk": 0.5501
+   "shrunk": 0.5521
   },
   "survival_rate": 0.288,
   "opening": {
    "attempt_rate": {
     "value": 0.1698,
     "n": 212,
-    "shrunk": 0.1723
+    "shrunk": 0.1724
    },
    "win_rate": {
     "value": 0.5278,
     "n": 36,
-    "shrunk": 0.518
+    "shrunk": 0.5179
    }
   },
   "trade_kills_per_round": 0.108,

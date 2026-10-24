@@ -1,0 +1,140 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "team": "Magic",
+ "rounds": 111,
+ "matches": 6,
+ "roster": [
+  {
+   "steamid": "76561198269361539",
+   "name": "AW",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 70
+  },
+  {
+   "steamid": "76561198200619139",
+   "name": "eksiver",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 41
+  },
+  {
+   "steamid": "76561198217410319",
+   "name": "MaSvAl",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 111
+  },
+  {
+   "steamid": "76561198243227934",
+   "name": "mo0N",
+   "role_tags": [
+    "awper",
+    "support"
+   ],
+   "rounds": 111
+  },
+  {
+   "steamid": "76561198964621199",
+   "name": "sFade8",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 111
+  },
+  {
+   "steamid": "76561198853612047",
+   "name": "tenzy",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 111
+  }
+ ],
+ "maps": {
+  "de_ancient": {
+   "rounds": 20,
+   "ct": {
+    "rounds": 8,
+    "win_rate": 0.5,
+    "buy": {
+     "pistol": 0.125,
+     "eco": 0.0,
+     "force": 0.25,
+     "full": 0.625
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.25,
+    "plant_rate": 0.583,
+    "plant_a_share": 0.571,
+    "plants": 7,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.25,
+     "full": 0.583
+    }
+   }
+  },
+  "de_dust2": {
+   "rounds": 42,
+   "ct": {
+    "rounds": 24,
+    "win_rate": 0.542,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.042,
+     "force": 0.042,
+     "full": 0.833
+    }
+   },
+   "t": {
+    "rounds": 18,
+    "win_rate": 0.5,
+    "plant_rate": 0.556,
+    "plant_a_share": 0.5,
+    "plants": 10,
+    "buy": {
+     "pistol": 0.111,
+     "eco": 0.056,
+     "force": 0.222,
+     "full": 0.611
+    }
+   }
+  },
+  "de_mirage": {
+   "rounds": 49,
+   "ct": {
+    "rounds": 22,
+    "win_rate": 0.409,
+    "buy": {
+     "pistol": 0.091,
+     "eco": 0.045,
+     "force": 0.091,
+     "full": 0.773
+    }
+   },
+   "t": {
+    "rounds": 27,
+    "win_rate": 0.407,
+    "plant_rate": 0.296,
+    "plant_a_share": 0.5,
+    "plants": 8,
+    "buy": {
+     "pistol": 0.074,
+     "eco": 0.074,
+     "force": 0.185,
+     "full": 0.667
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

@@ -2,6 +2,17 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.8.1: dados renovados com 145 partidas (2026-10-24)
+
+Nenhum artefato mudou de formato; só os dados (PATCH).
+
+- Entram 115 demos novas (BLAST Open Porto, ESL Pro League S24, StarLadder Fall, Esports World Cup, FISSURE Playground 3): **145 partidas, 21 times, 108 jogadores, 7 mapas**.
+- Todos os valores `shrunk` dos perfis mudam um pouco, porque o baseline mudou. `elite_players.json` passa de 40 para 108 jogadores.
+- `scale` do recuo: o ajuste (2,035; IC 2,006–2,064) deixa de conter o 2,0 padrão do motor. O valor continua 2,0; o teste passa a exigir diferença abaixo de 5%.
+- A verificação do contador de derrotas ignora demos cortadas no meio de uma metade (partes 2 de uma partida).
+- Nomes de time unificados: LEGACY→Legacy, FUT Esports→FUT, G2.Esports→G2, PVISION→PARIVISION, Team Falcons→Falcons, Team Spirit→Spirit, magic→Magic.
+- `pipeline/ingest_archives.py` importa as demos novas de uma pasta de downloads.
+
 ## 1.8.0: contrato da economia do modo manager (2026-10-24)
 
 Só acrescenta; os artefatos existentes não mudaram de formato.

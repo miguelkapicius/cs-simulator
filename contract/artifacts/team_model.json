@@ -1,10 +1,10 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.0.0",
- "generated_at": "2026-10-23",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
  "source": {
-  "matches": 28,
-  "rounds": 599,
+  "matches": 143,
+  "rounds": 2931,
   "maps": [
    "de_ancient",
    "de_anubis",
@@ -76,38 +76,38 @@
    }
   ],
   "formula": "p_ct = sigmoid(intercept + map_intercepts[map] + sum(coefficients[f] * f))",
-  "intercept": 0.24011712,
+  "intercept": -0.08239497,
   "coefficients": {
-   "alive_diff": 0.87639884,
-   "alive_ct": 0.40956948,
-   "alive_t": -0.46682936,
-   "planted": -2.81179013,
-   "planted_x_alive_diff": 0.4717541,
-   "clock_unplanted": -0.0846325,
-   "clock_planted": 1.54172805,
-   "equip_log_ratio": 1.15222683
+   "alive_diff": 0.84906097,
+   "alive_ct": 0.41258318,
+   "alive_t": -0.43647779,
+   "planted": -2.34453652,
+   "planted_x_alive_diff": 0.78717873,
+   "clock_unplanted": 0.1996044,
+   "clock_planted": 1.65084971,
+   "equip_log_ratio": 1.42481255
   },
   "map_intercepts": {
-   "de_ancient": -0.12508085,
-   "de_anubis": -0.06915578,
-   "de_cache": 0.24912948,
-   "de_dust2": -0.0252048,
-   "de_inferno": -0.16269242,
-   "de_mirage": 0.34348497,
-   "de_nuke": 0.01532306
+   "de_ancient": -0.16668333,
+   "de_anubis": 0.06672914,
+   "de_cache": 0.06704465,
+   "de_dust2": -0.13480166,
+   "de_inferno": -0.07042811,
+   "de_mirage": 0.03697007,
+   "de_nuke": 0.120621
   },
   "unknown_map_intercept": 0.0,
   "evaluation": {
-   "method": "validação cruzada de 5 partes agrupada por partida, 55095 estados de 28 partidas; C=0.3",
+   "method": "validação cruzada de 5 partes agrupada por partida, 268289 estados de 143 partidas; C=1.0",
    "model": {
-    "log_loss": 0.4826,
-    "brier": 0.1631,
-    "auc": 0.8382
+    "log_loss": 0.4599,
+    "brier": 0.1545,
+    "auc": 0.8539
    },
    "baseline_vivos_e_plant": {
     "log_loss": 0.5088,
-    "brier": 0.1733,
-    "auc": 0.7913
+    "brier": 0.1748,
+    "auc": 0.7925
    },
    "constant_50": {
     "log_loss": 0.6931,
@@ -117,53 +117,53 @@
    "calibration": [
     {
      "predicted": 0.029,
-     "observed": 0.03,
-     "n": 8907
+     "observed": 0.025,
+     "n": 43552
     },
     {
-     "predicted": 0.148,
-     "observed": 0.209,
-     "n": 3576
+     "predicted": 0.154,
+     "observed": 0.136,
+     "n": 15326
     },
     {
-     "predicted": 0.25,
-     "observed": 0.299,
-     "n": 3274
+     "predicted": 0.249,
+     "observed": 0.269,
+     "n": 19562
     },
     {
-     "predicted": 0.353,
-     "observed": 0.407,
-     "n": 4130
+     "predicted": 0.349,
+     "observed": 0.312,
+     "n": 12675
     },
     {
-     "predicted": 0.45,
-     "observed": 0.446,
-     "n": 6018
+     "predicted": 0.46,
+     "observed": 0.507,
+     "n": 35469
     },
     {
-     "predicted": 0.549,
-     "observed": 0.539,
-     "n": 8472
+     "predicted": 0.544,
+     "observed": 0.557,
+     "n": 42526
     },
     {
-     "predicted": 0.643,
-     "observed": 0.549,
-     "n": 4896
+     "predicted": 0.645,
+     "observed": 0.638,
+     "n": 16197
     },
     {
-     "predicted": 0.747,
-     "observed": 0.809,
-     "n": 3740
+     "predicted": 0.756,
+     "observed": 0.73,
+     "n": 21502
     },
     {
-     "predicted": 0.848,
-     "observed": 0.817,
-     "n": 5195
+     "predicted": 0.844,
+     "observed": 0.821,
+     "n": 20889
     },
     {
-     "predicted": 0.961,
-     "observed": 0.962,
-     "n": 6887
+     "predicted": 0.954,
+     "observed": 0.956,
+     "n": 40591
     }
    ]
   }
@@ -189,97 +189,97 @@
   "type_distribution": {
    "CT": {
     "<2500": {
-     "eco": 0.2493,
-     "force": 0.6078,
-     "full": 0.1429
+     "eco": 0.2873,
+     "force": 0.6726,
+     "full": 0.0402
     },
     "2500-3500": {
-     "eco": 0.3035,
-     "force": 0.5845,
-     "full": 0.112
+     "eco": 0.4397,
+     "force": 0.5416,
+     "full": 0.0187
     },
     "3500-4500": {
-     "eco": 0.1033,
-     "force": 0.3804,
-     "full": 0.5163
+     "eco": 0.127,
+     "force": 0.3652,
+     "full": 0.5078
     },
     "4500-5500": {
-     "eco": 0.0032,
-     "force": 0.0643,
-     "full": 0.9326
+     "eco": 0.0008,
+     "force": 0.0853,
+     "full": 0.9139
     },
     "5500-6500": {
-     "eco": 0.0036,
-     "force": 0.0098,
-     "full": 0.9866
+     "eco": 0.001,
+     "force": 0.0115,
+     "full": 0.9876
     },
     "6500-7500": {
-     "eco": 0.0039,
-     "force": 0.0106,
-     "full": 0.9855
+     "eco": 0.001,
+     "force": 0.0021,
+     "full": 0.9968
     },
     "7500+": {
-     "eco": 0.0009,
-     "force": 0.0025,
-     "full": 0.9965
+     "eco": 0.0003,
+     "force": 0.0005,
+     "full": 0.9992
     }
    },
    "T": {
     "<2500": {
-     "eco": 0.6094,
-     "force": 0.3063,
-     "full": 0.0843
+     "eco": 0.7057,
+     "force": 0.2744,
+     "full": 0.0199
     },
     "2500-3500": {
-     "eco": 0.2601,
-     "force": 0.6684,
-     "full": 0.0715
+     "eco": 0.4187,
+     "force": 0.5642,
+     "full": 0.017
     },
     "3500-4500": {
-     "eco": 0.0214,
-     "force": 0.2547,
-     "full": 0.7238
+     "eco": 0.0271,
+     "force": 0.2919,
+     "full": 0.681
     },
     "4500-5500": {
-     "eco": 0.0046,
-     "force": 0.0085,
-     "full": 0.9869
+     "eco": 0.001,
+     "force": 0.0115,
+     "full": 0.9875
     },
     "5500-6500": {
-     "eco": 0.006,
-     "force": 0.011,
-     "full": 0.983
+     "eco": 0.0017,
+     "force": 0.0023,
+     "full": 0.9961
     },
     "6500-7500": {
-     "eco": 0.0065,
-     "force": 0.012,
-     "full": 0.9814
+     "eco": 0.0018,
+     "force": 0.0024,
+     "full": 0.9959
     },
     "7500+": {
-     "eco": 0.0034,
-     "force": 0.0063,
-     "full": 0.9903
+     "eco": 0.0008,
+     "force": 0.0011,
+     "full": 0.9981
     }
    }
   },
   "type_distribution_n": {
    "CT": {
-    "<2500": 24,
-    "2500-3500": 32,
-    "3500-4500": 65,
-    "4500-5500": 67,
-    "5500-6500": 59,
-    "6500-7500": 54,
-    "7500+": 242
+    "<2500": 97,
+    "2500-3500": 214,
+    "3500-4500": 265,
+    "4500-5500": 377,
+    "5500-6500": 309,
+    "6500-7500": 281,
+    "7500+": 1108
    },
    "T": {
-    "<2500": 40,
-    "2500-3500": 62,
-    "3500-4500": 108,
-    "4500-5500": 87,
-    "5500-6500": 66,
-    "6500-7500": 60,
-    "7500+": 120
+    "<2500": 187,
+    "2500-3500": 278,
+    "3500-4500": 494,
+    "4500-5500": 491,
+    "5500-6500": 297,
+    "6500-7500": 280,
+    "7500+": 624
    }
   },
   "prior_strength": 5,
@@ -287,130 +287,134 @@
   "loadouts": {
    "CT": {
     "eco": {
-     "player_rounds": 125,
-     "armor_rate": 0.208,
-     "helmet_rate": 0.072,
-     "kit_rate": 0.016,
-     "primary_rate": 0.072,
+     "player_rounds": 795,
+     "armor_rate": 0.1937,
+     "helmet_rate": 0.0403,
+     "kit_rate": 0.0025,
+     "primary_rate": 0.0566,
      "primary_share": {
-      "ssg08": 0.4444,
-      "mp9": 0.2222,
-      "m4a1_silencer": 0.2222,
-      "famas": 0.1111
+      "m4a1_silencer": 0.2,
+      "mp9": 0.2,
+      "ssg08": 0.1778,
+      "galilar": 0.0889,
+      "ak47": 0.0667,
+      "famas": 0.0667,
+      "mp7": 0.0667,
+      "mag7": 0.0667
      },
      "secondary_share": {
-      "usp_silencer": 0.6475,
-      "fiveseven": 0.1557,
-      "deagle": 0.0984,
-      "p250": 0.0574,
-      "hkp2000": 0.0328
+      "usp_silencer": 0.5152,
+      "deagle": 0.2215,
+      "fiveseven": 0.1734,
+      "p250": 0.062,
+      "hkp2000": 0.0253
      },
-     "awp_per_team": 0.0,
+     "awp_per_team": 0.0063,
      "grenades_per_player": {
-      "smoke": 0.216,
-      "flash": 0.088,
-      "he": 0.04,
-      "molotov": 0.016
+      "smoke": 0.195,
+      "flash": 0.0956,
+      "he": 0.0893,
+      "molotov": 0.0075
      },
      "equip_value": {
       "p10": 200,
-      "p50": 400,
-      "p90": 1900
+      "p50": 500,
+      "p90": 1650
      }
     },
     "force": {
-     "player_rounds": 340,
-     "armor_rate": 0.85,
-     "helmet_rate": 0.3853,
-     "kit_rate": 0.0294,
-     "primary_rate": 0.4029,
+     "player_rounds": 1595,
+     "armor_rate": 0.8596,
+     "helmet_rate": 0.306,
+     "kit_rate": 0.0238,
+     "primary_rate": 0.4502,
      "primary_share": {
-      "mp9": 0.3869,
-      "ssg08": 0.1533,
-      "m4a1_silencer": 0.1387,
-      "famas": 0.1168,
-      "awp": 0.0657,
-      "m4a1": 0.0511,
-      "mag7": 0.0511,
-      "ak47": 0.0219
+      "mp9": 0.429,
+      "ssg08": 0.1323,
+      "m4a1_silencer": 0.1309,
+      "famas": 0.1031,
+      "awp": 0.0613,
+      "m4a1": 0.0474,
+      "mp7": 0.0292,
+      "mag7": 0.0279
      },
      "secondary_share": {
-      "usp_silencer": 0.4412,
-      "fiveseven": 0.3529,
-      "deagle": 0.1147,
-      "p250": 0.0353,
-      "hkp2000": 0.0235
+      "usp_silencer": 0.4767,
+      "fiveseven": 0.2997,
+      "deagle": 0.1612,
+      "p250": 0.0258,
+      "hkp2000": 0.0233
      },
-     "awp_per_team": 0.1324,
+     "awp_per_team": 0.1379,
      "grenades_per_player": {
-      "smoke": 0.7265,
-      "flash": 0.3882,
-      "he": 0.2765,
-      "molotov": 0.0529
+      "smoke": 0.674,
+      "flash": 0.3893,
+      "he": 0.294,
+      "molotov": 0.0639
      },
      "equip_value": {
-      "p10": 944,
-      "p50": 2100,
+      "p10": 1000,
+      "p50": 2150,
       "p90": 4050
      }
     },
     "full": {
-     "player_rounds": 2250,
-     "armor_rate": 0.9956,
-     "helmet_rate": 0.7902,
-     "kit_rate": 0.5609,
-     "primary_rate": 0.9867,
+     "player_rounds": 10865,
+     "armor_rate": 0.9967,
+     "helmet_rate": 0.7727,
+     "kit_rate": 0.5079,
+     "primary_rate": 0.9896,
      "primary_share": {
-      "m4a1_silencer": 0.3486,
-      "m4a1": 0.1937,
-      "ak47": 0.1806,
-      "awp": 0.1631,
-      "mp9": 0.064,
-      "famas": 0.0248,
-      "galilar": 0.0167,
-      "ssg08": 0.0041
+      "m4a1_silencer": 0.373,
+      "m4a1": 0.1914,
+      "ak47": 0.1783,
+      "awp": 0.1583,
+      "mp9": 0.0542,
+      "famas": 0.0244,
+      "galilar": 0.01,
+      "mp7": 0.0056
      },
      "secondary_share": {
-      "usp_silencer": 0.7594,
-      "fiveseven": 0.1103,
-      "deagle": 0.0356,
-      "tec9": 0.0298,
-      "hkp2000": 0.0205
+      "usp_silencer": 0.7591,
+      "fiveseven": 0.0729,
+      "deagle": 0.0542,
+      "tec9": 0.0331,
+      "hkp2000": 0.0329
      },
-     "awp_per_team": 0.8044,
+     "awp_per_team": 0.7832,
      "grenades_per_player": {
-      "smoke": 0.9498,
-      "flash": 0.8991,
-      "he": 0.8409,
-      "molotov": 0.8542
+      "smoke": 0.9568,
+      "flash": 0.9069,
+      "he": 0.8267,
+      "molotov": 0.8399
      },
      "equip_value": {
-      "p10": 4150,
+      "p10": 4250,
       "p50": 5600,
-      "p90": 7550
+      "p90": 7250
      }
     },
     "pistol": {
-     "player_rounds": 280,
-     "armor_rate": 0.7107,
+     "player_rounds": 1400,
+     "armor_rate": 0.74,
      "helmet_rate": 0.0,
-     "kit_rate": 0.05,
+     "kit_rate": 0.0314,
      "primary_rate": 0.0,
      "primary_share": {},
      "secondary_share": {
-      "usp_silencer": 0.7563,
-      "elite": 0.2186,
-      "hkp2000": 0.0251
+      "usp_silencer": 0.7536,
+      "elite": 0.2192,
+      "hkp2000": 0.0272
      },
      "awp_per_team": 0.0,
      "grenades_per_player": {
-      "smoke": 0.1857,
-      "flash": 0.2536,
-      "he": 0.0607,
-      "molotov": 0.025
+      "smoke": 0.1614,
+      "flash": 0.2457,
+      "he": 0.0507,
+      "molotov": 0.0136
      },
      "equip_value": {
-      "p10": 645,
+      "p10": 600,
       "p50": 850,
       "p90": 1150
      }
@@ -418,128 +422,132 @@
    },
    "T": {
     "eco": {
-     "player_rounds": 230,
-     "armor_rate": 0.1348,
-     "helmet_rate": 0.0348,
+     "player_rounds": 1330,
+     "armor_rate": 0.1496,
+     "helmet_rate": 0.0406,
      "kit_rate": null,
-     "primary_rate": 0.0348,
+     "primary_rate": 0.0278,
      "primary_share": {
-      "ssg08": 0.5,
-      "galilar": 0.25,
-      "ak47": 0.25
+      "ssg08": 0.4324,
+      "ak47": 0.2703,
+      "galilar": 0.1622,
+      "xm1014": 0.0541,
+      "awp": 0.0541,
+      "m4a1": 0.027
      },
      "secondary_share": {
-      "glock": 0.6435,
-      "deagle": 0.213,
-      "tec9": 0.0913,
-      "p250": 0.0522
+      "glock": 0.5881,
+      "deagle": 0.2523,
+      "tec9": 0.0956,
+      "p250": 0.064
      },
-     "awp_per_team": 0.0,
+     "awp_per_team": 0.0075,
      "grenades_per_player": {
-      "smoke": 0.1435,
-      "flash": 0.1217,
-      "he": 0.013,
-      "molotov": 0.013
+      "smoke": 0.1406,
+      "flash": 0.1075,
+      "he": 0.0263,
+      "molotov": 0.0113
      },
      "equip_value": {
       "p10": 200,
-      "p50": 200,
+      "p50": 300,
       "p90": 1450
      }
     },
     "force": {
-     "player_rounds": 425,
-     "armor_rate": 0.8329,
-     "helmet_rate": 0.5906,
+     "player_rounds": 1805,
+     "armor_rate": 0.8748,
+     "helmet_rate": 0.5679,
      "kit_rate": null,
-     "primary_rate": 0.32,
+     "primary_rate": 0.3208,
      "primary_share": {
-      "galilar": 0.3971,
-      "ak47": 0.3897,
-      "mac10": 0.1324,
-      "awp": 0.0294,
-      "ssg08": 0.0294,
-      "mp7": 0.0147,
-      "m4a1_silencer": 0.0074
+      "galilar": 0.4283,
+      "ak47": 0.3385,
+      "mac10": 0.1313,
+      "ssg08": 0.0466,
+      "awp": 0.0311,
+      "mp7": 0.0155,
+      "m4a1_silencer": 0.0069,
+      "xm1014": 0.0017
      },
      "secondary_share": {
-      "glock": 0.4198,
-      "tec9": 0.4057,
-      "deagle": 0.1203,
-      "p250": 0.033,
-      "usp_silencer": 0.0142
+      "tec9": 0.3957,
+      "glock": 0.3879,
+      "deagle": 0.1731,
+      "p250": 0.0367,
+      "usp_silencer": 0.0033
      },
-     "awp_per_team": 0.0471,
+     "awp_per_team": 0.0499,
      "grenades_per_player": {
-      "smoke": 0.7082,
-      "flash": 0.6471,
-      "he": 0.0941,
-      "molotov": 0.3106
+      "smoke": 0.7025,
+      "flash": 0.6393,
+      "he": 0.0942,
+      "molotov": 0.2476
      },
      "equip_value": {
-      "p10": 900,
+      "p10": 1170,
       "p50": 2200,
-      "p90": 4010
+      "p90": 3900
      }
     },
     "full": {
-     "player_rounds": 2060,
-     "armor_rate": 0.9961,
-     "helmet_rate": 0.9777,
+     "player_rounds": 10120,
+     "armor_rate": 0.9971,
+     "helmet_rate": 0.9794,
      "kit_rate": null,
-     "primary_rate": 0.9733,
+     "primary_rate": 0.9766,
      "primary_share": {
-      "ak47": 0.6544,
-      "galilar": 0.1736,
-      "awp": 0.0888,
-      "mac10": 0.0414,
-      "m4a1_silencer": 0.02,
-      "m4a1": 0.011,
-      "mp7": 0.008,
-      "ssg08": 0.0015
+      "ak47": 0.6887,
+      "galilar": 0.1361,
+      "awp": 0.0968,
+      "mac10": 0.044,
+      "m4a1_silencer": 0.0188,
+      "m4a1": 0.0085,
+      "mp7": 0.0038,
+      "ssg08": 0.0017
      },
      "secondary_share": {
-      "glock": 0.8405,
-      "tec9": 0.0744,
-      "usp_silencer": 0.0399,
-      "deagle": 0.018,
-      "elite": 0.0097
+      "glock": 0.8326,
+      "tec9": 0.0615,
+      "deagle": 0.0339,
+      "usp_silencer": 0.0302,
+      "p250": 0.022
      },
-     "awp_per_team": 0.432,
+     "awp_per_team": 0.4728,
      "grenades_per_player": {
-      "smoke": 0.9335,
-      "flash": 1.2529,
-      "he": 0.3937,
-      "molotov": 0.8485
+      "smoke": 0.9204,
+      "flash": 1.2797,
+      "he": 0.3988,
+      "molotov": 0.8333
      },
      "equip_value": {
       "p10": 3700,
       "p50": 5000,
-      "p90": 5450
+      "p90": 5600
      }
     },
     "pistol": {
-     "player_rounds": 280,
+     "player_rounds": 1400,
      "armor_rate": 0.6286,
      "helmet_rate": 0.0,
      "kit_rate": null,
      "primary_rate": 0.0,
      "primary_share": {},
      "secondary_share": {
-      "glock": 0.9607,
-      "p250": 0.0393
+      "glock": 0.9285,
+      "p250": 0.0715
      },
      "awp_per_team": 0.0,
      "grenades_per_player": {
-      "smoke": 0.3286,
-      "flash": 0.375,
-      "he": 0.0286,
-      "molotov": 0.175
+      "smoke": 0.3279,
+      "flash": 0.3729,
+      "he": 0.03,
+      "molotov": 0.1543
      },
      "equip_value": {
       "p10": 700,
       "p50": 850,
-      "p90": 1250
+      "p90": 1150
      }
     }
    }
@@ -547,148 +555,148 @@
  },
  "round_plan": {
   "overall": {
-   "n_rounds": 599,
-   "plant_rate": 0.5242,
+   "n_rounds": 2931,
+   "plant_rate": 0.4974,
    "plant_rate_by_t_buy": {
-    "pistol": 0.6552,
-    "eco": 0.1829,
-    "force": 0.4552,
-    "full": 0.5646
+    "pistol": 0.5585,
+    "eco": 0.1557,
+    "force": 0.4555,
+    "full": 0.5428
    },
-   "site_a_share": 0.534,
+   "site_a_share": 0.5225,
    "plant_time_s": {
-    "p10": 37.78,
-    "p25": 49.47,
-    "p50": 76.45,
-    "p75": 97.05,
-    "p90": 105.65
+    "p10": 38.89,
+    "p25": 53.03,
+    "p50": 78.05,
+    "p75": 96.7,
+    "p90": 106.7
    }
   },
   "by_map": {
    "de_ancient": {
-    "n_rounds": 78,
-    "plant_rate": 0.5513,
+    "n_rounds": 422,
+    "plant_rate": 0.5474,
     "plant_rate_by_t_buy": {
-     "pistol": 0.5321,
-     "eco": 0.3938,
-     "force": 0.6396,
-     "full": 0.5645
+     "pistol": 0.6557,
+     "eco": 0.2686,
+     "force": 0.5399,
+     "full": 0.567
     },
-    "site_a_share": 0.5725,
+    "site_a_share": 0.5072,
     "plant_time_s": {
-     "p10": 33.62,
-     "p25": 44.75,
-     "p50": 66.81,
-     "p75": 88.89,
-     "p90": 94.34
+     "p10": 33.12,
+     "p25": 43.66,
+     "p50": 69.58,
+     "p75": 92.2,
+     "p90": 106.12
     }
    },
    "de_anubis": {
-    "n_rounds": 21,
-    "plant_rate": 0.5238,
+    "n_rounds": 203,
+    "plant_rate": 0.5665,
     "plant_rate_by_t_buy": {
-     "pistol": 0.6032,
-     "eco": 0.4365,
-     "force": 0.5568,
-     "full": 0.5099
+     "pistol": 0.6555,
+     "eco": 0.3095,
+     "force": 0.5656,
+     "full": 0.5965
     },
-    "site_a_share": 0.3019,
+    "site_a_share": 0.4258,
     "plant_time_s": {
-     "p10": 37.78,
-     "p25": 49.47,
-     "p50": 76.45,
-     "p75": 97.05,
-     "p90": 105.65
+     "p10": 46.03,
+     "p25": 59.67,
+     "p50": 78.83,
+     "p75": 95.01,
+     "p90": 105.9
     }
    },
    "de_cache": {
-    "n_rounds": 107,
-    "plant_rate": 0.4953,
+    "n_rounds": 391,
+    "plant_rate": 0.4987,
     "plant_rate_by_t_buy": {
-     "pistol": 0.6477,
-     "eco": 0.3477,
-     "force": 0.3581,
-     "full": 0.536
+     "pistol": 0.4997,
+     "eco": 0.2305,
+     "force": 0.4361,
+     "full": 0.5615
     },
-    "site_a_share": 0.6244,
+    "site_a_share": 0.5523,
     "plant_time_s": {
-     "p10": 37.3,
-     "p25": 47.48,
-     "p50": 68.33,
-     "p75": 93.11,
-     "p90": 103.63
+     "p10": 39.71,
+     "p25": 54.64,
+     "p50": 74.81,
+     "p75": 96.4,
+     "p90": 106.35
     }
    },
    "de_dust2": {
-    "n_rounds": 61,
-    "plant_rate": 0.4918,
+    "n_rounds": 606,
+    "plant_rate": 0.5099,
     "plant_rate_by_t_buy": {
-     "pistol": 0.5574,
-     "eco": 0.3481,
-     "force": 0.4612,
-     "full": 0.5268
+     "pistol": 0.4728,
+     "eco": 0.1955,
+     "force": 0.4728,
+     "full": 0.5697
     },
-    "site_a_share": 0.6085,
+    "site_a_share": 0.543,
     "plant_time_s": {
-     "p10": 36.7,
-     "p25": 48.88,
-     "p50": 86.55,
-     "p75": 98.52,
-     "p90": 107.53
+     "p10": 44.43,
+     "p25": 60.11,
+     "p50": 81.42,
+     "p75": 97.98,
+     "p90": 108.43
     }
    },
    "de_inferno": {
-    "n_rounds": 99,
-    "plant_rate": 0.5859,
+    "n_rounds": 259,
+    "plant_rate": 0.5135,
     "plant_rate_by_t_buy": {
-     "pistol": 0.5929,
-     "eco": 0.3906,
-     "force": 0.5664,
-     "full": 0.6297
+     "pistol": 0.6149,
+     "eco": 0.2191,
+     "force": 0.5028,
+     "full": 0.5408
     },
-    "site_a_share": 0.505,
+    "site_a_share": 0.533,
     "plant_time_s": {
-     "p10": 45.09,
-     "p25": 58.77,
-     "p50": 84.46,
-     "p75": 103.43,
-     "p90": 108.19
+     "p10": 46.17,
+     "p25": 58.64,
+     "p50": 83.42,
+     "p75": 102.61,
+     "p90": 109.74
     }
    },
    "de_mirage": {
-    "n_rounds": 145,
-    "plant_rate": 0.531,
+    "n_rounds": 643,
+    "plant_rate": 0.4635,
     "plant_rate_by_t_buy": {
-     "pistol": 0.5963,
-     "eco": 0.3481,
-     "force": 0.4245,
-     "full": 0.5794
+     "pistol": 0.5234,
+     "eco": 0.2091,
+     "force": 0.4047,
+     "full": 0.5059
     },
-    "site_a_share": 0.5097,
+    "site_a_share": 0.5916,
     "plant_time_s": {
-     "p10": 39.45,
-     "p25": 47.8,
-     "p50": 77.41,
-     "p75": 99.72,
-     "p90": 105.93
+     "p10": 36.54,
+     "p25": 49.53,
+     "p50": 78.97,
+     "p75": 95.27,
+     "p90": 105.12
     }
    },
    "de_nuke": {
-    "n_rounds": 88,
-    "plant_rate": 0.4773,
+    "n_rounds": 407,
+    "plant_rate": 0.4349,
     "plant_rate_by_t_buy": {
-     "pistol": 0.5985,
-     "eco": 0.2807,
-     "force": 0.436,
-     "full": 0.5117
+     "pistol": 0.5281,
+     "eco": 0.1606,
+     "force": 0.405,
+     "full": 0.4778
     },
-    "site_a_share": 0.5065,
+    "site_a_share": 0.4183,
     "plant_time_s": {
-     "p10": 37.86,
-     "p25": 51.61,
-     "p50": 76.05,
-     "p75": 92.44,
-     "p90": 100.06
+     "p10": 39.5,
+     "p25": 52.59,
+     "p50": 80.06,
+     "p75": 96.7,
+     "p90": 105.28
     }
    }
   },

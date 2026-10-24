@@ -1,7 +1,7 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.1.0",
- "generated_at": "2026-10-23",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
  "game_build": {
   "client_version": 2000930,
   "patch_version": "1.41.9.0",
@@ -14,7 +14,7 @@
  },
  "sources": {
   "oficial": "weapons.vdata, gamemode_competitive.cfg e items_game.txt da build 2000930 + cvars do servidor do torneio gravadas nas demos",
-  "medido": "28 demos de partidas profissionais, 599 rounds"
+  "medido": "143 demos de partidas profissionais, 2931 rounds"
  },
  "units": {
   "distance": "unidades Source (1 = 0,0254 m)",
@@ -170,7 +170,7 @@
   },
   "mp_ct_default_primary": {
    "value": "",
-   "source": "padrão competitivo"
+   "source": "torneio (cvar na demo)"
   },
   "mp_ct_default_secondary": {
    "value": "weapon_hkp2000",
@@ -201,6 +201,10 @@
    "source": "padrão competitivo"
   },
   "mp_endmatch_votenextmap": {
+   "value": false,
+   "source": "torneio (cvar na demo)"
+  },
+  "mp_endmatch_votenextmap_keepcurrent": {
    "value": false,
    "source": "torneio (cvar na demo)"
   },
@@ -277,8 +281,9 @@
    "source": "torneio (cvar na demo)"
   },
   "mp_playercashawards": {
-   "value": 1,
-   "source": "padrão competitivo"
+   "value": true,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 1
   },
   "mp_promoted_item_enabled": {
    "value": false,
@@ -336,7 +341,7 @@
   },
   "mp_startmoney": {
    "value": 800,
-   "source": "padrão competitivo"
+   "source": "torneio (cvar na demo)"
   },
   "mp_t_default_melee": {
    "value": "weapon_knife",
@@ -344,7 +349,7 @@
   },
   "mp_t_default_primary": {
    "value": "",
-   "source": "padrão competitivo"
+   "source": "torneio (cvar na demo)"
   },
   "mp_t_default_secondary": {
    "value": "weapon_glock",
@@ -371,8 +376,9 @@
    "source": "torneio (cvar na demo)"
   },
   "mp_teamcashawards": {
-   "value": 1,
-   "source": "padrão competitivo"
+   "value": true,
+   "source": "torneio (cvar na demo)",
+   "competitive_default": 1
   },
   "mp_technical_timeout_duration_s": {
    "value": 120,
@@ -385,6 +391,10 @@
   "mp_timelimit": {
    "value": 0,
    "source": "padrão competitivo"
+  },
+  "mp_warmup_items_nocost": {
+   "value": true,
+   "source": "torneio (cvar na demo)"
   },
   "mp_warmup_pausetimer": {
    "value": 1,
@@ -478,11 +488,11 @@
    "win_reward_per_player": {
     "CT_bomb_defused": {
      "median": 3750.0,
-     "p10": 3750.0,
+     "p10": 3700.0,
      "p90": 4050.0,
-     "min": -2850.0,
-     "max": 12200.0,
-     "n": 332
+     "min": -7950.0,
+     "max": 12350.0,
+     "n": 1725
     },
     "CT_t_killed": {
      "median": 3500.0,
@@ -490,62 +500,62 @@
      "p90": 3500.0,
      "min": -14100.0,
      "max": 12500.0,
-     "n": 852
+     "n": 4095
     },
     "CT_time_ran_out": {
-     "median": 3400.0,
+     "median": 3450.0,
      "p10": 3350.0,
      "p90": 3450.0,
-     "min": 3250.0,
+     "min": -12400.0,
      "max": 3500.0,
-     "n": 215
+     "n": 936
     },
     "T_bomb_exploded": {
      "median": 3500.0,
      "p10": 3500.0,
      "p90": 3500.0,
-     "min": -800.0,
+     "min": -1900.0,
      "max": 11800.0,
-     "n": 683
+     "n": 2696
     },
     "T_ct_killed": {
      "median": 3250.0,
      "p10": 3250.0,
      "p90": 3250.0,
-     "min": -4350.0,
-     "max": 9950.0,
-     "n": 544
+     "min": -14300.0,
+     "max": 10000.0,
+     "n": 3071
     }
    },
    "loss_counter_rule_fit": {
     "desconta_1": {
      "perdedor": {
-      "acerto": 0.743,
-      "n": 537
+      "acerto": 0.78,
+      "n": 2574
      },
      "vencedor": {
-      "acerto": 0.996,
-      "n": 537
+      "acerto": 0.993,
+      "n": 2574
      }
     },
     "desconta_2": {
      "perdedor": {
-      "acerto": 0.931,
-      "n": 537
+      "acerto": 0.949,
+      "n": 2574
      },
      "vencedor": {
-      "acerto": 0.996,
-      "n": 537
+      "acerto": 0.993,
+      "n": 2574
      }
     },
     "zera": {
      "perdedor": {
-      "acerto": 0.823,
-      "n": 537
+      "acerto": 0.837,
+      "n": 2574
      },
      "vencedor": {
-      "acerto": 0.996,
-      "n": 537
+      "acerto": 0.993,
+      "n": 2574
      }
     }
    }
@@ -567,8 +577,8 @@
     "note": "multiplicador da arma (headshot_multiplier)",
     "measured": {
      "best_fit": 4.0,
-     "exact_match_rate": 0.55,
-     "n": 40
+     "exact_match_rate": 0.49,
+     "n": 210
     }
    },
    "neck": {
@@ -576,207 +586,212 @@
     "note": "o pescoço NÃO é cabeça: ×1,0 e protegido pelo colete (não pelo capacete)",
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 1.0,
-     "n": 2
+     "exact_match_rate": 0.917,
+     "n": 24
     }
    },
    "chest": {
     "value": 1.0,
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.845,
-     "n": 536
+     "exact_match_rate": 0.862,
+     "n": 2604
     }
    },
    "stomach": {
     "value": 1.25,
     "measured": {
      "best_fit": 1.25,
-     "exact_match_rate": 0.828,
-     "n": 128
+     "exact_match_rate": 0.826,
+     "n": 644
     }
    },
    "left_arm": {
     "value": 1.0,
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.643,
-     "n": 14
+     "exact_match_rate": 0.762,
+     "n": 84
     }
    },
    "right_arm": {
     "value": 1.0,
     "measured": {
      "best_fit": 1.0,
-     "exact_match_rate": 0.825,
-     "n": 80
+     "exact_match_rate": 0.853,
+     "n": 408
     }
    },
    "left_leg": {
     "value": 0.75,
     "measured": {
      "best_fit": 0.75,
-     "exact_match_rate": 0.833,
-     "n": 30
+     "exact_match_rate": 0.821,
+     "n": 117
     }
    },
    "right_leg": {
     "value": 0.75,
     "measured": {
      "best_fit": 0.75,
-     "exact_match_rate": 0.842,
-     "n": 19
+     "exact_match_rate": 0.861,
+     "n": 122
     }
    }
   },
   "validation": {
    "vida": {
     "sem_colete": {
-     "n": 849,
-     "exato": 0.823,
-     "ate_1hp": 0.847,
-     "menor_que_previsto": 0.153,
+     "n": 4213,
+     "exato": 0.834,
+     "ate_1hp": 0.862,
+     "menor_que_previsto": 0.138,
      "maior_que_previsto": 0.0
     },
     "com_colete": {
-     "n": 7347,
-     "exato": 0.859,
-     "ate_1hp": 0.876,
-     "menor_que_previsto": 0.124,
+     "n": 35577,
+     "exato": 0.854,
+     "ate_1hp": 0.874,
+     "menor_que_previsto": 0.126,
      "maior_que_previsto": 0.0
     }
    },
    "por_parte_do_corpo": {
     "chest": {
-     "n": 4671,
-     "ate_1hp": 0.887,
+     "n": 22599,
+     "ate_1hp": 0.893,
      "maior_que_previsto": 0.0
     },
     "head": {
-     "n": 573,
-     "ate_1hp": 0.77,
+     "n": 3027,
+     "ate_1hp": 0.775,
      "maior_que_previsto": 0.0
     },
     "left_arm": {
-     "n": 298,
-     "ate_1hp": 0.872,
+     "n": 1421,
+     "ate_1hp": 0.888,
      "maior_que_previsto": 0.0
     },
     "left_leg": {
-     "n": 214,
-     "ate_1hp": 0.813,
+     "n": 984,
+     "ate_1hp": 0.807,
      "maior_que_previsto": 0.0
     },
     "neck": {
-     "n": 52,
-     "ate_1hp": 0.923,
+     "n": 283,
+     "ate_1hp": 0.894,
      "maior_que_previsto": 0.0
     },
     "right_arm": {
-     "n": 790,
-     "ate_1hp": 0.895,
+     "n": 3900,
+     "ate_1hp": 0.886,
      "maior_que_previsto": 0.0
     },
     "right_leg": {
-     "n": 259,
-     "ate_1hp": 0.842,
+     "n": 1281,
+     "ate_1hp": 0.825,
      "maior_que_previsto": 0.0
     },
     "stomach": {
-     "n": 1339,
-     "ate_1hp": 0.872,
+     "n": 6295,
+     "ate_1hp": 0.857,
      "maior_que_previsto": 0.0
     }
    },
    "por_arma": {
     "ak47": {
-     "n": 2655,
-     "ate_1hp": 0.838,
+     "n": 13045,
+     "ate_1hp": 0.844,
+     "maior_que_previsto": 0.0
+    },
+    "aug": {
+     "n": 27,
+     "ate_1hp": 0.889,
      "maior_que_previsto": 0.0
     },
     "awp": {
-     "n": 39,
-     "ate_1hp": 0.154,
+     "n": 199,
+     "ate_1hp": 0.131,
      "maior_que_previsto": 0.0
     },
     "deagle": {
-     "n": 91,
-     "ate_1hp": 0.835,
+     "n": 643,
+     "ate_1hp": 0.802,
      "maior_que_previsto": 0.0
     },
     "elite": {
-     "n": 85,
-     "ate_1hp": 0.906,
+     "n": 524,
+     "ate_1hp": 0.927,
      "maior_que_previsto": 0.0
     },
     "famas": {
-     "n": 129,
-     "ate_1hp": 0.899,
+     "n": 672,
+     "ate_1hp": 0.866,
      "maior_que_previsto": 0.0
     },
     "fiveseven": {
-     "n": 135,
-     "ate_1hp": 0.978,
-     "maior_que_previsto": 0.0
-    },
-    "galilar": {
-     "n": 596,
-     "ate_1hp": 0.857,
-     "maior_que_previsto": 0.0
-    },
-    "glock": {
-     "n": 468,
-     "ate_1hp": 0.938,
-     "maior_que_previsto": 0.0
-    },
-    "hkp2000": {
-     "n": 355,
-     "ate_1hp": 0.915,
-     "maior_que_previsto": 0.0
-    },
-    "m4a1": {
-     "n": 910,
-     "ate_1hp": 0.86,
-     "maior_que_previsto": 0.0
-    },
-    "m4a1_silencer": {
-     "n": 1665,
-     "ate_1hp": 0.871,
-     "maior_que_previsto": 0.0
-    },
-    "mac10": {
-     "n": 227,
+     "n": 577,
      "ate_1hp": 0.96,
      "maior_que_previsto": 0.0
     },
+    "galilar": {
+     "n": 2584,
+     "ate_1hp": 0.849,
+     "maior_que_previsto": 0.0
+    },
+    "glock": {
+     "n": 2282,
+     "ate_1hp": 0.947,
+     "maior_que_previsto": 0.0
+    },
+    "hkp2000": {
+     "n": 1797,
+     "ate_1hp": 0.923,
+     "maior_que_previsto": 0.0
+    },
+    "m4a1": {
+     "n": 4353,
+     "ate_1hp": 0.872,
+     "maior_que_previsto": 0.0
+    },
+    "m4a1_silencer": {
+     "n": 8181,
+     "ate_1hp": 0.862,
+     "maior_que_previsto": 0.0
+    },
+    "mac10": {
+     "n": 1230,
+     "ate_1hp": 0.974,
+     "maior_que_previsto": 0.0
+    },
     "mp7": {
-     "n": 35,
-     "ate_1hp": 1.0,
+     "n": 319,
+     "ate_1hp": 0.947,
      "maior_que_previsto": 0.0
     },
     "mp9": {
-     "n": 510,
-     "ate_1hp": 0.963,
+     "n": 2012,
+     "ate_1hp": 0.955,
      "maior_que_previsto": 0.0
     },
     "p250": {
-     "n": 66,
-     "ate_1hp": 0.985,
+     "n": 426,
+     "ate_1hp": 0.946,
      "maior_que_previsto": 0.0
     },
     "ssg08": {
-     "n": 31,
-     "ate_1hp": 0.806,
+     "n": 123,
+     "ate_1hp": 0.748,
      "maior_que_previsto": 0.0
     },
     "tec9": {
-     "n": 192,
-     "ate_1hp": 0.922,
+     "n": 779,
+     "ate_1hp": 0.949,
      "maior_que_previsto": 0.0
     }
    },
    "generic_hitgroup_share": 0.0,
-   "dano_no_colete_ate_1": 0.92
+   "dano_no_colete_ate_1": 0.915
   }
  },
  "movement": {
@@ -789,15 +804,15 @@
     "speed_ratio_p90": 0.52,
     "speed_ratio_p95": 0.52,
     "speed_ratio_p99": 0.52,
-    "n_moving": 355411
+    "n_moving": 1751814
    },
    "crouch": {
-    "speed_ratio_p50": 0.358,
+    "speed_ratio_p50": 0.357,
     "speed_ratio_p75": 0.463,
-    "speed_ratio_p90": 0.545,
-    "speed_ratio_p95": 0.627,
-    "speed_ratio_p99": 0.811,
-    "n_moving": 31582
+    "speed_ratio_p90": 0.54,
+    "speed_ratio_p95": 0.626,
+    "speed_ratio_p99": 0.806,
+    "n_moving": 159016
    }
   },
   "note": "andar (shift) = 0,52 × velocidade máxima da arma (exato em todas as amostras). Agachado: usar ~0,34–0,36 (mediana medida); percentis altos são a desaceleração logo após agachar correndo"
@@ -811,7 +826,7 @@
     "p90": 41.0,
     "min": 41.0,
     "max": 41.0,
-    "n": 144
+    "n": 581
    }
   },
   "plant_duration_s": {
@@ -819,9 +834,9 @@
     "median": 3.125,
     "p10": 3.125,
     "p90": 3.125,
-    "min": 3.125,
-    "max": 3.125,
-    "n": 322
+    "min": 3.0,
+    "max": 3.234,
+    "n": 1525
    }
   },
   "defuse_duration_s": {
@@ -829,9 +844,9 @@
     "median": 5.0,
     "p10": 5.0,
     "p90": 5.0,
-    "min": 5.0,
+    "min": 4.656,
     "max": 5.0,
-    "n": 41
+    "n": 227
    },
    "without_kit": {
     "median": 10.0,
@@ -839,7 +854,7 @@
     "p90": 10.0,
     "min": 10.0,
     "max": 10.0,
-    "n": 26
+    "n": 127
    }
   }
  },
@@ -854,7 +869,7 @@
    "p90": 22.062,
    "min": 22.062,
    "max": 58.094,
-   "n": 3823
+   "n": 18239
   },
   "molotov_burn_duration_s": {
    "median": 5.5,
@@ -862,7 +877,7 @@
    "p90": 7.016,
    "min": 0.031,
    "max": 7.031,
-   "n": 3150
+   "n": 14656
   },
   "time_to_detonate_s": {
    "he": {
@@ -871,50 +886,50 @@
     "p90": 1.625,
     "min": 1.625,
     "max": 1.625,
-    "n": 2247
+    "n": 10790
    },
    "flash": {
     "median": 1.625,
     "p10": 1.625,
     "p90": 1.625,
-    "min": 1.625,
+    "min": 0.859,
     "max": 1.625,
-    "n": 3794
+    "n": 18323
    },
    "smoke": {
     "median": 3.047,
     "p10": 1.484,
-    "p90": 6.844,
-    "min": 0.094,
-    "max": 10.188,
-    "n": 4031
+    "p90": 6.734,
+    "min": 0.062,
+    "max": 10.875,
+    "n": 19350
    },
    "note": "HE e flash têm pavio fixo; smoke detona quando para de se mover; molotov/incendiária detonam ao tocar o chão"
   },
   "flash_blind_duration_s": {
-   "median": 1.244,
-   "p10": 0.399,
-   "p90": 4.287,
-   "min": 0.054,
-   "max": 5.274,
-   "n": 6422
+   "median": 1.068,
+   "p10": 0.339,
+   "p90": 4.264,
+   "min": 0.053,
+   "max": 5.31,
+   "n": 30714
   },
   "he_damage": {
    "health": {
-    "median": 9.0,
+    "median": 10.0,
     "p10": 1.0,
-    "p90": 45.0,
+    "p90": 44.0,
     "min": 0.0,
-    "max": 94.0,
-    "n": 1361
+    "max": 98.0,
+    "n": 5883
    },
    "armor": {
-    "median": 4.0,
+    "median": 5.0,
     "p10": 0.0,
-    "p90": 28.0,
+    "p90": 27.0,
     "min": 0.0,
     "max": 39.0,
-    "n": 1361
+    "n": 5883
    }
   },
   "molotov_damage_per_event": {
@@ -923,7 +938,7 @@
    "p90": 8.0,
    "min": 0.0,
    "max": 8.0,
-   "n": 2269
+   "n": 9466
   }
  },
  "round_timing": {
@@ -932,10 +947,10 @@
    "measured": {
     "median": 20.0,
     "p10": 20.0,
-    "p90": 57.922,
+    "p90": 60.489,
     "min": 20.0,
-    "max": 494.562,
-    "n": 571
+    "max": 781.844,
+    "n": 2788
    }
   },
   "round_time_s": {
@@ -946,7 +961,7 @@
     "p90": 115.0,
     "min": 115.0,
     "max": 115.0,
-    "n": 44
+    "n": 192
    }
   },
   "restart_delay_s": {
@@ -954,44 +969,36 @@
    "measured": {
     "median": 5.0,
     "p10": 5.0,
-    "p90": 5.0,
+    "p90": 7.0,
     "min": 0.0,
     "max": 83.5,
-    "n": 599
+    "n": 2931
    }
   },
   "duration_by_end_reason_s": {
-   "ct_killed": {
-    "median": 83.391,
-    "p10": 45.266,
-    "p90": 122.703,
-    "min": 21.984,
-    "max": 145.766,
-    "n": 136
+   "t_killed": {
+    "median": 74.547,
+    "p10": 39.509,
+    "p90": 104.859,
+    "min": 13.109,
+    "max": 114.969,
+    "n": 1049
    },
    "bomb_exploded": {
-    "median": 117.445,
-    "p10": 78.656,
-    "p90": 146.234,
+    "median": 119.188,
+    "p10": 79.816,
+    "p90": 147.1,
     "min": 63.078,
     "max": 155.859,
-    "n": 138
+    "n": 553
    },
-   "bomb_defused": {
-    "median": 107.094,
-    "p10": 70.213,
-    "p90": 136.059,
-    "min": 55.516,
-    "max": 146.484,
-    "n": 67
-   },
-   "t_killed": {
-    "median": 70.906,
-    "p10": 40.022,
-    "p90": 105.111,
-    "min": 18.578,
-    "max": 112.5,
-    "n": 214
+   "ct_killed": {
+    "median": 86.688,
+    "p10": 50.134,
+    "p90": 121.634,
+    "min": 21.984,
+    "max": 145.766,
+    "n": 783
    },
    "time_ran_out": {
     "median": 115.0,
@@ -999,7 +1006,15 @@
     "p90": 115.0,
     "min": 115.0,
     "max": 115.0,
-    "n": 44
+    "n": 192
+   },
+   "bomb_defused": {
+    "median": 106.602,
+    "p10": 66.7,
+    "p90": 133.148,
+    "min": 35.359,
+    "max": 146.672,
+    "n": 354
    }
   }
  },
@@ -1109,12 +1124,12 @@
    "measured": {
     "fire_interval_s": {
      "mean": 0.1001,
-     "n": 19929,
+     "n": 97467,
      "official": 0.1
     },
     "run_speed_p99": {
      "value": 215.0,
-     "n": 221072,
+     "n": 1128584,
      "official": 215.0
     }
    }
@@ -1223,9 +1238,14 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.1,
-     "n": 10,
+     "mean": 0.0998,
+     "n": 75,
      "official": 0.1
+    },
+    "run_speed_p99": {
+     "value": 220.0,
+     "n": 685,
+     "official": 220.0
     }
    }
   },
@@ -1334,7 +1354,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 200.0,
-     "n": 24763,
+     "n": 124798,
      "official": 200.0
     }
    }
@@ -1650,7 +1670,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 315,
+     "n": 404,
      "official": 240.0
     }
    }
@@ -1760,7 +1780,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 230.0,
-     "n": 17170,
+     "n": 126688,
      "official": 230.0
     }
    }
@@ -1870,7 +1890,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 129,
+     "n": 704,
      "official": 245.0
     }
    }
@@ -1980,7 +2000,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 6064,
+     "n": 29915,
      "official": 240.0
     }
    }
@@ -2089,13 +2109,13 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.09,
-     "n": 776,
+     "mean": 0.0901,
+     "n": 3532,
      "official": 0.09
     },
     "run_speed_p99": {
      "value": 220.0,
-     "n": 8154,
+     "n": 38588,
      "official": 220.0
     }
    }
@@ -2205,7 +2225,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 17462,
+     "n": 67884,
      "official": 240.0
     }
    }
@@ -2315,7 +2335,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 40479,
+     "n": 188181,
      "official": 245.0
     }
    }
@@ -2528,12 +2548,12 @@
    "measured": {
     "fire_interval_s": {
      "mean": 0.0902,
-     "n": 4574,
+     "n": 18703,
      "official": 0.09
     },
     "run_speed_p99": {
      "value": 215.0,
-     "n": 52604,
+     "n": 198793,
      "official": 215.0
     }
    }
@@ -2643,7 +2663,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 37777,
+     "n": 177330,
      "official": 240.0
     }
    }
@@ -2855,7 +2875,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 21050,
+     "n": 102946,
      "official": 245.0
     }
    }
@@ -2965,7 +2985,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 1767,
+     "n": 7621,
      "official": 240.0
     }
    }
@@ -3075,7 +3095,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 15726,
+     "n": 79021,
      "official": 245.0
     }
    }
@@ -3181,6 +3201,13 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.3,
     "flinch_velocity_modifier_small": 0.3
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 250.0,
+     "n": 10318,
+     "official": 250.0
+    }
    }
   },
   "m14": {
@@ -3493,13 +3520,13 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.09,
-     "n": 5873,
+     "mean": 0.0901,
+     "n": 28531,
      "official": 0.09
     },
     "run_speed_p99": {
      "value": 225.0,
-     "n": 51286,
+     "n": 252543,
      "official": 225.0
     }
    }
@@ -3608,13 +3635,13 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.1003,
-     "n": 10574,
+     "mean": 0.1004,
+     "n": 50634,
      "official": 0.1
     },
     "run_speed_p99": {
      "value": 225.0,
-     "n": 95635,
+     "n": 523421,
      "official": 225.0
     }
    }
@@ -3723,13 +3750,13 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.0752,
-     "n": 1259,
+     "mean": 0.0751,
+     "n": 6636,
      "official": 0.075
     },
     "run_speed_p99": {
      "value": 240.0,
-     "n": 8524,
+     "n": 45238,
      "official": 240.0
     }
    }
@@ -3839,7 +3866,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 225.0,
-     "n": 1109,
+     "n": 2743,
      "official": 225.0
     }
    }
@@ -3949,7 +3976,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 13320,
+     "n": 57841,
      "official": 245.0
     }
    }
@@ -4055,6 +4082,18 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.0,
     "flinch_velocity_modifier_small": 0.0
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0801,
+     "n": 16,
+     "official": 0.08
+    },
+    "run_speed_p99": {
+     "value": 235.0,
+     "n": 129,
+     "official": 235.0
+    }
    }
   },
   "mp7": {
@@ -4162,12 +4201,12 @@
    "measured": {
     "fire_interval_s": {
      "mean": 0.0799,
-     "n": 257,
+     "n": 1471,
      "official": 0.08
     },
     "run_speed_p99": {
      "value": 220.0,
-     "n": 2791,
+     "n": 13499,
      "official": 220.0
     }
    }
@@ -4276,13 +4315,13 @@
    },
    "measured": {
     "fire_interval_s": {
-     "mean": 0.0699,
-     "n": 2732,
+     "mean": 0.07,
+     "n": 10056,
      "official": 0.07
     },
     "run_speed_p99": {
      "value": 240.0,
-     "n": 21011,
+     "n": 91081,
      "official": 240.0
     }
    }
@@ -4491,6 +4530,13 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.4,
     "flinch_velocity_modifier_small": 0.45
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 220.0,
+     "n": 213,
+     "official": 220.0
+    }
    }
   },
   "p250": {
@@ -4598,7 +4644,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 6365,
+     "n": 41069,
      "official": 240.0
     }
    }
@@ -5223,7 +5269,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 245.0,
-     "n": 41811,
+     "n": 195765,
      "official": 245.0
     }
    }
@@ -5333,7 +5379,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 230.0,
-     "n": 2339,
+     "n": 9091,
      "official": 230.0
     }
    }
@@ -5439,6 +5485,13 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.5,
     "flinch_velocity_modifier_small": 0.65
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 230.0,
+     "n": 885,
+     "official": 230.0
+    }
    }
   },
   "tec9": {
@@ -5546,7 +5599,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 18937,
+     "n": 73667,
      "official": 240.0
     }
    }
@@ -5652,6 +5705,18 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.0,
     "flinch_velocity_modifier_small": 0.0
+   },
+   "measured": {
+    "fire_interval_s": {
+     "mean": 0.0897,
+     "n": 77,
+     "official": 0.09
+    },
+    "run_speed_p99": {
+     "value": 230.0,
+     "n": 361,
+     "official": 230.0
+    }
    }
   },
   "usp_silencer": {
@@ -5759,7 +5824,7 @@
    "measured": {
     "run_speed_p99": {
      "value": 240.0,
-     "n": 30372,
+     "n": 156837,
      "official": 240.0
     }
    }
@@ -5865,6 +5930,13 @@
    "tagging": {
     "flinch_velocity_modifier_large": 0.4,
     "flinch_velocity_modifier_small": 0.45
+   },
+   "measured": {
+    "run_speed_p99": {
+     "value": 215.0,
+     "n": 457,
+     "official": 215.0
+    }
    }
   }
  },
@@ -5872,7 +5944,10 @@
   "AK-47": "ak47",
   "AUG": "aug",
   "AWP": "awp",
+  "Bayonet": "bayonet",
+  "Bowie Knife": "knife_survival_bowie",
   "Butterfly Knife": "knife_butterfly",
+  "C4 Explosive": "ak47",
   "CZ75-Auto": "cz75a",
   "Decoy Grenade": "decoy",
   "Desert Eagle": "deagle",
@@ -5888,22 +5963,33 @@
   "Huntsman Knife": "knife_tactical",
   "Incendiary Grenade": "incgrenade",
   "Karambit": "knife_karambit",
+  "Kukri Knife": "knife_kukri",
   "M4A1-S": "m4a1_silencer",
   "M4A4": "m4a1",
   "M9 Bayonet": "knife_m9_bayonet",
   "MAC-10": "mac10",
   "MAG-7": "mag7",
+  "MP5-SD": "mp5sd",
   "MP7": "mp7",
   "MP9": "mp9",
   "Molotov": "molotov",
+  "Nomad Knife": "knife_outdoor",
+  "Nova": "nova",
   "P2000": "hkp2000",
   "P250": "p250",
   "SSG 08": "ssg08",
   "Skeleton Knife": "knife_skeleton",
   "Smoke Grenade": "smokegrenade",
+  "Stiletto Knife": "knife_stiletto",
   "Talon Knife": "knife_widowmaker",
   "Tec-9": "tec9",
-  "USP-S": "usp_silencer"
+  "UMP-45": "ump45",
+  "USP-S": "usp_silencer",
+  "Ursus Knife": "knife_ursus",
+  "XM1014": "xm1014",
+  "Zeus x27": "taser",
+  "knife": "knife",
+  "knife_t": "knife_t"
  },
  "weapon_classes": {
   "ak47": "rifle",

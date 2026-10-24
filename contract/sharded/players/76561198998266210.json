@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "steamid": "76561198998266210",
  "name": "xelex",
@@ -9,151 +9,151 @@
   "rifler"
  ],
  "mechanics": {
-  "shots_total": 776,
-  "shots_aimed": 544,
+  "shots_total": 6510,
+  "shots_aimed": 4770,
   "accuracy": {
    "awp": {
     "overall": {
      "value": 1.0,
      "n": 2,
-     "shrunk": 0.5855
+     "shrunk": 0.5729
     },
     "by_distance": {
      "20-30m": {
       "value": 1.0,
       "n": 2,
-      "shrunk": 0.5274
+      "shrunk": 0.5757
      }
     }
    },
    "pistol": {
     "overall": {
-     "value": 0.3365,
-     "n": 104,
-     "shrunk": 0.3211
+     "value": 0.2859,
+     "n": 1004,
+     "shrunk": 0.2852
     },
     "by_distance": {
      "0-10m": {
-      "value": 0.5238,
-      "n": 21,
-      "shrunk": 0.4698
+      "value": 0.4269,
+      "n": 171,
+      "shrunk": 0.4229
      },
      "10-20m": {
-      "value": 0.3846,
-      "n": 26,
-      "shrunk": 0.3376
+      "value": 0.3293,
+      "n": 416,
+      "shrunk": 0.3276
      },
      "20-30m": {
-      "value": 0.1852,
-      "n": 27,
-      "shrunk": 0.1901
+      "value": 0.2045,
+      "n": 220,
+      "shrunk": 0.2056
      },
      "30m+": {
-      "value": 0.3,
-      "n": 30,
-      "shrunk": 0.2248
+      "value": 0.1624,
+      "n": 197,
+      "shrunk": 0.1594
      }
     }
    },
    "rifle": {
     "overall": {
-     "value": 0.2854,
-     "n": 396,
-     "shrunk": 0.2838
+     "value": 0.2958,
+     "n": 3387,
+     "shrunk": 0.2956
     },
     "by_distance": {
      "0-10m": {
-      "value": 0.413,
-      "n": 46,
-      "shrunk": 0.4257
+      "value": 0.4192,
+      "n": 365,
+      "shrunk": 0.4221
      },
      "10-20m": {
-      "value": 0.2941,
-      "n": 136,
-      "shrunk": 0.302
+      "value": 0.3753,
+      "n": 1079,
+      "shrunk": 0.3752
      },
      "20-30m": {
-      "value": 0.4253,
-      "n": 87,
-      "shrunk": 0.392
+      "value": 0.2952,
+      "n": 1067,
+      "shrunk": 0.2945
      },
      "30m+": {
-      "value": 0.1339,
-      "n": 127,
-      "shrunk": 0.1301
+      "value": 0.1473,
+      "n": 876,
+      "shrunk": 0.1463
      }
     },
     "by_spray_bullet": {
      "1": {
-      "value": 0.2162,
-      "n": 111,
-      "shrunk": 0.2165
+      "value": 0.2621,
+      "n": 1133,
+      "shrunk": 0.2614
      },
      "2-3": {
-      "value": 0.3094,
-      "n": 139,
-      "shrunk": 0.307
+      "value": 0.316,
+      "n": 1193,
+      "shrunk": 0.3157
      },
      "4-6": {
-      "value": 0.3434,
-      "n": 99,
-      "shrunk": 0.3321
+      "value": 0.3166,
+      "n": 799,
+      "shrunk": 0.3158
      },
      "7+": {
-      "value": 0.2609,
-      "n": 46,
-      "shrunk": 0.2435
+      "value": 0.3247,
+      "n": 231,
+      "shrunk": 0.3149
      }
     }
    },
    "smg": {
     "overall": {
-     "value": 0.2143,
-     "n": 42,
-     "shrunk": 0.2476
+     "value": 0.3077,
+     "n": 377,
+     "shrunk": 0.3083
     },
     "by_distance": {
      "0-10m": {
-      "value": 0.0,
-      "n": 9,
-      "shrunk": 0.3061
+      "value": 0.4766,
+      "n": 107,
+      "shrunk": 0.4755
      },
      "10-20m": {
-      "value": 0.4545,
-      "n": 11,
-      "shrunk": 0.4003
+      "value": 0.3354,
+      "n": 161,
+      "shrunk": 0.3374
      },
      "20-30m": {
-      "value": 0.4,
-      "n": 10,
-      "shrunk": 0.2778
+      "value": 0.1304,
+      "n": 69,
+      "shrunk": 0.1504
      },
      "30m+": {
-      "value": 0.0,
-      "n": 12,
-      "shrunk": 0.0415
+      "value": 0.05,
+      "n": 40,
+      "shrunk": 0.0659
      }
     },
     "by_spray_bullet": {
      "1": {
-      "value": 0.3077,
-      "n": 13,
-      "shrunk": 0.2848
+      "value": 0.3069,
+      "n": 101,
+      "shrunk": 0.3017
      },
      "2-3": {
-      "value": 0.1667,
-      "n": 18,
-      "shrunk": 0.2587
+      "value": 0.295,
+      "n": 139,
+      "shrunk": 0.2995
      },
      "4-6": {
-      "value": 0.25,
-      "n": 4,
-      "shrunk": 0.3204
+      "value": 0.3333,
+      "n": 90,
+      "shrunk": 0.336
      },
      "7+": {
-      "value": 0.3333,
-      "n": 3,
-      "shrunk": 0.313
+      "value": 0.3784,
+      "n": 37,
+      "shrunk": 0.3565
      }
     }
    }
@@ -165,151 +165,158 @@
     "stomach": 0.5
    },
    "pistol": {
-    "n": 35,
-    "head": 0.4286,
-    "chest": 0.3429,
-    "stomach": 0.0857,
-    "right_arm": 0.0857,
-    "left_leg": 0.0286,
-    "neck": 0.0286
+    "n": 287,
+    "head": 0.3868,
+    "chest": 0.4216,
+    "stomach": 0.0662,
+    "left_arm": 0.0244,
+    "right_arm": 0.0418,
+    "left_leg": 0.0244,
+    "right_leg": 0.0279,
+    "neck": 0.007
    },
    "rifle": {
-    "n": 118,
-    "head": 0.2627,
-    "chest": 0.4407,
-    "stomach": 0.1356,
-    "left_arm": 0.0254,
-    "right_arm": 0.0593,
-    "left_leg": 0.0254,
-    "right_leg": 0.0339,
-    "neck": 0.0169
+    "n": 1015,
+    "head": 0.266,
+    "chest": 0.4788,
+    "stomach": 0.13,
+    "left_arm": 0.0286,
+    "right_arm": 0.0591,
+    "left_leg": 0.0089,
+    "right_leg": 0.0246,
+    "neck": 0.0039
    },
    "smg": {
-    "n": 9,
-    "head": 0.3333,
-    "chest": 0.5556,
-    "left_arm": 0.1111
+    "n": 117,
+    "head": 0.3248,
+    "chest": 0.4359,
+    "stomach": 0.0513,
+    "left_arm": 0.0513,
+    "right_arm": 0.094,
+    "left_leg": 0.0085,
+    "right_leg": 0.0256,
+    "neck": 0.0085
    }
   },
   "aim_error_first_bullet_deg": {
-   "p10": 0.429,
-   "p25": 0.864,
-   "p50": 1.63,
-   "p75": 3.286,
-   "p90": 6.931,
-   "mean": 2.561,
-   "n": 235,
+   "p10": 0.45,
+   "p25": 0.87,
+   "p50": 1.696,
+   "p75": 3.403,
+   "p90": 6.245,
+   "mean": 2.552,
+   "n": 2281,
    "source": "player"
   },
   "movement": {
    "still_shot_rate": {
-    "value": 0.6232,
-    "n": 544,
-    "shrunk": 0.6216
+    "value": 0.6082,
+    "n": 4770,
+    "shrunk": 0.6081
    },
    "speed_at_shot": {
-    "p10": 0.199,
-    "p25": 6.69,
-    "p50": 23.812,
-    "p75": 59.055,
-    "p90": 86.754,
-    "mean": 39.88,
-    "n": 544,
+    "p10": 1.366,
+    "p25": 8.131,
+    "p50": 27.461,
+    "p75": 60.264,
+    "p90": 97.707,
+    "mean": 43.467,
+    "n": 4770,
     "source": "player"
    },
    "crouch_shot_rate": {
-    "value": 0.3015,
-    "n": 544,
-    "shrunk": 0.2969
+    "value": 0.3312,
+    "n": 4770,
+    "shrunk": 0.3307
    },
    "airborne_shot_rate": {
-    "value": 0.0129,
-    "n": 544
+    "value": 0.0105,
+    "n": 4770
    }
   },
   "burst_length": {
    "p10": 1.0,
    "p25": 1.0,
-   "p50": 2.0,
+   "p50": 3.0,
    "p75": 5.0,
    "p90": 7.0,
-   "mean": 3.284,
-   "n": 201,
+   "mean": 3.525,
+   "n": 1874,
    "source": "player"
   },
   "reaction_time_s": {
    "p10": 0.031,
-   "p25": 0.055,
-   "p50": 0.133,
-   "p75": 0.238,
-   "p90": 0.323,
-   "mean": 0.19,
-   "n": 44,
+   "p25": 0.078,
+   "p50": 0.156,
+   "p75": 0.25,
+   "p90": 0.484,
+   "mean": 0.229,
+   "n": 351,
    "source": "player"
   },
   "crosshair_placement": {
    "total_deg": {
-    "p10": 0.432,
-    "p25": 0.909,
-    "p50": 3.218,
-    "p75": 7.328,
-    "p90": 15.323,
-    "mean": 6.196,
-    "n": 55,
+    "p10": 0.53,
+    "p25": 1.125,
+    "p50": 3.008,
+    "p75": 9.518,
+    "p90": 19.661,
+    "mean": 6.978,
+    "n": 434,
     "source": "player"
    },
    "horizontal_deg": {
-    "p10": 0.11,
-    "p25": 0.473,
-    "p50": 1.285,
-    "p75": 5.15,
-    "p90": 15.02,
-    "mean": 7.034,
-    "n": 55,
+    "p10": 0.199,
+    "p25": 0.716,
+    "p50": 2.016,
+    "p75": 8.086,
+    "p90": 18.139,
+    "mean": 6.386,
+    "n": 434,
     "source": "player"
    },
    "vertical_deg": {
-    "p10": -2.604,
-    "p25": -0.424,
-    "p50": 0.168,
-    "p75": 2.266,
-    "p90": 4.98,
-    "mean": 0.981,
-    "n": 55,
+    "p10": -2.151,
+    "p25": -0.463,
+    "p50": 0.275,
+    "p75": 1.352,
+    "p90": 4.187,
+    "mean": 0.849,
+    "n": 434,
     "source": "player"
    }
   },
   "shoots_after_sighting_rate": {
-   "value": 0.8,
-   "n": 55,
-   "shrunk": 0.7976
+   "value": 0.8088,
+   "n": 434,
+   "shrunk": 0.808
   },
   "duels": {
    "win_rate": {
-    "value": 0.5814,
-    "n": 43,
-    "shrunk": 0.5737
+    "value": 0.5973,
+    "n": 298,
+    "shrunk": 0.5948
    },
    "by_distance": {
     "0-10m": {
-     "value": 0.7273,
-     "n": 11,
-     "shrunk": 0.6121
+     "value": 0.6389,
+     "n": 72,
+     "shrunk": 0.62
     },
     "10-20m": {
-     "value": 0.4211,
-     "n": 19,
-     "shrunk": 0.4848
+     "value": 0.609,
+     "n": 133,
+     "shrunk": 0.6006
     },
     "20-30m": {
-     "value": 0.75,
-     "n": 12,
-     "shrunk": 0.6398
+     "value": 0.5526,
+     "n": 76,
+     "shrunk": 0.5572
     },
     "30m+": {
-     "value": 0.0,
-     "n": 1,
-     "shrunk": 0.5512
+     "value": 0.5294,
+     "n": 17,
+     "shrunk": 0.5542
     }
    }
   },
@@ -321,281 +328,341 @@
    "max_wait_s": 2.0,
    "by_aim_error": {
     "tight_lt2": {
-     "n": 40,
+     "n": 323,
      "instant": {
-      "value": 0.7,
-      "n": 40,
-      "shrunk": 0.6831
+      "value": 0.6904,
+      "n": 323,
+      "shrunk": 0.6867
      },
      "delayed": {
-      "value": 0.2,
-      "n": 40,
-      "shrunk": 0.2247
+      "value": 0.2384,
+      "n": 323,
+      "shrunk": 0.2413
      },
      "none": {
-      "value": 0.1,
-      "n": 40,
-      "shrunk": 0.0921
+      "value": 0.0712,
+      "n": 323,
+      "shrunk": 0.072
      }
     },
     "mid_2_8": {
-     "n": 31,
+     "n": 273,
      "instant": {
-      "value": 0.5484,
-      "n": 31,
-      "shrunk": 0.5204
+      "value": 0.5128,
+      "n": 273,
+      "shrunk": 0.5099
      },
      "delayed": {
-      "value": 0.3226,
-      "n": 31,
-      "shrunk": 0.3403
+      "value": 0.3663,
+      "n": 273,
+      "shrunk": 0.3669
      },
      "none": {
-      "value": 0.129,
-      "n": 31,
-      "shrunk": 0.1393
+      "value": 0.1209,
+      "n": 273,
+      "shrunk": 0.1231
      }
     },
     "wide_gt8": {
-     "n": 14,
+     "n": 151,
      "instant": {
-      "value": 0.1429,
-      "n": 14,
-      "shrunk": 0.147
+      "value": 0.0993,
+      "n": 151,
+      "shrunk": 0.1067
      },
      "delayed": {
-      "value": 0.5714,
-      "n": 14,
-      "shrunk": 0.5382
+      "value": 0.596,
+      "n": 151,
+      "shrunk": 0.5863
      },
      "none": {
-      "value": 0.2857,
-      "n": 14,
-      "shrunk": 0.3148
+      "value": 0.3046,
+      "n": 151,
+      "shrunk": 0.307
      }
     }
    },
    "fired_before_visible": {
-    "value": 0.2941,
-    "n": 85,
-    "shrunk": 0.2968
+    "value": 0.324,
+    "n": 747,
+    "shrunk": 0.3235
    },
    "delayed_reaction_s": {
     "p10": 0.125,
     "p25": 0.156,
     "p50": 0.219,
-    "p75": 0.344,
-    "p90": 0.619,
-    "mean": 0.316,
-    "n": 2015,
-    "source": "baseline",
-    "player_n": 26
+    "p75": 0.328,
+    "p90": 0.616,
+    "mean": 0.314,
+    "n": 267,
+    "source": "player"
    }
   }
  },
  "performance": {
-  "rounds": 80,
-  "kpr": 0.675,
-  "dpr": 0.612,
-  "apr": 0.212,
-  "adr": 89.5,
-  "kd": 1.102,
-  "kast": 0.775,
+  "rounds": 733,
+  "kpr": 0.688,
+  "dpr": 0.658,
+  "apr": 0.213,
+  "adr": 87.0,
+  "kd": 1.046,
+  "kast": 0.729,
   "headshot_kill_rate": {
-   "value": 0.6667,
-   "n": 54,
-   "shrunk": 0.6198
+   "value": 0.6627,
+   "n": 504,
+   "shrunk": 0.6568
   },
-  "survival_rate": 0.387,
+  "survival_rate": 0.342,
   "opening": {
    "attempt_rate": {
-    "value": 0.1625,
-    "n": 80,
-    "shrunk": 0.1698
+    "value": 0.206,
+    "n": 733,
+    "shrunk": 0.2058
    },
    "win_rate": {
-    "value": 0.5385,
-    "n": 13,
-    "shrunk": 0.5154
+    "value": 0.4636,
+    "n": 151,
+    "shrunk": 0.4678
    }
   },
-  "trade_kills_per_round": 0.1,
+  "trade_kills_per_round": 0.16,
   "traded_death_rate": {
-   "value": 0.3061,
-   "n": 49
+   "value": 0.2469,
+   "n": 482
   },
   "first_contact_s": {
-   "p10": 12.573,
-   "p25": 19.735,
-   "p50": 35.43,
-   "p75": 58.926,
-   "p90": 83.148,
-   "mean": 42.5,
-   "n": 74
+   "p10": 11.328,
+   "p25": 19.843,
+   "p50": 37.172,
+   "p75": 62.367,
+   "p90": 81.734,
+   "mean": 42.981,
+   "n": 671
   },
   "utility": {
-   "smoke_per_round": 0.662,
-   "flash_per_round": 0.538,
-   "he_per_round": 0.438,
-   "molotov_per_round": 0.562,
-   "flash_assists_per_round": 0.038,
-   "utility_damage_per_round": 4.0
+   "smoke_per_round": 0.622,
+   "flash_per_round": 0.588,
+   "he_per_round": 0.348,
+   "molotov_per_round": 0.55,
+   "flash_assists_per_round": 0.015,
+   "utility_damage_per_round": 4.3
   },
   "by_side": {
    "CT": {
-    "rounds": 39,
-    "kpr": 0.667,
-    "adr": 90.8,
-    "survival_rate": 0.487,
-    "round_win_rate": 0.744
+    "rounds": 380,
+    "kpr": 0.729,
+    "adr": 93.5,
+    "survival_rate": 0.429,
+    "round_win_rate": 0.605
    },
    "T": {
-    "rounds": 41,
-    "kpr": 0.683,
-    "adr": 88.2,
-    "survival_rate": 0.293,
-    "round_win_rate": 0.561
+    "rounds": 353,
+    "kpr": 0.643,
+    "adr": 80.0,
+    "survival_rate": 0.249,
+    "round_win_rate": 0.45
    }
   }
  },
  "weapons": {
   "shot_share_by_class": {
-   "rifle": 0.742,
-   "pistol": 0.184,
-   "smg": 0.071,
-   "awp": 0.003
+   "rifle": 0.731,
+   "pistol": 0.187,
+   "smg": 0.081,
+   "awp": 0.0
   },
   "kill_share_by_class": {
-   "rifle": 0.698,
-   "pistol": 0.226,
-   "smg": 0.038,
-   "awp": 0.038
+   "rifle": 0.705,
+   "pistol": 0.227,
+   "smg": 0.064,
+   "awp": 0.004
   },
   "top_weapons_by_shots": {
-   "ak47": 0.304,
-   "m4a1_silencer": 0.228,
-   "galilar": 0.177,
-   "glock": 0.089,
-   "mp9": 0.071
+   "ak47": 0.408,
+   "m4a1_silencer": 0.236,
+   "mp9": 0.076,
+   "galilar": 0.07,
+   "glock": 0.065
   }
  },
  "positions": {
-  "de_nuke": {
+  "de_ancient": {
    "CT": {
     "time_share": {
-     "BombsiteA": 0.235,
-     "HutRoof": 0.176,
-     "Rafters": 0.094,
-     "Outside": 0.084,
-     "Tunnels": 0.079
+     "House": 0.21,
+     "Alley": 0.167,
+     "CTSpawn": 0.106,
+     "BombsiteB": 0.101,
+     "BombsiteA": 0.084
     },
     "position_at_20s": {
-     "BombsiteA": 0.333,
-     "Rafters": 0.333,
-     "HutRoof": 0.25
+     "Alley": 0.3,
+     "Middle": 0.2,
+     "SideHall": 0.1
     }
    },
    "T": {
     "time_share": {
-     "Outside": 0.408,
-     "Tunnels": 0.164,
-     "TSpawn": 0.069,
-     "BombsiteB": 0.067,
-     "BombsiteA": 0.066
+     "Outside": 0.312,
+     "Middle": 0.144,
+     "Ramp": 0.129,
+     "Ruins": 0.095,
+     "BombsiteB": 0.089
     },
     "position_at_20s": {
-     "Outside": 0.667,
-     "Lobby": 0.167,
-     "Secret": 0.083
-    }
-   }
-  },
-  "de_inferno": {
-   "CT": {
-    "time_share": {
-     "BombsiteA": 0.216,
-     "Apartments": 0.209,
-     "Balcony": 0.143,
-     "CTSpawn": 0.093,
-     "Pit": 0.083
-    },
-    "position_at_20s": {
-     "Apartments": 0.667,
-     "BombsiteA": 0.333
-    }
-   },
-   "T": {
-    "time_share": {
-     "Banana": 0.225,
-     "Middle": 0.192,
-     "SecondMid": 0.094,
-     "BombsiteA": 0.09,
-     "TopofMid": 0.085
-    },
-    "position_at_20s": {
-     "Middle": 0.273,
-     "SecondMid": 0.273,
-     "TRamp": 0.091
-    }
-   }
-  },
-  "de_cache": {
-   "CT": {
-    "time_share": {
-     "BombsiteB": 0.443,
-     "Headshot": 0.093,
-     "Checkers": 0.079,
-     "Truck": 0.07,
-     "CTLane": 0.064
-    },
-    "position_at_20s": {
-     "BombsiteB": 0.545,
-     "Checkers": 0.273,
-     "Headshot": 0.182
-    }
-   },
-   "T": {
-    "time_share": {
-     "Garage": 0.291,
-     "TSpawn": 0.096,
-     "Mid": 0.089,
-     "TYard": 0.072,
-     "OutsideA": 0.069
-    },
-    "position_at_20s": {
-     "OutsideA": 0.2,
-     "AMain": 0.2,
-     "BHalls": 0.2
+     "Outside": 0.333,
+     "Middle": 0.167,
+     "TSideUpper": 0.167
     }
    }
   },
   "de_mirage": {
    "CT": {
     "time_share": {
-     "BombsiteA": 0.475,
-     "CTSpawn": 0.237,
-     "PalaceInterior": 0.076,
-     "TRamp": 0.05,
-     "Middle": 0.033
+     "BombsiteA": 0.402,
+     "CTSpawn": 0.206,
+     "PalaceInterior": 0.097,
+     "Jungle": 0.078,
+     "Connector": 0.057
     },
     "position_at_20s": {
-     "BombsiteA": 0.75,
-     "CTSpawn": 0.125,
-     "Middle": 0.125
+     "BombsiteA": 0.727,
+     "PalaceInterior": 0.091,
+     "Connector": 0.091
     }
    },
    "T": {
     "time_share": {
-     "TopofMid": 0.134,
-     "BombsiteB": 0.133,
-     "Underpass": 0.088,
-     "Apartments": 0.075,
-     "TRamp": 0.074
+     "PalaceAlley": 0.21,
+     "TopofMid": 0.206,
+     "TSpawn": 0.092,
+     "Middle": 0.089,
+     "PalaceInterior": 0.082
     },
     "position_at_20s": {
-     "TopofMid": 0.273,
-     "Underpass": 0.273,
-     "Apartments": 0.182
+     "TopofMid": 0.333,
+     "PalaceAlley": 0.222,
+     "TRamp": 0.111
+    }
+   }
+  },
+  "de_cache": {
+   "CT": {
+    "time_share": {
+     "BombsiteB": 0.376,
+     "Truck": 0.111,
+     "CTLane": 0.087,
+     "BombsiteA": 0.065,
+     "Checkers": 0.062
+    },
+    "position_at_20s": {
+     "BombsiteB": 0.667,
+     "Checkers": 0.25,
+     "BMain": 0.083
+    }
+   },
+   "T": {
+    "time_share": {
+     "Garage": 0.234,
+     "BHalls": 0.151,
+     "Red": 0.108,
+     "AMain": 0.108,
+     "OutsideA": 0.075
+    },
+    "position_at_20s": {
+     "Red": 0.2,
+     "OutsideA": 0.2,
+     "Garage": 0.2
+    }
+   }
+  },
+  "de_nuke": {
+   "CT": {
+    "time_share": {
+     "BombsiteA": 0.281,
+     "HutRoof": 0.146,
+     "Rafters": 0.124,
+     "Heaven": 0.084,
+     "Outside": 0.071
+    },
+    "position_at_20s": {
+     "BombsiteA": 0.556,
+     "Rafters": 0.222,
+     "HutRoof": 0.111
+    }
+   },
+   "T": {
+    "time_share": {
+     "Outside": 0.445,
+     "Lobby": 0.176,
+     "BombsiteA": 0.163,
+     "TSpawn": 0.077,
+     "Tunnels": 0.049
+    },
+    "position_at_20s": {
+     "Outside": 0.5,
+     "Lobby": 0.333,
+     "Squeaky": 0.167
+    }
+   }
+  },
+  "de_inferno": {
+   "CT": {
+    "time_share": {
+     "BombsiteA": 0.332,
+     "Apartments": 0.192,
+     "Balcony": 0.158,
+     "CTSpawn": 0.095,
+     "Pit": 0.068
+    },
+    "position_at_20s": {
+     "Apartments": 0.364,
+     "BombsiteA": 0.273,
+     "Balcony": 0.182
+    }
+   },
+   "T": {
+    "time_share": {
+     "Middle": 0.252,
+     "BombsiteA": 0.177,
+     "SecondMid": 0.119,
+     "Banana": 0.084,
+     "TopofMid": 0.071
+    },
+    "position_at_20s": {
+     "SecondMid": 0.455,
+     "Middle": 0.273,
+     "Underpass": 0.182
+    }
+   }
+  },
+  "de_dust2": {
+   "CT": {
+    "time_share": {
+     "LongDoors": 0.315,
+     "LongA": 0.292,
+     "UnderA": 0.079,
+     "BombsiteA": 0.045,
+     "CTSpawn": 0.042
+    },
+    "position_at_20s": {
+     "LongA": 0.467,
+     "LongDoors": 0.4,
+     "ExtendedA": 0.067
+    }
+   },
+   "T": {
+    "time_share": {
+     "UpperTunnel": 0.138,
+     "LowerTunnel": 0.112,
+     "ShortStairs": 0.103,
+     "Catwalk": 0.082,
+     "Middle": 0.078
+    },
+    "position_at_20s": {
+     "LowerTunnel": 0.385,
+     "LongDoors": 0.154,
+     "TunnelStairs": 0.154
     }
    }
   }

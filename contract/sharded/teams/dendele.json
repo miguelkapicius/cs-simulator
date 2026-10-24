@@ -1,0 +1,105 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "team": "DENDELE",
+ "rounds": 41,
+ "matches": 2,
+ "roster": [
+  {
+   "steamid": "76561198095896540",
+   "name": "doc",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 41
+  },
+  {
+   "steamid": "76561198135228658",
+   "name": "gafolo",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 41
+  },
+  {
+   "steamid": "76561198809462276",
+   "name": "koala",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 41
+  },
+  {
+   "steamid": "76561199030972198",
+   "name": "maxxkor",
+   "role_tags": [
+    "awper"
+   ],
+   "rounds": 41
+  },
+  {
+   "steamid": "76561198307734468",
+   "name": "rdnzao",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 41
+  }
+ ],
+ "maps": {
+  "de_ancient": {
+   "rounds": 21,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.417,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.083,
+     "full": 0.75
+    }
+   },
+   "t": {
+    "rounds": 9,
+    "win_rate": 0.333,
+    "plant_rate": 0.556,
+    "plant_a_share": 0.6,
+    "plants": 5,
+    "buy": {
+     "pistol": 0.111,
+     "eco": 0.111,
+     "force": 0.222,
+     "full": 0.556
+    }
+   }
+  },
+  "de_cache": {
+   "rounds": 20,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.333,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.167,
+     "full": 0.667
+    }
+   },
+   "t": {
+    "rounds": 8,
+    "win_rate": 0.375,
+    "plant_rate": 0.625,
+    "plant_a_share": 0.6,
+    "plants": 5,
+    "buy": {
+     "pistol": 0.125,
+     "eco": 0.125,
+     "force": 0.125,
+     "full": 0.625
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

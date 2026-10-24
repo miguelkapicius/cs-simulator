@@ -496,6 +496,8 @@ def economy_rule_fit(econ, rounds_by_demo, kills_by_demo, cfg):
     for demo, rounds in rounds_by_demo.items():
         e, k = econ[econ["demo"] == demo], kills_by_demo[demo]
         last = rounds[-1]["round"]
+        if not half_start(rounds[0]["round"]):      # demo cortada no meio de uma metade (parte 2): contador de derrotas desconhecido
+            continue
         for rule, fn in on_win.items():
             c = {}
             for r in rounds:

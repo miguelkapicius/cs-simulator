@@ -1,0 +1,553 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "steamid": "76561198190463461",
+ "name": "s1n",
+ "team": "M80",
+ "role_tags": [
+  "support"
+ ],
+ "mechanics": {
+  "shots_total": 1788,
+  "shots_aimed": 1296,
+  "accuracy": {
+   "pistol": {
+    "overall": {
+     "value": 0.2068,
+     "n": 237,
+     "shrunk": 0.2101
+    },
+    "by_distance": {
+     "0-10m": {
+      "value": 0.2105,
+      "n": 19,
+      "shrunk": 0.3021
+     },
+     "10-20m": {
+      "value": 0.2683,
+      "n": 82,
+      "shrunk": 0.2728
+     },
+     "20-30m": {
+      "value": 0.2469,
+      "n": 81,
+      "shrunk": 0.241
+     },
+     "30m+": {
+      "value": 0.0545,
+      "n": 55,
+      "shrunk": 0.0746
+     }
+    }
+   },
+   "rifle": {
+    "overall": {
+     "value": 0.255,
+     "n": 902,
+     "shrunk": 0.255
+    },
+    "by_distance": {
+     "0-10m": {
+      "value": 0.3483,
+      "n": 89,
+      "shrunk": 0.3717
+     },
+     "10-20m": {
+      "value": 0.3694,
+      "n": 222,
+      "shrunk": 0.3693
+     },
+     "20-30m": {
+      "value": 0.2779,
+      "n": 331,
+      "shrunk": 0.2768
+     },
+     "30m+": {
+      "value": 0.0962,
+      "n": 260,
+      "shrunk": 0.0967
+     }
+    },
+    "by_spray_bullet": {
+     "1": {
+      "value": 0.1779,
+      "n": 253,
+      "shrunk": 0.1811
+     },
+     "2-3": {
+      "value": 0.2816,
+      "n": 277,
+      "shrunk": 0.2827
+     },
+     "4-6": {
+      "value": 0.3207,
+      "n": 237,
+      "shrunk": 0.3177
+     },
+     "7+": {
+      "value": 0.2344,
+      "n": 128,
+      "shrunk": 0.2299
+     }
+    }
+   },
+   "smg": {
+    "overall": {
+     "value": 0.293,
+     "n": 157,
+     "shrunk": 0.2959
+    },
+    "by_distance": {
+     "0-10m": {
+      "value": 0.6,
+      "n": 30,
+      "shrunk": 0.5478
+     },
+     "10-20m": {
+      "value": 0.3673,
+      "n": 49,
+      "shrunk": 0.3633
+     },
+     "20-30m": {
+      "value": 0.1633,
+      "n": 49,
+      "shrunk": 0.1795
+     },
+     "30m+": {
+      "value": 0.069,
+      "n": 29,
+      "shrunk": 0.0807
+     }
+    },
+    "by_spray_bullet": {
+     "1": {
+      "value": 0.1944,
+      "n": 36,
+      "shrunk": 0.2232
+     },
+     "2-3": {
+      "value": 0.3023,
+      "n": 43,
+      "shrunk": 0.3113
+     },
+     "4-6": {
+      "value": 0.3333,
+      "n": 33,
+      "shrunk": 0.3389
+     },
+     "7+": {
+      "value": 0.3333,
+      "n": 42,
+      "shrunk": 0.3277
+     }
+    }
+   }
+  },
+  "hitgroups": {
+   "pistol": {
+    "n": 50,
+    "head": 0.34,
+    "chest": 0.58,
+    "stomach": 0.02,
+    "right_arm": 0.04,
+    "neck": 0.02
+   },
+   "rifle": {
+    "n": 232,
+    "head": 0.194,
+    "chest": 0.4957,
+    "stomach": 0.1767,
+    "left_arm": 0.0259,
+    "right_arm": 0.0819,
+    "left_leg": 0.0129,
+    "right_leg": 0.0129
+   },
+   "smg": {
+    "n": 47,
+    "head": 0.3191,
+    "chest": 0.4468,
+    "stomach": 0.0638,
+    "left_arm": 0.0426,
+    "right_arm": 0.1277
+   }
+  },
+  "aim_error_first_bullet_deg": {
+   "p10": 0.526,
+   "p25": 0.919,
+   "p50": 1.832,
+   "p75": 3.726,
+   "p90": 6.185,
+   "mean": 2.592,
+   "n": 536,
+   "source": "player"
+  },
+  "movement": {
+   "still_shot_rate": {
+    "value": 0.5401,
+    "n": 1296,
+    "shrunk": 0.5407
+   },
+   "speed_at_shot": {
+    "p10": 0.0,
+    "p25": 5.132,
+    "p50": 33.288,
+    "p75": 75.005,
+    "p90": 136.445,
+    "mean": 52.07,
+    "n": 1296,
+    "source": "player"
+   },
+   "crouch_shot_rate": {
+    "value": 0.1289,
+    "n": 1296,
+    "shrunk": 0.1299
+   },
+   "airborne_shot_rate": {
+    "value": 0.01,
+    "n": 1296
+   }
+  },
+  "burst_length": {
+   "p10": 1.0,
+   "p25": 1.0,
+   "p50": 2.0,
+   "p75": 7.0,
+   "p90": 10.0,
+   "mean": 4.437,
+   "n": 407,
+   "source": "player"
+  },
+  "reaction_time_s": {
+   "p10": 0.047,
+   "p25": 0.09,
+   "p50": 0.148,
+   "p75": 0.266,
+   "p90": 0.484,
+   "mean": 0.234,
+   "n": 76,
+   "source": "player"
+  },
+  "crosshair_placement": {
+   "total_deg": {
+    "p10": 0.613,
+    "p25": 0.929,
+    "p50": 2.098,
+    "p75": 5.47,
+    "p90": 16.62,
+    "mean": 5.508,
+    "n": 90,
+    "source": "player"
+   },
+   "horizontal_deg": {
+    "p10": 0.331,
+    "p25": 0.708,
+    "p50": 1.895,
+    "p75": 4.578,
+    "p90": 12.888,
+    "mean": 4.799,
+    "n": 90,
+    "source": "player"
+   },
+   "vertical_deg": {
+    "p10": -1.517,
+    "p25": -0.31,
+    "p50": 0.149,
+    "p75": 1.107,
+    "p90": 3.719,
+    "mean": 0.664,
+    "n": 90,
+    "source": "player"
+   }
+  },
+  "shoots_after_sighting_rate": {
+   "value": 0.8444,
+   "n": 90,
+   "shrunk": 0.8347
+  },
+  "duels": {
+   "win_rate": {
+    "value": 0.6557,
+    "n": 61,
+    "shrunk": 0.6316
+   },
+   "by_distance": {
+    "0-10m": {
+     "value": 0.6667,
+     "n": 6,
+     "shrunk": 0.5785
+    },
+    "10-20m": {
+     "value": 0.56,
+     "n": 25,
+     "shrunk": 0.5531
+    },
+    "20-30m": {
+     "value": 0.7308,
+     "n": 26,
+     "shrunk": 0.6628
+    },
+    "30m+": {
+     "value": 0.75,
+     "n": 4,
+     "shrunk": 0.6043
+    }
+   }
+  },
+  "engagement": {
+   "instant_window_s": [
+    -0.5,
+    0.1
+   ],
+   "max_wait_s": 2.0,
+   "by_aim_error": {
+    "tight_lt2": {
+     "n": 86,
+     "instant": {
+      "value": 0.7093,
+      "n": 86,
+      "shrunk": 0.6937
+     },
+     "delayed": {
+      "value": 0.2209,
+      "n": 86,
+      "shrunk": 0.2337
+     },
+     "none": {
+      "value": 0.0698,
+      "n": 86,
+      "shrunk": 0.0726
+     }
+    },
+    "mid_2_8": {
+     "n": 53,
+     "instant": {
+      "value": 0.4717,
+      "n": 53,
+      "shrunk": 0.4714
+     },
+     "delayed": {
+      "value": 0.4528,
+      "n": 53,
+      "shrunk": 0.4316
+     },
+     "none": {
+      "value": 0.0755,
+      "n": 53,
+      "shrunk": 0.097
+     }
+    },
+    "wide_gt8": {
+     "n": 30,
+     "instant": {
+      "value": 0.1,
+      "n": 30,
+      "shrunk": 0.125
+     },
+     "delayed": {
+      "value": 0.6333,
+      "n": 30,
+      "shrunk": 0.585
+     },
+     "none": {
+      "value": 0.2667,
+      "n": 30,
+      "shrunk": 0.29
+     }
+    }
+   },
+   "fired_before_visible": {
+    "value": 0.3373,
+    "n": 169,
+    "shrunk": 0.3339
+   },
+   "delayed_reaction_s": {
+    "p10": 0.125,
+    "p25": 0.145,
+    "p50": 0.227,
+    "p75": 0.344,
+    "p90": 0.578,
+    "mean": 0.327,
+    "n": 62,
+    "source": "player"
+   }
+  }
+ },
+ "performance": {
+  "rounds": 142,
+  "kpr": 0.69,
+  "dpr": 0.62,
+  "apr": 0.232,
+  "adr": 92.9,
+  "kd": 1.114,
+  "kast": 0.718,
+  "headshot_kill_rate": {
+   "value": 0.5612,
+   "n": 98,
+   "shrunk": 0.5521
+  },
+  "survival_rate": 0.38,
+  "opening": {
+   "attempt_rate": {
+    "value": 0.1831,
+    "n": 142,
+    "shrunk": 0.1851
+   },
+   "win_rate": {
+    "value": 0.4615,
+    "n": 26,
+    "shrunk": 0.4783
+   }
+  },
+  "trade_kills_per_round": 0.176,
+  "traded_death_rate": {
+   "value": 0.2045,
+   "n": 88
+  },
+  "first_contact_s": {
+   "p10": 16.52,
+   "p25": 23.535,
+   "p50": 43.312,
+   "p75": 74.199,
+   "p90": 94.109,
+   "mean": 50.108,
+   "n": 132
+  },
+  "utility": {
+   "smoke_per_round": 0.88,
+   "flash_per_round": 0.824,
+   "he_per_round": 0.437,
+   "molotov_per_round": 0.669,
+   "flash_assists_per_round": 0.042,
+   "utility_damage_per_round": 5.9
+  },
+  "by_side": {
+   "CT": {
+    "rounds": 75,
+    "kpr": 0.8,
+    "adr": 109.8,
+    "survival_rate": 0.467,
+    "round_win_rate": 0.56
+   },
+   "T": {
+    "rounds": 67,
+    "kpr": 0.567,
+    "adr": 73.9,
+    "survival_rate": 0.284,
+    "round_win_rate": 0.358
+   }
+  }
+ },
+ "weapons": {
+  "shot_share_by_class": {
+   "rifle": 0.719,
+   "pistol": 0.162,
+   "smg": 0.119,
+   "awp": 0.001
+  },
+  "kill_share_by_class": {
+   "rifle": 0.708,
+   "pistol": 0.167,
+   "smg": 0.125
+  },
+  "top_weapons_by_shots": {
+   "ak47": 0.384,
+   "m4a1": 0.22,
+   "mp9": 0.078,
+   "glock": 0.059,
+   "galilar": 0.054
+  }
+ },
+ "positions": {
+  "de_cache": {
+   "CT": {
+    "time_share": {
+     "BombsiteA": 0.272,
+     "Highway": 0.109,
+     "ABoost": 0.107,
+     "Mid": 0.085,
+     "Truck": 0.061
+    },
+    "position_at_20s": {
+     "Mid": 0.429,
+     "BombsiteA": 0.429,
+     "Quad": 0.143
+    }
+   },
+   "T": {
+    "time_share": {
+     "OutsideA": 0.171,
+     "Garage": 0.158,
+     "BHalls": 0.1,
+     "TYard": 0.089,
+     "TSpawn": 0.066
+    },
+    "position_at_20s": {
+     "OutsideA": 0.3,
+     "AMain": 0.2,
+     "BHalls": 0.2
+    }
+   }
+  },
+  "de_mirage": {
+   "CT": {
+    "time_share": {
+     "BombsiteB": 0.293,
+     "CTSpawn": 0.157,
+     "Apartments": 0.155,
+     "Truck": 0.136,
+     "BackAlley": 0.054
+    },
+    "position_at_20s": {
+     "BombsiteB": 0.333,
+     "Truck": 0.333,
+     "Apartments": 0.25
+    }
+   },
+   "T": {
+    "time_share": {
+     "SideAlley": 0.263,
+     "TopofMid": 0.214,
+     "BackAlley": 0.112,
+     "House": 0.081,
+     "TSpawn": 0.081
+    },
+    "position_at_20s": {
+     "Apartments": 0.143,
+     "TopofMid": 0.143,
+     "SideAlley": 0.143
+    }
+   }
+  },
+  "de_dust2": {
+   "CT": {
+    "time_share": {
+     "UnderA": 0.201,
+     "CTSpawn": 0.175,
+     "LongA": 0.107,
+     "ExtendedA": 0.104,
+     "ARamp": 0.078
+    },
+    "position_at_20s": {
+     "UnderA": 0.333,
+     "CTSpawn": 0.25,
+     "ShortStairs": 0.25
+    }
+   },
+   "T": {
+    "time_share": {
+     "TopofMid": 0.152,
+     "Catwalk": 0.093,
+     "BombsiteB": 0.092,
+     "LongDoors": 0.08,
+     "MidDoors": 0.078
+    },
+    "position_at_20s": {
+     "TopofMid": 0.286,
+     "OutsideLong": 0.286,
+     "UpperTunnel": 0.143
+    }
+   }
+  }
+ }
+}

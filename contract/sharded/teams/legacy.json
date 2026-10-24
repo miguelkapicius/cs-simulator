@@ -1,10 +1,10 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "team": "Legacy",
- "rounds": 62,
- "matches": 3,
+ "rounds": 756,
+ "matches": 37,
  "roster": [
   {
    "steamid": "76561198043769572",
@@ -12,7 +12,15 @@
    "role_tags": [
     "rifler"
    ],
-   "rounds": 62
+   "rounds": 549
+  },
+  {
+   "steamid": "76561198131356591",
+   "name": "BobZ",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 207
   },
   {
    "steamid": "76561198194325317",
@@ -20,7 +28,7 @@
    "role_tags": [
     "entry"
    ],
-   "rounds": 62
+   "rounds": 756
   },
   {
    "steamid": "76561198850020186",
@@ -28,102 +36,179 @@
    "role_tags": [
     "rifler"
    ],
-   "rounds": 62
+   "rounds": 756
   },
   {
    "steamid": "76561198061763596",
    "name": "n1ssim",
    "role_tags": [
-    "lurker"
+    "rifler"
    ],
-   "rounds": 62
+   "rounds": 756
   },
   {
    "steamid": "76561198365118288",
    "name": "try",
    "role_tags": [
-    "awper",
-    "entry"
+    "awper"
    ],
-   "rounds": 62
+   "rounds": 756
   }
  ],
  "maps": {
-  "de_cache": {
-   "rounds": 23,
+  "de_ancient": {
+   "rounds": 182,
    "ct": {
-    "rounds": 12,
-    "win_rate": 0.583,
+    "rounds": 90,
+    "win_rate": 0.489,
+    "buy": {
+     "pistol": 0.089,
+     "eco": 0.078,
+     "force": 0.156,
+     "full": 0.678
+    }
+   },
+   "t": {
+    "rounds": 92,
+    "win_rate": 0.522,
+    "plant_rate": 0.62,
+    "plant_a_share": 0.526,
+    "plants": 57,
+    "buy": {
+     "pistol": 0.087,
+     "eco": 0.054,
+     "force": 0.098,
+     "full": 0.761
+    }
+   }
+  },
+  "de_cache": {
+   "rounds": 40,
+   "ct": {
+    "rounds": 24,
+    "win_rate": 0.458,
     "buy": {
      "pistol": 0.083,
-     "eco": 0.0,
-     "force": 0.167,
+     "eco": 0.042,
+     "force": 0.125,
      "full": 0.75
     }
    },
    "t": {
-    "rounds": 11,
-    "win_rate": 0.545,
-    "plant_rate": 0.545,
-    "plant_a_share": 1.0,
-    "plants": 6,
+    "rounds": 16,
+    "win_rate": 0.375,
+    "plant_rate": 0.438,
+    "plant_a_share": 0.857,
+    "plants": 7,
     "buy": {
-     "pistol": 0.091,
-     "eco": 0.182,
-     "force": 0.091,
-     "full": 0.636
+     "pistol": 0.125,
+     "eco": 0.188,
+     "force": 0.062,
+     "full": 0.625
+    }
+   }
+  },
+  "de_dust2": {
+   "rounds": 177,
+   "ct": {
+    "rounds": 83,
+    "win_rate": 0.554,
+    "buy": {
+     "pistol": 0.108,
+     "eco": 0.036,
+     "force": 0.133,
+     "full": 0.723
+    }
+   },
+   "t": {
+    "rounds": 94,
+    "win_rate": 0.447,
+    "plant_rate": 0.447,
+    "plant_a_share": 0.571,
+    "plants": 42,
+    "buy": {
+     "pistol": 0.096,
+     "eco": 0.096,
+     "force": 0.117,
+     "full": 0.691
     }
    }
   },
   "de_inferno": {
-   "rounds": 18,
+   "rounds": 80,
    "ct": {
-    "rounds": 6,
-    "win_rate": 0.167,
+    "rounds": 36,
+    "win_rate": 0.528,
     "buy": {
-     "pistol": 0.167,
+     "pistol": 0.111,
      "eco": 0.0,
-     "force": 0.333,
-     "full": 0.5
+     "force": 0.194,
+     "full": 0.694
     }
    },
    "t": {
-    "rounds": 12,
-    "win_rate": 0.333,
-    "plant_rate": 0.333,
-    "plant_a_share": 0.0,
-    "plants": 4,
+    "rounds": 44,
+    "win_rate": 0.386,
+    "plant_rate": 0.386,
+    "plant_a_share": 0.235,
+    "plants": 17,
     "buy": {
-     "pistol": 0.083,
-     "eco": 0.083,
-     "force": 0.25,
-     "full": 0.583
+     "pistol": 0.091,
+     "eco": 0.091,
+     "force": 0.159,
+     "full": 0.659
     }
    }
   },
   "de_mirage": {
-   "rounds": 21,
+   "rounds": 181,
    "ct": {
-    "rounds": 12,
-    "win_rate": 0.25,
+    "rounds": 90,
+    "win_rate": 0.6,
     "buy": {
-     "pistol": 0.083,
-     "eco": 0.0,
-     "force": 0.333,
-     "full": 0.583
+     "pistol": 0.089,
+     "eco": 0.044,
+     "force": 0.111,
+     "full": 0.756
     }
    },
    "t": {
-    "rounds": 9,
-    "win_rate": 0.556,
-    "plant_rate": 0.444,
-    "plant_a_share": 0.25,
-    "plants": 4,
+    "rounds": 91,
+    "win_rate": 0.451,
+    "plant_rate": 0.484,
+    "plant_a_share": 0.705,
+    "plants": 44,
     "buy": {
-     "pistol": 0.111,
-     "eco": 0.0,
-     "force": 0.111,
-     "full": 0.778
+     "pistol": 0.088,
+     "eco": 0.099,
+     "force": 0.132,
+     "full": 0.681
+    }
+   }
+  },
+  "de_nuke": {
+   "rounds": 96,
+   "ct": {
+    "rounds": 51,
+    "win_rate": 0.608,
+    "buy": {
+     "pistol": 0.078,
+     "eco": 0.02,
+     "force": 0.118,
+     "full": 0.784
+    }
+   },
+   "t": {
+    "rounds": 45,
+    "win_rate": 0.489,
+    "plant_rate": 0.467,
+    "plant_a_share": 0.476,
+    "plants": 21,
+    "buy": {
+     "pistol": 0.089,
+     "eco": 0.067,
+     "force": 0.133,
+     "full": 0.711
     }
    }
   }

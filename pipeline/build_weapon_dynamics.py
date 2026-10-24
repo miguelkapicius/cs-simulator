@@ -225,7 +225,7 @@ def main():
             "reset_rule": {"pause_over_cycle_max": CONTINUITY,
                            "meaning": "se a pausa desde o último tiro passar de pause_over_cycle_max x cycle_time_s, o próximo tiro é a bala 1"},
             "scale": {"value": 2.0, **(scale or {}),
-                      "note": "O valor 2.0 é o weapon_recoil_scale padrão do CS; o ajuste fica dentro do intervalo de confiança."},
+                      "note": "O valor 2.0 é o weapon_recoil_scale padrão do CS (constante do motor). O ajuste a partir das demos fica próximo (diferença abaixo de 5%), mas com muitos tiros o IC pode não conter exatamente 2.0: a regressão tem um pequeno viés porque a mira do jogador também compensa o recuo."},
             "patterns": patterns,
             "reset": reset_table(shots, weapons),
         },

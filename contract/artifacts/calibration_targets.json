@@ -1,10 +1,10 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.4.0",
- "generated_at": "2026-10-23",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
  "source": {
-  "matches": 28,
-  "rounds": 599,
+  "matches": 143,
+  "rounds": 2931,
   "maps": [
    "de_ancient",
    "de_anubis",
@@ -26,429 +26,429 @@
  "metrics": {
   "buy.armor_rate.CT": {
    "kind": "prop",
-   "k": 2555,
-   "n": 2715,
-   "value": 0.94107,
+   "k": 12354,
+   "n": 13255,
+   "value": 0.93203,
    "between": {
-    "matches": 28,
-    "sd": 0.0356
+    "matches": 143,
+    "sd": 0.0465
    },
    "desc": "Fração dos jogadores com colete (rounds sem pistola)."
   },
   "buy.armor_rate.T": {
    "kind": "prop",
-   "k": 2437,
-   "n": 2715,
-   "value": 0.89761,
+   "k": 11869,
+   "n": 13255,
+   "value": 0.89544,
    "between": {
-    "matches": 28,
-    "sd": 0.04957
+    "matches": 143,
+    "sd": 0.05814
    },
    "desc": "Fração dos jogadores com colete (rounds sem pistola)."
   },
   "buy.awp_per_team.CT": {
    "kind": "mean",
-   "mean": 0.68324,
-   "std": 0.58189,
-   "n": 543,
+   "mean": 0.659,
+   "std": 0.55482,
+   "n": 2651,
    "between": {
-    "matches": 28,
-    "sd": 0.21338
+    "matches": 141,
+    "sd": 0.16988
    },
    "desc": "AWPs por time por round (rounds sem pistola)."
   },
   "buy.awp_per_team.T": {
    "kind": "mean",
-   "mean": 0.33517,
-   "std": 0.47638,
-   "n": 543,
+   "mean": 0.36854,
+   "std": 0.49256,
+   "n": 2651,
    "between": {
-    "matches": 28,
-    "sd": 0.1635
+    "matches": 141,
+    "sd": 0.19273
    },
    "desc": "AWPs por time por round (rounds sem pistola)."
   },
   "buy.grenades_per_player.flash": {
    "kind": "mean",
-   "mean": 0.93002,
-   "std": 0.66258,
-   "n": 5430,
+   "mean": 0.93542,
+   "std": 0.67525,
+   "n": 26511,
    "between": {
-    "matches": 28,
-    "sd": 0.07013
+    "matches": 143,
+    "sd": 0.08856
    },
    "desc": "Granadas por jogador no fim do freeze time (rounds sem pistola)."
   },
   "buy.grenades_per_player.he": {
    "kind": "mean",
-   "mean": 0.52394,
-   "std": 0.49947,
-   "n": 5430,
+   "mean": 0.51914,
+   "std": 0.49964,
+   "n": 26511,
    "between": {
-    "matches": 28,
-    "sd": 0.04414
+    "matches": 143,
+    "sd": 0.07172
    },
    "desc": "Granadas por jogador no fim do freeze time (rounds sem pistola)."
   },
   "buy.grenades_per_player.molotov": {
    "kind": "mean",
-   "mean": 0.70442,
-   "std": 0.45635,
-   "n": 5430,
+   "mean": 0.68383,
+   "std": 0.46499,
+   "n": 26511,
    "between": {
-    "matches": 28,
-    "sd": 0.05461
+    "matches": 143,
+    "sd": 0.05009
    },
    "desc": "Granadas por jogador no fim do freeze time (rounds sem pistola)."
   },
   "buy.grenades_per_player.smoke": {
    "kind": "mean",
-   "mean": 0.85967,
-   "std": 0.34736,
-   "n": 5430,
+   "mean": 0.84474,
+   "std": 0.36216,
+   "n": 26511,
    "between": {
-    "matches": 28,
-    "sd": 0.02925
+    "matches": 143,
+    "sd": 0.03922
    },
    "desc": "Granadas por jogador no fim do freeze time (rounds sem pistola)."
   },
   "buy.helmet_rate.CT": {
    "kind": "prop",
-   "k": 1918,
-   "n": 2715,
-   "value": 0.70645,
+   "k": 8915,
+   "n": 13255,
+   "value": 0.67258,
    "between": {
-    "matches": 28,
-    "sd": 0.1296
+    "matches": 143,
+    "sd": 0.14678
    },
    "desc": "Fração dos jogadores com capacete (rounds sem pistola)."
   },
   "buy.helmet_rate.T": {
    "kind": "prop",
-   "k": 2273,
-   "n": 2715,
-   "value": 0.8372,
+   "k": 10991,
+   "n": 13255,
+   "value": 0.8292,
    "between": {
-    "matches": 28,
-    "sd": 0.06921
+    "matches": 143,
+    "sd": 0.0801
    },
    "desc": "Fração dos jogadores com capacete (rounds sem pistola)."
   },
   "buy.kit_rate.CT": {
    "kind": "prop",
-   "k": 1274,
-   "n": 2715,
-   "value": 0.46924,
+   "k": 5558,
+   "n": 13255,
+   "value": 0.41931,
    "between": {
-    "matches": 28,
-    "sd": 0.14245
+    "matches": 143,
+    "sd": 0.13818
    },
    "desc": "Fração dos CTs com kit de defuse (rounds sem pistola)."
   },
   "buy.type.CT.eco": {
    "kind": "prop",
-   "k": 25,
-   "n": 599,
-   "value": 0.04174,
+   "k": 159,
+   "n": 2931,
+   "value": 0.05425,
    "between": {
-    "matches": 28,
-    "sd": 0.04771
+    "matches": 142,
+    "sd": 0.04671
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.CT.force": {
    "kind": "prop",
-   "k": 68,
-   "n": 599,
-   "value": 0.11352,
+   "k": 319,
+   "n": 2931,
+   "value": 0.10884,
    "between": {
-    "matches": 28,
-    "sd": 0.07989
+    "matches": 142,
+    "sd": 0.06768
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.CT.full": {
    "kind": "prop",
-   "k": 450,
-   "n": 599,
-   "value": 0.75125,
+   "k": 2173,
+   "n": 2931,
+   "value": 0.74139,
    "between": {
-    "matches": 28,
-    "sd": 0.08543
+    "matches": 142,
+    "sd": 0.08393
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.CT.pistol": {
    "kind": "prop",
-   "k": 56,
-   "n": 599,
-   "value": 0.09349,
+   "k": 280,
+   "n": 2931,
+   "value": 0.09553,
    "between": {
-    "matches": 28,
-    "sd": 0.01447
+    "matches": 142,
+    "sd": 0.01763
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.T.eco": {
    "kind": "prop",
-   "k": 46,
-   "n": 599,
-   "value": 0.07679,
+   "k": 266,
+   "n": 2931,
+   "value": 0.09075,
    "between": {
-    "matches": 28,
-    "sd": 0.04806
+    "matches": 142,
+    "sd": 0.05798
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.T.force": {
    "kind": "prop",
-   "k": 85,
-   "n": 599,
-   "value": 0.1419,
+   "k": 361,
+   "n": 2931,
+   "value": 0.12317,
    "between": {
-    "matches": 28,
-    "sd": 0.08184
+    "matches": 142,
+    "sd": 0.07787
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.T.full": {
    "kind": "prop",
-   "k": 412,
-   "n": 599,
-   "value": 0.68781,
+   "k": 2024,
+   "n": 2931,
+   "value": 0.69055,
    "between": {
-    "matches": 28,
-    "sd": 0.09239
+    "matches": 142,
+    "sd": 0.09498
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "buy.type.T.pistol": {
    "kind": "prop",
-   "k": 56,
-   "n": 599,
-   "value": 0.09349,
+   "k": 280,
+   "n": 2931,
+   "value": 0.09553,
    "between": {
-    "matches": 28,
-    "sd": 0.01447
+    "matches": 142,
+    "sd": 0.01763
    },
    "desc": "Fração dos rounds de cada lado por tipo de compra."
   },
   "combat.accuracy.awp": {
    "kind": "prop",
-   "k": 469,
-   "n": 862,
-   "value": 0.54408,
+   "k": 2254,
+   "n": 4251,
+   "value": 0.53023,
    "between": {
-    "matches": 28,
-    "sd": 0.08734
+    "matches": 140,
+    "sd": 0.1044
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.pistol": {
    "kind": "prop",
-   "k": 1976,
-   "n": 8198,
-   "value": 0.24103,
+   "k": 10274,
+   "n": 41067,
+   "value": 0.25018,
    "between": {
-    "matches": 28,
-    "sd": 0.04236
+    "matches": 143,
+    "sd": 0.04087
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.pistol.0-10m": {
    "kind": "prop",
-   "k": 520,
-   "n": 1259,
-   "value": 0.41303,
+   "k": 2444,
+   "n": 6283,
+   "value": 0.38899,
    "between": {
-    "matches": 28,
-    "sd": 0.08657
+    "matches": 142,
+    "sd": 0.09816
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.pistol.10-20m": {
    "kind": "prop",
-   "k": 840,
-   "n": 3038,
-   "value": 0.2765,
+   "k": 4204,
+   "n": 14430,
+   "value": 0.29134,
    "between": {
-    "matches": 28,
-    "sd": 0.04888
+    "matches": 143,
+    "sd": 0.05596
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.pistol.20-30m": {
    "kind": "prop",
-   "k": 416,
-   "n": 2115,
-   "value": 0.19669,
+   "k": 2450,
+   "n": 11280,
+   "value": 0.2172,
    "between": {
-    "matches": 28,
-    "sd": 0.07832
+    "matches": 142,
+    "sd": 0.06475
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.pistol.30m+": {
    "kind": "prop",
-   "k": 200,
-   "n": 1786,
-   "value": 0.11198,
+   "k": 1176,
+   "n": 9074,
+   "value": 0.1296,
    "between": {
-    "matches": 28,
-    "sd": 0.06689
+    "matches": 142,
+    "sd": 0.074
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.rifle": {
    "kind": "prop",
-   "k": 8343,
-   "n": 32954,
-   "value": 0.25317,
+   "k": 40886,
+   "n": 158885,
+   "value": 0.25733,
    "between": {
-    "matches": 28,
-    "sd": 0.04317
+    "matches": 143,
+    "sd": 0.03665
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.rifle.0-10m": {
    "kind": "prop",
-   "k": 1563,
-   "n": 3436,
-   "value": 0.45489,
+   "k": 7161,
+   "n": 15057,
+   "value": 0.47559,
    "between": {
-    "matches": 28,
-    "sd": 0.06404
+    "matches": 143,
+    "sd": 0.07001
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.rifle.10-20m": {
    "kind": "prop",
-   "k": 3370,
-   "n": 9470,
-   "value": 0.35586,
+   "k": 16329,
+   "n": 44372,
+   "value": 0.368,
    "between": {
-    "matches": 28,
-    "sd": 0.0649
+    "matches": 143,
+    "sd": 0.04886
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.rifle.20-30m": {
    "kind": "prop",
-   "k": 2243,
-   "n": 9069,
-   "value": 0.24733,
+   "k": 11863,
+   "n": 45990,
+   "value": 0.25795,
    "between": {
-    "matches": 28,
-    "sd": 0.0612
+    "matches": 143,
+    "sd": 0.05406
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.rifle.30m+": {
    "kind": "prop",
-   "k": 1167,
-   "n": 10979,
-   "value": 0.10629,
+   "k": 5533,
+   "n": 53466,
+   "value": 0.10349,
    "between": {
-    "matches": 28,
-    "sd": 0.04923
+    "matches": 143,
+    "sd": 0.04292
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.smg": {
    "kind": "prop",
-   "k": 955,
-   "n": 3008,
-   "value": 0.31749,
+   "k": 4477,
+   "n": 14038,
+   "value": 0.31892,
    "between": {
-    "matches": 28,
-    "sd": 0.11233
+    "matches": 143,
+    "sd": 0.09862
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.smg.0-10m": {
    "kind": "prop",
-   "k": 316,
-   "n": 712,
-   "value": 0.44382,
+   "k": 1539,
+   "n": 3278,
+   "value": 0.46949,
    "between": {
-    "matches": 26,
-    "sd": 0.13248
+    "matches": 120,
+    "sd": 0.14989
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.smg.10-20m": {
    "kind": "prop",
-   "k": 450,
-   "n": 1215,
-   "value": 0.37037,
+   "k": 2032,
+   "n": 5751,
+   "value": 0.35333,
    "between": {
-    "matches": 25,
-    "sd": 0.11289
+    "matches": 135,
+    "sd": 0.13366
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.smg.20-30m": {
    "kind": "prop",
-   "k": 169,
-   "n": 780,
-   "value": 0.21667,
+   "k": 752,
+   "n": 3431,
+   "value": 0.21918,
    "between": {
-    "matches": 25,
-    "sd": 0.22844
+    "matches": 124,
+    "sd": 0.17056
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.accuracy.smg.30m+": {
    "kind": "prop",
-   "k": 20,
-   "n": 301,
-   "value": 0.06645,
+   "k": 154,
+   "n": 1578,
+   "value": 0.09759,
    "between": {
-    "matches": 16,
-    "sd": 0.13444
+    "matches": 83,
+    "sd": 0.14234
    },
    "desc": "Taxa de acerto em tiros de combate (mira a menos de 10° de um inimigo, ou que acertaram)."
   },
   "combat.adr": {
    "kind": "mean",
-   "mean": 75.42354,
-   "std": 83.35728,
-   "n": 5990,
+   "mean": 76.91256,
+   "std": 83.30776,
+   "n": 29311,
    "between": {
-    "matches": 28,
-    "sd": 3.45899
+    "matches": 143,
+    "sd": 4.26087
    },
    "desc": "Dano médio por round por jogador (cada vítima conta no máximo 100)."
   },
   "combat.aim_error_first_bullet_deg": {
    "kind": "quantiles",
    "q": {
-    "p5": 0.35701,
-    "p10": 0.5305,
-    "p25": 0.96903,
-    "p50": 1.8838,
-    "p75": 3.91922,
-    "p90": 6.82893,
-    "p95": 8.1656
+    "p5": 0.33553,
+    "p10": 0.4962,
+    "p25": 0.909,
+    "p50": 1.78855,
+    "p75": 3.78993,
+    "p90": 6.62385,
+    "p95": 8.07842
    },
-   "mean": 2.81611,
-   "n": 18382,
+   "mean": 2.71748,
+   "n": 91986,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.02946,
-     "p25": 0.05464,
-     "p50": 0.07384,
-     "p75": 0.05685,
-     "p90": 0.03294
+     "p10": 0.0246,
+     "p25": 0.04713,
+     "p50": 0.05931,
+     "p75": 0.04759,
+     "p90": 0.02822
     }
    },
    "coverage": {
-    "p10": 0.10004,
-    "p25": 0.25003,
+    "p10": 0.10001,
+    "p25": 0.25001,
     "p50": 0.5,
-    "p75": 0.74997,
-    "p90": 0.89996
+    "p75": 0.74999,
+    "p90": 0.9
    },
    "desc": "Erro de mira da primeira bala, em graus."
   },
@@ -458,299 +458,299 @@
     "p5": 1.0,
     "p10": 1.0,
     "p25": 1.0,
-    "p50": 4.0,
-    "p75": 7.0,
+    "p50": 3.0,
+    "p75": 6.0,
     "p90": 10.0,
     "p95": 13.0
    },
-   "mean": 4.69107,
-   "n": 11899,
+   "mean": 4.44178,
+   "n": 60089,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.03892,
-     "p25": 0.03892,
-     "p50": 0.06368,
-     "p75": 0.04264,
-     "p90": 0.0265
+     "p10": 0.03445,
+     "p25": 0.03445,
+     "p50": 0.06587,
+     "p75": 0.04697,
+     "p90": 0.02558
     }
    },
    "coverage": {
-    "p10": 0.15279,
-    "p25": 0.15279,
-    "p50": 0.54131,
-    "p75": 0.77347,
-    "p90": 0.90209
+    "p10": 0.1716,
+    "p25": 0.1716,
+    "p50": 0.49562,
+    "p75": 0.72621,
+    "p90": 0.90734
    },
    "desc": "Balas por sequência com armas automáticas."
   },
   "combat.crouch_shot_rate": {
    "kind": "prop",
-   "k": 7760,
-   "n": 45202,
-   "value": 0.17167,
+   "k": 43179,
+   "n": 218984,
+   "value": 0.19718,
    "between": {
-    "matches": 28,
-    "sd": 0.02647
+    "matches": 143,
+    "sd": 0.03723
    },
    "desc": "Fração dos tiros dados agachado."
   },
   "combat.head_hit_share.awp": {
    "kind": "prop",
-   "k": 52,
-   "n": 473,
-   "value": 0.10994,
+   "k": 232,
+   "n": 2266,
+   "value": 0.10238,
    "between": {
-    "matches": 27,
-    "sd": 0.09022
+    "matches": 136,
+    "sd": 0.08752
    },
    "desc": "Fração dos acertos (com parte do corpo definida) que pegam a cabeça."
   },
   "combat.head_hit_share.pistol": {
    "kind": "prop",
-   "k": 613,
-   "n": 1971,
-   "value": 0.31101,
+   "k": 3337,
+   "n": 10260,
+   "value": 0.32524,
    "between": {
-    "matches": 28,
-    "sd": 0.04901
+    "matches": 143,
+    "sd": 0.05603
    },
    "desc": "Fração dos acertos (com parte do corpo definida) que pegam a cabeça."
   },
   "combat.head_hit_share.rifle": {
    "kind": "prop",
-   "k": 1545,
-   "n": 8330,
-   "value": 0.18547,
+   "k": 7969,
+   "n": 40866,
+   "value": 0.195,
    "between": {
-    "matches": 28,
-    "sd": 0.02915
+    "matches": 143,
+    "sd": 0.02947
    },
    "desc": "Fração dos acertos (com parte do corpo definida) que pegam a cabeça."
   },
   "combat.head_hit_share.smg": {
    "kind": "prop",
-   "k": 190,
-   "n": 956,
-   "value": 0.19874,
+   "k": 986,
+   "n": 4496,
+   "value": 0.21931,
    "between": {
-    "matches": 26,
-    "sd": 0.07296
+    "matches": 138,
+    "sd": 0.10547
    },
    "desc": "Fração dos acertos (com parte do corpo definida) que pegam a cabeça."
   },
   "combat.headshot_kill_rate.awp": {
    "kind": "prop",
-   "k": 52,
-   "n": 434,
-   "value": 0.11982,
+   "k": 232,
+   "n": 2068,
+   "value": 0.11219,
    "between": {
-    "matches": 27,
-    "sd": 0.09856
+    "matches": 135,
+    "sd": 0.09572
    },
    "desc": "Fração dos kills que são headshot."
   },
   "combat.headshot_kill_rate.pistol": {
    "kind": "prop",
-   "k": 469,
-   "n": 609,
-   "value": 0.77011,
+   "k": 2526,
+   "n": 3282,
+   "value": 0.76965,
    "between": {
-    "matches": 28,
-    "sd": 0.08669
+    "matches": 142,
+    "sd": 0.09442
    },
    "desc": "Fração dos kills que são headshot."
   },
   "combat.headshot_kill_rate.rifle": {
    "kind": "prop",
-   "k": 1205,
-   "n": 2423,
-   "value": 0.49732,
+   "k": 6250,
+   "n": 12215,
+   "value": 0.51167,
    "between": {
-    "matches": 28,
-    "sd": 0.06321
+    "matches": 143,
+    "sd": 0.06048
    },
    "desc": "Fração dos kills que são headshot."
   },
   "combat.headshot_kill_rate.smg": {
    "kind": "prop",
-   "k": 106,
-   "n": 190,
-   "value": 0.55789,
+   "k": 510,
+   "n": 938,
+   "value": 0.54371,
    "between": {
-    "matches": 18,
-    "sd": 0.1856
+    "matches": 103,
+    "sd": 0.195
    },
    "desc": "Fração dos kills que são headshot."
   },
   "combat.kill_distance_m.awp": {
    "kind": "quantiles",
    "q": {
-    "p5": 7.81536,
-    "p10": 10.6409,
-    "p25": 16.14428,
-    "p50": 23.0703,
-    "p75": 32.19123,
-    "p90": 40.78002,
-    "p95": 44.59555
+    "p5": 8.05718,
+    "p10": 10.75921,
+    "p25": 16.53448,
+    "p50": 23.84225,
+    "p75": 32.36895,
+    "p90": 41.31982,
+    "p95": 47.13963
    },
-   "mean": 24.61073,
-   "n": 434,
+   "mean": 25.35359,
+   "n": 2068,
    "between": {
-    "matches": 27,
+    "matches": 135,
     "sd_cov": {
-     "p10": 0.0832,
-     "p25": 0.15394,
-     "p50": 0.19963,
-     "p75": 0.17031,
-     "p90": 0.10091
+     "p10": 0.09148,
+     "p25": 0.14121,
+     "p50": 0.18302,
+     "p75": 0.15602,
+     "p90": 0.09657
     }
    },
    "coverage": {
-    "p10": 0.10138,
-    "p25": 0.25115,
+    "p10": 0.1001,
+    "p25": 0.25,
     "p50": 0.5,
-    "p75": 0.74885,
-    "p90": 0.89862
+    "p75": 0.75,
+    "p90": 0.8999
    },
    "desc": "Distância dos kills, em metros."
   },
   "combat.kill_distance_m.pistol": {
    "kind": "quantiles",
    "q": {
-    "p5": 3.99442,
-    "p10": 5.6551,
-    "p25": 8.6288,
-    "p50": 13.6009,
-    "p75": 19.0689,
-    "p90": 25.84832,
-    "p95": 32.28198
+    "p5": 4.30382,
+    "p10": 5.80854,
+    "p25": 9.0328,
+    "p50": 13.84995,
+    "p75": 20.88352,
+    "p90": 28.35695,
+    "p95": 33.65014
    },
-   "mean": 14.8785,
-   "n": 609,
+   "mean": 15.72159,
+   "n": 3282,
    "between": {
-    "matches": 28,
+    "matches": 142,
     "sd_cov": {
-     "p10": 0.06782,
-     "p25": 0.10034,
-     "p50": 0.10102,
-     "p75": 0.10931,
-     "p90": 0.08639
+     "p10": 0.07287,
+     "p25": 0.10352,
+     "p50": 0.12697,
+     "p75": 0.11441,
+     "p90": 0.08932
     }
    },
    "coverage": {
-    "p10": 0.10016,
-    "p25": 0.25041,
+    "p10": 0.10024,
+    "p25": 0.25015,
     "p50": 0.5,
-    "p75": 0.74959,
-    "p90": 0.89984
+    "p75": 0.74985,
+    "p90": 0.89976
    },
    "desc": "Distância dos kills, em metros."
   },
   "combat.kill_distance_m.rifle": {
    "kind": "quantiles",
    "q": {
-    "p5": 4.99562,
-    "p10": 6.85366,
-    "p25": 10.6442,
-    "p50": 16.4017,
-    "p75": 23.3899,
-    "p90": 31.0155,
-    "p95": 34.73348
+    "p5": 5.1259,
+    "p10": 7.02972,
+    "p25": 11.04845,
+    "p50": 16.9478,
+    "p75": 23.88385,
+    "p90": 30.82108,
+    "p95": 34.93859
    },
-   "mean": 17.76936,
-   "n": 2423,
+   "mean": 18.11343,
+   "n": 12215,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.03711,
-     "p25": 0.06619,
-     "p50": 0.09423,
-     "p75": 0.08576,
-     "p90": 0.04384
+     "p10": 0.03464,
+     "p25": 0.06,
+     "p50": 0.08584,
+     "p75": 0.082,
+     "p90": 0.04874
     }
    },
    "coverage": {
-    "p10": 0.10029,
-    "p25": 0.2501,
+    "p10": 0.10004,
+    "p25": 0.25002,
     "p50": 0.5,
-    "p75": 0.7499,
-    "p90": 0.89971
+    "p75": 0.74998,
+    "p90": 0.89996
    },
    "desc": "Distância dos kills, em metros."
   },
   "combat.kill_distance_m.smg": {
    "kind": "quantiles",
    "q": {
-    "p5": 3.31282,
-    "p10": 4.55902,
-    "p25": 7.44728,
-    "p50": 10.93385,
-    "p75": 15.81472,
-    "p90": 22.07086,
-    "p95": 26.57608
+    "p5": 3.75815,
+    "p10": 5.11503,
+    "p25": 7.66685,
+    "p50": 11.5147,
+    "p75": 16.76328,
+    "p90": 23.01592,
+    "p95": 27.10249
    },
-   "mean": 12.23711,
-   "n": 190,
+   "mean": 12.93248,
+   "n": 938,
    "between": {
-    "matches": 18,
+    "matches": 103,
     "sd_cov": {
-     "p10": 0.12039,
-     "p25": 0.14297,
-     "p50": 0.18311,
-     "p75": 0.18592,
-     "p90": 0.11822
+     "p10": 0.11758,
+     "p25": 0.18844,
+     "p50": 0.20377,
+     "p75": 0.19299,
+     "p90": 0.12492
     }
    },
    "coverage": {
-    "p10": 0.1,
-    "p25": 0.25263,
+    "p10": 0.10021,
+    "p25": 0.25053,
     "p50": 0.5,
-    "p75": 0.74737,
-    "p90": 0.9
+    "p75": 0.74947,
+    "p90": 0.89979
    },
    "desc": "Distância dos kills, em metros."
   },
   "combat.still_shot_rate": {
    "kind": "prop",
-   "k": 26116,
-   "n": 45202,
-   "value": 0.57776,
+   "k": 126760,
+   "n": 218984,
+   "value": 0.57886,
    "between": {
-    "matches": 28,
-    "sd": 0.03768
+    "matches": 143,
+    "sd": 0.03359
    },
    "desc": "Fração dos tiros dados parado (velocidade < 40)."
   },
   "duel.crosshair_placement_deg": {
    "kind": "quantiles",
    "q": {
-    "p5": 0.39755,
-    "p10": 0.58725,
-    "p25": 1.1529,
-    "p50": 2.5453,
-    "p75": 6.30373,
-    "p90": 15.7535,
-    "p95": 23.94528
+    "p5": 0.382,
+    "p10": 0.57874,
+    "p25": 1.13248,
+    "p50": 2.50035,
+    "p75": 5.94995,
+    "p90": 14.24586,
+    "p95": 21.57922
    },
-   "mean": 5.73691,
-   "n": 3476,
+   "mean": 5.34535,
+   "n": 17880,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.03383,
-     "p25": 0.04765,
-     "p50": 0.05797,
-     "p75": 0.04911,
-     "p90": 0.03084
+     "p10": 0.03237,
+     "p25": 0.04737,
+     "p50": 0.06334,
+     "p75": 0.05506,
+     "p90": 0.03507
     }
    },
    "coverage": {
-    "p10": 0.10012,
+    "p10": 0.1,
     "p25": 0.25,
     "p50": 0.5,
     "p75": 0.75,
-    "p90": 0.89988
+    "p90": 0.9
    },
    "desc": "Erro de mira (graus) no instante em que o inimigo aparece."
   },
@@ -761,28 +761,28 @@
     "p10": 0.125,
     "p25": 0.15625,
     "p50": 0.21875,
-    "p75": 0.34375,
-    "p90": 0.61875,
-    "p95": 0.89531
+    "p75": 0.32812,
+    "p90": 0.60938,
+    "p95": 0.90625
    },
-   "mean": 0.31647,
-   "n": 2015,
+   "mean": 0.31203,
+   "n": 10720,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.0361,
-     "p25": 0.0574,
-     "p50": 0.06291,
-     "p75": 0.05693,
-     "p90": 0.03463
+     "p10": 0.03496,
+     "p25": 0.05272,
+     "p50": 0.06491,
+     "p75": 0.05678,
+     "p90": 0.03626
     }
    },
    "coverage": {
-    "p10": 0.11687,
-    "p25": 0.26129,
-    "p50": 0.5072,
-    "p75": 0.75509,
-    "p90": 0.89975
+    "p10": 0.11035,
+    "p25": 0.25522,
+    "p50": 0.50331,
+    "p75": 0.74632,
+    "p90": 0.90028
    },
    "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
   },
@@ -792,29 +792,29 @@
     "p5": 0.10938,
     "p10": 0.125,
     "p25": 0.15625,
-    "p50": 0.20312,
-    "p75": 0.31641,
-    "p90": 0.625,
-    "p95": 1.0
+    "p50": 0.21875,
+    "p75": 0.3125,
+    "p90": 0.60938,
+    "p95": 0.92188
    },
-   "mean": 0.31874,
-   "n": 796,
+   "mean": 0.31009,
+   "n": 4359,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.05594,
-     "p25": 0.07061,
-     "p50": 0.09783,
-     "p75": 0.11457,
-     "p90": 0.05672
+     "p10": 0.06045,
+     "p25": 0.08947,
+     "p50": 0.09848,
+     "p75": 0.08785,
+     "p90": 0.05373
     }
    },
    "coverage": {
-    "p10": 0.13128,
-    "p25": 0.27827,
-    "p50": 0.47613,
-    "p75": 0.75,
-    "p90": 0.89824
+    "p10": 0.11,
+    "p25": 0.25522,
+    "p50": 0.51285,
+    "p75": 0.73824,
+    "p90": 0.89998
    },
    "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
   },
@@ -825,28 +825,28 @@
     "p10": 0.125,
     "p25": 0.14062,
     "p50": 0.1875,
-    "p75": 0.28125,
-    "p90": 0.46875,
-    "p95": 0.65625
+    "p75": 0.26562,
+    "p90": 0.45312,
+    "p95": 0.70312
    },
-   "mean": 0.26673,
-   "n": 721,
+   "mean": 0.2633,
+   "n": 3884,
    "between": {
-    "matches": 28,
+    "matches": 142,
     "sd_cov": {
-     "p10": 0.06133,
-     "p25": 0.08647,
-     "p50": 0.11542,
-     "p75": 0.08746,
-     "p90": 0.06676
+     "p10": 0.06801,
+     "p25": 0.08857,
+     "p50": 0.11198,
+     "p75": 0.0977,
+     "p90": 0.06688
     }
    },
    "coverage": {
-    "p10": 0.14147,
-    "p25": 0.23024,
-    "p50": 0.48405,
-    "p75": 0.75798,
-    "p90": 0.90291
+    "p10": 0.14277,
+    "p25": 0.2361,
+    "p50": 0.47747,
+    "p75": 0.74833,
+    "p90": 0.90036
    },
    "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
   },
@@ -857,171 +857,171 @@
     "p10": 0.14062,
     "p25": 0.1875,
     "p50": 0.28125,
-    "p75": 0.46484,
-    "p90": 0.73906,
-    "p95": 1.02031
+    "p75": 0.45312,
+    "p90": 0.75,
+    "p95": 1.07812
    },
-   "mean": 0.38485,
-   "n": 498,
+   "mean": 0.39184,
+   "n": 2477,
    "between": {
-    "matches": 28,
+    "matches": 141,
     "sd_cov": {
-     "p10": 0.06302,
-     "p25": 0.08202,
-     "p50": 0.10129,
-     "p75": 0.08727,
-     "p90": 0.06889
+     "p10": 0.07222,
+     "p25": 0.10869,
+     "p50": 0.12762,
+     "p75": 0.0979,
+     "p90": 0.06751
     }
    },
    "coverage": {
-    "p10": 0.10141,
-    "p25": 0.24297,
-    "p50": 0.48594,
-    "p75": 0.749,
-    "p90": 0.8996
+    "p10": 0.10497,
+    "p25": 0.23375,
+    "p50": 0.48648,
+    "p75": 0.75071,
+    "p90": 0.89806
    },
    "desc": "Tempo até o primeiro tiro mirado, nos casos em que o jogador não atirou instantaneamente (inclui girar a mira)."
   },
   "duel.engage.all.delayed": {
    "kind": "prop",
-   "k": 2015,
-   "n": 5762,
-   "value": 0.3497,
+   "k": 10720,
+   "n": 29908,
+   "value": 0.35843,
    "between": {
-    "matches": 28,
-    "sd": 0.02839
+    "matches": 143,
+    "sd": 0.03471
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.all.instant": {
    "kind": "prop",
-   "k": 2886,
-   "n": 5762,
-   "value": 0.50087,
+   "k": 14684,
+   "n": 29908,
+   "value": 0.49097,
    "between": {
-    "matches": 28,
-    "sd": 0.04015
+    "matches": 143,
+    "sd": 0.04174
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.all.none": {
    "kind": "prop",
-   "k": 861,
-   "n": 5762,
-   "value": 0.14943,
+   "k": 4504,
+   "n": 29908,
+   "value": 0.1506,
    "between": {
-    "matches": 28,
-    "sd": 0.03215
+    "matches": 143,
+    "sd": 0.03067
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.mid_2_8.delayed": {
    "kind": "prop",
-   "k": 796,
-   "n": 2165,
-   "value": 0.36767,
+   "k": 4359,
+   "n": 11617,
+   "value": 0.37523,
    "between": {
-    "matches": 28,
-    "sd": 0.04756
+    "matches": 143,
+    "sd": 0.05481
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.mid_2_8.instant": {
    "kind": "prop",
-   "k": 1033,
-   "n": 2165,
-   "value": 0.47714,
+   "k": 5468,
+   "n": 11617,
+   "value": 0.47069,
    "between": {
-    "matches": 28,
-    "sd": 0.07838
+    "matches": 143,
+    "sd": 0.06736
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.mid_2_8.none": {
    "kind": "prop",
-   "k": 336,
-   "n": 2165,
-   "value": 0.1552,
+   "k": 1790,
+   "n": 11617,
+   "value": 0.15408,
    "between": {
-    "matches": 28,
-    "sd": 0.05224
+    "matches": 143,
+    "sd": 0.05052
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.tight_lt2.delayed": {
    "kind": "prop",
-   "k": 721,
-   "n": 2630,
-   "value": 0.27414,
+   "k": 3884,
+   "n": 13458,
+   "value": 0.2886,
    "between": {
-    "matches": 28,
-    "sd": 0.04001
+    "matches": 143,
+    "sd": 0.05294
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.tight_lt2.instant": {
    "kind": "prop",
-   "k": 1708,
-   "n": 2630,
-   "value": 0.64943,
+   "k": 8431,
+   "n": 13458,
+   "value": 0.62647,
    "between": {
-    "matches": 28,
-    "sd": 0.05293
+    "matches": 143,
+    "sd": 0.06219
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.tight_lt2.none": {
    "kind": "prop",
-   "k": 201,
-   "n": 2630,
-   "value": 0.07643,
+   "k": 1143,
+   "n": 13458,
+   "value": 0.08493,
    "between": {
-    "matches": 28,
-    "sd": 0.02813
+    "matches": 143,
+    "sd": 0.03129
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.wide_gt8.delayed": {
    "kind": "prop",
-   "k": 498,
-   "n": 967,
-   "value": 0.51499,
+   "k": 2477,
+   "n": 4833,
+   "value": 0.51252,
    "between": {
-    "matches": 28,
-    "sd": 0.09359
+    "matches": 143,
+    "sd": 0.09571
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.wide_gt8.instant": {
    "kind": "prop",
-   "k": 145,
-   "n": 967,
-   "value": 0.14995,
+   "k": 785,
+   "n": 4833,
+   "value": 0.16242,
    "between": {
-    "matches": 28,
-    "sd": 0.08269
+    "matches": 143,
+    "sd": 0.07283
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.engage.wide_gt8.none": {
    "kind": "prop",
-   "k": 324,
-   "n": 967,
-   "value": 0.33506,
+   "k": 1571,
+   "n": 4833,
+   "value": 0.32506,
    "between": {
-    "matches": 28,
-    "sd": 0.09164
+    "matches": 143,
+    "sd": 0.08389
    },
    "desc": "Quando um inimigo passa a ser visível: fração dos casos em que o jogador atira instantaneamente (de 0,5 s antes a 0,1 s depois), atira depois (reação) ou não atira em 2 s; por faixa do erro da mira nesse instante."
   },
   "duel.fired_before_visible": {
    "kind": "prop",
-   "k": 1777,
-   "n": 5762,
-   "value": 0.3084,
+   "k": 9136,
+   "n": 29908,
+   "value": 0.30547,
    "between": {
-    "matches": 28,
-    "sd": 0.04835
+    "matches": 143,
+    "sd": 0.0411
    },
    "desc": "Fração dos avistamentos em que o jogador já tinha atirado no alvo antes de ele ficar visível."
   },
@@ -1033,107 +1033,107 @@
     "p25": 0.07812,
     "p50": 0.15625,
     "p75": 0.25,
-    "p90": 0.46875,
-    "p95": 0.71875
+    "p90": 0.45312,
+    "p95": 0.70312
    },
-   "mean": 0.22819,
-   "n": 2750,
+   "mean": 0.22659,
+   "n": 14138,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.02901,
-     "p25": 0.04153,
-     "p50": 0.05831,
-     "p75": 0.04074,
-     "p90": 0.03058
+     "p10": 0.0265,
+     "p25": 0.0404,
+     "p50": 0.05513,
+     "p75": 0.05011,
+     "p90": 0.03164
     }
    },
    "coverage": {
-    "p10": 0.08127,
-    "p25": 0.23564,
-    "p50": 0.50327,
-    "p75": 0.73545,
-    "p90": 0.89982
+    "p10": 0.07887,
+    "p25": 0.2326,
+    "p50": 0.49279,
+    "p75": 0.73631,
+    "p90": 0.90059
    },
    "desc": "Tempo entre ver o inimigo e o primeiro tiro mirado nele."
   },
   "duel.shoots_after_sighting": {
    "kind": "prop",
-   "k": 2750,
-   "n": 3476,
-   "value": 0.79114,
+   "k": 14138,
+   "n": 17880,
+   "value": 0.79072,
    "between": {
-    "matches": 28,
-    "sd": 0.04709
+    "matches": 143,
+    "sd": 0.04422
    },
    "desc": "Fração dos avistamentos em que o jogador atira em até 2 s."
   },
   "duel.win_rate": {
    "kind": "prop",
-   "k": 1236,
-   "n": 2218,
-   "value": 0.55726,
+   "k": 6477,
+   "n": 11611,
+   "value": 0.55783,
    "between": {
-    "matches": 28,
-    "sd": 0.0337
+    "matches": 143,
+    "sd": 0.03982
    },
    "desc": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence."
   },
   "duel.win_rate.0-10m": {
    "kind": "prop",
-   "k": 259,
-   "n": 472,
-   "value": 0.54873,
+   "k": 1179,
+   "n": 2136,
+   "value": 0.55197,
    "between": {
-    "matches": 28,
-    "sd": 0.0861
+    "matches": 142,
+    "sd": 0.08388
    },
    "desc": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence."
   },
   "duel.win_rate.10-20m": {
    "kind": "prop",
-   "k": 500,
-   "n": 917,
-   "value": 0.54526,
+   "k": 2649,
+   "n": 4866,
+   "value": 0.54439,
    "between": {
-    "matches": 28,
-    "sd": 0.0636
+    "matches": 143,
+    "sd": 0.05481
    },
    "desc": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence."
   },
   "duel.win_rate.20-30m": {
    "kind": "prop",
-   "k": 308,
-   "n": 537,
-   "value": 0.57356,
+   "k": 1743,
+   "n": 3034,
+   "value": 0.57449,
    "between": {
-    "matches": 28,
-    "sd": 0.07762
+    "matches": 141,
+    "sd": 0.08778
    },
    "desc": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence."
   },
   "duel.win_rate.30m+": {
    "kind": "prop",
-   "k": 169,
-   "n": 292,
-   "value": 0.57877,
+   "k": 906,
+   "n": 1575,
+   "value": 0.57524,
    "between": {
-    "matches": 24,
-    "sd": 0.08247
+    "matches": 124,
+    "sd": 0.11504
    },
    "desc": "Quando um jogador vê um inimigo e alguém morre em até 3 s, fração de vezes em que ele vence."
   },
   "econ.ct_win_rate.eco_vs_full": {
    "kind": "prop",
-   "k": 4,
-   "n": 25,
-   "value": 0.16,
+   "k": 11,
+   "n": 159,
+   "value": 0.06918,
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "econ.ct_win_rate.force_vs_eco": {
    "kind": "prop",
-   "k": 1,
-   "n": 1,
+   "k": 4,
+   "n": 4,
    "value": 1.0,
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
@@ -1146,878 +1146,341 @@
   },
   "econ.ct_win_rate.force_vs_full": {
    "kind": "prop",
-   "k": 22,
-   "n": 63,
-   "value": 0.34921,
+   "k": 88,
+   "n": 311,
+   "value": 0.28296,
+   "between": {
+    "matches": 5,
+    "sd": 0.12222
+   },
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "econ.ct_win_rate.full_vs_eco": {
    "kind": "prop",
-   "k": 42,
-   "n": 45,
-   "value": 0.93333,
+   "k": 245,
+   "n": 262,
+   "value": 0.93511,
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "econ.ct_win_rate.full_vs_force": {
    "kind": "prop",
-   "k": 61,
-   "n": 81,
-   "value": 0.75309,
+   "k": 258,
+   "n": 357,
+   "value": 0.72269,
    "between": {
-    "matches": 5,
-    "sd": 0.14668
+    "matches": 16,
+    "sd": 0.18146
    },
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "econ.ct_win_rate.full_vs_full": {
    "kind": "prop",
-   "k": 173,
-   "n": 324,
-   "value": 0.53395,
+   "k": 851,
+   "n": 1554,
+   "value": 0.54762,
    "between": {
-    "matches": 27,
-    "sd": 0.13538
+    "matches": 138,
+    "sd": 0.15977
    },
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "econ.ct_win_rate.pistol_vs_pistol": {
    "kind": "prop",
-   "k": 21,
-   "n": 56,
-   "value": 0.375,
+   "k": 137,
+   "n": 280,
+   "value": 0.48929,
    "desc": "Vitória do CT conforme o tipo de compra de cada lado."
   },
   "round.defuse_given_plant": {
    "kind": "prop",
-   "k": 67,
-   "n": 314,
-   "value": 0.21338,
+   "k": 354,
+   "n": 1458,
+   "value": 0.2428,
    "between": {
-    "matches": 28,
-    "sd": 0.13161
+    "matches": 139,
+    "sd": 0.13942
    },
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_ancient": {
    "kind": "prop",
-   "k": 7,
-   "n": 43,
-   "value": 0.16279,
+   "k": 52,
+   "n": 231,
+   "value": 0.22511,
+   "desc": "Entre os rounds com plant, fração que termina em defuse."
+  },
+  "round.defuse_given_plant@de_anubis": {
+   "kind": "prop",
+   "k": 32,
+   "n": 115,
+   "value": 0.27826,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_cache": {
    "kind": "prop",
-   "k": 12,
-   "n": 53,
-   "value": 0.22642,
+   "k": 49,
+   "n": 195,
+   "value": 0.25128,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_dust2": {
    "kind": "prop",
-   "k": 6,
-   "n": 30,
-   "value": 0.2,
+   "k": 75,
+   "n": 309,
+   "value": 0.24272,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_inferno": {
    "kind": "prop",
-   "k": 7,
-   "n": 58,
-   "value": 0.12069,
+   "k": 24,
+   "n": 133,
+   "value": 0.18045,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_mirage": {
    "kind": "prop",
-   "k": 24,
-   "n": 77,
-   "value": 0.31169,
+   "k": 74,
+   "n": 298,
+   "value": 0.24832,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.defuse_given_plant@de_nuke": {
    "kind": "prop",
-   "k": 8,
-   "n": 42,
-   "value": 0.19048,
+   "k": 48,
+   "n": 177,
+   "value": 0.27119,
    "desc": "Entre os rounds com plant, fração que termina em defuse."
   },
   "round.duration_s.all": {
    "kind": "quantiles",
    "q": {
-    "p5": 40.29375,
-    "p10": 48.64688,
-    "p25": 68.8125,
-    "p50": 91.78125,
+    "p5": 39.92188,
+    "p10": 49.64062,
+    "p25": 68.90625,
+    "p50": 92.76562,
     "p75": 115.0,
-    "p90": 133.74688,
-    "p95": 142.54063
+    "p90": 129.64062,
+    "p95": 139.09375
    },
-   "mean": 91.45972,
-   "n": 599,
+   "mean": 91.01342,
+   "n": 2931,
    "between": {
-    "matches": 28,
+    "matches": 142,
     "sd_cov": {
-     "p10": 0.07632,
-     "p25": 0.10731,
-     "p50": 0.12725,
-     "p75": 0.11722,
-     "p90": 0.09332
+     "p10": 0.06979,
+     "p25": 0.10719,
+     "p50": 0.1188,
+     "p75": 0.10046,
+     "p90": 0.07759
     }
    },
    "coverage": {
-    "p10": 0.10017,
-    "p25": 0.25042,
+    "p10": 0.10014,
+    "p25": 0.25009,
     "p50": 0.5,
-    "p75": 0.75125,
-    "p90": 0.89983
+    "p75": 0.77414,
+    "p90": 0.89986
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_ancient": {
    "kind": "quantiles",
    "q": {
-    "p5": 46.32812,
-    "p10": 50.72656,
-    "p25": 65.04688,
-    "p50": 80.82812,
-    "p75": 109.25,
-    "p90": 119.4375,
-    "p95": 133.72109
+    "p5": 40.49375,
+    "p10": 46.5625,
+    "p25": 60.09766,
+    "p50": 83.83594,
+    "p75": 109.54297,
+    "p90": 126.90625,
+    "p95": 135.19141
    },
-   "mean": 84.94391,
-   "n": 78,
+   "mean": 85.59123,
+   "n": 422,
    "coverage": {
-    "p10": 0.10256,
-    "p25": 0.25641,
+    "p10": 0.1019,
+    "p25": 0.25118,
     "p50": 0.5,
-    "p75": 0.74359,
-    "p90": 0.89744
+    "p75": 0.74882,
+    "p90": 0.8981
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.all@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 45.86875,
+    "p10": 56.225,
+    "p25": 79.46875,
+    "p50": 100.03125,
+    "p75": 115.96094,
+    "p90": 131.21875,
+    "p95": 139.30156
+   },
+   "mean": 96.67118,
+   "n": 203,
+   "coverage": {
+    "p10": 0.10345,
+    "p25": 0.25123,
+    "p50": 0.5,
+    "p75": 0.74877,
+    "p90": 0.89655
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_cache": {
    "kind": "quantiles",
    "q": {
-    "p5": 41.89531,
-    "p10": 46.06563,
-    "p25": 65.71094,
-    "p50": 88.48438,
-    "p75": 112.61719,
-    "p90": 123.04063,
-    "p95": 140.50781
+    "p5": 41.94531,
+    "p10": 49.54688,
+    "p25": 68.78125,
+    "p50": 92.35938,
+    "p75": 113.5,
+    "p90": 129.01562,
+    "p95": 141.28125
    },
-   "mean": 87.79936,
-   "n": 107,
+   "mean": 90.86525,
+   "n": 391,
    "coverage": {
-    "p10": 0.1028,
-    "p25": 0.25234,
+    "p10": 0.10102,
+    "p25": 0.25064,
     "p50": 0.5,
-    "p75": 0.74766,
-    "p90": 0.8972
+    "p75": 0.74936,
+    "p90": 0.89898
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_dust2": {
    "kind": "quantiles",
    "q": {
-    "p5": 41.1875,
-    "p10": 54.32812,
-    "p25": 71.25,
-    "p50": 90.73438,
-    "p75": 115.625,
-    "p90": 132.35938,
-    "p95": 139.67188
+    "p5": 41.68359,
+    "p10": 52.39844,
+    "p25": 72.07422,
+    "p50": 95.8125,
+    "p75": 115.0,
+    "p90": 131.22656,
+    "p95": 138.32031
    },
-   "mean": 92.19339,
-   "n": 61,
+   "mean": 93.08119,
+   "n": 606,
    "coverage": {
-    "p10": 0.10656,
-    "p25": 0.2541,
+    "p10": 0.10066,
+    "p25": 0.25083,
     "p50": 0.5,
-    "p75": 0.7459,
-    "p90": 0.89344
+    "p75": 0.76155,
+    "p90": 0.89934
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_inferno": {
    "kind": "quantiles",
    "q": {
-    "p5": 61.69844,
-    "p10": 68.21563,
-    "p25": 85.89062,
-    "p50": 105.04688,
-    "p75": 122.21875,
-    "p90": 142.54063,
-    "p95": 146.575
+    "p5": 47.5875,
+    "p10": 57.3125,
+    "p25": 80.49219,
+    "p50": 99.8125,
+    "p75": 116.63281,
+    "p90": 138.06563,
+    "p95": 144.7375
    },
-   "mean": 104.90799,
-   "n": 99,
+   "mean": 99.00422,
+   "n": 259,
    "coverage": {
-    "p10": 0.10101,
-    "p25": 0.25253,
+    "p10": 0.10039,
+    "p25": 0.25097,
     "p50": 0.5,
-    "p75": 0.74747,
-    "p90": 0.89899
+    "p75": 0.74903,
+    "p90": 0.89961
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_mirage": {
    "kind": "quantiles",
    "q": {
-    "p5": 38.97812,
-    "p10": 45.1375,
-    "p25": 70.90625,
-    "p50": 92.5,
-    "p75": 115.0,
-    "p90": 136.03437,
-    "p95": 143.64062
+    "p5": 37.55625,
+    "p10": 49.1125,
+    "p25": 68.80469,
+    "p50": 90.40625,
+    "p75": 114.375,
+    "p90": 126.70313,
+    "p95": 137.39375
    },
-   "mean": 92.50366,
-   "n": 145,
+   "mean": 89.74283,
+   "n": 643,
    "coverage": {
-    "p10": 0.10345,
-    "p25": 0.24828,
+    "p10": 0.10109,
+    "p25": 0.25039,
     "p50": 0.5,
-    "p75": 0.75517,
-    "p90": 0.89655
+    "p75": 0.74961,
+    "p90": 0.89891
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.all@de_nuke": {
    "kind": "quantiles",
    "q": {
-    "p5": 35.64844,
-    "p10": 41.08125,
-    "p25": 63.16406,
-    "p50": 83.99219,
-    "p75": 110.90234,
-    "p90": 122.22969,
-    "p95": 133.43828
+    "p5": 32.66875,
+    "p10": 42.96563,
+    "p25": 66.17188,
+    "p50": 90.03125,
+    "p75": 113.28906,
+    "p90": 125.6875,
+    "p95": 133.63906
    },
-   "mean": 85.41104,
-   "n": 88,
+   "mean": 87.79933,
+   "n": 407,
    "coverage": {
-    "p10": 0.10227,
-    "p25": 0.25,
+    "p10": 0.10074,
+    "p25": 0.25061,
     "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89773
+    "p75": 0.74939,
+    "p90": 0.89926
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.bomb_defused": {
    "kind": "quantiles",
    "q": {
-    "p5": 65.14062,
-    "p10": 70.2125,
-    "p25": 83.30469,
-    "p50": 107.09375,
-    "p75": 121.79688,
-    "p90": 136.05937,
-    "p95": 141.34844
+    "p5": 59.34063,
+    "p10": 66.7,
+    "p25": 80.05078,
+    "p50": 106.60156,
+    "p75": 123.80469,
+    "p90": 133.14844,
+    "p95": 137.06875
    },
-   "mean": 104.3069,
-   "n": 67,
+   "mean": 102.35938,
+   "n": 354,
+   "between": {
+    "matches": 10,
+    "sd_cov": {
+     "p10": 0.08315,
+     "p25": 0.16301,
+     "p50": 0.20983,
+     "p75": 0.13257,
+     "p90": 0.0956
+    }
+   },
    "coverage": {
-    "p10": 0.10448,
-    "p25": 0.25373,
+    "p10": 0.10169,
+    "p25": 0.25141,
     "p50": 0.5,
-    "p75": 0.74627,
-    "p90": 0.89552
+    "p75": 0.74859,
+    "p90": 0.89831
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
   "round.duration_s.bomb_defused@de_ancient": {
    "kind": "quantiles",
    "q": {
-    "p5": 58.29062,
-    "p10": 61.06562,
-    "p25": 67.97656,
-    "p50": 75.14062,
-    "p75": 101.44531,
-    "p90": 112.73125,
-    "p95": 116.95937
+    "p5": 51.35078,
+    "p10": 55.91563,
+    "p25": 70.94922,
+    "p50": 102.63281,
+    "p75": 116.70703,
+    "p90": 126.96563,
+    "p95": 131.44609
    },
-   "mean": 84.38393,
-   "n": 7,
-   "coverage": {
-    "p10": 0.14286,
-    "p25": 0.28571,
-    "p50": 0.5,
-    "p75": 0.71429,
-    "p90": 0.85714
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_defused@de_cache": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 84.68438,
-    "p10": 91.53437,
-    "p25": 101.42969,
-    "p50": 115.08594,
-    "p75": 122.73828,
-    "p90": 128.40312,
-    "p95": 136.825
-   },
-   "mean": 112.22396,
-   "n": 12,
-   "coverage": {
-    "p10": 0.16667,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.83333
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_defused@de_dust2": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 115.73828,
-    "p10": 115.85156,
-    "p25": 118.41406,
-    "p50": 126.83594,
-    "p75": 133.72266,
-    "p90": 138.28906,
-    "p95": 139.66016
-   },
-   "mean": 126.99219,
-   "n": 6,
-   "coverage": {
-    "p10": 0.16667,
-    "p25": 0.33333,
-    "p50": 0.5,
-    "p75": 0.66667,
-    "p90": 0.83333
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_defused@de_inferno": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 93.39687,
-    "p10": 96.15313,
-    "p25": 104.82031,
-    "p50": 119.54688,
-    "p75": 139.71875,
-    "p90": 141.74687,
-    "p95": 141.94375
-   },
-   "mean": 120.20089,
-   "n": 7,
-   "coverage": {
-    "p10": 0.14286,
-    "p25": 0.28571,
-    "p50": 0.5,
-    "p75": 0.71429,
-    "p90": 0.85714
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_defused@de_mirage": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 66.14453,
-    "p10": 67.4375,
-    "p25": 78.24219,
-    "p50": 92.53125,
-    "p75": 122.07031,
-    "p90": 134.80156,
-    "p95": 136.53047
-   },
-   "mean": 98.28646,
-   "n": 24,
-   "coverage": {
-    "p10": 0.125,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.875
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_defused@de_nuke": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 67.92344,
-    "p10": 71.34687,
-    "p25": 79.84766,
-    "p50": 101.41406,
-    "p75": 112.20312,
-    "p90": 117.83281,
-    "p95": 118.49453
-   },
-   "mean": 96.28125,
-   "n": 8,
-   "coverage": {
-    "p10": 0.125,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.875
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 72.58828,
-    "p10": 78.65625,
-    "p25": 91.03516,
-    "p50": 117.44531,
-    "p75": 140.54688,
-    "p90": 146.23438,
-    "p95": 150.39766
-   },
-   "mean": 114.67957,
-   "n": 138,
-   "between": {
-    "matches": 15,
-    "sd_cov": {
-     "p10": 0.21039,
-     "p25": 0.24129,
-     "p50": 0.215,
-     "p75": 0.18206,
-     "p90": 0.1122
-    }
-   },
-   "coverage": {
-    "p10": 0.10145,
-    "p25": 0.25362,
-    "p50": 0.5,
-    "p75": 0.74638,
-    "p90": 0.89855
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_ancient": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 71.38594,
-    "p10": 72.10313,
-    "p25": 86.59375,
-    "p50": 101.67188,
-    "p75": 133.47656,
-    "p90": 137.66875,
-    "p95": 141.45625
-   },
-   "mean": 107.03229,
-   "n": 15,
-   "coverage": {
-    "p10": 0.13333,
-    "p25": 0.26667,
-    "p50": 0.5,
-    "p75": 0.73333,
-    "p90": 0.86667
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_cache": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 66.75938,
-    "p10": 73.92812,
-    "p25": 88.35156,
-    "p50": 109.02344,
-    "p75": 125.07422,
-    "p90": 145.41875,
-    "p95": 149.59531
-   },
-   "mean": 108.27656,
-   "n": 20,
-   "coverage": {
-    "p10": 0.1,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.9
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_dust2": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 74.2,
-    "p10": 75.9875,
-    "p25": 78.75,
-    "p50": 104.67188,
-    "p75": 132.35938,
-    "p90": 140.80312,
-    "p95": 143.24687
-   },
-   "mean": 106.87408,
-   "n": 17,
-   "coverage": {
-    "p10": 0.11765,
-    "p25": 0.26471,
-    "p50": 0.5,
-    "p75": 0.73529,
-    "p90": 0.88235
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_inferno": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 85.99062,
-    "p10": 88.97187,
-    "p25": 99.64062,
-    "p50": 133.0,
-    "p75": 144.70312,
-    "p90": 147.8,
-    "p95": 151.19062
-   },
-   "mean": 124.31771,
-   "n": 33,
-   "coverage": {
-    "p10": 0.12121,
-    "p25": 0.25758,
-    "p50": 0.5,
-    "p75": 0.74242,
-    "p90": 0.87879
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_mirage": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 80.42969,
-    "p10": 82.95312,
-    "p25": 90.64844,
-    "p50": 119.1875,
-    "p75": 143.11719,
-    "p90": 150.20312,
-    "p95": 152.17188
-   },
-   "mean": 117.812,
-   "n": 31,
-   "coverage": {
-    "p10": 0.1129,
-    "p25": 0.25806,
-    "p50": 0.5,
-    "p75": 0.74194,
-    "p90": 0.8871
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.bomb_exploded@de_nuke": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 76.40781,
-    "p10": 78.83125,
-    "p25": 100.69531,
-    "p50": 121.46875,
-    "p75": 134.62109,
-    "p90": 140.79219,
-    "p95": 142.66797
-   },
-   "mean": 114.73785,
-   "n": 18,
-   "coverage": {
-    "p10": 0.11111,
-    "p25": 0.27778,
-    "p50": 0.5,
-    "p75": 0.72222,
-    "p90": 0.88889
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 39.875,
-    "p10": 45.26562,
-    "p25": 66.53125,
-    "p50": 83.39062,
-    "p75": 107.15625,
-    "p90": 122.70312,
-    "p95": 130.17188
-   },
-   "mean": 85.4653,
-   "n": 136,
-   "between": {
-    "matches": 15,
-    "sd_cov": {
-     "p10": 0.11533,
-     "p25": 0.17204,
-     "p50": 0.18508,
-     "p75": 0.12588,
-     "p90": 0.12375
-    }
-   },
-   "coverage": {
-    "p10": 0.10294,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89706
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_ancient": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 56.33125,
-    "p10": 58.31875,
-    "p25": 67.23438,
-    "p50": 83.07812,
-    "p75": 97.85938,
-    "p90": 110.69375,
-    "p95": 117.24375
-   },
-   "mean": 83.18188,
-   "n": 25,
-   "coverage": {
-    "p10": 0.12,
-    "p25": 0.26,
-    "p50": 0.52,
-    "p75": 0.74,
-    "p90": 0.88
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_cache": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 42.16953,
-    "p10": 44.68906,
-    "p25": 60.73828,
-    "p50": 72.28125,
-    "p75": 90.29688,
-    "p90": 124.68281,
-    "p95": 131.09687
-   },
-   "mean": 77.37444,
-   "n": 28,
-   "coverage": {
-    "p10": 0.10714,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89286
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_dust2": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 38.72812,
-    "p10": 42.10938,
-    "p25": 59.375,
-    "p50": 83.70312,
-    "p75": 102.57812,
-    "p90": 115.7125,
-    "p95": 119.22812
-   },
-   "mean": 81.30409,
-   "n": 13,
-   "coverage": {
-    "p10": 0.15385,
-    "p25": 0.26923,
-    "p50": 0.5,
-    "p75": 0.73077,
-    "p90": 0.84615
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_inferno": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 43.83359,
-    "p10": 65.86875,
-    "p25": 81.26172,
-    "p50": 100.84375,
-    "p75": 115.85547,
-    "p90": 125.78594,
-    "p95": 134.00703
-   },
-   "mean": 96.93576,
-   "n": 18,
-   "coverage": {
-    "p10": 0.11111,
-    "p25": 0.27778,
-    "p50": 0.5,
-    "p75": 0.72222,
-    "p90": 0.88889
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_mirage": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 39.23438,
-    "p10": 44.65313,
-    "p25": 69.79688,
-    "p50": 96.125,
-    "p75": 110.95312,
-    "p90": 123.35313,
-    "p95": 127.0875
-   },
-   "mean": 88.68981,
-   "n": 27,
-   "coverage": {
-    "p10": 0.11111,
-    "p25": 0.25926,
-    "p50": 0.5,
-    "p75": 0.74074,
-    "p90": 0.88889
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.ct_killed@de_nuke": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 41.35312,
-    "p10": 53.51094,
-    "p25": 68.66406,
-    "p50": 86.28125,
-    "p75": 108.85547,
-    "p90": 120.39688,
-    "p95": 121.69062
-   },
-   "mean": 86.2375,
-   "n": 20,
-   "coverage": {
-    "p10": 0.1,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.9
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 32.59922,
-    "p10": 40.02188,
-    "p25": 54.05859,
-    "p50": 70.90625,
-    "p75": 89.62109,
-    "p90": 105.11094,
-    "p95": 108.49375
-   },
-   "mean": 71.43341,
-   "n": 214,
-   "between": {
-    "matches": 26,
-    "sd_cov": {
-     "p10": 0.08528,
-     "p25": 0.17275,
-     "p50": 0.21361,
-     "p75": 0.15522,
-     "p90": 0.07689
-    }
-   },
-   "coverage": {
-    "p10": 0.1028,
-    "p25": 0.25234,
-    "p50": 0.5,
-    "p75": 0.74766,
-    "p90": 0.8972
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed@de_ancient": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 39.17266,
-    "p10": 42.73906,
-    "p25": 48.54297,
-    "p50": 64.40625,
-    "p75": 73.82812,
-    "p90": 97.13281,
-    "p95": 107.80859
-   },
-   "mean": 64.37109,
-   "n": 24,
-   "coverage": {
-    "p10": 0.125,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.875
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed@de_cache": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 29.01406,
-    "p10": 41.39531,
-    "p25": 54.61328,
-    "p50": 72.66406,
-    "p75": 90.46484,
-    "p90": 107.70312,
-    "p95": 108.32969
-   },
-   "mean": 72.7707,
-   "n": 40,
-   "coverage": {
-    "p10": 0.1,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.9
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed@de_dust2": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 42.26875,
-    "p10": 52.46563,
-    "p25": 57.98438,
-    "p50": 75.51562,
-    "p75": 94.65625,
-    "p90": 102.25625,
-    "p95": 105.2625
-   },
-   "mean": 76.43614,
-   "n": 23,
-   "coverage": {
-    "p10": 0.13043,
-    "p25": 0.26087,
-    "p50": 0.5,
-    "p75": 0.73913,
-    "p90": 0.86957
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed@de_inferno": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 45.19375,
-    "p10": 60.65781,
-    "p25": 67.25,
-    "p50": 78.51562,
-    "p75": 96.87109,
-    "p90": 103.45156,
-    "p95": 104.05625
-   },
-   "mean": 78.64844,
-   "n": 28,
-   "coverage": {
-    "p10": 0.10714,
-    "p25": 0.25,
-    "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89286
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.t_killed@de_mirage": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 35.03203,
-    "p10": 38.80938,
-    "p25": 50.60547,
-    "p50": 72.08594,
-    "p75": 90.08984,
-    "p90": 104.17344,
-    "p95": 107.44453
-   },
-   "mean": 71.96845,
+   "mean": 94.41827,
    "n": 52,
    "coverage": {
     "p10": 0.11538,
@@ -2028,25 +1491,693 @@
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
+  "round.duration_s.bomb_defused@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 61.00078,
+    "p10": 71.33906,
+    "p25": 96.03906,
+    "p50": 116.67969,
+    "p75": 124.56641,
+    "p90": 132.94063,
+    "p95": 139.35078
+   },
+   "mean": 106.66357,
+   "n": 32,
+   "coverage": {
+    "p10": 0.125,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.875
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_defused@de_cache": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 66.9625,
+    "p10": 72.40313,
+    "p25": 82.90625,
+    "p50": 103.92188,
+    "p75": 118.54688,
+    "p90": 128.99687,
+    "p95": 132.425
+   },
+   "mean": 102.37755,
+   "n": 49,
+   "coverage": {
+    "p10": 0.10204,
+    "p25": 0.2551,
+    "p50": 0.5,
+    "p75": 0.7449,
+    "p90": 0.89796
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_defused@de_dust2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 64.97969,
+    "p10": 71.43125,
+    "p25": 93.74219,
+    "p50": 113.78125,
+    "p75": 128.11719,
+    "p90": 133.56875,
+    "p95": 136.40469
+   },
+   "mean": 108.17229,
+   "n": 75,
+   "coverage": {
+    "p10": 0.10667,
+    "p25": 0.25333,
+    "p50": 0.5,
+    "p75": 0.74667,
+    "p90": 0.89333
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_defused@de_inferno": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 86.84453,
+    "p10": 90.46563,
+    "p25": 101.85547,
+    "p50": 119.96094,
+    "p75": 131.1875,
+    "p90": 140.425,
+    "p95": 142.04219
+   },
+   "mean": 117.03581,
+   "n": 24,
+   "coverage": {
+    "p10": 0.125,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.875
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_defused@de_mirage": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 58.53906,
+    "p10": 65.69844,
+    "p25": 74.17188,
+    "p50": 99.11719,
+    "p75": 114.08594,
+    "p90": 132.93125,
+    "p95": 135.10625
+   },
+   "mean": 96.49726,
+   "n": 74,
+   "coverage": {
+    "p10": 0.10811,
+    "p25": 0.25676,
+    "p50": 0.5,
+    "p75": 0.74324,
+    "p90": 0.89189
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_defused@de_nuke": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 64.77344,
+    "p10": 67.23281,
+    "p25": 78.54688,
+    "p50": 105.47656,
+    "p75": 119.57422,
+    "p90": 130.72188,
+    "p95": 135.39531
+   },
+   "mean": 100.69076,
+   "n": 48,
+   "coverage": {
+    "p10": 0.10417,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.89583
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 73.35313,
+    "p10": 79.81562,
+    "p25": 94.17188,
+    "p50": 119.1875,
+    "p75": 137.03125,
+    "p90": 147.1,
+    "p95": 150.94375
+   },
+   "mean": 115.61,
+   "n": 553,
+   "between": {
+    "matches": 48,
+    "sd_cov": {
+     "p10": 0.15044,
+     "p25": 0.20813,
+     "p50": 0.22849,
+     "p75": 0.22341,
+     "p90": 0.1464
+    }
+   },
+   "coverage": {
+    "p10": 0.10127,
+    "p25": 0.25045,
+    "p50": 0.5,
+    "p75": 0.74955,
+    "p90": 0.89873
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_ancient": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 67.26562,
+    "p10": 72.47656,
+    "p25": 83.92188,
+    "p50": 108.375,
+    "p75": 132.48438,
+    "p90": 145.10938,
+    "p95": 149.49219
+   },
+   "mean": 108.53441,
+   "n": 84,
+   "coverage": {
+    "p10": 0.10714,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.89286
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 86.43828,
+    "p10": 90.10156,
+    "p25": 101.19922,
+    "p50": 117.47656,
+    "p75": 135.21484,
+    "p90": 146.79063,
+    "p95": 150.67188
+   },
+   "mean": 117.73735,
+   "n": 42,
+   "coverage": {
+    "p10": 0.11905,
+    "p25": 0.2619,
+    "p50": 0.5,
+    "p75": 0.7381,
+    "p90": 0.88095
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_cache": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 73.88125,
+    "p10": 79.5,
+    "p25": 93.57812,
+    "p50": 119.04688,
+    "p75": 137.98438,
+    "p90": 147.88125,
+    "p95": 152.01562
+   },
+   "mean": 115.79099,
+   "n": 77,
+   "coverage": {
+    "p10": 0.1039,
+    "p25": 0.25325,
+    "p50": 0.5,
+    "p75": 0.74675,
+    "p90": 0.8961
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_dust2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 77.19375,
+    "p10": 87.15469,
+    "p25": 99.67188,
+    "p50": 120.4375,
+    "p75": 137.78906,
+    "p90": 147.40938,
+    "p95": 151.12656
+   },
+   "mean": 118.275,
+   "n": 110,
+   "coverage": {
+    "p10": 0.1,
+    "p25": 0.25455,
+    "p50": 0.5,
+    "p75": 0.74545,
+    "p90": 0.9
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_inferno": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 85.79688,
+    "p10": 90.01562,
+    "p25": 98.60156,
+    "p50": 125.53906,
+    "p75": 143.21875,
+    "p90": 147.93906,
+    "p95": 151.07188
+   },
+   "mean": 121.54839,
+   "n": 62,
+   "coverage": {
+    "p10": 0.1129,
+    "p25": 0.25806,
+    "p50": 0.5,
+    "p75": 0.74194,
+    "p90": 0.8871
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_mirage": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 75.48438,
+    "p10": 79.26562,
+    "p25": 93.875,
+    "p50": 122.28125,
+    "p75": 137.6875,
+    "p90": 147.25,
+    "p95": 151.92969
+   },
+   "mean": 116.59783,
+   "n": 111,
+   "coverage": {
+    "p10": 0.1036,
+    "p25": 0.25225,
+    "p50": 0.5,
+    "p75": 0.74775,
+    "p90": 0.8964
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.bomb_exploded@de_nuke": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 66.48906,
+    "p10": 76.025,
+    "p25": 88.90625,
+    "p50": 116.26562,
+    "p75": 131.14844,
+    "p90": 143.03125,
+    "p95": 147.37812
+   },
+   "mean": 111.43214,
+   "n": 67,
+   "coverage": {
+    "p10": 0.10448,
+    "p25": 0.25373,
+    "p50": 0.5,
+    "p75": 0.74627,
+    "p90": 0.89552
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 41.22812,
+    "p10": 50.13437,
+    "p25": 66.44531,
+    "p50": 86.6875,
+    "p75": 107.46875,
+    "p90": 121.63438,
+    "p95": 129.81875
+   },
+   "mean": 86.40358,
+   "n": 783,
+   "between": {
+    "matches": 94,
+    "sd_cov": {
+     "p10": 0.11567,
+     "p25": 0.17506,
+     "p50": 0.18818,
+     "p75": 0.15186,
+     "p90": 0.1106
+    }
+   },
+   "coverage": {
+    "p10": 0.10089,
+    "p25": 0.25032,
+    "p50": 0.5,
+    "p75": 0.75032,
+    "p90": 0.89911
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_ancient": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 41.50469,
+    "p10": 48.35938,
+    "p25": 57.28125,
+    "p50": 81.65625,
+    "p75": 102.14062,
+    "p90": 120.43125,
+    "p95": 128.46328
+   },
+   "mean": 81.80859,
+   "n": 132,
+   "coverage": {
+    "p10": 0.10606,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.89394
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 41.48281,
+    "p10": 53.7625,
+    "p25": 66.86719,
+    "p50": 88.4375,
+    "p75": 107.30469,
+    "p90": 122.76875,
+    "p95": 128.77187
+   },
+   "mean": 88.2054,
+   "n": 55,
+   "coverage": {
+    "p10": 0.10909,
+    "p25": 0.25455,
+    "p50": 0.5,
+    "p75": 0.74545,
+    "p90": 0.89091
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_cache": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 42.56094,
+    "p10": 50.54688,
+    "p25": 67.25781,
+    "p50": 84.57812,
+    "p75": 107.48438,
+    "p90": 116.35469,
+    "p95": 124.24453
+   },
+   "mean": 85.75934,
+   "n": 92,
+   "coverage": {
+    "p10": 0.1087,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.8913
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_dust2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 40.15312,
+    "p10": 51.00312,
+    "p25": 66.26562,
+    "p50": 88.4375,
+    "p75": 107.82031,
+    "p90": 118.75938,
+    "p95": 130.95469
+   },
+   "mean": 87.14097,
+   "n": 183,
+   "coverage": {
+    "p10": 0.10383,
+    "p25": 0.25137,
+    "p50": 0.5,
+    "p75": 0.74863,
+    "p90": 0.89617
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_inferno": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 42.725,
+    "p10": 66.95156,
+    "p25": 81.75391,
+    "p50": 95.67188,
+    "p75": 117.28906,
+    "p90": 130.55156,
+    "p95": 133.04297
+   },
+   "mean": 96.21383,
+   "n": 54,
+   "coverage": {
+    "p10": 0.11111,
+    "p25": 0.25926,
+    "p50": 0.5,
+    "p75": 0.74074,
+    "p90": 0.88889
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_mirage": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 40.33828,
+    "p10": 50.26094,
+    "p25": 67.01953,
+    "p50": 85.40625,
+    "p75": 104.33984,
+    "p90": 120.35469,
+    "p95": 125.95312
+   },
+   "mean": 84.97711,
+   "n": 172,
+   "coverage": {
+    "p10": 0.10465,
+    "p25": 0.25,
+    "p50": 0.5,
+    "p75": 0.75,
+    "p90": 0.89535
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.ct_killed@de_nuke": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 39.8375,
+    "p10": 50.24063,
+    "p25": 70.34375,
+    "p50": 90.57812,
+    "p75": 109.17969,
+    "p90": 122.74063,
+    "p95": 127.41562
+   },
+   "mean": 87.95477,
+   "n": 95,
+   "coverage": {
+    "p10": 0.10526,
+    "p25": 0.25263,
+    "p50": 0.5,
+    "p75": 0.74737,
+    "p90": 0.89474
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 32.36563,
+    "p10": 39.50937,
+    "p25": 54.32812,
+    "p50": 74.54688,
+    "p75": 94.26562,
+    "p90": 104.85938,
+    "p95": 108.65
+   },
+   "mean": 73.26862,
+   "n": 1049,
+   "between": {
+    "matches": 120,
+    "sd_cov": {
+     "p10": 0.11191,
+     "p25": 0.16075,
+     "p50": 0.19035,
+     "p75": 0.16827,
+     "p90": 0.10745
+    }
+   },
+   "coverage": {
+    "p10": 0.1001,
+    "p25": 0.25024,
+    "p50": 0.5,
+    "p75": 0.74976,
+    "p90": 0.8999
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_ancient": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 32.52969,
+    "p10": 39.39062,
+    "p25": 48.80469,
+    "p50": 62.59375,
+    "p75": 87.10938,
+    "p90": 103.11875,
+    "p95": 107.17031
+   },
+   "mean": 67.475,
+   "n": 135,
+   "coverage": {
+    "p10": 0.1037,
+    "p25": 0.25185,
+    "p50": 0.4963,
+    "p75": 0.74815,
+    "p90": 0.8963
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 39.90625,
+    "p10": 49.14062,
+    "p25": 64.76562,
+    "p50": 84.85938,
+    "p75": 98.85938,
+    "p90": 105.40625,
+    "p95": 109.70312
+   },
+   "mean": 80.65164,
+   "n": 61,
+   "coverage": {
+    "p10": 0.11475,
+    "p25": 0.2541,
+    "p50": 0.5,
+    "p75": 0.7459,
+    "p90": 0.89344
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_cache": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 34.63125,
+    "p10": 41.71563,
+    "p25": 55.15625,
+    "p50": 73.35938,
+    "p75": 93.73438,
+    "p90": 106.94688,
+    "p95": 109.03437
+   },
+   "mean": 73.4634,
+   "n": 149,
+   "coverage": {
+    "p10": 0.10067,
+    "p25": 0.25168,
+    "p50": 0.5,
+    "p75": 0.74832,
+    "p90": 0.89933
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_dust2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 33.18281,
+    "p10": 43.29375,
+    "p25": 59.1875,
+    "p50": 80.25,
+    "p75": 96.625,
+    "p90": 104.89062,
+    "p95": 108.69531
+   },
+   "mean": 76.19437,
+   "n": 207,
+   "coverage": {
+    "p10": 0.10145,
+    "p25": 0.25121,
+    "p50": 0.5,
+    "p75": 0.74879,
+    "p90": 0.89855
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_inferno": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 43.51875,
+    "p10": 47.85,
+    "p25": 61.34375,
+    "p50": 77.46875,
+    "p75": 94.3125,
+    "p90": 104.025,
+    "p95": 107.775
+   },
+   "mean": 76.46976,
+   "n": 93,
+   "coverage": {
+    "p10": 0.10753,
+    "p25": 0.25269,
+    "p50": 0.5,
+    "p75": 0.74731,
+    "p90": 0.89247
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.t_killed@de_mirage": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 32.6,
+    "p10": 37.49688,
+    "p25": 55.53125,
+    "p50": 74.45312,
+    "p75": 92.82812,
+    "p90": 103.67813,
+    "p95": 106.98125
+   },
+   "mean": 73.29292,
+   "n": 237,
+   "coverage": {
+    "p10": 0.10127,
+    "p25": 0.25105,
+    "p50": 0.5,
+    "p75": 0.74895,
+    "p90": 0.89873
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
   "round.duration_s.t_killed@de_nuke": {
    "kind": "quantiles",
    "q": {
-    "p5": 20.90312,
-    "p10": 34.43438,
-    "p25": 46.27344,
-    "p50": 65.04688,
-    "p75": 89.17969,
-    "p90": 101.85625,
-    "p95": 109.76562
+    "p5": 24.87969,
+    "p10": 32.225,
+    "p25": 48.30469,
+    "p50": 71.09375,
+    "p75": 94.27344,
+    "p90": 105.91875,
+    "p95": 109.52656
    },
-   "mean": 66.94591,
-   "n": 39,
+   "mean": 69.63782,
+   "n": 167,
    "coverage": {
-    "p10": 0.10256,
-    "p25": 0.25641,
+    "p10": 0.1018,
+    "p25": 0.2515,
     "p50": 0.5,
-    "p75": 0.74359,
-    "p90": 0.89744
+    "p75": 0.7485,
+    "p90": 0.8982
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
@@ -2062,7 +2193,7 @@
     "p95": 115.0
    },
    "mean": 115.0,
-   "n": 44,
+   "n": 192,
    "coverage": {
     "p10": 0.5,
     "p25": 0.5,
@@ -2084,7 +2215,7 @@
     "p95": 115.0
    },
    "mean": 115.0,
-   "n": 7,
+   "n": 19,
    "coverage": {
     "p10": 0.5,
     "p25": 0.5,
@@ -2094,51 +2225,7 @@
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
-  "round.duration_s.time_ran_out@de_cache": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 115.0,
-    "p10": 115.0,
-    "p25": 115.0,
-    "p50": 115.0,
-    "p75": 115.0,
-    "p90": 115.0,
-    "p95": 115.0
-   },
-   "mean": 115.0,
-   "n": 7,
-   "coverage": {
-    "p10": 0.5,
-    "p25": 0.5,
-    "p50": 0.5,
-    "p75": 0.5,
-    "p90": 0.5
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.time_ran_out@de_dust2": {
-   "kind": "quantiles",
-   "q": {
-    "p5": 115.0,
-    "p10": 115.0,
-    "p25": 115.0,
-    "p50": 115.0,
-    "p75": 115.0,
-    "p90": 115.0,
-    "p95": 115.0
-   },
-   "mean": 115.0,
-   "n": 2,
-   "coverage": {
-    "p10": 0.5,
-    "p25": 0.5,
-    "p50": 0.5,
-    "p75": 0.5,
-    "p90": 0.5
-   },
-   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
-  },
-  "round.duration_s.time_ran_out@de_inferno": {
+  "round.duration_s.time_ran_out@de_anubis": {
    "kind": "quantiles",
    "q": {
     "p5": 115.0,
@@ -2160,6 +2247,72 @@
    },
    "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
   },
+  "round.duration_s.time_ran_out@de_cache": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 115.0,
+    "p10": 115.0,
+    "p25": 115.0,
+    "p50": 115.0,
+    "p75": 115.0,
+    "p90": 115.0,
+    "p95": 115.0
+   },
+   "mean": 115.0,
+   "n": 24,
+   "coverage": {
+    "p10": 0.5,
+    "p25": 0.5,
+    "p50": 0.5,
+    "p75": 0.5,
+    "p90": 0.5
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.time_ran_out@de_dust2": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 115.0,
+    "p10": 115.0,
+    "p25": 115.0,
+    "p50": 115.0,
+    "p75": 115.0,
+    "p90": 115.0,
+    "p95": 115.0
+   },
+   "mean": 115.0,
+   "n": 31,
+   "coverage": {
+    "p10": 0.5,
+    "p25": 0.5,
+    "p50": 0.5,
+    "p75": 0.5,
+    "p90": 0.5
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
+  "round.duration_s.time_ran_out@de_inferno": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 115.0,
+    "p10": 115.0,
+    "p25": 115.0,
+    "p50": 115.0,
+    "p75": 115.0,
+    "p90": 115.0,
+    "p95": 115.0
+   },
+   "mean": 115.0,
+   "n": 26,
+   "coverage": {
+    "p10": 0.5,
+    "p25": 0.5,
+    "p50": 0.5,
+    "p75": 0.5,
+    "p90": 0.5
+   },
+   "desc": "Duração do round (do fim do freeze time até o fim), em segundos."
+  },
   "round.duration_s.time_ran_out@de_mirage": {
    "kind": "quantiles",
    "q": {
@@ -2172,7 +2325,7 @@
     "p95": 115.0
    },
    "mean": 115.0,
-   "n": 11,
+   "n": 49,
    "coverage": {
     "p10": 0.5,
     "p25": 0.5,
@@ -2194,7 +2347,7 @@
     "p95": 115.0
    },
    "mean": 115.0,
-   "n": 3,
+   "n": 30,
    "coverage": {
     "p10": 0.5,
     "p25": 0.5,
@@ -2206,912 +2359,1033 @@
   },
   "round.end_reason.bomb_defused": {
    "kind": "prop",
-   "k": 67,
-   "n": 599,
-   "value": 0.11185,
+   "k": 354,
+   "n": 2931,
+   "value": 0.12078,
    "between": {
-    "matches": 28,
-    "sd": 0.07105
+    "matches": 142,
+    "sd": 0.06742
    },
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_ancient": {
    "kind": "prop",
-   "k": 7,
-   "n": 78,
-   "value": 0.08974,
+   "k": 52,
+   "n": 422,
+   "value": 0.12322,
+   "desc": "Fração de rounds que terminam por este motivo."
+  },
+  "round.end_reason.bomb_defused@de_anubis": {
+   "kind": "prop",
+   "k": 32,
+   "n": 203,
+   "value": 0.15764,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_cache": {
    "kind": "prop",
-   "k": 12,
-   "n": 107,
-   "value": 0.11215,
+   "k": 49,
+   "n": 391,
+   "value": 0.12532,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_dust2": {
    "kind": "prop",
-   "k": 6,
-   "n": 61,
-   "value": 0.09836,
+   "k": 75,
+   "n": 606,
+   "value": 0.12376,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_inferno": {
    "kind": "prop",
-   "k": 7,
-   "n": 99,
-   "value": 0.07071,
+   "k": 24,
+   "n": 259,
+   "value": 0.09266,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_mirage": {
    "kind": "prop",
-   "k": 24,
-   "n": 145,
-   "value": 0.16552,
+   "k": 74,
+   "n": 643,
+   "value": 0.11509,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_defused@de_nuke": {
    "kind": "prop",
-   "k": 8,
-   "n": 88,
-   "value": 0.09091,
+   "k": 48,
+   "n": 407,
+   "value": 0.11794,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded": {
    "kind": "prop",
-   "k": 138,
-   "n": 599,
-   "value": 0.23038,
+   "k": 553,
+   "n": 2931,
+   "value": 0.18867,
    "between": {
-    "matches": 28,
-    "sd": 0.10265
+    "matches": 142,
+    "sd": 0.09667
    },
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_ancient": {
    "kind": "prop",
-   "k": 15,
-   "n": 78,
-   "value": 0.19231,
+   "k": 84,
+   "n": 422,
+   "value": 0.19905,
+   "desc": "Fração de rounds que terminam por este motivo."
+  },
+  "round.end_reason.bomb_exploded@de_anubis": {
+   "kind": "prop",
+   "k": 42,
+   "n": 203,
+   "value": 0.2069,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_cache": {
    "kind": "prop",
-   "k": 20,
-   "n": 107,
-   "value": 0.18692,
+   "k": 77,
+   "n": 391,
+   "value": 0.19693,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_dust2": {
    "kind": "prop",
-   "k": 17,
-   "n": 61,
-   "value": 0.27869,
+   "k": 110,
+   "n": 606,
+   "value": 0.18152,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_inferno": {
    "kind": "prop",
-   "k": 33,
-   "n": 99,
-   "value": 0.33333,
+   "k": 62,
+   "n": 259,
+   "value": 0.23938,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_mirage": {
    "kind": "prop",
-   "k": 31,
-   "n": 145,
-   "value": 0.21379,
+   "k": 111,
+   "n": 643,
+   "value": 0.17263,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.bomb_exploded@de_nuke": {
    "kind": "prop",
-   "k": 18,
-   "n": 88,
-   "value": 0.20455,
+   "k": 67,
+   "n": 407,
+   "value": 0.16462,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed": {
    "kind": "prop",
-   "k": 136,
-   "n": 599,
-   "value": 0.22705,
+   "k": 783,
+   "n": 2931,
+   "value": 0.26714,
    "between": {
-    "matches": 28,
-    "sd": 0.07863
+    "matches": 142,
+    "sd": 0.11147
    },
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_ancient": {
    "kind": "prop",
-   "k": 25,
-   "n": 78,
-   "value": 0.32051,
+   "k": 132,
+   "n": 422,
+   "value": 0.3128,
+   "desc": "Fração de rounds que terminam por este motivo."
+  },
+  "round.end_reason.ct_killed@de_anubis": {
+   "kind": "prop",
+   "k": 55,
+   "n": 203,
+   "value": 0.27094,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_cache": {
    "kind": "prop",
-   "k": 28,
-   "n": 107,
-   "value": 0.26168,
+   "k": 92,
+   "n": 391,
+   "value": 0.23529,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_dust2": {
    "kind": "prop",
-   "k": 13,
-   "n": 61,
-   "value": 0.21311,
+   "k": 183,
+   "n": 606,
+   "value": 0.30198,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_inferno": {
    "kind": "prop",
-   "k": 18,
-   "n": 99,
-   "value": 0.18182,
+   "k": 54,
+   "n": 259,
+   "value": 0.20849,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_mirage": {
    "kind": "prop",
-   "k": 27,
-   "n": 145,
-   "value": 0.18621,
+   "k": 172,
+   "n": 643,
+   "value": 0.2675,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.ct_killed@de_nuke": {
    "kind": "prop",
-   "k": 20,
-   "n": 88,
-   "value": 0.22727,
+   "k": 95,
+   "n": 407,
+   "value": 0.23342,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed": {
    "kind": "prop",
-   "k": 214,
-   "n": 599,
-   "value": 0.35726,
+   "k": 1049,
+   "n": 2931,
+   "value": 0.3579,
    "between": {
-    "matches": 28,
-    "sd": 0.1103
+    "matches": 142,
+    "sd": 0.12078
    },
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_ancient": {
    "kind": "prop",
-   "k": 24,
-   "n": 78,
-   "value": 0.30769,
+   "k": 135,
+   "n": 422,
+   "value": 0.31991,
+   "desc": "Fração de rounds que terminam por este motivo."
+  },
+  "round.end_reason.t_killed@de_anubis": {
+   "kind": "prop",
+   "k": 61,
+   "n": 203,
+   "value": 0.30049,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_cache": {
    "kind": "prop",
-   "k": 40,
-   "n": 107,
-   "value": 0.37383,
+   "k": 149,
+   "n": 391,
+   "value": 0.38107,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_dust2": {
    "kind": "prop",
-   "k": 23,
-   "n": 61,
-   "value": 0.37705,
+   "k": 207,
+   "n": 606,
+   "value": 0.34158,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_inferno": {
    "kind": "prop",
-   "k": 28,
-   "n": 99,
-   "value": 0.28283,
+   "k": 93,
+   "n": 259,
+   "value": 0.35907,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_mirage": {
    "kind": "prop",
-   "k": 52,
-   "n": 145,
-   "value": 0.35862,
+   "k": 237,
+   "n": 643,
+   "value": 0.36858,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.t_killed@de_nuke": {
    "kind": "prop",
-   "k": 39,
-   "n": 88,
-   "value": 0.44318,
+   "k": 167,
+   "n": 407,
+   "value": 0.41032,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out": {
    "kind": "prop",
-   "k": 44,
-   "n": 599,
-   "value": 0.07346,
+   "k": 192,
+   "n": 2931,
+   "value": 0.06551,
    "between": {
-    "matches": 28,
-    "sd": 0.0621
+    "matches": 142,
+    "sd": 0.05466
    },
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_ancient": {
    "kind": "prop",
-   "k": 7,
-   "n": 78,
-   "value": 0.08974,
+   "k": 19,
+   "n": 422,
+   "value": 0.04502,
+   "desc": "Fração de rounds que terminam por este motivo."
+  },
+  "round.end_reason.time_ran_out@de_anubis": {
+   "kind": "prop",
+   "k": 13,
+   "n": 203,
+   "value": 0.06404,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_cache": {
    "kind": "prop",
-   "k": 7,
-   "n": 107,
-   "value": 0.06542,
+   "k": 24,
+   "n": 391,
+   "value": 0.06138,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_dust2": {
    "kind": "prop",
-   "k": 2,
-   "n": 61,
-   "value": 0.03279,
+   "k": 31,
+   "n": 606,
+   "value": 0.05116,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_inferno": {
    "kind": "prop",
-   "k": 13,
-   "n": 99,
-   "value": 0.13131,
+   "k": 26,
+   "n": 259,
+   "value": 0.10039,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_mirage": {
    "kind": "prop",
-   "k": 11,
-   "n": 145,
-   "value": 0.07586,
+   "k": 49,
+   "n": 643,
+   "value": 0.07621,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.end_reason.time_ran_out@de_nuke": {
    "kind": "prop",
-   "k": 3,
-   "n": 88,
-   "value": 0.03409,
+   "k": 30,
+   "n": 407,
+   "value": 0.07371,
    "desc": "Fração de rounds que terminam por este motivo."
   },
   "round.first_kill_ct_share": {
    "kind": "prop",
-   "k": 349,
-   "n": 596,
-   "value": 0.58557,
+   "k": 1758,
+   "n": 2926,
+   "value": 0.60082,
    "between": {
-    "matches": 28,
-    "sd": 0.09704
+    "matches": 142,
+    "sd": 0.12763
    },
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_ancient": {
    "kind": "prop",
-   "k": 45,
-   "n": 78,
-   "value": 0.57692,
+   "k": 237,
+   "n": 422,
+   "value": 0.56161,
+   "desc": "Fração dos primeiros kills feitos pelo CT."
+  },
+  "round.first_kill_ct_share@de_anubis": {
+   "kind": "prop",
+   "k": 123,
+   "n": 203,
+   "value": 0.60591,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_cache": {
    "kind": "prop",
-   "k": 61,
-   "n": 107,
-   "value": 0.57009,
+   "k": 237,
+   "n": 390,
+   "value": 0.60769,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_dust2": {
    "kind": "prop",
-   "k": 38,
-   "n": 61,
-   "value": 0.62295,
+   "k": 356,
+   "n": 605,
+   "value": 0.58843,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_inferno": {
    "kind": "prop",
-   "k": 58,
-   "n": 99,
-   "value": 0.58586,
+   "k": 165,
+   "n": 259,
+   "value": 0.63707,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_mirage": {
    "kind": "prop",
-   "k": 82,
-   "n": 144,
-   "value": 0.56944,
+   "k": 390,
+   "n": 642,
+   "value": 0.60748,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_ct_share@de_nuke": {
    "kind": "prop",
-   "k": 53,
-   "n": 86,
-   "value": 0.61628,
+   "k": 250,
+   "n": 405,
+   "value": 0.61728,
    "desc": "Fração dos primeiros kills feitos pelo CT."
   },
   "round.first_kill_time_s": {
    "kind": "quantiles",
    "q": {
-    "p5": 11.53125,
-    "p10": 13.08594,
-    "p25": 18.90625,
-    "p50": 29.17188,
-    "p75": 49.58203,
-    "p90": 74.48438,
-    "p95": 86.23438
+    "p5": 11.14062,
+    "p10": 12.96094,
+    "p25": 19.11328,
+    "p50": 31.82812,
+    "p75": 54.10938,
+    "p90": 74.10938,
+    "p95": 83.85547
    },
-   "mean": 36.76542,
-   "n": 596,
+   "mean": 38.19795,
+   "n": 2926,
    "between": {
-    "matches": 28,
+    "matches": 142,
     "sd_cov": {
-     "p10": 0.05753,
-     "p25": 0.08803,
-     "p50": 0.119,
-     "p75": 0.10789,
-     "p90": 0.06705
+     "p10": 0.06895,
+     "p25": 0.10609,
+     "p50": 0.12721,
+     "p75": 0.11156,
+     "p90": 0.06945
     }
    },
    "coverage": {
-    "p10": 0.10067,
-    "p25": 0.25,
+    "p10": 0.10014,
+    "p25": 0.25017,
     "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89933
+    "p75": 0.74983,
+    "p90": 0.89986
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_ancient": {
    "kind": "quantiles",
    "q": {
-    "p5": 11.80156,
-    "p10": 12.7125,
-    "p25": 17.18359,
-    "p50": 25.82812,
-    "p75": 37.07422,
-    "p90": 56.01562,
-    "p95": 64.51172
+    "p5": 11.00625,
+    "p10": 12.40625,
+    "p25": 16.91016,
+    "p50": 26.27344,
+    "p75": 43.65625,
+    "p90": 65.99375,
+    "p95": 80.97734
    },
-   "mean": 30.38201,
-   "n": 78,
+   "mean": 33.3352,
+   "n": 422,
    "coverage": {
-    "p10": 0.10256,
-    "p25": 0.25641,
+    "p10": 0.1019,
+    "p25": 0.25118,
     "p50": 0.5,
-    "p75": 0.74359,
-    "p90": 0.89744
+    "p75": 0.74882,
+    "p90": 0.8981
+   },
+   "desc": "Tempo do primeiro kill do round."
+  },
+  "round.first_kill_time_s@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 12.79688,
+    "p10": 14.95,
+    "p25": 22.49219,
+    "p50": 40.15625,
+    "p75": 58.71094,
+    "p90": 73.93438,
+    "p95": 83.81875
+   },
+   "mean": 42.72722,
+   "n": 203,
+   "coverage": {
+    "p10": 0.10345,
+    "p25": 0.25123,
+    "p50": 0.5,
+    "p75": 0.74877,
+    "p90": 0.89655
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_cache": {
    "kind": "quantiles",
    "q": {
-    "p5": 12.2,
-    "p10": 14.80938,
-    "p25": 20.07812,
-    "p50": 28.0625,
-    "p75": 44.21875,
-    "p90": 68.44375,
-    "p95": 80.93125
+    "p5": 11.94453,
+    "p10": 14.15312,
+    "p25": 19.48438,
+    "p50": 31.27344,
+    "p75": 54.98828,
+    "p90": 72.81094,
+    "p95": 82.73281
    },
-   "mean": 35.12719,
-   "n": 107,
+   "mean": 38.44471,
+   "n": 390,
    "coverage": {
-    "p10": 0.1028,
-    "p25": 0.25234,
+    "p10": 0.1,
+    "p25": 0.25128,
     "p50": 0.5,
-    "p75": 0.74766,
-    "p90": 0.8972
+    "p75": 0.74872,
+    "p90": 0.9
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_dust2": {
    "kind": "quantiles",
    "q": {
-    "p5": 7.78125,
-    "p10": 9.96875,
-    "p25": 15.42188,
-    "p50": 29.40625,
-    "p75": 62.15625,
-    "p90": 86.75,
-    "p95": 91.64062
+    "p5": 8.89375,
+    "p10": 11.49375,
+    "p25": 17.40625,
+    "p50": 31.8125,
+    "p75": 56.42188,
+    "p90": 78.38125,
+    "p95": 86.0
    },
-   "mean": 39.85605,
-   "n": 61,
+   "mean": 39.05307,
+   "n": 605,
    "coverage": {
-    "p10": 0.10656,
-    "p25": 0.2541,
+    "p10": 0.10083,
+    "p25": 0.25041,
     "p50": 0.5,
-    "p75": 0.7459,
-    "p90": 0.89344
+    "p75": 0.74959,
+    "p90": 0.89917
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_inferno": {
    "kind": "quantiles",
    "q": {
-    "p5": 12.10469,
-    "p10": 14.89687,
-    "p25": 20.59375,
-    "p50": 34.82812,
-    "p75": 62.125,
+    "p5": 12.18125,
+    "p10": 14.5375,
+    "p25": 21.28125,
+    "p50": 36.46875,
+    "p75": 57.05469,
     "p90": 82.46563,
-    "p95": 93.62187
+    "p95": 91.42031
    },
-   "mean": 42.5726,
-   "n": 99,
+   "mean": 42.07034,
+   "n": 259,
    "coverage": {
-    "p10": 0.10101,
-    "p25": 0.25253,
+    "p10": 0.10039,
+    "p25": 0.25097,
     "p50": 0.5,
-    "p75": 0.74747,
-    "p90": 0.89899
+    "p75": 0.74903,
+    "p90": 0.89961
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_mirage": {
    "kind": "quantiles",
    "q": {
-    "p5": 9.81953,
-    "p10": 12.79375,
-    "p25": 19.90234,
-    "p50": 31.74219,
-    "p75": 51.71484,
-    "p90": 76.01875,
-    "p95": 87.89844
+    "p5": 10.59609,
+    "p10": 13.09844,
+    "p25": 19.6875,
+    "p50": 31.24219,
+    "p75": 57.44531,
+    "p90": 73.48125,
+    "p95": 80.82266
    },
-   "mean": 38.37695,
-   "n": 144,
+   "mean": 38.7012,
+   "n": 642,
    "coverage": {
-    "p10": 0.10417,
-    "p25": 0.25,
+    "p10": 0.10125,
+    "p25": 0.25078,
     "p50": 0.5,
-    "p75": 0.75,
-    "p90": 0.89583
+    "p75": 0.74922,
+    "p90": 0.89875
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_time_s@de_nuke": {
    "kind": "quantiles",
    "q": {
-    "p5": 12.52344,
-    "p10": 13.125,
-    "p25": 15.23047,
-    "p50": 27.60938,
-    "p75": 45.14844,
-    "p90": 56.79688,
-    "p95": 72.57031
+    "p5": 12.17812,
+    "p10": 13.25313,
+    "p25": 19.75,
+    "p50": 32.5,
+    "p75": 47.40625,
+    "p90": 65.66875,
+    "p95": 78.32187
    },
-   "mean": 32.83939,
-   "n": 86,
+   "mean": 36.2054,
+   "n": 405,
    "coverage": {
-    "p10": 0.10465,
-    "p25": 0.25581,
+    "p10": 0.10123,
+    "p25": 0.25062,
     "p50": 0.5,
-    "p75": 0.74419,
-    "p90": 0.89535
+    "p75": 0.75062,
+    "p90": 0.89877
    },
    "desc": "Tempo do primeiro kill do round."
   },
   "round.first_kill_wins_round": {
    "kind": "prop",
-   "k": 442,
-   "n": 596,
-   "value": 0.74161,
+   "k": 2137,
+   "n": 2926,
+   "value": 0.73035,
    "between": {
-    "matches": 28,
-    "sd": 0.10714
+    "matches": 142,
+    "sd": 0.10403
    },
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_ancient": {
    "kind": "prop",
-   "k": 53,
-   "n": 78,
-   "value": 0.67949,
+   "k": 311,
+   "n": 422,
+   "value": 0.73697,
+   "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
+  },
+  "round.first_kill_wins_round@de_anubis": {
+   "kind": "prop",
+   "k": 156,
+   "n": 203,
+   "value": 0.76847,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_cache": {
    "kind": "prop",
-   "k": 81,
-   "n": 107,
-   "value": 0.75701,
+   "k": 287,
+   "n": 390,
+   "value": 0.7359,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_dust2": {
    "kind": "prop",
-   "k": 46,
-   "n": 61,
-   "value": 0.7541,
+   "k": 438,
+   "n": 605,
+   "value": 0.72397,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_inferno": {
    "kind": "prop",
-   "k": 71,
-   "n": 99,
-   "value": 0.71717,
+   "k": 181,
+   "n": 259,
+   "value": 0.69884,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_mirage": {
    "kind": "prop",
-   "k": 105,
-   "n": 144,
-   "value": 0.72917,
+   "k": 472,
+   "n": 642,
+   "value": 0.7352,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.first_kill_wins_round@de_nuke": {
    "kind": "prop",
-   "k": 69,
-   "n": 86,
-   "value": 0.80233,
+   "k": 292,
+   "n": 405,
+   "value": 0.72099,
    "desc": "Fração de rounds vencidos por quem fez o primeiro kill."
   },
   "round.kills_per_round": {
    "kind": "mean",
-   "mean": 6.24708,
-   "std": 1.79624,
-   "n": 599,
+   "mean": 6.42989,
+   "std": 1.6758,
+   "n": 2931,
    "between": {
-    "matches": 28,
-    "sd": 0.3423
+    "matches": 142,
+    "sd": 0.36056
    },
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_ancient": {
    "kind": "mean",
-   "mean": 6.25641,
-   "std": 1.6391,
-   "n": 78,
+   "mean": 6.45024,
+   "std": 1.67874,
+   "n": 422,
+   "desc": "Kills em combate por round."
+  },
+  "round.kills_per_round@de_anubis": {
+   "kind": "mean",
+   "mean": 6.51724,
+   "std": 1.62086,
+   "n": 203,
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_cache": {
    "kind": "mean",
-   "mean": 6.50467,
-   "std": 1.67317,
-   "n": 107,
+   "mean": 6.34527,
+   "std": 1.75147,
+   "n": 391,
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_dust2": {
    "kind": "mean",
-   "mean": 6.22951,
-   "std": 1.48765,
-   "n": 61,
+   "mean": 6.42574,
+   "std": 1.6435,
+   "n": 606,
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_inferno": {
    "kind": "mean",
-   "mean": 6.09091,
-   "std": 1.88491,
-   "n": 99,
+   "mean": 6.19305,
+   "std": 1.82186,
+   "n": 259,
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_mirage": {
    "kind": "mean",
-   "mean": 6.14483,
-   "std": 1.9184,
-   "n": 145,
+   "mean": 6.51788,
+   "std": 1.59465,
+   "n": 643,
    "desc": "Kills em combate por round."
   },
   "round.kills_per_round@de_nuke": {
    "kind": "mean",
-   "mean": 6.29545,
-   "std": 1.89469,
-   "n": 88,
+   "mean": 6.46437,
+   "std": 1.69557,
+   "n": 407,
    "desc": "Kills em combate por round."
   },
   "round.plant_rate": {
    "kind": "prop",
-   "k": 314,
-   "n": 599,
-   "value": 0.52421,
+   "k": 1458,
+   "n": 2931,
+   "value": 0.49744,
    "between": {
-    "matches": 28,
-    "sd": 0.10105
+    "matches": 142,
+    "sd": 0.1165
    },
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_ancient": {
    "kind": "prop",
-   "k": 43,
-   "n": 78,
-   "value": 0.55128,
+   "k": 231,
+   "n": 422,
+   "value": 0.54739,
+   "desc": "Fração de rounds em que a bomba é plantada."
+  },
+  "round.plant_rate@de_anubis": {
+   "kind": "prop",
+   "k": 115,
+   "n": 203,
+   "value": 0.5665,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_cache": {
    "kind": "prop",
-   "k": 53,
-   "n": 107,
-   "value": 0.49533,
+   "k": 195,
+   "n": 391,
+   "value": 0.49872,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_dust2": {
    "kind": "prop",
-   "k": 30,
-   "n": 61,
-   "value": 0.4918,
+   "k": 309,
+   "n": 606,
+   "value": 0.5099,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_inferno": {
    "kind": "prop",
-   "k": 58,
-   "n": 99,
-   "value": 0.58586,
+   "k": 133,
+   "n": 259,
+   "value": 0.51351,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_mirage": {
    "kind": "prop",
-   "k": 77,
-   "n": 145,
-   "value": 0.53103,
+   "k": 298,
+   "n": 643,
+   "value": 0.46345,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_rate@de_nuke": {
    "kind": "prop",
-   "k": 42,
-   "n": 88,
-   "value": 0.47727,
+   "k": 177,
+   "n": 407,
+   "value": 0.43489,
    "desc": "Fração de rounds em que a bomba é plantada."
   },
   "round.plant_site.A@de_ancient": {
    "kind": "prop",
-   "k": 25,
-   "n": 43,
-   "value": 0.5814,
+   "k": 117,
+   "n": 231,
+   "value": 0.50649,
+   "desc": "Entre os plants, fração no bombsite A."
+  },
+  "round.plant_site.A@de_anubis": {
+   "kind": "prop",
+   "k": 48,
+   "n": 115,
+   "value": 0.41739,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_site.A@de_cache": {
    "kind": "prop",
-   "k": 34,
-   "n": 53,
-   "value": 0.64151,
+   "k": 108,
+   "n": 195,
+   "value": 0.55385,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_site.A@de_dust2": {
    "kind": "prop",
-   "k": 19,
-   "n": 30,
-   "value": 0.63333,
+   "k": 168,
+   "n": 309,
+   "value": 0.54369,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_site.A@de_inferno": {
    "kind": "prop",
-   "k": 29,
-   "n": 58,
-   "value": 0.5,
+   "k": 71,
+   "n": 133,
+   "value": 0.53383,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_site.A@de_mirage": {
    "kind": "prop",
-   "k": 39,
-   "n": 77,
-   "value": 0.50649,
+   "k": 177,
+   "n": 298,
+   "value": 0.59396,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_site.A@de_nuke": {
    "kind": "prop",
-   "k": 21,
-   "n": 42,
-   "value": 0.5,
+   "k": 73,
+   "n": 177,
+   "value": 0.41243,
    "desc": "Entre os plants, fração no bombsite A."
   },
   "round.plant_time_s": {
    "kind": "quantiles",
    "q": {
-    "p5": 34.1,
-    "p10": 37.77813,
-    "p25": 49.47266,
-    "p50": 76.44531,
-    "p75": 97.04688,
-    "p90": 105.65,
-    "p95": 111.00547
+    "p5": 34.12813,
+    "p10": 38.89062,
+    "p25": 53.03125,
+    "p50": 78.04688,
+    "p75": 96.70312,
+    "p90": 106.69844,
+    "p95": 110.28828
    },
-   "mean": 73.36132,
-   "n": 314,
+   "mean": 74.94378,
+   "n": 1458,
    "between": {
-    "matches": 28,
+    "matches": 139,
     "sd_cov": {
-     "p10": 0.1033,
-     "p25": 0.12593,
-     "p50": 0.15561,
-     "p75": 0.15429,
-     "p90": 0.08027
+     "p10": 0.10733,
+     "p25": 0.144,
+     "p50": 0.16767,
+     "p75": 0.15925,
+     "p90": 0.09492
     }
    },
    "coverage": {
-    "p10": 0.10191,
-    "p25": 0.25159,
-    "p50": 0.5,
-    "p75": 0.74841,
-    "p90": 0.89809
+    "p10": 0.10014,
+    "p25": 0.25034,
+    "p50": 0.49966,
+    "p75": 0.74966,
+    "p90": 0.89986
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_ancient": {
    "kind": "quantiles",
    "q": {
-    "p5": 30.77969,
-    "p10": 33.62188,
-    "p25": 44.75,
-    "p50": 66.8125,
-    "p75": 88.89062,
-    "p90": 94.34063,
-    "p95": 103.49375
+    "p5": 29.07812,
+    "p10": 33.125,
+    "p25": 43.65625,
+    "p50": 69.57812,
+    "p75": 92.19531,
+    "p90": 106.125,
+    "p95": 108.82031
    },
-   "mean": 65.54615,
-   "n": 43,
+   "mean": 68.43933,
+   "n": 231,
    "coverage": {
-    "p10": 0.11628,
-    "p25": 0.25581,
+    "p10": 0.10173,
+    "p25": 0.25108,
     "p50": 0.5,
-    "p75": 0.74419,
-    "p90": 0.88372
+    "p75": 0.74892,
+    "p90": 0.89827
+   },
+   "desc": "Tempo de round em que a bomba é plantada."
+  },
+  "round.plant_time_s@de_anubis": {
+   "kind": "quantiles",
+   "q": {
+    "p5": 38.15,
+    "p10": 46.03125,
+    "p25": 59.67188,
+    "p50": 78.82812,
+    "p75": 95.00781,
+    "p90": 105.90313,
+    "p95": 110.12344
+   },
+   "mean": 77.46019,
+   "n": 115,
+   "coverage": {
+    "p10": 0.10435,
+    "p25": 0.25217,
+    "p50": 0.5,
+    "p75": 0.74783,
+    "p90": 0.89565
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_cache": {
    "kind": "quantiles",
    "q": {
-    "p5": 34.78125,
-    "p10": 37.3,
-    "p25": 47.48438,
-    "p50": 68.32812,
-    "p75": 93.10938,
-    "p90": 103.625,
-    "p95": 109.075
+    "p5": 35.99688,
+    "p10": 39.7125,
+    "p25": 54.64062,
+    "p50": 74.8125,
+    "p75": 96.39844,
+    "p90": 106.35,
+    "p95": 110.57344
    },
-   "mean": 69.96344,
-   "n": 53,
+   "mean": 74.68662,
+   "n": 195,
    "coverage": {
-    "p10": 0.11321,
-    "p25": 0.25472,
+    "p10": 0.10256,
+    "p25": 0.25128,
     "p50": 0.5,
-    "p75": 0.74528,
-    "p90": 0.88679
+    "p75": 0.74872,
+    "p90": 0.89744
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_dust2": {
    "kind": "quantiles",
    "q": {
-    "p5": 34.725,
-    "p10": 36.7,
-    "p25": 48.88281,
-    "p50": 86.55469,
-    "p75": 98.52344,
-    "p90": 107.53125,
-    "p95": 111.67188
+    "p5": 37.1875,
+    "p10": 44.43438,
+    "p25": 60.10938,
+    "p50": 81.42188,
+    "p75": 97.98438,
+    "p90": 108.42812,
+    "p95": 111.4125
    },
-   "mean": 77.55729,
-   "n": 30,
+   "mean": 78.60073,
+   "n": 309,
    "coverage": {
-    "p10": 0.1,
-    "p25": 0.26667,
+    "p10": 0.10032,
+    "p25": 0.25081,
     "p50": 0.5,
-    "p75": 0.73333,
-    "p90": 0.9
+    "p75": 0.74919,
+    "p90": 0.89968
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_inferno": {
    "kind": "quantiles",
    "q": {
-    "p5": 42.63594,
-    "p10": 45.09063,
-    "p25": 58.76562,
-    "p50": 84.46094,
-    "p75": 103.43359,
-    "p90": 108.19375,
-    "p95": 112.41719
+    "p5": 43.05313,
+    "p10": 46.17188,
+    "p25": 58.64062,
+    "p50": 83.42188,
+    "p75": 102.60938,
+    "p90": 109.7375,
+    "p95": 111.55625
    },
-   "mean": 80.74677,
-   "n": 58,
+   "mean": 80.46276,
+   "n": 133,
    "coverage": {
-    "p10": 0.10345,
-    "p25": 0.25862,
+    "p10": 0.10526,
+    "p25": 0.25188,
     "p50": 0.5,
-    "p75": 0.74138,
-    "p90": 0.89655
+    "p75": 0.74812,
+    "p90": 0.89474
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_mirage": {
    "kind": "quantiles",
    "q": {
-    "p5": 35.01562,
-    "p10": 39.45,
-    "p25": 47.79688,
-    "p50": 77.40625,
-    "p75": 99.71875,
-    "p90": 105.93438,
-    "p95": 111.10313
+    "p5": 32.77813,
+    "p10": 36.54062,
+    "p25": 49.52734,
+    "p50": 78.96875,
+    "p75": 95.27344,
+    "p90": 105.12344,
+    "p95": 109.2875
    },
-   "mean": 73.6595,
-   "n": 77,
+   "mean": 73.46545,
+   "n": 298,
    "coverage": {
-    "p10": 0.1039,
-    "p25": 0.25325,
+    "p10": 0.10067,
+    "p25": 0.25168,
     "p50": 0.5,
-    "p75": 0.74675,
-    "p90": 0.8961
+    "p75": 0.74832,
+    "p90": 0.89933
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.plant_time_s@de_nuke": {
    "kind": "quantiles",
    "q": {
-    "p5": 34.35,
-    "p10": 37.85938,
-    "p25": 51.60938,
-    "p50": 76.05469,
-    "p75": 92.4375,
-    "p90": 100.06406,
-    "p95": 105.34844
+    "p5": 32.14375,
+    "p10": 39.5,
+    "p25": 52.59375,
+    "p50": 80.0625,
+    "p75": 96.70312,
+    "p90": 105.28125,
+    "p95": 108.3375
    },
-   "mean": 71.53795,
-   "n": 42,
+   "mean": 74.03875,
+   "n": 177,
    "coverage": {
-    "p10": 0.11905,
-    "p25": 0.2619,
+    "p10": 0.10169,
+    "p25": 0.25141,
     "p50": 0.5,
-    "p75": 0.7381,
-    "p90": 0.88095
+    "p75": 0.74859,
+    "p90": 0.89831
    },
    "desc": "Tempo de round em que a bomba é plantada."
   },
   "round.win_rate.CT": {
    "kind": "prop",
-   "k": 325,
-   "n": 599,
-   "value": 0.54257,
+   "k": 1595,
+   "n": 2931,
+   "value": 0.54418,
    "between": {
-    "matches": 28,
-    "sd": 0.11733
+    "matches": 142,
+    "sd": 0.13588
    },
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_ancient": {
    "kind": "prop",
-   "k": 38,
-   "n": 78,
-   "value": 0.48718,
+   "k": 206,
+   "n": 422,
+   "value": 0.48815,
+   "desc": "Fração de rounds vencidos pelo CT."
+  },
+  "round.win_rate.CT@de_anubis": {
+   "kind": "prop",
+   "k": 106,
+   "n": 203,
+   "value": 0.52217,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_cache": {
    "kind": "prop",
-   "k": 59,
-   "n": 107,
-   "value": 0.5514,
+   "k": 222,
+   "n": 391,
+   "value": 0.56777,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_dust2": {
    "kind": "prop",
-   "k": 31,
-   "n": 61,
-   "value": 0.5082,
+   "k": 313,
+   "n": 606,
+   "value": 0.5165,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_inferno": {
    "kind": "prop",
-   "k": 48,
-   "n": 99,
-   "value": 0.48485,
+   "k": 143,
+   "n": 259,
+   "value": 0.55212,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_mirage": {
    "kind": "prop",
-   "k": 87,
-   "n": 145,
-   "value": 0.6,
+   "k": 360,
+   "n": 643,
+   "value": 0.55988,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "round.win_rate.CT@de_nuke": {
    "kind": "prop",
-   "k": 50,
-   "n": 88,
-   "value": 0.56818,
+   "k": 245,
+   "n": 407,
+   "value": 0.60197,
    "desc": "Fração de rounds vencidos pelo CT."
   },
   "tactic.commit_A_share": {
    "kind": "prop",
-   "k": 161,
-   "n": 274,
-   "value": 0.58759,
+   "k": 658,
+   "n": 1244,
+   "value": 0.52894,
    "between": {
-    "matches": 28,
-    "sd": 0.18677
+    "matches": 131,
+    "sd": 0.24602
    },
    "desc": "Entre os mesmos rounds, fração em que o time estava comprometido com a zona A aos 30 s."
   },
@@ -3123,849 +3397,933 @@
     "p25": 2.0,
     "p50": 4.0,
     "p75": 9.0,
-    "p90": 20.0,
-    "p95": 30.5
+    "p90": 19.5,
+    "p95": 30.0
    },
-   "mean": 8.06862,
-   "n": 54037,
+   "mean": 8.02422,
+   "n": 264340,
    "between": {
-    "matches": 28,
+    "matches": 143,
     "sd_cov": {
-     "p10": 0.0241,
-     "p25": 0.05386,
-     "p50": 0.08678,
-     "p75": 0.04826,
-     "p90": 0.02665
+     "p10": 0.02409,
+     "p25": 0.04634,
+     "p50": 0.07207,
+     "p75": 0.03967,
+     "p90": 0.022
     }
    },
    "coverage": {
-    "p10": 0.0765,
-    "p25": 0.22237,
-    "p50": 0.49148,
-    "p75": 0.75487,
-    "p90": 0.90003
+    "p10": 0.08021,
+    "p25": 0.22301,
+    "p50": 0.49055,
+    "p75": 0.75513,
+    "p90": 0.89844
    },
    "desc": "Tempo contínuo que um jogador fica numa mesma região (amostras a 2 Hz)."
   },
   "tactic.first_contact_s": {
    "kind": "quantiles",
    "q": {
-    "p5": 6.55781,
-    "p10": 7.1875,
-    "p25": 9.75,
-    "p50": 14.4375,
-    "p75": 25.77344,
-    "p90": 41.8375,
-    "p95": 52.71875
+    "p5": 6.6875,
+    "p10": 7.78125,
+    "p25": 10.59375,
+    "p50": 16.3125,
+    "p75": 29.66406,
+    "p90": 48.59375,
+    "p95": 61.97656
    },
-   "mean": 20.59518,
-   "n": 599,
+   "mean": 22.96265,
+   "n": 2931,
    "between": {
-    "matches": 28,
+    "matches": 142,
     "sd_cov": {
-     "p10": 0.13972,
-     "p25": 0.14771,
-     "p50": 0.09327,
-     "p75": 0.07354,
-     "p90": 0.06413
+     "p10": 0.1135,
+     "p25": 0.14488,
+     "p50": 0.13565,
+     "p75": 0.11619,
+     "p90": 0.06892
     }
    },
    "coverage": {
-    "p10": 0.10017,
-    "p25": 0.25042,
-    "p50": 0.5,
-    "p75": 0.74958,
-    "p90": 0.89983
+    "p10": 0.09928,
+    "p25": 0.25043,
+    "p50": 0.49983,
+    "p75": 0.74991,
+    "p90": 0.89986
    },
    "desc": "Tempo do primeiro dano entre lados opostos no round."
   },
   "tactic.place_changes_per_player": {
    "kind": "mean",
-   "mean": 8.0212,
-   "std": 4.75853,
-   "n": 5990,
+   "mean": 8.01876,
+   "std": 4.82844,
+   "n": 29310,
    "between": {
-    "matches": 28,
-    "sd": 1.51064
+    "matches": 143,
+    "sd": 1.50691
    },
    "desc": "Trocas de região por jogador por round (amostras a 2 Hz)."
   },
   "tactic.site_switch_rate": {
    "kind": "prop",
-   "k": 54,
-   "n": 274,
-   "value": 0.19708,
+   "k": 317,
+   "n": 1244,
+   "value": 0.25482,
    "between": {
-    "matches": 28,
-    "sd": 0.16044
+    "matches": 131,
+    "sd": 0.17552
    },
    "desc": "Entre os rounds com plant depois de 30 s, fração em que o time plantou no bombsite oposto à zona onde havia mais Ts aos 30 s."
   },
   "tactic.zone_share.CT.20s.A": {
    "kind": "mean",
-   "mean": 0.41158,
-   "std": 0.18925,
-   "n": 596,
+   "mean": 0.45219,
+   "std": 0.18271,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.0763
+    "matches": 142,
+    "sd": 0.0693
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.3235,
-   "std": 0.19114,
-   "n": 78,
+   "mean": 0.44131,
+   "std": 0.19688,
+   "n": 422,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.31658,
+   "std": 0.17054,
+   "n": 203,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.34953,
-   "std": 0.17585,
-   "n": 107,
+   "mean": 0.40072,
+   "std": 0.175,
+   "n": 391,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.44344,
-   "std": 0.17539,
-   "n": 61,
+   "mean": 0.49194,
+   "std": 0.16525,
+   "n": 604,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.51429,
-   "std": 0.1568,
-   "n": 98,
+   "mean": 0.50239,
+   "std": 0.141,
+   "n": 258,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.43115,
-   "std": 0.16756,
-   "n": 145,
+   "mean": 0.42809,
+   "std": 0.1737,
+   "n": 642,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.42965,
-   "std": 0.20268,
-   "n": 86,
+   "mean": 0.52849,
+   "std": 0.18221,
+   "n": 403,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B": {
    "kind": "mean",
-   "mean": 0.38409,
-   "std": 0.17219,
-   "n": 596,
+   "mean": 0.40801,
+   "std": 0.17234,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.06779
+    "matches": 142,
+    "sd": 0.07968
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.50385,
-   "std": 0.18373,
-   "n": 78,
+   "mean": 0.51434,
+   "std": 0.18214,
+   "n": 422,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.20s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.46026,
+   "std": 0.18785,
+   "n": 203,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.36511,
-   "std": 0.15268,
-   "n": 107,
+   "mean": 0.38018,
+   "std": 0.14757,
+   "n": 391,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.4082,
-   "std": 0.16903,
-   "n": 61,
+   "mean": 0.43979,
+   "std": 0.16095,
+   "n": 604,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.42857,
-   "std": 0.16118,
-   "n": 98,
+   "mean": 0.44916,
+   "std": 0.13944,
+   "n": 258,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.33,
-   "std": 0.14677,
-   "n": 145,
+   "mean": 0.36937,
+   "std": 0.14965,
+   "n": 642,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.31686,
-   "std": 0.17331,
-   "n": 86,
+   "mean": 0.28495,
+   "std": 0.14531,
+   "n": 403,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.Mid": {
    "kind": "mean",
-   "mean": 0.14899,
-   "std": 0.17725,
-   "n": 596,
+   "mean": 0.09172,
+   "std": 0.14987,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.1075
+    "matches": 142,
+    "sd": 0.09365
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.20s.Spawn": {
    "kind": "mean",
-   "mean": 0.05534,
-   "std": 0.11198,
-   "n": 596,
+   "mean": 0.04808,
+   "std": 0.10369,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.05429
+    "matches": 142,
+    "sd": 0.04938
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A": {
    "kind": "mean",
-   "mean": 0.38805,
-   "std": 0.22309,
-   "n": 569,
+   "mean": 0.43279,
+   "std": 0.23513,
+   "n": 2782,
    "between": {
-    "matches": 28,
-    "sd": 0.08555
+    "matches": 142,
+    "sd": 0.08202
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.31096,
-   "std": 0.22325,
-   "n": 76,
+   "mean": 0.37976,
+   "std": 0.25133,
+   "n": 401,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.32117,
+   "std": 0.2109,
+   "n": 196,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.37761,
-   "std": 0.22063,
-   "n": 102,
+   "mean": 0.42613,
+   "std": 0.2323,
+   "n": 375,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.40517,
-   "std": 0.22795,
-   "n": 58,
+   "mean": 0.47761,
+   "std": 0.21564,
+   "n": 577,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.52049,
-   "std": 0.19624,
-   "n": 96,
+   "mean": 0.53163,
+   "std": 0.19716,
+   "n": 254,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.35438,
-   "std": 0.2135,
-   "n": 137,
+   "mean": 0.38105,
+   "std": 0.23171,
+   "n": 605,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.40167,
-   "std": 0.20875,
-   "n": 80,
+   "mean": 0.50227,
+   "std": 0.23111,
+   "n": 374,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B": {
    "kind": "mean",
-   "mean": 0.37376,
-   "std": 0.23068,
-   "n": 569,
+   "mean": 0.38817,
+   "std": 0.23402,
+   "n": 2782,
    "between": {
-    "matches": 28,
-    "sd": 0.06857
+    "matches": 142,
+    "sd": 0.08591
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.47741,
-   "std": 0.29053,
-   "n": 76,
+   "mean": 0.5185,
+   "std": 0.2806,
+   "n": 401,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.40s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.41794,
+   "std": 0.20714,
+   "n": 196,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.33987,
-   "std": 0.22194,
-   "n": 102,
+   "mean": 0.358,
+   "std": 0.21826,
+   "n": 375,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.40948,
-   "std": 0.20025,
-   "n": 58,
+   "mean": 0.41782,
+   "std": 0.20822,
+   "n": 577,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.39427,
-   "std": 0.2112,
-   "n": 96,
+   "mean": 0.39003,
+   "std": 0.20286,
+   "n": 254,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.31715,
-   "std": 0.22321,
-   "n": 137,
+   "mean": 0.31325,
+   "std": 0.22194,
+   "n": 605,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.34437,
-   "std": 0.19951,
-   "n": 80,
+   "mean": 0.3373,
+   "std": 0.21531,
+   "n": 374,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.Mid": {
    "kind": "mean",
-   "mean": 0.14666,
-   "std": 0.19671,
-   "n": 569,
+   "mean": 0.09251,
+   "std": 0.17602,
+   "n": 2782,
    "between": {
-    "matches": 28,
-    "sd": 0.10377
+    "matches": 142,
+    "sd": 0.09352
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.40s.Spawn": {
    "kind": "mean",
-   "mean": 0.09153,
-   "std": 0.17699,
-   "n": 569,
+   "mean": 0.08652,
+   "std": 0.1738,
+   "n": 2782,
    "between": {
-    "matches": 28,
-    "sd": 0.09164
+    "matches": 142,
+    "sd": 0.08358
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A": {
    "kind": "mean",
-   "mean": 0.40376,
-   "std": 0.29143,
-   "n": 496,
+   "mean": 0.42664,
+   "std": 0.28599,
+   "n": 2422,
    "between": {
-    "matches": 28,
-    "sd": 0.0946
+    "matches": 141,
+    "sd": 0.08704
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.32258,
-   "std": 0.28424,
-   "n": 62,
+   "mean": 0.4051,
+   "std": 0.30562,
+   "n": 317,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.29171,
+   "std": 0.251,
+   "n": 177,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.40294,
-   "std": 0.31351,
-   "n": 85,
+   "mean": 0.42464,
+   "std": 0.29277,
+   "n": 326,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.44767,
-   "std": 0.28021,
-   "n": 50,
+   "mean": 0.47408,
+   "std": 0.26941,
+   "n": 515,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.52181,
-   "std": 0.26263,
-   "n": 94,
+   "mean": 0.51537,
+   "std": 0.25579,
+   "n": 231,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.33705,
-   "std": 0.27182,
-   "n": 121,
+   "mean": 0.37089,
+   "std": 0.27461,
+   "n": 529,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.43667,
-   "std": 0.29567,
-   "n": 70,
+   "mean": 0.47533,
+   "std": 0.29627,
+   "n": 327,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B": {
    "kind": "mean",
-   "mean": 0.36613,
-   "std": 0.27805,
-   "n": 496,
+   "mean": 0.38741,
+   "std": 0.28185,
+   "n": 2422,
    "between": {
-    "matches": 28,
-    "sd": 0.08039
+    "matches": 141,
+    "sd": 0.08803
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.46398,
-   "std": 0.35629,
-   "n": 62,
+   "mean": 0.49075,
+   "std": 0.33559,
+   "n": 317,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.CT.60s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.41262,
+   "std": 0.26857,
+   "n": 177,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.31882,
-   "std": 0.26327,
-   "n": 85,
+   "mean": 0.35649,
+   "std": 0.27034,
+   "n": 326,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.38633,
-   "std": 0.21857,
-   "n": 50,
+   "mean": 0.40638,
+   "std": 0.25886,
+   "n": 515,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.36933,
-   "std": 0.23133,
-   "n": 94,
+   "mean": 0.36905,
+   "std": 0.24322,
+   "n": 231,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.3376,
-   "std": 0.28539,
-   "n": 121,
+   "mean": 0.3247,
+   "std": 0.27355,
+   "n": 529,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.35762,
-   "std": 0.28984,
-   "n": 70,
+   "mean": 0.38899,
+   "std": 0.28551,
+   "n": 327,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.Mid": {
    "kind": "mean",
-   "mean": 0.11942,
-   "std": 0.2069,
-   "n": 496,
+   "mean": 0.08955,
+   "std": 0.18934,
+   "n": 2422,
    "between": {
-    "matches": 28,
-    "sd": 0.10531
+    "matches": 141,
+    "sd": 0.0906
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.CT.60s.Spawn": {
    "kind": "mean",
-   "mean": 0.11069,
-   "std": 0.20968,
-   "n": 496,
+   "mean": 0.0964,
+   "std": 0.20006,
+   "n": 2422,
    "between": {
-    "matches": 28,
-    "sd": 0.10844
+    "matches": 141,
+    "sd": 0.09174
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A": {
    "kind": "mean",
-   "mean": 0.36432,
-   "std": 0.33182,
-   "n": 596,
+   "mean": 0.31991,
+   "std": 0.32231,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.15354
+    "matches": 142,
+    "sd": 0.16217
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.54402,
-   "std": 0.34125,
-   "n": 78,
+   "mean": 0.5034,
+   "std": 0.32033,
+   "n": 422,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.02167,
+   "std": 0.10797,
+   "n": 203,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.46963,
-   "std": 0.35274,
-   "n": 107,
+   "mean": 0.4864,
+   "std": 0.30936,
+   "n": 391,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.47131,
-   "std": 0.27714,
-   "n": 61,
+   "mean": 0.16907,
+   "std": 0.26691,
+   "n": 604,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.12891,
-   "std": 0.16014,
-   "n": 98,
+   "mean": 0.1522,
+   "std": 0.16196,
+   "n": 258,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.37115,
-   "std": 0.32552,
-   "n": 145,
+   "mean": 0.35327,
+   "std": 0.32879,
+   "n": 642,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.33547,
-   "std": 0.315,
-   "n": 86,
+   "mean": 0.39673,
+   "std": 0.29284,
+   "n": 403,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B": {
    "kind": "mean",
-   "mean": 0.31004,
-   "std": 0.33178,
-   "n": 596,
+   "mean": 0.30442,
+   "std": 0.30675,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.10488
+    "matches": 142,
+    "sd": 0.13736
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.41581,
-   "std": 0.34977,
-   "n": 78,
+   "mean": 0.46738,
+   "std": 0.32444,
+   "n": 422,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.20s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.48949,
+   "std": 0.26039,
+   "n": 203,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.34377,
-   "std": 0.34605,
-   "n": 107,
+   "mean": 0.32033,
+   "std": 0.29993,
+   "n": 391,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.37787,
-   "std": 0.28536,
-   "n": 61,
+   "mean": 0.37853,
+   "std": 0.25932,
+   "n": 604,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.23435,
-   "std": 0.25946,
-   "n": 98,
+   "mean": 0.22707,
+   "std": 0.26448,
+   "n": 258,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.25575,
-   "std": 0.33896,
-   "n": 145,
+   "mean": 0.21379,
+   "std": 0.29976,
+   "n": 642,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.21744,
-   "std": 0.30609,
-   "n": 86,
+   "mean": 0.10794,
+   "std": 0.23278,
+   "n": 403,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.Mid": {
    "kind": "mean",
-   "mean": 0.30973,
-   "std": 0.31998,
-   "n": 596,
+   "mean": 0.35179,
+   "std": 0.30665,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.2003
+    "matches": 142,
+    "sd": 0.18448
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.20s.Spawn": {
    "kind": "mean",
-   "mean": 0.01591,
-   "std": 0.06563,
-   "n": 596,
+   "mean": 0.02389,
+   "std": 0.0805,
+   "n": 2923,
    "between": {
-    "matches": 28,
-    "sd": 0.01849
+    "matches": 142,
+    "sd": 0.02374
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A": {
    "kind": "mean",
-   "mean": 0.38658,
-   "std": 0.36557,
-   "n": 569,
+   "mean": 0.36606,
+   "std": 0.35767,
+   "n": 2774,
    "between": {
-    "matches": 28,
-    "sd": 0.12285
+    "matches": 142,
+    "sd": 0.12683
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.5193,
-   "std": 0.40045,
-   "n": 76,
+   "mean": 0.4985,
+   "std": 0.38142,
+   "n": 399,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.0799,
+   "std": 0.21871,
+   "n": 194,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.48791,
-   "std": 0.3783,
-   "n": 102,
+   "mean": 0.47284,
+   "std": 0.35363,
+   "n": 375,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.39684,
-   "std": 0.33253,
-   "n": 58,
+   "mean": 0.31455,
+   "std": 0.33726,
+   "n": 576,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.2842,
-   "std": 0.29764,
-   "n": 96,
+   "mean": 0.29875,
+   "std": 0.30464,
+   "n": 253,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.4129,
-   "std": 0.35694,
-   "n": 137,
+   "mean": 0.38745,
+   "std": 0.35877,
+   "n": 603,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.28917,
-   "std": 0.36347,
-   "n": 80,
+   "mean": 0.35651,
+   "std": 0.34506,
+   "n": 374,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B": {
    "kind": "mean",
-   "mean": 0.34476,
-   "std": 0.36924,
-   "n": 569,
+   "mean": 0.34191,
+   "std": 0.35167,
+   "n": 2774,
    "between": {
-    "matches": 28,
-    "sd": 0.11048
+    "matches": 142,
+    "sd": 0.1197
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.41404,
-   "std": 0.40867,
-   "n": 76,
+   "mean": 0.48179,
+   "std": 0.38449,
+   "n": 399,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.40s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.48557,
+   "std": 0.29596,
+   "n": 194,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.2933,
-   "std": 0.33598,
-   "n": 102,
+   "mean": 0.31249,
+   "std": 0.33316,
+   "n": 375,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.38649,
-   "std": 0.35592,
-   "n": 58,
+   "mean": 0.38113,
+   "std": 0.32486,
+   "n": 576,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.30573,
-   "std": 0.3361,
-   "n": 96,
+   "mean": 0.31548,
+   "std": 0.34479,
+   "n": 253,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.29769,
-   "std": 0.36656,
-   "n": 137,
+   "mean": 0.23286,
+   "std": 0.32944,
+   "n": 603,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.34083,
-   "std": 0.3702,
-   "n": 80,
+   "mean": 0.28093,
+   "std": 0.35854,
+   "n": 374,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.Mid": {
    "kind": "mean",
-   "mean": 0.24115,
-   "std": 0.29189,
-   "n": 569,
+   "mean": 0.26202,
+   "std": 0.28471,
+   "n": 2774,
    "between": {
-    "matches": 28,
-    "sd": 0.12826
+    "matches": 142,
+    "sd": 0.13484
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.40s.Spawn": {
    "kind": "mean",
-   "mean": 0.0275,
-   "std": 0.10372,
-   "n": 569,
+   "mean": 0.03001,
+   "std": 0.10096,
+   "n": 2774,
    "between": {
-    "matches": 28,
-    "sd": 0.03824
+    "matches": 142,
+    "sd": 0.03891
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A": {
    "kind": "mean",
-   "mean": 0.40429,
-   "std": 0.39067,
-   "n": 493,
+   "mean": 0.40402,
+   "std": 0.38847,
+   "n": 2397,
    "between": {
-    "matches": 28,
-    "sd": 0.12635
+    "matches": 141,
+    "sd": 0.1308
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_ancient": {
    "kind": "mean",
-   "mean": 0.48852,
-   "std": 0.4043,
-   "n": 61,
+   "mean": 0.50218,
+   "std": 0.40269,
+   "n": 314,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.A@de_anubis": {
+   "kind": "mean",
+   "mean": 0.1401,
+   "std": 0.28776,
+   "n": 175,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_cache": {
    "kind": "mean",
-   "mean": 0.51196,
-   "std": 0.4138,
-   "n": 85,
+   "mean": 0.44762,
+   "std": 0.39404,
+   "n": 322,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_dust2": {
    "kind": "mean",
-   "mean": 0.41233,
-   "std": 0.36231,
-   "n": 50,
+   "mean": 0.4166,
+   "std": 0.38522,
+   "n": 511,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_inferno": {
    "kind": "mean",
-   "mean": 0.34965,
-   "std": 0.3588,
-   "n": 94,
+   "mean": 0.34048,
+   "std": 0.3628,
+   "n": 231,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_mirage": {
    "kind": "mean",
-   "mean": 0.415,
-   "std": 0.38047,
-   "n": 120,
+   "mean": 0.45235,
+   "std": 0.39114,
+   "n": 524,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.A@de_nuke": {
    "kind": "mean",
-   "mean": 0.31763,
-   "std": 0.39767,
-   "n": 69,
+   "mean": 0.35479,
+   "std": 0.36187,
+   "n": 320,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B": {
    "kind": "mean",
-   "mean": 0.37989,
-   "std": 0.40038,
-   "n": 493,
+   "mean": 0.3768,
+   "std": 0.38974,
+   "n": 2397,
    "between": {
-    "matches": 28,
-    "sd": 0.12676
+    "matches": 141,
+    "sd": 0.12059
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_ancient": {
    "kind": "mean",
-   "mean": 0.4388,
-   "std": 0.41502,
-   "n": 61,
+   "mean": 0.4647,
+   "std": 0.41346,
+   "n": 314,
+   "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
+  },
+  "tactic.zone_share.T.60s.B@de_anubis": {
+   "kind": "mean",
+   "mean": 0.5001,
+   "std": 0.35258,
+   "n": 175,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_cache": {
    "kind": "mean",
-   "mean": 0.2698,
-   "std": 0.37145,
-   "n": 85,
+   "mean": 0.35414,
+   "std": 0.3903,
+   "n": 322,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_dust2": {
    "kind": "mean",
-   "mean": 0.38233,
-   "std": 0.40408,
-   "n": 50,
+   "mean": 0.39061,
+   "std": 0.3847,
+   "n": 511,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_inferno": {
    "kind": "mean",
-   "mean": 0.37943,
-   "std": 0.38379,
-   "n": 94,
+   "mean": 0.37431,
+   "std": 0.38845,
+   "n": 231,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_mirage": {
    "kind": "mean",
-   "mean": 0.34792,
-   "std": 0.40073,
-   "n": 120,
+   "mean": 0.28041,
+   "std": 0.36841,
+   "n": 524,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.B@de_nuke": {
    "kind": "mean",
-   "mean": 0.43889,
-   "std": 0.40722,
-   "n": 69,
+   "mean": 0.38349,
+   "std": 0.38993,
+   "n": 320,
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.Mid": {
    "kind": "mean",
-   "mean": 0.17928,
-   "std": 0.25455,
-   "n": 493,
+   "mean": 0.1936,
+   "std": 0.26858,
+   "n": 2397,
    "between": {
-    "matches": 28,
-    "sd": 0.08925
+    "matches": 141,
+    "sd": 0.11061
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   },
   "tactic.zone_share.T.60s.Spawn": {
    "kind": "mean",
-   "mean": 0.03654,
-   "std": 0.13591,
-   "n": 493,
+   "mean": 0.02558,
+   "std": 0.10339,
+   "n": 2397,
    "between": {
-    "matches": 28,
-    "sd": 0.04897
+    "matches": 141,
+    "sd": 0.03515
    },
    "desc": "Fração dos jogadores vivos do lado que estão em cada zona do mapa (A, B, Mid, Spawn) naquele instante do round."
   }

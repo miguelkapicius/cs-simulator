@@ -33,6 +33,13 @@ TEAM_ALIASES = {
     "Aurora Gaming": "Aurora",
     "9z Globant": "9z",
     "Team Vitality": "Vitality",
+    "LEGACY": "Legacy",
+    "FUT Esports": "FUT",
+    "G2.Esports": "G2",
+    "PVISION": "PARIVISION",
+    "Team Falcons": "Falcons",
+    "Team Spirit": "Spirit",
+    "magic": "Magic",
 }
 
 
@@ -242,8 +249,8 @@ def extract(demo_path):
     write_table(out / "ticks.parquet", ticks)
 
     # Jogadores
-    players = (
-        economy.groupby("steamid")
+    players = (   # observadores (ex.: admin do torneio) não têm time
+        economy.dropna(subset=["team"]).groupby("steamid")
         .agg(name=("name", "last"), team=("team", "last"))
         .reset_index()
     )

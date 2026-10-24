@@ -1,0 +1,133 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "team": "MIBR",
+ "rounds": 77,
+ "matches": 3,
+ "roster": [
+  {
+   "steamid": "76561198061423730",
+   "name": "insani",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 77
+  },
+  {
+   "steamid": "76561198104626893",
+   "name": "LNZ",
+   "role_tags": [
+    "support"
+   ],
+   "rounds": 77
+  },
+  {
+   "steamid": "76561198350342505",
+   "name": "nqz",
+   "role_tags": [
+    "awper",
+    "support"
+   ],
+   "rounds": 77
+  },
+  {
+   "steamid": "76561198422434044",
+   "name": "tomaszin",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 77
+  },
+  {
+   "steamid": "76561198218265253",
+   "name": "venomzera",
+   "role_tags": [
+    "entry",
+    "lurker"
+   ],
+   "rounds": 77
+  }
+ ],
+ "maps": {
+  "de_ancient": {
+   "rounds": 24,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.333,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.167,
+     "full": 0.667
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.75,
+    "plant_rate": 0.583,
+    "plant_a_share": 0.714,
+    "plants": 7,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.0,
+     "force": 0.083,
+     "full": 0.833
+    }
+   }
+  },
+  "de_inferno": {
+   "rounds": 30,
+   "ct": {
+    "rounds": 15,
+    "win_rate": 0.533,
+    "buy": {
+     "pistol": 0.067,
+     "eco": 0.067,
+     "force": 0.067,
+     "full": 0.8
+    }
+   },
+   "t": {
+    "rounds": 15,
+    "win_rate": 0.4,
+    "plant_rate": 0.533,
+    "plant_a_share": 0.75,
+    "plants": 8,
+    "buy": {
+     "pistol": 0.067,
+     "eco": 0.067,
+     "force": 0.133,
+     "full": 0.733
+    }
+   }
+  },
+  "de_nuke": {
+   "rounds": 23,
+   "ct": {
+    "rounds": 11,
+    "win_rate": 0.455,
+    "buy": {
+     "pistol": 0.091,
+     "eco": 0.0,
+     "force": 0.182,
+     "full": 0.727
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.417,
+    "plant_rate": 0.667,
+    "plant_a_share": 0.25,
+    "plants": 8,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.167,
+     "full": 0.667
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

@@ -1,6 +1,6 @@
 {
- "contract_version": "1.1.0",
- "generated_at": "2026-10-23",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
  "tolerance": 1e-09,
  "description": "Entradas e saída esperada de contract/reference/weapon_dynamics.py. A versão em C# deve reproduzir 'expected' dentro de 'tolerance'.",
  "next_bullet_index": [
@@ -55,10 +55,10 @@
   {
    "input": {
     "weapon": "ak47",
-    "prev_index": 27,
+    "prev_index": 30,
     "pause_s": 0.1
    },
-   "expected": 28
+   "expected": 31
   },
   {
    "input": {
@@ -111,10 +111,10 @@
   {
    "input": {
     "weapon": "famas",
-    "prev_index": 11,
+    "prev_index": 18,
     "pause_s": 0.09
    },
-   "expected": 12
+   "expected": 19
   },
   {
    "input": {
@@ -167,10 +167,10 @@
   {
    "input": {
     "weapon": "galilar",
-    "prev_index": 20,
+    "prev_index": 30,
     "pause_s": 0.09
    },
-   "expected": 21
+   "expected": 31
   },
   {
    "input": {
@@ -223,10 +223,10 @@
   {
    "input": {
     "weapon": "m4a1",
-    "prev_index": 22,
+    "prev_index": 30,
     "pause_s": 0.09
    },
-   "expected": 23
+   "expected": 31
   },
   {
    "input": {
@@ -335,10 +335,10 @@
   {
    "input": {
     "weapon": "mac10",
-    "prev_index": 15,
+    "prev_index": 25,
     "pause_s": 0.075
    },
-   "expected": 16
+   "expected": 26
   },
   {
    "input": {
@@ -391,10 +391,10 @@
   {
    "input": {
     "weapon": "mp7",
-    "prev_index": 8,
+    "prev_index": 15,
     "pause_s": 0.08
    },
-   "expected": 9
+   "expected": 16
   },
   {
    "input": {
@@ -447,10 +447,10 @@
   {
    "input": {
     "weapon": "mp9",
-    "prev_index": 22,
+    "prev_index": 29,
     "pause_s": 0.07
    },
-   "expected": 23
+   "expected": 30
   }
  ],
  "punch": [
@@ -487,21 +487,21 @@
   {
    "input": {
     "weapon": "ak47",
-    "bullet": 27
+    "bullet": 30
    },
    "expected": [
-    -5.5294,
-    0.6677
+    -4.9857,
+    -1.7927
    ]
   },
   {
    "input": {
     "weapon": "ak47",
-    "bullet": 32
+    "bullet": 35
    },
    "expected": [
-    -5.5294,
-    0.6677
+    -4.9857,
+    -1.7927
    ]
   },
   {
@@ -537,21 +537,21 @@
   {
    "input": {
     "weapon": "famas",
-    "bullet": 11
+    "bullet": 18
    },
    "expected": [
-    -2.8555,
-    -0.5896
+    -3.2429,
+    1.1819
    ]
   },
   {
    "input": {
     "weapon": "famas",
-    "bullet": 16
+    "bullet": 23
    },
    "expected": [
-    -2.8555,
-    -0.5896
+    -3.2429,
+    1.1819
    ]
   },
   {
@@ -587,21 +587,21 @@
   {
    "input": {
     "weapon": "galilar",
-    "bullet": 20
+    "bullet": 30
    },
    "expected": [
-    -3.6548,
-    -0.806
+    -3.3329,
+    -0.2737
    ]
   },
   {
    "input": {
     "weapon": "galilar",
-    "bullet": 25
+    "bullet": 35
    },
    "expected": [
-    -3.6548,
-    -0.806
+    -3.3329,
+    -0.2737
    ]
   },
   {
@@ -637,21 +637,21 @@
   {
    "input": {
     "weapon": "m4a1",
-    "bullet": 22
+    "bullet": 30
    },
    "expected": [
-    -4.0866,
-    -0.8464
+    -4.53,
+    0.5263
    ]
   },
   {
    "input": {
     "weapon": "m4a1",
-    "bullet": 27
+    "bullet": 35
    },
    "expected": [
-    -4.0866,
-    -0.8464
+    -4.53,
+    0.5263
    ]
   },
   {
@@ -737,21 +737,21 @@
   {
    "input": {
     "weapon": "mac10",
-    "bullet": 15
+    "bullet": 25
    },
    "expected": [
-    -4.0134,
-    0.7579
+    -3.7439,
+    -0.691
    ]
   },
   {
    "input": {
     "weapon": "mac10",
-    "bullet": 20
+    "bullet": 30
    },
    "expected": [
-    -4.0134,
-    0.7579
+    -3.7439,
+    -0.691
    ]
   },
   {
@@ -787,21 +787,21 @@
   {
    "input": {
     "weapon": "mp7",
-    "bullet": 8
+    "bullet": 15
    },
    "expected": [
-    -1.6547,
-    -0.7168
+    -2.5263,
+    0.3643
    ]
   },
   {
    "input": {
     "weapon": "mp7",
-    "bullet": 13
+    "bullet": 20
    },
    "expected": [
-    -1.6547,
-    -0.7168
+    -2.5263,
+    0.3643
    ]
   },
   {
@@ -837,21 +837,21 @@
   {
    "input": {
     "weapon": "mp9",
-    "bullet": 22
+    "bullet": 29
    },
    "expected": [
-    -5.0285,
-    -0.6308
+    -5.1287,
+    -1.4304
    ]
   },
   {
    "input": {
     "weapon": "mp9",
-    "bullet": 27
+    "bullet": 34
    },
    "expected": [
-    -5.0285,
-    -0.6308
+    -5.1287,
+    -1.4304
    ]
   }
  ],
@@ -897,11 +897,11 @@
     "weapon": "ak47",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 27
+    "bullet": 30
    },
    "expected": [
-    -7.5588,
-    -38.6646
+    -6.4714,
+    -43.5854
    ]
   },
   {
@@ -909,11 +909,11 @@
     "weapon": "ak47",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 32
+    "bullet": 35
    },
    "expected": [
-    -7.5588,
-    -38.6646
+    -6.4714,
+    -43.5854
    ]
   },
   {
@@ -957,11 +957,11 @@
     "weapon": "famas",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 11
+    "bullet": 18
    },
    "expected": [
-    -2.211,
-    -41.1792
+    -2.9858,
+    -37.6362
    ]
   },
   {
@@ -969,11 +969,11 @@
     "weapon": "famas",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 16
+    "bullet": 23
    },
    "expected": [
-    -2.211,
-    -41.1792
+    -2.9858,
+    -37.6362
    ]
   },
   {
@@ -1017,11 +1017,11 @@
     "weapon": "galilar",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 20
+    "bullet": 30
    },
    "expected": [
-    -3.8096,
-    -41.612
+    -3.1658,
+    -40.5474
    ]
   },
   {
@@ -1029,11 +1029,11 @@
     "weapon": "galilar",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 25
+    "bullet": 35
    },
    "expected": [
-    -3.8096,
-    -41.612
+    -3.1658,
+    -40.5474
    ]
   },
   {
@@ -1077,11 +1077,11 @@
     "weapon": "m4a1",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 22
+    "bullet": 30
    },
    "expected": [
-    -4.6732,
-    -41.6928
+    -5.56,
+    -38.9474
    ]
   },
   {
@@ -1089,11 +1089,11 @@
     "weapon": "m4a1",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 27
+    "bullet": 35
    },
    "expected": [
-    -4.6732,
-    -41.6928
+    -5.56,
+    -38.9474
    ]
   },
   {
@@ -1197,11 +1197,11 @@
     "weapon": "mac10",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 15
+    "bullet": 25
    },
    "expected": [
-    -4.5268,
-    -38.4842
+    -3.9878,
+    -41.382
    ]
   },
   {
@@ -1209,11 +1209,11 @@
     "weapon": "mac10",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 20
+    "bullet": 30
    },
    "expected": [
-    -4.5268,
-    -38.4842
+    -3.9878,
+    -41.382
    ]
   },
   {
@@ -1257,11 +1257,11 @@
     "weapon": "mp7",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 8
+    "bullet": 15
    },
    "expected": [
-    0.1906,
-    -41.4336
+    -1.5526,
+    -39.2714
    ]
   },
   {
@@ -1269,11 +1269,11 @@
     "weapon": "mp7",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 13
+    "bullet": 20
    },
    "expected": [
-    0.1906,
-    -41.4336
+    -1.5526,
+    -39.2714
    ]
   },
   {
@@ -1317,11 +1317,11 @@
     "weapon": "mp9",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 22
+    "bullet": 29
    },
    "expected": [
-    -6.557,
-    -41.2616
+    -6.7574,
+    -42.8608
    ]
   },
   {
@@ -1329,11 +1329,11 @@
     "weapon": "mp9",
     "eye_pitch": 3.5,
     "eye_yaw": -40.0,
-    "bullet": 27
+    "bullet": 34
    },
    "expected": [
-    -6.557,
-    -41.2616
+    -6.7574,
+    -42.8608
    ]
   }
  ],
@@ -1357,21 +1357,21 @@
     "weapon": "ak47",
     "bullet": 5
    },
-   "expected": 0.02233
+   "expected": 0.02219
   },
   {
    "input": {
     "weapon": "ak47",
-    "bullet": 27
+    "bullet": 30
    },
-   "expected": 0.02315
+   "expected": 0.02515
   },
   {
    "input": {
     "weapon": "ak47",
-    "bullet": 32
+    "bullet": 35
    },
-   "expected": 0.02315
+   "expected": 0.02515
   },
   {
    "input": {
@@ -1397,16 +1397,16 @@
   {
    "input": {
     "weapon": "famas",
-    "bullet": 11
+    "bullet": 18
    },
-   "expected": 0.02191
+   "expected": 0.02401
   },
   {
    "input": {
     "weapon": "famas",
-    "bullet": 16
+    "bullet": 23
    },
-   "expected": 0.02191
+   "expected": 0.02401
   },
   {
    "input": {
@@ -1432,16 +1432,16 @@
   {
    "input": {
     "weapon": "galilar",
-    "bullet": 20
+    "bullet": 30
    },
-   "expected": 0.02577
+   "expected": 0.02656
   },
   {
    "input": {
     "weapon": "galilar",
-    "bullet": 25
+    "bullet": 35
    },
-   "expected": 0.02577
+   "expected": 0.02656
   },
   {
    "input": {
@@ -1467,16 +1467,16 @@
   {
    "input": {
     "weapon": "m4a1",
-    "bullet": 22
+    "bullet": 30
    },
-   "expected": 0.02278
+   "expected": 0.02056
   },
   {
    "input": {
     "weapon": "m4a1",
-    "bullet": 27
+    "bullet": 35
    },
-   "expected": 0.02278
+   "expected": 0.02056
   },
   {
    "input": {
@@ -1504,14 +1504,14 @@
     "weapon": "m4a1_silencer",
     "bullet": 20
    },
-   "expected": 0.02113
+   "expected": 0.01961
   },
   {
    "input": {
     "weapon": "m4a1_silencer",
     "bullet": 25
    },
-   "expected": 0.02113
+   "expected": 0.01961
   },
   {
    "input": {
@@ -1525,7 +1525,7 @@
     "weapon": "mac10",
     "bullet": 2
    },
-   "expected": 0.0205
+   "expected": 0.02058
   },
   {
    "input": {
@@ -1537,16 +1537,16 @@
   {
    "input": {
     "weapon": "mac10",
-    "bullet": 15
+    "bullet": 25
    },
-   "expected": 0.02572
+   "expected": 0.02552
   },
   {
    "input": {
     "weapon": "mac10",
-    "bullet": 20
+    "bullet": 30
    },
-   "expected": 0.02572
+   "expected": 0.02552
   },
   {
    "input": {
@@ -1567,21 +1567,21 @@
     "weapon": "mp7",
     "bullet": 5
    },
-   "expected": 0.01516
+   "expected": 0.01519
   },
   {
    "input": {
     "weapon": "mp7",
-    "bullet": 8
+    "bullet": 15
    },
-   "expected": 0.01544
+   "expected": 0.01562
   },
   {
    "input": {
     "weapon": "mp7",
-    "bullet": 13
+    "bullet": 20
    },
-   "expected": 0.01544
+   "expected": 0.01562
   },
   {
    "input": {
@@ -1602,21 +1602,21 @@
     "weapon": "mp9",
     "bullet": 5
    },
-   "expected": 0.01556
+   "expected": 0.01567
   },
   {
    "input": {
     "weapon": "mp9",
-    "bullet": 22
+    "bullet": 29
    },
-   "expected": 0.01574
+   "expected": 0.01608
   },
   {
    "input": {
     "weapon": "mp9",
-    "bullet": 27
+    "bullet": 34
    },
-   "expected": 0.01574
+   "expected": 0.01608
   }
  ]
 }

@@ -1,0 +1,183 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "team": "Natus Vincere",
+ "rounds": 120,
+ "matches": 6,
+ "roster": [
+  {
+   "steamid": "76561198013243326",
+   "name": "Aleksib",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 120
+  },
+  {
+   "steamid": "76561198246607476",
+   "name": "b1t",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 120
+  },
+  {
+   "steamid": "76561198050250233",
+   "name": "iM",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 120
+  },
+  {
+   "steamid": "76561199076189612",
+   "name": "makazze",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 120
+  },
+  {
+   "steamid": "76561199063068840",
+   "name": "w0nderful",
+   "role_tags": [
+    "awper"
+   ],
+   "rounds": 120
+  }
+ ],
+ "maps": {
+  "de_anubis": {
+   "rounds": 18,
+   "ct": {
+    "rounds": 6,
+    "win_rate": 0.167,
+    "buy": {
+     "pistol": 0.167,
+     "eco": 0.167,
+     "force": 0.167,
+     "full": 0.5
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.333,
+    "plant_rate": 0.583,
+    "plant_a_share": 0.286,
+    "plants": 7,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.167,
+     "force": 0.083,
+     "full": 0.667
+    }
+   }
+  },
+  "de_cache": {
+   "rounds": 23,
+   "ct": {
+    "rounds": 11,
+    "win_rate": 0.909,
+    "buy": {
+     "pistol": 0.091,
+     "eco": 0.0,
+     "force": 0.0,
+     "full": 0.909
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.25,
+    "plant_rate": 0.417,
+    "plant_a_share": 0.8,
+    "plants": 5,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.25,
+     "force": 0.167,
+     "full": 0.5
+    }
+   }
+  },
+  "de_inferno": {
+   "rounds": 23,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.333,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.25,
+     "full": 0.583
+    }
+   },
+   "t": {
+    "rounds": 11,
+    "win_rate": 0.545,
+    "plant_rate": 0.727,
+    "plant_a_share": 0.5,
+    "plants": 8,
+    "buy": {
+     "pistol": 0.091,
+     "eco": 0.0,
+     "force": 0.0,
+     "full": 0.909
+    }
+   }
+  },
+  "de_mirage": {
+   "rounds": 38,
+   "ct": {
+    "rounds": 21,
+    "win_rate": 0.476,
+    "buy": {
+     "pistol": 0.095,
+     "eco": 0.095,
+     "force": 0.095,
+     "full": 0.714
+    }
+   },
+   "t": {
+    "rounds": 17,
+    "win_rate": 0.118,
+    "plant_rate": 0.294,
+    "plant_a_share": 0.6,
+    "plants": 5,
+    "buy": {
+     "pistol": 0.118,
+     "eco": 0.176,
+     "force": 0.176,
+     "full": 0.529
+    }
+   }
+  },
+  "de_nuke": {
+   "rounds": 18,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.75,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.0,
+     "force": 0.083,
+     "full": 0.833
+    }
+   },
+   "t": {
+    "rounds": 6,
+    "win_rate": 0.667,
+    "plant_rate": 0.5,
+    "plant_a_share": 0.0,
+    "plants": 3,
+    "buy": {
+     "pistol": 0.167,
+     "eco": 0.167,
+     "force": 0.0,
+     "full": 0.667
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

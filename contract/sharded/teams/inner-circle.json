@@ -1,0 +1,105 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.8.1",
+ "generated_at": "2026-10-24",
+ "team": "Inner Circle",
+ "rounds": 35,
+ "matches": 2,
+ "roster": [
+  {
+   "steamid": "76561198136488014",
+   "name": "cptkurtka023",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 35
+  },
+  {
+   "steamid": "76561198233474320",
+   "name": "Dawy",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 35
+  },
+  {
+   "steamid": "76561198359519930",
+   "name": "headtr1ck",
+   "role_tags": [
+    "awper"
+   ],
+   "rounds": 35
+  },
+  {
+   "steamid": "76561198300474132",
+   "name": "onic",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 35
+  },
+  {
+   "steamid": "76561199121088563",
+   "name": "zeRRoFIX",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 35
+  }
+ ],
+ "maps": {
+  "de_ancient": {
+   "rounds": 17,
+   "ct": {
+    "rounds": 5,
+    "win_rate": 0.4,
+    "buy": {
+     "pistol": 0.2,
+     "eco": 0.0,
+     "force": 0.4,
+     "full": 0.4
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.167,
+    "plant_rate": 0.333,
+    "plant_a_share": 0.5,
+    "plants": 4,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.333,
+     "full": 0.5
+    }
+   }
+  },
+  "de_mirage": {
+   "rounds": 18,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.25,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.167,
+     "force": 0.167,
+     "full": 0.583
+    }
+   },
+   "t": {
+    "rounds": 6,
+    "win_rate": 0.333,
+    "plant_rate": 0.333,
+    "plant_a_share": 0.5,
+    "plants": 2,
+    "buy": {
+     "pistol": 0.167,
+     "eco": 0.167,
+     "force": 0.167,
+     "full": 0.5
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

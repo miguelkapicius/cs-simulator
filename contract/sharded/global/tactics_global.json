@@ -1,19 +1,19 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "source": {
-  "matches": 28,
-  "rounds": 599,
+  "matches": 143,
+  "rounds": 2931,
   "sample_hz": 8,
   "rounds_by_map": {
-   "de_ancient": 78,
-   "de_anubis": 21,
-   "de_cache": 107,
-   "de_dust2": 61,
-   "de_inferno": 99,
-   "de_mirage": 145,
-   "de_nuke": 88
+   "de_ancient": 422,
+   "de_anubis": 203,
+   "de_cache": 391,
+   "de_dust2": 606,
+   "de_inferno": 259,
+   "de_mirage": 643,
+   "de_nuke": 407
   }
  },
  "conventions": [
@@ -44,135 +44,135 @@
    "models": [
     {
      "t": 15,
-     "n_rounds": 314,
-     "plant_a_rate": 0.535,
-     "intercept": -0.013541,
+     "n_rounds": 1458,
+     "plant_a_rate": 0.523,
+     "intercept": 0.121258,
      "coefficients": {
-      "t_diff": 0.537226,
-      "ct_diff": -0.072903
+      "t_diff": 0.536679,
+      "ct_diff": -0.143158
      },
      "map_intercepts": {
-      "de_ancient": 0.179051,
-      "de_anubis": -0.369876,
-      "de_cache": -0.10098,
-      "de_dust2": 0.317452,
-      "de_inferno": 0.391532,
-      "de_mirage": -0.17229,
-      "de_nuke": -0.259608
+      "de_ancient": -0.193539,
+      "de_anubis": 0.64576,
+      "de_cache": -0.451509,
+      "de_dust2": 0.905847,
+      "de_inferno": 0.333666,
+      "de_mirage": 0.056429,
+      "de_nuke": -1.192982
      },
      "evaluation": {
-      "auc": 0.786,
-      "log_loss": 0.555,
-      "baseline_log_loss": 0.733,
-      "improvement_pct": 24.2
+      "auc": 0.771,
+      "log_loss": 0.561,
+      "baseline_log_loss": 0.69,
+      "improvement_pct": 18.8
      }
     },
     {
      "t": 25,
-     "n_rounds": 312,
-     "plant_a_rate": 0.538,
-     "intercept": 0.000513,
+     "n_rounds": 1446,
+     "plant_a_rate": 0.524,
+     "intercept": 0.095125,
      "coefficients": {
-      "t_diff": 0.537153,
-      "ct_diff": -0.254825
+      "t_diff": 0.555213,
+      "ct_diff": -0.164224
      },
      "map_intercepts": {
-      "de_ancient": -0.020024,
-      "de_anubis": -0.610819,
-      "de_cache": 0.199714,
-      "de_dust2": 0.418355,
-      "de_inferno": 0.223203,
-      "de_mirage": -0.157561,
-      "de_nuke": -0.070312
+      "de_ancient": -0.190105,
+      "de_anubis": 0.590065,
+      "de_cache": -0.236524,
+      "de_dust2": 0.731631,
+      "de_inferno": 0.123034,
+      "de_mirage": -0.017388,
+      "de_nuke": -0.918728
      },
      "evaluation": {
-      "auc": 0.822,
-      "log_loss": 0.516,
-      "baseline_log_loss": 0.726,
-      "improvement_pct": 29.0
+      "auc": 0.799,
+      "log_loss": 0.538,
+      "baseline_log_loss": 0.692,
+      "improvement_pct": 22.2
      }
     },
     {
      "t": 35,
-     "n_rounds": 294,
-     "plant_a_rate": 0.537,
-     "intercept": 0.043563,
+     "n_rounds": 1370,
+     "plant_a_rate": 0.527,
+     "intercept": 0.137767,
      "coefficients": {
-      "t_diff": 0.632197,
-      "ct_diff": -0.355846
+      "t_diff": 0.609797,
+      "ct_diff": -0.226959
      },
      "map_intercepts": {
-      "de_ancient": 0.148827,
-      "de_anubis": -0.914007,
-      "de_cache": 0.017373,
-      "de_dust2": 0.605754,
-      "de_inferno": 0.125585,
-      "de_mirage": -0.161322,
-      "de_nuke": 0.164548
+      "de_ancient": -0.14149,
+      "de_anubis": 0.593365,
+      "de_cache": -0.223132,
+      "de_dust2": 0.471016,
+      "de_inferno": 0.127052,
+      "de_mirage": -0.074971,
+      "de_nuke": -0.635871
      },
      "evaluation": {
-      "auc": 0.856,
-      "log_loss": 0.471,
-      "baseline_log_loss": 0.714,
-      "improvement_pct": 34.0
+      "auc": 0.829,
+      "log_loss": 0.507,
+      "baseline_log_loss": 0.695,
+      "improvement_pct": 27.0
      }
     },
     {
      "t": 45,
-     "n_rounds": 255,
-     "plant_a_rate": 0.533,
-     "intercept": 0.130204,
+     "n_rounds": 1229,
+     "plant_a_rate": 0.527,
+     "intercept": 0.145775,
      "coefficients": {
-      "t_diff": 0.642609,
-      "ct_diff": -0.397331
+      "t_diff": 0.645241,
+      "ct_diff": -0.245791
      },
      "map_intercepts": {
-      "de_ancient": -0.169402,
-      "de_anubis": -0.814802,
-      "de_cache": -0.07394,
-      "de_dust2": 0.637985,
-      "de_inferno": 0.272353,
-      "de_mirage": -0.197464,
-      "de_nuke": 0.356192
+      "de_ancient": -0.215939,
+      "de_anubis": 0.540909,
+      "de_cache": -0.299576,
+      "de_dust2": 0.375751,
+      "de_inferno": 0.262867,
+      "de_mirage": -0.039999,
+      "de_nuke": -0.499973
      },
      "evaluation": {
-      "auc": 0.831,
-      "log_loss": 0.514,
-      "baseline_log_loss": 0.739,
-      "improvement_pct": 30.4
+      "auc": 0.841,
+      "log_loss": 0.496,
+      "baseline_log_loss": 0.691,
+      "improvement_pct": 28.2
      }
     },
     {
      "t": 55,
-     "n_rounds": 217,
-     "plant_a_rate": 0.535,
-     "intercept": 0.282884,
+     "n_rounds": 1071,
+     "plant_a_rate": 0.528,
+     "intercept": 0.261978,
      "coefficients": {
-      "t_diff": 0.777366,
-      "ct_diff": -0.388154
+      "t_diff": 0.75001,
+      "ct_diff": -0.386602
      },
      "map_intercepts": {
-      "de_ancient": 0.365491,
-      "de_anubis": -0.766924,
-      "de_cache": -0.336976,
-      "de_dust2": 0.754329,
-      "de_inferno": 0.495098,
-      "de_mirage": -0.70908,
-      "de_nuke": 0.224291
+      "de_ancient": -0.275786,
+      "de_anubis": 0.512718,
+      "de_cache": -0.439563,
+      "de_dust2": 0.261735,
+      "de_inferno": 0.562374,
+      "de_mirage": -0.289266,
+      "de_nuke": -0.109135
      },
      "evaluation": {
-      "auc": 0.86,
-      "log_loss": 0.479,
-      "baseline_log_loss": 0.724,
-      "improvement_pct": 33.9
+      "auc": 0.877,
+      "log_loss": 0.441,
+      "baseline_log_loss": 0.694,
+      "improvement_pct": 36.5
      }
     }
    ]
   },
   "site_switch": {
    "t": 30,
-   "n_rounds": 274,
-   "switch_rate": 0.197,
+   "n_rounds": 1244,
+   "switch_rate": 0.255,
    "features": [
     "t_here",
     "ct_here",
@@ -181,214 +181,215 @@
    ],
    "definition": "o time está 'comprometido' com a zona (A ou B) onde há mais Ts aos 30 s; t_here/ct_here = Ts e CTs vivos nessa zona, t_other/ct_other = na outra",
    "formula": "P(abandonar o bombsite) = sigmoid(intercept + map_intercepts[mapa] + soma(coefficients[f] * f))",
-   "intercept": -0.843245,
+   "intercept": -0.284095,
    "coefficients": {
-    "t_here": -0.54645,
-    "ct_here": 0.452711,
-    "t_other": 0.804434,
-    "ct_other": -0.173808
+    "t_here": -0.674799,
+    "ct_here": 0.347749,
+    "t_other": 0.528468,
+    "ct_other": 0.088013
    },
    "map_intercepts": {
-    "de_ancient": 0.083244,
-    "de_anubis": -0.67705,
-    "de_cache": -0.152925,
-    "de_dust2": -0.564472,
-    "de_inferno": 0.043449,
-    "de_mirage": 0.040418,
-    "de_nuke": 1.216468
+    "de_ancient": -0.250527,
+    "de_anubis": 0.433504,
+    "de_cache": -0.193071,
+    "de_dust2": -0.018496,
+    "de_inferno": -0.380268,
+    "de_mirage": -0.335373,
+    "de_nuke": 0.500246
    },
    "coefficient_ci95": {
     "t_here": [
-     -0.947,
-     -0.312
+     -0.866,
+     -0.547
     ],
     "ct_here": [
-     0.098,
-     0.957
+     0.212,
+     0.499
     ],
     "t_other": [
-     0.194,
-     1.311
+     0.268,
+     0.801
     ],
     "ct_other": [
-     -0.625,
-     0.278
+     -0.089,
+     0.261
     ]
    },
    "by_local_advantage": [
     {
      "local_advantage": "<= -2",
-     "n": 12,
-     "switch_rate": 0.583
+     "n": 46,
+     "switch_rate": 0.5
     },
     {
      "local_advantage": "-1",
-     "n": 19,
-     "switch_rate": 0.368
+     "n": 163,
+     "switch_rate": 0.442
     },
     {
      "local_advantage": "0",
-     "n": 45,
-     "switch_rate": 0.244
+     "n": 292,
+     "switch_rate": 0.363
     },
     {
      "local_advantage": "+1",
-     "n": 57,
-     "switch_rate": 0.228
+     "n": 294,
+     "switch_rate": 0.224
     },
     {
      "local_advantage": "+2",
-     "n": 72,
-     "switch_rate": 0.181
+     "n": 238,
+     "switch_rate": 0.172
     },
     {
      "local_advantage": ">= +3",
-     "n": 69,
+     "n": 211,
      "switch_rate": 0.043
     }
    ],
    "switch_rate_by_map": {
-    "de_ancient": 0.154,
-    "de_cache": 0.13,
-    "de_dust2": 0.115,
-    "de_inferno": 0.234,
-    "de_mirage": 0.174,
-    "de_nuke": 0.432
+    "de_ancient": 0.188,
+    "de_anubis": 0.337,
+    "de_cache": 0.218,
+    "de_dust2": 0.281,
+    "de_inferno": 0.245,
+    "de_mirage": 0.191,
+    "de_nuke": 0.401
    },
    "evaluation": {
     "auc": 0.711,
-    "log_loss": 0.455,
-    "baseline_log_loss": 0.502,
-    "improvement_pct": 9.3
+    "log_loss": 0.515,
+    "baseline_log_loss": 0.564,
+    "improvement_pct": 8.7
    }
   },
   "pre_contact_check": [
    {
     "t": 15,
     "rounds": "todos os rounds",
-    "n_rounds": 314,
+    "n_rounds": 1458,
     "ct_diff": {
-     "coef": -0.073,
+     "coef": -0.143,
      "ci95": [
-      -0.23,
-      0.12
+      -0.228,
+      -0.053
      ]
     },
     "t_diff": {
      "coef": 0.537,
      "ci95": [
-      0.443,
-      0.68
+      0.486,
+      0.609
      ]
     }
    },
    {
     "t": 15,
     "rounds": "só rounds sem nenhuma luta antes de t",
-    "n_rounds": 164,
+    "n_rounds": 797,
     "ct_diff": {
-     "coef": -0.239,
+     "coef": -0.161,
      "ci95": [
-      -0.53,
-      0.025
+      -0.29,
+      -0.034
      ]
     },
     "t_diff": {
-     "coef": 0.656,
+     "coef": 0.615,
      "ci95": [
       0.532,
-      0.87
+      0.71
      ]
     }
    },
    {
     "t": 20,
     "rounds": "todos os rounds",
-    "n_rounds": 314,
+    "n_rounds": 1458,
     "ct_diff": {
-     "coef": -0.211,
+     "coef": -0.147,
      "ci95": [
-      -0.381,
-      -0.065
+      -0.239,
+      -0.056
      ]
     },
     "t_diff": {
-     "coef": 0.534,
+     "coef": 0.538,
      "ci95": [
-      0.424,
-      0.689
+      0.485,
+      0.622
      ]
     }
    },
    {
     "t": 20,
     "rounds": "só rounds sem nenhuma luta antes de t",
-    "n_rounds": 121,
+    "n_rounds": 595,
     "ct_diff": {
-     "coef": -0.473,
+     "coef": -0.197,
      "ci95": [
-      -0.884,
-      -0.149
+      -0.373,
+      -0.066
      ]
     },
     "t_diff": {
-     "coef": 0.765,
+     "coef": 0.616,
      "ci95": [
-      0.628,
-      1.142
+      0.519,
+      0.747
      ]
     }
    },
    {
     "t": 25,
     "rounds": "todos os rounds",
-    "n_rounds": 312,
+    "n_rounds": 1446,
     "ct_diff": {
-     "coef": -0.255,
+     "coef": -0.164,
      "ci95": [
-      -0.385,
-      -0.137
+      -0.252,
+      -0.074
      ]
     },
     "t_diff": {
-     "coef": 0.537,
+     "coef": 0.555,
      "ci95": [
-      0.413,
-      0.697
+      0.502,
+      0.639
      ]
     }
    },
    {
     "t": 25,
     "rounds": "só rounds sem nenhuma luta antes de t",
-    "n_rounds": 91,
+    "n_rounds": 479,
     "ct_diff": {
-     "coef": -0.475,
+     "coef": -0.21,
      "ci95": [
-      -0.92,
-      -0.182
+      -0.41,
+      -0.071
      ]
     },
     "t_diff": {
-     "coef": 0.731,
+     "coef": 0.538,
      "ci95": [
-      0.543,
-      1.105
+      0.434,
+      0.674
      ]
     }
    }
   ],
   "team_effects": {
    "ct_defense_by_team": {
-    "between_team_variance": 0.1,
-    "p_value": 0.066
+    "between_team_variance": 0.057,
+    "p_value": 0.184
    },
    "t_site_preference_by_team": {
-    "between_team_variance": 0.003,
-    "p_value": 0.763
+    "between_team_variance": 0.009,
+    "p_value": 0.518
    },
-   "pairs_ct_with_20_rounds": 9,
-   "pairs_ct_total": 30
+   "pairs_ct_with_20_rounds": 55,
+   "pairs_ct_total": 91
   }
  }
 }

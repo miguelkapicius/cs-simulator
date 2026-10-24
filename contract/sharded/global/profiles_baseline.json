@@ -1,9 +1,378 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "source": {
   "matches": [
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-furia-vs-vitality-bo3-KULcN3__furia-vs-vitality-m1-nuke.dem",
+    "rounds": 19,
+    "final_score": {
+     "Vitality": 6,
+     "FURIA": 13
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "blast-open-porto-2026-furia-vs-vitality-bo3-KULcN3__furia-vs-vitality-m2-cache.dem",
+    "rounds": 24,
+    "final_score": {
+     "FURIA": 11,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-furia-vs-vitality-bo3-KULcN3__furia-vs-vitality-m3-dust2.dem",
+    "rounds": 17,
+    "final_score": {
+     "Vitality": 13,
+     "FURIA": 4
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "blast-open-porto-2026-fut-vs-vitality-bo3-NtdD-e__fut-vs-vitality-m1-anubis.dem",
+    "rounds": 20,
+    "final_score": {
+     "FUT": 7,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-fut-vs-vitality-bo3-NtdD-e__fut-vs-vitality-m2-dust2.dem",
+    "rounds": 21,
+    "final_score": {
+     "Vitality": 13,
+     "FUT": 8
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-g2-vs-spirit-bo3-zmCjt8__g2-vs-spirit-m1-dust2.dem",
+    "rounds": 19,
+    "final_score": {
+     "Spirit": 13,
+     "G2": 6
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "blast-open-porto-2026-g2-vs-spirit-bo3-zmCjt8__g2-vs-spirit-m2-cache.dem",
+    "rounds": 22,
+    "final_score": {
+     "Spirit": 13,
+     "G2": 9
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-inner-circle-vs-mouz-bo3-ssCYIo__inner-circle-vs-mouz-m1-ancient.dem",
+    "rounds": 17,
+    "final_score": {
+     "Inner Circle": 4,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "blast-open-porto-2026-inner-circle-vs-mouz-bo3-ssCYIo__inner-circle-vs-mouz-m2-mirage.dem",
+    "rounds": 18,
+    "final_score": {
+     "MOUZ": 13,
+     "Inner Circle": 5
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "blast-open-porto-2026-legacy-vs-falcons-bo3-gq5W-W__legacy-vs-falcons-m1-mirage.dem",
+    "rounds": 19,
+    "final_score": {
+     "Legacy": 6,
+     "Falcons": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-legacy-vs-falcons-bo3-gq5W-W__legacy-vs-falcons-m2-ancient.dem",
+    "rounds": 23,
+    "final_score": {
+     "Falcons": 10,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-legacy-vs-falcons-bo3-gq5W-W__legacy-vs-falcons-m3-dust2.dem",
+    "rounds": 19,
+    "final_score": {
+     "Legacy": 6,
+     "Falcons": 13
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "blast-open-porto-2026-mouz-vs-9z-bo3-fnGIdV__mouz-vs-9z-m1-cache.dem",
+    "rounds": 17,
+    "final_score": {
+     "9z": 4,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-mouz-vs-9z-bo3-fnGIdV__mouz-vs-9z-m2-nuke.dem",
+    "rounds": 20,
+    "final_score": {
+     "MOUZ": 13,
+     "9z": 7
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-mouz-vs-falcons-bo3-prw6Bq__mouz-vs-falcons-m1-nuke.dem",
+    "rounds": 19,
+    "final_score": {
+     "MOUZ": 6,
+     "Falcons": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-mouz-vs-falcons-bo3-prw6Bq__mouz-vs-falcons-m2-ancient.dem",
+    "rounds": 19,
+    "final_score": {
+     "Falcons": 6,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "blast-open-porto-2026-mouz-vs-falcons-bo3-prw6Bq__mouz-vs-falcons-m3-inferno.dem",
+    "rounds": 16,
+    "final_score": {
+     "Falcons": 3,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-mouz-vs-vitality-bo3-V3i93u__mouz-vs-vitality-m1-dust2.dem",
+    "rounds": 24,
+    "final_score": {
+     "Vitality": 11,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "blast-open-porto-2026-mouz-vs-vitality-bo3-V3i93u__mouz-vs-vitality-m2-mirage.dem",
+    "rounds": 20,
+    "final_score": {
+     "MOUZ": 13,
+     "Vitality": 7
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-spirit-vs-dendele-bo3-GRiQxm__spirit-vs-dendele-m1-ancient.dem",
+    "rounds": 21,
+    "final_score": {
+     "Spirit": 13,
+     "DENDELE": 8
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "blast-open-porto-2026-spirit-vs-dendele-bo3-GRiQxm__spirit-vs-dendele-m2-cache.dem",
+    "rounds": 20,
+    "final_score": {
+     "Spirit": 13,
+     "DENDELE": 7
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-spirit-vs-falcons-bo3-fzVRj3__spirit-vs-falcons-m1-nuke.dem",
+    "rounds": 21,
+    "final_score": {
+     "Falcons": 8,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-spirit-vs-falcons-bo3-fzVRj3__spirit-vs-falcons-m2-ancient.dem",
+    "rounds": 24,
+    "final_score": {
+     "Spirit": 13,
+     "Falcons": 11
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-spirit-vs-furia-bo3-DLIuxJ__spirit-vs-furia-m1-ancient.dem",
+    "rounds": 23,
+    "final_score": {
+     "Spirit": 13,
+     "FURIA": 10
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "blast-open-porto-2026-spirit-vs-furia-bo3-DLIuxJ__spirit-vs-furia-m2-cache.dem",
+    "rounds": 18,
+    "final_score": {
+     "Spirit": 13,
+     "FURIA": 5
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-spirit-vs-mouz-bo5-sZmuJN__spirit-vs-mouz-m1-dust2.dem",
+    "rounds": 21,
+    "final_score": {
+     "Spirit": 13,
+     "MOUZ": 8
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "blast-open-porto-2026-spirit-vs-mouz-bo5-sZmuJN__spirit-vs-mouz-m2-mirage.dem",
+    "rounds": 24,
+    "final_score": {
+     "MOUZ": 13,
+     "Spirit": 11
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "blast-open-porto-2026-spirit-vs-mouz-bo5-sZmuJN__spirit-vs-mouz-m3-ancient.dem",
+    "rounds": 16,
+    "final_score": {
+     "Spirit": 13,
+     "MOUZ": 3
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-spirit-vs-mouz-bo5-sZmuJN__spirit-vs-mouz-m4-nuke.dem",
+    "rounds": 19,
+    "final_score": {
+     "MOUZ": 6,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-vitality-vs-9z-bo3-p-u8Zq__vitality-vs-9z-m1-dust2.dem",
+    "rounds": 15,
+    "final_score": {
+     "9z": 2,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-vitality-vs-9z-bo3-p-u8Zq__vitality-vs-9z-m2-nuke.dem",
+    "rounds": 19,
+    "final_score": {
+     "Vitality": 13,
+     "9z": 6
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "blast-open-porto-2026-vitality-vs-legacy-bo3-Pu1xg3__vitality-vs-legacy-m1-nuke.dem",
+    "rounds": 30,
+    "final_score": {
+     "Legacy": 14,
+     "Vitality": 16
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "blast-open-porto-2026-vitality-vs-legacy-bo3-Pu1xg3__vitality-vs-legacy-m2-mirage.dem",
+    "rounds": 22,
+    "final_score": {
+     "Legacy": 13,
+     "Vitality": 9
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "blast-open-porto-2026-vitality-vs-legacy-bo3-Pu1xg3__vitality-vs-legacy-m3-dust2.dem",
+    "rounds": 21,
+    "final_score": {
+     "Vitality": 13,
+     "Legacy": 8
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-aurora-vs-spirit-bo3-Xy401F__aurora-vs-spirit-m1-mirage.dem",
+    "rounds": 22,
+    "final_score": {
+     "Spirit": 9,
+     "Aurora": 13
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-aurora-vs-spirit-bo3-Xy401F__aurora-vs-spirit-m2-anubis.dem",
+    "rounds": 19,
+    "final_score": {
+     "Spirit": 6,
+     "Aurora": 13
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-aurora-vs-vitality-bo3-jz97l7__aurora-vs-vitality-m1-anubis.dem",
+    "rounds": 20,
+    "final_score": {
+     "Aurora": 13,
+     "Vitality": 7
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-aurora-vs-vitality-bo3-jz97l7__aurora-vs-vitality-m2-cache.dem",
+    "rounds": 20,
+    "final_score": {
+     "Vitality": 13,
+     "Aurora": 7
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-aurora-vs-vitality-bo3-jz97l7__aurora-vs-vitality-m3-mirage.dem",
+    "rounds": 21,
+    "final_score": {
+     "Vitality": 13,
+     "Aurora": 8
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-falcons-vs-spirit-bo3-7qoiS3__falcons-vs-spirit-m1-mirage.dem",
+    "rounds": 21,
+    "final_score": {
+     "Spirit": 13,
+     "Falcons": 8
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-falcons-vs-spirit-bo3-7qoiS3__falcons-vs-spirit-m2-anubis.dem",
+    "rounds": 23,
+    "final_score": {
+     "Spirit": 13,
+     "Falcons": 10
+    }
+   },
    {
     "map": "de_nuke",
     "demo": "esl-pro-league-season-24-furia-vs-9z-bo3-_EeeER__furia-vs-9z-m1-nuke.dem",
@@ -104,6 +473,123 @@
     }
    },
    {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-legacy-vs-1win-bo3-F1S2dI__legacy-vs-1win-m1-dust2.dem",
+    "rounds": 21,
+    "final_score": {
+     "1win": 13,
+     "Legacy": 8
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "esl-pro-league-season-24-legacy-vs-1win-bo3-F1S2dI__legacy-vs-1win-m2-ancient.dem",
+    "rounds": 21,
+    "final_score": {
+     "Legacy": 8,
+     "1win": 13
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-legacy-vs-m80-bo3-nRvyLZ__legacy-vs-m80-m1-cache.dem",
+    "rounds": 17,
+    "final_score": {
+     "M80": 13,
+     "Legacy": 4
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-legacy-vs-m80-bo3-nRvyLZ__legacy-vs-m80-m2-mirage.dem",
+    "rounds": 22,
+    "final_score": {
+     "Legacy": 13,
+     "M80": 9
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-legacy-vs-m80-bo3-nRvyLZ__legacy-vs-m80-m3-dust2.dem",
+    "rounds": 20,
+    "final_score": {
+     "Legacy": 7,
+     "M80": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-legacy-vs-parivision-bo3-RPgUYn__legacy-vs-parivision-m1-dust2.dem",
+    "rounds": 18,
+    "final_score": {
+     "PARIVISION": 5,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "esl-pro-league-season-24-legacy-vs-parivision-bo3-RPgUYn__legacy-vs-parivision-m2-inferno.dem",
+    "rounds": 15,
+    "final_score": {
+     "Legacy": 2,
+     "PARIVISION": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "esl-pro-league-season-24-legacy-vs-parivision-bo3-RPgUYn__legacy-vs-parivision-m3-ancient.dem",
+    "rounds": 28,
+    "final_score": {
+     "Legacy": 12,
+     "PARIVISION": 16
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-mouz-vs-m80-bo3-_aBGdI__mouz-vs-m80-m1-cache.dem",
+    "rounds": 22,
+    "final_score": {
+     "M80": 9,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-mouz-vs-m80-bo3-_aBGdI__mouz-vs-m80-m2-mirage.dem",
+    "rounds": 19,
+    "final_score": {
+     "MOUZ": 13,
+     "M80": 6
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-mouz-vs-spirit-bo3-sqctTx__mouz-vs-spirit-m1-dust2.dem",
+    "rounds": 20,
+    "final_score": {
+     "Spirit": 7,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-mouz-vs-spirit-bo3-sqctTx__mouz-vs-spirit-m2-mirage.dem",
+    "rounds": 18,
+    "final_score": {
+     "MOUZ": 5,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "esl-pro-league-season-24-mouz-vs-spirit-bo3-sqctTx__mouz-vs-spirit-m3-nuke.dem",
+    "rounds": 24,
+    "final_score": {
+     "Spirit": 11,
+     "MOUZ": 13
+    }
+   },
+   {
     "map": "de_ancient",
     "demo": "esl-pro-league-season-24-parivision-vs-furia-bo3-gHiq7z__parivision-vs-furia-m1-ancient.dem",
     "rounds": 20,
@@ -131,6 +617,519 @@
     }
    },
    {
+    "map": "de_nuke",
+    "demo": "esl-pro-league-season-24-shinden-vs-legacy-bo3-nwAWoS__shinden-vs-legacy-m1-nuke-p1.dem",
+    "rounds": 12,
+    "final_score": {
+     "Legacy": 7,
+     "ShindeN": 5
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "esl-pro-league-season-24-shinden-vs-legacy-bo3-nwAWoS__shinden-vs-legacy-m1-nuke-p2.dem",
+    "rounds": 9,
+    "final_score": {
+     "ShindeN": 8,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-shinden-vs-legacy-bo3-nwAWoS__shinden-vs-legacy-m2-mirage.dem",
+    "rounds": 24,
+    "final_score": {
+     "Legacy": 13,
+     "ShindeN": 11
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-spirit-vs-1win-bo3-F5n5BX__spirit-vs-1win-m1-cache.dem",
+    "rounds": 18,
+    "final_score": {
+     "1win": 13,
+     "Spirit": 5
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-spirit-vs-1win-bo3-F5n5BX__spirit-vs-1win-m2-anubis.dem",
+    "rounds": 22,
+    "final_score": {
+     "1win": 13,
+     "Spirit": 9
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-spirit-vs-m80-bo3-CGfM7I__spirit-vs-m80-m1-dust2.dem",
+    "rounds": 19,
+    "final_score": {
+     "Spirit": 13,
+     "M80": 6
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-spirit-vs-m80-bo3-CGfM7I__spirit-vs-m80-m2-cache-p1.dem",
+    "rounds": 5,
+    "final_score": {
+     "M80": 4,
+     "Spirit": 1
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-spirit-vs-m80-bo3-CGfM7I__spirit-vs-m80-m2-cache-p2.dem",
+    "rounds": 18,
+    "final_score": {
+     "Spirit": 13,
+     "M80": 10
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-spirit-vs-mouz-bo3-1EAS0F__spirit-vs-mouz-m1-dust2.dem",
+    "rounds": 18,
+    "final_score": {
+     "Spirit": 5,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-spirit-vs-mouz-bo3-1EAS0F__spirit-vs-mouz-m2-mirage.dem",
+    "rounds": 24,
+    "final_score": {
+     "MOUZ": 13,
+     "Spirit": 11
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "esl-pro-league-season-24-spirit-vs-parivision-bo3-I1FyZ9__spirit-vs-parivision-m1-ancient.dem",
+    "rounds": 24,
+    "final_score": {
+     "PARIVISION": 13,
+     "Spirit": 11
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-spirit-vs-parivision-bo3-I1FyZ9__spirit-vs-parivision-m2-dust2.dem",
+    "rounds": 19,
+    "final_score": {
+     "PARIVISION": 6,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-spirit-vs-parivision-bo3-I1FyZ9__spirit-vs-parivision-m3-anubis.dem",
+    "rounds": 18,
+    "final_score": {
+     "PARIVISION": 5,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-spirit-vs-shinden-bo3-46eoTx__spirit-vs-shinden-m1-dust2.dem",
+    "rounds": 24,
+    "final_score": {
+     "Spirit": 11,
+     "ShindeN": 13
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "esl-pro-league-season-24-spirit-vs-shinden-bo3-46eoTx__spirit-vs-shinden-m2-nuke.dem",
+    "rounds": 24,
+    "final_score": {
+     "ShindeN": 11,
+     "Spirit": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-spirit-vs-shinden-bo3-46eoTx__spirit-vs-shinden-m3-mirage.dem",
+    "rounds": 17,
+    "final_score": {
+     "Spirit": 13,
+     "ShindeN": 4
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-vitality-vs-1win-bo3-IMbwm1__vitality-vs-1win-m1-dust2.dem",
+    "rounds": 14,
+    "final_score": {
+     "1win": 1,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-vitality-vs-1win-bo3-IMbwm1__vitality-vs-1win-m2-cache.dem",
+    "rounds": 18,
+    "final_score": {
+     "Vitality": 13,
+     "1win": 5
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-vitality-vs-falcons-bo3-tjOq40__vitality-vs-falcons-m1-anubis.dem",
+    "rounds": 22,
+    "final_score": {
+     "Falcons": 13,
+     "Vitality": 9
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-vitality-vs-falcons-bo3-tjOq40__vitality-vs-falcons-m2-dust2.dem",
+    "rounds": 17,
+    "final_score": {
+     "Vitality": 13,
+     "Falcons": 4
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-vitality-vs-falcons-bo3-tjOq40__vitality-vs-falcons-m3-mirage.dem",
+    "rounds": 21,
+    "final_score": {
+     "Falcons": 8,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "esl-pro-league-season-24-vitality-vs-mouz-bo5-HHVdkD__vitality-vs-mouz-m1-cache.dem",
+    "rounds": 21,
+    "final_score": {
+     "Vitality": 13,
+     "MOUZ": 8
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "esl-pro-league-season-24-vitality-vs-mouz-bo5-HHVdkD__vitality-vs-mouz-m2-inferno.dem",
+    "rounds": 20,
+    "final_score": {
+     "MOUZ": 7,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-vitality-vs-mouz-bo5-HHVdkD__vitality-vs-mouz-m3-dust2.dem",
+    "rounds": 28,
+    "final_score": {
+     "MOUZ": 12,
+     "Vitality": 16
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "esl-pro-league-season-24-vitality-vs-natus-vincere-bo3-rAyrt8__vitality-vs-natus-vincere-m1-anubis.dem",
+    "rounds": 18,
+    "final_score": {
+     "Natus Vincere": 5,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "esl-pro-league-season-24-vitality-vs-natus-vincere-bo3-rAyrt8__vitality-vs-natus-vincere-m2-nuke.dem",
+    "rounds": 18,
+    "final_score": {
+     "Vitality": 5,
+     "Natus Vincere": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "esl-pro-league-season-24-vitality-vs-natus-vincere-bo3-rAyrt8__vitality-vs-natus-vincere-m3-mirage.dem",
+    "rounds": 17,
+    "final_score": {
+     "Vitality": 13,
+     "Natus Vincere": 4
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "esl-pro-league-season-24-vitality-vs-parivision-bo3-UFS87r__vitality-vs-parivision-m1-inferno.dem",
+    "rounds": 15,
+    "final_score": {
+     "PARIVISION": 2,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esl-pro-league-season-24-vitality-vs-parivision-bo3-UFS87r__vitality-vs-parivision-m2-dust2.dem",
+    "rounds": 23,
+    "final_score": {
+     "Vitality": 13,
+     "PARIVISION": 10
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "esports-world-cup-2026-furia-vs-legacy-bo3-pSaQCO__furia-vs-legacy-m1-ancient.dem",
+    "rounds": 22,
+    "final_score": {
+     "FURIA": 13,
+     "Legacy": 9
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "esports-world-cup-2026-furia-vs-legacy-bo3-pSaQCO__furia-vs-legacy-m2-nuke.dem",
+    "rounds": 22,
+    "final_score": {
+     "FURIA": 9,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esports-world-cup-2026-furia-vs-legacy-bo3-pSaQCO__furia-vs-legacy-m3-dust2.dem",
+    "rounds": 22,
+    "final_score": {
+     "FURIA": 9,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "esports-world-cup-2026-fut-vs-mouz-bo3-qVyLGT__fut-vs-mouz-m1-dust2.dem",
+    "rounds": 29,
+    "final_score": {
+     "FUT": 16,
+     "MOUZ": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "esports-world-cup-2026-fut-vs-mouz-bo3-qVyLGT__fut-vs-mouz-m2-ancient.dem",
+    "rounds": 18,
+    "final_score": {
+     "FUT": 13,
+     "MOUZ": 5
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "fissure-playground-3-legacy-vs-alliance-bo3-uaTO9C__legacy-vs-alliance-m1-inferno.dem",
+    "rounds": 17,
+    "final_score": {
+     "Alliance": 4,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "fissure-playground-3-legacy-vs-alliance-bo3-uaTO9C__legacy-vs-alliance-m2-dust2.dem",
+    "rounds": 19,
+    "final_score": {
+     "Legacy": 13,
+     "Alliance": 6
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "fissure-playground-3-legacy-vs-furia-bo3-tWbxU-__legacy-vs-furia-m1-mirage.dem",
+    "rounds": 20,
+    "final_score": {
+     "FURIA": 7,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "fissure-playground-3-legacy-vs-furia-bo3-tWbxU-__legacy-vs-furia-m2-ancient.dem",
+    "rounds": 22,
+    "final_score": {
+     "Legacy": 13,
+     "FURIA": 9
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "fissure-playground-3-legacy-vs-g2-bo5-lAArKL__legacy-vs-g2-m1-ancient.dem",
+    "rounds": 22,
+    "final_score": {
+     "Legacy": 13,
+     "G2": 9
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "fissure-playground-3-legacy-vs-g2-bo5-lAArKL__legacy-vs-g2-m2-mirage.dem",
+    "rounds": 23,
+    "final_score": {
+     "G2": 10,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "fissure-playground-3-legacy-vs-g2-bo5-lAArKL__legacy-vs-g2-m3-dust2.dem",
+    "rounds": 17,
+    "final_score": {
+     "Legacy": 13,
+     "G2": 4
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "fissure-playground-3-legacy-vs-magic-bo3-d_GBMR__legacy-vs-magic-m1-ancient-p1.dem",
+    "rounds": 16,
+    "final_score": {
+     "Magic": 5,
+     "Legacy": 11
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "fissure-playground-3-legacy-vs-magic-bo3-d_GBMR__legacy-vs-magic-m1-ancient-p2.dem",
+    "rounds": 4,
+    "final_score": {
+     "Magic": 7,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "fissure-playground-3-legacy-vs-magic-bo3-d_GBMR__legacy-vs-magic-m2-dust2.dem",
+    "rounds": 20,
+    "final_score": {
+     "Legacy": 7,
+     "Magic": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "fissure-playground-3-legacy-vs-magic-bo3-d_GBMR__legacy-vs-magic-m3-mirage.dem",
+    "rounds": 30,
+    "final_score": {
+     "Legacy": 16,
+     "Magic": 14
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "fissure-playground-3-legacy-vs-mibr-bo3-fOPi62__legacy-vs-mibr-m1-nuke.dem",
+    "rounds": 23,
+    "final_score": {
+     "MIBR": 10,
+     "Legacy": 13
+    }
+   },
+   {
+    "map": "de_ancient",
+    "demo": "fissure-playground-3-legacy-vs-mibr-bo3-fOPi62__legacy-vs-mibr-m2-ancient.dem",
+    "rounds": 24,
+    "final_score": {
+     "Legacy": 11,
+     "MIBR": 13
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "fissure-playground-3-legacy-vs-mibr-bo3-fOPi62__legacy-vs-mibr-m3-inferno.dem",
+    "rounds": 30,
+    "final_score": {
+     "MIBR": 14,
+     "Legacy": 16
+    }
+   },
+   {
+    "map": "de_anubis",
+    "demo": "starladder-starseries-fall-2026-aurora-vs-vitality-bo3-YKs8kE__aurora-vs-vitality-m1-anubis.dem",
+    "rounds": 20,
+    "final_score": {
+     "Aurora": 13,
+     "Vitality": 7
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "starladder-starseries-fall-2026-aurora-vs-vitality-bo3-YKs8kE__aurora-vs-vitality-m2-inferno.dem",
+    "rounds": 24,
+    "final_score": {
+     "Vitality": 13,
+     "Aurora": 11
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "starladder-starseries-fall-2026-aurora-vs-vitality-bo3-YKs8kE__aurora-vs-vitality-m3-nuke.dem",
+    "rounds": 21,
+    "final_score": {
+     "Aurora": 13,
+     "Vitality": 8
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-furia-bo3-4nJ64O__mouz-vs-furia-m1-cache.dem",
+    "rounds": 21,
+    "final_score": {
+     "FURIA": 13,
+     "MOUZ": 8
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-furia-bo3-4nJ64O__mouz-vs-furia-m2-mirage.dem",
+    "rounds": 35,
+    "final_score": {
+     "MOUZ": 19,
+     "FURIA": 16
+    }
+   },
+   {
+    "map": "de_nuke",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-furia-bo3-4nJ64O__mouz-vs-furia-m3-nuke.dem",
+    "rounds": 19,
+    "final_score": {
+     "FURIA": 13,
+     "MOUZ": 6
+    }
+   },
+   {
+    "map": "de_cache",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-natus-vincere-bo3-wTg1fx__mouz-vs-natus-vincere-m1-cache.dem",
+    "rounds": 23,
+    "final_score": {
+     "Natus Vincere": 13,
+     "MOUZ": 10
+    }
+   },
+   {
+    "map": "de_inferno",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-natus-vincere-bo3-wTg1fx__mouz-vs-natus-vincere-m2-inferno.dem",
+    "rounds": 23,
+    "final_score": {
+     "MOUZ": 13,
+     "Natus Vincere": 10
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "starladder-starseries-fall-2026-mouz-vs-natus-vincere-bo3-wTg1fx__mouz-vs-natus-vincere-m3-mirage.dem",
+    "rounds": 21,
+    "final_score": {
+     "Natus Vincere": 8,
+     "MOUZ": 13
+    }
+   },
+   {
     "map": "de_cache",
     "demo": "starladder-starseries-fall-2026-vitality-vs-furia-bo3-HgWry2__vitality-vs-furia-m1-cache.dem",
     "rounds": 18,
@@ -146,6 +1145,42 @@
     "final_score": {
      "FURIA": 8,
      "Vitality": 13
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "starladder-starseries-fall-2026-vitality-vs-furia-bo3-T02CXr__vitality-vs-furia-m1-mirage.dem",
+    "rounds": 21,
+    "final_score": {
+     "FURIA": 8,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "starladder-starseries-fall-2026-vitality-vs-furia-bo3-T02CXr__vitality-vs-furia-m2-dust2.dem",
+    "rounds": 18,
+    "final_score": {
+     "Vitality": 13,
+     "FURIA": 5
+    }
+   },
+   {
+    "map": "de_mirage",
+    "demo": "starladder-starseries-fall-2026-vitality-vs-magic-bo3-qBHOW2__vitality-vs-magic-m1-mirage.dem",
+    "rounds": 19,
+    "final_score": {
+     "Magic": 6,
+     "Vitality": 13
+    }
+   },
+   {
+    "map": "de_dust2",
+    "demo": "starladder-starseries-fall-2026-vitality-vs-magic-bo3-qBHOW2__vitality-vs-magic-m2-dust2.dem",
+    "rounds": 22,
+    "final_score": {
+     "Vitality": 13,
+     "Magic": 9
     }
    },
    {
@@ -257,7 +1292,7 @@
     }
    }
   ],
-  "total_rounds": 599,
+  "total_rounds": 2931,
   "parser": "demoparser2",
   "tickrate": 64
  },
@@ -283,289 +1318,295 @@
  },
  "baseline": {
   "mechanics": {
-   "shots_total": 67813,
-   "shots_aimed": 45202,
+   "shots_total": 325745,
+   "shots_aimed": 218984,
    "accuracy": {
     "awp": {
      "overall": {
-      "value": 0.5441,
-      "n": 862
+      "value": 0.5302,
+      "n": 4251
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.6842,
-       "n": 57
+       "value": 0.7159,
+       "n": 264
       },
       "10-20m": {
-       "value": 0.6682,
-       "n": 223
+       "value": 0.6233,
+       "n": 961
       },
       "20-30m": {
-       "value": 0.4801,
-       "n": 277
+       "value": 0.5333,
+       "n": 1367
       },
       "30m+": {
-       "value": 0.4852,
-       "n": 305
+       "value": 0.4442,
+       "n": 1659
       }
      }
     },
     "heavy": {
      "overall": {
-      "value": 0.75,
-      "n": 16
+      "value": 0.6912,
+      "n": 68
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.875,
-       "n": 8
+       "value": 0.8235,
+       "n": 34
       },
       "10-20m": {
-       "value": 0.7143,
-       "n": 7
+       "value": 0.6786,
+       "n": 28
+      },
+      "20-30m": {
+       "value": 0.0,
+       "n": 4
       },
       "30m+": {
        "value": 0.0,
-       "n": 1
+       "n": 2
       }
      },
      "by_spray_bullet": {
       "1": {
-       "value": 0.75,
-       "n": 16
+       "value": 0.6912,
+       "n": 68
       }
      }
     },
     "pistol": {
      "overall": {
-      "value": 0.241,
-      "n": 8198
+      "value": 0.2502,
+      "n": 41067
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.413,
-       "n": 1259
+       "value": 0.389,
+       "n": 6283
       },
       "10-20m": {
-       "value": 0.2765,
-       "n": 3038
+       "value": 0.2913,
+       "n": 14430
       },
       "20-30m": {
-       "value": 0.1967,
-       "n": 2115
+       "value": 0.2172,
+       "n": 11280
       },
       "30m+": {
-       "value": 0.112,
-       "n": 1786
+       "value": 0.1296,
+       "n": 9074
       }
      }
     },
     "rifle": {
      "overall": {
-      "value": 0.2532,
-      "n": 32954
+      "value": 0.2573,
+      "n": 158885
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.4549,
-       "n": 3436
+       "value": 0.4756,
+       "n": 15057
       },
       "10-20m": {
-       "value": 0.3559,
-       "n": 9470
+       "value": 0.368,
+       "n": 44372
       },
       "20-30m": {
-       "value": 0.2473,
-       "n": 9069
+       "value": 0.2579,
+       "n": 45990
       },
       "30m+": {
-       "value": 0.1063,
-       "n": 10979
+       "value": 0.1035,
+       "n": 53466
       }
      },
      "by_spray_bullet": {
       "1": {
-       "value": 0.2178,
-       "n": 8358
+       "value": 0.2214,
+       "n": 42005
       },
       "2-3": {
-       "value": 0.2904,
-       "n": 10728
+       "value": 0.2975,
+       "n": 50990
       },
       "4-6": {
-       "value": 0.2761,
-       "n": 8646
+       "value": 0.2823,
+       "n": 40957
       },
       "7+": {
-       "value": 0.2035,
-       "n": 4979
+       "value": 0.2015,
+       "n": 23816
       }
      }
     },
     "smg": {
      "overall": {
-      "value": 0.3175,
-      "n": 3008
+      "value": 0.3189,
+      "n": 14038
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.4438,
-       "n": 712
+       "value": 0.4695,
+       "n": 3278
       },
       "10-20m": {
-       "value": 0.3704,
-       "n": 1215
+       "value": 0.3533,
+       "n": 5751
       },
       "20-30m": {
-       "value": 0.2167,
-       "n": 780
+       "value": 0.2192,
+       "n": 3431
       },
       "30m+": {
-       "value": 0.0664,
-       "n": 301
+       "value": 0.0976,
+       "n": 1578
       }
      },
      "by_spray_bullet": {
       "1": {
-       "value": 0.27,
-       "n": 526
+       "value": 0.275,
+       "n": 2687
       },
       "2-3": {
-       "value": 0.3415,
-       "n": 893
+       "value": 0.3307,
+       "n": 4246
       },
       "4-6": {
-       "value": 0.3345,
-       "n": 837
+       "value": 0.3482,
+       "n": 3765
       },
       "7+": {
-       "value": 0.3099,
-       "n": 726
+       "value": 0.316,
+       "n": 3212
       }
      }
     },
     "sniper_other": {
      "overall": {
-      "value": 0.3171,
-      "n": 164
+      "value": 0.3037,
+      "n": 675
      },
      "by_distance": {
       "0-10m": {
-       "value": 0.0,
-       "n": 2
+       "value": 0.5556,
+       "n": 9
       },
       "10-20m": {
-       "value": 0.2667,
-       "n": 15
+       "value": 0.3729,
+       "n": 59
       },
       "20-30m": {
-       "value": 0.4474,
-       "n": 38
+       "value": 0.4,
+       "n": 140
       },
       "30m+": {
-       "value": 0.2844,
-       "n": 109
+       "value": 0.2612,
+       "n": 467
       }
      }
     }
    },
    "hitgroups": {
     "awp": {
-     "n": 473,
-     "head": 0.1099,
-     "chest": 0.5497,
-     "stomach": 0.2072,
-     "left_arm": 0.019,
-     "right_arm": 0.0909,
-     "left_leg": 0.0148,
-     "right_leg": 0.0042,
-     "neck": 0.0042
+     "n": 2266,
+     "head": 0.1024,
+     "chest": 0.5291,
+     "stomach": 0.2021,
+     "left_arm": 0.0393,
+     "right_arm": 0.0984,
+     "left_leg": 0.0128,
+     "right_leg": 0.0132,
+     "neck": 0.0026
     },
     "heavy": {
-     "n": 36,
-     "head": 0.25,
-     "chest": 0.5556,
+     "n": 126,
+     "head": 0.2381,
+     "chest": 0.4841,
      "stomach": 0.1111,
-     "left_arm": 0.0278,
-     "right_arm": 0.0278,
-     "left_leg": 0.0278
+     "left_arm": 0.0476,
+     "right_arm": 0.0714,
+     "left_leg": 0.0159,
+     "right_leg": 0.0317
     },
     "pistol": {
-     "n": 1971,
-     "head": 0.311,
-     "chest": 0.4566,
-     "stomach": 0.0944,
-     "left_arm": 0.0259,
-     "right_arm": 0.0746,
-     "left_leg": 0.0117,
-     "right_leg": 0.0183,
-     "neck": 0.0076
+     "n": 10260,
+     "head": 0.3252,
+     "chest": 0.4603,
+     "stomach": 0.0918,
+     "left_arm": 0.0216,
+     "right_arm": 0.0653,
+     "left_leg": 0.0125,
+     "right_leg": 0.0171,
+     "neck": 0.0061
     },
     "rifle": {
-     "n": 8330,
-     "head": 0.1855,
-     "chest": 0.4836,
-     "stomach": 0.1649,
-     "left_arm": 0.0318,
-     "right_arm": 0.0743,
-     "left_leg": 0.0247,
-     "right_leg": 0.0301,
-     "neck": 0.005
+     "n": 40866,
+     "head": 0.195,
+     "chest": 0.4746,
+     "stomach": 0.1604,
+     "left_arm": 0.0313,
+     "right_arm": 0.0813,
+     "left_leg": 0.0227,
+     "right_leg": 0.0294,
+     "neck": 0.0054
     },
     "smg": {
-     "n": 956,
-     "head": 0.1987,
-     "chest": 0.4718,
-     "stomach": 0.1559,
-     "left_arm": 0.0293,
-     "right_arm": 0.1077,
-     "left_leg": 0.0167,
-     "right_leg": 0.0157,
-     "neck": 0.0042
+     "n": 4496,
+     "head": 0.2193,
+     "chest": 0.4844,
+     "stomach": 0.1341,
+     "left_arm": 0.0314,
+     "right_arm": 0.0879,
+     "left_leg": 0.016,
+     "right_leg": 0.0211,
+     "neck": 0.0058
     },
     "sniper_other": {
-     "n": 52,
-     "head": 0.1923,
-     "chest": 0.5,
-     "stomach": 0.0385,
-     "left_arm": 0.0962,
-     "right_arm": 0.1346,
-     "right_leg": 0.0192,
-     "neck": 0.0192
+     "n": 207,
+     "head": 0.1932,
+     "chest": 0.4928,
+     "stomach": 0.1256,
+     "left_arm": 0.0386,
+     "right_arm": 0.1063,
+     "left_leg": 0.0097,
+     "right_leg": 0.0242,
+     "neck": 0.0097
     }
    },
    "aim_error_first_bullet_deg": {
-    "p10": 0.53,
-    "p25": 0.969,
-    "p50": 1.884,
-    "p75": 3.919,
-    "p90": 6.829,
-    "mean": 2.816,
-    "n": 18382,
+    "p10": 0.496,
+    "p25": 0.909,
+    "p50": 1.789,
+    "p75": 3.79,
+    "p90": 6.624,
+    "mean": 2.717,
+    "n": 91986,
     "source": "player"
    },
    "movement": {
     "still_shot_rate": {
-     "value": 0.5778,
-     "n": 45202
+     "value": 0.5789,
+     "n": 218984
     },
     "speed_at_shot": {
      "p10": 0.0,
-     "p25": 5.683,
-     "p50": 29.081,
-     "p75": 71.663,
-     "p90": 121.805,
-     "mean": 47.717,
-     "n": 45202,
+     "p25": 6.744,
+     "p50": 29.474,
+     "p75": 70.953,
+     "p90": 118.924,
+     "mean": 47.503,
+     "n": 218984,
      "source": "player"
     },
     "crouch_shot_rate": {
-     "value": 0.1717,
-     "n": 45202
+     "value": 0.1972,
+     "n": 218984
     },
     "airborne_shot_rate": {
-     "value": 0.0113,
-     "n": 45202
+     "value": 0.0118,
+     "n": 218984
     }
    },
    "burst_length": {
@@ -574,8 +1615,8 @@
     "p50": 4.0,
     "p75": 7.0,
     "p90": 11.0,
-    "mean": 5.001,
-    "n": 13666,
+    "mean": 5.054,
+    "n": 73950,
     "source": "player"
    },
    "reaction_time_s": {
@@ -583,68 +1624,68 @@
     "p25": 0.078,
     "p50": 0.156,
     "p75": 0.25,
-    "p90": 0.469,
-    "mean": 0.228,
-    "n": 2750,
+    "p90": 0.453,
+    "mean": 0.227,
+    "n": 14138,
     "source": "player"
    },
    "crosshair_placement": {
     "total_deg": {
-     "p10": 0.587,
-     "p25": 1.153,
-     "p50": 2.545,
-     "p75": 6.304,
-     "p90": 15.754,
-     "mean": 5.737,
-     "n": 3476,
+     "p10": 0.579,
+     "p25": 1.132,
+     "p50": 2.5,
+     "p75": 5.95,
+     "p90": 14.246,
+     "mean": 5.345,
+     "n": 17880,
      "source": "player"
     },
     "horizontal_deg": {
-     "p10": 0.224,
-     "p25": 0.647,
-     "p50": 1.763,
-     "p75": 5.003,
-     "p90": 13.89,
-     "mean": 4.906,
-     "n": 3476,
+     "p10": 0.223,
+     "p25": 0.629,
+     "p50": 1.744,
+     "p75": 4.77,
+     "p90": 12.641,
+     "mean": 4.546,
+     "n": 17880,
      "source": "player"
     },
     "vertical_deg": {
-     "p10": -1.477,
-     "p25": -0.274,
-     "p50": 0.427,
-     "p75": 1.591,
-     "p90": 3.922,
-     "mean": 0.959,
-     "n": 3476,
+     "p10": -1.584,
+     "p25": -0.386,
+     "p50": 0.338,
+     "p75": 1.435,
+     "p90": 3.639,
+     "mean": 0.81,
+     "n": 17880,
      "source": "player"
     }
    },
    "shoots_after_sighting_rate": {
-    "value": 0.7911,
-    "n": 3476
+    "value": 0.7907,
+    "n": 17880
    },
    "duels": {
     "win_rate": {
-     "value": 0.5573,
-     "n": 2218
+     "value": 0.5578,
+     "n": 11611
     },
     "by_distance": {
      "0-10m": {
-      "value": 0.5487,
-      "n": 472
+      "value": 0.552,
+      "n": 2136
      },
      "10-20m": {
-      "value": 0.5453,
-      "n": 917
+      "value": 0.5444,
+      "n": 4866
      },
      "20-30m": {
-      "value": 0.5736,
-      "n": 537
+      "value": 0.5745,
+      "n": 3034
      },
      "30m+": {
-      "value": 0.5788,
-      "n": 292
+      "value": 0.5752,
+      "n": 1575
      }
     }
    },
@@ -656,63 +1697,63 @@
     "max_wait_s": 2.0,
     "by_aim_error": {
      "tight_lt2": {
-      "n": 2630,
+      "n": 13458,
       "instant": {
-       "value": 0.6494,
-       "n": 2630
+       "value": 0.6265,
+       "n": 13458
       },
       "delayed": {
-       "value": 0.2741,
-       "n": 2630
+       "value": 0.2886,
+       "n": 13458
       },
       "none": {
-       "value": 0.0764,
-       "n": 2630
+       "value": 0.0849,
+       "n": 13458
       }
      },
      "mid_2_8": {
-      "n": 2165,
+      "n": 11617,
       "instant": {
-       "value": 0.4771,
-       "n": 2165
+       "value": 0.4707,
+       "n": 11617
       },
       "delayed": {
-       "value": 0.3677,
-       "n": 2165
+       "value": 0.3752,
+       "n": 11617
       },
       "none": {
-       "value": 0.1552,
-       "n": 2165
+       "value": 0.1541,
+       "n": 11617
       }
      },
      "wide_gt8": {
-      "n": 967,
+      "n": 4833,
       "instant": {
-       "value": 0.1499,
-       "n": 967
+       "value": 0.1624,
+       "n": 4833
       },
       "delayed": {
-       "value": 0.515,
-       "n": 967
+       "value": 0.5125,
+       "n": 4833
       },
       "none": {
-       "value": 0.3351,
-       "n": 967
+       "value": 0.3251,
+       "n": 4833
       }
      }
     },
     "fired_before_visible": {
-     "value": 0.3084,
-     "n": 5762
+     "value": 0.3055,
+     "n": 29908
     },
     "delayed_reaction_s": {
      "p10": 0.125,
      "p25": 0.156,
      "p50": 0.219,
-     "p75": 0.344,
-     "p90": 0.619,
-     "mean": 0.316,
-     "n": 2015,
+     "p75": 0.328,
+     "p90": 0.609,
+     "mean": 0.312,
+     "n": 10720,
      "source": "player"
     },
     "delayed_reaction_by_aim_error_s": {
@@ -720,97 +1761,97 @@
       "p10": 0.125,
       "p25": 0.141,
       "p50": 0.188,
-      "p75": 0.281,
-      "p90": 0.469,
-      "mean": 0.267,
-      "n": 721
+      "p75": 0.266,
+      "p90": 0.453,
+      "mean": 0.263,
+      "n": 3884
      },
      "mid_2_8": {
       "p10": 0.125,
       "p25": 0.156,
-      "p50": 0.203,
-      "p75": 0.316,
-      "p90": 0.625,
-      "mean": 0.319,
-      "n": 796
+      "p50": 0.219,
+      "p75": 0.312,
+      "p90": 0.609,
+      "mean": 0.31,
+      "n": 4359
      },
      "wide_gt8": {
       "p10": 0.141,
       "p25": 0.188,
       "p50": 0.281,
-      "p75": 0.465,
-      "p90": 0.739,
-      "mean": 0.385,
-      "n": 498
+      "p75": 0.453,
+      "p90": 0.75,
+      "mean": 0.392,
+      "n": 2477
      }
     },
     "flick_model": {
      "formula": "delayed_reaction_s = base_s + per_deg_s * min(aim_error_deg, 30)",
-     "base_s": 0.2045,
-     "per_deg_s": 0.0046,
-     "n": 2015
+     "base_s": 0.2034,
+     "per_deg_s": 0.0051,
+     "n": 10720
     }
    }
   },
   "performance": {
-   "rounds": 5990,
-   "kpr": 0.625,
-   "dpr": 0.626,
-   "apr": 0.201,
-   "adr": 82.3,
-   "kd": 0.997,
-   "kast": 0.724,
+   "rounds": 29310,
+   "kpr": 0.643,
+   "dpr": 0.644,
+   "apr": 0.206,
+   "adr": 83.8,
+   "kd": 0.998,
+   "kast": 0.72,
    "headshot_kill_rate": {
-    "value": 0.4933,
-    "n": 3742
+    "value": 0.5076,
+    "n": 18846
    },
-   "survival_rate": 0.374,
+   "survival_rate": 0.356,
    "opening": {
     "attempt_rate": {
-     "value": 0.1988,
-     "n": 5990
+     "value": 0.1996,
+     "n": 29310
     },
     "win_rate": {
-     "value": 0.5004,
-     "n": 1191
+     "value": 0.5001,
+     "n": 5851
     }
    },
-   "trade_kills_per_round": 0.112,
+   "trade_kills_per_round": 0.123,
    "traded_death_rate": {
-    "value": 0.2018,
-    "n": 3752
+    "value": 0.214,
+    "n": 18890
    },
    "first_contact_s": {
-    "p10": 11.125,
-    "p25": 18.812,
-    "p50": 36.734,
-    "p75": 61.621,
-    "p90": 86.936,
-    "mean": 42.983,
-    "n": 5452
+    "p10": 11.594,
+    "p25": 20.453,
+    "p50": 39.547,
+    "p75": 65.812,
+    "p90": 87.281,
+    "mean": 45.032,
+    "n": 26985
    },
    "utility": {
-    "smoke_per_round": 0.672,
-    "flash_per_round": 0.633,
-    "he_per_round": 0.375,
-    "molotov_per_round": 0.528,
-    "flash_assists_per_round": 0.033,
-    "utility_damage_per_round": 5.1
+    "smoke_per_round": 0.66,
+    "flash_per_round": 0.625,
+    "he_per_round": 0.368,
+    "molotov_per_round": 0.502,
+    "flash_assists_per_round": 0.032,
+    "utility_damage_per_round": 4.5
    },
    "by_side": {
     "CT": {
-     "rounds": 2995,
-     "kpr": 0.697,
-     "adr": 91.2,
-     "survival_rate": 0.445,
-     "round_win_rate": 0.543
+     "rounds": 14655,
+     "kpr": 0.71,
+     "adr": 91.9,
+     "survival_rate": 0.423,
+     "round_win_rate": 0.544
     },
     "T": {
-     "rounds": 2995,
-     "kpr": 0.552,
-     "adr": 73.4,
-     "survival_rate": 0.302,
-     "round_win_rate": 0.457
+     "rounds": 14655,
+     "kpr": 0.576,
+     "adr": 75.7,
+     "survival_rate": 0.288,
+     "round_win_rate": 0.456
     }
    }
   }

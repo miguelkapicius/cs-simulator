@@ -1,6 +1,6 @@
 {
  "schema_version": "1.0",
- "contract_version": "1.5.0",
+ "contract_version": "1.8.1",
  "generated_at": "2026-10-24",
  "steamid": "76561198146207066",
  "name": "Boombl4",
@@ -16,18 +16,18 @@
     "overall": {
      "value": 0.7143,
      "n": 7,
-     "shrunk": 0.7407
+     "shrunk": 0.6972
     },
     "by_distance": {
      "0-10m": {
       "value": 1.0,
       "n": 4,
-      "shrunk": 0.8958
+      "shrunk": 0.8529
      },
      "10-20m": {
       "value": 0.5,
       "n": 2,
-      "shrunk": 0.6948
+      "shrunk": 0.6624
      },
      "30m+": {
       "value": 0.0,
@@ -39,7 +39,7 @@
      "1": {
       "value": 0.7143,
       "n": 7,
-      "shrunk": 0.7407
+      "shrunk": 0.6972
      }
     }
    },
@@ -47,28 +47,28 @@
     "overall": {
      "value": 0.2297,
      "n": 296,
-     "shrunk": 0.2304
+     "shrunk": 0.231
     },
     "by_distance": {
      "0-10m": {
       "value": 0.3333,
       "n": 51,
-      "shrunk": 0.3558
+      "shrunk": 0.349
      },
      "10-20m": {
       "value": 0.2836,
       "n": 134,
-      "shrunk": 0.2827
+      "shrunk": 0.2846
      },
      "20-30m": {
       "value": 0.1321,
       "n": 53,
-      "shrunk": 0.1498
+      "shrunk": 0.1554
      },
      "30m+": {
       "value": 0.1034,
       "n": 58,
-      "shrunk": 0.1056
+      "shrunk": 0.1102
      }
     }
    },
@@ -76,50 +76,50 @@
     "overall": {
      "value": 0.2204,
      "n": 1139,
-     "shrunk": 0.2209
+     "shrunk": 0.221
     },
     "by_distance": {
      "0-10m": {
       "value": 0.4885,
       "n": 131,
-      "shrunk": 0.4841
+      "shrunk": 0.4868
      },
      "10-20m": {
       "value": 0.2709,
       "n": 358,
-      "shrunk": 0.2754
+      "shrunk": 0.2761
      },
      "20-30m": {
       "value": 0.2447,
       "n": 237,
-      "shrunk": 0.2449
+      "shrunk": 0.2458
      },
      "30m+": {
       "value": 0.0775,
       "n": 413,
-      "shrunk": 0.0788
+      "shrunk": 0.0787
      }
     },
     "by_spray_bullet": {
      "1": {
       "value": 0.1885,
       "n": 244,
-      "shrunk": 0.1907
+      "shrunk": 0.191
      },
      "2-3": {
       "value": 0.282,
       "n": 383,
-      "shrunk": 0.2824
+      "shrunk": 0.2828
      },
      "4-6": {
       "value": 0.2245,
       "n": 294,
-      "shrunk": 0.2278
+      "shrunk": 0.2282
      },
      "7+": {
       "value": 0.1462,
       "n": 212,
-      "shrunk": 0.1512
+      "shrunk": 0.151
      }
     }
    },
@@ -127,50 +127,50 @@
     "overall": {
      "value": 0.3073,
      "n": 192,
-     "shrunk": 0.3083
+     "shrunk": 0.3084
     },
     "by_distance": {
      "0-10m": {
       "value": 0.3529,
       "n": 34,
-      "shrunk": 0.3866
+      "shrunk": 0.3961
      },
      "10-20m": {
       "value": 0.3816,
       "n": 76,
-      "shrunk": 0.3793
+      "shrunk": 0.3757
      },
      "20-30m": {
       "value": 0.2647,
       "n": 68,
-      "shrunk": 0.2538
+      "shrunk": 0.2544
      },
      "30m+": {
       "value": 0.0,
       "n": 14,
-      "shrunk": 0.0391
+      "shrunk": 0.0574
      }
     },
     "by_spray_bullet": {
      "1": {
       "value": 0.25,
       "n": 28,
-      "shrunk": 0.2583
+      "shrunk": 0.2604
      },
      "2-3": {
       "value": 0.3404,
       "n": 47,
-      "shrunk": 0.3407
+      "shrunk": 0.3375
      },
      "4-6": {
       "value": 0.3704,
       "n": 54,
-      "shrunk": 0.3607
+      "shrunk": 0.3644
      },
      "7+": {
       "value": 0.2459,
       "n": 61,
-      "shrunk": 0.2617
+      "shrunk": 0.2632
      }
     }
    }
@@ -226,7 +226,7 @@
    "still_shot_rate": {
     "value": 0.5129,
     "n": 1634,
-    "shrunk": 0.5136
+    "shrunk": 0.5137
    },
    "speed_at_shot": {
     "p10": 0.0,
@@ -241,7 +241,7 @@
    "crouch_shot_rate": {
     "value": 0.1812,
     "n": 1634,
-    "shrunk": 0.181
+    "shrunk": 0.1813
    },
    "airborne_shot_rate": {
     "value": 0.0165,
@@ -309,28 +309,28 @@
    "win_rate": {
     "value": 0.475,
     "n": 80,
-    "shrunk": 0.4915
+    "shrunk": 0.4916
    },
    "by_distance": {
     "0-10m": {
      "value": 0.3913,
      "n": 23,
-     "shrunk": 0.4645
+     "shrunk": 0.466
     },
     "10-20m": {
      "value": 0.5135,
      "n": 37,
-     "shrunk": 0.5247
+     "shrunk": 0.5244
     },
     "20-30m": {
      "value": 0.5714,
      "n": 14,
-     "shrunk": 0.5727
+     "shrunk": 0.5732
     },
     "30m+": {
      "value": 0.3333,
      "n": 6,
-     "shrunk": 0.5222
+     "shrunk": 0.5194
     }
    }
   },
@@ -346,17 +346,17 @@
      "instant": {
       "value": 0.5125,
       "n": 80,
-      "shrunk": 0.5399
+      "shrunk": 0.5353
      },
      "delayed": {
       "value": 0.3625,
       "n": 80,
-      "shrunk": 0.3448
+      "shrunk": 0.3477
      },
      "none": {
       "value": 0.125,
       "n": 80,
-      "shrunk": 0.1153
+      "shrunk": 0.117
      }
     },
     "mid_2_8": {
@@ -364,17 +364,17 @@
      "instant": {
       "value": 0.4023,
       "n": 87,
-      "shrunk": 0.4163
+      "shrunk": 0.4151
      },
      "delayed": {
       "value": 0.3448,
       "n": 87,
-      "shrunk": 0.3491
+      "shrunk": 0.3505
      },
      "none": {
       "value": 0.2529,
       "n": 87,
-      "shrunk": 0.2346
+      "shrunk": 0.2344
      }
     },
     "wide_gt8": {
@@ -382,24 +382,24 @@
      "instant": {
       "value": 0.0513,
       "n": 39,
-      "shrunk": 0.0847
+      "shrunk": 0.0889
      },
      "delayed": {
       "value": 0.5385,
       "n": 39,
-      "shrunk": 0.5305
+      "shrunk": 0.5297
      },
      "none": {
       "value": 0.4103,
       "n": 39,
-      "shrunk": 0.3848
+      "shrunk": 0.3814
      }
     }
    },
    "fired_before_visible": {
     "value": 0.2476,
     "n": 206,
-    "shrunk": 0.253
+    "shrunk": 0.2527
    },
    "delayed_reaction_s": {
     "p10": 0.109,
@@ -424,7 +424,7 @@
   "headshot_kill_rate": {
    "value": 0.4719,
    "n": 89,
-   "shrunk": 0.4758
+   "shrunk": 0.4785
   },
   "survival_rate": 0.316,
   "opening": {
@@ -436,7 +436,7 @@
    "win_rate": {
     "value": 0.4048,
     "n": 42,
-    "shrunk": 0.4356
+    "shrunk": 0.4355
    }
   },
   "trade_kills_per_round": 0.094,
