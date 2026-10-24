@@ -2,11 +2,65 @@
   "season_weeks": 48,
   "cash_reserve_weeks": 8,
   "salary_bands": {
-    "1": {"star": [50000, 100000], "regular": [15000, 50000]},
-    "2": {"all": [1000, 5000]},
-    "3": {"all": [1000, 5000]}
+    "1": {
+      "star": [
+        50000,
+        100000
+      ],
+      "regular": [
+        15000,
+        50000
+      ]
+    },
+    "2": {
+      "all": [
+        1000,
+        5000
+      ]
+    },
+    "3": {
+      "all": [
+        1000,
+        5000
+      ]
+    }
   },
-  "weights": {"money": 0.35, "team": 0.25, "prestige": 0.15, "role": 0.15, "reputation": 0.10},
+  "weights": {
+    "money": 0.35,
+    "team": 0.25,
+    "prestige": 0.15,
+    "role": 0.15,
+    "reputation": 0.1
+  },
   "hype_half_life_weeks": 12,
-  "buyout": {"interest_step": 0.15}
+  "buyout": {
+    "interest_step": 0.15
+  },
+  "generator": {
+    "skill_mean": {
+      "1": 78,
+      "2": 62,
+      "3": 48
+    },
+    "skill_std": 8,
+    "hidden_mean": {
+      "1": 72,
+      "2": 58,
+      "3": 46
+    },
+    "tail_prob": {
+      "1": 0.0,
+      "2": 0.03,
+      "3": 0.05
+    },
+    "role_weights": {
+      "rifler": 30,
+      "entry": 15,
+      "lurker": 12,
+      "support": 12,
+      "awper": 12,
+      "igl": 8,
+      "coach": 11
+    }
+  }
 }
