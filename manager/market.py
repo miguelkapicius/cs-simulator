@@ -28,7 +28,7 @@ def ai_needs(club: Club, players: Dict[str, Player]) -> List[str]:
     return (missing + ["rifler"] * len(TEMPLATE))[:slots]
 
 
-def _sign(world: World, club: Club, player: Player, offer: Offer, prm: Dict) -> None:
+def sign_player(world: World, club: Club, player: Player, offer: Offer, prm: Dict) -> None:
     player.club_id = club.cid
     player.contract = Contract(offer.salary_month, offer.signing_bonus, world.week + offer.weeks,
                                buyout_for(player, world.week, 1, prm))
@@ -73,14 +73,14 @@ def _make_offer(club: Club, player: Player, prm: Dict) -> Offer:
     return Offer(club.cid, salary, salary * m["bonus_months"], m["offer_weeks"], player.role)
 
 
-def _pick_target(world: World, club: Club, role: str, targeted: set, prm: Dict) -> Optional[Tuple[Player, Offer]]:
+def _pick_target(world: World, club: Club, role: str, targeted: set, prm: Dict, poaching: bool) -> Optional[Tuple[Player, Offer]]:
     m = prm["market"]
     budget_cap = club.budget * m["style_spend"][club.style]
     free = sorted((p for p in world.players.values() if p.club_id is None and p.role == role
                    and _tier_ok(club, p) and p.pid not in targeted), key=lambda p: (-p.skill, p.pid))
     held = sorted((p for p in world.players.values()
                    if p.club_id not in (None, club.cid, world.human_cid) and p.role == role
-                   and _tier_ok(club, p) and p.pid not in targeted), key=lambda p: (-p.skill, p.pid))
+                   and _tier_ok(club, p) and p.pid not in targeted and poaching), key=lambda p: (-p.skill, p.pid))
     margin = m["poach_margin"][club.style]
     floor = free[0].skill + margin if free else float("-inf")
     for p in [h for h in held if h.skill >= floor] + free:
@@ -98,10 +98,11 @@ def fill_roster_with_free_agents(world: World, club: Club, rng: random.Random) -
         p = generate_player(rng, club.tier, world.taken_names(), role=role)
         world.players[p.pid] = p
         salary = salary_for(p.tier, p.skill, p.hype, prm)
-        _sign(world, club, p, Offer(club.cid, salary, 0, prm["market"]["offer_weeks"], role), prm)
+        sign_player(world, club, p, Offer(club.cid, salary, 0, prm["market"]["offer_weeks"], role), prm)
 
 
-def run_market_week(world: World, rng: random.Random) -> List[Event]:
+def run_market_week(world: World, rng: random.Random, poaching: bool = True) -> List[Event]:
+    """`poaching` False limita os clubes a agentes livres: fora das janelas de mercado ninguém compra buyout."""
     prm = load_params()
     events = _expire_contracts(world) + _release_overpaid(world, prm)
 
@@ -113,7 +114,7 @@ def run_market_week(world: World, rng: random.Random) -> List[Event]:
             continue
         targeted: set = set()
         for role in ai_needs(club, world.players):
-            pick = _pick_target(world, club, role, targeted, prm)
+            pick = _pick_target(world, club, role, targeted, prm, poaching)
             if pick:
                 targeted.add(pick[0].pid)
                 bids.setdefault(pick[0].pid, []).append(pick[1])
@@ -134,7 +135,7 @@ def run_market_week(world: World, rng: random.Random) -> List[Event]:
                     seller.roster.remove(pid)
                     seller.budget += price
                 buyer.budget -= choice.signing_bonus + price
-                _sign(world, buyer, player, choice, prm)
+                sign_player(world, buyer, player, choice, prm)
                 events.append(Event("signed", world.week, {"pid": pid, "cid": buyer.cid, "price": price,
                                                            "interested": len(bids[pid])}))
                 break

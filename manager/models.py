@@ -59,6 +59,7 @@ class Club:
     roster: List[str] = field(default_factory=list)
     style: str = "conservative"
     is_human: bool = False
+    points: int = 0
 
     def to_dict(self) -> Dict:
         return asdict(self)

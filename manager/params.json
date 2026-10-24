@@ -175,5 +175,85 @@
         "temperament"
       ]
     }
+  },
+  "game": {
+    "free_agents": {
+      "2": 20,
+      "3": 40
+    },
+    "ai_budget": {
+      "1": 8000000,
+      "2": 400000,
+      "3": 200000
+    },
+    "prestige": {
+      "1": [
+        70,
+        95
+      ],
+      "2": [
+        40,
+        65
+      ],
+      "3": [
+        10,
+        35
+      ]
+    },
+    "human": {
+      "prestige": 5,
+      "reputation": 30
+    },
+    "difficulty": {
+      "easy": {
+        "human_budget": 250000,
+        "aggressive_share": 0.2
+      },
+      "normal": {
+        "human_budget": 150000,
+        "aggressive_share": 0.4
+      },
+      "hard": {
+        "human_budget": 90000,
+        "aggressive_share": 0.6
+      }
+    },
+    "majors": [
+      20,
+      44
+    ],
+    "league_round_every": 12,
+    "windows": [
+      [
+        1,
+        4
+      ],
+      [
+        21,
+        24
+      ],
+      [
+        45,
+        48
+      ]
+    ],
+    "prize_pool": {
+      "1": 600000,
+      "2": 40000,
+      "3": 15000
+    },
+    "major_prize": 1200000,
+    "prize_weights": [
+      0.4,
+      0.25,
+      0.15,
+      0.1
+    ],
+    "match_scale": 8,
+    "promote": 2,
+    "expiry_warning_weeks": 4,
+    "growth_rate": 0.15,
+    "growth_max": 3,
+    "growth_max_age": 23
   }
 }

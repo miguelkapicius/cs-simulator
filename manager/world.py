@@ -1,6 +1,6 @@
 """Estado do mundo do manager: jogadores, clubes, semana e RNG. Serializável em JSON."""
 from dataclasses import dataclass, field
-from typing import Dict, List, Optional, Set
+from typing import Dict, Optional, Set
 
 from manager.models import Club, Player
 
