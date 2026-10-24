@@ -107,5 +107,16 @@
     "major_multiplier": 2.0,
     "form_blend": 0.2,
     "form_scale": 10
-  }
+  },
+  "accept_threshold": 0.4,
+  "role_cap": {
+    "rifler": 2,
+    "entry": 1,
+    "lurker": 1,
+    "support": 1,
+    "awper": 1,
+    "igl": 1,
+    "coach": 1
+  },
+  "money_star_discount": 1.4
 }
