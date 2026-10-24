@@ -1,13 +1,14 @@
 PY := .venv/bin/python
 VERSION := $(shell cat contract/VERSION)
 
-.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards validate test lint refresh package help
+.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards validate test lint refresh package help manager-sim
 
 help:
 	@echo "make setup     cria o ambiente Python (.venv)"
 	@echo "make refresh   regera TUDO a partir das demos (extract, simlogs, profiles, rules, dynamics, tactics, targets, team, shards, validate)"
 	@echo "make validate  confere os artefatos contra os schemas e os vetores de teste"
 	@echo "make test      testes automatizados      make lint   verificação estática"
+	@echo "make manager-sim  simula 3 temporadas da economia do manager e resume o resultado"
 	@echo "make package   gera dist/cs-simulator-contract-<versão>.zip para enviar à Unity"
 
 setup:
@@ -47,7 +48,10 @@ test:
 	$(PY) -m pytest -q
 
 lint:
-	$(PY) -m pyflakes pipeline calibration contract/reference tests
+	$(PY) -m pyflakes pipeline calibration contract/reference manager tests
+
+manager-sim:
+	$(PY) -m manager.sim --seed 1 --seasons 3
 
 refresh: extract simlogs profiles rules dynamics tactics targets team shards validate
 
