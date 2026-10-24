@@ -19,7 +19,7 @@ from contract.reference import team_model as ref
 from contract.reference import weapon_dynamics as wd
 from pipeline import validate_contract
 from pipeline.combat import engagement_timing, resolve_sightings
-from pipeline.common import ARTIFACTS_DIR, BUY_ECO_MAX, BUY_FORCE_MAX, DATA_DIR, EXAMPLES_DIR, buy_type
+from pipeline.common import ARTIFACTS_DIR, BUY_ECO_MAX, BUY_FORCE_MAX, CONTRACT_DIR, DATA_DIR, EXAMPLES_DIR, buy_type
 
 EXAMPLE = EXAMPLES_DIR / "sim_log_example.jsonl"
 REAL_LOGS = sorted(glob.glob(str(DATA_DIR / "*" / "simlog.jsonl")))
@@ -387,3 +387,60 @@ def test_engagement_metrics_on_example():
     assert "duel.engage.all.instant" in m and "duel.fired_before_visible" in m
     total = sum(m[f"duel.engage.all.{k}"]["k"] for k in ("instant", "delayed", "none"))
     assert total == m["duel.engage.all.instant"]["n"]
+
+
+# ---------- fatias independentes ----------
+
+from contract.reference import manifest as man  # noqa: E402
+
+
+@pytest.fixture(scope="module")
+def manifest():
+    return json.loads((CONTRACT_DIR / "sharded" / "manifest.json").read_text())
+
+
+def test_shards_are_valid_and_reassemble_the_originals():
+    assert validate_contract.check_shards(validate_contract.registry()) == []
+
+
+def test_a_match_loads_only_its_own_files(manifest):
+    got = man.match_files(manifest, "de_mirage", "FURIA", "Legacy")
+    paths = set(got["files"])
+    for team, t in manifest["teams"].items():
+        inside = team in ("FURIA", "Legacy")
+        assert (t["path"] in paths) == inside
+        assert all((manifest["players"][p]["path"] in paths) == inside for p in t["players"])
+    for mp, m in manifest["maps"].items():
+        assert (m["tactics"]["path"] in paths) == (mp == "de_mirage") and (m["playbook"]["path"] in paths) == (mp == "de_mirage")
+    total = sum(e["bytes"] for e in man.all_files(manifest))
+    assert got["bytes"] < 0.4 * total
+
+
+def test_match_files_ignore_team_order_and_reject_unknowns(manifest):
+    assert man.match_files(manifest, "de_nuke", "FURIA", "BetBoom") == man.match_files(manifest, "de_nuke", "BetBoom", "FURIA")
+    for bad in (("de_nuke", "FURIA", "TimeInexistente"), ("de_mapa", "FURIA", "BetBoom")):
+        with pytest.raises(KeyError):
+            man.match_files(manifest, *bad)
+
+
+def test_adding_unrelated_data_does_not_change_a_match(manifest):
+    import copy
+    bigger = copy.deepcopy(manifest)
+    bigger["teams"]["TimeNovo"] = {"path": "sharded/teams/novo.json", "bytes": 10, "sha256": "0" * 64, "players": ["76561198000000001"], "rounds": 5}
+    bigger["players"]["76561198000000001"] = {"path": "sharded/players/76561198000000001.json", "bytes": 10, "sha256": "0" * 64, "name": "x", "team": "TimeNovo", "index": 99, "rounds": 5}
+    bigger["maps"]["de_nova"] = {"rounds": 5, "tactics": {"path": "a", "bytes": 1, "sha256": "0" * 64}, "playbook": {"path": "b", "bytes": 1, "sha256": "0" * 64}}
+    assert man.match_files(bigger, "de_mirage", "FURIA", "Legacy") == man.match_files(manifest, "de_mirage", "FURIA", "Legacy")
+
+
+def test_shards_are_self_contained(manifest):
+    for sid, e in list(manifest["players"].items())[:6]:
+        shard = json.loads((CONTRACT_DIR / e["path"]).read_text())
+        assert shard["steamid"] == sid and {"mechanics", "performance", "weapons", "positions"} <= set(shard)
+    for mp, m in manifest["maps"].items():
+        tac, pb = (json.loads((CONTRACT_DIR / m[k]["path"]).read_text()) for k in ("tactics", "playbook"))
+        assert tac["map"] == pb["map"] == mp and sorted(tac["places"]) == pb["places"]
+
+
+def test_every_player_belongs_to_exactly_one_team(manifest):
+    seen = [p for t in manifest["teams"].values() for p in t["players"]]
+    assert sorted(seen) == sorted(manifest["players"])

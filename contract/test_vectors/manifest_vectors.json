@@ -1,0 +1,2373 @@
+{
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "description": "Arquivos que um confronto (mapa + dois times) precisa carregar, a partir do manifesto. A versão em C# deve devolver a mesma lista (ordenada) e o mesmo total de bytes. Alguns casos trazem a lista completa; os demais, só a contagem e os bytes.",
+ "cases": [
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 467734,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_ancient/playbook.json",
+     "sharded/maps/de_ancient/tactics.json",
+     "sharded/players/76561198044118796.json",
+     "sharded/players/76561198057282432.json",
+     "sharded/players/76561198067722198.json",
+     "sharded/players/76561198083485506.json",
+     "sharded/players/76561198195642865.json",
+     "sharded/players/76561198216891576.json",
+     "sharded/players/76561198242950384.json",
+     "sharded/players/76561198319723208.json",
+     "sharded/players/76561198812513923.json",
+     "sharded/players/76561198855375325.json",
+     "sharded/teams/9z.json",
+     "sharded/teams/aurora.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 401427
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 663219
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 481247
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 528066
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 601569
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "Aurora"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 525305
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 471194
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 404887
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 666679
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 484707
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 531526
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 605029
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 528765
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 479233
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 412926
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 674718
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 492746
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 539565
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 613068,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_mirage/playbook.json",
+     "sharded/maps/de_mirage/tactics.json",
+     "sharded/players/76561197960690195.json",
+     "sharded/players/76561198058500492.json",
+     "sharded/players/76561198067722198.json",
+     "sharded/players/76561198134401925.json",
+     "sharded/players/76561198164970560.json",
+     "sharded/players/76561198195642865.json",
+     "sharded/players/76561198200982290.json",
+     "sharded/players/76561198216891576.json",
+     "sharded/players/76561198242950384.json",
+     "sharded/players/76561198319723208.json",
+     "sharded/teams/9z.json",
+     "sharded/teams/furia.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 536804
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 463625
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 397318
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 659110
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 477138
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 523957
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 597460
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 521196
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 465868
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 399561
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 661353
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 479381
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 526200
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 599703
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 523439
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 463029
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 396722
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 658514
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 476542,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_dust2/playbook.json",
+     "sharded/maps/de_dust2/tactics.json",
+     "sharded/players/76561197995817501.json",
+     "sharded/players/76561198028292758.json",
+     "sharded/players/76561198036125584.json",
+     "sharded/players/76561198067722198.json",
+     "sharded/players/76561198141272052.json",
+     "sharded/players/76561198195642865.json",
+     "sharded/players/76561198210626739.json",
+     "sharded/players/76561198216891576.json",
+     "sharded/players/76561198242950384.json",
+     "sharded/players/76561198319723208.json",
+     "sharded/teams/9z.json",
+     "sharded/teams/parivision.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 523361
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 596864
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 520600
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 456781
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 390474
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 652266
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 470294
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 517113
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 590616
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "9z",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 514352
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 480010
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 413703
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 675495
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 493523
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 540342
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 613845
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "BetBoom"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 537581
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 488049
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 421742,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_anubis/playbook.json",
+     "sharded/maps/de_anubis/tactics.json",
+     "sharded/players/76561197960690195.json",
+     "sharded/players/76561198044118796.json",
+     "sharded/players/76561198057282432.json",
+     "sharded/players/76561198058500492.json",
+     "sharded/players/76561198083485506.json",
+     "sharded/players/76561198134401925.json",
+     "sharded/players/76561198164970560.json",
+     "sharded/players/76561198200982290.json",
+     "sharded/players/76561198812513923.json",
+     "sharded/players/76561198855375325.json",
+     "sharded/teams/aurora.json",
+     "sharded/teams/furia.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 683534
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 501562
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 548381
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 621884
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 545620
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 472441
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 406134
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 667926
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 485954
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 532773
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 606276
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 530012
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 474684
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 408377
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 670169
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 488197
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 535016
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 608519
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 532255,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_nuke/playbook.json",
+     "sharded/maps/de_nuke/tactics.json",
+     "sharded/players/76561198044118796.json",
+     "sharded/players/76561198057282432.json",
+     "sharded/players/76561198063336407.json",
+     "sharded/players/76561198083485506.json",
+     "sharded/players/76561198193174134.json",
+     "sharded/players/76561198310561479.json",
+     "sharded/players/76561198355739212.json",
+     "sharded/players/76561198812513923.json",
+     "sharded/players/76561198855375325.json",
+     "sharded/players/76561198998266210.json",
+     "sharded/teams/aurora.json",
+     "sharded/teams/mouz.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 471845
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 405538
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 667330
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 485358
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 532177
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 605680
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 529416
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 465597
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 399290
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 661082
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 479110
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 525929
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 599432
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Aurora",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 523168
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 491509
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 425202
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 686994
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 505022
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 551841,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_inferno/playbook.json",
+     "sharded/maps/de_inferno/tactics.json",
+     "sharded/players/76561197960690195.json",
+     "sharded/players/76561198058500492.json",
+     "sharded/players/76561198059614402.json",
+     "sharded/players/76561198134401925.json",
+     "sharded/players/76561198146207066.json",
+     "sharded/players/76561198164970560.json",
+     "sharded/players/76561198167785069.json",
+     "sharded/players/76561198200982290.json",
+     "sharded/players/76561198372023214.json",
+     "sharded/players/76561198859428279.json",
+     "sharded/teams/betboom.json",
+     "sharded/teams/furia.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 625344
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "BetBoom",
+    "team_b": "FURIA"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 549080
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 475901
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 409594
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 671386
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 489414
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 536233
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 609736
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "BetBoom",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 533472
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 478144
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 411837
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 673629
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 491657
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 538476
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 611979
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "BetBoom",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 535715
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 475305
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 408998
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 670790,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_cache/playbook.json",
+     "sharded/maps/de_cache/tactics.json",
+     "sharded/players/76561197995817501.json",
+     "sharded/players/76561198028292758.json",
+     "sharded/players/76561198036125584.json",
+     "sharded/players/76561198059614402.json",
+     "sharded/players/76561198141272052.json",
+     "sharded/players/76561198146207066.json",
+     "sharded/players/76561198167785069.json",
+     "sharded/players/76561198210626739.json",
+     "sharded/players/76561198372023214.json",
+     "sharded/players/76561198859428279.json",
+     "sharded/teams/betboom.json",
+     "sharded/teams/parivision.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 488818
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 535637
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 609140
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "BetBoom",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 532876
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 469057
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 402750
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 664542
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 482570
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 529389
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 602892
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "BetBoom",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 526628
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 483940
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 417633
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 679425
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 497453
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 544272
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 617775
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "FURIA",
+    "team_b": "Legacy"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 541511
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 486183,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_ancient/playbook.json",
+     "sharded/maps/de_ancient/tactics.json",
+     "sharded/players/76561197960690195.json",
+     "sharded/players/76561198058500492.json",
+     "sharded/players/76561198063336407.json",
+     "sharded/players/76561198134401925.json",
+     "sharded/players/76561198164970560.json",
+     "sharded/players/76561198193174134.json",
+     "sharded/players/76561198200982290.json",
+     "sharded/players/76561198310561479.json",
+     "sharded/players/76561198355739212.json",
+     "sharded/players/76561198998266210.json",
+     "sharded/teams/furia.json",
+     "sharded/teams/mouz.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 419876
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 681668
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 499696
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 546515
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 620018
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "FURIA",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 543754
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 483344
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 417037
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 678829
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 496857
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 543676
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 617179
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "FURIA",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 540915
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 477096
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 410789
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 672581
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 490609
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 537428
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 610931,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_mirage/playbook.json",
+     "sharded/maps/de_mirage/tactics.json",
+     "sharded/players/76561197960690195.json",
+     "sharded/players/76561197973140692.json",
+     "sharded/players/76561197978835160.json",
+     "sharded/players/76561197989744167.json",
+     "sharded/players/76561197991272318.json",
+     "sharded/players/76561198058500492.json",
+     "sharded/players/76561198113666193.json",
+     "sharded/players/76561198134401925.json",
+     "sharded/players/76561198164970560.json",
+     "sharded/players/76561198200982290.json",
+     "sharded/teams/furia.json",
+     "sharded/teams/vitality.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "FURIA",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 534667
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 470575
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 404268
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 666060
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 484088
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 530907
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 604410
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Legacy",
+    "team_b": "MOUZ"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 528146
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 467736
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 401429
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 663221
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 481249
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 528068
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 601571
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Legacy",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 525307
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 461488
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 395181
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 656973
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 475001,
+    "files": [
+     "artifacts/game_rules.json",
+     "artifacts/team_model.json",
+     "artifacts/weapon_dynamics.json",
+     "sharded/global/profiles_baseline.json",
+     "sharded/global/tactics_global.json",
+     "sharded/maps/de_dust2/playbook.json",
+     "sharded/maps/de_dust2/tactics.json",
+     "sharded/players/76561197973140692.json",
+     "sharded/players/76561197978835160.json",
+     "sharded/players/76561197989744167.json",
+     "sharded/players/76561197991272318.json",
+     "sharded/players/76561198043769572.json",
+     "sharded/players/76561198061763596.json",
+     "sharded/players/76561198113666193.json",
+     "sharded/players/76561198194325317.json",
+     "sharded/players/76561198365118288.json",
+     "sharded/players/76561198850020186.json",
+     "sharded/teams/legacy.json",
+     "sharded/teams/vitality.json"
+    ]
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 521820
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 595323
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "Legacy",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 519059
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 469979
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 403672
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 665464
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 483492
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 530311
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 603814
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "MOUZ",
+    "team_b": "PARIVISION"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 527550
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 463731
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 397424
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 659216
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 477244
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 524063
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 597566
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "MOUZ",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 521302
+   }
+  },
+  {
+   "input": {
+    "map": "de_ancient",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 460892
+   }
+  },
+  {
+   "input": {
+    "map": "de_anubis",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 394585
+   }
+  },
+  {
+   "input": {
+    "map": "de_cache",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 656377
+   }
+  },
+  {
+   "input": {
+    "map": "de_dust2",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 474405
+   }
+  },
+  {
+   "input": {
+    "map": "de_inferno",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 521224
+   }
+  },
+  {
+   "input": {
+    "map": "de_mirage",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 594727
+   }
+  },
+  {
+   "input": {
+    "map": "de_nuke",
+    "team_a": "PARIVISION",
+    "team_b": "Vitality"
+   },
+   "expected": {
+    "n_files": 19,
+    "bytes": 518463
+   }
+  }
+ ]
+}

@@ -1,0 +1,5071 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "map": "de_nuke",
+ "n_rounds": 88,
+ "places": {
+  "Admin": {
+   "kind": "area",
+   "n": 8668,
+   "centroid_m": [
+    28.23,
+    -1.45,
+    -10.55
+   ],
+   "spread_m": [
+    1.62,
+    2.69
+   ],
+   "bbox_m": [
+    [
+     25.57,
+     -6.36
+    ],
+    [
+     30.81,
+     2.63
+    ]
+   ],
+   "side_share": {
+    "CT": 0.933,
+    "T": 0.067
+   },
+   "zone": "B",
+   "pa": 0.3
+  },
+  "BombsiteA": {
+   "kind": "site",
+   "n": 49719,
+   "centroid_m": [
+    17.24,
+    -26.08,
+    -10.39
+   ],
+   "spread_m": [
+    4.72,
+    8.93
+   ],
+   "bbox_m": [
+    [
+     8.82,
+     -37.34
+    ],
+    [
+     23.65,
+     -10.61
+    ]
+   ],
+   "side_share": {
+    "CT": 0.734,
+    "T": 0.266
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "BombsiteB": {
+   "kind": "site",
+   "n": 22887,
+   "centroid_m": [
+    17.35,
+    -20.08,
+    -18.13
+   ],
+   "spread_m": [
+    5.07,
+    10.61
+   ],
+   "bbox_m": [
+    [
+     8.67,
+     -33.5
+    ],
+    [
+     23.98,
+     -3.79
+    ]
+   ],
+   "side_share": {
+    "CT": 0.435,
+    "T": 0.565
+   },
+   "zone": "B",
+   "pa": 0.0
+  },
+  "CTSpawn": {
+   "kind": "spawn",
+   "n": 10712,
+   "centroid_m": [
+    62.69,
+    -11.89,
+    -8.76
+   ],
+   "spread_m": [
+    8.96,
+    3.68
+   ],
+   "bbox_m": [
+    [
+     52.71,
+     -18.37
+    ],
+    [
+     81.38,
+     -7.86
+    ]
+   ],
+   "side_share": {
+    "CT": 0.992,
+    "T": 0.008
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "Catwalk": {
+   "kind": "area",
+   "n": 5091,
+   "centroid_m": [
+    33.43,
+    -11.82,
+    -4.14
+   ],
+   "spread_m": [
+    1.81,
+    2.63
+   ],
+   "bbox_m": [
+    [
+     30.31,
+     -16.26
+    ],
+    [
+     35.91,
+     -9.39
+    ]
+   ],
+   "side_share": {
+    "CT": 0.898,
+    "T": 0.102
+   },
+   "zone": "A",
+   "pa": 0.79
+  },
+  "Control": {
+   "kind": "area",
+   "n": 7389,
+   "centroid_m": [
+    3.84,
+    -1.44,
+    -10.55
+   ],
+   "spread_m": [
+    1.83,
+    2.82
+   ],
+   "bbox_m": [
+    [
+     1.65,
+     -5.9
+    ],
+    [
+     6.52,
+     3.17
+    ]
+   ],
+   "side_share": {
+    "CT": 0.396,
+    "T": 0.604
+   },
+   "zone": "B",
+   "pa": 0.16
+  },
+  "Crane": {
+   "kind": "area",
+   "n": 5143,
+   "centroid_m": [
+    22.49,
+    -22.98,
+    -3.25
+   ],
+   "spread_m": [
+    6.2,
+    1.52
+   ],
+   "bbox_m": [
+    [
+     7.32,
+     -24.08
+    ],
+    [
+     25.2,
+     -19.32
+    ]
+   ],
+   "side_share": {
+    "CT": 1.0,
+    "T": 0.0
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Decon": {
+   "kind": "area",
+   "n": 3138,
+   "centroid_m": [
+    5.56,
+    -34.87,
+    -19.58
+   ],
+   "spread_m": [
+    1.33,
+    1.95
+   ],
+   "bbox_m": [
+    [
+     3.22,
+     -38.27
+    ],
+    [
+     7.29,
+     -32.72
+    ]
+   ],
+   "side_share": {
+    "CT": 0.507,
+    "T": 0.493
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Garage": {
+   "kind": "area",
+   "n": 9493,
+   "centroid_m": [
+    44.41,
+    -48.25,
+    -10.55
+   ],
+   "spread_m": [
+    5.9,
+    5.48
+   ],
+   "bbox_m": [
+    [
+     34.34,
+     -58.9
+    ],
+    [
+     53.39,
+     -41.56
+    ]
+   ],
+   "side_share": {
+    "CT": 0.724,
+    "T": 0.276
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Heaven": {
+   "kind": "area",
+   "n": 12116,
+   "centroid_m": [
+    28.46,
+    -10.07,
+    -3.32
+   ],
+   "spread_m": [
+    1.98,
+    1.14
+   ],
+   "bbox_m": [
+    [
+     25.64,
+     -11.72
+    ],
+    [
+     32.05,
+     -8.26
+    ]
+   ],
+   "side_share": {
+    "CT": 0.913,
+    "T": 0.087
+   },
+   "zone": "A",
+   "pa": 0.86
+  },
+  "Hell": {
+   "kind": "area",
+   "n": 9899,
+   "centroid_m": [
+    31.1,
+    -10.89,
+    -9.69
+   ],
+   "spread_m": [
+    2.03,
+    1.68
+   ],
+   "bbox_m": [
+    [
+     29.11,
+     -13.71
+    ],
+    [
+     34.65,
+     -7.64
+    ]
+   ],
+   "side_share": {
+    "CT": 0.935,
+    "T": 0.065
+   },
+   "zone": "A",
+   "pa": 0.69
+  },
+  "Hut": {
+   "kind": "area",
+   "n": 7235,
+   "centroid_m": [
+    9.48,
+    -24.15,
+    -9.96
+   ],
+   "spread_m": [
+    1.61,
+    2.23
+   ],
+   "bbox_m": [
+    [
+     7.21,
+     -27.75
+    ],
+    [
+     11.58,
+     -20.51
+    ]
+   ],
+   "side_share": {
+    "CT": 0.48,
+    "T": 0.52
+   },
+   "zone": "A",
+   "pa": 0.98
+  },
+  "HutRoof": {
+   "kind": "area",
+   "n": 7242,
+   "centroid_m": [
+    10.14,
+    -26.7,
+    -6.48
+   ],
+   "spread_m": [
+    1.42,
+    2.86
+   ],
+   "bbox_m": [
+    [
+     8.94,
+     -30.2
+    ],
+    [
+     12.31,
+     -22.68
+    ]
+   ],
+   "side_share": {
+    "CT": 0.89,
+    "T": 0.11
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "Lobby": {
+   "kind": "area",
+   "n": 32803,
+   "centroid_m": [
+    -3.25,
+    -23.9,
+    -10.33
+   ],
+   "spread_m": [
+    6.01,
+    3.04
+   ],
+   "bbox_m": [
+    [
+     -11.79,
+     -28.57
+    ],
+    [
+     5.51,
+     -17.99
+    ]
+   ],
+   "side_share": {
+    "CT": 0.083,
+    "T": 0.917
+   },
+   "zone": "A",
+   "pa": 0.65
+  },
+  "LockerRoom": {
+   "kind": "area",
+   "n": 3240,
+   "centroid_m": [
+    31.08,
+    -17.42,
+    -10.51
+   ],
+   "spread_m": [
+    1.79,
+    1.49
+   ],
+   "bbox_m": [
+    [
+     28.11,
+     -19.1
+    ],
+    [
+     33.86,
+     -15.27
+    ]
+   ],
+   "side_share": {
+    "CT": 0.931,
+    "T": 0.069
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Mini": {
+   "kind": "area",
+   "n": 9053,
+   "centroid_m": [
+    18.05,
+    -41.12,
+    -10.56
+   ],
+   "spread_m": [
+    2.62,
+    1.97
+   ],
+   "bbox_m": [
+    [
+     13.21,
+     -44.51
+    ],
+    [
+     21.08,
+     -37.9
+    ]
+   ],
+   "side_share": {
+    "CT": 0.797,
+    "T": 0.203
+   },
+   "zone": "A",
+   "pa": 0.99
+  },
+  "Observation": {
+   "kind": "area",
+   "n": 2755,
+   "centroid_m": [
+    31.48,
+    -14.83,
+    -16.3
+   ],
+   "spread_m": [
+    2.84,
+    3.27
+   ],
+   "bbox_m": [
+    [
+     26.97,
+     -20.67
+    ],
+    [
+     35.89,
+     -9.48
+    ]
+   ],
+   "side_share": {
+    "CT": 0.527,
+    "T": 0.473
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Outside": {
+   "kind": "area",
+   "n": 104555,
+   "centroid_m": [
+    14.32,
+    -38.17,
+    -10.17
+   ],
+   "spread_m": [
+    21.26,
+    15.05
+   ],
+   "bbox_m": [
+    [
+     -18.61,
+     -59.14
+    ],
+    [
+     46.59,
+     -12.17
+    ]
+   ],
+   "side_share": {
+    "CT": 0.358,
+    "T": 0.642
+   },
+   "zone": "Mid",
+   "pa": 0.61
+  },
+  "Rafters": {
+   "kind": "area",
+   "n": 13836,
+   "centroid_m": [
+    17.71,
+    -12.73,
+    -3.59
+   ],
+   "spread_m": [
+    7.07,
+    4.62
+   ],
+   "bbox_m": [
+    [
+     7.32,
+     -21.84
+    ],
+    [
+     24.96,
+     -7.28
+    ]
+   ],
+   "side_share": {
+    "CT": 0.953,
+    "T": 0.047
+   },
+   "zone": "A",
+   "pa": 0.9
+  },
+  "Ramp": {
+   "kind": "area",
+   "n": 44129,
+   "centroid_m": [
+    15.64,
+    6.84,
+    -11.97
+   ],
+   "spread_m": [
+    4.5,
+    6.92
+   ],
+   "bbox_m": [
+    [
+     8.11,
+     -4.11
+    ],
+    [
+     24.0,
+     18.43
+    ]
+   ],
+   "side_share": {
+    "CT": 0.702,
+    "T": 0.298
+   },
+   "zone": "B",
+   "pa": 0.08
+  },
+  "Roof": {
+   "kind": "area",
+   "n": 9959,
+   "centroid_m": [
+    -1.41,
+    -22.2,
+    -3.26
+   ],
+   "spread_m": [
+    5.05,
+    6.9
+   ],
+   "bbox_m": [
+    [
+     -10.81,
+     -35.31
+    ],
+    [
+     5.86,
+     -10.87
+    ]
+   ],
+   "side_share": {
+    "CT": 0.079,
+    "T": 0.921
+   },
+   "zone": "A",
+   "pa": 0.75
+  },
+  "Secret": {
+   "kind": "area",
+   "n": 11659,
+   "centroid_m": [
+    37.11,
+    -58.61,
+    -13.36
+   ],
+   "spread_m": [
+    2.48,
+    3.46
+   ],
+   "bbox_m": [
+    [
+     32.7,
+     -62.18
+    ],
+    [
+     40.22,
+     -52.54
+    ]
+   ],
+   "side_share": {
+    "CT": 0.241,
+    "T": 0.759
+   },
+   "zone": "B",
+   "pa": 0.27
+  },
+  "Silo": {
+   "kind": "area",
+   "n": 4693,
+   "centroid_m": [
+    5.89,
+    -41.52,
+    -2.86
+   ],
+   "spread_m": [
+    7.69,
+    3.35
+   ],
+   "bbox_m": [
+    [
+     -2.25,
+     -46.28
+    ],
+    [
+     20.17,
+     -36.58
+    ]
+   ],
+   "side_share": {
+    "CT": 0.0,
+    "T": 1.0
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Squeaky": {
+   "kind": "area",
+   "n": 10842,
+   "centroid_m": [
+    0.16,
+    -31.96,
+    -10.55
+   ],
+   "spread_m": [
+    4.96,
+    1.61
+   ],
+   "bbox_m": [
+    [
+     -6.5,
+     -34.54
+    ],
+    [
+     6.04,
+     -30.07
+    ]
+   ],
+   "side_share": {
+    "CT": 0.155,
+    "T": 0.845
+   },
+   "zone": "A",
+   "pa": 0.94
+  },
+  "TSpawn": {
+   "kind": "spawn",
+   "n": 19372,
+   "centroid_m": [
+    -36.85,
+    -27.67,
+    -10.48
+   ],
+   "spread_m": [
+    8.7,
+    2.06
+   ],
+   "bbox_m": [
+    [
+     -48.91,
+     -29.91
+    ],
+    [
+     -24.44,
+     -24.89
+    ]
+   ],
+   "side_share": {
+    "CT": 0.037,
+    "T": 0.963
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "Trophy": {
+   "kind": "area",
+   "n": 6649,
+   "centroid_m": [
+    2.48,
+    -10.03,
+    -10.55
+   ],
+   "spread_m": [
+    2.03,
+    2.85
+   ],
+   "bbox_m": [
+    [
+     0.1,
+     -16.15
+    ],
+    [
+     5.89,
+     -7.32
+    ]
+   ],
+   "side_share": {
+    "CT": 0.203,
+    "T": 0.797
+   },
+   "zone": "B",
+   "pa": 0.23
+  },
+  "Tunnels": {
+   "kind": "area",
+   "n": 22536,
+   "centroid_m": [
+    27.46,
+    -38.12,
+    -17.13
+   ],
+   "spread_m": [
+    7.95,
+    9.42
+   ],
+   "bbox_m": [
+    [
+     10.03,
+     -50.29
+    ],
+    [
+     39.34,
+     -22.35
+    ]
+   ],
+   "side_share": {
+    "CT": 0.432,
+    "T": 0.568
+   },
+   "zone": "B",
+   "pa": 0.13
+  },
+  "Vending": {
+   "kind": "area",
+   "n": 8865,
+   "centroid_m": [
+    -2.91,
+    -12.59,
+    -10.56
+   ],
+   "spread_m": [
+    1.37,
+    2.39
+   ],
+   "bbox_m": [
+    [
+     -5.13,
+     -16.35
+    ],
+    [
+     -0.92,
+     -9.09
+    ]
+   ],
+   "side_share": {
+    "CT": 0.12,
+    "T": 0.88
+   },
+   "zone": "B",
+   "pa": 0.31
+  },
+  "Vents": {
+   "kind": "area",
+   "n": 6786,
+   "centroid_m": [
+    15.95,
+    -36.69,
+    -15.01
+   ],
+   "spread_m": [
+    4.4,
+    1.03
+   ],
+   "bbox_m": [
+    [
+     11.15,
+     -38.63
+    ],
+    [
+     25.01,
+     -34.87
+    ]
+   ],
+   "side_share": {
+    "CT": 0.553,
+    "T": 0.447
+   },
+   "zone": "Mid",
+   "pa": 0.38
+  }
+ },
+ "graph": {
+  "Admin": {
+   "dwell_s": {
+    "p25": 1.75,
+    "p50": 1.88,
+    "p75": 4.0
+   },
+   "edges": [
+    {
+     "to": "Ramp",
+     "n": 175,
+     "p": 0.641,
+     "dwell_s": 1.88
+    },
+    {
+     "to": "Hell",
+     "n": 98,
+     "p": 0.359,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "BombsiteA": {
+   "dwell_s": {
+    "p25": 3.5,
+    "p50": 8.38,
+    "p75": 21.75
+   },
+   "edges": [
+    {
+     "to": "Vents",
+     "n": 77,
+     "p": 0.3008,
+     "dwell_s": 4.62
+    },
+    {
+     "to": "Hut",
+     "n": 62,
+     "p": 0.2422,
+     "dwell_s": 12.88
+    },
+    {
+     "to": "Mini",
+     "n": 58,
+     "p": 0.2266,
+     "dwell_s": 9.12
+    },
+    {
+     "to": "Squeaky",
+     "n": 33,
+     "p": 0.1289,
+     "dwell_s": 10.25
+    },
+    {
+     "to": "HutRoof",
+     "n": 26,
+     "p": 0.1016,
+     "dwell_s": 4.5
+    }
+   ]
+  },
+  "BombsiteB": {
+   "dwell_s": {
+    "p25": 2.28,
+    "p50": 7.12,
+    "p75": 21.03
+   },
+   "edges": [
+    {
+     "to": "Observation",
+     "n": 37,
+     "p": 0.3394,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "Ramp",
+     "n": 35,
+     "p": 0.3211,
+     "dwell_s": 8.75
+    },
+    {
+     "to": "Decon",
+     "n": 20,
+     "p": 0.1835,
+     "dwell_s": 5.44
+    },
+    {
+     "to": "Tunnels",
+     "n": 17,
+     "p": 0.156,
+     "dwell_s": 16.62
+    }
+   ]
+  },
+  "CTSpawn": {
+   "dwell_s": {
+    "p25": 2.12,
+    "p50": 2.38,
+    "p75": 2.62
+   },
+   "edges": [
+    {
+     "to": "Outside",
+     "n": 441,
+     "p": 1.0,
+     "dwell_s": 2.38
+    }
+   ]
+  },
+  "Catwalk": {
+   "dwell_s": {
+    "p25": 0.88,
+    "p50": 1.88,
+    "p75": 6.12
+   },
+   "edges": [
+    {
+     "to": "Heaven",
+     "n": 98,
+     "p": 0.8167,
+     "dwell_s": 1.62
+    },
+    {
+     "to": "Outside",
+     "n": 22,
+     "p": 0.1833,
+     "dwell_s": 5.31
+    }
+   ]
+  },
+  "Control": {
+   "dwell_s": {
+    "p25": 2.62,
+    "p50": 4.0,
+    "p75": 7.06
+   },
+   "edges": [
+    {
+     "to": "Ramp",
+     "n": 97,
+     "p": 0.7185,
+     "dwell_s": 4.0
+    },
+    {
+     "to": "Trophy",
+     "n": 38,
+     "p": 0.2815,
+     "dwell_s": 4.31
+    }
+   ]
+  },
+  "Crane": {
+   "dwell_s": {
+    "p25": 2.28,
+    "p50": 8.44,
+    "p75": 18.19
+   },
+   "edges": [
+    {
+     "to": "Rafters",
+     "n": 42,
+     "p": 0.913,
+     "dwell_s": 8.69
+    },
+    {
+     "to": "HutRoof",
+     "n": 4,
+     "p": 0.087,
+     "dwell_s": 1.5
+    }
+   ]
+  },
+  "Decon": {
+   "dwell_s": {
+    "p25": 1.38,
+    "p50": 2.31,
+    "p75": 5.88
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 43,
+     "p": 0.6232,
+     "dwell_s": 1.88
+    },
+    {
+     "to": "Tunnels",
+     "n": 26,
+     "p": 0.3768,
+     "dwell_s": 3.94
+    }
+   ]
+  },
+  "Garage": {
+   "dwell_s": {
+    "p25": 4.66,
+    "p50": 8.44,
+    "p75": 20.44
+   },
+   "edges": [
+    {
+     "to": "Outside",
+     "n": 64,
+     "p": 1.0,
+     "dwell_s": 8.12
+    }
+   ]
+  },
+  "Heaven": {
+   "dwell_s": {
+    "p25": 1.38,
+    "p50": 1.62,
+    "p75": 3.62
+   },
+   "edges": [
+    {
+     "to": "Rafters",
+     "n": 304,
+     "p": 0.6552,
+     "dwell_s": 1.5
+    },
+    {
+     "to": "Catwalk",
+     "n": 120,
+     "p": 0.2586,
+     "dwell_s": 2.75
+    },
+    {
+     "to": "Hell",
+     "n": 40,
+     "p": 0.0862,
+     "dwell_s": 2.75
+    }
+   ]
+  },
+  "Hell": {
+   "dwell_s": {
+    "p25": 1.25,
+    "p50": 1.62,
+    "p75": 2.0
+   },
+   "edges": [
+    {
+     "to": "Heaven",
+     "n": 279,
+     "p": 0.4745,
+     "dwell_s": 1.62
+    },
+    {
+     "to": "Admin",
+     "n": 214,
+     "p": 0.3639,
+     "dwell_s": 1.25
+    },
+    {
+     "to": "Outside",
+     "n": 52,
+     "p": 0.0884,
+     "dwell_s": 2.0
+    },
+    {
+     "to": "LockerRoom",
+     "n": 43,
+     "p": 0.0731,
+     "dwell_s": 2.25
+    }
+   ]
+  },
+  "Hut": {
+   "dwell_s": {
+    "p25": 2.0,
+    "p50": 3.62,
+    "p75": 6.38
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 65,
+     "p": 0.5652,
+     "dwell_s": 4.25
+    },
+    {
+     "to": "Lobby",
+     "n": 50,
+     "p": 0.4348,
+     "dwell_s": 3.75
+    }
+   ]
+  },
+  "HutRoof": {
+   "dwell_s": {
+    "p25": 3.62,
+    "p50": 10.62,
+    "p75": 22.38
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 43,
+     "p": 0.86,
+     "dwell_s": 10.62
+    },
+    {
+     "to": "Hut",
+     "n": 7,
+     "p": 0.14,
+     "dwell_s": 18.38
+    }
+   ]
+  },
+  "Lobby": {
+   "dwell_s": {
+    "p25": 2.75,
+    "p50": 5.06,
+    "p75": 10.25
+   },
+   "edges": [
+    {
+     "to": "Vending",
+     "n": 156,
+     "p": 0.3653,
+     "dwell_s": 3.81
+    },
+    {
+     "to": "Squeaky",
+     "n": 99,
+     "p": 0.2319,
+     "dwell_s": 5.12
+    },
+    {
+     "to": "Hut",
+     "n": 87,
+     "p": 0.2037,
+     "dwell_s": 8.62
+    },
+    {
+     "to": "Outside",
+     "n": 67,
+     "p": 0.1569,
+     "dwell_s": 5.62
+    },
+    {
+     "to": "Roof",
+     "n": 18,
+     "p": 0.0422,
+     "dwell_s": 7.0
+    }
+   ]
+  },
+  "LockerRoom": {
+   "dwell_s": {
+    "p25": 2.25,
+    "p50": 3.5,
+    "p75": 9.75
+   },
+   "edges": [
+    {
+     "to": "Hell",
+     "n": 48,
+     "p": 0.9057,
+     "dwell_s": 3.75
+    },
+    {
+     "to": "Outside",
+     "n": 5,
+     "p": 0.0943,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "Mini": {
+   "dwell_s": {
+    "p25": 1.97,
+    "p50": 3.31,
+    "p75": 6.56
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 96,
+     "p": 0.5818,
+     "dwell_s": 3.5
+    },
+    {
+     "to": "Outside",
+     "n": 69,
+     "p": 0.4182,
+     "dwell_s": 2.88
+    }
+   ]
+  },
+  "Observation": {
+   "dwell_s": {
+    "p25": 2.0,
+    "p50": 3.0,
+    "p75": 8.97
+   },
+   "edges": [
+    {
+     "to": "Tunnels",
+     "n": 35,
+     "p": 0.7447,
+     "dwell_s": 2.12
+    },
+    {
+     "to": "BombsiteB",
+     "n": 12,
+     "p": 0.2553,
+     "dwell_s": 3.88
+    }
+   ]
+  },
+  "Outside": {
+   "dwell_s": {
+    "p25": 2.75,
+    "p50": 3.38,
+    "p75": 12.38
+   },
+   "edges": [
+    {
+     "to": "Hell",
+     "n": 409,
+     "p": 0.3563,
+     "dwell_s": 2.75
+    },
+    {
+     "to": "Lobby",
+     "n": 277,
+     "p": 0.2413,
+     "dwell_s": 2.75
+    },
+    {
+     "to": "Mini",
+     "n": 134,
+     "p": 0.1167,
+     "dwell_s": 8.56
+    },
+    {
+     "to": "Secret",
+     "n": 104,
+     "p": 0.0906,
+     "dwell_s": 21.69
+    },
+    {
+     "to": "Roof",
+     "n": 87,
+     "p": 0.0758,
+     "dwell_s": 3.38
+    },
+    {
+     "to": "Garage",
+     "n": 82,
+     "p": 0.0714,
+     "dwell_s": 7.69
+    },
+    {
+     "to": "TSpawn",
+     "n": 21,
+     "p": 0.0183,
+     "dwell_s": 5.5
+    },
+    {
+     "to": "LockerRoom",
+     "n": 14,
+     "p": 0.0122,
+     "dwell_s": 11.56
+    },
+    {
+     "to": "CTSpawn",
+     "n": 13,
+     "p": 0.0113,
+     "dwell_s": 4.12
+    },
+    {
+     "to": "Catwalk",
+     "n": 7,
+     "p": 0.0061,
+     "dwell_s": 16.25
+    }
+   ]
+  },
+  "Rafters": {
+   "dwell_s": {
+    "p25": 1.41,
+    "p50": 2.25,
+    "p75": 3.75
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 133,
+     "p": 0.4182,
+     "dwell_s": 2.25
+    },
+    {
+     "to": "Heaven",
+     "n": 109,
+     "p": 0.3428,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "Crane",
+     "n": 49,
+     "p": 0.1541,
+     "dwell_s": 2.0
+    },
+    {
+     "to": "HutRoof",
+     "n": 27,
+     "p": 0.0849,
+     "dwell_s": 3.12
+    }
+   ]
+  },
+  "Ramp": {
+   "dwell_s": {
+    "p25": 5.38,
+    "p50": 12.25,
+    "p75": 26.5
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 122,
+     "p": 0.5328,
+     "dwell_s": 11.88
+    },
+    {
+     "to": "Admin",
+     "n": 70,
+     "p": 0.3057,
+     "dwell_s": 18.38
+    },
+    {
+     "to": "Control",
+     "n": 37,
+     "p": 0.1616,
+     "dwell_s": 8.5
+    }
+   ]
+  },
+  "Roof": {
+   "dwell_s": {
+    "p25": 3.31,
+    "p50": 5.62,
+    "p75": 16.16
+   },
+   "edges": [
+    {
+     "to": "Outside",
+     "n": 38,
+     "p": 0.3762,
+     "dwell_s": 3.12
+    },
+    {
+     "to": "Lobby",
+     "n": 32,
+     "p": 0.3168,
+     "dwell_s": 17.75
+    },
+    {
+     "to": "Silo",
+     "n": 31,
+     "p": 0.3069,
+     "dwell_s": 4.0
+    }
+   ]
+  },
+  "Secret": {
+   "dwell_s": {
+    "p25": 3.25,
+    "p50": 6.88,
+    "p75": 14.25
+   },
+   "edges": [
+    {
+     "to": "Tunnels",
+     "n": 80,
+     "p": 0.6015,
+     "dwell_s": 7.44
+    },
+    {
+     "to": "Outside",
+     "n": 53,
+     "p": 0.3985,
+     "dwell_s": 6.12
+    }
+   ]
+  },
+  "Silo": {
+   "dwell_s": {
+    "p25": 9.0,
+    "p50": 14.38,
+    "p75": 19.81
+   },
+   "edges": [
+    {
+     "to": "Outside",
+     "n": 17,
+     "p": 0.6538,
+     "dwell_s": 15.25
+    },
+    {
+     "to": "Roof",
+     "n": 9,
+     "p": 0.3462,
+     "dwell_s": 11.75
+    }
+   ]
+  },
+  "Squeaky": {
+   "dwell_s": {
+    "p25": 2.22,
+    "p50": 4.69,
+    "p75": 12.91
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 64,
+     "p": 0.5424,
+     "dwell_s": 4.06
+    },
+    {
+     "to": "Lobby",
+     "n": 54,
+     "p": 0.4576,
+     "dwell_s": 4.69
+    }
+   ]
+  },
+  "TSpawn": {
+   "dwell_s": {
+    "p25": 4.22,
+    "p50": 4.62,
+    "p75": 5.0
+   },
+   "edges": [
+    {
+     "to": "Outside",
+     "n": 444,
+     "p": 1.0,
+     "dwell_s": 4.62
+    }
+   ]
+  },
+  "Trophy": {
+   "dwell_s": {
+    "p25": 1.38,
+    "p50": 2.31,
+    "p75": 4.88
+   },
+   "edges": [
+    {
+     "to": "Control",
+     "n": 125,
+     "p": 0.731,
+     "dwell_s": 2.88
+    },
+    {
+     "to": "Vending",
+     "n": 46,
+     "p": 0.269,
+     "dwell_s": 2.19
+    }
+   ]
+  },
+  "Tunnels": {
+   "dwell_s": {
+    "p25": 3.88,
+    "p50": 8.5,
+    "p75": 15.0
+   },
+   "edges": [
+    {
+     "to": "Decon",
+     "n": 56,
+     "p": 0.2963,
+     "dwell_s": 2.94
+    },
+    {
+     "to": "Secret",
+     "n": 45,
+     "p": 0.2381,
+     "dwell_s": 9.12
+    },
+    {
+     "to": "Vents",
+     "n": 38,
+     "p": 0.2011,
+     "dwell_s": 7.62
+    },
+    {
+     "to": "BombsiteB",
+     "n": 33,
+     "p": 0.1746,
+     "dwell_s": 11.88
+    },
+    {
+     "to": "Observation",
+     "n": 17,
+     "p": 0.0899,
+     "dwell_s": 12.38
+    }
+   ]
+  },
+  "Vending": {
+   "dwell_s": {
+    "p25": 1.5,
+    "p50": 3.0,
+    "p75": 5.34
+   },
+   "edges": [
+    {
+     "to": "Trophy",
+     "n": 140,
+     "p": 0.7179,
+     "dwell_s": 2.81
+    },
+    {
+     "to": "Lobby",
+     "n": 55,
+     "p": 0.2821,
+     "dwell_s": 3.75
+    }
+   ]
+  },
+  "Vents": {
+   "dwell_s": {
+    "p25": 2.0,
+    "p50": 4.5,
+    "p75": 7.69
+   },
+   "edges": [
+    {
+     "to": "Tunnels",
+     "n": 83,
+     "p": 0.8218,
+     "dwell_s": 3.88
+    },
+    {
+     "to": "BombsiteA",
+     "n": 18,
+     "p": 0.1782,
+     "dwell_s": 6.25
+    }
+   ]
+  }
+ },
+ "occupancy": {
+  "CT": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "Outside": 0.5134,
+      "CTSpawn": 0.479,
+      "Hell": 0.0076
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "Outside": 0.3176,
+      "Hell": 0.22,
+      "Heaven": 0.1286,
+      "Rafters": 0.117,
+      "Admin": 0.1041,
+      "Ramp": 0.0886,
+      "Garage": 0.0159,
+      "Mini": 0.0082
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "Ramp": 0.2192,
+      "BombsiteA": 0.1901,
+      "Outside": 0.1755,
+      "Rafters": 0.1225,
+      "Heaven": 0.0569,
+      "Crane": 0.0483,
+      "Garage": 0.0412,
+      "Mini": 0.0393,
+      "HutRoof": 0.0304,
+      "Admin": 0.0235,
+      "Hell": 0.0146,
+      "BombsiteB": 0.0132,
+      "Control": 0.0115,
+      "Catwalk": 0.0085,
+      "Secret": 0.0053
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "BombsiteA": 0.2012,
+      "Ramp": 0.1797,
+      "Outside": 0.155,
+      "Rafters": 0.0892,
+      "Mini": 0.0442,
+      "HutRoof": 0.0422,
+      "Crane": 0.0419,
+      "Garage": 0.0406,
+      "Heaven": 0.0326,
+      "Admin": 0.0298,
+      "Tunnels": 0.0283,
+      "Catwalk": 0.028,
+      "Control": 0.0251,
+      "Hell": 0.0167,
+      "Vents": 0.015,
+      "Observation": 0.0124,
+      "Secret": 0.0099,
+      "BombsiteB": 0.0082
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "BombsiteA": 0.1929,
+      "Ramp": 0.158,
+      "Outside": 0.1396,
+      "Rafters": 0.0652,
+      "Tunnels": 0.0579,
+      "Mini": 0.0487,
+      "Garage": 0.0446,
+      "HutRoof": 0.0384,
+      "Admin": 0.035,
+      "Crane": 0.0335,
+      "Heaven": 0.0329,
+      "Catwalk": 0.0324,
+      "Control": 0.0294,
+      "Vents": 0.0199,
+      "Hell": 0.0168,
+      "BombsiteB": 0.0124,
+      "Secret": 0.0109,
+      "Trophy": 0.0094,
+      "LockerRoom": 0.0086,
+      "Hut": 0.0079,
+      "Decon": 0.0055
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "BombsiteA": 0.1678,
+      "Ramp": 0.1509,
+      "Outside": 0.1357,
+      "Mini": 0.0611,
+      "Rafters": 0.0599,
+      "Tunnels": 0.0555,
+      "Garage": 0.0407,
+      "HutRoof": 0.0402,
+      "Catwalk": 0.0395,
+      "Hell": 0.0328,
+      "Admin": 0.0327,
+      "Crane": 0.0291,
+      "Control": 0.0235,
+      "Heaven": 0.0235,
+      "Secret": 0.0219,
+      "Vents": 0.0196,
+      "BombsiteB": 0.0181,
+      "LockerRoom": 0.0148,
+      "Decon": 0.0119,
+      "Hut": 0.0086,
+      "Trophy": 0.0069,
+      "Vending": 0.0053
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "BombsiteA": 0.1747,
+      "Ramp": 0.1484,
+      "Outside": 0.1298,
+      "Tunnels": 0.0604,
+      "Rafters": 0.06,
+      "Mini": 0.0599,
+      "Catwalk": 0.0402,
+      "Admin": 0.0396,
+      "Heaven": 0.0389,
+      "Garage": 0.0358,
+      "Hell": 0.0354,
+      "HutRoof": 0.0344,
+      "BombsiteB": 0.0307,
+      "Crane": 0.0221,
+      "LockerRoom": 0.0189,
+      "Secret": 0.0187,
+      "Vents": 0.0185,
+      "Control": 0.0151,
+      "Trophy": 0.0104,
+      "Decon": 0.008
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "BombsiteA": 0.1732,
+      "Ramp": 0.1666,
+      "Outside": 0.1136,
+      "Mini": 0.0569,
+      "Rafters": 0.0567,
+      "Tunnels": 0.054,
+      "Admin": 0.0462,
+      "BombsiteB": 0.0401,
+      "HutRoof": 0.0368,
+      "Heaven": 0.0361,
+      "Garage": 0.0348,
+      "Hell": 0.0276,
+      "LockerRoom": 0.0274,
+      "Crane": 0.0271,
+      "Catwalk": 0.0267,
+      "Secret": 0.0203,
+      "Vents": 0.0189,
+      "Control": 0.0129,
+      "Trophy": 0.0084,
+      "Decon": 0.0055,
+      "Vending": 0.0052,
+      "Hut": 0.0051
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "Ramp": 0.1792,
+      "BombsiteA": 0.1759,
+      "Outside": 0.096,
+      "Tunnels": 0.055,
+      "Rafters": 0.0545,
+      "BombsiteB": 0.0522,
+      "Mini": 0.0485,
+      "Admin": 0.0432,
+      "Garage": 0.0414,
+      "Heaven": 0.0381,
+      "Catwalk": 0.031,
+      "Hell": 0.03,
+      "HutRoof": 0.0288,
+      "LockerRoom": 0.0271,
+      "Crane": 0.0245,
+      "Vents": 0.018,
+      "Decon": 0.0128,
+      "Secret": 0.0097,
+      "Vending": 0.0081,
+      "Trophy": 0.0071,
+      "Hut": 0.007,
+      "Control": 0.0063,
+      "Observation": 0.0058
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "Ramp": 0.1758,
+      "BombsiteA": 0.166,
+      "Outside": 0.1036,
+      "Tunnels": 0.0576,
+      "BombsiteB": 0.0558,
+      "Rafters": 0.0543,
+      "Heaven": 0.0463,
+      "Admin": 0.0437,
+      "Mini": 0.0367,
+      "Hell": 0.0364,
+      "Garage": 0.0347,
+      "HutRoof": 0.0312,
+      "LockerRoom": 0.0238,
+      "Crane": 0.0231,
+      "Catwalk": 0.022,
+      "Hut": 0.015,
+      "Decon": 0.0136,
+      "Control": 0.0122,
+      "Vents": 0.0106,
+      "Observation": 0.0091,
+      "Secret": 0.0084,
+      "Squeaky": 0.0082,
+      "Vending": 0.0068,
+      "Trophy": 0.0054
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "BombsiteA": 0.1817,
+      "Ramp": 0.1691,
+      "Outside": 0.1063,
+      "BombsiteB": 0.0575,
+      "Tunnels": 0.0563,
+      "Heaven": 0.0552,
+      "Rafters": 0.0529,
+      "Hell": 0.0399,
+      "Admin": 0.0354,
+      "HutRoof": 0.0302,
+      "Mini": 0.0274,
+      "Garage": 0.0273,
+      "LockerRoom": 0.0243,
+      "Crane": 0.023,
+      "Control": 0.0174,
+      "Catwalk": 0.0164,
+      "Lobby": 0.0139,
+      "Vents": 0.0123,
+      "Decon": 0.0114,
+      "Hut": 0.0112,
+      "Observation": 0.0105,
+      "Squeaky": 0.0075,
+      "Trophy": 0.0068,
+      "Secret": 0.0063
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "BombsiteA": 0.1797,
+      "Ramp": 0.1431,
+      "Outside": 0.1111,
+      "BombsiteB": 0.0703,
+      "Tunnels": 0.0611,
+      "Heaven": 0.0462,
+      "Rafters": 0.0456,
+      "Hell": 0.0383,
+      "HutRoof": 0.0335,
+      "Admin": 0.0307,
+      "Garage": 0.0281,
+      "LockerRoom": 0.0245,
+      "Mini": 0.0213,
+      "Catwalk": 0.0196,
+      "Lobby": 0.0183,
+      "Squeaky": 0.0179,
+      "Hut": 0.0171,
+      "Crane": 0.0165,
+      "Vending": 0.0161,
+      "Observation": 0.0133,
+      "Decon": 0.0113,
+      "Trophy": 0.011,
+      "Control": 0.0092,
+      "Secret": 0.0088,
+      "Vents": 0.0071
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "BombsiteA": 0.1701,
+      "Ramp": 0.0962,
+      "BombsiteB": 0.0886,
+      "Outside": 0.0872,
+      "Heaven": 0.058,
+      "Tunnels": 0.0518,
+      "Admin": 0.0465,
+      "Hell": 0.0433,
+      "Lobby": 0.0422,
+      "Catwalk": 0.0334,
+      "HutRoof": 0.0333,
+      "Garage": 0.0324,
+      "Squeaky": 0.0296,
+      "Rafters": 0.0283,
+      "Hut": 0.0231,
+      "Control": 0.0218,
+      "Mini": 0.0163,
+      "Secret": 0.0153,
+      "LockerRoom": 0.0133,
+      "Crane": 0.0132,
+      "Vending": 0.0129,
+      "Observation": 0.0108,
+      "Decon": 0.0104,
+      "CTSpawn": 0.0091,
+      "Trophy": 0.0071,
+      "Vents": 0.0057
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "BombsiteA": 0.1746,
+      "Ramp": 0.1075,
+      "Outside": 0.1048,
+      "BombsiteB": 0.0881,
+      "Heaven": 0.0784,
+      "Tunnels": 0.0486,
+      "Hell": 0.0365,
+      "Lobby": 0.0364,
+      "Admin": 0.0361,
+      "Rafters": 0.035,
+      "Squeaky": 0.0349,
+      "HutRoof": 0.0302,
+      "Hut": 0.0273,
+      "Garage": 0.0249,
+      "Mini": 0.0184,
+      "Vents": 0.0178,
+      "Secret": 0.0168,
+      "Catwalk": 0.0167,
+      "Control": 0.015,
+      "CTSpawn": 0.0105,
+      "Vending": 0.0097,
+      "Observation": 0.0092,
+      "LockerRoom": 0.0089,
+      "Crane": 0.0085,
+      "Roof": 0.0051
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "BombsiteA": 0.214,
+      "Ramp": 0.1195,
+      "Outside": 0.1094,
+      "Heaven": 0.0722,
+      "BombsiteB": 0.0689,
+      "Tunnels": 0.0531,
+      "Lobby": 0.0414,
+      "Rafters": 0.0346,
+      "Hut": 0.0326,
+      "Squeaky": 0.0249,
+      "Catwalk": 0.0237,
+      "HutRoof": 0.0233,
+      "Secret": 0.0222,
+      "Hell": 0.0201,
+      "Garage": 0.0191,
+      "CTSpawn": 0.0185,
+      "Admin": 0.0157,
+      "Vents": 0.014,
+      "LockerRoom": 0.014,
+      "Mini": 0.0138,
+      "Crane": 0.0115,
+      "Roof": 0.011,
+      "Control": 0.0102,
+      "Observation": 0.0073,
+      "Trophy": 0.0052
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "BombsiteA": 0.2097,
+      "Outside": 0.1027,
+      "Ramp": 0.0829,
+      "BombsiteB": 0.0761,
+      "Heaven": 0.0693,
+      "Hut": 0.0624,
+      "Tunnels": 0.0534,
+      "Lobby": 0.037,
+      "CTSpawn": 0.0322,
+      "HutRoof": 0.0258,
+      "Rafters": 0.025,
+      "Admin": 0.0249,
+      "Vents": 0.0222,
+      "Hell": 0.0189,
+      "Mini": 0.0178,
+      "Squeaky": 0.0172,
+      "Catwalk": 0.0159,
+      "Garage": 0.0131,
+      "Crane": 0.013,
+      "Secret": 0.0127,
+      "LockerRoom": 0.0122,
+      "Roof": 0.011,
+      "Control": 0.0102,
+      "Decon": 0.0089,
+      "Trophy": 0.0089,
+      "Observation": 0.0088,
+      "Vending": 0.0078
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "BombsiteA": 0.2088,
+      "BombsiteB": 0.0865,
+      "Ramp": 0.0793,
+      "Outside": 0.0777,
+      "Tunnels": 0.0715,
+      "Hut": 0.0624,
+      "Heaven": 0.0595,
+      "Lobby": 0.0365,
+      "CTSpawn": 0.0305,
+      "Vents": 0.0284,
+      "HutRoof": 0.0279,
+      "Rafters": 0.0262,
+      "Hell": 0.0227,
+      "Admin": 0.0189,
+      "Trophy": 0.0184,
+      "Squeaky": 0.0177,
+      "LockerRoom": 0.0174,
+      "Catwalk": 0.0167,
+      "Crane": 0.0152,
+      "Vending": 0.015,
+      "Decon": 0.0144,
+      "Garage": 0.0133,
+      "Observation": 0.0107,
+      "Mini": 0.0106,
+      "Roof": 0.0072,
+      "Secret": 0.0069
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "BombsiteA": 0.2205,
+      "BombsiteB": 0.0982,
+      "Ramp": 0.0939,
+      "Tunnels": 0.0739,
+      "Heaven": 0.0666,
+      "Outside": 0.0632,
+      "Hut": 0.0504,
+      "Lobby": 0.0394,
+      "CTSpawn": 0.0328,
+      "HutRoof": 0.0317,
+      "Rafters": 0.0255,
+      "Admin": 0.0199,
+      "Secret": 0.017,
+      "Garage": 0.0164,
+      "Crane": 0.0164,
+      "LockerRoom": 0.0164,
+      "Hell": 0.0156,
+      "Vents": 0.0139,
+      "Trophy": 0.0135,
+      "Decon": 0.0123,
+      "Observation": 0.0118,
+      "Mini": 0.0115,
+      "Squeaky": 0.0092,
+      "Roof": 0.0082,
+      "Catwalk": 0.0078,
+      "Vending": 0.0076,
+      "Control": 0.0064
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "BombsiteA": 0.2038,
+      "Ramp": 0.1094,
+      "BombsiteB": 0.0869,
+      "Tunnels": 0.0636,
+      "Outside": 0.0547,
+      "Hut": 0.0515,
+      "Heaven": 0.0479,
+      "Rafters": 0.0392,
+      "CTSpawn": 0.0392,
+      "Vents": 0.034,
+      "Secret": 0.0339,
+      "HutRoof": 0.0278,
+      "Hell": 0.0251,
+      "Lobby": 0.0197,
+      "Observation": 0.0196,
+      "Garage": 0.0186,
+      "Crane": 0.0185,
+      "LockerRoom": 0.0185,
+      "Admin": 0.0179,
+      "Roof": 0.0175,
+      "Squeaky": 0.0102,
+      "Decon": 0.0093,
+      "TSpawn": 0.0092,
+      "Control": 0.009,
+      "Trophy": 0.009,
+      "Catwalk": 0.0059
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteA": 0.1665,
+      "Ramp": 0.1235,
+      "BombsiteB": 0.0865,
+      "Tunnels": 0.0833,
+      "Hut": 0.0682,
+      "Outside": 0.0606,
+      "CTSpawn": 0.0578,
+      "Heaven": 0.0437,
+      "Vents": 0.0332,
+      "Rafters": 0.03,
+      "HutRoof": 0.0262,
+      "Secret": 0.0243,
+      "Garage": 0.0212,
+      "LockerRoom": 0.0211,
+      "Roof": 0.0211,
+      "TSpawn": 0.02,
+      "Lobby": 0.019,
+      "Observation": 0.019,
+      "Crane": 0.0167,
+      "Hell": 0.0149,
+      "Decon": 0.0145,
+      "Squeaky": 0.0106,
+      "Admin": 0.0073,
+      "Control": 0.0056,
+      "Mini": 0.0052
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "BombsiteA": 0.1663,
+      "Ramp": 0.1153,
+      "BombsiteB": 0.0841,
+      "CTSpawn": 0.0812,
+      "Vents": 0.0647,
+      "Tunnels": 0.0622,
+      "Outside": 0.0493,
+      "Hut": 0.048,
+      "HutRoof": 0.0354,
+      "Hell": 0.0303,
+      "Heaven": 0.0284,
+      "Roof": 0.0261,
+      "TSpawn": 0.0261,
+      "Squeaky": 0.0252,
+      "Lobby": 0.0239,
+      "Secret": 0.0232,
+      "Admin": 0.0214,
+      "Garage": 0.0204,
+      "Rafters": 0.0203,
+      "Observation": 0.0147,
+      "Decon": 0.0137,
+      "Control": 0.0079,
+      "Vending": 0.0066,
+      "Mini": 0.0054
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "BombsiteA": 0.1648,
+      "BombsiteB": 0.1216,
+      "Ramp": 0.0878,
+      "CTSpawn": 0.086,
+      "Tunnels": 0.0723,
+      "Outside": 0.0588,
+      "Vents": 0.0539,
+      "Lobby": 0.0448,
+      "Hut": 0.0365,
+      "TSpawn": 0.0334,
+      "HutRoof": 0.0305,
+      "Roof": 0.0303,
+      "Secret": 0.0266,
+      "Observation": 0.0254,
+      "Heaven": 0.0223,
+      "Decon": 0.0194,
+      "Hell": 0.0166,
+      "Rafters": 0.016,
+      "Garage": 0.0154,
+      "LockerRoom": 0.0141,
+      "Mini": 0.0124,
+      "Admin": 0.0112
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "BombsiteB": 0.1971,
+      "BombsiteA": 0.1867,
+      "Outside": 0.0993,
+      "Vents": 0.0727,
+      "Ramp": 0.0552,
+      "CTSpawn": 0.0509,
+      "TSpawn": 0.0471,
+      "Hut": 0.0428,
+      "Garage": 0.0391,
+      "Lobby": 0.0378,
+      "Secret": 0.0295,
+      "Roof": 0.0261,
+      "Heaven": 0.0227,
+      "Crane": 0.0224,
+      "LockerRoom": 0.0223,
+      "Tunnels": 0.0187,
+      "HutRoof": 0.0125,
+      "Hell": 0.0093,
+      "Squeaky": 0.0078
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "BombsiteB": 0.1837,
+      "BombsiteA": 0.1235,
+      "CTSpawn": 0.1023,
+      "Ramp": 0.0723,
+      "Vents": 0.0712,
+      "Roof": 0.0701,
+      "Outside": 0.0693,
+      "Lobby": 0.0641,
+      "Garage": 0.0452,
+      "TSpawn": 0.0447,
+      "Crane": 0.0354,
+      "Secret": 0.0352,
+      "Squeaky": 0.0299,
+      "Hell": 0.0217,
+      "Mini": 0.0215,
+      "Decon": 0.0097
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "BombsiteA": 0.2179,
+      "Vents": 0.1347,
+      "BombsiteB": 0.126,
+      "TSpawn": 0.1034,
+      "Ramp": 0.0796,
+      "Lobby": 0.0749,
+      "Crane": 0.0724,
+      "Garage": 0.0631,
+      "CTSpawn": 0.0512,
+      "Roof": 0.0285,
+      "Outside": 0.0192,
+      "Mini": 0.0141,
+      "Secret": 0.009,
+      "Hell": 0.0061
+     }
+    }
+   ]
+  },
+  "T": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "TSpawn": 0.9067,
+      "Outside": 0.0933
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "Outside": 0.6256,
+      "Lobby": 0.2241,
+      "TSpawn": 0.0764,
+      "Roof": 0.0595,
+      "Squeaky": 0.0079,
+      "Vending": 0.0066
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "Outside": 0.392,
+      "Lobby": 0.2469,
+      "Vending": 0.0924,
+      "Roof": 0.0874,
+      "Squeaky": 0.0518,
+      "Silo": 0.0345,
+      "Trophy": 0.0319,
+      "Control": 0.0156,
+      "BombsiteA": 0.0147,
+      "TSpawn": 0.014,
+      "Hut": 0.0118,
+      "Vents": 0.007
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "Outside": 0.4033,
+      "Lobby": 0.2043,
+      "Vending": 0.0781,
+      "Roof": 0.0565,
+      "Squeaky": 0.0522,
+      "Trophy": 0.0455,
+      "Silo": 0.0447,
+      "Control": 0.0375,
+      "Ramp": 0.0176,
+      "TSpawn": 0.0116,
+      "Hut": 0.0114,
+      "BombsiteA": 0.0101,
+      "Vents": 0.0092,
+      "Secret": 0.0074,
+      "BombsiteB": 0.0055,
+      "Tunnels": 0.0052
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "Outside": 0.4041,
+      "Lobby": 0.194,
+      "Vending": 0.0597,
+      "Squeaky": 0.0572,
+      "Roof": 0.0463,
+      "Silo": 0.0454,
+      "Ramp": 0.0412,
+      "Control": 0.0363,
+      "Trophy": 0.0321,
+      "Hut": 0.019,
+      "BombsiteB": 0.0145,
+      "Vents": 0.0123,
+      "BombsiteA": 0.0116,
+      "Secret": 0.0104,
+      "Tunnels": 0.0102,
+      "TSpawn": 0.0057
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "Outside": 0.3909,
+      "Lobby": 0.1861,
+      "Ramp": 0.0621,
+      "Squeaky": 0.061,
+      "Vending": 0.0466,
+      "Roof": 0.0365,
+      "Silo": 0.0352,
+      "Secret": 0.0329,
+      "Trophy": 0.0323,
+      "BombsiteA": 0.024,
+      "BombsiteB": 0.0239,
+      "Hut": 0.0209,
+      "Tunnels": 0.0167,
+      "Vents": 0.0126,
+      "Control": 0.012,
+      "Mini": 0.0062
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "Outside": 0.3591,
+      "Lobby": 0.1599,
+      "Secret": 0.071,
+      "Squeaky": 0.0526,
+      "Vending": 0.0503,
+      "BombsiteA": 0.0467,
+      "Ramp": 0.0436,
+      "Roof": 0.041,
+      "Trophy": 0.0388,
+      "BombsiteB": 0.0355,
+      "Silo": 0.0254,
+      "Tunnels": 0.0237,
+      "Hut": 0.0151,
+      "Vents": 0.0119,
+      "Observation": 0.0101,
+      "Control": 0.0095,
+      "Mini": 0.0057
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "Outside": 0.3394,
+      "Lobby": 0.1414,
+      "Secret": 0.0765,
+      "Squeaky": 0.0591,
+      "Tunnels": 0.0462,
+      "Trophy": 0.0452,
+      "Vending": 0.0445,
+      "BombsiteA": 0.0422,
+      "Ramp": 0.0375,
+      "BombsiteB": 0.0325,
+      "Roof": 0.0302,
+      "Hut": 0.026,
+      "Control": 0.0238,
+      "Silo": 0.0237,
+      "Observation": 0.0103,
+      "Vents": 0.009,
+      "Mini": 0.0074,
+      "Garage": 0.005
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "Outside": 0.3084,
+      "Lobby": 0.1107,
+      "Secret": 0.0787,
+      "Tunnels": 0.0705,
+      "Squeaky": 0.0647,
+      "BombsiteA": 0.0534,
+      "Ramp": 0.0483,
+      "Trophy": 0.048,
+      "Control": 0.042,
+      "Roof": 0.0332,
+      "BombsiteB": 0.0317,
+      "Hut": 0.0231,
+      "Vending": 0.0224,
+      "Silo": 0.021,
+      "Vents": 0.0132,
+      "Observation": 0.0097,
+      "Decon": 0.0072,
+      "Mini": 0.007,
+      "Garage": 0.0067
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "Outside": 0.2776,
+      "Tunnels": 0.0988,
+      "Lobby": 0.0932,
+      "Secret": 0.0792,
+      "BombsiteA": 0.0686,
+      "Ramp": 0.0685,
+      "Squeaky": 0.0574,
+      "Control": 0.0521,
+      "Roof": 0.04,
+      "BombsiteB": 0.0384,
+      "Trophy": 0.0258,
+      "Vending": 0.0248,
+      "Hut": 0.0202,
+      "Silo": 0.0157,
+      "Vents": 0.011,
+      "Decon": 0.0077,
+      "Observation": 0.0077,
+      "Garage": 0.007,
+      "Mini": 0.0064
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "Outside": 0.2349,
+      "Tunnels": 0.1113,
+      "Ramp": 0.1015,
+      "BombsiteA": 0.0929,
+      "Lobby": 0.0913,
+      "Secret": 0.0803,
+      "BombsiteB": 0.0466,
+      "Squeaky": 0.0448,
+      "Roof": 0.0423,
+      "Vending": 0.0289,
+      "Control": 0.0251,
+      "Trophy": 0.0189,
+      "Hut": 0.0185,
+      "Mini": 0.0141,
+      "Garage": 0.0132,
+      "Silo": 0.0116,
+      "Decon": 0.0083,
+      "Vents": 0.008,
+      "Observation": 0.0076
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "Outside": 0.1916,
+      "Tunnels": 0.1151,
+      "Ramp": 0.1054,
+      "Lobby": 0.0999,
+      "BombsiteA": 0.0903,
+      "Secret": 0.0752,
+      "BombsiteB": 0.0612,
+      "Squeaky": 0.0488,
+      "Roof": 0.0458,
+      "Vending": 0.0319,
+      "Trophy": 0.0277,
+      "Garage": 0.0231,
+      "Hut": 0.0156,
+      "Silo": 0.0129,
+      "Vents": 0.0123,
+      "Control": 0.0115,
+      "Heaven": 0.0079,
+      "Hell": 0.0076,
+      "Mini": 0.0058,
+      "Admin": 0.0053,
+      "Decon": 0.0052
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "Outside": 0.1612,
+      "Tunnels": 0.12,
+      "BombsiteA": 0.0988,
+      "Ramp": 0.0961,
+      "Lobby": 0.09,
+      "BombsiteB": 0.0806,
+      "Secret": 0.0588,
+      "Squeaky": 0.0479,
+      "Roof": 0.0424,
+      "Garage": 0.0348,
+      "Vending": 0.0305,
+      "Hut": 0.0299,
+      "Control": 0.0276,
+      "Vents": 0.0144,
+      "Trophy": 0.0141,
+      "Silo": 0.0141,
+      "Heaven": 0.0134,
+      "Decon": 0.0128,
+      "Rafters": 0.0068,
+      "Hell": 0.0056
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "Outside": 0.1707,
+      "BombsiteA": 0.1301,
+      "Tunnels": 0.1012,
+      "Ramp": 0.0922,
+      "BombsiteB": 0.0706,
+      "Lobby": 0.0596,
+      "Secret": 0.0549,
+      "Garage": 0.0426,
+      "Squeaky": 0.0366,
+      "Roof": 0.0362,
+      "Control": 0.0274,
+      "Vending": 0.0257,
+      "Hut": 0.0231,
+      "Vents": 0.0201,
+      "Heaven": 0.0187,
+      "Decon": 0.0161,
+      "Silo": 0.0151,
+      "Trophy": 0.0148,
+      "Observation": 0.0125,
+      "Hell": 0.0082,
+      "Rafters": 0.0071,
+      "Admin": 0.0057,
+      "Mini": 0.0055,
+      "TSpawn": 0.0053
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "Outside": 0.1638,
+      "BombsiteA": 0.1113,
+      "Tunnels": 0.1064,
+      "BombsiteB": 0.1036,
+      "Ramp": 0.0764,
+      "Lobby": 0.0698,
+      "Secret": 0.0607,
+      "Garage": 0.0467,
+      "Squeaky": 0.0367,
+      "Roof": 0.0304,
+      "Decon": 0.0233,
+      "Hut": 0.0202,
+      "Trophy": 0.0183,
+      "Heaven": 0.0183,
+      "TSpawn": 0.0154,
+      "Vending": 0.0152,
+      "Observation": 0.0147,
+      "Vents": 0.0135,
+      "Control": 0.0126,
+      "Mini": 0.0126,
+      "Rafters": 0.012,
+      "Silo": 0.0115,
+      "Catwalk": 0.0067
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "BombsiteB": 0.1424,
+      "Outside": 0.1418,
+      "Tunnels": 0.096,
+      "BombsiteA": 0.0957,
+      "Ramp": 0.0697,
+      "Lobby": 0.0644,
+      "Secret": 0.0604,
+      "Garage": 0.0465,
+      "TSpawn": 0.0318,
+      "Roof": 0.0288,
+      "Squeaky": 0.0236,
+      "Vents": 0.0226,
+      "Hut": 0.0198,
+      "Control": 0.0195,
+      "Trophy": 0.0186,
+      "Observation": 0.0176,
+      "LockerRoom": 0.0175,
+      "Heaven": 0.0166,
+      "Rafters": 0.0153,
+      "Silo": 0.0129,
+      "Vending": 0.0125,
+      "Hell": 0.0098,
+      "Mini": 0.0092,
+      "Decon": 0.0069
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "BombsiteB": 0.1493,
+      "Outside": 0.1412,
+      "Tunnels": 0.1159,
+      "BombsiteA": 0.0996,
+      "Lobby": 0.0788,
+      "Ramp": 0.0647,
+      "Secret": 0.0596,
+      "Garage": 0.0371,
+      "Vents": 0.0301,
+      "Hut": 0.0291,
+      "Admin": 0.0224,
+      "Roof": 0.0188,
+      "TSpawn": 0.0177,
+      "Control": 0.0177,
+      "Hell": 0.0175,
+      "Squeaky": 0.0165,
+      "Heaven": 0.016,
+      "Silo": 0.0143,
+      "Observation": 0.0116,
+      "Vending": 0.009,
+      "Decon": 0.0089,
+      "Rafters": 0.0086,
+      "Catwalk": 0.0084,
+      "HutRoof": 0.0071
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "BombsiteB": 0.1623,
+      "Outside": 0.1557,
+      "Tunnels": 0.1521,
+      "BombsiteA": 0.1027,
+      "Ramp": 0.0939,
+      "Lobby": 0.0645,
+      "Mini": 0.0261,
+      "Vents": 0.0246,
+      "Squeaky": 0.0235,
+      "Garage": 0.0228,
+      "Admin": 0.0228,
+      "Heaven": 0.0211,
+      "Hut": 0.0196,
+      "Secret": 0.0159,
+      "Roof": 0.0155,
+      "Observation": 0.0125,
+      "Decon": 0.0121,
+      "Silo": 0.0114,
+      "Rafters": 0.0096,
+      "Catwalk": 0.0094,
+      "TSpawn": 0.0093,
+      "HutRoof": 0.0077,
+      "Control": 0.0051
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "BombsiteB": 0.2144,
+      "BombsiteA": 0.1405,
+      "Tunnels": 0.1347,
+      "Ramp": 0.0963,
+      "Outside": 0.0925,
+      "Lobby": 0.061,
+      "Mini": 0.0398,
+      "Hut": 0.0287,
+      "Vents": 0.0245,
+      "Decon": 0.0195,
+      "TSpawn": 0.0169,
+      "Garage": 0.0166,
+      "Observation": 0.0164,
+      "Rafters": 0.0158,
+      "Admin": 0.0139,
+      "Roof": 0.0113,
+      "Heaven": 0.0098,
+      "Squeaky": 0.0095,
+      "Secret": 0.0084,
+      "Silo": 0.0084,
+      "HutRoof": 0.0083,
+      "Catwalk": 0.0077,
+      "Hell": 0.0052
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteB": 0.2427,
+      "BombsiteA": 0.1732,
+      "Tunnels": 0.106,
+      "Ramp": 0.0958,
+      "Lobby": 0.0678,
+      "Outside": 0.0596,
+      "Mini": 0.0513,
+      "Vents": 0.0368,
+      "Hut": 0.0232,
+      "Decon": 0.0184,
+      "Heaven": 0.0182,
+      "Garage": 0.0153,
+      "Observation": 0.015,
+      "Secret": 0.014,
+      "Rafters": 0.0134,
+      "TSpawn": 0.0126,
+      "Roof": 0.0111,
+      "Squeaky": 0.0093,
+      "HutRoof": 0.0091,
+      "Admin": 0.007
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "BombsiteB": 0.2357,
+      "BombsiteA": 0.1626,
+      "Tunnels": 0.114,
+      "Ramp": 0.1028,
+      "Outside": 0.0685,
+      "Lobby": 0.0504,
+      "Roof": 0.0459,
+      "Mini": 0.041,
+      "Vents": 0.0274,
+      "Secret": 0.0241,
+      "Decon": 0.0216,
+      "Squeaky": 0.0167,
+      "HutRoof": 0.0165,
+      "Rafters": 0.0157,
+      "Hut": 0.0134,
+      "Observation": 0.012,
+      "Catwalk": 0.0109,
+      "Garage": 0.0107,
+      "Heaven": 0.0104
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "BombsiteB": 0.2611,
+      "BombsiteA": 0.1337,
+      "Ramp": 0.1246,
+      "Outside": 0.0932,
+      "Tunnels": 0.0754,
+      "Lobby": 0.0494,
+      "Secret": 0.0482,
+      "HutRoof": 0.0365,
+      "Roof": 0.0337,
+      "Vents": 0.0244,
+      "Mini": 0.0228,
+      "Catwalk": 0.0167,
+      "Decon": 0.0161,
+      "Hut": 0.0153,
+      "Garage": 0.0122,
+      "Rafters": 0.0122,
+      "TSpawn": 0.0096,
+      "Heaven": 0.0076,
+      "Squeaky": 0.0072
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "Ramp": 0.2089,
+      "BombsiteB": 0.1768,
+      "BombsiteA": 0.1187,
+      "Tunnels": 0.0997,
+      "Outside": 0.086,
+      "Lobby": 0.0703,
+      "HutRoof": 0.0495,
+      "Vents": 0.0388,
+      "Mini": 0.033,
+      "Decon": 0.0272,
+      "Secret": 0.025,
+      "Garage": 0.0166,
+      "Heaven": 0.0165,
+      "Catwalk": 0.0165,
+      "Squeaky": 0.0098,
+      "Hell": 0.0066
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "Ramp": 0.2429,
+      "BombsiteA": 0.1292,
+      "Tunnels": 0.1215,
+      "BombsiteB": 0.0959,
+      "Outside": 0.0726,
+      "Vents": 0.0631,
+      "HutRoof": 0.0615,
+      "Lobby": 0.0505,
+      "Catwalk": 0.0354,
+      "Decon": 0.0293,
+      "Garage": 0.018,
+      "Roof": 0.0163,
+      "Mini": 0.016,
+      "Vending": 0.0152,
+      "Admin": 0.0149,
+      "Secret": 0.0065,
+      "Heaven": 0.0057,
+      "Hell": 0.0057
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "Ramp": 0.1755,
+      "BombsiteA": 0.1148,
+      "BombsiteB": 0.1132,
+      "Outside": 0.1037,
+      "Tunnels": 0.0628,
+      "Lobby": 0.0624,
+      "Silo": 0.0464,
+      "Decon": 0.0358,
+      "HutRoof": 0.0353,
+      "Garage": 0.0301,
+      "Vents": 0.0297,
+      "Control": 0.0283,
+      "Secret": 0.0248,
+      "Roof": 0.0245,
+      "CTSpawn": 0.0215,
+      "Squeaky": 0.0209,
+      "Catwalk": 0.017,
+      "Hell": 0.0162,
+      "Hut": 0.0137,
+      "TSpawn": 0.0133,
+      "Trophy": 0.0101
+     }
+    }
+   ]
+  }
+ },
+ "forecast": {
+  "CT": {
+   "5s": {
+    "Admin": {
+     "n": 7617,
+     "p": {
+      "Ramp": 0.3729,
+      "Admin": 0.334,
+      "Hell": 0.118,
+      "Heaven": 0.0628,
+      "Outside": 0.0406,
+      "LockerRoom": 0.037,
+      "Rafters": 0.0198,
+      "BombsiteB": 0.0149
+     }
+    },
+    "BombsiteA": {
+     "n": 33152,
+     "p": {
+      "BombsiteA": 0.8333,
+      "Mini": 0.0424,
+      "Vents": 0.0416,
+      "Hut": 0.0363,
+      "HutRoof": 0.0186,
+      "Squeaky": 0.0141,
+      "Tunnels": 0.0137
+     }
+    },
+    "BombsiteB": {
+     "n": 8223,
+     "p": {
+      "BombsiteB": 0.8677,
+      "Tunnels": 0.0702,
+      "Ramp": 0.0497,
+      "Observation": 0.0123
+     }
+    },
+    "CTSpawn": {
+     "n": 10222,
+     "p": {
+      "Hell": 0.354,
+      "Outside": 0.3212,
+      "CTSpawn": 0.1731,
+      "Admin": 0.0837,
+      "Heaven": 0.0679
+     }
+    },
+    "Catwalk": {
+     "n": 4312,
+     "p": {
+      "Catwalk": 0.5778,
+      "Heaven": 0.214,
+      "Outside": 0.0747,
+      "Hell": 0.0623,
+      "Rafters": 0.044,
+      "Admin": 0.0273
+     }
+    },
+    "Control": {
+     "n": 2730,
+     "p": {
+      "Control": 0.5559,
+      "Trophy": 0.1832,
+      "Ramp": 0.1542,
+      "Vending": 0.0911,
+      "Lobby": 0.0155
+     }
+    },
+    "Crane": {
+     "n": 4952,
+     "p": {
+      "Crane": 0.7488,
+      "Rafters": 0.1667,
+      "Heaven": 0.0504,
+      "BombsiteA": 0.0197,
+      "HutRoof": 0.0144
+     }
+    },
+    "Decon": {
+     "n": 1390,
+     "p": {
+      "Decon": 0.6234,
+      "BombsiteB": 0.2189,
+      "Tunnels": 0.1578
+     }
+    },
+    "Garage": {
+     "n": 6330,
+     "p": {
+      "Garage": 0.798,
+      "Outside": 0.1908,
+      "Secret": 0.0112
+     }
+    },
+    "Heaven": {
+     "n": 10059,
+     "p": {
+      "Heaven": 0.3972,
+      "Rafters": 0.1545,
+      "BombsiteA": 0.152,
+      "Catwalk": 0.1228,
+      "Admin": 0.0457,
+      "Hell": 0.0365,
+      "Crane": 0.0316,
+      "Outside": 0.0212,
+      "HutRoof": 0.0201,
+      "LockerRoom": 0.0184
+     }
+    },
+    "Hell": {
+     "n": 8968,
+     "p": {
+      "Ramp": 0.1668,
+      "Rafters": 0.1471,
+      "Heaven": 0.1426,
+      "Hell": 0.1316,
+      "Admin": 0.1105,
+      "BombsiteA": 0.0999,
+      "Outside": 0.0817,
+      "LockerRoom": 0.0539,
+      "Crane": 0.037,
+      "Catwalk": 0.0288
+     }
+    },
+    "Hut": {
+     "n": 3116,
+     "p": {
+      "Hut": 0.6435,
+      "BombsiteA": 0.1894,
+      "Lobby": 0.1536,
+      "Vending": 0.0136
+     }
+    },
+    "HutRoof": {
+     "n": 6140,
+     "p": {
+      "HutRoof": 0.7883,
+      "BombsiteA": 0.1958,
+      "Vents": 0.0159
+     }
+    },
+    "Lobby": {
+     "n": 2182,
+     "p": {
+      "Lobby": 0.5485,
+      "Outside": 0.1179,
+      "Hut": 0.103,
+      "Roof": 0.0447,
+      "Squeaky": 0.0373,
+      "Control": 0.0354,
+      "Trophy": 0.0345,
+      "Vending": 0.0335,
+      "BombsiteA": 0.0315,
+      "Ramp": 0.0137
+     }
+    },
+    "LockerRoom": {
+     "n": 2867,
+     "p": {
+      "LockerRoom": 0.5869,
+      "Hell": 0.1698,
+      "Outside": 0.0945,
+      "Admin": 0.0698,
+      "Heaven": 0.0514,
+      "Ramp": 0.0162,
+      "Catwalk": 0.0116
+     }
+    },
+    "Mini": {
+     "n": 6560,
+     "p": {
+      "Mini": 0.5474,
+      "BombsiteA": 0.253,
+      "Outside": 0.1799,
+      "Vents": 0.0198
+     }
+    },
+    "Observation": {
+     "n": 1257,
+     "p": {
+      "Observation": 0.5882,
+      "Tunnels": 0.3111,
+      "BombsiteB": 0.0894,
+      "Vents": 0.0113
+     }
+    },
+    "Outside": {
+     "n": 35685,
+     "p": {
+      "Outside": 0.5738,
+      "Rafters": 0.0649,
+      "Heaven": 0.0639,
+      "Mini": 0.0637,
+      "Garage": 0.0525,
+      "Ramp": 0.0501,
+      "Admin": 0.0496,
+      "Hell": 0.0485,
+      "BombsiteA": 0.0224,
+      "Secret": 0.0106
+     }
+    },
+    "Rafters": {
+     "n": 12397,
+     "p": {
+      "Rafters": 0.577,
+      "BombsiteA": 0.1904,
+      "Heaven": 0.0771,
+      "HutRoof": 0.0621,
+      "Crane": 0.0601,
+      "Catwalk": 0.0332
+     }
+    },
+    "Ramp": {
+     "n": 29325,
+     "p": {
+      "Ramp": 0.8291,
+      "BombsiteB": 0.0606,
+      "Admin": 0.041,
+      "Control": 0.036,
+      "Hell": 0.0207,
+      "Observation": 0.0126
+     }
+    },
+    "Roof": {
+     "n": 622,
+     "p": {
+      "Roof": 1.0
+     }
+    },
+    "Secret": {
+     "n": 2518,
+     "p": {
+      "Secret": 0.5829,
+      "Tunnels": 0.2316,
+      "Outside": 0.1671,
+      "Garage": 0.0184
+     }
+    },
+    "Silo": {
+     "n": 0,
+     "p": {
+      "BombsiteA": 0.1753,
+      "Ramp": 0.1488,
+      "Outside": 0.1364,
+      "Rafters": 0.0634,
+      "Heaven": 0.0531,
+      "BombsiteB": 0.0478,
+      "Tunnels": 0.0468,
+      "Hell": 0.0438,
+      "Admin": 0.0389,
+      "Mini": 0.0347,
+      "Garage": 0.033,
+      "HutRoof": 0.031,
+      "Crane": 0.0247,
+      "Catwalk": 0.022,
+      "Vents": 0.018,
+      "Hut": 0.0167,
+      "LockerRoom": 0.0145,
+      "Control": 0.014,
+      "Secret": 0.0135,
+      "Lobby": 0.013,
+      "CTSpawn": 0.0105
+     }
+    },
+    "Squeaky": {
+     "n": 1546,
+     "p": {
+      "Squeaky": 0.6919,
+      "Lobby": 0.1365,
+      "BombsiteA": 0.1093,
+      "Vents": 0.0211,
+      "Outside": 0.0159,
+      "Tunnels": 0.0147,
+      "Vending": 0.0105
+     }
+    },
+    "TSpawn": {
+     "n": 549,
+     "p": {
+      "TSpawn": 1.0
+     }
+    },
+    "Trophy": {
+     "n": 1235,
+     "p": {
+      "Trophy": 0.4651,
+      "Vending": 0.2513,
+      "Lobby": 0.1053,
+      "Ramp": 0.0991,
+      "Control": 0.0792
+     }
+    },
+    "Tunnels": {
+     "n": 8556,
+     "p": {
+      "Tunnels": 0.7062,
+      "Secret": 0.1058,
+      "BombsiteB": 0.0606,
+      "Decon": 0.0473,
+      "Vents": 0.0395,
+      "Observation": 0.0293,
+      "Outside": 0.0113
+     }
+    },
+    "Vending": {
+     "n": 855,
+     "p": {
+      "Vending": 0.4075,
+      "Lobby": 0.2918,
+      "Control": 0.1478,
+      "Ramp": 0.0914,
+      "Trophy": 0.0615
+     }
+    },
+    "Vents": {
+     "n": 3392,
+     "p": {
+      "Vents": 0.4956,
+      "Tunnels": 0.3448,
+      "BombsiteA": 0.0765,
+      "Decon": 0.0462,
+      "BombsiteB": 0.0368
+     }
+    }
+   },
+   "10s": {
+    "Admin": {
+     "n": 6914,
+     "p": {
+      "Ramp": 0.3623,
+      "Admin": 0.2193,
+      "Hell": 0.0924,
+      "Heaven": 0.0733,
+      "LockerRoom": 0.0639,
+      "Outside": 0.0515,
+      "Control": 0.0298,
+      "Tunnels": 0.0262,
+      "Rafters": 0.0197,
+      "BombsiteA": 0.0173,
+      "CTSpawn": 0.0161,
+      "BombsiteB": 0.0149,
+      "Observation": 0.0135
+     }
+    },
+    "BombsiteA": {
+     "n": 30024,
+     "p": {
+      "BombsiteA": 0.7328,
+      "Mini": 0.0551,
+      "Hut": 0.0512,
+      "Tunnels": 0.0404,
+      "Vents": 0.0371,
+      "Outside": 0.0236,
+      "Squeaky": 0.023,
+      "HutRoof": 0.0192,
+      "Lobby": 0.0176
+     }
+    },
+    "BombsiteB": {
+     "n": 6726,
+     "p": {
+      "BombsiteB": 0.8113,
+      "Tunnels": 0.0853,
+      "Ramp": 0.0696,
+      "Vents": 0.0172,
+      "Decon": 0.0166
+     }
+    },
+    "CTSpawn": {
+     "n": 9839,
+     "p": {
+      "Ramp": 0.2029,
+      "Outside": 0.1666,
+      "CTSpawn": 0.1419,
+      "Rafters": 0.1336,
+      "BombsiteA": 0.1327,
+      "Heaven": 0.0539,
+      "Crane": 0.0425,
+      "Garage": 0.0388,
+      "Mini": 0.0333,
+      "Admin": 0.0199,
+      "HutRoof": 0.0172,
+      "Hell": 0.0165
+     }
+    },
+    "Catwalk": {
+     "n": 4055,
+     "p": {
+      "Catwalk": 0.4329,
+      "Heaven": 0.203,
+      "Outside": 0.0979,
+      "Hell": 0.0784,
+      "Admin": 0.0699,
+      "Rafters": 0.0616,
+      "Ramp": 0.0353,
+      "BombsiteA": 0.021
+     }
+    },
+    "Control": {
+     "n": 2545,
+     "p": {
+      "Control": 0.3562,
+      "Trophy": 0.1878,
+      "Ramp": 0.1856,
+      "Vending": 0.1284,
+      "Lobby": 0.0741,
+      "Admin": 0.0306,
+      "BombsiteB": 0.0267,
+      "BombsiteA": 0.0106
+     }
+    },
+    "Crane": {
+     "n": 4750,
+     "p": {
+      "Crane": 0.597,
+      "Rafters": 0.223,
+      "Heaven": 0.0969,
+      "BombsiteA": 0.0464,
+      "Catwalk": 0.0194,
+      "HutRoof": 0.0173
+     }
+    },
+    "Decon": {
+     "n": 1136,
+     "p": {
+      "Decon": 0.4934,
+      "BombsiteB": 0.3051,
+      "Tunnels": 0.2015
+     }
+    },
+    "Garage": {
+     "n": 5817,
+     "p": {
+      "Garage": 0.6589,
+      "Outside": 0.2564,
+      "Hell": 0.0279,
+      "Admin": 0.0169,
+      "Secret": 0.0139,
+      "Mini": 0.0138,
+      "Tunnels": 0.0123
+     }
+    },
+    "Heaven": {
+     "n": 9195,
+     "p": {
+      "Heaven": 0.301,
+      "BombsiteA": 0.1795,
+      "Rafters": 0.1385,
+      "Catwalk": 0.1128,
+      "Admin": 0.0491,
+      "Outside": 0.0478,
+      "Ramp": 0.0451,
+      "Hell": 0.0348,
+      "Crane": 0.0335,
+      "LockerRoom": 0.0235,
+      "HutRoof": 0.0227,
+      "Vents": 0.0117
+     }
+    },
+    "Hell": {
+     "n": 8599,
+     "p": {
+      "Ramp": 0.1674,
+      "BombsiteA": 0.1515,
+      "Heaven": 0.1104,
+      "Hell": 0.1008,
+      "Rafters": 0.0882,
+      "Admin": 0.0758,
+      "Outside": 0.0753,
+      "LockerRoom": 0.0561,
+      "Catwalk": 0.0533,
+      "Crane": 0.0352,
+      "HutRoof": 0.031,
+      "CTSpawn": 0.0285,
+      "Observation": 0.0147,
+      "Control": 0.0117
+     }
+    },
+    "Hut": {
+     "n": 2817,
+     "p": {
+      "Hut": 0.5096,
+      "BombsiteA": 0.2211,
+      "Lobby": 0.1356,
+      "Roof": 0.0365,
+      "Vending": 0.0286,
+      "Vents": 0.0243,
+      "Tunnels": 0.0204,
+      "HutRoof": 0.0128,
+      "Trophy": 0.0112
+     }
+    },
+    "HutRoof": {
+     "n": 5924,
+     "p": {
+      "HutRoof": 0.642,
+      "BombsiteA": 0.2614,
+      "Vents": 0.0347,
+      "Mini": 0.0217,
+      "Tunnels": 0.0205,
+      "Hut": 0.0196
+     }
+    },
+    "Lobby": {
+     "n": 1806,
+     "p": {
+      "Lobby": 0.3759,
+      "Outside": 0.1198,
+      "Hut": 0.1125,
+      "BombsiteA": 0.076,
+      "Squeaky": 0.0722,
+      "Roof": 0.0716,
+      "TSpawn": 0.0593,
+      "Ramp": 0.0573,
+      "Control": 0.0448,
+      "Trophy": 0.0107
+     }
+    },
+    "LockerRoom": {
+     "n": 2701,
+     "p": {
+      "LockerRoom": 0.3703,
+      "Hell": 0.1739,
+      "Outside": 0.1164,
+      "Ramp": 0.1036,
+      "Heaven": 0.0987,
+      "Admin": 0.0739,
+      "Catwalk": 0.0383,
+      "BombsiteA": 0.0129,
+      "Rafters": 0.0121
+     }
+    },
+    "Mini": {
+     "n": 5856,
+     "p": {
+      "Mini": 0.4003,
+      "BombsiteA": 0.3195,
+      "Outside": 0.1978,
+      "Vents": 0.026,
+      "Tunnels": 0.019,
+      "HutRoof": 0.0141,
+      "Garage": 0.0128,
+      "Squeaky": 0.0105
+     }
+    },
+    "Observation": {
+     "n": 1059,
+     "p": {
+      "Observation": 0.5012,
+      "Tunnels": 0.332,
+      "BombsiteB": 0.0918,
+      "Secret": 0.0378,
+      "Ramp": 0.0372
+     }
+    },
+    "Outside": {
+     "n": 33684,
+     "p": {
+      "Outside": 0.4414,
+      "BombsiteA": 0.0953,
+      "Ramp": 0.0723,
+      "Mini": 0.0703,
+      "Garage": 0.0685,
+      "Admin": 0.0453,
+      "Heaven": 0.042,
+      "Hell": 0.0406,
+      "Rafters": 0.033,
+      "Catwalk": 0.0209,
+      "Tunnels": 0.017,
+      "Crane": 0.014,
+      "LockerRoom": 0.0136,
+      "Secret": 0.0131,
+      "HutRoof": 0.0127
+     }
+    },
+    "Rafters": {
+     "n": 11594,
+     "p": {
+      "Rafters": 0.4613,
+      "BombsiteA": 0.2178,
+      "HutRoof": 0.0812,
+      "Crane": 0.0701,
+      "Heaven": 0.0626,
+      "Catwalk": 0.037,
+      "Vents": 0.0158,
+      "Admin": 0.0148,
+      "LockerRoom": 0.0139,
+      "Hell": 0.0136,
+      "Outside": 0.012
+     }
+    },
+    "Ramp": {
+     "n": 27451,
+     "p": {
+      "Ramp": 0.7092,
+      "BombsiteB": 0.0912,
+      "Control": 0.0453,
+      "Admin": 0.045,
+      "Hell": 0.0332,
+      "Tunnels": 0.0274,
+      "Heaven": 0.0206,
+      "Outside": 0.0146,
+      "Trophy": 0.0136
+     }
+    },
+    "Roof": {
+     "n": 462,
+     "p": {
+      "Roof": 1.0
+     }
+    },
+    "Secret": {
+     "n": 2214,
+     "p": {
+      "Secret": 0.4187,
+      "Tunnels": 0.3216,
+      "Outside": 0.156,
+      "Mini": 0.0343,
+      "Vents": 0.0278,
+      "BombsiteB": 0.0211,
+      "Garage": 0.0206
+     }
+    },
+    "Silo": {
+     "n": 0,
+     "p": {
+      "BombsiteA": 0.1911,
+      "Ramp": 0.1545,
+      "Outside": 0.1198,
+      "Rafters": 0.0585,
+      "BombsiteB": 0.0522,
+      "Tunnels": 0.0511,
+      "Heaven": 0.0462,
+      "Mini": 0.0371,
+      "Garage": 0.0346,
+      "HutRoof": 0.0338,
+      "Admin": 0.0329,
+      "Hell": 0.0277,
+      "Crane": 0.0268,
+      "Catwalk": 0.024,
+      "Vents": 0.0197,
+      "Hut": 0.0182,
+      "LockerRoom": 0.0158,
+      "Control": 0.0153,
+      "Secret": 0.0147,
+      "Lobby": 0.0142,
+      "CTSpawn": 0.0115
+     }
+    },
+    "Squeaky": {
+     "n": 1433,
+     "p": {
+      "Squeaky": 0.4741,
+      "BombsiteA": 0.1491,
+      "Lobby": 0.1351,
+      "Outside": 0.0506,
+      "Vents": 0.0406,
+      "Tunnels": 0.0387,
+      "Hut": 0.0342,
+      "HutRoof": 0.0223,
+      "Control": 0.0164,
+      "Vending": 0.0143,
+      "Ramp": 0.0138,
+      "Trophy": 0.0107
+     }
+    },
+    "TSpawn": {
+     "n": 421,
+     "p": {
+      "TSpawn": 1.0
+     }
+    },
+    "Trophy": {
+     "n": 1097,
+     "p": {
+      "Trophy": 0.325,
+      "Vending": 0.2148,
+      "Lobby": 0.1896,
+      "Ramp": 0.1713,
+      "Control": 0.0552,
+      "BombsiteB": 0.0182,
+      "Admin": 0.0152,
+      "Heaven": 0.0107
+     }
+    },
+    "Tunnels": {
+     "n": 7463,
+     "p": {
+      "Tunnels": 0.524,
+      "Secret": 0.1586,
+      "BombsiteB": 0.0985,
+      "Vents": 0.0557,
+      "Observation": 0.0531,
+      "Outside": 0.0516,
+      "Decon": 0.0452,
+      "Ramp": 0.0133
+     }
+    },
+    "Vending": {
+     "n": 642,
+     "p": {
+      "Vending": 0.3135,
+      "Ramp": 0.2493,
+      "Lobby": 0.2272,
+      "Outside": 0.0589,
+      "Control": 0.0481,
+      "Trophy": 0.0449,
+      "BombsiteB": 0.0332,
+      "Admin": 0.0128,
+      "BombsiteA": 0.0121
+     }
+    },
+    "Vents": {
+     "n": 2933,
+     "p": {
+      "Vents": 0.3669,
+      "Tunnels": 0.3135,
+      "BombsiteA": 0.1168,
+      "Decon": 0.0704,
+      "BombsiteB": 0.0629,
+      "Secret": 0.0259,
+      "Observation": 0.0155,
+      "Mini": 0.0143,
+      "Lobby": 0.0138
+     }
+    }
+   }
+  },
+  "T": {
+   "5s": {
+    "Admin": {
+     "n": 565,
+     "p": {
+      "Ramp": 0.5311,
+      "Hell": 0.1874,
+      "Admin": 0.166,
+      "Heaven": 0.0661,
+      "Outside": 0.0321,
+      "BombsiteA": 0.0171
+     }
+    },
+    "BombsiteA": {
+     "n": 11159,
+     "p": {
+      "BombsiteA": 0.8605,
+      "Hut": 0.0371,
+      "Lobby": 0.0366,
+      "Squeaky": 0.0222,
+      "HutRoof": 0.0169,
+      "Mini": 0.0143,
+      "Vents": 0.0125
+     }
+    },
+    "BombsiteB": {
+     "n": 11261,
+     "p": {
+      "BombsiteB": 0.8442,
+      "Ramp": 0.0662,
+      "Tunnels": 0.0459,
+      "Observation": 0.0255,
+      "Decon": 0.0181
+     }
+    },
+    "CTSpawn": {
+     "n": 10,
+     "p": {
+      "CTSpawn": 0.5258,
+      "Outside": 0.1575,
+      "Lobby": 0.0724,
+      "BombsiteA": 0.0318,
+      "Ramp": 0.0316,
+      "BombsiteB": 0.0311,
+      "Tunnels": 0.0308,
+      "Roof": 0.0221,
+      "Squeaky": 0.022,
+      "Secret": 0.0213,
+      "Vending": 0.0188,
+      "Trophy": 0.0128,
+      "Silo": 0.0113,
+      "Control": 0.0107
+     }
+    },
+    "Catwalk": {
+     "n": 492,
+     "p": {
+      "Catwalk": 0.4747,
+      "Heaven": 0.3495,
+      "Rafters": 0.0849,
+      "Hell": 0.0465,
+      "Outside": 0.0444
+     }
+    },
+    "Control": {
+     "n": 3737,
+     "p": {
+      "Ramp": 0.586,
+      "Control": 0.3355,
+      "Vending": 0.0357,
+      "Lobby": 0.0222,
+      "Trophy": 0.0206
+     }
+    },
+    "Crane": {
+     "n": 0,
+     "p": {
+      "Outside": 0.3128,
+      "Lobby": 0.1438,
+      "BombsiteA": 0.0632,
+      "Ramp": 0.0628,
+      "BombsiteB": 0.0618,
+      "Tunnels": 0.0611,
+      "Roof": 0.0439,
+      "Squeaky": 0.0438,
+      "Secret": 0.0423,
+      "Vending": 0.0373,
+      "Trophy": 0.0253,
+      "Silo": 0.0224,
+      "Control": 0.0213,
+      "Hut": 0.018,
+      "Vents": 0.0145,
+      "TSpawn": 0.013,
+      "Garage": 0.0125
+     }
+    },
+    "Decon": {
+     "n": 1348,
+     "p": {
+      "Decon": 0.5462,
+      "Tunnels": 0.2517,
+      "BombsiteB": 0.1798,
+      "Vents": 0.0223
+     }
+    },
+    "Garage": {
+     "n": 2451,
+     "p": {
+      "Garage": 0.6816,
+      "Outside": 0.2917,
+      "Mini": 0.0267
+     }
+    },
+    "Heaven": {
+     "n": 966,
+     "p": {
+      "Heaven": 0.5776,
+      "Rafters": 0.188,
+      "Catwalk": 0.1247,
+      "BombsiteA": 0.0962,
+      "Outside": 0.0135
+     }
+    },
+    "Hell": {
+     "n": 553,
+     "p": {
+      "Admin": 0.3804,
+      "Heaven": 0.201,
+      "Outside": 0.1525,
+      "Ramp": 0.0675,
+      "Rafters": 0.0646,
+      "BombsiteA": 0.0603,
+      "Hell": 0.0341,
+      "CTSpawn": 0.0287,
+      "LockerRoom": 0.0108
+     }
+    },
+    "Hut": {
+     "n": 2790,
+     "p": {
+      "Hut": 0.4686,
+      "BombsiteA": 0.3175,
+      "Lobby": 0.1858,
+      "Roof": 0.0281
+     }
+    },
+    "HutRoof": {
+     "n": 759,
+     "p": {
+      "HutRoof": 0.787,
+      "BombsiteA": 0.1102,
+      "Squeaky": 0.0401,
+      "Hut": 0.0332,
+      "Lobby": 0.0295
+     }
+    },
+    "Lobby": {
+     "n": 28275,
+     "p": {
+      "Lobby": 0.6097,
+      "Vending": 0.0911,
+      "Squeaky": 0.0806,
+      "Hut": 0.0641,
+      "Outside": 0.0602,
+      "Trophy": 0.0352,
+      "BombsiteA": 0.0233,
+      "Control": 0.0197,
+      "Roof": 0.0162
+     }
+    },
+    "LockerRoom": {
+     "n": 213,
+     "p": {
+      "Hell": 0.5462,
+      "Admin": 0.2361,
+      "Outside": 0.1527,
+      "Heaven": 0.0372,
+      "LockerRoom": 0.0278
+     }
+    },
+    "Mini": {
+     "n": 1542,
+     "p": {
+      "Mini": 0.4886,
+      "BombsiteA": 0.2938,
+      "Outside": 0.2044,
+      "Garage": 0.0133
+     }
+    },
+    "Observation": {
+     "n": 1197,
+     "p": {
+      "Observation": 0.5347,
+      "Tunnels": 0.2899,
+      "BombsiteB": 0.1481,
+      "Ramp": 0.0138,
+      "Vents": 0.0135
+     }
+    },
+    "Outside": {
+     "n": 63649,
+     "p": {
+      "Outside": 0.7991,
+      "Lobby": 0.0804,
+      "Secret": 0.0447,
+      "Roof": 0.0323,
+      "Vending": 0.0151,
+      "Garage": 0.0147,
+      "Mini": 0.0137
+     }
+    },
+    "Rafters": {
+     "n": 579,
+     "p": {
+      "Rafters": 0.6392,
+      "Heaven": 0.1556,
+      "BombsiteA": 0.1047,
+      "Hut": 0.0556,
+      "Catwalk": 0.045
+     }
+    },
+    "Ramp": {
+     "n": 11609,
+     "p": {
+      "Ramp": 0.8101,
+      "BombsiteB": 0.1764,
+      "Admin": 0.0135
+     }
+    },
+    "Roof": {
+     "n": 8706,
+     "p": {
+      "Roof": 0.6502,
+      "Lobby": 0.1469,
+      "Silo": 0.1083,
+      "Outside": 0.0808,
+      "Hut": 0.0138
+     }
+    },
+    "Secret": {
+     "n": 8469,
+     "p": {
+      "Secret": 0.6609,
+      "Tunnels": 0.2491,
+      "Outside": 0.09
+     }
+    },
+    "Silo": {
+     "n": 4458,
+     "p": {
+      "Silo": 0.7986,
+      "Outside": 0.1652,
+      "Roof": 0.0361
+     }
+    },
+    "Squeaky": {
+     "n": 8367,
+     "p": {
+      "Squeaky": 0.7183,
+      "Lobby": 0.1268,
+      "BombsiteA": 0.1235,
+      "Vents": 0.0171,
+      "Outside": 0.0143
+     }
+    },
+    "TSpawn": {
+     "n": 18273,
+     "p": {
+      "Outside": 0.6322,
+      "Lobby": 0.1961,
+      "TSpawn": 0.1227,
+      "Roof": 0.0489
+     }
+    },
+    "Trophy": {
+     "n": 4976,
+     "p": {
+      "Trophy": 0.4567,
+      "Control": 0.353,
+      "Ramp": 0.1024,
+      "Vending": 0.0548,
+      "Lobby": 0.0331
+     }
+    },
+    "Tunnels": {
+     "n": 11670,
+     "p": {
+      "Tunnels": 0.7422,
+      "BombsiteB": 0.0811,
+      "Vents": 0.0595,
+      "Secret": 0.0485,
+      "Decon": 0.0437,
+      "Observation": 0.025
+     }
+    },
+    "Vending": {
+     "n": 7641,
+     "p": {
+      "Vending": 0.5085,
+      "Trophy": 0.2269,
+      "Lobby": 0.1375,
+      "Control": 0.1061,
+      "Ramp": 0.0211
+     }
+    },
+    "Vents": {
+     "n": 2792,
+     "p": {
+      "Vents": 0.6759,
+      "Tunnels": 0.2023,
+      "BombsiteA": 0.0644,
+      "BombsiteB": 0.0247,
+      "Decon": 0.021,
+      "Squeaky": 0.0117
+     }
+    }
+   },
+   "10s": {
+    "Admin": {
+     "n": 530,
+     "p": {
+      "Ramp": 0.4518,
+      "BombsiteB": 0.1452,
+      "Outside": 0.1079,
+      "BombsiteA": 0.0835,
+      "Heaven": 0.0525,
+      "Hell": 0.0487,
+      "Admin": 0.0468,
+      "Rafters": 0.0431,
+      "LockerRoom": 0.0206
+     }
+    },
+    "BombsiteA": {
+     "n": 9682,
+     "p": {
+      "BombsiteA": 0.7515,
+      "Lobby": 0.0668,
+      "Hut": 0.0507,
+      "Outside": 0.0352,
+      "HutRoof": 0.0322,
+      "Mini": 0.0228,
+      "Squeaky": 0.0217,
+      "Roof": 0.019
+     }
+    },
+    "BombsiteB": {
+     "n": 9845,
+     "p": {
+      "BombsiteB": 0.7385,
+      "Ramp": 0.1266,
+      "Tunnels": 0.0796,
+      "Observation": 0.0226,
+      "Decon": 0.0214,
+      "Vents": 0.0113
+     }
+    },
+    "CTSpawn": {
+     "n": 0,
+     "p": {
+      "Outside": 0.2862,
+      "Lobby": 0.1374,
+      "BombsiteA": 0.0695,
+      "Ramp": 0.0691,
+      "BombsiteB": 0.068,
+      "Tunnels": 0.0672,
+      "Squeaky": 0.0474,
+      "Secret": 0.0465,
+      "Roof": 0.0427,
+      "Vending": 0.0404,
+      "Trophy": 0.0279,
+      "Silo": 0.0247,
+      "Control": 0.0235,
+      "Hut": 0.0198,
+      "Vents": 0.0159,
+      "Garage": 0.0138
+     }
+    },
+    "Catwalk": {
+     "n": 475,
+     "p": {
+      "Catwalk": 0.4159,
+      "Heaven": 0.2634,
+      "Rafters": 0.0983,
+      "Outside": 0.0725,
+      "CTSpawn": 0.0523,
+      "BombsiteA": 0.0494,
+      "Hell": 0.0481
+     }
+    },
+    "Control": {
+     "n": 3409,
+     "p": {
+      "Ramp": 0.6232,
+      "BombsiteB": 0.1298,
+      "Control": 0.1136,
+      "Trophy": 0.0324,
+      "Lobby": 0.0315,
+      "Vending": 0.03,
+      "Admin": 0.0254,
+      "Outside": 0.0141
+     }
+    },
+    "Crane": {
+     "n": 0,
+     "p": {
+      "Outside": 0.2862,
+      "Lobby": 0.1374,
+      "BombsiteA": 0.0695,
+      "Ramp": 0.0691,
+      "BombsiteB": 0.068,
+      "Tunnels": 0.0672,
+      "Squeaky": 0.0474,
+      "Secret": 0.0465,
+      "Roof": 0.0427,
+      "Vending": 0.0404,
+      "Trophy": 0.0279,
+      "Silo": 0.0247,
+      "Control": 0.0235,
+      "Hut": 0.0198,
+      "Vents": 0.0159,
+      "Garage": 0.0138
+     }
+    },
+    "Decon": {
+     "n": 1218,
+     "p": {
+      "Decon": 0.3853,
+      "Tunnels": 0.3005,
+      "BombsiteB": 0.1645,
+      "Vents": 0.1337,
+      "Secret": 0.0159
+     }
+    },
+    "Garage": {
+     "n": 2291,
+     "p": {
+      "Garage": 0.5261,
+      "Outside": 0.3346,
+      "BombsiteA": 0.0822,
+      "Mini": 0.0467,
+      "LockerRoom": 0.0105
+     }
+    },
+    "Heaven": {
+     "n": 832,
+     "p": {
+      "Heaven": 0.4589,
+      "Rafters": 0.2629,
+      "Catwalk": 0.1159,
+      "BombsiteA": 0.0964,
+      "Hut": 0.0325,
+      "Outside": 0.0176,
+      "Lobby": 0.0159
+     }
+    },
+    "Hell": {
+     "n": 535,
+     "p": {
+      "Ramp": 0.3905,
+      "Heaven": 0.1391,
+      "BombsiteA": 0.1217,
+      "CTSpawn": 0.0927,
+      "Outside": 0.0792,
+      "Admin": 0.0742,
+      "Rafters": 0.0594,
+      "Lobby": 0.0284,
+      "Catwalk": 0.0149
+     }
+    },
+    "Hut": {
+     "n": 2224,
+     "p": {
+      "BombsiteA": 0.3723,
+      "Hut": 0.3295,
+      "Lobby": 0.1819,
+      "Roof": 0.0532,
+      "Squeaky": 0.0183,
+      "Vending": 0.0169,
+      "HutRoof": 0.0145,
+      "Trophy": 0.0133
+     }
+    },
+    "HutRoof": {
+     "n": 719,
+     "p": {
+      "HutRoof": 0.5783,
+      "BombsiteA": 0.1548,
+      "Squeaky": 0.0977,
+      "Lobby": 0.0614,
+      "Tunnels": 0.0369,
+      "Outside": 0.0273,
+      "Hut": 0.0252,
+      "Vents": 0.0182
+     }
+    },
+    "Lobby": {
+     "n": 25793,
+     "p": {
+      "Lobby": 0.4737,
+      "Squeaky": 0.0984,
+      "Outside": 0.0865,
+      "Vending": 0.0807,
+      "Hut": 0.0653,
+      "BombsiteA": 0.0642,
+      "Trophy": 0.0452,
+      "Control": 0.0415,
+      "Ramp": 0.0231,
+      "Roof": 0.0214
+     }
+    },
+    "LockerRoom": {
+     "n": 213,
+     "p": {
+      "Admin": 0.3927,
+      "Ramp": 0.234,
+      "Outside": 0.1742,
+      "Heaven": 0.0926,
+      "Rafters": 0.0787,
+      "Hell": 0.0279
+     }
+    },
+    "Mini": {
+     "n": 1327,
+     "p": {
+      "BombsiteA": 0.3665,
+      "Outside": 0.2879,
+      "Mini": 0.2648,
+      "Garage": 0.0251,
+      "Squeaky": 0.023,
+      "HutRoof": 0.0205,
+      "Vents": 0.0122
+     }
+    },
+    "Observation": {
+     "n": 989,
+     "p": {
+      "Tunnels": 0.4759,
+      "Observation": 0.2947,
+      "BombsiteB": 0.1772,
+      "Ramp": 0.0521
+     }
+    },
+    "Outside": {
+     "n": 59588,
+     "p": {
+      "Outside": 0.7193,
+      "Secret": 0.0814,
+      "Lobby": 0.0751,
+      "Roof": 0.029,
+      "Tunnels": 0.0226,
+      "Garage": 0.0207,
+      "Vending": 0.02,
+      "Mini": 0.0181,
+      "Squeaky": 0.0139
+     }
+    },
+    "Rafters": {
+     "n": 530,
+     "p": {
+      "Rafters": 0.4547,
+      "Heaven": 0.188,
+      "Catwalk": 0.1034,
+      "BombsiteA": 0.0989,
+      "Lobby": 0.0945,
+      "Hut": 0.0605
+     }
+    },
+    "Ramp": {
+     "n": 10204,
+     "p": {
+      "Ramp": 0.6563,
+      "BombsiteB": 0.2895,
+      "Observation": 0.0297,
+      "Control": 0.0125,
+      "Hell": 0.012
+     }
+    },
+    "Roof": {
+     "n": 8124,
+     "p": {
+      "Roof": 0.4907,
+      "Lobby": 0.2239,
+      "Silo": 0.1169,
+      "Outside": 0.0992,
+      "Hut": 0.0427,
+      "BombsiteA": 0.0267
+     }
+    },
+    "Secret": {
+     "n": 8114,
+     "p": {
+      "Secret": 0.4466,
+      "Tunnels": 0.3885,
+      "Outside": 0.1254,
+      "Garage": 0.0293,
+      "Mini": 0.0103
+     }
+    },
+    "Silo": {
+     "n": 4228,
+     "p": {
+      "Silo": 0.6189,
+      "Outside": 0.2898,
+      "Roof": 0.0385,
+      "Lobby": 0.0157,
+      "BombsiteA": 0.0141,
+      "LockerRoom": 0.0126,
+      "Hell": 0.0104
+     }
+    },
+    "Squeaky": {
+     "n": 7484,
+     "p": {
+      "Squeaky": 0.6041,
+      "BombsiteA": 0.1646,
+      "Lobby": 0.1437,
+      "Outside": 0.0425,
+      "Vents": 0.0271,
+      "Vending": 0.018
+     }
+    },
+    "TSpawn": {
+     "n": 17864,
+     "p": {
+      "Outside": 0.4111,
+      "Lobby": 0.2467,
+      "Roof": 0.0912,
+      "Vending": 0.0861,
+      "Squeaky": 0.0475,
+      "TSpawn": 0.0352,
+      "Silo": 0.029,
+      "Trophy": 0.0273,
+      "BombsiteA": 0.0131,
+      "Control": 0.0129
+     }
+    },
+    "Trophy": {
+     "n": 4478,
+     "p": {
+      "Trophy": 0.3105,
+      "Ramp": 0.2871,
+      "Control": 0.2474,
+      "Lobby": 0.0691,
+      "Vending": 0.0545,
+      "BombsiteB": 0.0179,
+      "Squeaky": 0.0135
+     }
+    },
+    "Tunnels": {
+     "n": 10362,
+     "p": {
+      "Tunnels": 0.5798,
+      "BombsiteB": 0.1475,
+      "Vents": 0.0757,
+      "Secret": 0.0618,
+      "Decon": 0.0549,
+      "Observation": 0.0468,
+      "BombsiteA": 0.0191,
+      "Ramp": 0.0144
+     }
+    },
+    "Vending": {
+     "n": 7336,
+     "p": {
+      "Vending": 0.3382,
+      "Trophy": 0.1978,
+      "Lobby": 0.1692,
+      "Control": 0.1662,
+      "Ramp": 0.0933,
+      "Outside": 0.0353
+     }
+    },
+    "Vents": {
+     "n": 2515,
+     "p": {
+      "Vents": 0.5329,
+      "Tunnels": 0.2529,
+      "BombsiteB": 0.0772,
+      "Decon": 0.0693,
+      "BombsiteA": 0.042,
+      "Squeaky": 0.0257
+     }
+    }
+   }
+  }
+ },
+ "post_plant": {
+  "A": {
+   "n": 21,
+   "defuse_rate": 0.19,
+   "ct_reach_rate": 0.333,
+   "first_ct_arrival_s": {
+    "p25": 13.1,
+    "p50": 17.16,
+    "p75": 19.06
+   },
+   "by_alive_ct": {
+    "1": {
+     "n": 9,
+     "ct_reach_rate": 0.0,
+     "defuse_rate": 0.0
+    },
+    "2": {
+     "n": 4,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.0
+    },
+    "3": {
+     "n": 4,
+     "ct_reach_rate": 0.75,
+     "defuse_rate": 0.75
+    },
+    "4": {
+     "n": 4,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.25
+    }
+   }
+  },
+  "B": {
+   "n": 21,
+   "defuse_rate": 0.19,
+   "ct_reach_rate": 0.429,
+   "first_ct_arrival_s": {
+    "p25": 3.66,
+    "p50": 13.34,
+    "p75": 17.45
+   },
+   "by_alive_ct": {
+    "1": {
+     "n": 2,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.0
+    },
+    "2": {
+     "n": 8,
+     "ct_reach_rate": 0.125,
+     "defuse_rate": 0.125
+    },
+    "3": {
+     "n": 7,
+     "ct_reach_rate": 0.714,
+     "defuse_rate": 0.286
+    },
+    "4": {
+     "n": 2,
+     "ct_reach_rate": 1.0,
+     "defuse_rate": 0.5
+    },
+    "5": {
+     "n": 2,
+     "ct_reach_rate": 0.0,
+     "defuse_rate": 0.0
+    }
+   }
+  }
+ },
+ "rotation": {
+  "delta_s": 15,
+  "by_contact_zone": {
+   "A": {
+    "A": {
+     "n": 42,
+     "to_contact_zone": 0.738,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    },
+    "B": {
+     "n": 39,
+     "to_contact_zone": 0.154,
+     "stay": 0.744,
+     "arrive_s": {
+      "p25": 6.66,
+      "p50": 21.94,
+      "p75": 32.75
+     }
+    },
+    "Mid": {
+     "n": 24,
+     "to_contact_zone": 0.208,
+     "stay": 0.542,
+     "arrive_s": {
+      "p25": 3.0,
+      "p50": 7.5,
+      "p75": 25.25
+     }
+    }
+   },
+   "B": {
+    "A": {
+     "n": 32,
+     "to_contact_zone": 0.219,
+     "stay": 0.594,
+     "arrive_s": {
+      "p25": 5.56,
+      "p50": 8.62,
+      "p75": 23.78
+     }
+    },
+    "B": {
+     "n": 8,
+     "to_contact_zone": 1.0,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    },
+    "Mid": {
+     "n": 21,
+     "to_contact_zone": 0.19,
+     "stay": 0.571,
+     "arrive_s": {
+      "p25": 4.12,
+      "p50": 8.38,
+      "p75": 50.12
+     }
+    }
+   },
+   "Mid": {
+    "A": {
+     "n": 62,
+     "to_contact_zone": 0.129,
+     "stay": 0.839,
+     "arrive_s": {
+      "p25": 3.81,
+      "p50": 14.62,
+      "p75": 25.69
+     }
+    },
+    "B": {
+     "n": 45,
+     "to_contact_zone": 0.089,
+     "stay": 0.844,
+     "arrive_s": {
+      "p25": 6.88,
+      "p50": 26.06,
+      "p75": 52.0
+     }
+    },
+    "Mid": {
+     "n": 21,
+     "to_contact_zone": 0.619,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    }
+   }
+  },
+  "note": "Para cada CT que não participou do primeiro dano: onde estava (own_zone) e onde estava 15 s depois, conforme a zona do contato."
+ },
+ "engagements": {
+  "first_contact": {
+   "t_place": {
+    "Outside": 0.33,
+    "Lobby": 0.125,
+    "Roof": 0.091,
+    "Squeaky": 0.091,
+    "Trophy": 0.08,
+    "Silo": 0.068,
+    "Control": 0.057,
+    "BombsiteA": 0.034,
+    "Hut": 0.034,
+    "Ramp": 0.023,
+    "Vending": 0.023,
+    "Mini": 0.023
+   },
+   "ct_place": {
+    "Outside": 0.25,
+    "BombsiteA": 0.193,
+    "Ramp": 0.148,
+    "Rafters": 0.091,
+    "Mini": 0.08,
+    "Garage": 0.068,
+    "Catwalk": 0.045,
+    "Admin": 0.023,
+    "HutRoof": 0.023,
+    "Secret": 0.011,
+    "Crane": 0.011,
+    "Hut": 0.011
+   },
+   "time_s": {
+    "p25": 12.35,
+    "p50": 14.8,
+    "p75": 27.54
+   },
+   "n": 88
+  },
+  "pairs": [
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Outside",
+    "victim_place": "Outside",
+    "n": 33,
+    "median_distance_m": 23.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "BombsiteA",
+    "n": 26,
+    "median_distance_m": 11.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 18,
+    "median_distance_m": 16.8
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 18,
+    "median_distance_m": 13.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "BombsiteA",
+    "n": 18,
+    "median_distance_m": 10.2
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Outside",
+    "victim_place": "Outside",
+    "n": 15,
+    "median_distance_m": 14.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Hut",
+    "n": 13,
+    "median_distance_m": 13.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Ramp",
+    "victim_place": "Control",
+    "n": 13,
+    "median_distance_m": 17.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Rafters",
+    "victim_place": "Hut",
+    "n": 13,
+    "median_distance_m": 20.1
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Hut",
+    "victim_place": "BombsiteA",
+    "n": 11,
+    "median_distance_m": 12.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Control",
+    "victim_place": "Ramp",
+    "n": 11,
+    "median_distance_m": 15.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Rafters",
+    "victim_place": "BombsiteA",
+    "n": 11,
+    "median_distance_m": 15.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Heaven",
+    "n": 10,
+    "median_distance_m": 24.2
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Ramp",
+    "victim_place": "Ramp",
+    "n": 10,
+    "median_distance_m": 8.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Squeaky",
+    "victim_place": "BombsiteA",
+    "n": 10,
+    "median_distance_m": 17.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Tunnels",
+    "victim_place": "BombsiteB",
+    "n": 9,
+    "median_distance_m": 15.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Mini",
+    "victim_place": "Outside",
+    "n": 8,
+    "median_distance_m": 9.5
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Tunnels",
+    "victim_place": "Tunnels",
+    "n": 8,
+    "median_distance_m": 9.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Garage",
+    "victim_place": "Outside",
+    "n": 8,
+    "median_distance_m": 32.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Ramp",
+    "victim_place": "BombsiteB",
+    "n": 7,
+    "median_distance_m": 31.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Admin",
+    "victim_place": "Control",
+    "n": 7,
+    "median_distance_m": 24.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Mini",
+    "victim_place": "BombsiteA",
+    "n": 6,
+    "median_distance_m": 14.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Lobby",
+    "victim_place": "Lobby",
+    "n": 6,
+    "median_distance_m": 13.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Ramp",
+    "victim_place": "Ramp",
+    "n": 6,
+    "median_distance_m": 9.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Tunnels",
+    "n": 6,
+    "median_distance_m": 14.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Catwalk",
+    "victim_place": "Outside",
+    "n": 6,
+    "median_distance_m": 45.8
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Mini",
+    "victim_place": "BombsiteA",
+    "n": 5,
+    "median_distance_m": 23.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Rafters",
+    "n": 5,
+    "median_distance_m": 30.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Mini",
+    "n": 5,
+    "median_distance_m": 27.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Hut",
+    "victim_place": "Rafters",
+    "n": 5,
+    "median_distance_m": 14.7
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Ramp",
+    "victim_place": "Admin",
+    "n": 5,
+    "median_distance_m": 22.2
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Squeaky",
+    "n": 5,
+    "median_distance_m": 13.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Tunnels",
+    "n": 5,
+    "median_distance_m": 16.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Ramp",
+    "victim_place": "BombsiteB",
+    "n": 5,
+    "median_distance_m": 26.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "LockerRoom",
+    "victim_place": "Outside",
+    "n": 5,
+    "median_distance_m": 18.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Lobby",
+    "victim_place": "Squeaky",
+    "n": 4,
+    "median_distance_m": 10.2
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Ramp",
+    "n": 4,
+    "median_distance_m": 17.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Crane",
+    "victim_place": "BombsiteA",
+    "n": 4,
+    "median_distance_m": 18.9
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Vending",
+    "victim_place": "Lobby",
+    "n": 4,
+    "median_distance_m": 12.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Tunnels",
+    "victim_place": "Tunnels",
+    "n": 4,
+    "median_distance_m": 8.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Crane",
+    "victim_place": "Hut",
+    "n": 4,
+    "median_distance_m": 16.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Secret",
+    "victim_place": "Outside",
+    "n": 4,
+    "median_distance_m": 22.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Admin",
+    "victim_place": "Ramp",
+    "n": 4,
+    "median_distance_m": 17.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Tunnels",
+    "victim_place": "BombsiteB",
+    "n": 4,
+    "median_distance_m": 21.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Heaven",
+    "victim_place": "BombsiteA",
+    "n": 4,
+    "median_distance_m": 27.1
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Outside",
+    "victim_place": "Garage",
+    "n": 4,
+    "median_distance_m": 32.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Outside",
+    "victim_place": "Mini",
+    "n": 4,
+    "median_distance_m": 6.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Squeaky",
+    "victim_place": "Vending",
+    "n": 3,
+    "median_distance_m": 19.3
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Secret",
+    "victim_place": "Tunnels",
+    "n": 3,
+    "median_distance_m": 9.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Ramp",
+    "victim_place": "Trophy",
+    "n": 3,
+    "median_distance_m": 25.5
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Mini",
+    "victim_place": "Rafters",
+    "n": 3,
+    "median_distance_m": 36.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Lobby",
+    "victim_place": "BombsiteA",
+    "n": 3,
+    "median_distance_m": 15.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Hut",
+    "victim_place": "Crane",
+    "n": 3,
+    "median_distance_m": 15.8
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Observation",
+    "n": 3,
+    "median_distance_m": 24.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Rafters",
+    "victim_place": "Mini",
+    "n": 3,
+    "median_distance_m": 28.9
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Outside",
+    "victim_place": "Silo",
+    "n": 3,
+    "median_distance_m": 45.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "HutRoof",
+    "victim_place": "BombsiteA",
+    "n": 3,
+    "median_distance_m": 9.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Hut",
+    "victim_place": "Lobby",
+    "n": 3,
+    "median_distance_m": 8.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Garage",
+    "victim_place": "Mini",
+    "n": 3,
+    "median_distance_m": 32.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Decon",
+    "victim_place": "BombsiteB",
+    "n": 3,
+    "median_distance_m": 16.3
+   }
+  ]
+ },
+ "utility": {
+  "CT": {
+   "smoke": {
+    "per_round": 3.023,
+    "time_s": {
+     "p25": 11.29,
+     "p50": 18.97,
+     "p75": 38.84
+    },
+    "targets": {
+     "Squeaky": 0.504,
+     "Control": 0.188,
+     "Outside": 0.098,
+     "BombsiteA": 0.083,
+     "Trophy": 0.049,
+     "BombsiteB": 0.023,
+     "Tunnels": 0.015,
+     "Hut": 0.015,
+     "Mini": 0.011,
+     "Heaven": 0.004
+    }
+   },
+   "flash": {
+    "per_round": 1.852,
+    "time_s": {
+     "p25": 10.61,
+     "p50": 11.56,
+     "p75": 39.48
+    },
+    "targets": {
+     "Silo": 0.276,
+     "BombsiteA": 0.239,
+     "Control": 0.209,
+     "Outside": 0.086,
+     "Hut": 0.043,
+     "Ramp": 0.031,
+     "BombsiteB": 0.025,
+     "Tunnels": 0.025,
+     "Rafters": 0.025,
+     "Lobby": 0.012
+    }
+   },
+   "he": {
+    "per_round": 2.534,
+    "time_s": {
+     "p25": 11.48,
+     "p50": 18.03,
+     "p75": 30.75
+    },
+    "targets": {
+     "Outside": 0.296,
+     "Hut": 0.148,
+     "BombsiteA": 0.143,
+     "Lobby": 0.112,
+     "Control": 0.099,
+     "Trophy": 0.085,
+     "Squeaky": 0.031,
+     "Ramp": 0.018,
+     "Silo": 0.013,
+     "BombsiteB": 0.013
+    }
+   },
+   "molotov": {
+    "per_round": 2.67,
+    "time_s": {
+     "p25": 8.41,
+     "p50": 9.92,
+     "p75": 15.42
+    },
+    "targets": {
+     "Outside": 0.306,
+     "Hut": 0.183,
+     "Control": 0.174,
+     "Squeaky": 0.166,
+     "BombsiteA": 0.085,
+     "Lobby": 0.03,
+     "Ramp": 0.017,
+     "BombsiteB": 0.017,
+     "Silo": 0.009,
+     "HutRoof": 0.004
+    }
+   }
+  },
+  "T": {
+   "smoke": {
+    "per_round": 3.352,
+    "time_s": {
+     "p25": 10.65,
+     "p50": 17.11,
+     "p75": 31.48
+    },
+    "targets": {
+     "Outside": 0.617,
+     "BombsiteA": 0.193,
+     "Mini": 0.092,
+     "Tunnels": 0.024,
+     "BombsiteB": 0.02,
+     "Squeaky": 0.014,
+     "Heaven": 0.014,
+     "Ramp": 0.007,
+     "Silo": 0.007,
+     "Decon": 0.003
+    }
+   },
+   "flash": {
+    "per_round": 2.83,
+    "time_s": {
+     "p25": 13.27,
+     "p50": 35.94,
+     "p75": 55.64
+    },
+    "targets": {
+     "Outside": 0.157,
+     "Ramp": 0.149,
+     "BombsiteA": 0.141,
+     "Rafters": 0.108,
+     "Mini": 0.08,
+     "Roof": 0.076,
+     "Silo": 0.064,
+     "Garage": 0.032,
+     "Control": 0.032,
+     "Squeaky": 0.032
+    }
+   },
+   "he": {
+    "per_round": 1.284,
+    "time_s": {
+     "p25": 8.92,
+     "p50": 9.61,
+     "p75": 13.3
+    },
+    "targets": {
+     "Squeaky": 0.646,
+     "BombsiteA": 0.195,
+     "Heaven": 0.053,
+     "BombsiteB": 0.027,
+     "Mini": 0.018,
+     "Hut": 0.018,
+     "Admin": 0.009,
+     "Outside": 0.009,
+     "Roof": 0.009,
+     "Control": 0.009
+    }
+   },
+   "molotov": {
+    "per_round": 2.33,
+    "time_s": {
+     "p25": 11.61,
+     "p50": 34.97,
+     "p75": 55.0
+    },
+    "targets": {
+     "BombsiteA": 0.224,
+     "HutRoof": 0.18,
+     "Secret": 0.078,
+     "Admin": 0.078,
+     "Ramp": 0.063,
+     "Mini": 0.063,
+     "Crane": 0.059,
+     "Vents": 0.054,
+     "Tunnels": 0.034,
+     "Outside": 0.034
+    }
+   }
+  }
+ },
+ "evaluation": {
+  "5s": {
+   "occupancy": 2.615,
+   "forecast": 1.182,
+   "improvement_pct": 54.8,
+   "samples": 54787
+  },
+  "10s": {
+   "occupancy": 2.725,
+   "forecast": 1.678,
+   "improvement_pct": 38.4,
+   "samples": 50387
+  },
+  "unit": "nats por amostra (menor = melhor); partidas inéditas, validação cruzada de 4 partes"
+ }
+}

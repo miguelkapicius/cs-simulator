@@ -1,0 +1,106 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "team": "Vitality",
+ "rounds": 39,
+ "matches": 2,
+ "roster": [
+  {
+   "steamid": "76561197989744167",
+   "name": "apEX",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 39
+  },
+  {
+   "steamid": "76561197978835160",
+   "name": "flameZ",
+   "role_tags": [
+    "support"
+   ],
+   "rounds": 39
+  },
+  {
+   "steamid": "76561197973140692",
+   "name": "mezii",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 39
+  },
+  {
+   "steamid": "76561197991272318",
+   "name": "ropz",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 39
+  },
+  {
+   "steamid": "76561198113666193",
+   "name": "ZywOo",
+   "role_tags": [
+    "awper",
+    "entry"
+   ],
+   "rounds": 39
+  }
+ ],
+ "maps": {
+  "de_anubis": {
+   "rounds": 21,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.667,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.083,
+     "full": 0.75
+    }
+   },
+   "t": {
+    "rounds": 9,
+    "win_rate": 0.556,
+    "plant_rate": 0.778,
+    "plant_a_share": 0.0,
+    "plants": 7,
+    "buy": {
+     "pistol": 0.111,
+     "eco": 0.111,
+     "force": 0.111,
+     "full": 0.667
+    }
+   }
+  },
+  "de_cache": {
+   "rounds": 18,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.667,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.0,
+     "full": 0.833
+    }
+   },
+   "t": {
+    "rounds": 6,
+    "win_rate": 0.833,
+    "plant_rate": 0.333,
+    "plant_a_share": 1.0,
+    "plants": 2,
+    "buy": {
+     "pistol": 0.167,
+     "eco": 0.0,
+     "force": 0.0,
+     "full": 0.833
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

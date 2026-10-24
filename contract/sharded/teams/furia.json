@@ -1,0 +1,235 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "team": "FURIA",
+ "rounds": 599,
+ "matches": 28,
+ "roster": [
+  {
+   "steamid": "76561197960690195",
+   "name": "FalleN",
+   "role_tags": [
+    "support"
+   ],
+   "rounds": 599
+  },
+  {
+   "steamid": "76561198058500492",
+   "name": "KSCERATO",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 599
+  },
+  {
+   "steamid": "76561198200982290",
+   "name": "molodoy",
+   "role_tags": [
+    "awper"
+   ],
+   "rounds": 599
+  },
+  {
+   "steamid": "76561198134401925",
+   "name": "YEKINDAR",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 599
+  },
+  {
+   "steamid": "76561198164970560",
+   "name": "yuurih",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 599
+  }
+ ],
+ "maps": {
+  "de_ancient": {
+   "rounds": 78,
+   "ct": {
+    "rounds": 42,
+    "win_rate": 0.452,
+    "buy": {
+     "pistol": 0.071,
+     "eco": 0.048,
+     "force": 0.071,
+     "full": 0.81
+    }
+   },
+   "t": {
+    "rounds": 36,
+    "win_rate": 0.472,
+    "plant_rate": 0.5,
+    "plant_a_share": 0.667,
+    "plants": 18,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.056,
+     "force": 0.056,
+     "full": 0.806
+    }
+   }
+  },
+  "de_anubis": {
+   "rounds": 21,
+   "ct": {
+    "rounds": 9,
+    "win_rate": 0.444,
+    "buy": {
+     "pistol": 0.111,
+     "eco": 0.0,
+     "force": 0.111,
+     "full": 0.778
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.333,
+    "plant_rate": 0.333,
+    "plant_a_share": 0.25,
+    "plants": 4,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.167,
+     "full": 0.667
+    }
+   }
+  },
+  "de_cache": {
+   "rounds": 107,
+   "ct": {
+    "rounds": 44,
+    "win_rate": 0.5,
+    "buy": {
+     "pistol": 0.114,
+     "eco": 0.091,
+     "force": 0.068,
+     "full": 0.727
+    }
+   },
+   "t": {
+    "rounds": 63,
+    "win_rate": 0.413,
+    "plant_rate": 0.476,
+    "plant_a_share": 0.5,
+    "plants": 30,
+    "buy": {
+     "pistol": 0.079,
+     "eco": 0.095,
+     "force": 0.143,
+     "full": 0.683
+    }
+   }
+  },
+  "de_dust2": {
+   "rounds": 61,
+   "ct": {
+    "rounds": 31,
+    "win_rate": 0.645,
+    "buy": {
+     "pistol": 0.097,
+     "eco": 0.032,
+     "force": 0.097,
+     "full": 0.774
+    }
+   },
+   "t": {
+    "rounds": 30,
+    "win_rate": 0.633,
+    "plant_rate": 0.567,
+    "plant_a_share": 0.588,
+    "plants": 17,
+    "buy": {
+     "pistol": 0.1,
+     "eco": 0.067,
+     "force": 0.067,
+     "full": 0.767
+    }
+   }
+  },
+  "de_inferno": {
+   "rounds": 99,
+   "ct": {
+    "rounds": 51,
+    "win_rate": 0.569,
+    "buy": {
+     "pistol": 0.098,
+     "eco": 0.059,
+     "force": 0.137,
+     "full": 0.706
+    }
+   },
+   "t": {
+    "rounds": 48,
+    "win_rate": 0.604,
+    "plant_rate": 0.729,
+    "plant_a_share": 0.6,
+    "plants": 35,
+    "buy": {
+     "pistol": 0.104,
+     "eco": 0.021,
+     "force": 0.188,
+     "full": 0.688
+    }
+   }
+  },
+  "de_mirage": {
+   "rounds": 145,
+   "ct": {
+    "rounds": 71,
+    "win_rate": 0.662,
+    "buy": {
+     "pistol": 0.099,
+     "eco": 0.0,
+     "force": 0.099,
+     "full": 0.803
+    }
+   },
+   "t": {
+    "rounds": 74,
+    "win_rate": 0.459,
+    "plant_rate": 0.568,
+    "plant_a_share": 0.524,
+    "plants": 42,
+    "buy": {
+     "pistol": 0.095,
+     "eco": 0.068,
+     "force": 0.108,
+     "full": 0.73
+    }
+   }
+  },
+  "de_nuke": {
+   "rounds": 88,
+   "ct": {
+    "rounds": 46,
+    "win_rate": 0.543,
+    "buy": {
+     "pistol": 0.087,
+     "eco": 0.043,
+     "force": 0.109,
+     "full": 0.761
+    }
+   },
+   "t": {
+    "rounds": 42,
+    "win_rate": 0.405,
+    "plant_rate": 0.5,
+    "plant_a_share": 0.524,
+    "plants": 21,
+    "buy": {
+     "pistol": 0.095,
+     "eco": 0.071,
+     "force": 0.214,
+     "full": 0.619
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

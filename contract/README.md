@@ -31,6 +31,7 @@ partidas reais. O comparador diz o quanto falta.
 | `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, **probabilidade de plant por bombsite**, e as rotas de 599 rounds reais |
 | `artifacts/team_model.json` | **decisões do time**: chance de vencer o round, tipo de compra, plano de ataque |
 | `artifacts/calibration_targets.json` | **o que a simulação precisa reproduzir** (325 métricas do jogo real) |
+| `sharded/` | **os mesmos dados em arquivos independentes por jogador, time e mapa**, com um manifesto: um confronto carrega só ~27% do total ([`docs/sharding.md`](docs/sharding.md)) |
 | `schemas/` | JSON Schema de cada artefato e do log; define o formato exato |
 | `docs/` | explicação de cada artefato, do log e da calibração |
 | `test_vectors/*.json` | entradas e saídas esperadas do modelo de time e do recuo, para testar o C# |
@@ -39,7 +40,7 @@ partidas reais. O comparador diz o quanto falta.
 
 ## Por onde começar (checklist de integração)
 
-1. **Carregar os artefatos** na Unity com o Newtonsoft JSON (`com.unity.nuget.newtonsoft-json`; o `JsonUtility` não lê dicionários).
+1. **Carregar os artefatos** na Unity (de preferência as fatias de `sharded/`, pelo manifesto, para ler só o do confronto) com o Newtonsoft JSON (`com.unity.nuget.newtonsoft-json`; o `JsonUtility` não lê dicionários).
    Confira `contract_version`: recuse MAJOR diferente. Ver [`docs/conventions.md`](docs/conventions.md).
 2. **Usar `game_rules.json`** na mecânica: dano, colete, cadência, velocidades, tempos da bomba, economia
    ([`docs/game_rules.md`](docs/game_rules.md)). É o que torna o jogo "CS" e não precisa de ajuste fino.

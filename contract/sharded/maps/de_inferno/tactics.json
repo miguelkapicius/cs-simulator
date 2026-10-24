@@ -1,0 +1,4028 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "map": "de_inferno",
+ "n_rounds": 99,
+ "places": {
+  "Apartments": {
+   "kind": "area",
+   "n": 46395,
+   "centroid_m": [
+    32.06,
+    -5.26,
+    5.45
+   ],
+   "spread_m": [
+    11.87,
+    7.18
+   ],
+   "bbox_m": [
+    [
+     7.24,
+     -16.57
+    ],
+    [
+     48.4,
+     8.19
+    ]
+   ],
+   "side_share": {
+    "CT": 0.244,
+    "T": 0.756
+   },
+   "zone": "A",
+   "pa": 0.71
+  },
+  "Arch": {
+   "kind": "area",
+   "n": 33902,
+   "centroid_m": [
+    44.3,
+    30.72,
+    4.32
+   ],
+   "spread_m": [
+    4.1,
+    2.97
+   ],
+   "bbox_m": [
+    [
+     39.46,
+     26.2
+    ],
+    [
+     52.97,
+     37.14
+    ]
+   ],
+   "side_share": {
+    "CT": 0.893,
+    "T": 0.107
+   },
+   "zone": "A",
+   "pa": 0.8
+  },
+  "BackAlley": {
+   "kind": "area",
+   "n": 5804,
+   "centroid_m": [
+    21.31,
+    -15.51,
+    2.36
+   ],
+   "spread_m": [
+    3.2,
+    3.0
+   ],
+   "bbox_m": [
+    [
+     13.61,
+     -19.19
+    ],
+    [
+     24.33,
+     -9.29
+    ]
+   ],
+   "side_share": {
+    "CT": 0.053,
+    "T": 0.947
+   },
+   "zone": "A",
+   "pa": 0.65
+  },
+  "Balcony": {
+   "kind": "area",
+   "n": 15379,
+   "centroid_m": [
+    50.96,
+    -6.81,
+    7.09
+   ],
+   "spread_m": [
+    7.01,
+    2.09
+   ],
+   "bbox_m": [
+    [
+     24.39,
+     -9.2
+    ],
+    [
+     53.7,
+     -3.06
+    ]
+   ],
+   "side_share": {
+    "CT": 0.885,
+    "T": 0.115
+   },
+   "zone": "A",
+   "pa": 0.8
+  },
+  "Banana": {
+   "kind": "area",
+   "n": 106060,
+   "centroid_m": [
+    10.18,
+    44.01,
+    3.28
+   ],
+   "spread_m": [
+    6.7,
+    9.08
+   ],
+   "bbox_m": [
+    [
+     0.46,
+     27.74
+    ],
+    [
+     21.86,
+     55.98
+    ]
+   ],
+   "side_share": {
+    "CT": 0.299,
+    "T": 0.701
+   },
+   "zone": "B",
+   "pa": 0.32
+  },
+  "BombsiteA": {
+   "kind": "site",
+   "n": 76053,
+   "centroid_m": [
+    51.56,
+    9.66,
+    4.02
+   ],
+   "spread_m": [
+    5.75,
+    9.22
+   ],
+   "bbox_m": [
+    [
+     42.17,
+     -2.34
+    ],
+    [
+     60.77,
+     25.63
+    ]
+   ],
+   "side_share": {
+    "CT": 0.773,
+    "T": 0.227
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "BombsiteB": {
+   "kind": "site",
+   "n": 89336,
+   "centroid_m": [
+    14.7,
+    71.5,
+    4.23
+   ],
+   "spread_m": [
+    6.63,
+    8.1
+   ],
+   "bbox_m": [
+    [
+     1.5,
+     60.22
+    ],
+    [
+     24.44,
+     86.04
+    ]
+   ],
+   "side_share": {
+    "CT": 0.784,
+    "T": 0.216
+   },
+   "zone": "B",
+   "pa": 0.0
+  },
+  "Bridge": {
+   "kind": "area",
+   "n": 2039,
+   "centroid_m": [
+    -9.49,
+    -1.91,
+    4.96
+   ],
+   "spread_m": [
+    0.89,
+    2.18
+   ],
+   "bbox_m": [
+    [
+     -10.46,
+     -6.63
+    ],
+    [
+     -7.83,
+     0.44
+    ]
+   ],
+   "side_share": {
+    "CT": 0.045,
+    "T": 0.955
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "CTSpawn": {
+   "kind": "spawn",
+   "n": 43561,
+   "centroid_m": [
+    51.54,
+    56.87,
+    3.65
+   ],
+   "spread_m": [
+    7.07,
+    9.83
+   ],
+   "bbox_m": [
+    [
+     41.52,
+     41.64
+    ],
+    [
+     61.92,
+     70.52
+    ]
+   ],
+   "side_share": {
+    "CT": 0.92,
+    "T": 0.08
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "Deck": {
+   "kind": "area",
+   "n": 1113,
+   "centroid_m": [
+    0.13,
+    1.01,
+    5.48
+   ],
+   "spread_m": [
+    3.56,
+    1.22
+   ],
+   "bbox_m": [
+    [
+     -2.62,
+     -1.21
+    ],
+    [
+     6.5,
+     2.89
+    ]
+   ],
+   "side_share": {
+    "CT": 0.0,
+    "T": 1.0
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Kitchen": {
+   "kind": "area",
+   "n": 224,
+   "centroid_m": [
+    -2.73,
+    6.71,
+    4.95
+   ],
+   "spread_m": [
+    2.0,
+    1.26
+   ],
+   "bbox_m": [
+    [
+     -6.28,
+     4.17
+    ],
+    [
+     -0.58,
+     8.23
+    ]
+   ],
+   "side_share": {
+    "CT": 0.0,
+    "T": 1.0
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Library": {
+   "kind": "area",
+   "n": 12133,
+   "centroid_m": [
+    63.47,
+    32.95,
+    4.17
+   ],
+   "spread_m": [
+    2.23,
+    3.59
+   ],
+   "bbox_m": [
+    [
+     59.37,
+     28.16
+    ],
+    [
+     66.53,
+     38.78
+    ]
+   ],
+   "side_share": {
+    "CT": 0.879,
+    "T": 0.121
+   },
+   "zone": "A",
+   "pa": 0.87
+  },
+  "LowerMid": {
+   "kind": "area",
+   "n": 19253,
+   "centroid_m": [
+    -15.66,
+    12.5,
+    -0.06
+   ],
+   "spread_m": [
+    4.0,
+    8.28
+   ],
+   "bbox_m": [
+    [
+     -22.69,
+     -8.29
+    ],
+    [
+     -9.53,
+     19.68
+    ]
+   ],
+   "side_share": {
+    "CT": 0.012,
+    "T": 0.988
+   },
+   "zone": "Mid",
+   "pa": 0.49
+  },
+  "Middle": {
+   "kind": "area",
+   "n": 49617,
+   "centroid_m": [
+    15.34,
+    15.96,
+    2.43
+   ],
+   "spread_m": [
+    11.21,
+    3.66
+   ],
+   "bbox_m": [
+    [
+     1.93,
+     11.36
+    ],
+    [
+     32.24,
+     23.04
+    ]
+   ],
+   "side_share": {
+    "CT": 0.067,
+    "T": 0.933
+   },
+   "zone": "Mid",
+   "pa": 0.54
+  },
+  "Pit": {
+   "kind": "area",
+   "n": 18944,
+   "centroid_m": [
+    61.21,
+    -4.63,
+    2.66
+   ],
+   "spread_m": [
+    4.47,
+    2.24
+   ],
+   "bbox_m": [
+    [
+     52.8,
+     -9.16
+    ],
+    [
+     66.83,
+     -1.9
+    ]
+   ],
+   "side_share": {
+    "CT": 0.788,
+    "T": 0.212
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "Quad": {
+   "kind": "area",
+   "n": 5380,
+   "centroid_m": [
+    36.35,
+    -1.79,
+    3.94
+   ],
+   "spread_m": [
+    1.94,
+    0.69
+   ],
+   "bbox_m": [
+    [
+     34.42,
+     -2.29
+    ],
+    [
+     39.59,
+     -0.39
+    ]
+   ],
+   "side_share": {
+    "CT": 0.878,
+    "T": 0.122
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "Ruins": {
+   "kind": "area",
+   "n": 25280,
+   "centroid_m": [
+    30.64,
+    73.56,
+    3.37
+   ],
+   "spread_m": [
+    5.04,
+    5.25
+   ],
+   "bbox_m": [
+    [
+     22.57,
+     68.09
+    ],
+    [
+     39.7,
+     84.49
+    ]
+   ],
+   "side_share": {
+    "CT": 0.925,
+    "T": 0.075
+   },
+   "zone": "B",
+   "pa": 0.12
+  },
+  "SecondMid": {
+   "kind": "area",
+   "n": 24917,
+   "centroid_m": [
+    12.27,
+    -0.27,
+    2.22
+   ],
+   "spread_m": [
+    11.2,
+    4.91
+   ],
+   "bbox_m": [
+    [
+     -10.74,
+     -6.63
+    ],
+    [
+     23.87,
+     9.25
+    ]
+   ],
+   "side_share": {
+    "CT": 0.017,
+    "T": 0.983
+   },
+   "zone": "Mid",
+   "pa": 0.6
+  },
+  "TRamp": {
+   "kind": "area",
+   "n": 28982,
+   "centroid_m": [
+    -3.99,
+    22.08,
+    1.22
+   ],
+   "spread_m": [
+    3.76,
+    1.2
+   ],
+   "bbox_m": [
+    [
+     -10.31,
+     19.81
+    ],
+    [
+     0.85,
+     23.22
+    ]
+   ],
+   "side_share": {
+    "CT": 0.015,
+    "T": 0.985
+   },
+   "zone": "Mid",
+   "pa": 0.46
+  },
+  "TSpawn": {
+   "kind": "spawn",
+   "n": 21453,
+   "centroid_m": [
+    -33.63,
+    6.89,
+    -1.3
+   ],
+   "spread_m": [
+    5.65,
+    6.15
+   ],
+   "bbox_m": [
+    [
+     -41.88,
+     -6.63
+    ],
+    [
+     -23.49,
+     14.05
+    ]
+   ],
+   "side_share": {
+    "CT": 0.019,
+    "T": 0.981
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "TopofMid": {
+   "kind": "area",
+   "n": 32310,
+   "centroid_m": [
+    35.57,
+    17.1,
+    3.68
+   ],
+   "spread_m": [
+    1.87,
+    9.2
+   ],
+   "bbox_m": [
+    [
+     32.78,
+     2.92
+    ],
+    [
+     38.32,
+     30.8
+    ]
+   ],
+   "side_share": {
+    "CT": 0.58,
+    "T": 0.42
+   },
+   "zone": "A",
+   "pa": 0.89
+  },
+  "Underpass": {
+   "kind": "area",
+   "n": 4277,
+   "centroid_m": [
+    7.33,
+    13.97,
+    0.34
+   ],
+   "spread_m": [
+    0.22,
+    4.46
+   ],
+   "bbox_m": [
+    [
+     7.1,
+     3.81
+    ],
+    [
+     7.64,
+     18.26
+    ]
+   ],
+   "side_share": {
+    "CT": 0.011,
+    "T": 0.989
+   },
+   "zone": "Mid",
+   "pa": 0.39
+  },
+  "Upstairs": {
+   "kind": "area",
+   "n": 1355,
+   "centroid_m": [
+    -12.71,
+    4.59,
+    4.3
+   ],
+   "spread_m": [
+    1.94,
+    2.47
+   ],
+   "bbox_m": [
+    [
+     -14.69,
+     1.4
+    ],
+    [
+     -9.06,
+     9.04
+    ]
+   ],
+   "side_share": {
+    "CT": 0.041,
+    "T": 0.959
+   },
+   "zone": "Mid",
+   "pa": 0.5
+  }
+ },
+ "graph": {
+  "Apartments": {
+   "dwell_s": {
+    "p25": 5.0,
+    "p50": 10.88,
+    "p75": 22.19
+   },
+   "edges": [
+    {
+     "to": "Balcony",
+     "n": 123,
+     "p": 0.4409,
+     "dwell_s": 15.38
+    },
+    {
+     "to": "TopofMid",
+     "n": 77,
+     "p": 0.276,
+     "dwell_s": 10.25
+    },
+    {
+     "to": "BackAlley",
+     "n": 55,
+     "p": 0.1971,
+     "dwell_s": 9.12
+    },
+    {
+     "to": "Bridge",
+     "n": 14,
+     "p": 0.0502,
+     "dwell_s": 4.44
+    },
+    {
+     "to": "SecondMid",
+     "n": 10,
+     "p": 0.0358,
+     "dwell_s": 11.88
+    }
+   ]
+  },
+  "Arch": {
+   "dwell_s": {
+    "p25": 2.88,
+    "p50": 3.88,
+    "p75": 10.34
+   },
+   "edges": [
+    {
+     "to": "TopofMid",
+     "n": 160,
+     "p": 0.397,
+     "dwell_s": 2.88
+    },
+    {
+     "to": "BombsiteA",
+     "n": 143,
+     "p": 0.3548,
+     "dwell_s": 5.38
+    },
+    {
+     "to": "CTSpawn",
+     "n": 100,
+     "p": 0.2481,
+     "dwell_s": 5.31
+    }
+   ]
+  },
+  "BackAlley": {
+   "dwell_s": {
+    "p25": 3.12,
+    "p50": 4.12,
+    "p75": 5.75
+   },
+   "edges": [
+    {
+     "to": "Apartments",
+     "n": 98,
+     "p": 0.875,
+     "dwell_s": 4.25
+    },
+    {
+     "to": "SecondMid",
+     "n": 14,
+     "p": 0.125,
+     "dwell_s": 3.5
+    }
+   ]
+  },
+  "Balcony": {
+   "dwell_s": {
+    "p25": 0.78,
+    "p50": 1.5,
+    "p75": 4.62
+   },
+   "edges": [
+    {
+     "to": "Apartments",
+     "n": 138,
+     "p": 0.6133,
+     "dwell_s": 0.88
+    },
+    {
+     "to": "Pit",
+     "n": 40,
+     "p": 0.1778,
+     "dwell_s": 7.88
+    },
+    {
+     "to": "BombsiteA",
+     "n": 34,
+     "p": 0.1511,
+     "dwell_s": 2.19
+    },
+    {
+     "to": "SecondMid",
+     "n": 13,
+     "p": 0.0578,
+     "dwell_s": 1.88
+    }
+   ]
+  },
+  "Banana": {
+   "dwell_s": {
+    "p25": 5.38,
+    "p50": 13.31,
+    "p75": 28.09
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 278,
+     "p": 0.565,
+     "dwell_s": 17.0
+    },
+    {
+     "to": "Middle",
+     "n": 214,
+     "p": 0.435,
+     "dwell_s": 6.88
+    }
+   ]
+  },
+  "BombsiteA": {
+   "dwell_s": {
+    "p25": 4.75,
+    "p50": 7.38,
+    "p75": 18.88
+   },
+   "edges": [
+    {
+     "to": "TopofMid",
+     "n": 97,
+     "p": 0.2086,
+     "dwell_s": 7.0
+    },
+    {
+     "to": "Library",
+     "n": 89,
+     "p": 0.1914,
+     "dwell_s": 9.62
+    },
+    {
+     "to": "Pit",
+     "n": 86,
+     "p": 0.1849,
+     "dwell_s": 7.0
+    },
+    {
+     "to": "Balcony",
+     "n": 82,
+     "p": 0.1763,
+     "dwell_s": 7.0
+    },
+    {
+     "to": "Arch",
+     "n": 78,
+     "p": 0.1677,
+     "dwell_s": 6.0
+    },
+    {
+     "to": "Quad",
+     "n": 33,
+     "p": 0.071,
+     "dwell_s": 7.38
+    }
+   ]
+  },
+  "BombsiteB": {
+   "dwell_s": {
+    "p25": 2.5,
+    "p50": 5.88,
+    "p75": 21.25
+   },
+   "edges": [
+    {
+     "to": "Ruins",
+     "n": 268,
+     "p": 0.5095,
+     "dwell_s": 5.25
+    },
+    {
+     "to": "Banana",
+     "n": 258,
+     "p": 0.4905,
+     "dwell_s": 3.12
+    }
+   ]
+  },
+  "Bridge": {
+   "dwell_s": {
+    "p25": 1.38,
+    "p50": 3.0,
+    "p75": 8.34
+   },
+   "edges": [
+    {
+     "to": "Apartments",
+     "n": 22,
+     "p": 0.5,
+     "dwell_s": 1.5
+    },
+    {
+     "to": "Upstairs",
+     "n": 12,
+     "p": 0.2727,
+     "dwell_s": 3.56
+    },
+    {
+     "to": "SecondMid",
+     "n": 10,
+     "p": 0.2273,
+     "dwell_s": 9.75
+    }
+   ]
+  },
+  "CTSpawn": {
+   "dwell_s": {
+    "p25": 3.62,
+    "p50": 5.5,
+    "p75": 6.91
+   },
+   "edges": [
+    {
+     "to": "Ruins",
+     "n": 375,
+     "p": 0.4908,
+     "dwell_s": 5.62
+    },
+    {
+     "to": "Library",
+     "n": 206,
+     "p": 0.2696,
+     "dwell_s": 3.56
+    },
+    {
+     "to": "Arch",
+     "n": 183,
+     "p": 0.2395,
+     "dwell_s": 4.0
+    }
+   ]
+  },
+  "Deck": {
+   "dwell_s": {
+    "p25": 1.75,
+    "p50": 6.0,
+    "p75": 11.5
+   },
+   "edges": [
+    {
+     "to": "SecondMid",
+     "n": 10,
+     "p": 1.0,
+     "dwell_s": 8.69
+    }
+   ]
+  },
+  "Kitchen": {
+   "dwell_s": {
+    "p25": 1.34,
+    "p50": 1.38,
+    "p75": 1.81
+   },
+   "edges": [
+    {
+     "to": "Deck",
+     "n": 13,
+     "p": 0.8125,
+     "dwell_s": 1.38
+    },
+    {
+     "to": "Upstairs",
+     "n": 3,
+     "p": 0.1875,
+     "dwell_s": 1.12
+    }
+   ]
+  },
+  "Library": {
+   "dwell_s": {
+    "p25": 2.38,
+    "p50": 2.38,
+    "p75": 3.69
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 194,
+     "p": 0.708,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "CTSpawn",
+     "n": 80,
+     "p": 0.292,
+     "dwell_s": 2.38
+    }
+   ]
+  },
+  "LowerMid": {
+   "dwell_s": {
+    "p25": 1.88,
+    "p50": 2.0,
+    "p75": 2.5
+   },
+   "edges": [
+    {
+     "to": "TRamp",
+     "n": 393,
+     "p": 0.6485,
+     "dwell_s": 2.0
+    },
+    {
+     "to": "SecondMid",
+     "n": 158,
+     "p": 0.2607,
+     "dwell_s": 1.88
+    },
+    {
+     "to": "Upstairs",
+     "n": 45,
+     "p": 0.0743,
+     "dwell_s": 2.5
+    },
+    {
+     "to": "TSpawn",
+     "n": 10,
+     "p": 0.0165,
+     "dwell_s": 2.81
+    }
+   ]
+  },
+  "Middle": {
+   "dwell_s": {
+    "p25": 0.62,
+    "p50": 2.62,
+    "p75": 9.25
+   },
+   "edges": [
+    {
+     "to": "Banana",
+     "n": 422,
+     "p": 0.4768,
+     "dwell_s": 0.75
+    },
+    {
+     "to": "TopofMid",
+     "n": 197,
+     "p": 0.2226,
+     "dwell_s": 10.88
+    },
+    {
+     "to": "TRamp",
+     "n": 167,
+     "p": 0.1887,
+     "dwell_s": 1.38
+    },
+    {
+     "to": "SecondMid",
+     "n": 50,
+     "p": 0.0565,
+     "dwell_s": 6.81
+    },
+    {
+     "to": "Underpass",
+     "n": 46,
+     "p": 0.052,
+     "dwell_s": 3.12
+    },
+    {
+     "to": "Apartments",
+     "n": 3,
+     "p": 0.0034,
+     "dwell_s": 13.0
+    }
+   ]
+  },
+  "Pit": {
+   "dwell_s": {
+    "p25": 3.94,
+    "p50": 12.94,
+    "p75": 29.84
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 87,
+     "p": 1.0,
+     "dwell_s": 11.0
+    }
+   ]
+  },
+  "Quad": {
+   "dwell_s": {
+    "p25": 1.38,
+    "p50": 2.5,
+    "p75": 7.0
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 49,
+     "p": 0.6622,
+     "dwell_s": 2.62
+    },
+    {
+     "to": "TopofMid",
+     "n": 25,
+     "p": 0.3378,
+     "dwell_s": 1.5
+    }
+   ]
+  },
+  "Ruins": {
+   "dwell_s": {
+    "p25": 2.38,
+    "p50": 2.62,
+    "p75": 4.88
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 449,
+     "p": 0.761,
+     "dwell_s": 2.62
+    },
+    {
+     "to": "CTSpawn",
+     "n": 141,
+     "p": 0.239,
+     "dwell_s": 2.88
+    }
+   ]
+  },
+  "SecondMid": {
+   "dwell_s": {
+    "p25": 4.62,
+    "p50": 9.12,
+    "p75": 14.56
+   },
+   "edges": [
+    {
+     "to": "Middle",
+     "n": 98,
+     "p": 0.3657,
+     "dwell_s": 10.19
+    },
+    {
+     "to": "BackAlley",
+     "n": 64,
+     "p": 0.2388,
+     "dwell_s": 9.44
+    },
+    {
+     "to": "Balcony",
+     "n": 41,
+     "p": 0.153,
+     "dwell_s": 13.0
+    },
+    {
+     "to": "Underpass",
+     "n": 31,
+     "p": 0.1157,
+     "dwell_s": 5.62
+    },
+    {
+     "to": "Apartments",
+     "n": 23,
+     "p": 0.0858,
+     "dwell_s": 4.62
+    },
+    {
+     "to": "LowerMid",
+     "n": 11,
+     "p": 0.041,
+     "dwell_s": 5.12
+    }
+   ]
+  },
+  "TRamp": {
+   "dwell_s": {
+    "p25": 2.0,
+    "p50": 3.0,
+    "p75": 8.03
+   },
+   "edges": [
+    {
+     "to": "Middle",
+     "n": 464,
+     "p": 0.8452,
+     "dwell_s": 2.69
+    },
+    {
+     "to": "LowerMid",
+     "n": 85,
+     "p": 0.1548,
+     "dwell_s": 4.5
+    }
+   ]
+  },
+  "TSpawn": {
+   "dwell_s": {
+    "p25": 4.5,
+    "p50": 4.88,
+    "p75": 5.25
+   },
+   "edges": [
+    {
+     "to": "LowerMid",
+     "n": 498,
+     "p": 1.0,
+     "dwell_s": 4.88
+    }
+   ]
+  },
+  "TopofMid": {
+   "dwell_s": {
+    "p25": 2.25,
+    "p50": 4.69,
+    "p75": 9.0
+   },
+   "edges": [
+    {
+     "to": "Arch",
+     "n": 177,
+     "p": 0.3505,
+     "dwell_s": 7.0
+    },
+    {
+     "to": "BombsiteA",
+     "n": 121,
+     "p": 0.2396,
+     "dwell_s": 3.5
+    },
+    {
+     "to": "Middle",
+     "n": 87,
+     "p": 0.1723,
+     "dwell_s": 3.62
+    },
+    {
+     "to": "Apartments",
+     "n": 75,
+     "p": 0.1485,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "Quad",
+     "n": 45,
+     "p": 0.0891,
+     "dwell_s": 3.38
+    }
+   ]
+  },
+  "Underpass": {
+   "dwell_s": {
+    "p25": 2.22,
+    "p50": 5.62,
+    "p75": 9.25
+   },
+   "edges": [
+    {
+     "to": "Middle",
+     "n": 68,
+     "p": 0.8718,
+     "dwell_s": 5.62
+    },
+    {
+     "to": "SecondMid",
+     "n": 10,
+     "p": 0.1282,
+     "dwell_s": 5.69
+    }
+   ]
+  },
+  "Upstairs": {
+   "dwell_s": {
+    "p25": 2.0,
+    "p50": 2.31,
+    "p75": 2.75
+   },
+   "edges": [
+    {
+     "to": "Bridge",
+     "n": 30,
+     "p": 0.5172,
+     "dwell_s": 2.12
+    },
+    {
+     "to": "Kitchen",
+     "n": 14,
+     "p": 0.2414,
+     "dwell_s": 2.69
+    },
+    {
+     "to": "LowerMid",
+     "n": 14,
+     "p": 0.2414,
+     "dwell_s": 2.0
+    }
+   ]
+  }
+ },
+ "occupancy": {
+  "CT": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "CTSpawn": 0.8276,
+      "Library": 0.088,
+      "Arch": 0.0635,
+      "Ruins": 0.0111,
+      "BombsiteA": 0.0097
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "Ruins": 0.2192,
+      "BombsiteA": 0.2001,
+      "BombsiteB": 0.1909,
+      "CTSpawn": 0.1281,
+      "TopofMid": 0.1272,
+      "Arch": 0.0827,
+      "Library": 0.0359,
+      "Banana": 0.0158
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "BombsiteB": 0.2404,
+      "Banana": 0.1908,
+      "BombsiteA": 0.1791,
+      "TopofMid": 0.1573,
+      "Arch": 0.0709,
+      "CTSpawn": 0.0473,
+      "Ruins": 0.0371,
+      "Apartments": 0.0367,
+      "Middle": 0.014,
+      "Balcony": 0.01,
+      "Quad": 0.0099,
+      "Library": 0.0065
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "BombsiteB": 0.2453,
+      "Banana": 0.168,
+      "BombsiteA": 0.1405,
+      "TopofMid": 0.1212,
+      "Arch": 0.1013,
+      "Apartments": 0.0731,
+      "CTSpawn": 0.0448,
+      "Balcony": 0.0279,
+      "Ruins": 0.0273,
+      "Quad": 0.0263,
+      "Pit": 0.0101,
+      "Middle": 0.0081,
+      "Library": 0.0062
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "BombsiteB": 0.2455,
+      "BombsiteA": 0.1677,
+      "Banana": 0.1512,
+      "Arch": 0.1215,
+      "TopofMid": 0.0738,
+      "Apartments": 0.0705,
+      "CTSpawn": 0.0474,
+      "Balcony": 0.0386,
+      "Pit": 0.0289,
+      "Ruins": 0.0229,
+      "Quad": 0.0223,
+      "Library": 0.0097
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "BombsiteB": 0.2299,
+      "BombsiteA": 0.1679,
+      "Banana": 0.1526,
+      "Arch": 0.1264,
+      "Apartments": 0.0635,
+      "Balcony": 0.0558,
+      "TopofMid": 0.0513,
+      "Pit": 0.0465,
+      "CTSpawn": 0.0404,
+      "Ruins": 0.0346,
+      "Quad": 0.0218,
+      "Library": 0.0092
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "BombsiteB": 0.2342,
+      "BombsiteA": 0.1706,
+      "Banana": 0.1423,
+      "Arch": 0.1191,
+      "Balcony": 0.0697,
+      "Pit": 0.0543,
+      "TopofMid": 0.0469,
+      "Apartments": 0.0467,
+      "CTSpawn": 0.0418,
+      "Ruins": 0.04,
+      "Quad": 0.0215,
+      "Library": 0.013
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "BombsiteB": 0.2194,
+      "BombsiteA": 0.1705,
+      "Banana": 0.1326,
+      "Arch": 0.1152,
+      "Balcony": 0.0775,
+      "CTSpawn": 0.0629,
+      "Pit": 0.0597,
+      "Ruins": 0.0485,
+      "TopofMid": 0.0466,
+      "Apartments": 0.033,
+      "Quad": 0.0193,
+      "Library": 0.0147
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "BombsiteB": 0.2072,
+      "BombsiteA": 0.1827,
+      "Arch": 0.1218,
+      "Banana": 0.1203,
+      "CTSpawn": 0.0749,
+      "Balcony": 0.0697,
+      "Pit": 0.0636,
+      "Ruins": 0.0555,
+      "TopofMid": 0.0406,
+      "Apartments": 0.0261,
+      "Library": 0.0215,
+      "Quad": 0.016
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "BombsiteA": 0.2026,
+      "BombsiteB": 0.1951,
+      "Arch": 0.1287,
+      "Banana": 0.1094,
+      "CTSpawn": 0.0717,
+      "Balcony": 0.0661,
+      "Pit": 0.063,
+      "Ruins": 0.0551,
+      "TopofMid": 0.04,
+      "Library": 0.0223,
+      "Apartments": 0.0207,
+      "Quad": 0.017,
+      "Middle": 0.0083
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "BombsiteB": 0.2038,
+      "BombsiteA": 0.2028,
+      "Arch": 0.1235,
+      "Banana": 0.1019,
+      "Pit": 0.0731,
+      "CTSpawn": 0.0645,
+      "Balcony": 0.0608,
+      "Ruins": 0.0598,
+      "TopofMid": 0.0409,
+      "Library": 0.0272,
+      "Apartments": 0.0172,
+      "Quad": 0.0163,
+      "Middle": 0.0082
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "BombsiteA": 0.2142,
+      "BombsiteB": 0.2044,
+      "Arch": 0.1085,
+      "Banana": 0.0963,
+      "Pit": 0.0735,
+      "CTSpawn": 0.0733,
+      "Ruins": 0.068,
+      "Balcony": 0.0503,
+      "TopofMid": 0.0423,
+      "Library": 0.0236,
+      "Apartments": 0.0209,
+      "Quad": 0.0166,
+      "Middle": 0.008
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "BombsiteA": 0.2144,
+      "BombsiteB": 0.2127,
+      "Arch": 0.0968,
+      "Ruins": 0.0854,
+      "Banana": 0.0825,
+      "CTSpawn": 0.0719,
+      "Pit": 0.0634,
+      "Balcony": 0.0521,
+      "TopofMid": 0.0482,
+      "Library": 0.0266,
+      "Apartments": 0.0212,
+      "Quad": 0.0194,
+      "Middle": 0.0055
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "BombsiteB": 0.2285,
+      "BombsiteA": 0.2141,
+      "CTSpawn": 0.0926,
+      "Arch": 0.0848,
+      "Ruins": 0.0786,
+      "Banana": 0.0651,
+      "Pit": 0.058,
+      "Balcony": 0.0514,
+      "TopofMid": 0.0416,
+      "Library": 0.0401,
+      "Apartments": 0.0202,
+      "Quad": 0.0186,
+      "Middle": 0.0064
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "BombsiteB": 0.2361,
+      "BombsiteA": 0.2221,
+      "CTSpawn": 0.096,
+      "Ruins": 0.0759,
+      "Arch": 0.0741,
+      "Pit": 0.0631,
+      "Banana": 0.0491,
+      "Balcony": 0.049,
+      "Library": 0.0459,
+      "TopofMid": 0.0404,
+      "Apartments": 0.0193,
+      "Quad": 0.0174,
+      "Middle": 0.0116
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "BombsiteB": 0.2349,
+      "BombsiteA": 0.2125,
+      "CTSpawn": 0.0966,
+      "Ruins": 0.0868,
+      "Arch": 0.0702,
+      "Pit": 0.0599,
+      "Balcony": 0.0513,
+      "Library": 0.0503,
+      "Banana": 0.0399,
+      "TopofMid": 0.0375,
+      "Apartments": 0.0265,
+      "Quad": 0.0169,
+      "Middle": 0.0166
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "BombsiteB": 0.2366,
+      "BombsiteA": 0.2186,
+      "CTSpawn": 0.1079,
+      "Ruins": 0.1029,
+      "Pit": 0.0552,
+      "Balcony": 0.0499,
+      "Library": 0.0493,
+      "Arch": 0.0474,
+      "TopofMid": 0.0394,
+      "Banana": 0.0327,
+      "Apartments": 0.0283,
+      "Middle": 0.0187,
+      "Quad": 0.0133
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "BombsiteB": 0.2347,
+      "BombsiteA": 0.2165,
+      "Ruins": 0.1047,
+      "CTSpawn": 0.1044,
+      "Library": 0.0565,
+      "Pit": 0.0499,
+      "Arch": 0.0437,
+      "Balcony": 0.0408,
+      "Apartments": 0.0353,
+      "Banana": 0.0342,
+      "TopofMid": 0.0327,
+      "Middle": 0.0289,
+      "Quad": 0.0125,
+      "SecondMid": 0.0051
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "BombsiteB": 0.2421,
+      "BombsiteA": 0.2063,
+      "CTSpawn": 0.1208,
+      "Ruins": 0.0983,
+      "Library": 0.0684,
+      "Pit": 0.0563,
+      "Banana": 0.0383,
+      "Arch": 0.0374,
+      "Balcony": 0.037,
+      "Middle": 0.0302,
+      "Apartments": 0.028,
+      "TopofMid": 0.0278,
+      "Quad": 0.0091
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteB": 0.2474,
+      "BombsiteA": 0.187,
+      "CTSpawn": 0.1288,
+      "Ruins": 0.0932,
+      "Pit": 0.0644,
+      "Banana": 0.0631,
+      "Library": 0.0431,
+      "Arch": 0.0422,
+      "TopofMid": 0.0369,
+      "Balcony": 0.0285,
+      "Apartments": 0.0258,
+      "Middle": 0.0215,
+      "Quad": 0.0108,
+      "TRamp": 0.0075
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "BombsiteB": 0.2084,
+      "BombsiteA": 0.1648,
+      "Ruins": 0.1208,
+      "CTSpawn": 0.1176,
+      "Banana": 0.0935,
+      "Pit": 0.0623,
+      "TopofMid": 0.0581,
+      "Arch": 0.0556,
+      "Library": 0.0416,
+      "Apartments": 0.031,
+      "Middle": 0.0271,
+      "Balcony": 0.0192
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "BombsiteB": 0.221,
+      "BombsiteA": 0.1657,
+      "CTSpawn": 0.1127,
+      "Ruins": 0.0986,
+      "Banana": 0.0954,
+      "Pit": 0.0602,
+      "Arch": 0.0531,
+      "Middle": 0.0466,
+      "Apartments": 0.0455,
+      "Library": 0.0431,
+      "TopofMid": 0.029,
+      "Balcony": 0.0105,
+      "LowerMid": 0.0104,
+      "TRamp": 0.0082
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "BombsiteB": 0.2419,
+      "BombsiteA": 0.1665,
+      "Banana": 0.1072,
+      "Ruins": 0.1064,
+      "Pit": 0.0688,
+      "Library": 0.0582,
+      "Apartments": 0.057,
+      "Arch": 0.0553,
+      "CTSpawn": 0.0518,
+      "Middle": 0.0459,
+      "TopofMid": 0.0137,
+      "LowerMid": 0.0105,
+      "Balcony": 0.0088,
+      "Underpass": 0.0081
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "BombsiteB": 0.2762,
+      "BombsiteA": 0.1234,
+      "Banana": 0.093,
+      "Arch": 0.0845,
+      "Ruins": 0.0758,
+      "Library": 0.0738,
+      "Apartments": 0.0487,
+      "CTSpawn": 0.0431,
+      "Middle": 0.0366,
+      "TopofMid": 0.0328,
+      "Pit": 0.0237,
+      "TRamp": 0.023,
+      "SecondMid": 0.017,
+      "TSpawn": 0.017,
+      "Balcony": 0.0169,
+      "BackAlley": 0.0145
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "BombsiteB": 0.2085,
+      "Ruins": 0.1379,
+      "BombsiteA": 0.1315,
+      "Apartments": 0.1122,
+      "CTSpawn": 0.0835,
+      "Banana": 0.0661,
+      "Library": 0.0642,
+      "Arch": 0.0572,
+      "Pit": 0.0513,
+      "TRamp": 0.0256,
+      "Middle": 0.0178,
+      "TSpawn": 0.0177,
+      "Balcony": 0.009,
+      "BackAlley": 0.0065,
+      "Bridge": 0.006,
+      "LowerMid": 0.0051
+     }
+    }
+   ]
+  },
+  "T": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "TSpawn": 0.9439,
+      "LowerMid": 0.0561
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "LowerMid": 0.4072,
+      "TRamp": 0.2516,
+      "SecondMid": 0.184,
+      "TSpawn": 0.0535,
+      "Middle": 0.0497,
+      "Banana": 0.0387,
+      "Upstairs": 0.0154
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "SecondMid": 0.2509,
+      "TRamp": 0.2306,
+      "Banana": 0.1697,
+      "Middle": 0.1431,
+      "LowerMid": 0.1263,
+      "Bridge": 0.0234,
+      "Apartments": 0.017,
+      "BackAlley": 0.0125,
+      "Underpass": 0.0121,
+      "Upstairs": 0.0092,
+      "TSpawn": 0.0052
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "Banana": 0.213,
+      "TRamp": 0.1858,
+      "SecondMid": 0.1825,
+      "Middle": 0.1565,
+      "LowerMid": 0.0952,
+      "BackAlley": 0.0546,
+      "Apartments": 0.0458,
+      "Underpass": 0.0262,
+      "Bridge": 0.0219,
+      "Deck": 0.0072,
+      "Upstairs": 0.0062,
+      "TSpawn": 0.0053
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "Banana": 0.2266,
+      "Middle": 0.1873,
+      "TRamp": 0.1688,
+      "SecondMid": 0.1415,
+      "Apartments": 0.1067,
+      "LowerMid": 0.0709,
+      "BackAlley": 0.043,
+      "Underpass": 0.0317,
+      "Bridge": 0.0158,
+      "Deck": 0.0076
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "Banana": 0.2553,
+      "Middle": 0.1755,
+      "TRamp": 0.1527,
+      "Apartments": 0.1405,
+      "SecondMid": 0.0992,
+      "LowerMid": 0.0589,
+      "BackAlley": 0.037,
+      "TopofMid": 0.0313,
+      "Underpass": 0.0246,
+      "Balcony": 0.0104,
+      "Bridge": 0.0079,
+      "BombsiteB": 0.0066
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "Banana": 0.2753,
+      "Apartments": 0.173,
+      "Middle": 0.1673,
+      "TRamp": 0.133,
+      "SecondMid": 0.0741,
+      "LowerMid": 0.0443,
+      "TopofMid": 0.0336,
+      "BackAlley": 0.0288,
+      "Underpass": 0.0208,
+      "BombsiteB": 0.0144,
+      "Arch": 0.0129,
+      "BombsiteA": 0.0107,
+      "Deck": 0.0067,
+      "Upstairs": 0.0051
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "Banana": 0.2784,
+      "Apartments": 0.1842,
+      "Middle": 0.1486,
+      "TRamp": 0.1078,
+      "SecondMid": 0.0771,
+      "LowerMid": 0.0418,
+      "TopofMid": 0.0403,
+      "BombsiteA": 0.0285,
+      "Underpass": 0.028,
+      "BombsiteB": 0.0225,
+      "Arch": 0.0113,
+      "BackAlley": 0.0107,
+      "Deck": 0.0086,
+      "Balcony": 0.0068,
+      "Upstairs": 0.0054
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "Banana": 0.2747,
+      "Apartments": 0.1798,
+      "Middle": 0.1676,
+      "TRamp": 0.0951,
+      "SecondMid": 0.0766,
+      "TopofMid": 0.043,
+      "BombsiteA": 0.0337,
+      "BombsiteB": 0.0335,
+      "LowerMid": 0.0318,
+      "Underpass": 0.0229,
+      "BackAlley": 0.0124,
+      "Arch": 0.0095,
+      "Deck": 0.0082,
+      "Balcony": 0.0059,
+      "Library": 0.0054
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "Banana": 0.2826,
+      "Middle": 0.1894,
+      "Apartments": 0.1704,
+      "TRamp": 0.0773,
+      "SecondMid": 0.0735,
+      "TopofMid": 0.0485,
+      "BombsiteB": 0.0474,
+      "BombsiteA": 0.0349,
+      "LowerMid": 0.0215,
+      "Underpass": 0.0198,
+      "BackAlley": 0.0113,
+      "Pit": 0.0099,
+      "Library": 0.0079,
+      "Deck": 0.0056
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "Banana": 0.3046,
+      "Middle": 0.2219,
+      "Apartments": 0.1424,
+      "TopofMid": 0.0719,
+      "BombsiteB": 0.0562,
+      "TRamp": 0.0535,
+      "SecondMid": 0.0469,
+      "BombsiteA": 0.0315,
+      "BackAlley": 0.017,
+      "LowerMid": 0.0123,
+      "Underpass": 0.0123,
+      "Pit": 0.0107,
+      "Library": 0.0094,
+      "Balcony": 0.0094
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "Banana": 0.3256,
+      "Middle": 0.2106,
+      "Apartments": 0.1366,
+      "TopofMid": 0.0967,
+      "BombsiteB": 0.0595,
+      "BombsiteA": 0.054,
+      "TRamp": 0.0427,
+      "SecondMid": 0.0417,
+      "Underpass": 0.0101,
+      "BackAlley": 0.0095,
+      "Pit": 0.0068,
+      "Library": 0.0062
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "Banana": 0.3335,
+      "Middle": 0.1945,
+      "Apartments": 0.1278,
+      "TopofMid": 0.0838,
+      "BombsiteB": 0.0666,
+      "BombsiteA": 0.0628,
+      "TRamp": 0.0248,
+      "SecondMid": 0.0241,
+      "Arch": 0.0234,
+      "Pit": 0.0107,
+      "LowerMid": 0.0098,
+      "Underpass": 0.0091,
+      "BackAlley": 0.0089,
+      "Library": 0.007,
+      "Quad": 0.0069,
+      "Balcony": 0.0065
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "Banana": 0.3486,
+      "Middle": 0.1798,
+      "Apartments": 0.1154,
+      "BombsiteB": 0.0765,
+      "BombsiteA": 0.0739,
+      "TopofMid": 0.0693,
+      "Arch": 0.0329,
+      "TRamp": 0.0202,
+      "SecondMid": 0.0146,
+      "BackAlley": 0.0144,
+      "Underpass": 0.0136,
+      "Pit": 0.0114,
+      "LowerMid": 0.0094,
+      "Balcony": 0.0074,
+      "CTSpawn": 0.0067,
+      "Quad": 0.0057
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "Banana": 0.3487,
+      "Middle": 0.181,
+      "Apartments": 0.1136,
+      "BombsiteB": 0.0917,
+      "BombsiteA": 0.077,
+      "TopofMid": 0.0603,
+      "Arch": 0.0275,
+      "CTSpawn": 0.0216,
+      "SecondMid": 0.018,
+      "TRamp": 0.014,
+      "BackAlley": 0.0128,
+      "Library": 0.0096,
+      "Underpass": 0.0094,
+      "Pit": 0.008,
+      "LowerMid": 0.0069
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "Banana": 0.3162,
+      "Middle": 0.1878,
+      "BombsiteB": 0.1168,
+      "Apartments": 0.1157,
+      "TopofMid": 0.0635,
+      "BombsiteA": 0.061,
+      "CTSpawn": 0.0317,
+      "Arch": 0.0275,
+      "SecondMid": 0.0188,
+      "BackAlley": 0.0157,
+      "TRamp": 0.0126,
+      "Pit": 0.0117,
+      "Underpass": 0.0078,
+      "Library": 0.0076,
+      "LowerMid": 0.0055
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "Banana": 0.2997,
+      "Middle": 0.1863,
+      "BombsiteB": 0.1366,
+      "Apartments": 0.1114,
+      "TopofMid": 0.0637,
+      "BombsiteA": 0.0481,
+      "Arch": 0.0325,
+      "CTSpawn": 0.032,
+      "Ruins": 0.0167,
+      "Balcony": 0.0136,
+      "SecondMid": 0.0131,
+      "BackAlley": 0.0123,
+      "TRamp": 0.0106,
+      "Pit": 0.0105,
+      "Library": 0.0076,
+      "TSpawn": 0.0053
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "Banana": 0.2885,
+      "BombsiteB": 0.1693,
+      "Middle": 0.1677,
+      "Apartments": 0.0896,
+      "TopofMid": 0.0791,
+      "BombsiteA": 0.0517,
+      "Arch": 0.0334,
+      "CTSpawn": 0.0274,
+      "Ruins": 0.0224,
+      "Pit": 0.0135,
+      "BackAlley": 0.0133,
+      "Balcony": 0.0086,
+      "TSpawn": 0.0084,
+      "TRamp": 0.0077,
+      "SecondMid": 0.0077,
+      "Quad": 0.0068,
+      "Library": 0.0051
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "Banana": 0.2308,
+      "BombsiteB": 0.2174,
+      "Middle": 0.1275,
+      "TopofMid": 0.1019,
+      "BombsiteA": 0.1001,
+      "Apartments": 0.0867,
+      "Arch": 0.0307,
+      "CTSpawn": 0.0251,
+      "Ruins": 0.0214,
+      "Pit": 0.0178,
+      "BackAlley": 0.0123,
+      "TSpawn": 0.0091,
+      "TRamp": 0.007,
+      "Bridge": 0.0061,
+      "Quad": 0.006
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteB": 0.2324,
+      "Banana": 0.1658,
+      "BombsiteA": 0.1643,
+      "TopofMid": 0.1039,
+      "Apartments": 0.092,
+      "Middle": 0.0688,
+      "Pit": 0.0351,
+      "CTSpawn": 0.0314,
+      "Arch": 0.0283,
+      "Ruins": 0.0251,
+      "Balcony": 0.0085,
+      "SecondMid": 0.0072,
+      "LowerMid": 0.0072,
+      "Quad": 0.007,
+      "TSpawn": 0.0061,
+      "BackAlley": 0.0058,
+      "Bridge": 0.0056,
+      "Library": 0.0054
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "BombsiteA": 0.2628,
+      "BombsiteB": 0.2255,
+      "Banana": 0.1385,
+      "Apartments": 0.0878,
+      "TopofMid": 0.0708,
+      "Pit": 0.0565,
+      "CTSpawn": 0.0484,
+      "Middle": 0.0264,
+      "Arch": 0.0254,
+      "TSpawn": 0.014,
+      "Ruins": 0.0128,
+      "Quad": 0.0088,
+      "Balcony": 0.008,
+      "BackAlley": 0.0073,
+      "Bridge": 0.0069
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "BombsiteA": 0.2862,
+      "BombsiteB": 0.2152,
+      "Banana": 0.117,
+      "Apartments": 0.0921,
+      "Pit": 0.081,
+      "Ruins": 0.0397,
+      "TopofMid": 0.0386,
+      "CTSpawn": 0.0362,
+      "Middle": 0.027,
+      "TSpawn": 0.0168,
+      "SecondMid": 0.0146,
+      "Balcony": 0.011,
+      "Arch": 0.0083,
+      "Bridge": 0.0083,
+      "Library": 0.0083
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "BombsiteA": 0.2346,
+      "BombsiteB": 0.1985,
+      "Apartments": 0.1445,
+      "Banana": 0.1232,
+      "Pit": 0.0867,
+      "Ruins": 0.0503,
+      "CTSpawn": 0.0451,
+      "Middle": 0.0259,
+      "TopofMid": 0.0255,
+      "SecondMid": 0.0196,
+      "TSpawn": 0.0187,
+      "Library": 0.0131,
+      "Upstairs": 0.0085,
+      "Arch": 0.0058
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "BombsiteA": 0.289,
+      "BombsiteB": 0.1955,
+      "Pit": 0.1273,
+      "Apartments": 0.0936,
+      "Banana": 0.092,
+      "Ruins": 0.0489,
+      "CTSpawn": 0.0486,
+      "Middle": 0.0353,
+      "TopofMid": 0.0186,
+      "SecondMid": 0.0165,
+      "Library": 0.0139,
+      "Underpass": 0.0122,
+      "Balcony": 0.0087
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "BombsiteA": 0.2808,
+      "Apartments": 0.1954,
+      "Banana": 0.1003,
+      "Pit": 0.0835,
+      "BombsiteB": 0.0717,
+      "CTSpawn": 0.0675,
+      "Ruins": 0.0392,
+      "TopofMid": 0.0332,
+      "SecondMid": 0.0268,
+      "Library": 0.025,
+      "TSpawn": 0.017,
+      "BackAlley": 0.0151,
+      "Middle": 0.0132,
+      "LowerMid": 0.0119,
+      "Arch": 0.0098,
+      "Balcony": 0.0093
+     }
+    }
+   ]
+  }
+ },
+ "forecast": {
+  "CT": {
+   "5s": {
+    "Apartments": {
+     "n": 10650,
+     "p": {
+      "Apartments": 0.742,
+      "Balcony": 0.1374,
+      "TopofMid": 0.0494,
+      "BombsiteA": 0.0487,
+      "BackAlley": 0.0225
+     }
+    },
+    "Arch": {
+     "n": 29286,
+     "p": {
+      "Arch": 0.6903,
+      "TopofMid": 0.1155,
+      "BombsiteA": 0.1135,
+      "CTSpawn": 0.0807
+     }
+    },
+    "BackAlley": {
+     "n": 219,
+     "p": {
+      "Apartments": 0.7857,
+      "SecondMid": 0.1733,
+      "Bridge": 0.041
+     }
+    },
+    "Balcony": {
+     "n": 13346,
+     "p": {
+      "Balcony": 0.8261,
+      "Pit": 0.0595,
+      "Apartments": 0.0593,
+      "BombsiteA": 0.0551
+     }
+    },
+    "Banana": {
+     "n": 28924,
+     "p": {
+      "Banana": 0.8224,
+      "BombsiteB": 0.1224,
+      "Ruins": 0.0345,
+      "Middle": 0.0207
+     }
+    },
+    "BombsiteA": {
+     "n": 54814,
+     "p": {
+      "BombsiteA": 0.7851,
+      "Pit": 0.0368,
+      "TopofMid": 0.0344,
+      "Arch": 0.0297,
+      "Apartments": 0.0294,
+      "Library": 0.0283,
+      "Balcony": 0.0219,
+      "CTSpawn": 0.0196,
+      "Quad": 0.0148
+     }
+    },
+    "BombsiteB": {
+     "n": 65793,
+     "p": {
+      "BombsiteB": 0.8286,
+      "Banana": 0.0785,
+      "Ruins": 0.0734,
+      "CTSpawn": 0.0195
+     }
+    },
+    "Bridge": {
+     "n": 92,
+     "p": {
+      "Apartments": 0.7189,
+      "LowerMid": 0.0934,
+      "BackAlley": 0.083,
+      "Bridge": 0.0622,
+      "BombsiteB": 0.0231,
+      "BombsiteA": 0.0194
+     }
+    },
+    "CTSpawn": {
+     "n": 38972,
+     "p": {
+      "CTSpawn": 0.3563,
+      "Ruins": 0.2105,
+      "BombsiteB": 0.1227,
+      "Arch": 0.1016,
+      "BombsiteA": 0.0782,
+      "Library": 0.0748,
+      "TopofMid": 0.0412,
+      "Banana": 0.0146
+     }
+    },
+    "Deck": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2246,
+      "BombsiteA": 0.188,
+      "Banana": 0.1017,
+      "Arch": 0.093,
+      "CTSpawn": 0.0759,
+      "Ruins": 0.0743,
+      "TopofMid": 0.0601,
+      "Pit": 0.0479,
+      "Balcony": 0.0437,
+      "Apartments": 0.0364,
+      "Library": 0.0286,
+      "Quad": 0.0152,
+      "Middle": 0.0106
+     }
+    },
+    "Kitchen": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2246,
+      "BombsiteA": 0.188,
+      "Banana": 0.1017,
+      "Arch": 0.093,
+      "CTSpawn": 0.0759,
+      "Ruins": 0.0743,
+      "TopofMid": 0.0601,
+      "Pit": 0.0479,
+      "Balcony": 0.0437,
+      "Apartments": 0.0364,
+      "Library": 0.0286,
+      "Quad": 0.0152,
+      "Middle": 0.0106
+     }
+    },
+    "Library": {
+     "n": 9810,
+     "p": {
+      "Library": 0.4406,
+      "BombsiteA": 0.3781,
+      "CTSpawn": 0.1385,
+      "Arch": 0.0428
+     }
+    },
+    "LowerMid": {
+     "n": 226,
+     "p": {
+      "TSpawn": 0.4418,
+      "LowerMid": 0.19,
+      "TRamp": 0.1767,
+      "Apartments": 0.1076,
+      "Bridge": 0.0839
+     }
+    },
+    "Middle": {
+     "n": 2643,
+     "p": {
+      "Middle": 0.5422,
+      "Banana": 0.2116,
+      "TopofMid": 0.1141,
+      "Arch": 0.0492,
+      "TRamp": 0.0285,
+      "SecondMid": 0.0281,
+      "Apartments": 0.0155,
+      "BombsiteA": 0.0107
+     }
+    },
+    "Pit": {
+     "n": 13742,
+     "p": {
+      "Pit": 0.8807,
+      "BombsiteA": 0.1193
+     }
+    },
+    "Quad": {
+     "n": 4600,
+     "p": {
+      "Quad": 0.7828,
+      "BombsiteA": 0.1494,
+      "TopofMid": 0.0678
+     }
+    },
+    "Ruins": {
+     "n": 21657,
+     "p": {
+      "Ruins": 0.4222,
+      "BombsiteB": 0.3328,
+      "CTSpawn": 0.1621,
+      "Banana": 0.083
+     }
+    },
+    "SecondMid": {
+     "n": 425,
+     "p": {
+      "SecondMid": 0.4935,
+      "LowerMid": 0.1692,
+      "BackAlley": 0.1481,
+      "Middle": 0.0966,
+      "Apartments": 0.0408,
+      "TSpawn": 0.0353,
+      "TRamp": 0.0165
+     }
+    },
+    "TRamp": {
+     "n": 382,
+     "p": {
+      "TRamp": 0.3994,
+      "Banana": 0.1775,
+      "TSpawn": 0.1175,
+      "Upstairs": 0.094,
+      "Middle": 0.0864,
+      "LowerMid": 0.0679,
+      "Bridge": 0.0574
+     }
+    },
+    "TSpawn": {
+     "n": 253,
+     "p": {
+      "TSpawn": 0.9802,
+      "LowerMid": 0.0198
+     }
+    },
+    "TopofMid": {
+     "n": 17755,
+     "p": {
+      "TopofMid": 0.6095,
+      "Arch": 0.1624,
+      "BombsiteA": 0.1244,
+      "Middle": 0.0436,
+      "Apartments": 0.0422,
+      "Quad": 0.0178
+     }
+    },
+    "Underpass": {
+     "n": 49,
+     "p": {
+      "SecondMid": 0.7003,
+      "Underpass": 0.1575,
+      "BombsiteB": 0.0391,
+      "BombsiteA": 0.0327,
+      "Banana": 0.0177,
+      "Arch": 0.0162,
+      "CTSpawn": 0.0132,
+      "Ruins": 0.0129,
+      "TopofMid": 0.0105
+     }
+    },
+    "Upstairs": {
+     "n": 55,
+     "p": {
+      "Apartments": 0.769,
+      "Bridge": 0.1113,
+      "BombsiteB": 0.0355,
+      "BombsiteA": 0.0297,
+      "Banana": 0.0161,
+      "Arch": 0.0147,
+      "CTSpawn": 0.012,
+      "Ruins": 0.0117
+     }
+    }
+   },
+   "10s": {
+    "Apartments": {
+     "n": 9858,
+     "p": {
+      "Apartments": 0.5784,
+      "Balcony": 0.2192,
+      "BombsiteA": 0.1183,
+      "TopofMid": 0.0485,
+      "Pit": 0.0189,
+      "BackAlley": 0.0167
+     }
+    },
+    "Arch": {
+     "n": 28361,
+     "p": {
+      "Arch": 0.5897,
+      "BombsiteA": 0.1666,
+      "TopofMid": 0.1034,
+      "CTSpawn": 0.0939,
+      "Ruins": 0.0287,
+      "Library": 0.0178
+     }
+    },
+    "BackAlley": {
+     "n": 219,
+     "p": {
+      "Apartments": 0.7204,
+      "SecondMid": 0.1729,
+      "LowerMid": 0.0955,
+      "Balcony": 0.0112
+     }
+    },
+    "Balcony": {
+     "n": 13088,
+     "p": {
+      "Balcony": 0.735,
+      "Pit": 0.0978,
+      "Apartments": 0.0872,
+      "BombsiteA": 0.08
+     }
+    },
+    "Banana": {
+     "n": 26590,
+     "p": {
+      "Banana": 0.6946,
+      "BombsiteB": 0.1786,
+      "Ruins": 0.059,
+      "CTSpawn": 0.0397,
+      "Middle": 0.0281
+     }
+    },
+    "BombsiteA": {
+     "n": 50849,
+     "p": {
+      "BombsiteA": 0.6754,
+      "Pit": 0.0585,
+      "CTSpawn": 0.0576,
+      "Apartments": 0.0483,
+      "TopofMid": 0.0381,
+      "Arch": 0.0374,
+      "Balcony": 0.032,
+      "Library": 0.0305,
+      "Quad": 0.0222
+     }
+    },
+    "BombsiteB": {
+     "n": 61618,
+     "p": {
+      "BombsiteB": 0.7619,
+      "Banana": 0.1049,
+      "Ruins": 0.0853,
+      "CTSpawn": 0.0479
+     }
+    },
+    "Bridge": {
+     "n": 84,
+     "p": {
+      "Apartments": 0.7969,
+      "LowerMid": 0.1006,
+      "Bridge": 0.0447,
+      "BombsiteB": 0.0252,
+      "BombsiteA": 0.0208,
+      "Banana": 0.0119
+     }
+    },
+    "CTSpawn": {
+     "n": 37276,
+     "p": {
+      "BombsiteB": 0.2019,
+      "CTSpawn": 0.1982,
+      "BombsiteA": 0.1309,
+      "Ruins": 0.1182,
+      "Banana": 0.1141,
+      "Arch": 0.1073,
+      "TopofMid": 0.0723,
+      "Library": 0.057
+     }
+    },
+    "Deck": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2269,
+      "BombsiteA": 0.1873,
+      "Banana": 0.1075,
+      "Arch": 0.0938,
+      "CTSpawn": 0.0724,
+      "Ruins": 0.0645,
+      "TopofMid": 0.0556,
+      "Pit": 0.0511,
+      "Balcony": 0.0466,
+      "Apartments": 0.0388,
+      "Library": 0.0281,
+      "Quad": 0.0162,
+      "Middle": 0.0111
+     }
+    },
+    "Kitchen": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2269,
+      "BombsiteA": 0.1873,
+      "Banana": 0.1075,
+      "Arch": 0.0938,
+      "CTSpawn": 0.0724,
+      "Ruins": 0.0645,
+      "TopofMid": 0.0556,
+      "Pit": 0.0511,
+      "Balcony": 0.0466,
+      "Apartments": 0.0388,
+      "Library": 0.0281,
+      "Quad": 0.0162,
+      "Middle": 0.0111
+     }
+    },
+    "Library": {
+     "n": 9167,
+     "p": {
+      "Library": 0.3125,
+      "BombsiteA": 0.2709,
+      "CTSpawn": 0.1366,
+      "TopofMid": 0.0657,
+      "Apartments": 0.0642,
+      "Arch": 0.0628,
+      "Ruins": 0.04,
+      "Balcony": 0.0182,
+      "Quad": 0.0158,
+      "Pit": 0.0134
+     }
+    },
+    "LowerMid": {
+     "n": 195,
+     "p": {
+      "TRamp": 0.4048,
+      "TSpawn": 0.3491,
+      "Apartments": 0.1537,
+      "BackAlley": 0.0658,
+      "LowerMid": 0.0152,
+      "BombsiteB": 0.0114
+     }
+    },
+    "Middle": {
+     "n": 2051,
+     "p": {
+      "Banana": 0.2847,
+      "Middle": 0.269,
+      "Arch": 0.097,
+      "TopofMid": 0.0958,
+      "BombsiteA": 0.0573,
+      "Apartments": 0.056,
+      "SecondMid": 0.0358,
+      "BombsiteB": 0.03,
+      "Quad": 0.028,
+      "TRamp": 0.0186,
+      "CTSpawn": 0.0146,
+      "BackAlley": 0.0132
+     }
+    },
+    "Pit": {
+     "n": 12555,
+     "p": {
+      "Pit": 0.8245,
+      "BombsiteA": 0.1649,
+      "TopofMid": 0.0106
+     }
+    },
+    "Quad": {
+     "n": 4457,
+     "p": {
+      "Quad": 0.6312,
+      "BombsiteA": 0.2255,
+      "TopofMid": 0.0883,
+      "Middle": 0.026,
+      "Apartments": 0.0156,
+      "Pit": 0.0134
+     }
+    },
+    "Ruins": {
+     "n": 19794,
+     "p": {
+      "BombsiteB": 0.381,
+      "Ruins": 0.324,
+      "CTSpawn": 0.1252,
+      "Banana": 0.0859,
+      "Library": 0.0387,
+      "Arch": 0.0347,
+      "BombsiteA": 0.0105
+     }
+    },
+    "SecondMid": {
+     "n": 422,
+     "p": {
+      "SecondMid": 0.314,
+      "Apartments": 0.2228,
+      "TSpawn": 0.2172,
+      "LowerMid": 0.17,
+      "Banana": 0.0379,
+      "Middle": 0.0191,
+      "BackAlley": 0.0189
+     }
+    },
+    "TRamp": {
+     "n": 299,
+     "p": {
+      "TRamp": 0.333,
+      "TSpawn": 0.2736,
+      "Apartments": 0.1694,
+      "Banana": 0.1453,
+      "BombsiteB": 0.0404,
+      "BackAlley": 0.0231,
+      "Ruins": 0.0153
+     }
+    },
+    "TSpawn": {
+     "n": 127,
+     "p": {
+      "TSpawn": 0.9304,
+      "LowerMid": 0.0382,
+      "BombsiteB": 0.0172,
+      "BombsiteA": 0.0142
+     }
+    },
+    "TopofMid": {
+     "n": 16779,
+     "p": {
+      "TopofMid": 0.4225,
+      "Arch": 0.2228,
+      "BombsiteA": 0.2159,
+      "Apartments": 0.0398,
+      "Middle": 0.0323,
+      "CTSpawn": 0.0281,
+      "Quad": 0.0263,
+      "Balcony": 0.0123
+     }
+    },
+    "Underpass": {
+     "n": 49,
+     "p": {
+      "BackAlley": 0.4958,
+      "SecondMid": 0.372,
+      "BombsiteB": 0.0399,
+      "BombsiteA": 0.0329,
+      "Banana": 0.0189,
+      "Arch": 0.0165,
+      "CTSpawn": 0.0127,
+      "Ruins": 0.0113
+     }
+    },
+    "Upstairs": {
+     "n": 55,
+     "p": {
+      "Apartments": 0.6651,
+      "BackAlley": 0.2251,
+      "BombsiteB": 0.0362,
+      "BombsiteA": 0.0299,
+      "Banana": 0.0172,
+      "Arch": 0.015,
+      "CTSpawn": 0.0116
+     }
+    }
+   }
+  },
+  "T": {
+   "5s": {
+    "Apartments": {
+     "n": 32486,
+     "p": {
+      "Apartments": 0.8549,
+      "BackAlley": 0.0407,
+      "TopofMid": 0.0392,
+      "Balcony": 0.0343,
+      "SecondMid": 0.0179,
+      "BombsiteA": 0.013
+     }
+    },
+    "Arch": {
+     "n": 3068,
+     "p": {
+      "Arch": 0.4506,
+      "BombsiteA": 0.2616,
+      "CTSpawn": 0.2043,
+      "Library": 0.0453,
+      "TopofMid": 0.0382
+     }
+    },
+    "BackAlley": {
+     "n": 5274,
+     "p": {
+      "Apartments": 0.5396,
+      "BackAlley": 0.393,
+      "SecondMid": 0.0674
+     }
+    },
+    "Balcony": {
+     "n": 1384,
+     "p": {
+      "Apartments": 0.5189,
+      "Pit": 0.1414,
+      "BombsiteA": 0.1127,
+      "Middle": 0.0801,
+      "Balcony": 0.0768,
+      "SecondMid": 0.0701
+     }
+    },
+    "Banana": {
+     "n": 69542,
+     "p": {
+      "Banana": 0.8627,
+      "BombsiteB": 0.067,
+      "Middle": 0.0524,
+      "TRamp": 0.0179
+     }
+    },
+    "BombsiteA": {
+     "n": 15038,
+     "p": {
+      "BombsiteA": 0.8043,
+      "Apartments": 0.0613,
+      "Pit": 0.0392,
+      "TopofMid": 0.0384,
+      "Library": 0.0308,
+      "CTSpawn": 0.0137,
+      "Middle": 0.0123
+     }
+    },
+    "BombsiteB": {
+     "n": 16189,
+     "p": {
+      "BombsiteB": 0.8833,
+      "Banana": 0.08,
+      "Ruins": 0.0367
+     }
+    },
+    "Bridge": {
+     "n": 1944,
+     "p": {
+      "Bridge": 0.5343,
+      "SecondMid": 0.1661,
+      "Apartments": 0.1311,
+      "Upstairs": 0.0896,
+      "LowerMid": 0.051,
+      "TRamp": 0.0279
+     }
+    },
+    "CTSpawn": {
+     "n": 2640,
+     "p": {
+      "CTSpawn": 0.8142,
+      "Ruins": 0.1414,
+      "Arch": 0.0279,
+      "BombsiteB": 0.0166
+     }
+    },
+    "Deck": {
+     "n": 1113,
+     "p": {
+      "Deck": 0.6435,
+      "SecondMid": 0.2373,
+      "Underpass": 0.0365,
+      "Apartments": 0.0302,
+      "BackAlley": 0.0202,
+      "Upstairs": 0.0201,
+      "Middle": 0.0123
+     }
+    },
+    "Kitchen": {
+     "n": 224,
+     "p": {
+      "Deck": 0.5481,
+      "Apartments": 0.1441,
+      "SecondMid": 0.1426,
+      "Bridge": 0.0959,
+      "LowerMid": 0.0286,
+      "TRamp": 0.017,
+      "Upstairs": 0.0132,
+      "Banana": 0.0104
+     }
+    },
+    "Library": {
+     "n": 1396,
+     "p": {
+      "Library": 0.615,
+      "CTSpawn": 0.2858,
+      "BombsiteA": 0.0992
+     }
+    },
+    "LowerMid": {
+     "n": 18892,
+     "p": {
+      "LowerMid": 0.3921,
+      "TRamp": 0.2412,
+      "SecondMid": 0.1453,
+      "Middle": 0.0957,
+      "Banana": 0.0871,
+      "Upstairs": 0.0218,
+      "Bridge": 0.0168
+     }
+    },
+    "Middle": {
+     "n": 44982,
+     "p": {
+      "Middle": 0.6535,
+      "Banana": 0.1229,
+      "TopofMid": 0.122,
+      "TRamp": 0.0443,
+      "SecondMid": 0.0237,
+      "Underpass": 0.0179,
+      "BombsiteA": 0.0157
+     }
+    },
+    "Pit": {
+     "n": 3762,
+     "p": {
+      "Pit": 0.8011,
+      "BombsiteA": 0.1859,
+      "TopofMid": 0.013
+     }
+    },
+    "Quad": {
+     "n": 494,
+     "p": {
+      "BombsiteA": 0.7023,
+      "Apartments": 0.0927,
+      "Quad": 0.0824,
+      "TopofMid": 0.0712,
+      "Middle": 0.0371,
+      "Pit": 0.0143
+     }
+    },
+    "Ruins": {
+     "n": 1282,
+     "p": {
+      "Ruins": 0.6671,
+      "BombsiteB": 0.2804,
+      "CTSpawn": 0.0525
+     }
+    },
+    "SecondMid": {
+     "n": 24234,
+     "p": {
+      "SecondMid": 0.6375,
+      "Middle": 0.1202,
+      "Apartments": 0.0954,
+      "BackAlley": 0.0888,
+      "Underpass": 0.0413,
+      "Balcony": 0.0168
+     }
+    },
+    "TRamp": {
+     "n": 27981,
+     "p": {
+      "TRamp": 0.5624,
+      "Banana": 0.1919,
+      "Middle": 0.19,
+      "LowerMid": 0.0557
+     }
+    },
+    "TSpawn": {
+     "n": 20885,
+     "p": {
+      "LowerMid": 0.4063,
+      "TRamp": 0.2501,
+      "SecondMid": 0.1661,
+      "TSpawn": 0.1024,
+      "Middle": 0.037,
+      "Banana": 0.0225,
+      "Upstairs": 0.0156
+     }
+    },
+    "TopofMid": {
+     "n": 12213,
+     "p": {
+      "TopofMid": 0.4971,
+      "BombsiteA": 0.1782,
+      "Arch": 0.1639,
+      "Middle": 0.0832,
+      "Apartments": 0.0469,
+      "Quad": 0.0202,
+      "SecondMid": 0.0106
+     }
+    },
+    "Underpass": {
+     "n": 4228,
+     "p": {
+      "Underpass": 0.5004,
+      "Middle": 0.3497,
+      "Banana": 0.0966,
+      "SecondMid": 0.0532
+     }
+    },
+    "Upstairs": {
+     "n": 1223,
+     "p": {
+      "Bridge": 0.2798,
+      "Deck": 0.1764,
+      "Upstairs": 0.1346,
+      "Apartments": 0.1149,
+      "TRamp": 0.1,
+      "LowerMid": 0.0932,
+      "SecondMid": 0.0482,
+      "Kitchen": 0.0377,
+      "Middle": 0.0152
+     }
+    }
+   },
+   "10s": {
+    "Apartments": {
+     "n": 29804,
+     "p": {
+      "Apartments": 0.744,
+      "TopofMid": 0.0578,
+      "BackAlley": 0.0389,
+      "SecondMid": 0.0364,
+      "BombsiteA": 0.0354,
+      "Balcony": 0.0348,
+      "Middle": 0.0322,
+      "Pit": 0.0205
+     }
+    },
+    "Arch": {
+     "n": 2471,
+     "p": {
+      "BombsiteA": 0.2945,
+      "CTSpawn": 0.2574,
+      "Arch": 0.2221,
+      "Library": 0.1332,
+      "TopofMid": 0.0571,
+      "Ruins": 0.0357
+     }
+    },
+    "BackAlley": {
+     "n": 5111,
+     "p": {
+      "Apartments": 0.6741,
+      "BackAlley": 0.2537,
+      "SecondMid": 0.0362,
+      "Underpass": 0.0235,
+      "Middle": 0.0125
+     }
+    },
+    "Balcony": {
+     "n": 1315,
+     "p": {
+      "Apartments": 0.4493,
+      "Pit": 0.1944,
+      "Middle": 0.1527,
+      "BombsiteA": 0.1427,
+      "SecondMid": 0.027,
+      "Balcony": 0.0234,
+      "Banana": 0.0105
+     }
+    },
+    "Banana": {
+     "n": 64241,
+     "p": {
+      "Banana": 0.7661,
+      "BombsiteB": 0.1192,
+      "Middle": 0.087,
+      "TRamp": 0.0277
+     }
+    },
+    "BombsiteA": {
+     "n": 13618,
+     "p": {
+      "BombsiteA": 0.6864,
+      "Apartments": 0.1016,
+      "Pit": 0.0644,
+      "TopofMid": 0.0413,
+      "CTSpawn": 0.0401,
+      "Library": 0.0294,
+      "Middle": 0.0255,
+      "Balcony": 0.0112
+     }
+    },
+    "BombsiteB": {
+     "n": 13984,
+     "p": {
+      "BombsiteB": 0.7939,
+      "Banana": 0.1475,
+      "Ruins": 0.0586
+     }
+    },
+    "Bridge": {
+     "n": 1876,
+     "p": {
+      "SecondMid": 0.2897,
+      "Bridge": 0.2835,
+      "Apartments": 0.1498,
+      "TRamp": 0.0758,
+      "LowerMid": 0.057,
+      "Upstairs": 0.0505,
+      "BackAlley": 0.0346,
+      "Middle": 0.0306,
+      "Underpass": 0.016,
+      "Banana": 0.0125
+     }
+    },
+    "CTSpawn": {
+     "n": 2168,
+     "p": {
+      "CTSpawn": 0.6406,
+      "Ruins": 0.197,
+      "BombsiteB": 0.1104,
+      "Arch": 0.0521
+     }
+    },
+    "Deck": {
+     "n": 1113,
+     "p": {
+      "Deck": 0.4138,
+      "SecondMid": 0.2717,
+      "Middle": 0.0732,
+      "Apartments": 0.0657,
+      "BackAlley": 0.0558,
+      "TopofMid": 0.0363,
+      "TRamp": 0.0205,
+      "Upstairs": 0.0198,
+      "Underpass": 0.0154,
+      "BombsiteA": 0.014,
+      "LowerMid": 0.0138
+     }
+    },
+    "Kitchen": {
+     "n": 224,
+     "p": {
+      "Deck": 0.3595,
+      "Apartments": 0.2463,
+      "SecondMid": 0.2354,
+      "Underpass": 0.062,
+      "Middle": 0.0463,
+      "Kitchen": 0.0395,
+      "Banana": 0.0111
+     }
+    },
+    "Library": {
+     "n": 1204,
+     "p": {
+      "Library": 0.4941,
+      "CTSpawn": 0.3161,
+      "BombsiteA": 0.1652,
+      "Ruins": 0.0143,
+      "TopofMid": 0.0104
+     }
+    },
+    "LowerMid": {
+     "n": 18593,
+     "p": {
+      "LowerMid": 0.2671,
+      "TRamp": 0.2297,
+      "Banana": 0.1584,
+      "Middle": 0.1313,
+      "SecondMid": 0.1168,
+      "BackAlley": 0.0203,
+      "Apartments": 0.0171,
+      "Bridge": 0.016,
+      "Deck": 0.016,
+      "Underpass": 0.0137,
+      "Upstairs": 0.0135
+     }
+    },
+    "Middle": {
+     "n": 42684,
+     "p": {
+      "Middle": 0.4673,
+      "Banana": 0.1803,
+      "TopofMid": 0.1563,
+      "BombsiteA": 0.0612,
+      "TRamp": 0.0555,
+      "SecondMid": 0.0297,
+      "Underpass": 0.0265,
+      "Arch": 0.0232
+     }
+    },
+    "Pit": {
+     "n": 3479,
+     "p": {
+      "Pit": 0.6491,
+      "BombsiteA": 0.2329,
+      "Apartments": 0.078,
+      "TopofMid": 0.0297,
+      "Balcony": 0.0103
+     }
+    },
+    "Quad": {
+     "n": 340,
+     "p": {
+      "BombsiteA": 0.5088,
+      "TopofMid": 0.1289,
+      "Middle": 0.1233,
+      "Apartments": 0.102,
+      "Quad": 0.0957,
+      "SecondMid": 0.0224,
+      "Banana": 0.0189
+     }
+    },
+    "Ruins": {
+     "n": 879,
+     "p": {
+      "BombsiteB": 0.3906,
+      "Ruins": 0.382,
+      "CTSpawn": 0.1509,
+      "Banana": 0.0765
+     }
+    },
+    "SecondMid": {
+     "n": 23992,
+     "p": {
+      "SecondMid": 0.3885,
+      "Apartments": 0.2298,
+      "Middle": 0.1845,
+      "BackAlley": 0.089,
+      "TopofMid": 0.0378,
+      "Underpass": 0.0378,
+      "Balcony": 0.0174,
+      "Banana": 0.0151
+     }
+    },
+    "TRamp": {
+     "n": 27406,
+     "p": {
+      "TRamp": 0.3843,
+      "Banana": 0.2955,
+      "Middle": 0.2438,
+      "LowerMid": 0.0458,
+      "SecondMid": 0.019,
+      "Underpass": 0.0116
+     }
+    },
+    "TSpawn": {
+     "n": 20521,
+     "p": {
+      "SecondMid": 0.2437,
+      "TRamp": 0.232,
+      "Banana": 0.1536,
+      "LowerMid": 0.1374,
+      "Middle": 0.1366,
+      "TSpawn": 0.0467,
+      "Bridge": 0.0232,
+      "Apartments": 0.0157,
+      "Upstairs": 0.0111
+     }
+    },
+    "TopofMid": {
+     "n": 10291,
+     "p": {
+      "TopofMid": 0.3201,
+      "BombsiteA": 0.2333,
+      "Arch": 0.1766,
+      "Middle": 0.0914,
+      "Apartments": 0.0697,
+      "CTSpawn": 0.0381,
+      "Banana": 0.0243,
+      "Quad": 0.0197,
+      "SecondMid": 0.015,
+      "Library": 0.0118
+     }
+    },
+    "Underpass": {
+     "n": 4143,
+     "p": {
+      "Middle": 0.4261,
+      "Underpass": 0.2437,
+      "Banana": 0.2264,
+      "SecondMid": 0.0798,
+      "TRamp": 0.024
+     }
+    },
+    "Upstairs": {
+     "n": 1223,
+     "p": {
+      "Bridge": 0.2406,
+      "Apartments": 0.1464,
+      "SecondMid": 0.1436,
+      "Deck": 0.1114,
+      "Upstairs": 0.0805,
+      "LowerMid": 0.0734,
+      "Banana": 0.0728,
+      "Middle": 0.046,
+      "TRamp": 0.0332,
+      "Underpass": 0.0294,
+      "BackAlley": 0.0229
+     }
+    }
+   }
+  }
+ },
+ "post_plant": {
+  "A": {
+   "n": 29,
+   "defuse_rate": 0.138,
+   "ct_reach_rate": 0.517,
+   "first_ct_arrival_s": {
+    "p25": 0.05,
+    "p50": 0.23,
+    "p75": 6.04
+   },
+   "by_alive_ct": {
+    "1": {
+     "n": 7,
+     "ct_reach_rate": 0.286,
+     "defuse_rate": 0.0
+    },
+    "2": {
+     "n": 10,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.1
+    },
+    "3": {
+     "n": 8,
+     "ct_reach_rate": 0.75,
+     "defuse_rate": 0.25
+    },
+    "4": {
+     "n": 4,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.25
+    }
+   }
+  },
+  "B": {
+   "n": 29,
+   "defuse_rate": 0.103,
+   "ct_reach_rate": 0.586,
+   "first_ct_arrival_s": {
+    "p25": 0.12,
+    "p50": 8.14,
+    "p75": 11.66
+   },
+   "by_alive_ct": {
+    "1": {
+     "n": 5,
+     "ct_reach_rate": 0.6,
+     "defuse_rate": 0.0
+    },
+    "2": {
+     "n": 9,
+     "ct_reach_rate": 0.444,
+     "defuse_rate": 0.111
+    },
+    "3": {
+     "n": 12,
+     "ct_reach_rate": 0.583,
+     "defuse_rate": 0.167
+    },
+    "4": {
+     "n": 3,
+     "ct_reach_rate": 1.0,
+     "defuse_rate": 0.0
+    }
+   }
+  }
+ },
+ "rotation": {
+  "delta_s": 15,
+  "by_contact_zone": {
+   "A": {
+    "A": {
+     "n": 22,
+     "to_contact_zone": 0.955,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    },
+    "B": {
+     "n": 28,
+     "to_contact_zone": 0.143,
+     "stay": 0.571,
+     "arrive_s": {
+      "p25": 15.0,
+      "p50": 19.19,
+      "p75": 27.94
+     }
+    }
+   },
+   "B": {
+    "A": {
+     "n": 87,
+     "to_contact_zone": 0.034,
+     "stay": 0.862,
+     "arrive_s": {
+      "p25": 26.03,
+      "p50": 49.38,
+      "p75": 82.53
+     }
+    },
+    "B": {
+     "n": 55,
+     "to_contact_zone": 0.873,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    },
+    "Spawn": {
+     "n": 16,
+     "to_contact_zone": 0.312,
+     "stay": 0.062,
+     "arrive_s": {
+      "p25": 2.62,
+      "p50": 10.38,
+      "p75": 27.75
+     }
+    }
+   },
+   "Mid": {
+    "A": {
+     "n": 74,
+     "to_contact_zone": 0.0,
+     "stay": 0.946,
+     "arrive_s": {
+      "p25": 13.81,
+      "p50": 51.5,
+      "p75": 72.94
+     }
+    },
+    "B": {
+     "n": 57,
+     "to_contact_zone": 0.0,
+     "stay": 0.86,
+     "arrive_s": {
+      "p25": 68.06,
+      "p50": 77.12,
+      "p75": 79.44
+     }
+    },
+    "Spawn": {
+     "n": 5,
+     "to_contact_zone": 0.0,
+     "stay": 0.4,
+     "arrive_s": {
+      "p25": 87.5,
+      "p50": 87.5,
+      "p75": 87.5
+     }
+    }
+   }
+  },
+  "note": "Para cada CT que não participou do primeiro dano: onde estava (own_zone) e onde estava 15 s depois, conforme a zona do contato."
+ },
+ "engagements": {
+  "first_contact": {
+   "t_place": {
+    "Banana": 0.455,
+    "Middle": 0.232,
+    "TRamp": 0.111,
+    "Apartments": 0.101,
+    "TopofMid": 0.04,
+    "Arch": 0.02,
+    "SecondMid": 0.02,
+    "BombsiteA": 0.01,
+    "LowerMid": 0.01
+   },
+   "ct_place": {
+    "Banana": 0.374,
+    "TopofMid": 0.192,
+    "BombsiteB": 0.182,
+    "BombsiteA": 0.111,
+    "Apartments": 0.051,
+    "Arch": 0.03,
+    "Middle": 0.02,
+    "Pit": 0.02,
+    "Quad": 0.01,
+    "Balcony": 0.01
+   },
+   "time_s": {
+    "p25": 10.99,
+    "p50": 15.42,
+    "p75": 27.11
+   },
+   "n": 99
+  },
+  "pairs": [
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 58,
+    "median_distance_m": 13.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Banana",
+    "victim_place": "Banana",
+    "n": 49,
+    "median_distance_m": 9.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 47,
+    "median_distance_m": 14.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Banana",
+    "victim_place": "Banana",
+    "n": 40,
+    "median_distance_m": 13.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "BombsiteA",
+    "n": 39,
+    "median_distance_m": 8.7
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "BombsiteA",
+    "n": 31,
+    "median_distance_m": 10.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Banana",
+    "n": 23,
+    "median_distance_m": 18.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Banana",
+    "victim_place": "BombsiteB",
+    "n": 22,
+    "median_distance_m": 19.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Pit",
+    "victim_place": "BombsiteA",
+    "n": 12,
+    "median_distance_m": 15.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Apartments",
+    "victim_place": "Apartments",
+    "n": 10,
+    "median_distance_m": 11.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "TopofMid",
+    "victim_place": "Middle",
+    "n": 10,
+    "median_distance_m": 11.4
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Ruins",
+    "n": 8,
+    "median_distance_m": 25.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Arch",
+    "victim_place": "TopofMid",
+    "n": 8,
+    "median_distance_m": 15.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Apartments",
+    "n": 7,
+    "median_distance_m": 18.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Pit",
+    "n": 7,
+    "median_distance_m": 23.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "TopofMid",
+    "victim_place": "TopofMid",
+    "n": 7,
+    "median_distance_m": 10.2
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Banana",
+    "victim_place": "TRamp",
+    "n": 6,
+    "median_distance_m": 31.3
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Pit",
+    "victim_place": "BombsiteA",
+    "n": 6,
+    "median_distance_m": 18.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Arch",
+    "n": 6,
+    "median_distance_m": 17.2
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Balcony",
+    "victim_place": "BombsiteA",
+    "n": 5,
+    "median_distance_m": 17.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Ruins",
+    "victim_place": "BombsiteB",
+    "n": 5,
+    "median_distance_m": 16.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "TopofMid",
+    "victim_place": "BombsiteA",
+    "n": 5,
+    "median_distance_m": 21.3
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "TopofMid",
+    "victim_place": "Arch",
+    "n": 5,
+    "median_distance_m": 7.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Middle",
+    "victim_place": "BombsiteA",
+    "n": 5,
+    "median_distance_m": 18.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Apartments",
+    "victim_place": "Apartments",
+    "n": 5,
+    "median_distance_m": 6.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "TopofMid",
+    "victim_place": "TopofMid",
+    "n": 5,
+    "median_distance_m": 5.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Pit",
+    "n": 5,
+    "median_distance_m": 21.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Pit",
+    "victim_place": "Balcony",
+    "n": 5,
+    "median_distance_m": 8.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "CTSpawn",
+    "n": 4,
+    "median_distance_m": 35.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Apartments",
+    "victim_place": "BombsiteA",
+    "n": 4,
+    "median_distance_m": 12.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "TopofMid",
+    "n": 4,
+    "median_distance_m": 12.5
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "TRamp",
+    "victim_place": "Banana",
+    "n": 4,
+    "median_distance_m": 28.1
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Balcony",
+    "victim_place": "Pit",
+    "n": 4,
+    "median_distance_m": 11.5
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Ruins",
+    "victim_place": "Ruins",
+    "n": 4,
+    "median_distance_m": 7.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "CTSpawn",
+    "victim_place": "Arch",
+    "n": 4,
+    "median_distance_m": 18.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Middle",
+    "victim_place": "TopofMid",
+    "n": 4,
+    "median_distance_m": 10.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Arch",
+    "victim_place": "Middle",
+    "n": 4,
+    "median_distance_m": 19.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Middle",
+    "victim_place": "Middle",
+    "n": 4,
+    "median_distance_m": 14.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "CTSpawn",
+    "victim_place": "CTSpawn",
+    "n": 3,
+    "median_distance_m": 9.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "CTSpawn",
+    "victim_place": "BombsiteB",
+    "n": 3,
+    "median_distance_m": 29.8
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Middle",
+    "victim_place": "Banana",
+    "n": 3,
+    "median_distance_m": 26.1
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Library",
+    "victim_place": "Library",
+    "n": 3,
+    "median_distance_m": 7.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "TopofMid",
+    "victim_place": "Apartments",
+    "n": 3,
+    "median_distance_m": 7.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "CTSpawn",
+    "victim_place": "CTSpawn",
+    "n": 3,
+    "median_distance_m": 11.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Apartments",
+    "victim_place": "BombsiteA",
+    "n": 3,
+    "median_distance_m": 17.0
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Arch",
+    "victim_place": "Arch",
+    "n": 3,
+    "median_distance_m": 7.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Library",
+    "victim_place": "BombsiteA",
+    "n": 3,
+    "median_distance_m": 12.7
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Balcony",
+    "n": 3,
+    "median_distance_m": 13.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Library",
+    "victim_place": "CTSpawn",
+    "n": 3,
+    "median_distance_m": 15.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Balcony",
+    "victim_place": "BombsiteA",
+    "n": 3,
+    "median_distance_m": 13.8
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Library",
+    "victim_place": "Library",
+    "n": 3,
+    "median_distance_m": 6.8
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Arch",
+    "victim_place": "TopofMid",
+    "n": 3,
+    "median_distance_m": 10.2
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Banana",
+    "victim_place": "Middle",
+    "n": 3,
+    "median_distance_m": 27.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteA",
+    "victim_place": "Balcony",
+    "n": 3,
+    "median_distance_m": 11.3
+   }
+  ]
+ },
+ "utility": {
+  "CT": {
+   "smoke": {
+    "per_round": 3.394,
+    "time_s": {
+     "p25": 16.52,
+     "p50": 37.66,
+     "p75": 60.52
+    },
+    "targets": {
+     "Banana": 0.527,
+     "Apartments": 0.185,
+     "BombsiteB": 0.128,
+     "Middle": 0.095,
+     "BombsiteA": 0.03,
+     "TopofMid": 0.021,
+     "Balcony": 0.009,
+     "TRamp": 0.003,
+     "Pit": 0.003
+    }
+   },
+   "flash": {
+    "per_round": 2.636,
+    "time_s": {
+     "p25": 18.25,
+     "p50": 37.5,
+     "p75": 66.19
+    },
+    "targets": {
+     "Banana": 0.333,
+     "BombsiteB": 0.322,
+     "BombsiteA": 0.115,
+     "Apartments": 0.069,
+     "TopofMid": 0.057,
+     "Arch": 0.046,
+     "Balcony": 0.027,
+     "Middle": 0.015,
+     "Deck": 0.004,
+     "TRamp": 0.004
+    }
+   },
+   "he": {
+    "per_round": 2.768,
+    "time_s": {
+     "p25": 11.83,
+     "p50": 23.73,
+     "p75": 46.82
+    },
+    "targets": {
+     "Banana": 0.58,
+     "Middle": 0.15,
+     "TopofMid": 0.095,
+     "BombsiteB": 0.062,
+     "Apartments": 0.033,
+     "BombsiteA": 0.026,
+     "TRamp": 0.026,
+     "Arch": 0.015,
+     "Ruins": 0.007,
+     "SecondMid": 0.004
+    }
+   },
+   "molotov": {
+    "per_round": 2.343,
+    "time_s": {
+     "p25": 14.45,
+     "p50": 24.17,
+     "p75": 54.28
+    },
+    "targets": {
+     "Banana": 0.496,
+     "Middle": 0.129,
+     "Apartments": 0.129,
+     "TopofMid": 0.091,
+     "BombsiteB": 0.086,
+     "BombsiteA": 0.03,
+     "SecondMid": 0.013,
+     "Pit": 0.009,
+     "Arch": 0.009,
+     "Library": 0.004
+    }
+   }
+  },
+  "T": {
+   "smoke": {
+    "per_round": 3.414,
+    "time_s": {
+     "p25": 25.98,
+     "p50": 48.18,
+     "p75": 74.4
+    },
+    "targets": {
+     "TopofMid": 0.251,
+     "BombsiteB": 0.192,
+     "BombsiteA": 0.175,
+     "Banana": 0.16,
+     "Ruins": 0.08,
+     "Arch": 0.068,
+     "Library": 0.053,
+     "Apartments": 0.012,
+     "Middle": 0.006,
+     "Pit": 0.003
+    }
+   },
+   "flash": {
+    "per_round": 3.98,
+    "time_s": {
+     "p25": 20.32,
+     "p50": 41.35,
+     "p75": 66.64
+    },
+    "targets": {
+     "Banana": 0.31,
+     "BombsiteB": 0.193,
+     "Balcony": 0.089,
+     "BombsiteA": 0.089,
+     "TopofMid": 0.086,
+     "Apartments": 0.069,
+     "Middle": 0.053,
+     "Arch": 0.051,
+     "Ruins": 0.028,
+     "Deck": 0.013
+    }
+   },
+   "he": {
+    "per_round": 1.576,
+    "time_s": {
+     "p25": 14.73,
+     "p50": 22.01,
+     "p75": 49.45
+    },
+    "targets": {
+     "Banana": 0.5,
+     "BombsiteB": 0.244,
+     "TopofMid": 0.09,
+     "Apartments": 0.045,
+     "BombsiteA": 0.038,
+     "Middle": 0.032,
+     "Arch": 0.019,
+     "Ruins": 0.019,
+     "Quad": 0.006,
+     "Pit": 0.006
+    }
+   },
+   "molotov": {
+    "per_round": 3.131,
+    "time_s": {
+     "p25": 10.96,
+     "p50": 28.84,
+     "p75": 55.02
+    },
+    "targets": {
+     "Banana": 0.439,
+     "BombsiteB": 0.171,
+     "TopofMid": 0.152,
+     "Apartments": 0.081,
+     "Pit": 0.061,
+     "BombsiteA": 0.048,
+     "Ruins": 0.01,
+     "Library": 0.01,
+     "Quad": 0.01,
+     "Middle": 0.006
+    }
+   }
+  }
+ },
+ "evaluation": {
+  "5s": {
+   "occupancy": 2.241,
+   "forecast": 1.029,
+   "improvement_pct": 54.1,
+   "samples": 78482
+  },
+  "10s": {
+   "occupancy": 2.28,
+   "forecast": 1.409,
+   "improvement_pct": 38.2,
+   "samples": 73532
+  },
+  "unit": "nats por amostra (menor = melhor); partidas inéditas, validação cruzada de 4 partes"
+ }
+}

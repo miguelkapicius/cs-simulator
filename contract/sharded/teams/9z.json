@@ -1,0 +1,105 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "team": "9z",
+ "rounds": 36,
+ "matches": 2,
+ "roster": [
+  {
+   "steamid": "76561198216891576",
+   "name": "dgt",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 36
+  },
+  {
+   "steamid": "76561198319723208",
+   "name": "HUASOPEEK",
+   "role_tags": [
+    "lurker"
+   ],
+   "rounds": 36
+  },
+  {
+   "steamid": "76561198067722198",
+   "name": "luchov",
+   "role_tags": [
+    "entry"
+   ],
+   "rounds": 36
+  },
+  {
+   "steamid": "76561198242950384",
+   "name": "max",
+   "role_tags": [
+    "rifler"
+   ],
+   "rounds": 36
+  },
+  {
+   "steamid": "76561198195642865",
+   "name": "meyern",
+   "role_tags": [
+    "awper"
+   ],
+   "rounds": 36
+  }
+ ],
+ "maps": {
+  "de_inferno": {
+   "rounds": 16,
+   "ct": {
+    "rounds": 12,
+    "win_rate": 0.25,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.083,
+     "force": 0.0,
+     "full": 0.833
+    }
+   },
+   "t": {
+    "rounds": 4,
+    "win_rate": 0.0,
+    "plant_rate": 0.0,
+    "plant_a_share": null,
+    "plants": 0,
+    "buy": {
+     "pistol": 0.25,
+     "eco": 0.25,
+     "force": 0.25,
+     "full": 0.25
+    }
+   }
+  },
+  "de_nuke": {
+   "rounds": 20,
+   "ct": {
+    "rounds": 8,
+    "win_rate": 0.25,
+    "buy": {
+     "pistol": 0.125,
+     "eco": 0.0,
+     "force": 0.25,
+     "full": 0.625
+    }
+   },
+   "t": {
+    "rounds": 12,
+    "win_rate": 0.417,
+    "plant_rate": 0.583,
+    "plant_a_share": 0.143,
+    "plants": 7,
+    "buy": {
+     "pistol": 0.083,
+     "eco": 0.0,
+     "force": 0.167,
+     "full": 0.75
+    }
+   }
+  }
+ },
+ "note": "Descritivo. As equipes quase não diferem de forma estatisticamente clara dentro do mesmo mapa (ver tactics.site_decision.team_effects); use com cuidado quando 'rounds' for pequeno."
+}

@@ -1,0 +1,394 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "source": {
+  "matches": 28,
+  "rounds": 599,
+  "sample_hz": 8,
+  "rounds_by_map": {
+   "de_ancient": 78,
+   "de_anubis": 21,
+   "de_cache": 107,
+   "de_dust2": 61,
+   "de_inferno": 99,
+   "de_mirage": 145,
+   "de_nuke": 88
+  }
+ },
+ "conventions": [
+  "Posições em metros, nas coordenadas da Source (1 unidade = 0,0254 m). Para a Unity, ver contract/docs/conventions.md.",
+  "As regiões são os nomes de callout do próprio CS2 (last_place_name). Cada jogador está em exatamente uma região por vez.",
+  "zone: A ou B se, depois de passar pela região, o jogador visita aquele bombsite em >= 65% das vezes (fluxo dos atacantes; do CT onde o T quase não passa); Mid no meio-termo; Spawn para os spawns. pa = fração que vai ao A.",
+  "Tempos em segundos desde o fim do freeze time. Probabilidades somam 1 dentro de cada distribuição (exceto onde indicado).",
+  "forecast[lado]['5s'][região].p é a distribuição da região do jogador 5 s depois, dado que está nessa região agora (e continua vivo)."
+ ],
+ "findings": [
+  "Agrupar os rounds em 'planos' (k-means sobre janelas de 20 s) não previu o bombsite do plant em partidas inéditas (em 5 de 6 mapas o acerto foi igual ou pior que apostar na classe mais comum) e não melhorou a previsão de posição (de -10% a +3%); por isso não há planos no contrato.",
+  "Uma medida simples funciona bem: quantos Ts e CTs há em cada zona (A/B) aos 15-55 s prevê o bombsite do plant com AUC de 0,79 a 0,86 em partidas inéditas (site_decision.site_probability).",
+  "O T tende a acabar no lado com menos defensores: cada CT a mais no A em relação ao B reduz a chance de plant no A (coef. -0,47; IC95% -0,88 a -0,15 aos 20 s), e isso persiste nos rounds em que ainda não houve nenhuma luta, então não é só o T matando CTs onde ataca (site_decision.pre_contact_check).",
+  "O T abandona o bombsite em que está comprometido com mais frequência quando está em desvantagem numérica ali: 58% se a desvantagem é de 2 ou mais, 4% se a vantagem é de 3 ou mais (site_decision.site_switch).",
+  "A equipe quase não muda a preferência de bombsite do T (p = 0,78) nem muda de forma clara a defesa do CT (p = 0,08); só 9 de 30 pares (mapa, equipe de CT) têm 20 ou mais rounds, então perfis por equipe ainda não se sustentam.",
+  "A região atual prevê a região futura bem melhor que a ocupação por tempo (+53% a +58% em 5 s, +35% a +41% em 10 s, em partidas inéditas).",
+  "Para o comportamento coordenado do time, use o playbook (tactics_playbook.json): rounds reais com as rotas dos cinco jogadores."
+ ],
+ "site_decision": {
+  "site_probability": {
+   "features": [
+    "t_diff",
+    "ct_diff"
+   ],
+   "definition": "t_diff = Ts vivos na zona A − Ts vivos na zona B; ct_diff = CTs vivos na zona A − CTs vivos na zona B, no instante t",
+   "formula": "P(plant no A) = sigmoid(intercept + map_intercepts[mapa] + coefficients.t_diff * t_diff + coefficients.ct_diff * ct_diff)",
+   "usage": "usa o modelo cujo t está mais perto do instante atual (empate: o anterior); só vale enquanto a bomba não foi plantada",
+   "models": [
+    {
+     "t": 15,
+     "n_rounds": 314,
+     "plant_a_rate": 0.535,
+     "intercept": -0.013541,
+     "coefficients": {
+      "t_diff": 0.537226,
+      "ct_diff": -0.072903
+     },
+     "map_intercepts": {
+      "de_ancient": 0.179051,
+      "de_anubis": -0.369876,
+      "de_cache": -0.10098,
+      "de_dust2": 0.317452,
+      "de_inferno": 0.391532,
+      "de_mirage": -0.17229,
+      "de_nuke": -0.259608
+     },
+     "evaluation": {
+      "auc": 0.786,
+      "log_loss": 0.555,
+      "baseline_log_loss": 0.733,
+      "improvement_pct": 24.2
+     }
+    },
+    {
+     "t": 25,
+     "n_rounds": 312,
+     "plant_a_rate": 0.538,
+     "intercept": 0.000513,
+     "coefficients": {
+      "t_diff": 0.537153,
+      "ct_diff": -0.254825
+     },
+     "map_intercepts": {
+      "de_ancient": -0.020024,
+      "de_anubis": -0.610819,
+      "de_cache": 0.199714,
+      "de_dust2": 0.418355,
+      "de_inferno": 0.223203,
+      "de_mirage": -0.157561,
+      "de_nuke": -0.070312
+     },
+     "evaluation": {
+      "auc": 0.822,
+      "log_loss": 0.516,
+      "baseline_log_loss": 0.726,
+      "improvement_pct": 29.0
+     }
+    },
+    {
+     "t": 35,
+     "n_rounds": 294,
+     "plant_a_rate": 0.537,
+     "intercept": 0.043563,
+     "coefficients": {
+      "t_diff": 0.632197,
+      "ct_diff": -0.355846
+     },
+     "map_intercepts": {
+      "de_ancient": 0.148827,
+      "de_anubis": -0.914007,
+      "de_cache": 0.017373,
+      "de_dust2": 0.605754,
+      "de_inferno": 0.125585,
+      "de_mirage": -0.161322,
+      "de_nuke": 0.164548
+     },
+     "evaluation": {
+      "auc": 0.856,
+      "log_loss": 0.471,
+      "baseline_log_loss": 0.714,
+      "improvement_pct": 34.0
+     }
+    },
+    {
+     "t": 45,
+     "n_rounds": 255,
+     "plant_a_rate": 0.533,
+     "intercept": 0.130204,
+     "coefficients": {
+      "t_diff": 0.642609,
+      "ct_diff": -0.397331
+     },
+     "map_intercepts": {
+      "de_ancient": -0.169402,
+      "de_anubis": -0.814802,
+      "de_cache": -0.07394,
+      "de_dust2": 0.637985,
+      "de_inferno": 0.272353,
+      "de_mirage": -0.197464,
+      "de_nuke": 0.356192
+     },
+     "evaluation": {
+      "auc": 0.831,
+      "log_loss": 0.514,
+      "baseline_log_loss": 0.739,
+      "improvement_pct": 30.4
+     }
+    },
+    {
+     "t": 55,
+     "n_rounds": 217,
+     "plant_a_rate": 0.535,
+     "intercept": 0.282884,
+     "coefficients": {
+      "t_diff": 0.777366,
+      "ct_diff": -0.388154
+     },
+     "map_intercepts": {
+      "de_ancient": 0.365491,
+      "de_anubis": -0.766924,
+      "de_cache": -0.336976,
+      "de_dust2": 0.754329,
+      "de_inferno": 0.495098,
+      "de_mirage": -0.70908,
+      "de_nuke": 0.224291
+     },
+     "evaluation": {
+      "auc": 0.86,
+      "log_loss": 0.479,
+      "baseline_log_loss": 0.724,
+      "improvement_pct": 33.9
+     }
+    }
+   ]
+  },
+  "site_switch": {
+   "t": 30,
+   "n_rounds": 274,
+   "switch_rate": 0.197,
+   "features": [
+    "t_here",
+    "ct_here",
+    "t_other",
+    "ct_other"
+   ],
+   "definition": "o time está 'comprometido' com a zona (A ou B) onde há mais Ts aos 30 s; t_here/ct_here = Ts e CTs vivos nessa zona, t_other/ct_other = na outra",
+   "formula": "P(abandonar o bombsite) = sigmoid(intercept + map_intercepts[mapa] + soma(coefficients[f] * f))",
+   "intercept": -0.843245,
+   "coefficients": {
+    "t_here": -0.54645,
+    "ct_here": 0.452711,
+    "t_other": 0.804434,
+    "ct_other": -0.173808
+   },
+   "map_intercepts": {
+    "de_ancient": 0.083244,
+    "de_anubis": -0.67705,
+    "de_cache": -0.152925,
+    "de_dust2": -0.564472,
+    "de_inferno": 0.043449,
+    "de_mirage": 0.040418,
+    "de_nuke": 1.216468
+   },
+   "coefficient_ci95": {
+    "t_here": [
+     -0.947,
+     -0.312
+    ],
+    "ct_here": [
+     0.098,
+     0.957
+    ],
+    "t_other": [
+     0.194,
+     1.311
+    ],
+    "ct_other": [
+     -0.625,
+     0.278
+    ]
+   },
+   "by_local_advantage": [
+    {
+     "local_advantage": "<= -2",
+     "n": 12,
+     "switch_rate": 0.583
+    },
+    {
+     "local_advantage": "-1",
+     "n": 19,
+     "switch_rate": 0.368
+    },
+    {
+     "local_advantage": "0",
+     "n": 45,
+     "switch_rate": 0.244
+    },
+    {
+     "local_advantage": "+1",
+     "n": 57,
+     "switch_rate": 0.228
+    },
+    {
+     "local_advantage": "+2",
+     "n": 72,
+     "switch_rate": 0.181
+    },
+    {
+     "local_advantage": ">= +3",
+     "n": 69,
+     "switch_rate": 0.043
+    }
+   ],
+   "switch_rate_by_map": {
+    "de_ancient": 0.154,
+    "de_cache": 0.13,
+    "de_dust2": 0.115,
+    "de_inferno": 0.234,
+    "de_mirage": 0.174,
+    "de_nuke": 0.432
+   },
+   "evaluation": {
+    "auc": 0.711,
+    "log_loss": 0.455,
+    "baseline_log_loss": 0.502,
+    "improvement_pct": 9.3
+   }
+  },
+  "pre_contact_check": [
+   {
+    "t": 15,
+    "rounds": "todos os rounds",
+    "n_rounds": 314,
+    "ct_diff": {
+     "coef": -0.073,
+     "ci95": [
+      -0.23,
+      0.12
+     ]
+    },
+    "t_diff": {
+     "coef": 0.537,
+     "ci95": [
+      0.443,
+      0.68
+     ]
+    }
+   },
+   {
+    "t": 15,
+    "rounds": "só rounds sem nenhuma luta antes de t",
+    "n_rounds": 164,
+    "ct_diff": {
+     "coef": -0.239,
+     "ci95": [
+      -0.53,
+      0.025
+     ]
+    },
+    "t_diff": {
+     "coef": 0.656,
+     "ci95": [
+      0.532,
+      0.87
+     ]
+    }
+   },
+   {
+    "t": 20,
+    "rounds": "todos os rounds",
+    "n_rounds": 314,
+    "ct_diff": {
+     "coef": -0.211,
+     "ci95": [
+      -0.381,
+      -0.065
+     ]
+    },
+    "t_diff": {
+     "coef": 0.534,
+     "ci95": [
+      0.424,
+      0.689
+     ]
+    }
+   },
+   {
+    "t": 20,
+    "rounds": "só rounds sem nenhuma luta antes de t",
+    "n_rounds": 121,
+    "ct_diff": {
+     "coef": -0.473,
+     "ci95": [
+      -0.884,
+      -0.149
+     ]
+    },
+    "t_diff": {
+     "coef": 0.765,
+     "ci95": [
+      0.628,
+      1.142
+     ]
+    }
+   },
+   {
+    "t": 25,
+    "rounds": "todos os rounds",
+    "n_rounds": 312,
+    "ct_diff": {
+     "coef": -0.255,
+     "ci95": [
+      -0.385,
+      -0.137
+     ]
+    },
+    "t_diff": {
+     "coef": 0.537,
+     "ci95": [
+      0.413,
+      0.697
+     ]
+    }
+   },
+   {
+    "t": 25,
+    "rounds": "só rounds sem nenhuma luta antes de t",
+    "n_rounds": 91,
+    "ct_diff": {
+     "coef": -0.475,
+     "ci95": [
+      -0.92,
+      -0.182
+     ]
+    },
+    "t_diff": {
+     "coef": 0.731,
+     "ci95": [
+      0.543,
+      1.105
+     ]
+    }
+   }
+  ],
+  "team_effects": {
+   "ct_defense_by_team": {
+    "between_team_variance": 0.1,
+    "p_value": 0.066
+   },
+   "t_site_preference_by_team": {
+    "between_team_variance": 0.003,
+    "p_value": 0.763
+   },
+   "pairs_ct_with_20_rounds": 9,
+   "pairs_ct_total": 30
+  }
+ }
+}

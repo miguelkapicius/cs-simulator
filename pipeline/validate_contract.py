@@ -11,6 +11,7 @@ from referencing import Registry, Resource
 
 from calibration.validate_log import validate_file
 from contract.reference import team_model as ref
+from contract.reference import manifest as man
 from contract.reference import tactics as tac
 from contract.reference import weapon_dynamics as wd
 from pipeline.common import ARTIFACTS_DIR, CONTRACT_DIR, CONTRACT_VERSION, EXAMPLES_DIR, SCHEMAS_DIR, VECTORS_DIR
@@ -134,6 +135,76 @@ def check_tactics_vectors():
     return problems
 
 
+SHARDED = CONTRACT_DIR / "sharded"
+HEADER = ("schema_version", "contract_version", "generated_at")
+
+
+def _strip(d, *extra):
+    return {k: v for k, v in d.items() if k not in HEADER and k not in extra}
+
+
+def check_shards(reg):
+    """Manifesto válido, arquivos com o tamanho e o hash declarados, e as fatias remontam exatamente os arquivos únicos."""
+    path = SHARDED / "manifest.json"
+    if not path.exists():
+        return ["sharded/manifest.json ausente (rode: make shards)"]
+    manifest = json.loads(path.read_text())
+    problems = []
+    schema = json.loads((SCHEMAS_DIR / "manifest.schema.json").read_text())
+    for e in sorted(Draft202012Validator(schema, registry=reg).iter_errors(manifest), key=lambda x: list(x.path))[:MAX_ERRORS]:
+        problems.append(f"manifest: {'.'.join(str(p) for p in e.path) or '(raiz)'}: {e.message[:150]}")
+    if problems:
+        return problems
+    if manifest["contract_version"].split(".")[0] != CONTRACT_VERSION.split(".")[0]:
+        problems.append(f"manifest: contract_version {manifest['contract_version']} incompatível com {CONTRACT_VERSION}")
+
+    import hashlib
+    for entry in man.all_files(manifest):
+        f = CONTRACT_DIR / entry["path"]
+        if not f.exists():
+            problems.append(f"{entry['path']}: arquivo ausente")
+            continue
+        data = f.read_bytes()
+        if len(data) != entry["bytes"] or hashlib.sha256(data).hexdigest() != entry["sha256"]:
+            problems.append(f"{entry['path']}: tamanho ou sha256 diferente do manifesto (rode: make shards)")
+    if problems:
+        return problems
+
+    load = lambda rel: json.loads((CONTRACT_DIR / rel).read_text())
+    profiles, tactics, playbook = (json.loads((ARTIFACTS_DIR / n).read_text()) for n in ("player_profiles.json", "tactics.json", "tactics_playbook.json"))
+
+    base = load(manifest["global"]["profiles_baseline"]["path"])
+    players = [load(e["path"]) for e in sorted(manifest["players"].values(), key=lambda e: e["index"])]
+    if {**_strip(base), "players": [_strip(p) for p in players]} != _strip(profiles):
+        problems.append("as fatias de jogadores + baseline não remontam player_profiles.json")
+    glob_t = load(manifest["global"]["tactics_global"]["path"])
+    maps_t = {mp: _strip(load(m["tactics"]["path"]), "map") for mp, m in manifest["maps"].items()}
+    if {**_strip(glob_t), "maps": maps_t} != _strip(tactics):
+        problems.append("as fatias de tática + dados globais não remontam tactics.json")
+    maps_p = {mp: _strip(load(m["playbook"]["path"]), "map") for mp, m in manifest["maps"].items()}
+    if maps_p != playbook["maps"]:
+        problems.append("as fatias de playbook não remontam tactics_playbook.json")
+
+    # cada jogador pertence a exatamente um time, e o time lista só jogadores existentes
+    seen = [p for t in manifest["teams"].values() for p in t["players"]]
+    if sorted(seen) != sorted(manifest["players"]) or len(seen) != len(set(seen)):
+        problems.append("os elencos dos times não cobrem cada jogador exatamente uma vez")
+    for team, t in manifest["teams"].items():
+        if any(manifest["players"][p]["team"] != team for p in t["players"]):
+            problems.append(f"time {team}: jogador com time diferente no manifesto")
+
+    vec_path = VECTORS_DIR / "manifest_vectors.json"
+    if not vec_path.exists():
+        problems.append("manifest_vectors.json ausente")
+    else:
+        for i, case in enumerate(json.loads(vec_path.read_text())["cases"]):
+            got = man.match_files(manifest, case["input"]["map"], case["input"]["team_a"], case["input"]["team_b"])
+            exp = case["expected"]
+            if len(got["files"]) != exp["n_files"] or got["bytes"] != exp["bytes"] or ("files" in exp and got["files"] != exp["files"]):
+                problems.append(f"manifest_vectors[{i}]: esperado {exp['n_files']} arquivos / {exp['bytes']} bytes, obtido {len(got['files'])} / {got['bytes']}")
+    return problems
+
+
 def check_example():
     path = EXAMPLES_DIR / "sim_log_example.jsonl"
     if not path.exists():
@@ -149,6 +220,7 @@ def main():
     sections = {"artefatos x schemas": check_artifacts(reg), "vetores do modelo de time x referência": check_vectors(),
                 "vetores de recuo x referência": check_weapon_vectors(),
                 "vetores da camada tática x referência": check_tactics_vectors(),
+                "fatias independentes (manifesto, hashes, remontagem)": check_shards(reg),
                 "log de exemplo": check_example()}
     bad = 0
     print(f"Contrato {CONTRACT_VERSION} ({CONTRACT_DIR.name}/)")

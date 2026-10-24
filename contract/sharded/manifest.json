@@ -1,0 +1,602 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "layout": {
+  "global": "vale para qualquer confronto: regras, dinâmica das armas, modelo de time, baseline dos perfis e dados táticos gerais",
+  "teams": "um arquivo por time: elenco e estatísticas descritivas por mapa",
+  "players": "um arquivo por jogador (steamid): o perfil completo, que não depende de outro jogador",
+  "maps": "dois arquivos por mapa: tática (regiões, grafo, previsão...) e playbook (rotas de rounds reais)",
+  "match": "um confronto (mapa + 2 times) carrega: global + os 2 times + os jogadores deles + o mapa. Tudo mais fica de fora",
+  "cache": "cada arquivo tem bytes e sha256; só baixe/releia o que mudou de hash",
+  "paths": "relativos à pasta contract/"
+ },
+ "global": {
+  "game_rules": {
+   "path": "artifacts/game_rules.json",
+   "bytes": 115795,
+   "sha256": "16b7db8e2d351902fa4ce377c949baaba0a22e5d3b56317f9d41432a6069cc43"
+  },
+  "weapon_dynamics": {
+   "path": "artifacts/weapon_dynamics.json",
+   "bytes": 31659,
+   "sha256": "42bb03819c195cfb2a25c79e682504a95246d8e0039e3573be1b4123c8ed2da2"
+  },
+  "team_model": {
+   "path": "artifacts/team_model.json",
+   "bytes": 13798,
+   "sha256": "325113ee0d17eb3c0ac0aedecd8fe4e11f026e8cb95e36dd9bc89cfc5261ecc8"
+  },
+  "profiles_baseline": {
+   "path": "sharded/global/profiles_baseline.json",
+   "bytes": 16039,
+   "sha256": "72f3afcb365ef6dd9e322c4736985d828f5883971426b274a9f65be704e1446d"
+  },
+  "tactics_global": {
+   "path": "sharded/global/tactics_global.json",
+   "bytes": 9798,
+   "sha256": "78e8459b56f1e26c799374a73f1cd7e26a82eed19e57d8e76d22c7ad7abdcb4a"
+  }
+ },
+ "teams": {
+  "9z": {
+   "path": "sharded/teams/9z.json",
+   "bytes": 1767,
+   "sha256": "a8bda934667cbf6de6e6721a32d701109d18f15ef06eaca17375bfcfc636383f",
+   "players": [
+    "76561198216891576",
+    "76561198319723208",
+    "76561198067722198",
+    "76561198242950384",
+    "76561198195642865"
+   ],
+   "rounds": 36
+  },
+  "Aurora": {
+   "path": "sharded/teams/aurora.json",
+   "bytes": 2662,
+   "sha256": "777157bc7e251644acdf62f0a6d97ff999ec703124425bc66bbd66aed1795dcd",
+   "players": [
+    "76561198855375325",
+    "76561198057282432",
+    "76561198812513923",
+    "76561198083485506",
+    "76561198044118796"
+   ],
+   "rounds": 109
+  },
+  "BetBoom": {
+   "path": "sharded/teams/betboom.json",
+   "bytes": 3060,
+   "sha256": "29571de2d5ee545bcec2809a4d136c5228c6973d3c7dd318acea71dda67e8517",
+   "players": [
+    "76561198146207066",
+    "76561198859428279",
+    "76561198372023214",
+    "76561198167785069",
+    "76561198059614402"
+   ],
+   "rounds": 212
+  },
+  "FURIA": {
+   "path": "sharded/teams/furia.json",
+   "bytes": 3909,
+   "sha256": "3c3196aa143bbe427e2865860d0c0e29a7eaf45727be28b394bb840155e224fa",
+   "players": [
+    "76561197960690195",
+    "76561198058500492",
+    "76561198200982290",
+    "76561198134401925",
+    "76561198164970560"
+   ],
+   "rounds": 599
+  },
+  "Legacy": {
+   "path": "sharded/teams/legacy.json",
+   "bytes": 2204,
+   "sha256": "e5f2bc469abd28aeb2ac54a349c2b9a74cbf70971c2d30222ba7045815c214a4",
+   "players": [
+    "76561198043769572",
+    "76561198194325317",
+    "76561198850020186",
+    "76561198061763596",
+    "76561198365118288"
+   ],
+   "rounds": 62
+  },
+  "MOUZ": {
+   "path": "sharded/teams/mouz.json",
+   "bytes": 2593,
+   "sha256": "670ea065241d1d1bb231b7612af9bce8f8a1d7262affe152d07720702b37beae",
+   "players": [
+    "76561198310561479",
+    "76561198063336407",
+    "76561198355739212",
+    "76561198998266210",
+    "76561198193174134"
+   ],
+   "rounds": 80
+  },
+  "PARIVISION": {
+   "path": "sharded/teams/parivision.json",
+   "bytes": 2213,
+   "sha256": "c1f34abf161d1fc0b637606b466b9698f4c789cb2ad3fe74cb513647a2cd6773",
+   "players": [
+    "76561197995817501",
+    "76561198028292758",
+    "76561198036125584",
+    "76561198141272052",
+    "76561198210626739"
+   ],
+   "rounds": 61
+  },
+  "Vitality": {
+   "path": "sharded/teams/vitality.json",
+   "bytes": 1793,
+   "sha256": "993791a3a1a5f95a2c53e1eec13410e94ab7c61c8aa262c88acea6c2a065aa6f",
+   "players": [
+    "76561197989744167",
+    "76561197978835160",
+    "76561197973140692",
+    "76561197991272318",
+    "76561198113666193"
+   ],
+   "rounds": 39
+  }
+ },
+ "players": {
+  "76561198216891576": {
+   "path": "sharded/players/76561198216891576.json",
+   "bytes": 8795,
+   "sha256": "66dda3678b9e7bae3f0885aa4be1edfda1ef40c388a5286fdb7b4f8584bc8ac5",
+   "name": "dgt",
+   "team": "9z",
+   "index": 0,
+   "rounds": 36
+  },
+  "76561198319723208": {
+   "path": "sharded/players/76561198319723208.json",
+   "bytes": 8692,
+   "sha256": "ea6797a2a6c4753b3e929f0ecbda89d381245fb2386c8a1e7b45090183716e3b",
+   "name": "HUASOPEEK",
+   "team": "9z",
+   "index": 1,
+   "rounds": 36
+  },
+  "76561198067722198": {
+   "path": "sharded/players/76561198067722198.json",
+   "bytes": 8355,
+   "sha256": "cba436fbddbec4e5b82970abd04f254d3e8294ac3244ddea7f64abccf873ea60",
+   "name": "luchov",
+   "team": "9z",
+   "index": 2,
+   "rounds": 36
+  },
+  "76561198242950384": {
+   "path": "sharded/players/76561198242950384.json",
+   "bytes": 8559,
+   "sha256": "38b8c0e69d3b2b65cf5489b84bfa2d41dd7face1a9df45cb23646b9ac2d21f2d",
+   "name": "max",
+   "team": "9z",
+   "index": 3,
+   "rounds": 36
+  },
+  "76561198195642865": {
+   "path": "sharded/players/76561198195642865.json",
+   "bytes": 9257,
+   "sha256": "e7a23933413a07ab200d961509a1bc7bdaf55d55651ba7117b7a9bf39aa74b19",
+   "name": "meyern",
+   "team": "9z",
+   "index": 4,
+   "rounds": 36
+  },
+  "76561198855375325": {
+   "path": "sharded/players/76561198855375325.json",
+   "bytes": 9750,
+   "sha256": "f22258120a031049dc713947446aea7ede875f248f9ecac8a10dfe8a5515cd63",
+   "name": "Jimpphat",
+   "team": "Aurora",
+   "index": 5,
+   "rounds": 109
+  },
+  "76561198057282432": {
+   "path": "sharded/players/76561198057282432.json",
+   "bytes": 10108,
+   "sha256": "f8c143bc186b7e309cebfba73c0795bfb8d97b8ee5fa10c051cc85308efbf63d",
+   "name": "kyxsan",
+   "team": "Aurora",
+   "index": 6,
+   "rounds": 109
+  },
+  "76561198812513923": {
+   "path": "sharded/players/76561198812513923.json",
+   "bytes": 10646,
+   "sha256": "a16ee4116a42cc54c9a1493e5499e63f6bf642570e7dc08982e0b7076f3001cb",
+   "name": "Wicadia",
+   "team": "Aurora",
+   "index": 7,
+   "rounds": 109
+  },
+  "76561198083485506": {
+   "path": "sharded/players/76561198083485506.json",
+   "bytes": 11453,
+   "sha256": "df440bbc37f54b9906d85e9390611b4d40ad0c255732a351b53f52ac2aceaa15",
+   "name": "woxic",
+   "team": "Aurora",
+   "index": 8,
+   "rounds": 109
+  },
+  "76561198044118796": {
+   "path": "sharded/players/76561198044118796.json",
+   "bytes": 9622,
+   "sha256": "a358038cc0618cb02daed8f630fc0cc4a6318ab442f2b22131ce943e7a29bdaf",
+   "name": "XANTARES",
+   "team": "Aurora",
+   "index": 9,
+   "rounds": 109
+  },
+  "76561198146207066": {
+   "path": "sharded/players/76561198146207066.json",
+   "bytes": 11084,
+   "sha256": "a53b7ddd43f63c2770e30e4cf9789fc1ed45e11a846b661540e2a835d84c3868",
+   "name": "Boombl4",
+   "team": "BetBoom",
+   "index": 10,
+   "rounds": 212
+  },
+  "76561198859428279": {
+   "path": "sharded/players/76561198859428279.json",
+   "bytes": 10547,
+   "sha256": "4249a446ffa738d24c8fbe7d83de66555ff3c30381372e15fc2c7f8f1713ed8f",
+   "name": "d1Ledez",
+   "team": "BetBoom",
+   "index": 11,
+   "rounds": 212
+  },
+  "76561198372023214": {
+   "path": "sharded/players/76561198372023214.json",
+   "bytes": 11074,
+   "sha256": "c69f2192fd2a15b45a23c58ac9dd451c78d4700494dad255f2806b8af8414688",
+   "name": "Magnojez",
+   "team": "BetBoom",
+   "index": 12,
+   "rounds": 212
+  },
+  "76561198167785069": {
+   "path": "sharded/players/76561198167785069.json",
+   "bytes": 10352,
+   "sha256": "dde24bad7064b14d2b99d75c8bc207b210e63a9d28d11cbed954644bf1d14bc5",
+   "name": "S1ren",
+   "team": "BetBoom",
+   "index": 13,
+   "rounds": 212
+  },
+  "76561198059614402": {
+   "path": "sharded/players/76561198059614402.json",
+   "bytes": 11584,
+   "sha256": "df42c7f89151b54cf5ec9a6f57c51b90457a0bdb12f7bd4a3dd0416064bd59c1",
+   "name": "zorte",
+   "team": "BetBoom",
+   "index": 14,
+   "rounds": 212
+  },
+  "76561197960690195": {
+   "path": "sharded/players/76561197960690195.json",
+   "bytes": 12624,
+   "sha256": "3e07eaf63f33879286c630a6b79ea58f3e533fc8fe688103a2fdcd3852952f9b",
+   "name": "FalleN",
+   "team": "FURIA",
+   "index": 15,
+   "rounds": 599
+  },
+  "76561198058500492": {
+   "path": "sharded/players/76561198058500492.json",
+   "bytes": 12544,
+   "sha256": "e873fc77485d98992aaf4b55a57a1cbd8be4a227eeed9dd348a64850f6f276ff",
+   "name": "KSCERATO",
+   "team": "FURIA",
+   "index": 16,
+   "rounds": 599
+  },
+  "76561198200982290": {
+   "path": "sharded/players/76561198200982290.json",
+   "bytes": 12796,
+   "sha256": "904798a5ced4f1bf8cbca7bca8c0031f312bb5081a231c3e1f4dcbbe99a96601",
+   "name": "molodoy",
+   "team": "FURIA",
+   "index": 17,
+   "rounds": 599
+  },
+  "76561198134401925": {
+   "path": "sharded/players/76561198134401925.json",
+   "bytes": 11919,
+   "sha256": "712a63dcbdff4d7c7103b72608ce00ff0e8b49a84e5578e9edaba473533bce75",
+   "name": "YEKINDAR",
+   "team": "FURIA",
+   "index": 18,
+   "rounds": 599
+  },
+  "76561198164970560": {
+   "path": "sharded/players/76561198164970560.json",
+   "bytes": 11948,
+   "sha256": "ba9df5a71e665535c7f9a4aed4ca3363440e670b9ed8c1be2292309ca94c802e",
+   "name": "yuurih",
+   "team": "FURIA",
+   "index": 19,
+   "rounds": 599
+  },
+  "76561198043769572": {
+   "path": "sharded/players/76561198043769572.json",
+   "bytes": 9643,
+   "sha256": "19dcbd2a822ca436432b606aed37646a777646bf6406c2eec2e9dcf370123a85",
+   "name": "art",
+   "team": "Legacy",
+   "index": 20,
+   "rounds": 62
+  },
+  "76561198194325317": {
+   "path": "sharded/players/76561198194325317.json",
+   "bytes": 9944,
+   "sha256": "59832d7eba7c93d91fb91d7d43f889547f44b9174aac1fef1888f1f0b671c834",
+   "name": "dumau",
+   "team": "Legacy",
+   "index": 21,
+   "rounds": 62
+  },
+  "76561198850020186": {
+   "path": "sharded/players/76561198850020186.json",
+   "bytes": 9232,
+   "sha256": "5f2cbeeb1dd51ad361002c0348d9949cddbbd3d05d1332d210c081639385f364",
+   "name": "latto",
+   "team": "Legacy",
+   "index": 22,
+   "rounds": 62
+  },
+  "76561198061763596": {
+   "path": "sharded/players/76561198061763596.json",
+   "bytes": 9360,
+   "sha256": "ca56ec0356e7cf3c9b2120c68ca52f91ac3d04401a1daad4da42f58840288a68",
+   "name": "n1ssim",
+   "team": "Legacy",
+   "index": 23,
+   "rounds": 62
+  },
+  "76561198365118288": {
+   "path": "sharded/players/76561198365118288.json",
+   "bytes": 9749,
+   "sha256": "72edbb9c9e0271936e4fb0f8d8d3f05731c62ff8066c6778721829d39971a60d",
+   "name": "try",
+   "team": "Legacy",
+   "index": 24,
+   "rounds": 62
+  },
+  "76561198310561479": {
+   "path": "sharded/players/76561198310561479.json",
+   "bytes": 9693,
+   "sha256": "a4e61c8b62bc347aa1a01269493e4ae28933eff3638923046d3134336164e5e2",
+   "name": "PR",
+   "team": "MOUZ",
+   "index": 25,
+   "rounds": 80
+  },
+  "76561198063336407": {
+   "path": "sharded/players/76561198063336407.json",
+   "bytes": 9653,
+   "sha256": "022715bfbf9e2682531a036e1981d57b9c2673205ea25762f06aa5bd42912e81",
+   "name": "Spinx",
+   "team": "MOUZ",
+   "index": 26,
+   "rounds": 80
+  },
+  "76561198355739212": {
+   "path": "sharded/players/76561198355739212.json",
+   "bytes": 10573,
+   "sha256": "51b95ac7e4e6576528729c9723c27770e19127916e63a4854e7c3d75ee94ff66",
+   "name": "torzsi",
+   "team": "MOUZ",
+   "index": 27,
+   "rounds": 80
+  },
+  "76561198998266210": {
+   "path": "sharded/players/76561198998266210.json",
+   "bytes": 10074,
+   "sha256": "f014020bf894b6ee475019b93325ab0bb654c62b8be3899a471410017c89aae2",
+   "name": "xelex",
+   "team": "MOUZ",
+   "index": 28,
+   "rounds": 80
+  },
+  "76561198193174134": {
+   "path": "sharded/players/76561198193174134.json",
+   "bytes": 9789,
+   "sha256": "1f486299c55b7f63056bc2ecd54836e571f7830782c8b65aae5efdce0c007d64",
+   "name": "xertioN",
+   "team": "MOUZ",
+   "index": 29,
+   "rounds": 80
+  },
+  "76561197995817501": {
+   "path": "sharded/players/76561197995817501.json",
+   "bytes": 8946,
+   "sha256": "93c36ebb29a7663f9da0c7ba654a1c0e81549a8a33c5b345aceb9a19457fc92a",
+   "name": "FL1T",
+   "team": "PARIVISION",
+   "index": 30,
+   "rounds": 61
+  },
+  "76561198028292758": {
+   "path": "sharded/players/76561198028292758.json",
+   "bytes": 9646,
+   "sha256": "6e752cf55571dd785913174f058b33e2d23c05a5caab69be39fbafe5315103c3",
+   "name": "Hobbit",
+   "team": "PARIVISION",
+   "index": 31,
+   "rounds": 61
+  },
+  "76561198036125584": {
+   "path": "sharded/players/76561198036125584.json",
+   "bytes": 9654,
+   "sha256": "abaf6866de9f1bffe71760fd77cb89119c51c77eda6b2a63e983f8227c7131da",
+   "name": "Jame",
+   "team": "PARIVISION",
+   "index": 32,
+   "rounds": 61
+  },
+  "76561198141272052": {
+   "path": "sharded/players/76561198141272052.json",
+   "bytes": 9475,
+   "sha256": "928cae4366c77b5094f8f4c6706aeccc85b04a59026e4120f1e2314edff1f062",
+   "name": "xiELO",
+   "team": "PARIVISION",
+   "index": 33,
+   "rounds": 61
+  },
+  "76561198210626739": {
+   "path": "sharded/players/76561198210626739.json",
+   "bytes": 9602,
+   "sha256": "72bd61dedb2f693547bc8c64134a43ba3bf4c1909b24ddc9114f0bca6ae766a5",
+   "name": "zweih",
+   "team": "PARIVISION",
+   "index": 34,
+   "rounds": 61
+  },
+  "76561197989744167": {
+   "path": "sharded/players/76561197989744167.json",
+   "bytes": 7809,
+   "sha256": "82852ed48cbc0d918b577dacda4175075ef3c356fff1ee6a918b0b0114d24f71",
+   "name": "apEX",
+   "team": "Vitality",
+   "index": 35,
+   "rounds": 39
+  },
+  "76561197978835160": {
+   "path": "sharded/players/76561197978835160.json",
+   "bytes": 8434,
+   "sha256": "5f57097ef262eeb66d8b73d3718d3a4bfb10f1bd6b8e945a53fd558de8e8f00f",
+   "name": "flameZ",
+   "team": "Vitality",
+   "index": 36,
+   "rounds": 39
+  },
+  "76561197973140692": {
+   "path": "sharded/players/76561197973140692.json",
+   "bytes": 8585,
+   "sha256": "741eb8715be9d5f7fff0d613b2478d0d5813051e71da3b9b48ab93b3ceb143e9",
+   "name": "mezii",
+   "team": "Vitality",
+   "index": 37,
+   "rounds": 39
+  },
+  "76561197991272318": {
+   "path": "sharded/players/76561197991272318.json",
+   "bytes": 7705,
+   "sha256": "6c2696980cde4eaa1054c72fd995f6c1e4e6e7aeed417d8b0f8e42b095cac76e",
+   "name": "ropz",
+   "team": "Vitality",
+   "index": 38,
+   "rounds": 39
+  },
+  "76561198113666193": {
+   "path": "sharded/players/76561198113666193.json",
+   "bytes": 8962,
+   "sha256": "29e4f4c2c4393f5fc096ef6bf7a3a284258e70cf89715f37a77ecab8f3d838af",
+   "name": "ZywOo",
+   "team": "Vitality",
+   "index": 39,
+   "rounds": 39
+  }
+ },
+ "maps": {
+  "de_ancient": {
+   "rounds": 78,
+   "tactics": {
+    "path": "sharded/maps/de_ancient/tactics.json",
+    "bytes": 59514,
+    "sha256": "8b9ebddddb864ee752a22a4e97db8252d99cfd5986db1be482356572c2b4f68c"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_ancient/playbook.json",
+    "bytes": 121465,
+    "sha256": "a0b6d4aab5e949493359e43d5b6fb381fe9f15c43f59c4d18f1c900496286d41"
+   }
+  },
+  "de_anubis": {
+   "rounds": 21,
+   "tactics": {
+    "path": "sharded/maps/de_anubis/tactics.json",
+    "bytes": 76262,
+    "sha256": "d91133366d586016ef8a0538c38a8837fb2991b801bc2414fcec22ebc6a4af26"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_anubis/playbook.json",
+    "bytes": 38410,
+    "sha256": "9244983e166d295fdb69050c6a6283ffa16adf513dcc52aa15337f3345eb2d79"
+   }
+  },
+  "de_cache": {
+   "rounds": 107,
+   "tactics": {
+    "path": "sharded/maps/de_cache/tactics.json",
+    "bytes": 127642,
+    "sha256": "e62c6223ab57a6bc49b1c0c309b2b75b67a984e20bbe72efcff359decd0a6349"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_cache/playbook.json",
+    "bytes": 248822,
+    "sha256": "37b4ce6503b68ce5c914f2aaab5f9519ecce08000b38e715410ecd1550c28307"
+   }
+  },
+  "de_dust2": {
+   "rounds": 61,
+   "tactics": {
+    "path": "sharded/maps/de_dust2/tactics.json",
+    "bytes": 75305,
+    "sha256": "dd8968991241a934b50fe571ff423f900caec8ca580961f8535193b033f1935a"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_dust2/playbook.json",
+    "bytes": 119187,
+    "sha256": "e4c0b56f7cc38046503522eabead118a88658dd61f89ad3f21f4466ada71f9b5"
+   }
+  },
+  "de_inferno": {
+   "rounds": 99,
+   "tactics": {
+    "path": "sharded/maps/de_inferno/tactics.json",
+    "bytes": 69394,
+    "sha256": "d4ffb784b6ff9d64cccd3eb04d418bf1d98ad9199c0e880c4fe814009f8b39ed"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_inferno/playbook.json",
+    "bytes": 171917,
+    "sha256": "3f28edb359af436d01f6efbb34f54335077bf1c56cd5f4d4ee3e4cbe9f33a2ea"
+   }
+  },
+  "de_mirage": {
+   "rounds": 145,
+   "tactics": {
+    "path": "sharded/maps/de_mirage/tactics.json",
+    "bytes": 79735,
+    "sha256": "a906ebbb338ce750b649fc02bd96c0254c2d5a4aebfba2cf99c6e4d3a512fa3c"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_mirage/playbook.json",
+    "bytes": 235079,
+    "sha256": "80c6377a43ee0039b64da18e81e1a92348c8441c3ad51e5e16489e6601eeb7c6"
+   }
+  },
+  "de_nuke": {
+   "rounds": 88,
+   "tactics": {
+    "path": "sharded/maps/de_nuke/tactics.json",
+    "bytes": 88054,
+    "sha256": "484908ebd5fdf887c4f104a8a1f468a74e78b2e33864754ad94af4e627f74c6c"
+   },
+   "playbook": {
+    "path": "sharded/maps/de_nuke/playbook.json",
+    "bytes": 150496,
+    "sha256": "d69011982e871b65f359b5b7a7666c998bc64c94cf2a0907381d0a6c33d86496"
+   }
+  }
+ }
+}

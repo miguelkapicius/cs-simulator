@@ -1,0 +1,4372 @@
+{
+ "schema_version": "1.0",
+ "contract_version": "1.5.0",
+ "generated_at": "2026-10-24",
+ "map": "de_anubis",
+ "n_rounds": 21,
+ "places": {
+  "Alley": {
+   "kind": "area",
+   "n": 1941,
+   "centroid_m": [
+    -30.53,
+    30.78,
+    -0.16
+   ],
+   "spread_m": [
+    1.68,
+    4.04
+   ],
+   "bbox_m": [
+    [
+     -33.69,
+     25.36
+    ],
+    [
+     -28.18,
+     37.71
+    ]
+   ],
+   "side_share": {
+    "CT": 0.976,
+    "T": 0.024
+   },
+   "zone": "B",
+   "pa": 0.04
+  },
+  "BackofB": {
+   "kind": "area",
+   "n": 2347,
+   "centroid_m": [
+    -17.58,
+    17.53,
+    0.97
+   ],
+   "spread_m": [
+    1.85,
+    2.99
+   ],
+   "bbox_m": [
+    [
+     -20.54,
+     12.62
+    ],
+    [
+     -14.71,
+     22.9
+    ]
+   ],
+   "side_share": {
+    "CT": 0.773,
+    "T": 0.227
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "BombsiteA": {
+   "kind": "site",
+   "n": 4878,
+   "centroid_m": [
+    32.45,
+    43.83,
+    -3.83
+   ],
+   "spread_m": [
+    4.24,
+    5.29
+   ],
+   "bbox_m": [
+    [
+     24.89,
+     37.63
+    ],
+    [
+     39.15,
+     54.03
+    ]
+   ],
+   "side_share": {
+    "CT": 0.827,
+    "T": 0.173
+   },
+   "zone": "A",
+   "pa": 1.0
+  },
+  "BombsiteB": {
+   "kind": "site",
+   "n": 15037,
+   "centroid_m": [
+    -28.53,
+    14.88,
+    0.04
+   ],
+   "spread_m": [
+    6.08,
+    5.34
+   ],
+   "bbox_m": [
+    [
+     -40.37,
+     7.52
+    ],
+    [
+     -22.17,
+     23.83
+    ]
+   ],
+   "side_share": {
+    "CT": 0.709,
+    "T": 0.291
+   },
+   "zone": "B",
+   "pa": 0.0
+  },
+  "Bricks": {
+   "kind": "area",
+   "n": 913,
+   "centroid_m": [
+    -23.76,
+    27.89,
+    0.93
+   ],
+   "spread_m": [
+    1.58,
+    1.33
+   ],
+   "bbox_m": [
+    [
+     -25.75,
+     25.37
+    ],
+    [
+     -21.46,
+     29.35
+    ]
+   ],
+   "side_share": {
+    "CT": 0.987,
+    "T": 0.013
+   },
+   "zone": "B",
+   "pa": 0.05
+  },
+  "Bridge": {
+   "kind": "area",
+   "n": 5755,
+   "centroid_m": [
+    -5.96,
+    -2.55,
+    0.16
+   ],
+   "spread_m": [
+    4.05,
+    8.18
+   ],
+   "bbox_m": [
+    [
+     -12.42,
+     -11.07
+    ],
+    [
+     0.47,
+     14.09
+    ]
+   ],
+   "side_share": {
+    "CT": 0.074,
+    "T": 0.926
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "CTSideUpper": {
+   "kind": "area",
+   "n": 2429,
+   "centroid_m": [
+    -12.38,
+    52.56,
+    0.59
+   ],
+   "spread_m": [
+    4.66,
+    2.97
+   ],
+   "bbox_m": [
+    [
+     -20.03,
+     48.19
+    ],
+    [
+     -5.9,
+     57.5
+    ]
+   ],
+   "side_share": {
+    "CT": 0.989,
+    "T": 0.011
+   },
+   "zone": "Mid",
+   "pa": 0.39
+  },
+  "CTSpawn": {
+   "kind": "spawn",
+   "n": 561,
+   "centroid_m": [
+    -4.45,
+    64.16,
+    -2.46
+   ],
+   "spread_m": [
+    8.25,
+    2.37
+   ],
+   "bbox_m": [
+    [
+     -18.11,
+     59.74
+    ],
+    [
+     8.07,
+     68.37
+    ]
+   ],
+   "side_share": {
+    "CT": 0.799,
+    "T": 0.201
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "Canal": {
+   "kind": "area",
+   "n": 14118,
+   "centroid_m": [
+    15.17,
+    9.51,
+    -3.87
+   ],
+   "spread_m": [
+    13.37,
+    6.71
+   ],
+   "bbox_m": [
+    [
+     -10.65,
+     1.0
+    ],
+    [
+     31.45,
+     23.13
+    ]
+   ],
+   "side_share": {
+    "CT": 0.248,
+    "T": 0.752
+   },
+   "zone": "B",
+   "pa": 0.2
+  },
+  "Connector": {
+   "kind": "area",
+   "n": 5573,
+   "centroid_m": [
+    -18.33,
+    6.61,
+    -1.86
+   ],
+   "spread_m": [
+    1.95,
+    2.69
+   ],
+   "bbox_m": [
+    [
+     -20.72,
+     2.05
+    ],
+    [
+     -15.14,
+     10.62
+    ]
+   ],
+   "side_share": {
+    "CT": 0.53,
+    "T": 0.47
+   },
+   "zone": "B",
+   "pa": 0.0
+  },
+  "Fountain": {
+   "kind": "area",
+   "n": 2825,
+   "centroid_m": [
+    42.75,
+    46.77,
+    -2.04
+   ],
+   "spread_m": [
+    1.4,
+    1.94
+   ],
+   "bbox_m": [
+    [
+     40.34,
+     43.73
+    ],
+    [
+     45.26,
+     51.28
+    ]
+   ],
+   "side_share": {
+    "CT": 0.96,
+    "T": 0.04
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Heaven": {
+   "kind": "area",
+   "n": 2371,
+   "centroid_m": [
+    23.37,
+    53.35,
+    -0.93
+   ],
+   "spread_m": [
+    2.77,
+    4.75
+   ],
+   "bbox_m": [
+    [
+     19.0,
+     43.63
+    ],
+    [
+     26.77,
+     58.09
+    ]
+   ],
+   "side_share": {
+    "CT": 0.855,
+    "T": 0.145
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "LowerTunnel": {
+   "kind": "area",
+   "n": 734,
+   "centroid_m": [
+    -23.02,
+    41.44,
+    -0.46
+   ],
+   "spread_m": [
+    2.64,
+    2.79
+   ],
+   "bbox_m": [
+    [
+     -27.82,
+     37.98
+    ],
+    [
+     -19.83,
+     46.5
+    ]
+   ],
+   "side_share": {
+    "CT": 1.0,
+    "T": 0.0
+   },
+   "zone": "B",
+   "pa": 0.03
+  },
+  "Main": {
+   "kind": "area",
+   "n": 6794,
+   "centroid_m": [
+    39.83,
+    28.42,
+    -3.77
+   ],
+   "spread_m": [
+    3.58,
+    6.14
+   ],
+   "bbox_m": [
+    [
+     33.82,
+     21.09
+    ],
+    [
+     45.1,
+     39.54
+    ]
+   ],
+   "side_share": {
+    "CT": 0.695,
+    "T": 0.305
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "MidDoors": {
+   "kind": "area",
+   "n": 2835,
+   "centroid_m": [
+    6.29,
+    12.91,
+    -0.58
+   ],
+   "spread_m": [
+    2.78,
+    2.34
+   ],
+   "bbox_m": [
+    [
+     1.24,
+     9.94
+    ],
+    [
+     9.3,
+     17.15
+    ]
+   ],
+   "side_share": {
+    "CT": 0.586,
+    "T": 0.414
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Middle": {
+   "kind": "area",
+   "n": 7594,
+   "centroid_m": [
+    6.06,
+    29.83,
+    -0.59
+   ],
+   "spread_m": [
+    4.52,
+    7.65
+   ],
+   "bbox_m": [
+    [
+     -1.29,
+     18.84
+    ],
+    [
+     14.58,
+     40.22
+    ]
+   ],
+   "side_share": {
+    "CT": 0.917,
+    "T": 0.083
+   },
+   "zone": "A",
+   "pa": 0.71
+  },
+  "OutsideLong": {
+   "kind": "area",
+   "n": 8282,
+   "centroid_m": [
+    -36.87,
+    -0.4,
+    0.47
+   ],
+   "spread_m": [
+    7.2,
+    6.49
+   ],
+   "bbox_m": [
+    [
+     -47.79,
+     -11.96
+    ],
+    [
+     -25.83,
+     9.55
+    ]
+   ],
+   "side_share": {
+    "CT": 0.146,
+    "T": 0.854
+   },
+   "zone": "B",
+   "pa": 0.0
+  },
+  "PalaceInterior": {
+   "kind": "area",
+   "n": 4507,
+   "centroid_m": [
+    -9.56,
+    35.18,
+    1.04
+   ],
+   "spread_m": [
+    6.68,
+    6.28
+   ],
+   "bbox_m": [
+    [
+     -20.55,
+     27.91
+    ],
+    [
+     -0.2,
+     45.58
+    ]
+   ],
+   "side_share": {
+    "CT": 0.998,
+    "T": 0.002
+   },
+   "zone": "Mid",
+   "pa": 0.51
+  },
+  "Ruins": {
+   "kind": "area",
+   "n": 9840,
+   "centroid_m": [
+    -23.66,
+    -18.11,
+    1.95
+   ],
+   "spread_m": [
+    5.27,
+    5.79
+   ],
+   "bbox_m": [
+    [
+     -32.95,
+     -29.56
+    ],
+    [
+     -14.87,
+     -10.24
+    ]
+   ],
+   "side_share": {
+    "CT": 0.032,
+    "T": 0.968
+   },
+   "zone": "B",
+   "pa": 0.02
+  },
+  "SnipersNest": {
+   "kind": "area",
+   "n": 424,
+   "centroid_m": [
+    -28.44,
+    46.76,
+    1.22
+   ],
+   "spread_m": [
+    2.14,
+    2.78
+   ],
+   "bbox_m": [
+    [
+     -31.85,
+     41.26
+    ],
+    [
+     -24.47,
+     50.51
+    ]
+   ],
+   "side_share": {
+    "CT": 0.903,
+    "T": 0.097
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Street": {
+   "kind": "area",
+   "n": 3877,
+   "centroid_m": [
+    18.27,
+    -14.03,
+    -0.4
+   ],
+   "spread_m": [
+    8.27,
+    4.49
+   ],
+   "bbox_m": [
+    [
+     5.39,
+     -22.42
+    ],
+    [
+     33.45,
+     -7.19
+    ]
+   ],
+   "side_share": {
+    "CT": 0.031,
+    "T": 0.969
+   },
+   "zone": "B",
+   "pa": 0.16
+  },
+  "TSideUpper": {
+   "kind": "area",
+   "n": 1761,
+   "centroid_m": [
+    34.93,
+    6.56,
+    -0.02
+   ],
+   "spread_m": [
+    1.71,
+    6.38
+   ],
+   "bbox_m": [
+    [
+     32.44,
+     -5.43
+    ],
+    [
+     37.95,
+     14.18
+    ]
+   ],
+   "side_share": {
+    "CT": 0.177,
+    "T": 0.823
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "TSpawn": {
+   "kind": "spawn",
+   "n": 4422,
+   "centroid_m": [
+    -2.61,
+    -34.9,
+    0.1
+   ],
+   "spread_m": [
+    11.57,
+    4.35
+   ],
+   "bbox_m": [
+    [
+     -19.99,
+     -40.89
+    ],
+    [
+     14.68,
+     -26.57
+    ]
+   ],
+   "side_share": {
+    "CT": 0.0,
+    "T": 1.0
+   },
+   "zone": "Spawn",
+   "pa": null
+  },
+  "TStairs": {
+   "kind": "area",
+   "n": 2297,
+   "centroid_m": [
+    20.28,
+    -3.32,
+    -2.21
+   ],
+   "spread_m": [
+    1.04,
+    2.19
+   ],
+   "bbox_m": [
+    [
+     18.87,
+     -7.49
+    ],
+    [
+     21.83,
+     -0.49
+    ]
+   ],
+   "side_share": {
+    "CT": 0.013,
+    "T": 0.987
+   },
+   "zone": "B",
+   "pa": 0.05
+  },
+  "Tunnel": {
+   "kind": "area",
+   "n": 702,
+   "centroid_m": [
+    8.64,
+    58.54,
+    -3.56
+   ],
+   "spread_m": [
+    1.29,
+    3.86
+   ],
+   "bbox_m": [
+    [
+     6.52,
+     52.65
+    ],
+    [
+     11.02,
+     63.34
+    ]
+   ],
+   "side_share": {
+    "CT": 0.92,
+    "T": 0.08
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "TunnelStairs": {
+   "kind": "area",
+   "n": 395,
+   "centroid_m": [
+    14.09,
+    49.38,
+    -0.96
+   ],
+   "spread_m": [
+    2.75,
+    2.12
+   ],
+   "bbox_m": [
+    [
+     7.17,
+     46.16
+    ],
+    [
+     17.11,
+     52.52
+    ]
+   ],
+   "side_share": {
+    "CT": 0.932,
+    "T": 0.068
+   },
+   "zone": "Mid",
+   "pa": null
+  },
+  "Walkway": {
+   "kind": "area",
+   "n": 4271,
+   "centroid_m": [
+    19.73,
+    35.1,
+    -1.91
+   ],
+   "spread_m": [
+    4.77,
+    2.82
+   ],
+   "bbox_m": [
+    [
+     11.15,
+     31.78
+    ],
+    [
+     26.56,
+     41.61
+    ]
+   ],
+   "side_share": {
+    "CT": 0.925,
+    "T": 0.075
+   },
+   "zone": "A",
+   "pa": 0.87
+  },
+  "Water": {
+   "kind": "area",
+   "n": 32,
+   "centroid_m": [
+    -1.61,
+    73.47,
+    -3.9
+   ],
+   "spread_m": [
+    4.04,
+    1.15
+   ],
+   "bbox_m": [
+    [
+     -7.92,
+     71.81
+    ],
+    [
+     3.33,
+     75.33
+    ]
+   ],
+   "side_share": {
+    "CT": 0.719,
+    "T": 0.281
+   },
+   "zone": "Mid",
+   "pa": null
+  }
+ },
+ "graph": {
+  "Alley": {
+   "dwell_s": {
+    "p25": 2.12,
+    "p50": 2.38,
+    "p75": 3.62
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 51,
+     "p": 0.8793,
+     "dwell_s": 2.25
+    },
+    {
+     "to": "LowerTunnel",
+     "n": 4,
+     "p": 0.069,
+     "dwell_s": 5.0
+    },
+    {
+     "to": "SnipersNest",
+     "n": 3,
+     "p": 0.0517,
+     "dwell_s": 4.88
+    }
+   ]
+  },
+  "BackofB": {
+   "dwell_s": {
+    "p25": 3.44,
+    "p50": 5.62,
+    "p75": 12.62
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 19,
+     "p": 1.0,
+     "dwell_s": 5.62
+    }
+   ]
+  },
+  "BombsiteA": {
+   "dwell_s": {
+    "p25": 2.5,
+    "p50": 3.62,
+    "p75": 7.75
+   },
+   "edges": [
+    {
+     "to": "Main",
+     "n": 35,
+     "p": 0.3846,
+     "dwell_s": 3.0
+    },
+    {
+     "to": "Walkway",
+     "n": 33,
+     "p": 0.3626,
+     "dwell_s": 4.62
+    },
+    {
+     "to": "Fountain",
+     "n": 19,
+     "p": 0.2088,
+     "dwell_s": 4.62
+    },
+    {
+     "to": "Heaven",
+     "n": 4,
+     "p": 0.044,
+     "dwell_s": 4.25
+    }
+   ]
+  },
+  "BombsiteB": {
+   "dwell_s": {
+    "p25": 2.88,
+    "p50": 6.0,
+    "p75": 11.47
+   },
+   "edges": [
+    {
+     "to": "Connector",
+     "n": 48,
+     "p": 0.3265,
+     "dwell_s": 5.12
+    },
+    {
+     "to": "OutsideLong",
+     "n": 33,
+     "p": 0.2245,
+     "dwell_s": 7.75
+    },
+    {
+     "to": "BackofB",
+     "n": 31,
+     "p": 0.2109,
+     "dwell_s": 6.62
+    },
+    {
+     "to": "Alley",
+     "n": 19,
+     "p": 0.1293,
+     "dwell_s": 6.38
+    },
+    {
+     "to": "Bricks",
+     "n": 16,
+     "p": 0.1088,
+     "dwell_s": 7.5
+    }
+   ]
+  },
+  "Bricks": {
+   "dwell_s": {
+    "p25": 0.75,
+    "p50": 1.31,
+    "p75": 2.06
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 27,
+     "p": 0.6136,
+     "dwell_s": 1.25
+    },
+    {
+     "to": "PalaceInterior",
+     "n": 17,
+     "p": 0.3864,
+     "dwell_s": 1.5
+    }
+   ]
+  },
+  "Bridge": {
+   "dwell_s": {
+    "p25": 4.41,
+    "p50": 7.81,
+    "p75": 14.12
+   },
+   "edges": [
+    {
+     "to": "Ruins",
+     "n": 26,
+     "p": 0.4561,
+     "dwell_s": 12.06
+    },
+    {
+     "to": "MidDoors",
+     "n": 16,
+     "p": 0.2807,
+     "dwell_s": 7.19
+    },
+    {
+     "to": "Street",
+     "n": 10,
+     "p": 0.1754,
+     "dwell_s": 6.56
+    },
+    {
+     "to": "Middle",
+     "n": 5,
+     "p": 0.0877,
+     "dwell_s": 12.0
+    }
+   ]
+  },
+  "CTSideUpper": {
+   "dwell_s": {
+    "p25": 1.62,
+    "p50": 2.25,
+    "p75": 2.75
+   },
+   "edges": [
+    {
+     "to": "PalaceInterior",
+     "n": 74,
+     "p": 0.5736,
+     "dwell_s": 2.12
+    },
+    {
+     "to": "LowerTunnel",
+     "n": 35,
+     "p": 0.2713,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "CTSpawn",
+     "n": 10,
+     "p": 0.0775,
+     "dwell_s": 3.19
+    },
+    {
+     "to": "SnipersNest",
+     "n": 10,
+     "p": 0.0775,
+     "dwell_s": 2.12
+    }
+   ]
+  },
+  "CTSpawn": {
+   "dwell_s": {
+    "p25": 1.84,
+    "p50": 3.31,
+    "p75": 4.25
+   },
+   "edges": [
+    {
+     "to": "Tunnel",
+     "n": 9,
+     "p": 0.5294,
+     "dwell_s": 1.88
+    },
+    {
+     "to": "CTSideUpper",
+     "n": 8,
+     "p": 0.4706,
+     "dwell_s": 4.25
+    }
+   ]
+  },
+  "Canal": {
+   "dwell_s": {
+    "p25": 2.25,
+    "p50": 7.5,
+    "p75": 17.88
+   },
+   "edges": [
+    {
+     "to": "Connector",
+     "n": 37,
+     "p": 0.3592,
+     "dwell_s": 15.88
+    },
+    {
+     "to": "Main",
+     "n": 32,
+     "p": 0.3107,
+     "dwell_s": 4.69
+    },
+    {
+     "to": "TStairs",
+     "n": 31,
+     "p": 0.301,
+     "dwell_s": 1.25
+    },
+    {
+     "to": "TSideUpper",
+     "n": 3,
+     "p": 0.0291,
+     "dwell_s": 7.5
+    }
+   ]
+  },
+  "Connector": {
+   "dwell_s": {
+    "p25": 2.88,
+    "p50": 4.38,
+    "p75": 7.75
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 58,
+     "p": 0.8169,
+     "dwell_s": 5.44
+    },
+    {
+     "to": "Canal",
+     "n": 13,
+     "p": 0.1831,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "Fountain": {
+   "dwell_s": {
+    "p25": 3.66,
+    "p50": 9.31,
+    "p75": 21.62
+   },
+   "edges": [
+    {
+     "to": "Main",
+     "n": 12,
+     "p": 0.5217,
+     "dwell_s": 7.94
+    },
+    {
+     "to": "BombsiteA",
+     "n": 11,
+     "p": 0.4783,
+     "dwell_s": 9.12
+    }
+   ]
+  },
+  "Heaven": {
+   "dwell_s": {
+    "p25": 1.75,
+    "p50": 7.25,
+    "p75": 21.88
+   },
+   "edges": [
+    {
+     "to": "Walkway",
+     "n": 9,
+     "p": 0.3913,
+     "dwell_s": 1.38
+    },
+    {
+     "to": "TunnelStairs",
+     "n": 8,
+     "p": 0.3478,
+     "dwell_s": 6.38
+    },
+    {
+     "to": "BombsiteA",
+     "n": 6,
+     "p": 0.2609,
+     "dwell_s": 11.38
+    }
+   ]
+  },
+  "LowerTunnel": {
+   "dwell_s": {
+    "p25": 2.12,
+    "p50": 2.25,
+    "p75": 2.25
+   },
+   "edges": [
+    {
+     "to": "Alley",
+     "n": 35,
+     "p": 0.8974,
+     "dwell_s": 2.25
+    },
+    {
+     "to": "CTSideUpper",
+     "n": 4,
+     "p": 0.1026,
+     "dwell_s": 2.0
+    }
+   ]
+  },
+  "Main": {
+   "dwell_s": {
+    "p25": 2.62,
+    "p50": 6.88,
+    "p75": 15.5
+   },
+   "edges": [
+    {
+     "to": "Canal",
+     "n": 28,
+     "p": 0.4667,
+     "dwell_s": 10.0
+    },
+    {
+     "to": "BombsiteA",
+     "n": 27,
+     "p": 0.45,
+     "dwell_s": 4.0
+    },
+    {
+     "to": "Fountain",
+     "n": 5,
+     "p": 0.0833,
+     "dwell_s": 10.62
+    }
+   ]
+  },
+  "MidDoors": {
+   "dwell_s": {
+    "p25": 3.0,
+    "p50": 5.75,
+    "p75": 10.0
+   },
+   "edges": [
+    {
+     "to": "Canal",
+     "n": 15,
+     "p": 0.4839,
+     "dwell_s": 4.0
+    },
+    {
+     "to": "Middle",
+     "n": 12,
+     "p": 0.3871,
+     "dwell_s": 5.38
+    },
+    {
+     "to": "Bridge",
+     "n": 4,
+     "p": 0.129,
+     "dwell_s": 8.69
+    }
+   ]
+  },
+  "Middle": {
+   "dwell_s": {
+    "p25": 3.12,
+    "p50": 4.5,
+    "p75": 8.75
+   },
+   "edges": [
+    {
+     "to": "Walkway",
+     "n": 48,
+     "p": 0.4486,
+     "dwell_s": 3.38
+    },
+    {
+     "to": "PalaceInterior",
+     "n": 26,
+     "p": 0.243,
+     "dwell_s": 6.31
+    },
+    {
+     "to": "MidDoors",
+     "n": 20,
+     "p": 0.1869,
+     "dwell_s": 5.75
+    },
+    {
+     "to": "Bridge",
+     "n": 13,
+     "p": 0.1215,
+     "dwell_s": 10.25
+    }
+   ]
+  },
+  "OutsideLong": {
+   "dwell_s": {
+    "p25": 3.53,
+    "p50": 8.81,
+    "p75": 17.72
+   },
+   "edges": [
+    {
+     "to": "BombsiteB",
+     "n": 43,
+     "p": 0.6935,
+     "dwell_s": 9.5
+    },
+    {
+     "to": "Ruins",
+     "n": 19,
+     "p": 0.3065,
+     "dwell_s": 8.5
+    }
+   ]
+  },
+  "PalaceInterior": {
+   "dwell_s": {
+    "p25": 1.88,
+    "p50": 2.0,
+    "p75": 5.0
+   },
+   "edges": [
+    {
+     "to": "Middle",
+     "n": 76,
+     "p": 0.6786,
+     "dwell_s": 1.88
+    },
+    {
+     "to": "Bricks",
+     "n": 28,
+     "p": 0.25,
+     "dwell_s": 5.38
+    },
+    {
+     "to": "CTSideUpper",
+     "n": 8,
+     "p": 0.0714,
+     "dwell_s": 2.5
+    }
+   ]
+  },
+  "Ruins": {
+   "dwell_s": {
+    "p25": 4.19,
+    "p50": 6.25,
+    "p75": 14.44
+   },
+   "edges": [
+    {
+     "to": "Bridge",
+     "n": 44,
+     "p": 0.4835,
+     "dwell_s": 5.94
+    },
+    {
+     "to": "OutsideLong",
+     "n": 43,
+     "p": 0.4725,
+     "dwell_s": 6.25
+    },
+    {
+     "to": "TSpawn",
+     "n": 4,
+     "p": 0.044,
+     "dwell_s": 12.44
+    }
+   ]
+  },
+  "SnipersNest": {
+   "dwell_s": {
+    "p25": 2.25,
+    "p50": 3.75,
+    "p75": 5.12
+   },
+   "edges": [
+    {
+     "to": "Alley",
+     "n": 9,
+     "p": 0.6923,
+     "dwell_s": 2.25
+    },
+    {
+     "to": "CTSideUpper",
+     "n": 4,
+     "p": 0.3077,
+     "dwell_s": 4.31
+    }
+   ]
+  },
+  "Street": {
+   "dwell_s": {
+    "p25": 2.88,
+    "p50": 3.5,
+    "p75": 5.19
+   },
+   "edges": [
+    {
+     "to": "TStairs",
+     "n": 55,
+     "p": 0.5978,
+     "dwell_s": 2.88
+    },
+    {
+     "to": "TSideUpper",
+     "n": 21,
+     "p": 0.2283,
+     "dwell_s": 4.5
+    },
+    {
+     "to": "Bridge",
+     "n": 9,
+     "p": 0.0978,
+     "dwell_s": 5.62
+    },
+    {
+     "to": "TSpawn",
+     "n": 7,
+     "p": 0.0761,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "TSideUpper": {
+   "dwell_s": {
+    "p25": 4.09,
+    "p50": 5.31,
+    "p75": 12.81
+   },
+   "edges": [
+    {
+     "to": "Canal",
+     "n": 16,
+     "p": 0.7273,
+     "dwell_s": 5.31
+    },
+    {
+     "to": "Street",
+     "n": 6,
+     "p": 0.2727,
+     "dwell_s": 7.94
+    }
+   ]
+  },
+  "TSpawn": {
+   "dwell_s": {
+    "p25": 3.25,
+    "p50": 4.31,
+    "p75": 5.16
+   },
+   "edges": [
+    {
+     "to": "Street",
+     "n": 58,
+     "p": 0.5179,
+     "dwell_s": 4.88
+    },
+    {
+     "to": "Ruins",
+     "n": 54,
+     "p": 0.4821,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "TStairs": {
+   "dwell_s": {
+    "p25": 1.25,
+    "p50": 1.62,
+    "p75": 4.44
+   },
+   "edges": [
+    {
+     "to": "Canal",
+     "n": 65,
+     "p": 0.7558,
+     "dwell_s": 1.38
+    },
+    {
+     "to": "Street",
+     "n": 21,
+     "p": 0.2442,
+     "dwell_s": 2.62
+    }
+   ]
+  },
+  "Tunnel": {
+   "dwell_s": {
+    "p25": 2.16,
+    "p50": 2.69,
+    "p75": 4.56
+   },
+   "edges": [
+    {
+     "to": "CTSpawn",
+     "n": 9,
+     "p": 0.5294,
+     "dwell_s": 2.38
+    },
+    {
+     "to": "TunnelStairs",
+     "n": 8,
+     "p": 0.4706,
+     "dwell_s": 3.44
+    }
+   ]
+  },
+  "TunnelStairs": {
+   "dwell_s": {
+    "p25": 1.0,
+    "p50": 1.25,
+    "p75": 2.41
+   },
+   "edges": [
+    {
+     "to": "Tunnel",
+     "n": 9,
+     "p": 0.6,
+     "dwell_s": 1.0
+    },
+    {
+     "to": "Heaven",
+     "n": 6,
+     "p": 0.4,
+     "dwell_s": 1.94
+    }
+   ]
+  },
+  "Walkway": {
+   "dwell_s": {
+    "p25": 1.62,
+    "p50": 3.12,
+    "p75": 5.59
+   },
+   "edges": [
+    {
+     "to": "BombsiteA",
+     "n": 51,
+     "p": 0.5795,
+     "dwell_s": 1.75
+    },
+    {
+     "to": "Middle",
+     "n": 22,
+     "p": 0.25,
+     "dwell_s": 4.94
+    },
+    {
+     "to": "Heaven",
+     "n": 15,
+     "p": 0.1705,
+     "dwell_s": 3.25
+    }
+   ]
+  },
+  "Water": {
+   "dwell_s": {
+    "p25": 1.56,
+    "p50": 2.0,
+    "p75": 2.44
+   },
+   "edges": []
+  }
+ },
+ "occupancy": {
+  "CT": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "CTSideUpper": 0.4467,
+      "PalaceInterior": 0.26,
+      "LowerTunnel": 0.1301,
+      "Middle": 0.113,
+      "Alley": 0.0384,
+      "SnipersNest": 0.0117
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "Middle": 0.3627,
+      "BombsiteB": 0.2201,
+      "Alley": 0.1352,
+      "Walkway": 0.1148,
+      "BombsiteA": 0.0529,
+      "PalaceInterior": 0.0525,
+      "MidDoors": 0.0197,
+      "Bricks": 0.0147,
+      "BackofB": 0.0111,
+      "LowerTunnel": 0.0106,
+      "Connector": 0.0057
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "BombsiteB": 0.2331,
+      "Middle": 0.1942,
+      "BombsiteA": 0.107,
+      "Walkway": 0.0996,
+      "Connector": 0.0979,
+      "Main": 0.0821,
+      "BackofB": 0.0373,
+      "Fountain": 0.03,
+      "Canal": 0.0272,
+      "Alley": 0.0244,
+      "Bridge": 0.0146,
+      "MidDoors": 0.0144,
+      "Bricks": 0.0122,
+      "PalaceInterior": 0.0101,
+      "OutsideLong": 0.008,
+      "Heaven": 0.0078
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "BombsiteB": 0.2417,
+      "Middle": 0.1541,
+      "BombsiteA": 0.1184,
+      "Main": 0.0982,
+      "Walkway": 0.0818,
+      "Connector": 0.0625,
+      "Canal": 0.0408,
+      "BackofB": 0.0365,
+      "Fountain": 0.0312,
+      "OutsideLong": 0.0287,
+      "MidDoors": 0.0275,
+      "Alley": 0.0185,
+      "Heaven": 0.0182,
+      "PalaceInterior": 0.0162,
+      "Bridge": 0.0103,
+      "Bricks": 0.0091,
+      "CTSideUpper": 0.0063
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "BombsiteB": 0.2345,
+      "Middle": 0.1354,
+      "Main": 0.1081,
+      "Walkway": 0.0894,
+      "BombsiteA": 0.0685,
+      "Connector": 0.06,
+      "Fountain": 0.0411,
+      "BackofB": 0.0395,
+      "OutsideLong": 0.0395,
+      "Heaven": 0.0285,
+      "Canal": 0.0283,
+      "MidDoors": 0.0267,
+      "CTSideUpper": 0.026,
+      "Bricks": 0.0239,
+      "PalaceInterior": 0.0168,
+      "Bridge": 0.0099,
+      "Street": 0.0098,
+      "LowerTunnel": 0.0072,
+      "Tunnel": 0.0069
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "BombsiteB": 0.2698,
+      "Middle": 0.1517,
+      "Main": 0.0913,
+      "BombsiteA": 0.0833,
+      "Walkway": 0.0707,
+      "Fountain": 0.0494,
+      "BackofB": 0.0434,
+      "PalaceInterior": 0.0369,
+      "Connector": 0.035,
+      "OutsideLong": 0.0314,
+      "MidDoors": 0.0312,
+      "Heaven": 0.0263,
+      "Canal": 0.0204,
+      "Tunnel": 0.0197,
+      "Bricks": 0.01,
+      "Bridge": 0.008,
+      "TunnelStairs": 0.008,
+      "Street": 0.0072,
+      "CTSpawn": 0.0063
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "BombsiteB": 0.2255,
+      "Middle": 0.1267,
+      "BombsiteA": 0.0772,
+      "Main": 0.0754,
+      "Fountain": 0.0734,
+      "Walkway": 0.0504,
+      "MidDoors": 0.0462,
+      "BackofB": 0.0452,
+      "PalaceInterior": 0.0444,
+      "Connector": 0.0429,
+      "Canal": 0.0409,
+      "Bricks": 0.0298,
+      "Heaven": 0.0265,
+      "TunnelStairs": 0.0211,
+      "OutsideLong": 0.0154,
+      "Tunnel": 0.0122,
+      "Bridge": 0.0106,
+      "TSideUpper": 0.0106,
+      "CTSideUpper": 0.0097,
+      "CTSpawn": 0.0093,
+      "Alley": 0.0067
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "BombsiteB": 0.2156,
+      "Middle": 0.0971,
+      "BombsiteA": 0.0844,
+      "Fountain": 0.0779,
+      "Canal": 0.0713,
+      "Main": 0.0614,
+      "PalaceInterior": 0.0609,
+      "Walkway": 0.0517,
+      "Connector": 0.046,
+      "MidDoors": 0.0398,
+      "BackofB": 0.0365,
+      "Heaven": 0.0348,
+      "Bricks": 0.0322,
+      "OutsideLong": 0.0242,
+      "Tunnel": 0.0164,
+      "TunnelStairs": 0.0153,
+      "CTSideUpper": 0.0135,
+      "Bridge": 0.0092,
+      "Ruins": 0.0064,
+      "CTSpawn": 0.0053
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "BombsiteB": 0.2464,
+      "BombsiteA": 0.1088,
+      "Fountain": 0.0809,
+      "Middle": 0.0724,
+      "Canal": 0.0605,
+      "Main": 0.0571,
+      "PalaceInterior": 0.0541,
+      "Connector": 0.045,
+      "Heaven": 0.0399,
+      "MidDoors": 0.036,
+      "Bricks": 0.0324,
+      "OutsideLong": 0.0315,
+      "Walkway": 0.0303,
+      "Bridge": 0.0237,
+      "Tunnel": 0.0178,
+      "TunnelStairs": 0.0137,
+      "BackofB": 0.012,
+      "LowerTunnel": 0.0119,
+      "SnipersNest": 0.0104,
+      "Alley": 0.0094,
+      "CTSpawn": 0.0057
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "BombsiteB": 0.2379,
+      "Fountain": 0.1034,
+      "BombsiteA": 0.0772,
+      "Main": 0.0757,
+      "Middle": 0.0615,
+      "Connector": 0.0514,
+      "Canal": 0.0511,
+      "OutsideLong": 0.0499,
+      "PalaceInterior": 0.0496,
+      "Walkway": 0.0399,
+      "MidDoors": 0.0387,
+      "Heaven": 0.0336,
+      "Alley": 0.0282,
+      "CTSpawn": 0.0171,
+      "Bridge": 0.0161,
+      "CTSideUpper": 0.015,
+      "Bricks": 0.0139,
+      "BackofB": 0.013,
+      "SnipersNest": 0.011,
+      "Tunnel": 0.0097,
+      "TunnelStairs": 0.0058
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "BombsiteB": 0.1872,
+      "Fountain": 0.0911,
+      "Main": 0.0897,
+      "BombsiteA": 0.0822,
+      "PalaceInterior": 0.0819,
+      "Canal": 0.0623,
+      "Middle": 0.0553,
+      "Connector": 0.0548,
+      "Walkway": 0.0421,
+      "MidDoors": 0.0382,
+      "OutsideLong": 0.0348,
+      "Alley": 0.0325,
+      "Heaven": 0.0261,
+      "BackofB": 0.0261,
+      "Bricks": 0.0233,
+      "CTSpawn": 0.0202,
+      "Bridge": 0.0155,
+      "Tunnel": 0.0139,
+      "CTSideUpper": 0.0124,
+      "Ruins": 0.0105
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "BombsiteB": 0.1329,
+      "BombsiteA": 0.1152,
+      "Main": 0.0956,
+      "Canal": 0.0888,
+      "PalaceInterior": 0.0854,
+      "Middle": 0.0724,
+      "Alley": 0.0662,
+      "Connector": 0.0522,
+      "Walkway": 0.0515,
+      "Heaven": 0.0403,
+      "BackofB": 0.0379,
+      "Fountain": 0.0337,
+      "Ruins": 0.0248,
+      "CTSpawn": 0.0244,
+      "MidDoors": 0.0202,
+      "OutsideLong": 0.0135,
+      "TSideUpper": 0.0106,
+      "CTSideUpper": 0.0093,
+      "Bricks": 0.008,
+      "Tunnel": 0.0064,
+      "SnipersNest": 0.0055,
+      "TunnelStairs": 0.0052
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "BombsiteB": 0.1455,
+      "Main": 0.1131,
+      "PalaceInterior": 0.0897,
+      "BombsiteA": 0.0838,
+      "Middle": 0.077,
+      "Canal": 0.077,
+      "Walkway": 0.0734,
+      "Heaven": 0.0587,
+      "Connector": 0.0494,
+      "Alley": 0.0439,
+      "BackofB": 0.0362,
+      "Fountain": 0.0184,
+      "MidDoors": 0.0182,
+      "OutsideLong": 0.0182,
+      "Ruins": 0.018,
+      "CTSideUpper": 0.017,
+      "Bricks": 0.0163,
+      "Tunnel": 0.0127,
+      "TunnelStairs": 0.0122,
+      "TStairs": 0.0108,
+      "Street": 0.0054,
+      "CTSpawn": 0.005
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "Main": 0.1404,
+      "BombsiteB": 0.1252,
+      "PalaceInterior": 0.1252,
+      "Walkway": 0.1148,
+      "Middle": 0.0724,
+      "Connector": 0.0717,
+      "Heaven": 0.0541,
+      "BombsiteA": 0.0404,
+      "CTSpawn": 0.0338,
+      "Canal": 0.0321,
+      "Fountain": 0.0282,
+      "BackofB": 0.0242,
+      "MidDoors": 0.022,
+      "OutsideLong": 0.0219,
+      "Bricks": 0.0219,
+      "Ruins": 0.0218,
+      "CTSideUpper": 0.0129,
+      "Alley": 0.0123,
+      "Street": 0.0103,
+      "TunnelStairs": 0.0088,
+      "Tunnel": 0.0055
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "PalaceInterior": 0.1382,
+      "Canal": 0.1291,
+      "Walkway": 0.1232,
+      "BombsiteB": 0.121,
+      "Heaven": 0.0673,
+      "Main": 0.0636,
+      "Middle": 0.0581,
+      "Fountain": 0.0483,
+      "Connector": 0.043,
+      "CTSideUpper": 0.0303,
+      "MidDoors": 0.0266,
+      "OutsideLong": 0.0241,
+      "CTSpawn": 0.024,
+      "Ruins": 0.0239,
+      "SnipersNest": 0.0222,
+      "BackofB": 0.0177,
+      "Bricks": 0.0169,
+      "BombsiteA": 0.0151,
+      "Tunnel": 0.0073
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "Canal": 0.1315,
+      "BombsiteB": 0.1178,
+      "PalaceInterior": 0.1105,
+      "Walkway": 0.1043,
+      "Middle": 0.0862,
+      "Heaven": 0.0785,
+      "Fountain": 0.0508,
+      "BackofB": 0.05,
+      "MidDoors": 0.0488,
+      "Main": 0.0403,
+      "Connector": 0.0248,
+      "OutsideLong": 0.0245,
+      "Ruins": 0.0243,
+      "BombsiteA": 0.0196,
+      "CTSpawn": 0.0189,
+      "CTSideUpper": 0.018,
+      "TSideUpper": 0.0146,
+      "Tunnel": 0.0141,
+      "SnipersNest": 0.014,
+      "TunnelStairs": 0.0086
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "Canal": 0.1591,
+      "PalaceInterior": 0.1494,
+      "Walkway": 0.1041,
+      "Heaven": 0.0803,
+      "BombsiteB": 0.0675,
+      "Fountain": 0.0621,
+      "BackofB": 0.0499,
+      "BombsiteA": 0.0412,
+      "Middle": 0.0384,
+      "Main": 0.0343,
+      "Connector": 0.0339,
+      "TunnelStairs": 0.0333,
+      "MidDoors": 0.0301,
+      "SnipersNest": 0.0283,
+      "TSideUpper": 0.0269,
+      "OutsideLong": 0.0229,
+      "Ruins": 0.0227,
+      "Tunnel": 0.0157
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "Canal": 0.1853,
+      "PalaceInterior": 0.1594,
+      "Heaven": 0.0927,
+      "BombsiteA": 0.084,
+      "Connector": 0.0622,
+      "Fountain": 0.0622,
+      "BackofB": 0.0619,
+      "Main": 0.0596,
+      "BombsiteB": 0.0557,
+      "Walkway": 0.054,
+      "Alley": 0.0435,
+      "MidDoors": 0.0312,
+      "Tunnel": 0.0263,
+      "Middle": 0.0125,
+      "Bricks": 0.0095
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "Canal": 0.1484,
+      "Main": 0.148,
+      "Heaven": 0.0952,
+      "Connector": 0.0899,
+      "BackofB": 0.0754,
+      "Walkway": 0.0642,
+      "Fountain": 0.0638,
+      "Middle": 0.0602,
+      "BombsiteB": 0.0565,
+      "PalaceInterior": 0.0414,
+      "SnipersNest": 0.0332,
+      "MidDoors": 0.032,
+      "Tunnel": 0.027,
+      "Alley": 0.0234,
+      "CTSideUpper": 0.0196,
+      "Bricks": 0.0121,
+      "BombsiteA": 0.0097
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteB": 0.1801,
+      "Canal": 0.1443,
+      "Main": 0.1395,
+      "Walkway": 0.0892,
+      "Heaven": 0.0757,
+      "Fountain": 0.0699,
+      "SnipersNest": 0.051,
+      "Connector": 0.044,
+      "BackofB": 0.0351,
+      "MidDoors": 0.035,
+      "Tunnel": 0.0347,
+      "PalaceInterior": 0.0307,
+      "TSideUpper": 0.0294,
+      "Middle": 0.0227,
+      "Alley": 0.0187
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "Main": 0.2102,
+      "Canal": 0.1365,
+      "Heaven": 0.0821,
+      "BombsiteB": 0.0779,
+      "PalaceInterior": 0.0666,
+      "Connector": 0.0631,
+      "Walkway": 0.0502,
+      "BackofB": 0.0495,
+      "Alley": 0.0464,
+      "MidDoors": 0.0413,
+      "Tunnel": 0.0409,
+      "TSideUpper": 0.0408,
+      "Middle": 0.0349,
+      "BombsiteA": 0.0258,
+      "OutsideLong": 0.0248,
+      "Fountain": 0.0091
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "Main": 0.19,
+      "Canal": 0.1174,
+      "Connector": 0.1172,
+      "BombsiteB": 0.1008,
+      "Heaven": 0.0814,
+      "PalaceInterior": 0.069,
+      "Alley": 0.0594,
+      "MidDoors": 0.0495,
+      "Tunnel": 0.0491,
+      "TSideUpper": 0.049,
+      "Middle": 0.0444,
+      "Walkway": 0.037,
+      "BombsiteA": 0.0187,
+      "BackofB": 0.0093,
+      "Bricks": 0.0077
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "Main": 0.2209,
+      "Canal": 0.1617,
+      "Connector": 0.1361,
+      "PalaceInterior": 0.1164,
+      "BombsiteB": 0.1149,
+      "Alley": 0.0675,
+      "TSideUpper": 0.0635,
+      "LowerTunnel": 0.032,
+      "CTSideUpper": 0.0298,
+      "BombsiteA": 0.0196,
+      "Middle": 0.0164,
+      "Heaven": 0.0074,
+      "MidDoors": 0.0072,
+      "Tunnel": 0.0067
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "PalaceInterior": 0.2745,
+      "Alley": 0.2716,
+      "Main": 0.1838,
+      "Canal": 0.1387,
+      "Connector": 0.0505,
+      "TSideUpper": 0.0408,
+      "BombsiteB": 0.0322,
+      "Middle": 0.0079
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "Alley": 0.3209,
+      "PalaceInterior": 0.2196,
+      "BombsiteB": 0.1925,
+      "Connector": 0.1527,
+      "Main": 0.108,
+      "Middle": 0.0064
+     }
+    }
+   ]
+  },
+  "T": {
+   "bucket_s": 5,
+   "buckets": [
+    {
+     "t": 0,
+     "p": {
+      "TSpawn": 0.8056,
+      "Ruins": 0.1653,
+      "Street": 0.0291
+     }
+    },
+    {
+     "t": 5,
+     "p": {
+      "Ruins": 0.3747,
+      "Street": 0.3372,
+      "TStairs": 0.0778,
+      "OutsideLong": 0.0518,
+      "TSpawn": 0.0485,
+      "Bridge": 0.0484,
+      "Canal": 0.0455,
+      "TSideUpper": 0.0163
+     }
+    },
+    {
+     "t": 10,
+     "p": {
+      "Canal": 0.2384,
+      "Ruins": 0.2354,
+      "Bridge": 0.1593,
+      "TSideUpper": 0.1258,
+      "OutsideLong": 0.0866,
+      "Street": 0.0811,
+      "TStairs": 0.0466,
+      "Main": 0.0187,
+      "TSpawn": 0.0081
+     }
+    },
+    {
+     "t": 15,
+     "p": {
+      "Canal": 0.2345,
+      "Ruins": 0.1949,
+      "Bridge": 0.1514,
+      "OutsideLong": 0.1158,
+      "TSideUpper": 0.0848,
+      "Main": 0.0768,
+      "TStairs": 0.0718,
+      "Street": 0.0437,
+      "MidDoors": 0.0195,
+      "BombsiteA": 0.0069
+     }
+    },
+    {
+     "t": 20,
+     "p": {
+      "Canal": 0.239,
+      "Ruins": 0.1669,
+      "OutsideLong": 0.1537,
+      "Bridge": 0.1113,
+      "Street": 0.0872,
+      "TSideUpper": 0.0559,
+      "Main": 0.0518,
+      "TStairs": 0.0503,
+      "BombsiteA": 0.0355,
+      "MidDoors": 0.0283,
+      "TSpawn": 0.0108,
+      "Connector": 0.0094
+     }
+    },
+    {
+     "t": 25,
+     "p": {
+      "Canal": 0.2138,
+      "Ruins": 0.1581,
+      "OutsideLong": 0.1413,
+      "Street": 0.1105,
+      "Bridge": 0.1077,
+      "TStairs": 0.0614,
+      "Main": 0.0526,
+      "BombsiteA": 0.0386,
+      "TSideUpper": 0.0306,
+      "Connector": 0.0254,
+      "BombsiteB": 0.025,
+      "Middle": 0.0172,
+      "MidDoors": 0.0108,
+      "TSpawn": 0.0071
+     }
+    },
+    {
+     "t": 30,
+     "p": {
+      "Canal": 0.2272,
+      "Ruins": 0.1565,
+      "OutsideLong": 0.1193,
+      "Bridge": 0.1177,
+      "TStairs": 0.0747,
+      "Street": 0.0584,
+      "Main": 0.0541,
+      "BombsiteB": 0.0424,
+      "Connector": 0.0333,
+      "TSideUpper": 0.0224,
+      "TSpawn": 0.0196,
+      "Middle": 0.0192,
+      "BombsiteA": 0.019,
+      "Heaven": 0.0189,
+      "MidDoors": 0.0107,
+      "Walkway": 0.0067
+     }
+    },
+    {
+     "t": 35,
+     "p": {
+      "Canal": 0.2604,
+      "Ruins": 0.1674,
+      "Bridge": 0.1114,
+      "OutsideLong": 0.1048,
+      "Main": 0.0566,
+      "TStairs": 0.0561,
+      "BombsiteB": 0.0498,
+      "Connector": 0.0423,
+      "Street": 0.0348,
+      "Heaven": 0.0226,
+      "MidDoors": 0.021,
+      "TSideUpper": 0.0165,
+      "BombsiteA": 0.0159,
+      "Middle": 0.013,
+      "BackofB": 0.0113,
+      "TSpawn": 0.0092,
+      "Walkway": 0.0068
+     }
+    },
+    {
+     "t": 40,
+     "p": {
+      "Canal": 0.297,
+      "Ruins": 0.1566,
+      "Bridge": 0.1024,
+      "OutsideLong": 0.0762,
+      "Main": 0.0571,
+      "Street": 0.0535,
+      "BombsiteB": 0.0454,
+      "MidDoors": 0.041,
+      "Connector": 0.0374,
+      "TStairs": 0.0326,
+      "TSpawn": 0.0241,
+      "Heaven": 0.0205,
+      "Middle": 0.0202,
+      "BombsiteA": 0.0177,
+      "Walkway": 0.0123,
+      "Fountain": 0.006
+     }
+    },
+    {
+     "t": 45,
+     "p": {
+      "Canal": 0.3239,
+      "Ruins": 0.1326,
+      "Bridge": 0.1324,
+      "OutsideLong": 0.0832,
+      "BombsiteB": 0.064,
+      "Connector": 0.0456,
+      "Main": 0.0404,
+      "Street": 0.0375,
+      "TSpawn": 0.0307,
+      "MidDoors": 0.0307,
+      "BombsiteA": 0.0176,
+      "Fountain": 0.0141,
+      "TStairs": 0.014,
+      "Heaven": 0.0138,
+      "Walkway": 0.0138,
+      "Middle": 0.0056
+     }
+    },
+    {
+     "t": 50,
+     "p": {
+      "Canal": 0.2635,
+      "Ruins": 0.1519,
+      "Bridge": 0.1368,
+      "OutsideLong": 0.1236,
+      "Connector": 0.0809,
+      "BombsiteB": 0.0472,
+      "Main": 0.0398,
+      "Street": 0.0329,
+      "TStairs": 0.0305,
+      "MidDoors": 0.0255,
+      "BombsiteA": 0.0191,
+      "Walkway": 0.0183,
+      "Heaven": 0.015,
+      "Fountain": 0.0149
+     }
+    },
+    {
+     "t": 55,
+     "p": {
+      "Canal": 0.2291,
+      "OutsideLong": 0.1802,
+      "Bridge": 0.1691,
+      "Ruins": 0.1026,
+      "Connector": 0.1021,
+      "Walkway": 0.048,
+      "TStairs": 0.047,
+      "BombsiteB": 0.0315,
+      "Main": 0.0224,
+      "Street": 0.018,
+      "Middle": 0.018,
+      "BombsiteA": 0.0135,
+      "MidDoors": 0.0098,
+      "BackofB": 0.0088
+     }
+    },
+    {
+     "t": 60,
+     "p": {
+      "Canal": 0.2262,
+      "OutsideLong": 0.2041,
+      "Bridge": 0.1172,
+      "Ruins": 0.0991,
+      "Connector": 0.0824,
+      "Middle": 0.0684,
+      "MidDoors": 0.0675,
+      "BombsiteB": 0.0612,
+      "TStairs": 0.0375,
+      "Main": 0.0168,
+      "Street": 0.013,
+      "Walkway": 0.0065
+     }
+    },
+    {
+     "t": 65,
+     "p": {
+      "Canal": 0.2188,
+      "BombsiteB": 0.2144,
+      "OutsideLong": 0.1504,
+      "Ruins": 0.1113,
+      "Bridge": 0.0975,
+      "MidDoors": 0.0598,
+      "Connector": 0.0504,
+      "Middle": 0.0402,
+      "TStairs": 0.0351,
+      "Main": 0.0221
+     }
+    },
+    {
+     "t": 70,
+     "p": {
+      "BombsiteB": 0.2674,
+      "Canal": 0.1962,
+      "OutsideLong": 0.1522,
+      "Ruins": 0.1042,
+      "Connector": 0.0952,
+      "MidDoors": 0.0604,
+      "Bridge": 0.0391,
+      "Main": 0.0238,
+      "Middle": 0.0235,
+      "TStairs": 0.0203,
+      "Street": 0.0177
+     }
+    },
+    {
+     "t": 75,
+     "p": {
+      "BombsiteB": 0.2478,
+      "OutsideLong": 0.1778,
+      "Canal": 0.1462,
+      "Ruins": 0.1246,
+      "Connector": 0.1003,
+      "MidDoors": 0.0417,
+      "BackofB": 0.0383,
+      "Main": 0.0367,
+      "TStairs": 0.0284,
+      "Street": 0.0177,
+      "Bridge": 0.0174,
+      "Middle": 0.0131,
+      "TSpawn": 0.0101
+     }
+    },
+    {
+     "t": 80,
+     "p": {
+      "BombsiteB": 0.2843,
+      "OutsideLong": 0.2029,
+      "Connector": 0.0854,
+      "Main": 0.0832,
+      "Ruins": 0.074,
+      "Canal": 0.0666,
+      "Bridge": 0.0433,
+      "BackofB": 0.0387,
+      "TSpawn": 0.0286,
+      "Alley": 0.0276,
+      "Street": 0.0154,
+      "MidDoors": 0.0141,
+      "Middle": 0.0139,
+      "TStairs": 0.0136,
+      "Bricks": 0.0083
+     }
+    },
+    {
+     "t": 85,
+     "p": {
+      "BombsiteB": 0.262,
+      "OutsideLong": 0.2292,
+      "Connector": 0.1304,
+      "Canal": 0.0799,
+      "Ruins": 0.0651,
+      "Bridge": 0.0531,
+      "Main": 0.0515,
+      "BackofB": 0.0388,
+      "TSpawn": 0.0303,
+      "SnipersNest": 0.0284,
+      "Middle": 0.0118,
+      "Street": 0.0104,
+      "MidDoors": 0.009
+     }
+    },
+    {
+     "t": 90,
+     "p": {
+      "OutsideLong": 0.2645,
+      "BombsiteB": 0.1873,
+      "Connector": 0.1572,
+      "Canal": 0.0866,
+      "Ruins": 0.0819,
+      "Main": 0.0536,
+      "MidDoors": 0.0377,
+      "Bridge": 0.0372,
+      "TSpawn": 0.0361,
+      "CTSideUpper": 0.0235,
+      "BombsiteA": 0.0168,
+      "CTSpawn": 0.0096,
+      "BackofB": 0.008
+     }
+    },
+    {
+     "t": 95,
+     "p": {
+      "BombsiteB": 0.2361,
+      "OutsideLong": 0.1963,
+      "Connector": 0.1731,
+      "Ruins": 0.1063,
+      "Canal": 0.0726,
+      "BombsiteA": 0.0419,
+      "Bridge": 0.0396,
+      "TSpawn": 0.0393,
+      "CTSpawn": 0.0379,
+      "Main": 0.0253,
+      "MidDoors": 0.0222,
+      "Fountain": 0.0095
+     }
+    },
+    {
+     "t": 100,
+     "p": {
+      "BombsiteB": 0.2462,
+      "OutsideLong": 0.2033,
+      "Connector": 0.1418,
+      "Ruins": 0.1069,
+      "BombsiteA": 0.0765,
+      "Canal": 0.0559,
+      "TSpawn": 0.0538,
+      "BackofB": 0.0364,
+      "Street": 0.0327,
+      "CTSpawn": 0.0305,
+      "Bridge": 0.0084,
+      "Tunnel": 0.0076
+     }
+    },
+    {
+     "t": 105,
+     "p": {
+      "BombsiteB": 0.2567,
+      "OutsideLong": 0.1675,
+      "Ruins": 0.1495,
+      "TSpawn": 0.1231,
+      "Connector": 0.0812,
+      "BombsiteA": 0.076,
+      "Canal": 0.0486,
+      "Street": 0.046,
+      "Tunnel": 0.0323,
+      "TunnelStairs": 0.0123,
+      "BackofB": 0.0069
+     }
+    },
+    {
+     "t": 110,
+     "p": {
+      "BombsiteB": 0.271,
+      "OutsideLong": 0.2129,
+      "Ruins": 0.2044,
+      "TSpawn": 0.0821,
+      "Street": 0.0651,
+      "Heaven": 0.0532,
+      "Connector": 0.0429,
+      "BackofB": 0.0252,
+      "BombsiteA": 0.0171,
+      "TunnelStairs": 0.0133,
+      "Canal": 0.0127
+     }
+    },
+    {
+     "t": 115,
+     "p": {
+      "BackofB": 0.2154,
+      "Ruins": 0.1754,
+      "BombsiteB": 0.1384,
+      "OutsideLong": 0.1248,
+      "TSideUpper": 0.1088,
+      "TSpawn": 0.0713,
+      "Tunnel": 0.0511,
+      "Connector": 0.0508,
+      "Heaven": 0.0326,
+      "TunnelStairs": 0.0215,
+      "Canal": 0.0099
+     }
+    },
+    {
+     "t": 120,
+     "p": {
+      "BombsiteB": 0.3322,
+      "BackofB": 0.2904,
+      "TSpawn": 0.0902,
+      "CTSpawn": 0.0663,
+      "Canal": 0.0632,
+      "Ruins": 0.06,
+      "TSideUpper": 0.0331,
+      "Bridge": 0.0248,
+      "Water": 0.0206,
+      "OutsideLong": 0.0193
+     }
+    }
+   ]
+  }
+ },
+ "forecast": {
+  "CT": {
+   "5s": {
+    "Alley": {
+     "n": 1718,
+     "p": {
+      "BombsiteB": 0.4713,
+      "Alley": 0.3242,
+      "Connector": 0.0704,
+      "CTSideUpper": 0.0584,
+      "BackofB": 0.032,
+      "SnipersNest": 0.0242,
+      "LowerTunnel": 0.0195
+     }
+    },
+    "BackofB": {
+     "n": 1522,
+     "p": {
+      "BackofB": 0.775,
+      "BombsiteB": 0.2025,
+      "PalaceInterior": 0.0117,
+      "Bricks": 0.0108
+     }
+    },
+    "BombsiteA": {
+     "n": 3914,
+     "p": {
+      "BombsiteA": 0.5031,
+      "Main": 0.1957,
+      "Walkway": 0.1495,
+      "Fountain": 0.1198,
+      "Middle": 0.0189,
+      "Tunnel": 0.0129
+     }
+    },
+    "BombsiteB": {
+     "n": 9609,
+     "p": {
+      "BombsiteB": 0.7338,
+      "Connector": 0.0896,
+      "BackofB": 0.0485,
+      "OutsideLong": 0.0451,
+      "Alley": 0.0299,
+      "Bricks": 0.024,
+      "PalaceInterior": 0.0171,
+      "Canal": 0.012
+     }
+    },
+    "Bricks": {
+     "n": 865,
+     "p": {
+      "Bricks": 0.3955,
+      "BombsiteB": 0.3623,
+      "PalaceInterior": 0.1837,
+      "BackofB": 0.0356,
+      "Connector": 0.0229
+     }
+    },
+    "Bridge": {
+     "n": 378,
+     "p": {
+      "Bridge": 0.4474,
+      "Middle": 0.1793,
+      "Ruins": 0.1396,
+      "Street": 0.1053,
+      "OutsideLong": 0.0716,
+      "Canal": 0.0569
+     }
+    },
+    "CTSideUpper": {
+     "n": 2367,
+     "p": {
+      "Middle": 0.4356,
+      "Alley": 0.2362,
+      "PalaceInterior": 0.1115,
+      "BombsiteB": 0.0575,
+      "Tunnel": 0.052,
+      "SnipersNest": 0.0345,
+      "LowerTunnel": 0.0311,
+      "CTSideUpper": 0.0226,
+      "CTSpawn": 0.0188
+     }
+    },
+    "CTSpawn": {
+     "n": 443,
+     "p": {
+      "CTSideUpper": 0.261,
+      "SnipersNest": 0.207,
+      "TunnelStairs": 0.1441,
+      "Tunnel": 0.1262,
+      "CTSpawn": 0.0901,
+      "Heaven": 0.057,
+      "Alley": 0.0457,
+      "PalaceInterior": 0.0284,
+      "LowerTunnel": 0.0248,
+      "Water": 0.0157
+     }
+    },
+    "Canal": {
+     "n": 3010,
+     "p": {
+      "Canal": 0.7613,
+      "Connector": 0.0927,
+      "Main": 0.0576,
+      "BombsiteB": 0.0419,
+      "TSideUpper": 0.0362,
+      "Street": 0.0104
+     }
+    },
+    "Connector": {
+     "n": 2639,
+     "p": {
+      "Connector": 0.6255,
+      "BombsiteB": 0.2928,
+      "Canal": 0.0579,
+      "PalaceInterior": 0.0133,
+      "Bricks": 0.0104
+     }
+    },
+    "Fountain": {
+     "n": 2671,
+     "p": {
+      "Fountain": 0.7835,
+      "Main": 0.094,
+      "BombsiteA": 0.0838,
+      "Walkway": 0.0281,
+      "Heaven": 0.0107
+     }
+    },
+    "Heaven": {
+     "n": 1933,
+     "p": {
+      "Heaven": 0.7873,
+      "BombsiteA": 0.098,
+      "CTSpawn": 0.0369,
+      "Tunnel": 0.0359,
+      "Walkway": 0.0258,
+      "TunnelStairs": 0.0161
+     }
+    },
+    "LowerTunnel": {
+     "n": 734,
+     "p": {
+      "BombsiteB": 0.7277,
+      "Alley": 0.1343,
+      "PalaceInterior": 0.0459,
+      "CTSpawn": 0.037,
+      "BackofB": 0.0305,
+      "LowerTunnel": 0.0246
+     }
+    },
+    "Main": {
+     "n": 4368,
+     "p": {
+      "Main": 0.7428,
+      "Canal": 0.1478,
+      "BombsiteA": 0.0817,
+      "Fountain": 0.0145,
+      "Walkway": 0.0132
+     }
+    },
+    "MidDoors": {
+     "n": 1571,
+     "p": {
+      "MidDoors": 0.7293,
+      "Middle": 0.14,
+      "Canal": 0.0907,
+      "Bridge": 0.0401
+     }
+    },
+    "Middle": {
+     "n": 6757,
+     "p": {
+      "Middle": 0.5879,
+      "Walkway": 0.1024,
+      "BombsiteA": 0.088,
+      "PalaceInterior": 0.0809,
+      "MidDoors": 0.0725,
+      "Bridge": 0.0287,
+      "CTSideUpper": 0.0164,
+      "Main": 0.0129,
+      "Canal": 0.0103
+     }
+    },
+    "OutsideLong": {
+     "n": 970,
+     "p": {
+      "OutsideLong": 0.675,
+      "BombsiteB": 0.2838,
+      "Ruins": 0.0412
+     }
+    },
+    "PalaceInterior": {
+     "n": 4269,
+     "p": {
+      "PalaceInterior": 0.4778,
+      "Middle": 0.2127,
+      "Walkway": 0.0985,
+      "BombsiteB": 0.0874,
+      "Bricks": 0.0693,
+      "BackofB": 0.0202,
+      "CTSideUpper": 0.0121,
+      "SnipersNest": 0.0114,
+      "Connector": 0.0105
+     }
+    },
+    "Ruins": {
+     "n": 272,
+     "p": {
+      "Ruins": 0.8045,
+      "OutsideLong": 0.1955
+     }
+    },
+    "SnipersNest": {
+     "n": 383,
+     "p": {
+      "Alley": 0.4696,
+      "BombsiteB": 0.1604,
+      "CTSideUpper": 0.1427,
+      "SnipersNest": 0.14,
+      "CTSpawn": 0.052,
+      "PalaceInterior": 0.0353
+     }
+    },
+    "Street": {
+     "n": 88,
+     "p": {
+      "Street": 0.5267,
+      "TSideUpper": 0.4394,
+      "BombsiteB": 0.0211,
+      "Middle": 0.0128
+     }
+    },
+    "TSideUpper": {
+     "n": 241,
+     "p": {
+      "TSideUpper": 0.6664,
+      "Canal": 0.3336
+     }
+    },
+    "TSpawn": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2033,
+      "Middle": 0.1238,
+      "Main": 0.09,
+      "BombsiteA": 0.077,
+      "Walkway": 0.0754,
+      "Canal": 0.0669,
+      "PalaceInterior": 0.0649,
+      "Connector": 0.0563,
+      "Fountain": 0.0517,
+      "Heaven": 0.0387,
+      "BackofB": 0.0346,
+      "Alley": 0.0331,
+      "MidDoors": 0.0317,
+      "OutsideLong": 0.0231,
+      "Bricks": 0.0172,
+      "Tunnel": 0.0123
+     }
+    },
+    "TStairs": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2033,
+      "Middle": 0.1238,
+      "Main": 0.09,
+      "BombsiteA": 0.077,
+      "Walkway": 0.0754,
+      "Canal": 0.0669,
+      "PalaceInterior": 0.0649,
+      "Connector": 0.0563,
+      "Fountain": 0.0517,
+      "Heaven": 0.0387,
+      "BackofB": 0.0346,
+      "Alley": 0.0331,
+      "MidDoors": 0.0317,
+      "OutsideLong": 0.0231,
+      "Bricks": 0.0172,
+      "Tunnel": 0.0123
+     }
+    },
+    "Tunnel": {
+     "n": 606,
+     "p": {
+      "Tunnel": 0.4216,
+      "CTSpawn": 0.2158,
+      "TunnelStairs": 0.1776,
+      "Heaven": 0.1151,
+      "CTSideUpper": 0.0433,
+      "Water": 0.0266
+     }
+    },
+    "TunnelStairs": {
+     "n": 328,
+     "p": {
+      "TunnelStairs": 0.401,
+      "Tunnel": 0.2463,
+      "Heaven": 0.156,
+      "CTSpawn": 0.1338,
+      "Walkway": 0.0629
+     }
+    },
+    "Walkway": {
+     "n": 3819,
+     "p": {
+      "Walkway": 0.5423,
+      "BombsiteA": 0.1835,
+      "Middle": 0.0829,
+      "Heaven": 0.0681,
+      "Main": 0.0549,
+      "PalaceInterior": 0.0519,
+      "Fountain": 0.0163
+     }
+    },
+    "Water": {
+     "n": 23,
+     "p": {
+      "CTSpawn": 0.7424,
+      "BombsiteB": 0.0618,
+      "Middle": 0.0376,
+      "Main": 0.0273,
+      "BombsiteA": 0.0234,
+      "Walkway": 0.0229,
+      "Canal": 0.0203,
+      "PalaceInterior": 0.0197,
+      "Connector": 0.0171,
+      "Fountain": 0.0157,
+      "Heaven": 0.0118
+     }
+    }
+   },
+   "10s": {
+    "Alley": {
+     "n": 1476,
+     "p": {
+      "BombsiteB": 0.4407,
+      "Alley": 0.195,
+      "Connector": 0.0719,
+      "BackofB": 0.067,
+      "PalaceInterior": 0.0461,
+      "CTSideUpper": 0.0423,
+      "OutsideLong": 0.0322,
+      "Canal": 0.025,
+      "Tunnel": 0.0212,
+      "Bricks": 0.0185,
+      "Middle": 0.015,
+      "LowerTunnel": 0.0136,
+      "CTSpawn": 0.0116
+     }
+    },
+    "BackofB": {
+     "n": 1317,
+     "p": {
+      "BackofB": 0.5951,
+      "BombsiteB": 0.3055,
+      "PalaceInterior": 0.0361,
+      "Connector": 0.0345,
+      "Alley": 0.0164,
+      "Bricks": 0.0125
+     }
+    },
+    "BombsiteA": {
+     "n": 3842,
+     "p": {
+      "BombsiteA": 0.3722,
+      "Main": 0.242,
+      "Walkway": 0.1649,
+      "Fountain": 0.1418,
+      "PalaceInterior": 0.0299,
+      "Middle": 0.0287,
+      "CTSpawn": 0.0205
+     }
+    },
+    "BombsiteB": {
+     "n": 8515,
+     "p": {
+      "BombsiteB": 0.6545,
+      "Connector": 0.0998,
+      "BackofB": 0.0723,
+      "OutsideLong": 0.0624,
+      "Alley": 0.0364,
+      "PalaceInterior": 0.0295,
+      "Bricks": 0.0285,
+      "Canal": 0.0166
+     }
+    },
+    "Bricks": {
+     "n": 841,
+     "p": {
+      "BombsiteB": 0.4353,
+      "Bricks": 0.2779,
+      "PalaceInterior": 0.0905,
+      "BackofB": 0.0902,
+      "Connector": 0.065,
+      "Middle": 0.0412
+     }
+    },
+    "Bridge": {
+     "n": 346,
+     "p": {
+      "OutsideLong": 0.3084,
+      "Street": 0.1583,
+      "Middle": 0.1581,
+      "Ruins": 0.1354,
+      "MidDoors": 0.1102,
+      "Bridge": 0.1009,
+      "TStairs": 0.0288
+     }
+    },
+    "CTSideUpper": {
+     "n": 2323,
+     "p": {
+      "BombsiteB": 0.2182,
+      "Middle": 0.1909,
+      "BombsiteA": 0.1233,
+      "Walkway": 0.0955,
+      "Connector": 0.0783,
+      "Alley": 0.0636,
+      "Heaven": 0.0438,
+      "BackofB": 0.0332,
+      "Main": 0.0308,
+      "TunnelStairs": 0.0291,
+      "PalaceInterior": 0.0219,
+      "Bricks": 0.0217,
+      "MidDoors": 0.02,
+      "Fountain": 0.0157,
+      "Tunnel": 0.0142
+     }
+    },
+    "CTSpawn": {
+     "n": 424,
+     "p": {
+      "Heaven": 0.1572,
+      "CTSideUpper": 0.1542,
+      "Alley": 0.1428,
+      "Tunnel": 0.1029,
+      "LowerTunnel": 0.0957,
+      "SnipersNest": 0.0935,
+      "Middle": 0.0816,
+      "CTSpawn": 0.0562,
+      "TunnelStairs": 0.0515,
+      "BombsiteB": 0.0348,
+      "Walkway": 0.0296
+     }
+    },
+    "Canal": {
+     "n": 2541,
+     "p": {
+      "Canal": 0.5852,
+      "Connector": 0.1388,
+      "BombsiteB": 0.1381,
+      "Main": 0.0824,
+      "TSideUpper": 0.0438,
+      "OutsideLong": 0.0116
+     }
+    },
+    "Connector": {
+     "n": 2359,
+     "p": {
+      "Connector": 0.4712,
+      "BombsiteB": 0.3451,
+      "Canal": 0.0719,
+      "PalaceInterior": 0.0378,
+      "Bricks": 0.0227,
+      "Alley": 0.0142,
+      "OutsideLong": 0.0137,
+      "CTSideUpper": 0.0128,
+      "LowerTunnel": 0.0107
+     }
+    },
+    "Fountain": {
+     "n": 2584,
+     "p": {
+      "Fountain": 0.6313,
+      "Main": 0.1256,
+      "BombsiteA": 0.0974,
+      "Canal": 0.0437,
+      "Walkway": 0.0406,
+      "Middle": 0.0215,
+      "Tunnel": 0.0161,
+      "CTSpawn": 0.0126,
+      "Heaven": 0.0111
+     }
+    },
+    "Heaven": {
+     "n": 1813,
+     "p": {
+      "Heaven": 0.658,
+      "BombsiteA": 0.1271,
+      "Tunnel": 0.0416,
+      "CTSpawn": 0.0366,
+      "CTSideUpper": 0.031,
+      "Fountain": 0.0296,
+      "TunnelStairs": 0.0238,
+      "Main": 0.0193,
+      "Walkway": 0.017,
+      "SnipersNest": 0.0161
+     }
+    },
+    "LowerTunnel": {
+     "n": 734,
+     "p": {
+      "BombsiteB": 0.4847,
+      "Connector": 0.1931,
+      "Alley": 0.1088,
+      "BackofB": 0.0733,
+      "Canal": 0.0518,
+      "Middle": 0.0398,
+      "Tunnel": 0.0221,
+      "TunnelStairs": 0.0152,
+      "OutsideLong": 0.0113
+     }
+    },
+    "Main": {
+     "n": 4008,
+     "p": {
+      "Main": 0.5856,
+      "Canal": 0.2344,
+      "BombsiteA": 0.0751,
+      "Fountain": 0.0461,
+      "Walkway": 0.0321,
+      "TSideUpper": 0.0159,
+      "Middle": 0.0108
+     }
+    },
+    "MidDoors": {
+     "n": 1433,
+     "p": {
+      "MidDoors": 0.6194,
+      "Middle": 0.1659,
+      "Canal": 0.1228,
+      "Bridge": 0.0563,
+      "Street": 0.0239,
+      "Walkway": 0.0117
+     }
+    },
+    "Middle": {
+     "n": 6550,
+     "p": {
+      "Middle": 0.4575,
+      "PalaceInterior": 0.0981,
+      "MidDoors": 0.0947,
+      "BombsiteA": 0.0878,
+      "Walkway": 0.0876,
+      "Main": 0.0603,
+      "Bridge": 0.0421,
+      "Canal": 0.0258,
+      "Heaven": 0.0178,
+      "CTSideUpper": 0.0145,
+      "Fountain": 0.0139
+     }
+    },
+    "OutsideLong": {
+     "n": 839,
+     "p": {
+      "OutsideLong": 0.4719,
+      "BombsiteB": 0.4085,
+      "Ruins": 0.0892,
+      "Connector": 0.0304
+     }
+    },
+    "PalaceInterior": {
+     "n": 3931,
+     "p": {
+      "PalaceInterior": 0.3598,
+      "Middle": 0.1951,
+      "BombsiteB": 0.1004,
+      "Walkway": 0.0768,
+      "Main": 0.0463,
+      "Bricks": 0.0429,
+      "BombsiteA": 0.0423,
+      "Connector": 0.0268,
+      "BackofB": 0.0202,
+      "Alley": 0.0194,
+      "Fountain": 0.0161,
+      "SnipersNest": 0.0154,
+      "CTSideUpper": 0.0144,
+      "Canal": 0.0135,
+      "TunnelStairs": 0.0105
+     }
+    },
+    "Ruins": {
+     "n": 232,
+     "p": {
+      "Ruins": 0.7708,
+      "OutsideLong": 0.2292
+     }
+    },
+    "SnipersNest": {
+     "n": 347,
+     "p": {
+      "BombsiteB": 0.4231,
+      "Alley": 0.329,
+      "Tunnel": 0.0752,
+      "PalaceInterior": 0.0536,
+      "CTSpawn": 0.0521,
+      "Bricks": 0.035,
+      "TunnelStairs": 0.0319
+     }
+    },
+    "Street": {
+     "n": 88,
+     "p": {
+      "TSideUpper": 0.5852,
+      "Canal": 0.3053,
+      "Street": 0.0885,
+      "BombsiteB": 0.0209
+     }
+    },
+    "TSideUpper": {
+     "n": 201,
+     "p": {
+      "Canal": 0.5734,
+      "TSideUpper": 0.4266
+     }
+    },
+    "TSpawn": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2017,
+      "Middle": 0.103,
+      "Main": 0.0978,
+      "BombsiteA": 0.079,
+      "Canal": 0.0725,
+      "Walkway": 0.0719,
+      "PalaceInterior": 0.066,
+      "Connector": 0.0607,
+      "Fountain": 0.0562,
+      "Heaven": 0.042,
+      "BackofB": 0.0366,
+      "MidDoors": 0.0327,
+      "OutsideLong": 0.0249,
+      "Alley": 0.0242,
+      "Bricks": 0.0174,
+      "Tunnel": 0.0134
+     }
+    },
+    "TStairs": {
+     "n": 0,
+     "p": {
+      "BombsiteB": 0.2017,
+      "Middle": 0.103,
+      "Main": 0.0978,
+      "BombsiteA": 0.079,
+      "Canal": 0.0725,
+      "Walkway": 0.0719,
+      "PalaceInterior": 0.066,
+      "Connector": 0.0607,
+      "Fountain": 0.0562,
+      "Heaven": 0.042,
+      "BackofB": 0.0366,
+      "MidDoors": 0.0327,
+      "OutsideLong": 0.0249,
+      "Alley": 0.0242,
+      "Bricks": 0.0174,
+      "Tunnel": 0.0134
+     }
+    },
+    "Tunnel": {
+     "n": 540,
+     "p": {
+      "Tunnel": 0.3604,
+      "CTSpawn": 0.1258,
+      "TunnelStairs": 0.1073,
+      "Heaven": 0.0986,
+      "SnipersNest": 0.0685,
+      "Walkway": 0.0604,
+      "CTSideUpper": 0.0574,
+      "Water": 0.0425,
+      "Alley": 0.0318,
+      "PalaceInterior": 0.0289,
+      "LowerTunnel": 0.0185
+     }
+    },
+    "TunnelStairs": {
+     "n": 314,
+     "p": {
+      "TunnelStairs": 0.2421,
+      "Tunnel": 0.2327,
+      "CTSpawn": 0.1817,
+      "Heaven": 0.1381,
+      "SnipersNest": 0.067,
+      "Walkway": 0.0658,
+      "CTSideUpper": 0.0449,
+      "BombsiteA": 0.0278
+     }
+    },
+    "Walkway": {
+     "n": 3677,
+     "p": {
+      "Walkway": 0.4037,
+      "BombsiteA": 0.1788,
+      "PalaceInterior": 0.1127,
+      "Heaven": 0.1105,
+      "Main": 0.0827,
+      "Middle": 0.0705,
+      "Fountain": 0.0411
+     }
+    },
+    "Water": {
+     "n": 23,
+     "p": {
+      "SnipersNest": 0.5077,
+      "Alley": 0.2284,
+      "BombsiteB": 0.06,
+      "Middle": 0.0306,
+      "Main": 0.0291,
+      "BombsiteA": 0.0235,
+      "Canal": 0.0216,
+      "Walkway": 0.0214,
+      "PalaceInterior": 0.0196,
+      "Connector": 0.018,
+      "Fountain": 0.0167,
+      "Heaven": 0.0125,
+      "BackofB": 0.0109
+     }
+    }
+   }
+  },
+  "T": {
+   "5s": {
+    "Alley": {
+     "n": 46,
+     "p": {
+      "SnipersNest": 0.7485,
+      "Alley": 0.1124,
+      "Canal": 0.037,
+      "Ruins": 0.0308,
+      "OutsideLong": 0.0247,
+      "Bridge": 0.0186,
+      "BombsiteB": 0.0153,
+      "Street": 0.0127
+     }
+    },
+    "BackofB": {
+     "n": 376,
+     "p": {
+      "BackofB": 0.5328,
+      "BombsiteB": 0.389,
+      "Connector": 0.0463,
+      "Bricks": 0.0318
+     }
+    },
+    "BombsiteA": {
+     "n": 762,
+     "p": {
+      "BombsiteA": 0.6495,
+      "Walkway": 0.1942,
+      "Heaven": 0.0709,
+      "Fountain": 0.0525,
+      "Middle": 0.0329
+     }
+    },
+    "BombsiteB": {
+     "n": 3590,
+     "p": {
+      "BombsiteB": 0.7004,
+      "OutsideLong": 0.111,
+      "BackofB": 0.0855,
+      "Connector": 0.0795,
+      "Ruins": 0.0125,
+      "Alley": 0.0112
+     }
+    },
+    "Bricks": {
+     "n": 12,
+     "p": {
+      "BackofB": 0.5733,
+      "Canal": 0.0938,
+      "Ruins": 0.0781,
+      "OutsideLong": 0.0625,
+      "Bridge": 0.0471,
+      "BombsiteB": 0.0387,
+      "Street": 0.0321,
+      "Connector": 0.0232,
+      "TStairs": 0.02,
+      "Main": 0.0183,
+      "TSideUpper": 0.0128
+     }
+    },
+    "Bridge": {
+     "n": 5035,
+     "p": {
+      "Bridge": 0.6745,
+      "Ruins": 0.1464,
+      "MidDoors": 0.0808,
+      "Street": 0.0645,
+      "Middle": 0.0224,
+      "OutsideLong": 0.0115
+     }
+    },
+    "CTSideUpper": {
+     "n": 27,
+     "p": {
+      "CTSpawn": 0.7557,
+      "Canal": 0.0553,
+      "Ruins": 0.0461,
+      "OutsideLong": 0.0369,
+      "Bridge": 0.0278,
+      "BombsiteB": 0.0229,
+      "Street": 0.019,
+      "Connector": 0.0137,
+      "TStairs": 0.0118,
+      "Main": 0.0108
+     }
+    },
+    "CTSpawn": {
+     "n": 83,
+     "p": {
+      "CTSpawn": 0.4835,
+      "Tunnel": 0.416,
+      "TunnelStairs": 0.0338,
+      "Canal": 0.0222,
+      "Ruins": 0.0185,
+      "OutsideLong": 0.0148,
+      "Bridge": 0.0112
+     }
+    },
+    "Canal": {
+     "n": 9819,
+     "p": {
+      "Canal": 0.8027,
+      "Connector": 0.0861,
+      "Main": 0.0619,
+      "TStairs": 0.026,
+      "Street": 0.0121,
+      "BombsiteB": 0.0112
+     }
+    },
+    "Connector": {
+     "n": 2215,
+     "p": {
+      "Connector": 0.6726,
+      "BombsiteB": 0.3009,
+      "Canal": 0.0265
+     }
+    },
+    "Fountain": {
+     "n": 114,
+     "p": {
+      "Fountain": 0.2762,
+      "Main": 0.2625,
+      "BombsiteA": 0.2522,
+      "Walkway": 0.1678,
+      "Canal": 0.0165,
+      "Ruins": 0.0138,
+      "OutsideLong": 0.011
+     }
+    },
+    "Heaven": {
+     "n": 343,
+     "p": {
+      "Heaven": 0.6555,
+      "BombsiteA": 0.1239,
+      "Walkway": 0.103,
+      "Tunnel": 0.0559,
+      "CTSpawn": 0.0383,
+      "TunnelStairs": 0.0235
+     }
+    },
+    "LowerTunnel": {
+     "n": 0,
+     "p": {
+      "Canal": 0.2042,
+      "Ruins": 0.17,
+      "OutsideLong": 0.1361,
+      "Bridge": 0.1026,
+      "BombsiteB": 0.0843,
+      "Street": 0.07,
+      "Connector": 0.0504,
+      "TStairs": 0.0436,
+      "Main": 0.0399,
+      "TSideUpper": 0.0279,
+      "MidDoors": 0.0226,
+      "TSpawn": 0.0199,
+      "BombsiteA": 0.0162,
+      "Middle": 0.0122
+     }
+    },
+    "Main": {
+     "n": 1842,
+     "p": {
+      "Main": 0.6848,
+      "Canal": 0.1662,
+      "BombsiteA": 0.1265,
+      "Fountain": 0.0224
+     }
+    },
+    "MidDoors": {
+     "n": 919,
+     "p": {
+      "MidDoors": 0.5613,
+      "Canal": 0.1837,
+      "Middle": 0.1642,
+      "Bridge": 0.0908
+     }
+    },
+    "Middle": {
+     "n": 480,
+     "p": {
+      "MidDoors": 0.4205,
+      "Middle": 0.381,
+      "Canal": 0.0889,
+      "Bridge": 0.0869,
+      "PalaceInterior": 0.0228
+     }
+    },
+    "OutsideLong": {
+     "n": 6686,
+     "p": {
+      "OutsideLong": 0.7847,
+      "BombsiteB": 0.14,
+      "Ruins": 0.0754
+     }
+    },
+    "PalaceInterior": {
+     "n": 11,
+     "p": {
+      "Middle": 0.5466,
+      "Canal": 0.0973,
+      "Ruins": 0.081,
+      "OutsideLong": 0.0649,
+      "Bridge": 0.0489,
+      "BombsiteB": 0.0402,
+      "Street": 0.0333,
+      "Connector": 0.024,
+      "TStairs": 0.0208,
+      "Main": 0.019,
+      "TSideUpper": 0.0133,
+      "MidDoors": 0.0108
+     }
+    },
+    "Ruins": {
+     "n": 9127,
+     "p": {
+      "Ruins": 0.6823,
+      "Bridge": 0.1585,
+      "OutsideLong": 0.1437,
+      "TSpawn": 0.0154
+     }
+    },
+    "SnipersNest": {
+     "n": 41,
+     "p": {
+      "CTSideUpper": 0.5572,
+      "CTSpawn": 0.2686,
+      "Canal": 0.0408,
+      "Ruins": 0.034,
+      "OutsideLong": 0.0272,
+      "SnipersNest": 0.0208,
+      "Bridge": 0.0205,
+      "BombsiteB": 0.0169,
+      "Street": 0.014
+     }
+    },
+    "Street": {
+     "n": 3747,
+     "p": {
+      "Street": 0.318,
+      "Canal": 0.1996,
+      "TStairs": 0.1802,
+      "TSideUpper": 0.17,
+      "Bridge": 0.0791,
+      "TSpawn": 0.0531
+     }
+    },
+    "TSideUpper": {
+     "n": 1433,
+     "p": {
+      "TSideUpper": 0.5257,
+      "Canal": 0.2401,
+      "Main": 0.1193,
+      "Street": 0.0652,
+      "TStairs": 0.0497
+     }
+    },
+    "TSpawn": {
+     "n": 4269,
+     "p": {
+      "Street": 0.3748,
+      "Ruins": 0.3165,
+      "TSpawn": 0.147,
+      "TStairs": 0.0893,
+      "Canal": 0.0351,
+      "OutsideLong": 0.023,
+      "TSideUpper": 0.0142
+     }
+    },
+    "TStairs": {
+     "n": 2237,
+     "p": {
+      "Canal": 0.4252,
+      "TStairs": 0.4015,
+      "Street": 0.1494,
+      "TSpawn": 0.024
+     }
+    },
+    "Tunnel": {
+     "n": 55,
+     "p": {
+      "Heaven": 0.3369,
+      "TunnelStairs": 0.256,
+      "CTSpawn": 0.1443,
+      "Water": 0.144,
+      "Canal": 0.0316,
+      "Ruins": 0.0264,
+      "OutsideLong": 0.0211,
+      "Bridge": 0.0159,
+      "BombsiteB": 0.0131,
+      "Street": 0.0108
+     }
+    },
+    "TunnelStairs": {
+     "n": 27,
+     "p": {
+      "Heaven": 0.5322,
+      "CTSpawn": 0.2239,
+      "Canal": 0.0552,
+      "Ruins": 0.046,
+      "OutsideLong": 0.0368,
+      "Bridge": 0.0278,
+      "BombsiteB": 0.0228,
+      "Street": 0.0189,
+      "Connector": 0.0136,
+      "TStairs": 0.0118,
+      "Main": 0.0108
+     }
+    },
+    "Walkway": {
+     "n": 321,
+     "p": {
+      "Middle": 0.4529,
+      "Walkway": 0.335,
+      "Heaven": 0.0808,
+      "MidDoors": 0.0534,
+      "BombsiteA": 0.047,
+      "Bridge": 0.031
+     }
+    },
+    "Water": {
+     "n": 0,
+     "p": {
+      "Canal": 0.2042,
+      "Ruins": 0.17,
+      "OutsideLong": 0.1361,
+      "Bridge": 0.1026,
+      "BombsiteB": 0.0843,
+      "Street": 0.07,
+      "Connector": 0.0504,
+      "TStairs": 0.0436,
+      "Main": 0.0399,
+      "TSideUpper": 0.0279,
+      "MidDoors": 0.0226,
+      "TSpawn": 0.0199,
+      "BombsiteA": 0.0162,
+      "Middle": 0.0122
+     }
+    }
+   },
+   "10s": {
+    "Alley": {
+     "n": 46,
+     "p": {
+      "CTSideUpper": 0.5102,
+      "CTSpawn": 0.2272,
+      "SnipersNest": 0.1324,
+      "Canal": 0.0398,
+      "Ruins": 0.0278,
+      "OutsideLong": 0.0262,
+      "Bridge": 0.0196,
+      "BombsiteB": 0.0168
+     }
+    },
+    "BackofB": {
+     "n": 262,
+     "p": {
+      "BackofB": 0.4518,
+      "BombsiteB": 0.4021,
+      "OutsideLong": 0.1218,
+      "Ruins": 0.0243
+     }
+    },
+    "BombsiteA": {
+     "n": 668,
+     "p": {
+      "BombsiteA": 0.3556,
+      "Walkway": 0.2241,
+      "Heaven": 0.2002,
+      "Fountain": 0.109,
+      "Middle": 0.0704,
+      "Bridge": 0.0284,
+      "MidDoors": 0.0123
+     }
+    },
+    "BombsiteB": {
+     "n": 2913,
+     "p": {
+      "BombsiteB": 0.5775,
+      "OutsideLong": 0.1368,
+      "BackofB": 0.0963,
+      "Connector": 0.0699,
+      "Ruins": 0.0685,
+      "Canal": 0.0235,
+      "Alley": 0.0159,
+      "SnipersNest": 0.0117
+     }
+    },
+    "Bricks": {
+     "n": 11,
+     "p": {
+      "BombsiteB": 0.5885,
+      "Canal": 0.1044,
+      "Ruins": 0.0727,
+      "OutsideLong": 0.0687,
+      "Bridge": 0.0514,
+      "Connector": 0.0262,
+      "Street": 0.0222,
+      "Main": 0.0208,
+      "TStairs": 0.0194,
+      "TSideUpper": 0.0138,
+      "MidDoors": 0.0118
+     }
+    },
+    "Bridge": {
+     "n": 4849,
+     "p": {
+      "Bridge": 0.4862,
+      "Ruins": 0.2056,
+      "MidDoors": 0.1421,
+      "Street": 0.0589,
+      "OutsideLong": 0.0396,
+      "Middle": 0.0299,
+      "TStairs": 0.0203,
+      "Canal": 0.0175
+     }
+    },
+    "CTSideUpper": {
+     "n": 27,
+     "p": {
+      "CTSpawn": 0.7568,
+      "Canal": 0.0591,
+      "Ruins": 0.0411,
+      "OutsideLong": 0.0389,
+      "Bridge": 0.0291,
+      "BombsiteB": 0.0248,
+      "Connector": 0.0148,
+      "Street": 0.0126,
+      "Main": 0.0118,
+      "TStairs": 0.011
+     }
+    },
+    "CTSpawn": {
+     "n": 83,
+     "p": {
+      "Tunnel": 0.4153,
+      "Heaven": 0.2701,
+      "TunnelStairs": 0.2133,
+      "CTSpawn": 0.0339,
+      "Canal": 0.0237,
+      "Ruins": 0.0165,
+      "OutsideLong": 0.0156,
+      "Bridge": 0.0116
+     }
+    },
+    "Canal": {
+     "n": 9017,
+     "p": {
+      "Canal": 0.7268,
+      "Connector": 0.1416,
+      "Main": 0.0653,
+      "BombsiteB": 0.0329,
+      "TStairs": 0.0198,
+      "Street": 0.0137
+     }
+    },
+    "Connector": {
+     "n": 1907,
+     "p": {
+      "Connector": 0.5139,
+      "BombsiteB": 0.3397,
+      "OutsideLong": 0.0866,
+      "BackofB": 0.0357,
+      "Canal": 0.0241
+     }
+    },
+    "Fountain": {
+     "n": 114,
+     "p": {
+      "Main": 0.2619,
+      "Walkway": 0.2172,
+      "Middle": 0.2011,
+      "BombsiteA": 0.1931,
+      "MidDoors": 0.0853,
+      "Canal": 0.0176,
+      "Ruins": 0.0122,
+      "OutsideLong": 0.0116
+     }
+    },
+    "Heaven": {
+     "n": 329,
+     "p": {
+      "Heaven": 0.4221,
+      "BombsiteA": 0.2494,
+      "Middle": 0.1309,
+      "Walkway": 0.1064,
+      "CTSpawn": 0.0638,
+      "Water": 0.0273
+     }
+    },
+    "LowerTunnel": {
+     "n": 0,
+     "p": {
+      "Canal": 0.2158,
+      "Ruins": 0.1503,
+      "OutsideLong": 0.142,
+      "Bridge": 0.1062,
+      "BombsiteB": 0.0907,
+      "Connector": 0.0542,
+      "Street": 0.0459,
+      "Main": 0.043,
+      "TStairs": 0.0402,
+      "TSideUpper": 0.0286,
+      "MidDoors": 0.0243,
+      "BombsiteA": 0.0174,
+      "TSpawn": 0.0172,
+      "Middle": 0.0131,
+      "BackofB": 0.011
+     }
+    },
+    "Main": {
+     "n": 1688,
+     "p": {
+      "Main": 0.5467,
+      "Canal": 0.21,
+      "BombsiteA": 0.1888,
+      "Fountain": 0.0243,
+      "Walkway": 0.019,
+      "Middle": 0.0113
+     }
+    },
+    "MidDoors": {
+     "n": 616,
+     "p": {
+      "MidDoors": 0.2613,
+      "Bridge": 0.2336,
+      "Middle": 0.2176,
+      "Canal": 0.15,
+      "BombsiteB": 0.0707,
+      "Connector": 0.0524,
+      "PalaceInterior": 0.0145
+     }
+    },
+    "Middle": {
+     "n": 393,
+     "p": {
+      "MidDoors": 0.4274,
+      "Middle": 0.2731,
+      "Canal": 0.1518,
+      "Bridge": 0.0834,
+      "Connector": 0.0519,
+      "BombsiteB": 0.0123
+     }
+    },
+    "OutsideLong": {
+     "n": 6135,
+     "p": {
+      "OutsideLong": 0.6511,
+      "BombsiteB": 0.2275,
+      "Ruins": 0.0782,
+      "Bridge": 0.023,
+      "Connector": 0.0202
+     }
+    },
+    "PalaceInterior": {
+     "n": 11,
+     "p": {
+      "Middle": 0.5475,
+      "Canal": 0.1038,
+      "Ruins": 0.0723,
+      "OutsideLong": 0.0683,
+      "Bridge": 0.0511,
+      "BombsiteB": 0.0436,
+      "Connector": 0.0261,
+      "Street": 0.0221,
+      "Main": 0.0207,
+      "TStairs": 0.0193,
+      "TSideUpper": 0.0137,
+      "MidDoors": 0.0117
+     }
+    },
+    "Ruins": {
+     "n": 8654,
+     "p": {
+      "Ruins": 0.5361,
+      "OutsideLong": 0.2175,
+      "Bridge": 0.1819,
+      "BombsiteB": 0.024,
+      "Street": 0.022,
+      "TSpawn": 0.0185
+     }
+    },
+    "SnipersNest": {
+     "n": 41,
+     "p": {
+      "CTSpawn": 0.8468,
+      "Canal": 0.0435,
+      "Ruins": 0.0303,
+      "OutsideLong": 0.0286,
+      "Bridge": 0.0214,
+      "BombsiteB": 0.0183,
+      "Connector": 0.0109
+     }
+    },
+    "Street": {
+     "n": 3681,
+     "p": {
+      "Canal": 0.2817,
+      "Street": 0.197,
+      "TStairs": 0.1876,
+      "TSideUpper": 0.1033,
+      "Bridge": 0.0837,
+      "Main": 0.074,
+      "Ruins": 0.0421,
+      "TSpawn": 0.0305
+     }
+    },
+    "TSideUpper": {
+     "n": 1393,
+     "p": {
+      "TSideUpper": 0.3252,
+      "Canal": 0.2607,
+      "Main": 0.1378,
+      "Street": 0.1027,
+      "TStairs": 0.0919,
+      "BombsiteA": 0.0817
+     }
+    },
+    "TSpawn": {
+     "n": 4146,
+     "p": {
+      "Canal": 0.2456,
+      "Ruins": 0.2011,
+      "TSideUpper": 0.1327,
+      "Bridge": 0.1129,
+      "Street": 0.0993,
+      "TStairs": 0.0735,
+      "OutsideLong": 0.062,
+      "TSpawn": 0.0595,
+      "Main": 0.0133
+     }
+    },
+    "TStairs": {
+     "n": 2164,
+     "p": {
+      "Canal": 0.4499,
+      "TStairs": 0.2588,
+      "Street": 0.1663,
+      "TSpawn": 0.0606,
+      "Bridge": 0.0484,
+      "Main": 0.016
+     }
+    },
+    "Tunnel": {
+     "n": 37,
+     "p": {
+      "Heaven": 0.4509,
+      "Tunnel": 0.2025,
+      "TunnelStairs": 0.1799,
+      "Canal": 0.0474,
+      "Ruins": 0.033,
+      "OutsideLong": 0.0312,
+      "Bridge": 0.0233,
+      "BombsiteB": 0.0199,
+      "Connector": 0.0119
+     }
+    },
+    "TunnelStairs": {
+     "n": 19,
+     "p": {
+      "Tunnel": 0.3612,
+      "CTSpawn": 0.3255,
+      "Canal": 0.0761,
+      "Ruins": 0.053,
+      "OutsideLong": 0.0501,
+      "Bridge": 0.0374,
+      "BombsiteB": 0.032,
+      "Connector": 0.0191,
+      "Street": 0.0162,
+      "Main": 0.0152,
+      "TStairs": 0.0142
+     }
+    },
+    "Walkway": {
+     "n": 213,
+     "p": {
+      "Walkway": 0.3603,
+      "Middle": 0.2868,
+      "MidDoors": 0.1488,
+      "Heaven": 0.1203,
+      "Canal": 0.0513,
+      "Bridge": 0.0325
+     }
+    },
+    "Water": {
+     "n": 0,
+     "p": {
+      "Canal": 0.2158,
+      "Ruins": 0.1503,
+      "OutsideLong": 0.142,
+      "Bridge": 0.1062,
+      "BombsiteB": 0.0907,
+      "Connector": 0.0542,
+      "Street": 0.0459,
+      "Main": 0.043,
+      "TStairs": 0.0402,
+      "TSideUpper": 0.0286,
+      "MidDoors": 0.0243,
+      "BombsiteA": 0.0174,
+      "TSpawn": 0.0172,
+      "Middle": 0.0131,
+      "BackofB": 0.011
+     }
+    }
+   }
+  }
+ },
+ "post_plant": {
+  "A": {
+   "n": 1,
+   "defuse_rate": 0.0,
+   "ct_reach_rate": 0.0,
+   "first_ct_arrival_s": null,
+   "by_alive_ct": {
+    "5": {
+     "n": 1,
+     "ct_reach_rate": 0.0,
+     "defuse_rate": 0.0
+    }
+   }
+  },
+  "B": {
+   "n": 10,
+   "defuse_rate": 0.3,
+   "ct_reach_rate": 0.6,
+   "first_ct_arrival_s": {
+    "p25": 5.3,
+    "p50": 9.38,
+    "p75": 14.36
+   },
+   "by_alive_ct": {
+    "1": {
+     "n": 1,
+     "ct_reach_rate": 0.0,
+     "defuse_rate": 0.0
+    },
+    "2": {
+     "n": 4,
+     "ct_reach_rate": 0.5,
+     "defuse_rate": 0.0
+    },
+    "3": {
+     "n": 5,
+     "ct_reach_rate": 0.8,
+     "defuse_rate": 0.6
+    }
+   }
+  }
+ },
+ "rotation": {
+  "delta_s": 15,
+  "by_contact_zone": {
+   "B": {
+    "A": {
+     "n": 18,
+     "to_contact_zone": 0.0,
+     "stay": 0.611,
+     "arrive_s": {
+      "p25": 34.0,
+      "p50": 37.75,
+      "p75": 51.75
+     }
+    },
+    "B": {
+     "n": 25,
+     "to_contact_zone": 0.72,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    },
+    "Mid": {
+     "n": 11,
+     "to_contact_zone": 0.182,
+     "stay": 0.545,
+     "arrive_s": {
+      "p25": 9.0,
+      "p50": 19.75,
+      "p75": 23.75
+     }
+    }
+   },
+   "Mid": {
+    "A": {
+     "n": 11,
+     "to_contact_zone": 0.364,
+     "stay": 0.545,
+     "arrive_s": {
+      "p25": 2.66,
+      "p50": 6.25,
+      "p75": 20.44
+     }
+    },
+    "B": {
+     "n": 7,
+     "to_contact_zone": 0.286,
+     "stay": 0.571,
+     "arrive_s": {
+      "p25": 7.06,
+      "p50": 8.88,
+      "p75": 13.56
+     }
+    },
+    "Mid": {
+     "n": 6,
+     "to_contact_zone": 0.667,
+     "stay": null,
+     "arrive_s": {
+      "p25": 0.12,
+      "p50": 0.12,
+      "p75": 0.12
+     }
+    }
+   }
+  },
+  "note": "Para cada CT que não participou do primeiro dano: onde estava (own_zone) e onde estava 15 s depois, conforme a zona do contato."
+ },
+ "engagements": {
+  "first_contact": {
+   "t_place": {
+    "Ruins": 0.238,
+    "Canal": 0.19,
+    "Main": 0.143,
+    "Bridge": 0.095,
+    "TStairs": 0.095,
+    "OutsideLong": 0.095,
+    "MidDoors": 0.048,
+    "BombsiteB": 0.048,
+    "Connector": 0.048
+   },
+   "ct_place": {
+    "Main": 0.19,
+    "BombsiteB": 0.19,
+    "OutsideLong": 0.143,
+    "Middle": 0.143,
+    "MidDoors": 0.095,
+    "BombsiteA": 0.095,
+    "Heaven": 0.048,
+    "Connector": 0.048,
+    "Walkway": 0.048
+   },
+   "time_s": {
+    "p25": 11.34,
+    "p50": 16.23,
+    "p75": 28.02
+   },
+   "n": 21
+  },
+  "pairs": [
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Canal",
+    "victim_place": "Canal",
+    "n": 8,
+    "median_distance_m": 20.6
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Alley",
+    "victim_place": "BombsiteB",
+    "n": 7,
+    "median_distance_m": 13.8
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 7,
+    "median_distance_m": 12.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Main",
+    "victim_place": "Main",
+    "n": 6,
+    "median_distance_m": 10.6
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BackofB",
+    "n": 6,
+    "median_distance_m": 11.5
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Connector",
+    "victim_place": "BombsiteB",
+    "n": 5,
+    "median_distance_m": 16.1
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Middle",
+    "victim_place": "Bridge",
+    "n": 5,
+    "median_distance_m": 24.9
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Connector",
+    "victim_place": "Canal",
+    "n": 4,
+    "median_distance_m": 29.7
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Canal",
+    "victim_place": "Connector",
+    "n": 4,
+    "median_distance_m": 16.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "PalaceInterior",
+    "victim_place": "BombsiteB",
+    "n": 4,
+    "median_distance_m": 16.1
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Canal",
+    "victim_place": "Connector",
+    "n": 4,
+    "median_distance_m": 37.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "BombsiteB",
+    "n": 4,
+    "median_distance_m": 10.5
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BackofB",
+    "victim_place": "BombsiteB",
+    "n": 3,
+    "median_distance_m": 24.3
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "Bridge",
+    "victim_place": "Bridge",
+    "n": 3,
+    "median_distance_m": 8.4
+   },
+   {
+    "attacker_side": "CT",
+    "attacker_place": "BombsiteB",
+    "victim_place": "Connector",
+    "n": 3,
+    "median_distance_m": 24.9
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "BombsiteB",
+    "victim_place": "PalaceInterior",
+    "n": 3,
+    "median_distance_m": 19.7
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Canal",
+    "victim_place": "Canal",
+    "n": 3,
+    "median_distance_m": 6.0
+   },
+   {
+    "attacker_side": "T",
+    "attacker_place": "Main",
+    "victim_place": "Main",
+    "n": 3,
+    "median_distance_m": 10.7
+   }
+  ]
+ },
+ "utility": {
+  "CT": {
+   "smoke": {
+    "per_round": 2.857,
+    "time_s": {
+     "p25": 16.34,
+     "p50": 32.68,
+     "p75": 50.18
+    },
+    "targets": {
+     "Canal": 0.3,
+     "Main": 0.2,
+     "BombsiteB": 0.183,
+     "Bridge": 0.133,
+     "TStairs": 0.05,
+     "Walkway": 0.033,
+     "OutsideLong": 0.033,
+     "Bricks": 0.017,
+     "BombsiteA": 0.017,
+     "Middle": 0.017
+    }
+   },
+   "flash": {
+    "per_round": 2.571,
+    "time_s": {
+     "p25": 15.36,
+     "p50": 22.33,
+     "p75": 44.4
+    },
+    "targets": {
+     "Canal": 0.167,
+     "OutsideLong": 0.13,
+     "Main": 0.13,
+     "Ruins": 0.111,
+     "Middle": 0.093,
+     "MidDoors": 0.093,
+     "TSideUpper": 0.074,
+     "PalaceInterior": 0.074,
+     "BombsiteB": 0.074,
+     "Connector": 0.037
+    }
+   },
+   "he": {
+    "per_round": 2.048,
+    "time_s": {
+     "p25": 17.1,
+     "p50": 28.23,
+     "p75": 59.05
+    },
+    "targets": {
+     "Canal": 0.116,
+     "TSideUpper": 0.116,
+     "Bridge": 0.116,
+     "Main": 0.116,
+     "BombsiteB": 0.116,
+     "OutsideLong": 0.093,
+     "Ruins": 0.093,
+     "Connector": 0.07,
+     "TStairs": 0.047,
+     "Bricks": 0.047
+    }
+   },
+   "molotov": {
+    "per_round": 2.571,
+    "time_s": {
+     "p25": 12.74,
+     "p50": 21.38,
+     "p75": 46.88
+    },
+    "targets": {
+     "Canal": 0.222,
+     "Bridge": 0.204,
+     "Main": 0.204,
+     "OutsideLong": 0.111,
+     "BombsiteB": 0.093,
+     "Connector": 0.074,
+     "Middle": 0.037,
+     "Fountain": 0.019,
+     "BombsiteA": 0.019,
+     "TSideUpper": 0.019
+    }
+   }
+  },
+  "T": {
+   "smoke": {
+    "per_round": 2.81,
+    "time_s": {
+     "p25": 15.86,
+     "p50": 44.02,
+     "p75": 63.67
+    },
+    "targets": {
+     "BombsiteB": 0.203,
+     "Canal": 0.153,
+     "Bricks": 0.136,
+     "Walkway": 0.085,
+     "Middle": 0.085,
+     "Main": 0.085,
+     "Connector": 0.085,
+     "Heaven": 0.034,
+     "TSideUpper": 0.034,
+     "PalaceInterior": 0.034
+    }
+   },
+   "flash": {
+    "per_round": 3.476,
+    "time_s": {
+     "p25": 13.83,
+     "p50": 36.44,
+     "p75": 56.27
+    },
+    "targets": {
+     "Bridge": 0.205,
+     "Main": 0.164,
+     "TSideUpper": 0.151,
+     "BombsiteB": 0.11,
+     "Canal": 0.082,
+     "PalaceInterior": 0.082,
+     "OutsideLong": 0.082,
+     "Walkway": 0.041,
+     "Ruins": 0.027,
+     "Connector": 0.027
+    }
+   },
+   "he": {
+    "per_round": 0.81,
+    "time_s": {
+     "p25": 9.36,
+     "p50": 13.67,
+     "p75": 25.0
+    },
+    "targets": {
+     "MidDoors": 0.235,
+     "OutsideLong": 0.176,
+     "BombsiteB": 0.176,
+     "Main": 0.118,
+     "Bridge": 0.118,
+     "Connector": 0.059,
+     "Walkway": 0.059,
+     "Ruins": 0.059
+    }
+   },
+   "molotov": {
+    "per_round": 2.476,
+    "time_s": {
+     "p25": 10.67,
+     "p50": 32.66,
+     "p75": 57.64
+    },
+    "targets": {
+     "MidDoors": 0.308,
+     "Main": 0.115,
+     "Walkway": 0.077,
+     "Connector": 0.077,
+     "Middle": 0.077,
+     "BackofB": 0.077,
+     "Bricks": 0.058,
+     "BombsiteB": 0.058,
+     "PalaceInterior": 0.058,
+     "Alley": 0.038
+    }
+   }
+  }
+ },
+ "evaluation": null
+}

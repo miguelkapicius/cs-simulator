@@ -2,6 +2,16 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.5.0: arquivos independentes por jogador, time e mapa (2026-10-24)
+
+Só acrescenta; os arquivos únicos de `artifacts/` continuam iguais.
+
+- `sharded/` (novo): perfis por jogador, estatísticas por time e tática/playbook por mapa, em arquivos independentes, mais `manifest.json` com caminho, bytes e sha256 de cada um.
+  Um confronto (mapa + 2 times) carrega só os globais, os 2 times, os jogadores deles e o mapa: FURIA × Legacy na Mirage são 19 arquivos, 603 KB (27% do total).
+- Referência `reference/manifest.py` (`match_files`, `players_of`, `all_files`) e `test_vectors/manifest_vectors.json` (196 confrontos).
+- `make validate` confere hashes e que as fatias remontam exatamente os arquivos únicos originais.
+- Previsto para a próxima MAJOR: aposentar os arquivos únicos de perfis e tática e entregar só as fatias.
+
 ## 1.4.0: reação x prefire nos perfis (2026-10-23)
 
 Só acrescenta; `reaction_time_s` e todo o resto continuam como estavam.

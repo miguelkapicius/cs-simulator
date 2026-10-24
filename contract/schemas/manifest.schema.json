@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/miguelkapicius/cs-simulator/contract/schemas/manifest.schema.json",
+  "title": "sharded/manifest.json",
+  "description": "Índice dos arquivos independentes por jogador, time e mapa (ver contract/docs/sharding.md). Os caminhos são relativos a contract/.",
+  "type": "object",
+  "required": ["schema_version", "contract_version", "generated_at", "layout", "global", "teams", "players", "maps"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "contract_version": { "$ref": "common.schema.json#/$defs/contract_version" },
+    "generated_at": { "$ref": "common.schema.json#/$defs/date" },
+    "layout": { "type": "object" },
+    "global": {
+      "type": "object",
+      "required": ["game_rules", "weapon_dynamics", "team_model", "profiles_baseline", "tactics_global"],
+      "additionalProperties": { "$ref": "#/$defs/file" }
+    },
+    "teams": {
+      "type": "object", "minProperties": 2,
+      "additionalProperties": {
+        "allOf": [{ "$ref": "#/$defs/file" }],
+        "required": ["players", "rounds"],
+        "properties": { "players": { "type": "array", "items": { "type": "string", "pattern": "^\\d{17}$" }, "minItems": 1, "maxItems": 10 }, "rounds": { "type": "integer", "minimum": 1 } }
+      }
+    },
+    "players": {
+      "type": "object", "minProperties": 10,
+      "propertyNames": { "pattern": "^\\d{17}$" },
+      "additionalProperties": {
+        "allOf": [{ "$ref": "#/$defs/file" }],
+        "required": ["name", "team", "index", "rounds"],
+        "properties": { "name": { "type": "string" }, "team": { "type": "string" }, "index": { "type": "integer", "minimum": 0 }, "rounds": { "type": "integer", "minimum": 1 } }
+      }
+    },
+    "maps": {
+      "type": "object", "minProperties": 5,
+      "additionalProperties": {
+        "type": "object", "required": ["rounds", "tactics", "playbook"],
+        "properties": { "rounds": { "type": "integer", "minimum": 1 }, "tactics": { "$ref": "#/$defs/file" }, "playbook": { "$ref": "#/$defs/file" } }
+      }
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object", "required": ["path", "bytes", "sha256"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "bytes": { "type": "integer", "minimum": 1 },
+        "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" }
+      }
+    }
+  }
+}
