@@ -62,5 +62,50 @@
       "igl": 8,
       "coach": 11
     }
+  },
+  "salary_skill_range": {
+    "star": [
+      85,
+      100
+    ],
+    "regular": [
+      60,
+      85
+    ],
+    "low": [
+      30,
+      80
+    ]
+  },
+  "salary_blend": {
+    "skill": 0.7,
+    "hype": 0.3
+  },
+  "tier_sizes": {
+    "1": 10,
+    "2": 12,
+    "3": 16
+  },
+  "sponsor_week": {
+    "1": 70000,
+    "2": 6000,
+    "3": 4500
+  },
+  "rank_factor": [
+    1.3,
+    0.7
+  ],
+  "sticker_pool": {
+    "1": 1500000,
+    "2": 0,
+    "3": 0
+  },
+  "hype_match": {
+    "per_rating_point": 8,
+    "win": 2,
+    "loss": -1,
+    "major_multiplier": 2.0,
+    "form_blend": 0.2,
+    "form_scale": 10
   }
 }
