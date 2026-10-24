@@ -21,8 +21,8 @@ from typing import Dict, List, Optional, Set, Tuple
 from pipeline.common import ARTIFACTS_DIR, CONTRACT_DIR, CONTRACT_VERSION
 
 ARTIFACTS = ("game_rules.json", "weapon_dynamics.json", "team_model.json", "tactics.json", "tactics_playbook.json",
-             "elite_players.json")
-REFERENCE = ("__init__.py", "team_model.py", "tactics.py", "weapon_dynamics.py", "profile_synthesis.py")
+             "elite_players.json", "manager_params.json")
+REFERENCE = ("__init__.py", "team_model.py", "tactics.py", "weapon_dynamics.py", "profile_synthesis.py", "manager_economy.py")
 DIST_DIR = CONTRACT_DIR.parent / "dist"
 ZIP_TIME = (2026, 1, 1, 0, 0, 0)  # data fixa: o mesmo conteúdo gera o mesmo zip
 
@@ -92,7 +92,7 @@ PACKAGE_NOTE = """# Pacote para o jogo (cs-simulator {version})
 
 Dados de runtime do contrato, **sem identidade real**: nenhum nome de jogador, steamid, time, demo ou torneio reais.
 
-- `artifacts/`: regras, dinâmica das armas, modelo de time, tática, playbook e `elite_players.json` (jogadores com identidade ficcional).
+- `artifacts/`: regras, dinâmica das armas, modelo de time, tática, playbook, `elite_players.json` (jogadores com identidade ficcional) e `manager_params.json` (números da economia do manager).
 - `reference/`: código de referência (Python) das funções que a Unity porta.
 - `MANIFEST.json`: tamanho e sha256 de cada arquivo.
 

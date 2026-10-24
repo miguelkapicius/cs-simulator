@@ -1,39 +1,19 @@
-"""Decisão do jogador: pesa dinheiro, força do time, prestígio, função e reputação do manager."""
-import math
+"""Decisão do jogador entre ofertas. A nota é a referência do contrato; aqui só ligam os objetos do jogo a ela."""
 from typing import Dict, List, Optional
 
+from contract.reference import manager_economy as eco
 from manager.models import Club, Offer, Player
-from manager.valuation import salary_for
-
-TOP_N = 5  # titulares que definem a força do time
 
 
-def _team_strength(club: Club, roster: List[Player], prm: Dict) -> float:
-    if not roster:
-        return prm["generator"]["skill_mean"][str(club.tier)] / 100
-    top = sorted((p.skill for p in roster if p.role != "coach"), reverse=True)[:TOP_N]
-    return (sum(top) / len(top)) / 100 if top else 0.0
-
-
-def _role_term(player: Player, roster: List[Player], prm: Dict) -> float:
-    """1 se há vaga na função; 0.5 se ele entraria como titular de uma função cheia; 0 se seria reserva."""
-    same = [r for r in roster if r.role == player.role]
-    if len(same) < prm["role_cap"].get(player.role, 1):
-        return 1.0
-    return 0.5 if any(player.skill > r.skill for r in same) else 0.0
+def _view(p: Player) -> Dict:
+    return {"role": p.role, "skill": p.skill}
 
 
 def score_offer(player: Player, offer: Offer, club: Club, roster: List[Player], prm: Dict) -> float:
-    w = prm["weights"]
-    market = max(1, salary_for(player.tier, player.skill, player.hype, prm))
-    money = math.tanh(offer.salary_month / market)
-    # quem já ganha muito liga menos para dinheiro
-    money_weight = w["money"] * max(0.0, prm["money_star_discount"] - player.skill / 100)
-    return (money_weight * money
-            + w["team"] * _team_strength(club, roster, prm)
-            + w["prestige"] * club.prestige / 100
-            + w["role"] * _role_term(player, roster, prm)
-            + w["reputation"] * club.reputation / 100)
+    return eco.score_offer({"tier": player.tier, "skill": player.skill, "hype": player.hype, "role": player.role},
+                           offer.salary_month,
+                           {"tier": club.tier, "prestige": club.prestige, "reputation": club.reputation},
+                           [_view(p) for p in roster], prm)
 
 
 def choose_offer(player: Player, offers: List[Offer], clubs: Dict[str, Club],

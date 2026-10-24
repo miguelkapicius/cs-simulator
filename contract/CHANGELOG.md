@@ -2,6 +2,18 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.8.0: contrato da economia do modo manager (2026-10-24)
+
+Só acrescenta; os artefatos existentes não mudaram de formato.
+
+- `artifacts/manager_params.json` (novo, com schema): **todos os números** da economia (faixas de salário, buyout, hype, receita, pesos da decisão do jogador, scouting, mercado, calendário). Antes ficavam em `manager/params.json`; agora é a única fonte, e o `manager/` passa a lê-lo daqui.
+- `reference/manager_economy.py` (novo): as fórmulas puras (`salary_for`, `buyout_for`, `decay_hype`, `match_update`, `weekly_wages`, `weekly_revenue`, `sticker_payout`, `can_afford`, `team_strength`, `role_term`, `score_offer`, `accepts`, `scout_noise`, `scout_numbers`), só com números e dicionários. O código do `manager/` delega a elas, então há uma implementação só.
+- `test_vectors/manager_economy_vectors.json` (485 casos em 14 grupos, tolerância 1e-9), com o `params_sha256` dos parâmetros a que se referem. `make validate` confere a referência contra eles e acusa vetores desatualizados.
+- **Scouting portável:** o ruído passa a sair direto do sha256 (`scout_noise`), sem o gerador de números aleatórios do Python, que a Unity não reproduz. Os valores de scouting mudam em relação à versão anterior do manager (que não era contrato).
+- `make manager-vectors` regenera os vetores depois de mudar `manager_params.json`. `make validate` também confere que os pesos da decisão somam 1 e que as faixas de salário não se sobrepõem para cima.
+- `make package-game` passa a incluir `manager_params.json` e `manager_economy.py`.
+- `docs/manager_economy.md`: parâmetros, fórmulas, convenções de port e o que é medido e o que é palpite.
+
 ## 1.7.1: pacote para embarcar no jogo, sem identidade real (2026-10-24)
 
 Nenhum artefato mudou de formato; só ferramenta e documentação.

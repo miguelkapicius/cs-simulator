@@ -28,6 +28,7 @@ partidas reais. O comparador diz o quanto falta.
 | `artifacts/player_profiles.json` | **como cada jogador joga**: reação, mira, precisão, duelos, estilo, posições |
 | `artifacts/game_rules.json` | **como o CS2 funciona**: armas, dano, colete, economia, tempos, bomba, granadas |
 | `artifacts/elite_players.json` | **os jogadores para mostrar no produto**: o mesmo comportamento de `player_profiles.json`, com codinome, país e idade ficcionais e **sem nome, steamid nem time reais** ([`docs/elite_players.md`](docs/elite_players.md)) |
+| `artifacts/manager_params.json`, `reference/manager_economy.py` | **economia do modo manager**: salários, buyout, hype, receita, decisão do jogador e scouting, como números ajustáveis e fórmulas puras com 485 vetores de teste ([`docs/manager_economy.md`](docs/manager_economy.md)) |
 | `reference/profile_synthesis.py` | **perfil de quem não tem demo**: parte de um jogador real da mesma função e ajusta pela habilidade e pelos atributos ([`docs/profile_synthesis.md`](docs/profile_synthesis.md)) |
 | `make package-game` | **o que pode ir dentro do build do jogo**: só dados de runtime, sem nenhuma identidade real, com detector que reprova o build se vazar ([`docs/game_package.md`](docs/game_package.md)) |
 | `artifacts/weapon_dynamics.json` | **como a arma se comporta ao atirar**: padrão e escala do recuo, reinício da rajada, penalidade de precisão, penetração |

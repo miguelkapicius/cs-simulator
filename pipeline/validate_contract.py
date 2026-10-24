@@ -12,6 +12,7 @@ from referencing import Registry, Resource
 
 from calibration.validate_log import validate_file
 from contract.reference import team_model as ref
+from contract.reference import manager_economy as eco
 from contract.reference import manifest as man
 from contract.reference import profile_synthesis as synth
 from contract.reference import tactics as tac
@@ -209,6 +210,54 @@ def check_shards(reg):
     return problems
 
 
+def _same(got, expected, tol):
+    if isinstance(expected, bool) or isinstance(got, bool):
+        return got is expected
+    if isinstance(expected, dict):
+        return isinstance(got, dict) and set(got) == set(expected) and all(_same(got[k], expected[k], tol) for k in expected)
+    if isinstance(expected, (int, float)):
+        return isinstance(got, (int, float)) and abs(got - expected) <= tol
+    return got == expected
+
+
+def check_manager_vectors():
+    """A referência da economia do manager tem de reproduzir os vetores, e eles têm de ser dos parâmetros atuais."""
+    from pipeline.build_manager_vectors import params_sha256
+    vec_path, params_path = VECTORS_DIR / "manager_economy_vectors.json", ARTIFACTS_DIR / "manager_params.json"
+    if not vec_path.exists() or not params_path.exists():
+        return ["manager_economy_vectors.json ou manager_params.json ausente (rode make manager-vectors)"]
+    prm = json.loads(params_path.read_text())["params"]
+    vec, problems = json.loads(vec_path.read_text()), []
+    if vec["params_sha256"] != params_sha256(prm):
+        problems.append("manager_economy_vectors: params_sha256 não bate com manager_params.json (rode make manager-vectors)")
+    tol = vec["tolerance"]
+    calls = {
+        "salary_for": lambda i: eco.salary_for(i["tier"], i["skill"], i["hype"], prm),
+        "buyout_for": lambda i: eco.buyout_for(i["salary_month"], i["hype"], i["end_week"], i["week"], i["interested"], prm),
+        "decay_hype": lambda i: eco.decay_hype(i["hype"], i["weeks"], prm),
+        "match_update": lambda i: dict(zip(("hype", "form"), eco.match_update(i["hype"], i["form"], i["rating"], i["won"], i["major"], prm))),
+        "weekly_wages": lambda i: eco.weekly_wages(i["salaries_month"]),
+        "weekly_revenue": lambda i: eco.weekly_revenue(i["tier"], i["rank"], prm),
+        "sticker_payout": lambda i: eco.sticker_payout(i["tier"], i["hypes"], prm),
+        "can_afford": lambda i: eco.can_afford(i["budget"], i["weekly_wage_total"], i["offer_salary_month"], i["signing_bonus"], prm),
+        "team_strength": lambda i: eco.team_strength(i["club_tier"], i["roster"], prm),
+        "role_term": lambda i: eco.role_term(i["role"], i["skill"], i["roster"], prm),
+        "score_offer": lambda i: eco.score_offer(i["player"], i["offer_salary_month"], i["club"], i["roster"], prm),
+        "accepts": lambda i: eco.accepts(i["score"], prm),
+        "scout_noise": lambda i: eco.scout_noise(i["world_seed"], i["pid"], i["level"], i["key"], i["width"]),
+        "scout_numbers": lambda i: eco.scout_numbers(i["skill"], i["hidden"], i["pid"], i["level"], i["world_seed"], prm),
+    }
+    for group, fn in calls.items():
+        if not vec.get(group):
+            problems.append(f"manager_economy_vectors: grupo {group} ausente ou vazio")
+            continue
+        for n, c in enumerate(vec[group]):
+            got = fn(c["input"])
+            if not _same(got, c["expected"], tol):
+                problems.append(f"manager_economy_vectors {group}[{n}]: esperado {c['expected']}, obtido {got}")
+    return problems
+
+
 def check_manager_params(doc=None):
     """Regras que o schema não expressa: pesos da decisão somam 1 e as faixas de salário não se sobrepõem para cima."""
     if doc is None:
@@ -292,6 +341,7 @@ def main():
                 "fatias independentes (manifesto, hashes, remontagem)": check_shards(reg),
                 "elite_players sem identidade real": check_elite_identity(),
                 "manager_params (pesos e faixas de salário)": check_manager_params(),
+                "vetores da economia do manager x referência": check_manager_vectors(),
                 "vetores da síntese de perfil x referência": check_synthesis_vectors(),
                 "log de exemplo": check_example()}
     bad = 0

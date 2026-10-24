@@ -1,0 +1,5996 @@
+{
+ "contract_version": "1.8.0",
+ "generated_at": "2026-10-24",
+ "tolerance": 1e-09,
+ "params_sha256": "6b81623b47369075a03c5f9695fef892545ce2636ec7e17ffb98294f6242ef2e",
+ "note": "Cada grupo aplica a função de contract/reference/manager_economy.py de mesmo nome às entradas de `input` e espera `expected`.",
+ "salary_for": [
+  {
+   "input": {
+    "tier": 1,
+    "skill": 0,
+    "hype": 0
+   },
+   "expected": 15000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 0,
+    "hype": 50
+   },
+   "expected": 20250
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 0,
+    "hype": 100
+   },
+   "expected": 25500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 30,
+    "hype": 0
+   },
+   "expected": 15000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 30,
+    "hype": 50
+   },
+   "expected": 20250
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 30,
+    "hype": 100
+   },
+   "expected": 25500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 50,
+    "hype": 0
+   },
+   "expected": 15000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 50,
+    "hype": 50
+   },
+   "expected": 20250
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 50,
+    "hype": 100
+   },
+   "expected": 25500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 60,
+    "hype": 0
+   },
+   "expected": 15000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 60,
+    "hype": 50
+   },
+   "expected": 20250
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 60,
+    "hype": 100
+   },
+   "expected": 25500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 70,
+    "hype": 0
+   },
+   "expected": 24800
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 70,
+    "hype": 50
+   },
+   "expected": 30050
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 70,
+    "hype": 100
+   },
+   "expected": 35300
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 85,
+    "hype": 0
+   },
+   "expected": 50000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 85,
+    "hype": 50
+   },
+   "expected": 57500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 85,
+    "hype": 100
+   },
+   "expected": 65000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 95,
+    "hype": 0
+   },
+   "expected": 73333
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 95,
+    "hype": 50
+   },
+   "expected": 80833
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 95,
+    "hype": 100
+   },
+   "expected": 88333
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 100,
+    "hype": 0
+   },
+   "expected": 85000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 100,
+    "hype": 50
+   },
+   "expected": 92500
+  },
+  {
+   "input": {
+    "tier": 1,
+    "skill": 100,
+    "hype": 100
+   },
+   "expected": 100000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 0,
+    "hype": 0
+   },
+   "expected": 1000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 0,
+    "hype": 50
+   },
+   "expected": 1600
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 0,
+    "hype": 100
+   },
+   "expected": 2200
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 30,
+    "hype": 0
+   },
+   "expected": 1000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 30,
+    "hype": 50
+   },
+   "expected": 1600
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 30,
+    "hype": 100
+   },
+   "expected": 2200
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 50,
+    "hype": 0
+   },
+   "expected": 2120
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 50,
+    "hype": 50
+   },
+   "expected": 2720
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 50,
+    "hype": 100
+   },
+   "expected": 3320
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 60,
+    "hype": 0
+   },
+   "expected": 2680
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 60,
+    "hype": 50
+   },
+   "expected": 3280
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 60,
+    "hype": 100
+   },
+   "expected": 3880
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 70,
+    "hype": 0
+   },
+   "expected": 3239
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 70,
+    "hype": 50
+   },
+   "expected": 3840
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 70,
+    "hype": 100
+   },
+   "expected": 4440
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 85,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 85,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 85,
+    "hype": 100
+   },
+   "expected": 5000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 95,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 95,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 95,
+    "hype": 100
+   },
+   "expected": 5000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 100,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 100,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 2,
+    "skill": 100,
+    "hype": 100
+   },
+   "expected": 5000
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 0,
+    "hype": 0
+   },
+   "expected": 1000
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 0,
+    "hype": 50
+   },
+   "expected": 1600
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 0,
+    "hype": 100
+   },
+   "expected": 2200
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 30,
+    "hype": 0
+   },
+   "expected": 1000
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 30,
+    "hype": 50
+   },
+   "expected": 1600
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 30,
+    "hype": 100
+   },
+   "expected": 2200
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 50,
+    "hype": 0
+   },
+   "expected": 2120
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 50,
+    "hype": 50
+   },
+   "expected": 2720
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 50,
+    "hype": 100
+   },
+   "expected": 3320
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 60,
+    "hype": 0
+   },
+   "expected": 2680
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 60,
+    "hype": 50
+   },
+   "expected": 3280
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 60,
+    "hype": 100
+   },
+   "expected": 3880
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 70,
+    "hype": 0
+   },
+   "expected": 3239
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 70,
+    "hype": 50
+   },
+   "expected": 3840
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 70,
+    "hype": 100
+   },
+   "expected": 4440
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 85,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 85,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 85,
+    "hype": 100
+   },
+   "expected": 5000
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 95,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 95,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 95,
+    "hype": 100
+   },
+   "expected": 5000
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 100,
+    "hype": 0
+   },
+   "expected": 3800
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 100,
+    "hype": 50
+   },
+   "expected": 4400
+  },
+  {
+   "input": {
+    "tier": 3,
+    "skill": 100,
+    "hype": 100
+   },
+   "expected": 5000
+  }
+ ],
+ "buyout_for": [
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 22500
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 29250
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 18000
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 23400
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 375
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 487
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 22500
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 29250
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 28125
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 36562
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 22500
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 29250
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 468
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 609
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 28125
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 36562
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 33750
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 43875
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 27000
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 35100
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 562
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 731
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 33750
+  },
+  {
+   "input": {
+    "salary_month": 1500,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 43875
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 600000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 780000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 480000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 624000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 10000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 13000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 600000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 780000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 750000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 975000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 600000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 780000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 12500
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 16250
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 750000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 975000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 900000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 1170000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 720000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 936000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 15000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 19500
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 900000
+  },
+  {
+   "input": {
+    "salary_month": 40000,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 1170000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 1350000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 1755000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 1080000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 1404000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 22500
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 29250
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 1350000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 0,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 1755000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 1687500
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 2193750
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 1350000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 1755000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 28125
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 36562
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 1687500
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 50,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 2193750
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 2025000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 2632500
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 1
+   },
+   "expected": 1620000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 48,
+    "interested": 3
+   },
+   "expected": 2106000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 1
+   },
+   "expected": 33750
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 95,
+    "interested": 3
+   },
+   "expected": 43875
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 1
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 96,
+    "week": 96,
+    "interested": 3
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 1
+   },
+   "expected": 2025000
+  },
+  {
+   "input": {
+    "salary_month": 90000,
+    "hype": 100,
+    "end_week": 300,
+    "week": 0,
+    "interested": 3
+   },
+   "expected": 2632500
+  }
+ ],
+ "decay_hype": [
+  {
+   "input": {
+    "hype": 0,
+    "weeks": 0
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "hype": 0,
+    "weeks": 1
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "hype": 0,
+    "weeks": 12
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "hype": 0,
+    "weeks": 48
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "hype": 25,
+    "weeks": 0
+   },
+   "expected": 25.0
+  },
+  {
+   "input": {
+    "hype": 25,
+    "weeks": 1
+   },
+   "expected": 23.596857817042338
+  },
+  {
+   "input": {
+    "hype": 25,
+    "weeks": 12
+   },
+   "expected": 12.5
+  },
+  {
+   "input": {
+    "hype": 25,
+    "weeks": 48
+   },
+   "expected": 1.5625
+  },
+  {
+   "input": {
+    "hype": 80,
+    "weeks": 0
+   },
+   "expected": 80.0
+  },
+  {
+   "input": {
+    "hype": 80,
+    "weeks": 1
+   },
+   "expected": 75.50994501453548
+  },
+  {
+   "input": {
+    "hype": 80,
+    "weeks": 12
+   },
+   "expected": 40.0
+  },
+  {
+   "input": {
+    "hype": 80,
+    "weeks": 48
+   },
+   "expected": 5.0
+  },
+  {
+   "input": {
+    "hype": 100,
+    "weeks": 0
+   },
+   "expected": 100.0
+  },
+  {
+   "input": {
+    "hype": 100,
+    "weeks": 1
+   },
+   "expected": 94.38743126816935
+  },
+  {
+   "input": {
+    "hype": 100,
+    "weeks": 12
+   },
+   "expected": 50.0
+  },
+  {
+   "input": {
+    "hype": 100,
+    "weeks": 48
+   },
+   "expected": 6.25
+  }
+ ],
+ "match_update": [
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 2.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 4.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 3.8000000000000007,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 7.600000000000001,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 6.800000000000001,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 13.600000000000001,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 0.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 2.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 4.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 3.8000000000000007,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 7.600000000000001,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 6.800000000000001,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 0.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 13.600000000000001,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 44.2,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 38.4,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 47.2,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 44.4,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 49.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 48.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 52.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 54.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 53.8,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 57.6,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 56.8,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 63.6,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 44.2,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 38.4,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 47.2,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 44.4,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 49.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 48.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 52.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 54.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 53.8,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 57.6,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 56.8,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 50.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 63.6,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 93.2,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 87.4,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 96.2,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 93.4,
+    "form": -1.2
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 98.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 97.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 0.0
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.0,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.2000000000000002
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 93.2,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 87.4,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 96.2,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 0.4,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 93.4,
+    "form": -0.7999999999999999
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 98.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 97.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.0,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 0.4
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": false,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": false
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.6
+   }
+  },
+  {
+   "input": {
+    "hype": 99.0,
+    "form": 0.5,
+    "rating": 1.6,
+    "won": true,
+    "major": true
+   },
+   "expected": {
+    "hype": 100.0,
+    "form": 1.6
+   }
+  }
+ ],
+ "weekly_wages": [
+  {
+   "input": {
+    "salaries_month": []
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "salaries_month": [
+     1000
+    ]
+   },
+   "expected": 250
+  },
+  {
+   "input": {
+    "salaries_month": [
+     12000,
+     4000,
+     3999
+    ]
+   },
+   "expected": 4999
+  }
+ ],
+ "weekly_revenue": [
+  {
+   "input": {
+    "tier": 1,
+    "rank": 0
+   },
+   "expected": 91000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 1
+   },
+   "expected": 91000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 2
+   },
+   "expected": 86333
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 5
+   },
+   "expected": 72333
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 10
+   },
+   "expected": 49000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 12
+   },
+   "expected": 49000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 16
+   },
+   "expected": 49000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "rank": 99
+   },
+   "expected": 49000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 0
+   },
+   "expected": 7800
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 1
+   },
+   "expected": 7800
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 2
+   },
+   "expected": 7472
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 5
+   },
+   "expected": 6490
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 10
+   },
+   "expected": 4854
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 12
+   },
+   "expected": 4200
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 16
+   },
+   "expected": 4200
+  },
+  {
+   "input": {
+    "tier": 2,
+    "rank": 99
+   },
+   "expected": 4200
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 0
+   },
+   "expected": 5850
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 1
+   },
+   "expected": 5850
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 2
+   },
+   "expected": 5670
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 5
+   },
+   "expected": 5130
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 10
+   },
+   "expected": 4230
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 12
+   },
+   "expected": 3870
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 16
+   },
+   "expected": 3150
+  },
+  {
+   "input": {
+    "tier": 3,
+    "rank": 99
+   },
+   "expected": 3150
+  }
+ ],
+ "sticker_payout": [
+  {
+   "input": {
+    "tier": 1,
+    "hypes": []
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 1,
+    "hypes": [
+     50.0
+    ]
+   },
+   "expected": 750000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "hypes": [
+     20.0,
+     50.0,
+     90.0
+    ]
+   },
+   "expected": 800000
+  },
+  {
+   "input": {
+    "tier": 1,
+    "hypes": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "expected": 1500000
+  },
+  {
+   "input": {
+    "tier": 2,
+    "hypes": []
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 2,
+    "hypes": [
+     50.0
+    ]
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 2,
+    "hypes": [
+     20.0,
+     50.0,
+     90.0
+    ]
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 2,
+    "hypes": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 3,
+    "hypes": []
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 3,
+    "hypes": [
+     50.0
+    ]
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 3,
+    "hypes": [
+     20.0,
+     50.0,
+     90.0
+    ]
+   },
+   "expected": 0
+  },
+  {
+   "input": {
+    "tier": 3,
+    "hypes": [
+     100.0,
+     100.0,
+     100.0,
+     100.0,
+     100.0
+    ]
+   },
+   "expected": 0
+  }
+ ],
+ "can_afford": [
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 0,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 30000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 50000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 0,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 0,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 1500,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 0
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 1000
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "budget": 1000000,
+    "weekly_wage_total": 3000,
+    "offer_salary_month": 5000,
+    "signing_bonus": 40000
+   },
+   "expected": true
+  }
+ ],
+ "team_strength": [
+  {
+   "input": {
+    "club_tier": 1,
+    "roster": []
+   },
+   "expected": 0.78
+  },
+  {
+   "input": {
+    "club_tier": 1,
+    "roster": [
+     {
+      "role": "coach",
+      "skill": 70.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "club_tier": 1,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.65
+  },
+  {
+   "input": {
+    "club_tier": 1,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 88.0
+     },
+     {
+      "role": "igl",
+      "skill": 76.0
+     },
+     {
+      "role": "entry",
+      "skill": 74.0
+     },
+     {
+      "role": "support",
+      "skill": 70.0
+     },
+     {
+      "role": "lurker",
+      "skill": 69.0
+     },
+     {
+      "role": "rifler",
+      "skill": 66.0
+     },
+     {
+      "role": "coach",
+      "skill": 80.0
+     }
+    ]
+   },
+   "expected": 0.754
+  },
+  {
+   "input": {
+    "club_tier": 2,
+    "roster": []
+   },
+   "expected": 0.62
+  },
+  {
+   "input": {
+    "club_tier": 2,
+    "roster": [
+     {
+      "role": "coach",
+      "skill": 70.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "club_tier": 2,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.65
+  },
+  {
+   "input": {
+    "club_tier": 2,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 88.0
+     },
+     {
+      "role": "igl",
+      "skill": 76.0
+     },
+     {
+      "role": "entry",
+      "skill": 74.0
+     },
+     {
+      "role": "support",
+      "skill": 70.0
+     },
+     {
+      "role": "lurker",
+      "skill": 69.0
+     },
+     {
+      "role": "rifler",
+      "skill": 66.0
+     },
+     {
+      "role": "coach",
+      "skill": 80.0
+     }
+    ]
+   },
+   "expected": 0.754
+  },
+  {
+   "input": {
+    "club_tier": 3,
+    "roster": []
+   },
+   "expected": 0.48
+  },
+  {
+   "input": {
+    "club_tier": 3,
+    "roster": [
+     {
+      "role": "coach",
+      "skill": 70.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "club_tier": 3,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.65
+  },
+  {
+   "input": {
+    "club_tier": 3,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 88.0
+     },
+     {
+      "role": "igl",
+      "skill": 76.0
+     },
+     {
+      "role": "entry",
+      "skill": 74.0
+     },
+     {
+      "role": "support",
+      "skill": 70.0
+     },
+     {
+      "role": "lurker",
+      "skill": 69.0
+     },
+     {
+      "role": "rifler",
+      "skill": 66.0
+     },
+     {
+      "role": "coach",
+      "skill": 80.0
+     }
+    ]
+   },
+   "expected": 0.754
+  }
+ ],
+ "role_term": [
+  {
+   "input": {
+    "role": "awper",
+    "skill": 50.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "awper",
+    "skill": 70.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "awper",
+    "skill": 90.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5
+  },
+  {
+   "input": {
+    "role": "rifler",
+    "skill": 50.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  },
+  {
+   "input": {
+    "role": "rifler",
+    "skill": 70.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  },
+  {
+   "input": {
+    "role": "rifler",
+    "skill": 90.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  },
+  {
+   "input": {
+    "role": "igl",
+    "skill": 50.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "igl",
+    "skill": 70.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5
+  },
+  {
+   "input": {
+    "role": "igl",
+    "skill": 90.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5
+  },
+  {
+   "input": {
+    "role": "coach",
+    "skill": 50.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "coach",
+    "skill": 70.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "coach",
+    "skill": 90.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.0
+  },
+  {
+   "input": {
+    "role": "lurker",
+    "skill": 50.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  },
+  {
+   "input": {
+    "role": "lurker",
+    "skill": 70.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  },
+  {
+   "input": {
+    "role": "lurker",
+    "skill": 90.0,
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 1.0
+  }
+ ],
+ "score_offer": [
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.5004596208666363
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.35795962086663635
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.5329596208666364
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.3504596208666364
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.6597172912392464
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5172172912392463
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.6922172912392464
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5097172912392463
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.7186496057205378
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.576149605720538
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.7511496057205379
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5686496057205379
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.7304999999948596
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5879999999948597
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.7629999999948597
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 2,
+     "skill": 62.0,
+     "hype": 30.0,
+     "role": "awper"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5804999999948597
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.45842284460622623
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.4659228446062263
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.49092284460622626
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.4584228446062263
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.4630348508861755
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.47053485088617547
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.49553485088617555
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.46303485088617546
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.46855604806305556
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.4760560480630556
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.5010560480630556
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.4685560480630556
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.5263574669303006
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5338574669303007
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.5588574669303007
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 1,
+     "skill": 95.0,
+     "hype": 80.0,
+     "role": "rifler"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.5263574669303006
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.5430345737784226
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.40053457377842255
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.5755345737784225
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 500,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.39303457377842255
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.7628804167940337
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.6203804167940337
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.7953804167940336
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 3000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.6128804167940336
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.7888001558655378
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.6463001558655379
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.8213001558655378
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 6000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.6388001558655378
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": []
+   },
+   "expected": 0.79
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 2,
+     "prestige": 55.0,
+     "reputation": 70.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.6475
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": []
+   },
+   "expected": 0.8225
+  },
+  {
+   "input": {
+    "player": {
+     "tier": 3,
+     "skill": 45.0,
+     "hype": 5.0,
+     "role": "igl"
+    },
+    "offer_salary_month": 40000,
+    "club": {
+     "tier": 1,
+     "prestige": 90.0,
+     "reputation": 10.0
+    },
+    "roster": [
+     {
+      "role": "awper",
+      "skill": 80.0
+     },
+     {
+      "role": "rifler",
+      "skill": 60.0
+     },
+     {
+      "role": "igl",
+      "skill": 55.0
+     },
+     {
+      "role": "coach",
+      "skill": 90.0
+     }
+    ]
+   },
+   "expected": 0.64
+  }
+ ],
+ "accepts": [
+  {
+   "input": {
+    "score": 0.0
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "score": 0.39
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "score": 0.4
+   },
+   "expected": false
+  },
+  {
+   "input": {
+    "score": 0.41000000000000003
+   },
+   "expected": true
+  },
+  {
+   "input": {
+    "score": 1.0
+   },
+   "expected": true
+  }
+ ],
+ "scout_noise": [
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 0,
+    "key": "skill",
+    "width": 12
+   },
+   "expected": -7.999586188518323
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 0,
+    "key": "consistency",
+    "width": 12
+   },
+   "expected": 6.850730455527637
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 1,
+    "key": "skill",
+    "width": 8
+   },
+   "expected": 2.4396766663928737
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 1,
+    "key": "consistency",
+    "width": 8
+   },
+   "expected": 2.087876791915443
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 2,
+    "key": "skill",
+    "width": 4
+   },
+   "expected": 3.2050251086790817
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 2,
+    "key": "consistency",
+    "width": 4
+   },
+   "expected": -1.3943085065841525
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 3,
+    "key": "skill",
+    "width": 1.5
+   },
+   "expected": 0.6355153170000383
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "e00",
+    "level": 3,
+    "key": "consistency",
+    "width": 1.5
+   },
+   "expected": -0.16412233515544955
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 0,
+    "key": "skill",
+    "width": 12
+   },
+   "expected": -9.507679666014013
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 0,
+    "key": "consistency",
+    "width": 12
+   },
+   "expected": 0.5337260636025487
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 1,
+    "key": "skill",
+    "width": 8
+   },
+   "expected": -1.6111254668827897
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 1,
+    "key": "consistency",
+    "width": 8
+   },
+   "expected": 4.605211341971641
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 2,
+    "key": "skill",
+    "width": 4
+   },
+   "expected": 3.04723292743473
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 2,
+    "key": "consistency",
+    "width": 4
+   },
+   "expected": -0.735629200151743
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 3,
+    "key": "skill",
+    "width": 1.5
+   },
+   "expected": 0.6667092970441917
+  },
+  {
+   "input": {
+    "world_seed": 1,
+    "pid": "g_kozen",
+    "level": 3,
+    "key": "consistency",
+    "width": 1.5
+   },
+   "expected": 0.11923487700369262
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 0,
+    "key": "skill",
+    "width": 12
+   },
+   "expected": 0.24656170282739964
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 0,
+    "key": "consistency",
+    "width": 12
+   },
+   "expected": -10.249800937621512
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 1,
+    "key": "skill",
+    "width": 8
+   },
+   "expected": -5.302743520004814
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 1,
+    "key": "consistency",
+    "width": 8
+   },
+   "expected": 6.6473095430971725
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 2,
+    "key": "skill",
+    "width": 4
+   },
+   "expected": -0.010471126378515994
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 2,
+    "key": "consistency",
+    "width": 4
+   },
+   "expected": 0.36067381275534416
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 3,
+    "key": "skill",
+    "width": 1.5
+   },
+   "expected": 0.8723487464234113
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "e00",
+    "level": 3,
+    "key": "consistency",
+    "width": 1.5
+   },
+   "expected": 0.1415078207507704
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 0,
+    "key": "skill",
+    "width": 12
+   },
+   "expected": -5.351502350796569
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 0,
+    "key": "consistency",
+    "width": 12
+   },
+   "expected": 4.998322057583134
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 1,
+    "key": "skill",
+    "width": 8
+   },
+   "expected": 7.846686310390993
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 1,
+    "key": "consistency",
+    "width": 8
+   },
+   "expected": 6.123289538974365
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 2,
+    "key": "skill",
+    "width": 4
+   },
+   "expected": -0.5526090353101312
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 2,
+    "key": "consistency",
+    "width": 4
+   },
+   "expected": -1.1200045576926292
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 3,
+    "key": "skill",
+    "width": 1.5
+   },
+   "expected": -1.3538965074076457
+  },
+  {
+   "input": {
+    "world_seed": 42,
+    "pid": "g_kozen",
+    "level": 3,
+    "key": "consistency",
+    "width": 1.5
+   },
+   "expected": 1.0587938238266035
+  }
+ ],
+ "scout_numbers": [
+  {
+   "input": {
+    "skill": 3.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 0,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 4.4370863532541795
+   }
+  },
+  {
+   "input": {
+    "skill": 3.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 1,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 0.0,
+    "consistency": 74.53867486148246
+   }
+  },
+  {
+   "input": {
+    "skill": 3.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 2,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 0.0,
+    "consistency": 72.57666346826235,
+    "communication": 32.00312903574591,
+    "ceiling": 87.58582999180081
+   }
+  },
+  {
+   "input": {
+    "skill": 3.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 3,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 2.5726510110695875,
+    "consistency": 70.27368809174247,
+    "communication": 31.822488713241803,
+    "ceiling": 89.38844904282617,
+    "lan_form": 55.1152690068237,
+    "temperament": 11.30727918700821
+   }
+  },
+  {
+   "input": {
+    "skill": 60.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 0,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 61.43708635325418
+   }
+  },
+  {
+   "input": {
+    "skill": 60.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 1,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 53.532004912601835,
+    "consistency": 74.53867486148246
+   }
+  },
+  {
+   "input": {
+    "skill": 60.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 2,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 56.6659134988941,
+    "consistency": 72.57666346826235,
+    "communication": 32.00312903574591,
+    "ceiling": 87.58582999180081
+   }
+  },
+  {
+   "input": {
+    "skill": 60.0,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 3,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 59.57265101106959,
+    "consistency": 70.27368809174247,
+    "communication": 31.822488713241803,
+    "ceiling": 89.38844904282617,
+    "lan_form": 55.1152690068237,
+    "temperament": 11.30727918700821
+   }
+  },
+  {
+   "input": {
+    "skill": 99.5,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 0,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 100.0
+   }
+  },
+  {
+   "input": {
+    "skill": 99.5,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 1,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 93.03200491260183,
+    "consistency": 74.53867486148246
+   }
+  },
+  {
+   "input": {
+    "skill": 99.5,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 2,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 96.1659134988941,
+    "consistency": 72.57666346826235,
+    "communication": 32.00312903574591,
+    "ceiling": 87.58582999180081
+   }
+  },
+  {
+   "input": {
+    "skill": 99.5,
+    "hidden": {
+     "consistency": 71.5,
+     "communication": 33.0,
+     "ceiling": 90.0,
+     "lan_form": 55.0,
+     "temperament": 12.25
+    },
+    "pid": "g_kozen",
+    "level": 3,
+    "world_seed": 7
+   },
+   "expected": {
+    "skill_estimate": 99.07265101106958,
+    "consistency": 70.27368809174247,
+    "communication": 31.822488713241803,
+    "ceiling": 89.38844904282617,
+    "lan_form": 55.1152690068237,
+    "temperament": 11.30727918700821
+   }
+  }
+ ]
+}
