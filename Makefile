@@ -1,7 +1,7 @@
 PY := .venv/bin/python
 VERSION := $(shell cat contract/VERSION)
 
-.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards elite validate test lint refresh package help manager-sim
+.PHONY: setup extract simlogs profiles rules dynamics tactics targets team shards elite validate test lint refresh package package-game help manager-sim
 
 help:
 	@echo "make setup     cria o ambiente Python (.venv)"
@@ -9,7 +9,8 @@ help:
 	@echo "make validate  confere os artefatos contra os schemas e os vetores de teste"
 	@echo "make test      testes automatizados      make lint   verificação estática"
 	@echo "make manager-sim  simula 3 temporadas da economia do manager e resume o resultado"
-	@echo "make package   gera dist/cs-simulator-contract-<versão>.zip para enviar à Unity"
+	@echo "make package   gera dist/cs-simulator-contract-<versão>.zip para enviar à Unity (desenvolvimento e calibração, com dados reais)"
+	@echo "make package-game  gera dist/cs-simulator-game-<versão>.zip para embarcar no jogo (sem nenhuma identidade real)"
 
 setup:
 	python3 -m venv .venv && .venv/bin/pip install -q -r requirements.txt
@@ -65,3 +66,6 @@ package: validate
 	zip -q -r dist/cs-simulator-contract-$(VERSION).zip contract calibration pipeline/__init__.py pipeline/common.py pipeline/combat.py \
 		requirements-calibration.txt -x "*/__pycache__/*" "*.pyc" ".DS_Store"
 	@ls -la dist/cs-simulator-contract-$(VERSION).zip
+
+package-game: validate
+	$(PY) -m pipeline.package_game

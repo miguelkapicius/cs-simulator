@@ -29,6 +29,7 @@ partidas reais. O comparador diz o quanto falta.
 | `artifacts/game_rules.json` | **como o CS2 funciona**: armas, dano, colete, economia, tempos, bomba, granadas |
 | `artifacts/elite_players.json` | **os jogadores para mostrar no produto**: o mesmo comportamento de `player_profiles.json`, com codinome, país e idade ficcionais e **sem nome, steamid nem time reais** ([`docs/elite_players.md`](docs/elite_players.md)) |
 | `reference/profile_synthesis.py` | **perfil de quem não tem demo**: parte de um jogador real da mesma função e ajusta pela habilidade e pelos atributos ([`docs/profile_synthesis.md`](docs/profile_synthesis.md)) |
+| `make package-game` | **o que pode ir dentro do build do jogo**: só dados de runtime, sem nenhuma identidade real, com detector que reprova o build se vazar ([`docs/game_package.md`](docs/game_package.md)) |
 | `artifacts/weapon_dynamics.json` | **como a arma se comporta ao atirar**: padrão e escala do recuo, reinício da rajada, penalidade de precisão, penetração |
 | `artifacts/tactics.json` e `tactics_playbook.json` | **movimento e posicionamento** no nível de regiões: para onde o jogador vai, onde cada lado costuma estar, rotações, **probabilidade de plant por bombsite**, e as rotas de 599 rounds reais |
 | `artifacts/team_model.json` | **decisões do time**: chance de vencer o round, tipo de compra, plano de ataque |

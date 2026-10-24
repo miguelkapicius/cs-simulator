@@ -2,6 +2,18 @@
 
 Versionamento semântico (ver `docs/conventions.md`): **MAJOR** quebra a Unity, **MINOR** só acrescenta, **PATCH** renova dados ou documentação.
 
+## 1.7.1: pacote para embarcar no jogo, sem identidade real (2026-10-24)
+
+Nenhum artefato mudou de formato; só ferramenta e documentação.
+
+- `make package-game` (novo) gera `dist/cs-simulator-game-<versão>.zip` com **só dados de runtime**: `game_rules`, `weapon_dynamics`, `team_model`, `tactics`, `tactics_playbook`,
+  `elite_players`, o código de `reference/`, `VERSION`, `MANIFEST.json` (sha256) e `PACKAGE.md`. Fora ficam `player_profiles.json`, `sharded/`, `examples/`, `test_vectors/`,
+  `calibration_targets.json`, a documentação e o CHANGELOG, que têm nomes, steamids e times reais ou exemplos com eles.
+- A sanitização troca os ids de rounds do playbook (que vinham do nome da demo, como `<time>-vs-<time>-m1-<mapa>-<hash>#1`) por `m<hash>#<n>`, mantendo o número do round e a unicidade, e troca os nomes de torneios das notas de compatibilidade de build por `evento`.
+- **O build reprova** (e nenhum zip é criado) se qualquer arquivo ainda tiver steamid, nome de demo, torneio, time ou apelido de jogador reais. O apelido só conta como valor; como chave de JSON (`"max":`) é coincidência com uma palavra do jogo.
+- `make package` continua igual e continua levando dados reais: serve ao desenvolvimento e à calibração e **não deve ir dentro de um build do jogo**.
+- `docs/game_package.md` explica o que entra, o que fica fora e o que o detector garante e não garante.
+
 ## 1.7.0: perfis sintetizados para jogadores sem demo (2026-10-24)
 
 Só acrescenta; nenhum artefato existente mudou de formato.
