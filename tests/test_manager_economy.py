@@ -96,3 +96,10 @@ def test_stickers_scale_with_hype_and_only_pay_tier_one():
     club = Club("c", "X", 1, 0, 0.0, 0.0, list(hot))
     assert sticker_payout(club, hot, prm) > sticker_payout(club, cold, prm) > 0
     assert sticker_payout(replace(club, tier=3), hot, prm) == 0
+
+
+def test_star_buyout_stays_near_the_real_record_scale():
+    prm = load_params()
+    star = player(tier=1, skill=97.0, hype=80.0, contract=Contract(60000, 0, 200, 0))
+    assert 500_000 <= buyout_for(star, 10, 1, prm) <= 1_500_000   # recorde individual conhecido: ~US$ 1,1 mi
+    assert buyout_for(star, 10, 6, prm) <= 3_000_000

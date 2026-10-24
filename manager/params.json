@@ -34,7 +34,9 @@
   },
   "hype_half_life_weeks": 12,
   "buyout": {
-    "interest_step": 0.15
+    "interest_step": 0.15,
+    "max_seasons": 1.25,
+    "hype_divisor": 200
   },
   "generator": {
     "skill_mean": {
@@ -118,5 +120,21 @@
     "igl": 1,
     "coach": 1
   },
-  "money_star_discount": 1.4
+  "money_star_discount": 1.4,
+  "market": {
+    "offer_weeks": 96,
+    "bonus_months": 1,
+    "style_spend": {
+      "aggressive": 0.9,
+      "conservative": 0.5
+    },
+    "style_premium": {
+      "aggressive": 1.15,
+      "conservative": 1.0
+    },
+    "poach_margin": {
+      "aggressive": 4,
+      "conservative": 8
+    }
+  }
 }

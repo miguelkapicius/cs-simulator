@@ -25,13 +25,14 @@ def salary_for(tier: int, skill: float, hype: float, prm: Dict) -> int:
 
 
 def buyout_for(player: Player, week: int, interested: int, prm: Dict) -> int:
-    """Salário anual x fração do contrato que resta x (1 + hype) x inflação por clubes interessados."""
+    """Salário anual x temporadas que restam (com teto) x (1 + hype) x inflação por clubes interessados."""
     if player.contract is None:
         return 0
     weeks_left = max(0, player.contract.end_week - week)
     annual = player.contract.salary_month * 12
     inflation = 1 + prm["buyout"]["interest_step"] * max(0, interested - 1)
-    value = annual * (weeks_left / prm["season_weeks"]) * (1 + player.hype / 100) * inflation
+    seasons_left = min(weeks_left / prm["season_weeks"], prm["buyout"]["max_seasons"])
+    value = annual * seasons_left * (1 + player.hype / prm["buyout"]["hype_divisor"]) * inflation
     return int(value)
 
 
