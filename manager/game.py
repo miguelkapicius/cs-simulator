@@ -245,6 +245,8 @@ def make_offer(world: World, pid: str, offer: Offer) -> Event:
 
     if player is None:
         return reject("unknown_player")
+    if offer.salary_month <= 0 or offer.signing_bonus < 0 or offer.weeks <= 0:
+        return reject("invalid_offer")
     if offer.club_id != human.cid:
         return reject("not_your_club")
     if player.club_id == human.cid:

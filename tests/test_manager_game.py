@@ -116,3 +116,15 @@ def test_a_club_without_a_squad_earns_no_sponsorship():
     before = human.budget
     advance_week(w)
     assert human.budget == before
+
+
+@pytest.mark.parametrize("salary,bonus,weeks", [(1000, -10 ** 9, 48), (-5000, 0, 48), (1000, 0, 0), (0, 0, 48)])
+def test_nonsensical_offers_are_rejected_and_never_create_money(salary, bonus, weeks):
+    w = new_game(1, "normal", "Aurora")
+    human = w.clubs[w.human_cid]
+    release_player(w, human.roster[0])
+    free = cheap_free_agent(w)
+    before = human.budget
+    ev = make_offer(w, free.pid, Offer(w.human_cid, salary, bonus, weeks, free.role))
+    assert ev.kind == "offer_rejected" and ev.data["reason"] == "invalid_offer"
+    assert human.budget == before and len(human.roster) == 6
